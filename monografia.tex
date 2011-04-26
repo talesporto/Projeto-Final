@@ -1,0 +1,75 @@
+\documentclass[bacharelado]{unb-cic}
+\usepackage[american,brazil]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{indentfirst}
+\usepackage{natbib}
+\usepackage{xcolor,graphicx,url}
+\usepackage[utf8]{inputenc}
+
+\bibpunct[; ]{(}{)}{,}{a}{}{;}%muda colchetes para parênteses
+
+% definições prévias do documento
+\title{Computação Ubíqua}
+
+\orientador{\prof \dr Carla Denise Castanho}{CIC/UnB}
+
+\coordenador{\prof Lamar}{CIC/UnB}
+
+\diamesano{2}{maio}{2010}
+
+                           
+\membrobanca{\prof\dr Professor I}{CIC/UnB}
+
+\membrobanca{\prof \dr Professor II}{CIC/UnB}
+
+\autor{Tales Mundim Andrade}{Porto}
+\coautor{Danilo Ávila Monte Christo}{Ferreira}
+\CDU{004.4}
+
+\palavraschave{palvrachave1, palvrachave2, palvrachave3 }
+\keywords{keyword1, keyword2, keyword3}
+
+
+\begin{document}
+
+\maketitle
+
+\pretextual
+\begin{dedicatoria}
+	Dedico a....
+\end{dedicatoria}
+
+\begin{agradecimentos}
+	Agradeço a....
+\end{agradecimentos}
+
+\begin{resumo}
+	A ciência...
+\end{resumo}
+
+\selectlanguage{american}
+
+\begin{abstract}
+	The science...
+\end{abstract}
+
+\selectlanguage{brazil}
+\tableofcontents
+\listoffigures
+\listoftables
+
+\textual
+
+\input{chapters/introducao}
+\input{chapters/conceitosBasicos}
+
+\postextual
+
+\bibliographystyle{plain}
+
+\bibliography{bibliografia}
+
+
+\end{document}
+
+
