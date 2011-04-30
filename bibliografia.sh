@@ -1,2 +1,2 @@
-bibtex monografia
+bibtex bin/monografia
 ./compile.sh
