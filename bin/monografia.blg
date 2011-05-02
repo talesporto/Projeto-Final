@@ -3,51 +3,44 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: bin/monografia.aux
 The style file: plain.bst
 Database file #1: bibliografia.bib
-Name 1 in "Gregory Abowd, Chris Atkeson, and Irfan Essa" has a comma at the end for entry gregoryabowd
-while executing---line 1049 of file plain.bst
-Name 1 in "Gregory Abowd, Chris Atkeson, and Irfan Essa" has a comma at the end for entry gregoryabowd
-while executing---line 1090 of file plain.bst
-Warning--empty journal in kinecturl
-Warning--empty year in kinecturl
 You've used 6 entries,
             2118 wiz_defined-function locations,
-            528 strings with 4947 characters,
-and the built_in function-call counts, 1261 in all, are:
-= -- 123
-> -- 48
+            528 strings with 4944 characters,
+and the built_in function-call counts, 1223 in all, are:
+= -- 122
+> -- 42
 < -- 0
-+ -- 21
-- -- 14
-* -- 56
-:= -- 249
-add.period$ -- 17
++ -- 20
+- -- 12
+* -- 48
+:= -- 242
+add.period$ -- 18
 call.type$ -- 6
-change.case$ -- 25
+change.case$ -- 23
 chr.to.int$ -- 0
-cite$ -- 8
-duplicate$ -- 56
-empty$ -- 97
-format.name$ -- 14
-if$ -- 246
+cite$ -- 6
+duplicate$ -- 55
+empty$ -- 98
+format.name$ -- 12
+if$ -- 241
 int.to.chr$ -- 0
 int.to.str$ -- 6
-missing$ -- 4
-newline$ -- 32
+missing$ -- 3
+newline$ -- 33
 num.names$ -- 12
-pop$ -- 26
+pop$ -- 23
 preamble$ -- 1
-purify$ -- 19
+purify$ -- 18
 quote$ -- 0
-skip$ -- 40
+skip$ -- 38
 stack$ -- 0
-substring$ -- 31
-swap$ -- 3
+substring$ -- 32
+swap$ -- 5
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 24
-warning$ -- 2
+warning$ -- 0
 while$ -- 12
 width$ -- 7
-write$ -- 62
-(There were 2 error messages)
+write$ -- 64

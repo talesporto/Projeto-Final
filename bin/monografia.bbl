@@ -6,10 +6,10 @@ Fabricio~Nogueira Buzeto.
   aplicativos de computa{\c c}{\~a}o ub{\'\i}qua.
 \newblock Master's thesis, Universidade de Bras{\'\i}lia, 2010.
 
-\bibitem{weiser1}
-The computer for the~21st century.
-\newblock Mark weiser.
-\newblock {\em Scientific American}, 1991.
+\bibitem{gregoryabowd}
+Gregory Abowd; Chris Atkeson;~Irfan Essa.
+\newblock Ubiquitous smart spaces.
+\newblock {\em A white paper submitted to DARPA (in response to RFI)}, 1998.
 
 \bibitem{alegomes}
 Alexandre~Rodrigues Gomes.
@@ -20,10 +20,10 @@ Alexandre~Rodrigues Gomes.
   Ci{\^e}ncia da Computa{\c c}{\~a}o,
   http://monografias.cic.unb.br/dspace/handle/123456789/110, 2007.
 
-\bibitem{gregoryabowd}
-Chris~Atkeson Gregory~Abowd and Irfan Essa.
-\newblock Ubiquitous smart spaces.
-\newblock {\em A white paper submitted to DARPA (in response to RFI)}, 1998.
+\bibitem{weiser1}
+Mark Weiser.
+\newblock The computer for the 21st century.
+\newblock {\em Scientific American}, 1991.
 
 \bibitem{weiser2}
 Mark Weiser.
@@ -32,6 +32,7 @@ Mark Weiser.
 
 \bibitem{kinecturl}
 Wikipedia.
-\newblock Kinect.
+\newblock {\em Kinect}.
+\newblock http://en.wikipedia.org/wiki/Kinect.
 
 \end{thebibliography}
