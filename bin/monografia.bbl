@@ -1,10 +1,24 @@
 \begin{thebibliography}{1}
 
+\bibitem{saocarlos}
+{\^A}ngelo~Rodrigo Bianchini.
+\newblock Arquitetura de redes neurais para o reconhecimento facial baseado no
+  neocognitron.
+\newblock Master's thesis, S{\~a}o Carlos,
+  http://www.bdtd.ufscar.br/htdocs/tedeSimplificado//tde_busca/arquivo.php?codArquivo=164,
+  2001.
+
 \bibitem{fabriciobuzzeto}
 Fabricio~Nogueira Buzeto.
 \newblock Um conjunto de solu{\c c}{\~o}es para a constru{\c c}{\~a}o de
   aplicativos de computa{\c c}{\~a}o ub{\'\i}qua.
 \newblock Master's thesis, Universidade de Bras{\'\i}lia, 2010.
+
+\bibitem{daugman}
+John Daugman.
+\newblock Face and gesture recognition: Overview.
+\newblock {\em IEEE TRANSACTIONS ON PATTERN ANALYSIS AND MACHINE INTELLIGENCE},
+  19(7), 1997.
 
 \bibitem{gregoryabowd}
 Gregory Abowd; Chris Atkeson;~Irfan Essa.
@@ -19,6 +33,10 @@ Alexandre~Rodrigues Gomes.
 \newblock Master's thesis, Universidade de Bras{\'\i}lia; Departamento de
   Ci{\^e}ncia da Computa{\c c}{\~a}o,
   http://monografias.cic.unb.br/dspace/handle/123456789/110, 2007.
+
+\bibitem{bolle}
+Anil~Jain Sharath~Pankanti, Ruud M.~Bolle.
+\newblock Biometrics: The future of identification, 2000.
 
 \bibitem{weiser1}
 Mark Weiser.
