@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{saocarlos}
 {\^A}ngelo~Rodrigo Bianchini.
@@ -33,6 +33,12 @@ Alexandre~Rodrigues Gomes.
 \newblock Master's thesis, Universidade de Bras{\'\i}lia; Departamento de
   Ci{\^e}ncia da Computa{\c c}{\~a}o,
   http://monografias.cic.unb.br/dspace/handle/123456789/110, 2007.
+
+\bibitem{milene}
+Jos{\'e} Hiroki~Saito Milene~Arantes, Alessandro Noriaki~Ide.
+\newblock A system for fingerprint minutiae classification and recognition.
+\newblock In {\em Proceedingsof the 9th InternationalConferenceon Neural
+  InformationProcessing(ICONIP'O2)}, volume~5, pages 2474 -- 2478.
 
 \bibitem{bolle}
 Anil~Jain Sharath~Pankanti, Ruud M.~Bolle.

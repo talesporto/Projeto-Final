@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2011.4.25)  7 MAY 2011 16:31
+This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2011.4.25)  8 MAY 2011 00:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -499,7 +499,7 @@ See the natbib package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.77 ...mand\NAT@force@numbers{}\NAT@force@numbers
+l.90 ...mand\NAT@force@numbers{}\NAT@force@numbers
                                                   
 ? r
 OK, entering \nonstopmode...
@@ -629,7 +629,7 @@ LaTeX Font Warning: Font shape `T1/cmr/m/n' in size <20> not available
 LaTeX Font Warning: Font shape `T1/ua1/bx/n' in size <20> not available
 (Font)              size <20.74> substituted on input line 35.
 
-<positivo_cor.pdf, id=32, 119.44624pt x 60.225pt>
+<positivo_cor.pdf, id=40, 119.44624pt x 60.225pt>
 File: positivo_cor.pdf Graphic file (type pdf)
  <use positivo_cor.pdf>
 Package pdftex.def Info: positivo_cor.pdf used on input line 35.
@@ -718,16 +718,20 @@ Cap\'{\i }tulo 1.
 
 ]
 Cap\'{\i }tulo 2.
-)pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
- been already used, duplicate ignored
+
+Overfull \hbox (156.25343pt too wide) in paragraph at lines 32--45
+ [] 
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.70 \bibliography{bibliografia}
-                                 [1
+l.45 	\end{center}
+                   [1
 
 
-] (./bin/monografia.bbl
-(./bin/monografia.brf)
+]) [2] (./bin/monografia.bbl (./bin/monografia.brf)
 \tf@brf=\write7
 \openout7 = `monografia.brf'.
 
@@ -760,19 +764,19 @@ really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
 
-Underfull \hbox (badness 5847) in paragraph at lines 10--10
+Underfull \hbox (badness 4699) in paragraph at lines 10--10
 []\T1/cmr/m/n/12 Ângelo Ro-drigo Bi-an-chini.  Ar-qui-te-tura de re-des neu-rai
 s para o re-co-
  []
 
 
-Underfull \hbox (badness 3668) in paragraph at lines 10--10
+Underfull \hbox (badness 2772) in paragraph at lines 10--10
 \T1/cmr/m/n/12 nhe-ci-mento fa-cial ba-se-ado no ne-o-cog-ni-tron.  Mas-ter's t
 he-sis, São Car-los,
  []
 
 
-Overfull \hbox (30.99278pt too wide) in paragraph at lines 10--10
+Overfull \hbox (36.86635pt too wide) in paragraph at lines 10--10
 \T1/cmr/m/n/12 http://www.bdtd.ufscar.br/htdocs/tedeSimplificado//tde$[]\OML/cm
 m/m/it/12 usca=arquivo:php\OT1/cmr/m/n/12 ?\OML/cmm/m/it/12 codArquivo \OT1/cmr
 /m/n/12 =
@@ -797,7 +801,7 @@ Underfull \hbox (badness 1072) in paragraph at lines 36--36
 
 )
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 73.
- [2
+ [3
 
 
 ]
@@ -821,13 +825,13 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 73.
  )
 (\end occurred when \iffalse on line 462 was incomplete) 
 Here is how much of TeX's memory you used:
- 7696 strings out of 493763
- 108376 string characters out of 3144954
- 209273 words of memory out of 3000000
- 10835 multiletter control sequences out of 15000+200000
- 13226 words of font info for 32 fonts, out of 3000000 for 9000
+ 7720 strings out of 493763
+ 108633 string characters out of 3144954
+ 212292 words of memory out of 3000000
+ 10847 multiletter control sequences out of 15000+200000
+ 13994 words of font info for 33 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
- 43i,7n,69p,686b,342s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 43i,7n,69p,686b,385s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/local/texlive/201
 0/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/local/texlive/2010/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2010/t
@@ -841,10 +845,10 @@ nts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2010/texmf-dist/font
 s/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2010/texmf-dist/fonts/
 type1/public/cm-super/sfrm2074.pfb></usr/local/texlive/2010/texmf-dist/fonts/ty
 pe1/public/cm-super/sfti1200.pfb>
-Output written on ./bin/monografia.pdf (13 pages, 205195 bytes).
+Output written on ./bin/monografia.pdf (14 pages, 214241 bytes).
 PDF statistics:
- 187 PDF objects out of 1000 (max. 8388607)
- 156 compressed objects within 2 object streams
- 34 named destinations out of 1000 (max. 500000)
- 62 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 218 PDF objects out of 1000 (max. 8388607)
+ 186 compressed objects within 2 object streams
+ 45 named destinations out of 1000 (max. 500000)
+ 78 words of extra memory for PDF output out of 10000 (max. 10000000)
 
