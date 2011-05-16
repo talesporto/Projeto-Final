@@ -4,47 +4,50 @@ The top-level auxiliary file: bin/monografia.aux
 The style file: plain.bst
 Database file #1: bibliografia.bib
 Warning--entry type for "bolle" isn't style-file defined
---line 31 of file bibliografia.bib
+--line 43 of file bibliografia.bib
+Warning--I didn't find a database entry for "Sun98"
+Warning--I didn't find a database entry for "Abd95"
+Warning--I didn't find a database entry for "Cell99"
 Warning--empty year in milene
-You've used 10 entries,
+You've used 11 entries,
             2118 wiz_defined-function locations,
-            553 strings with 5683 characters,
-and the built_in function-call counts, 2328 in all, are:
-= -- 233
-> -- 70
+            567 strings with 5874 characters,
+and the built_in function-call counts, 2635 in all, are:
+= -- 264
+> -- 77
 < -- 2
-+ -- 33
-- -- 20
-* -- 102
-:= -- 417
-add.period$ -- 29
-call.type$ -- 10
-change.case$ -- 39
++ -- 36
+- -- 22
+* -- 127
+:= -- 467
+add.period$ -- 32
+call.type$ -- 11
+change.case$ -- 43
 chr.to.int$ -- 0
-cite$ -- 11
-duplicate$ -- 107
-empty$ -- 199
-format.name$ -- 20
-if$ -- 486
+cite$ -- 12
+duplicate$ -- 118
+empty$ -- 228
+format.name$ -- 22
+if$ -- 551
 int.to.chr$ -- 0
-int.to.str$ -- 10
-missing$ -- 5
-newline$ -- 52
-num.names$ -- 20
-pop$ -- 44
+int.to.str$ -- 11
+missing$ -- 6
+newline$ -- 57
+num.names$ -- 22
+pop$ -- 46
 preamble$ -- 1
-purify$ -- 30
+purify$ -- 33
 quote$ -- 0
-skip$ -- 85
+skip$ -- 92
 stack$ -- 0
-substring$ -- 97
-swap$ -- 23
+substring$ -- 129
+swap$ -- 24
 text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 40
+type$ -- 44
 warning$ -- 1
-while$ -- 22
-width$ -- 12
-write$ -- 106
-(There were 2 warnings)
+while$ -- 25
+width$ -- 13
+write$ -- 117
+(There were 5 warnings)
