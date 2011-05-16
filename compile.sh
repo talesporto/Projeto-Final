@@ -1,2 +1,2 @@
 pdflatex -output-directory ./bin monografia.tex 
-open bin/monografia.pdf
+gnome-open bin/monografia.pdf
