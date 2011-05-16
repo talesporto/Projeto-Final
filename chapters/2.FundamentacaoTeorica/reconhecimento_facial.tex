@@ -27,36 +27,46 @@ Porém, na prática também são considerados outros requisitos \cite{milene}:
 
 Novas técnicas de reconhecimento por meio de faces, íris, retina e voz, entre outras, têm sido abordadas para aplicações em sistemas de reconhecimento automático \cite{bolle} \cite{saocarlos}. O reconhecimento facial é, apenas, uma das nove características biométricas utilizadas atualmente \cite{milene}.
 	
-	\begin{center}
-	\begin{tabular}{|c|c|c|c|c|}
-		\hline Biometria & Universidade & Singularidade & Permanência & Exigibilidade \\
-		\hline Face & Alta & Baixa & Média & Alta \\
-		\hline Digital & Média & Alta & Alta & Média \\
-		\hline Geometria da Mão & Média & Média & Média & Alta \\
-		\hline "Hand Vein" & Média & Média & Média & Média \\
-		\hline Iris & Alta & Alta & Alta & Média \\
-		\hline "Retina Scan" & Alta & Alta & Média & Baixa \\
-		\hline Assinatura & Baixa & Baixa & Baixa & Alta\\
-		\hline Voz & Média & Baixa & Baixa & Média \\
-		\hline Termograma & Alta & Alta & Baixa & Alta \\
-		\hline
-	\end{tabular}
+		
+	\begin{table}[htbp]
+		\begin{center}
+			\begin{tabular}{|c|c|c|c|c|}
+				\hline \bf Biometria & \bf Universidade & \bf Singularidade & \bf Permanência & \bf Exigibilidade \\
+				\hline \hline \bf Face & Alta & Baixa & Média & Alta \\
+				\hline \bf  Digital & Média & Alta & Alta & Média \\
+				\hline \bf Geometria da Mão & Média & Média & Média & Alta \\
+				\hline \bf "Hand Vein" & Média & Média & Média & Média \\
+				\hline \bf Iris & Alta & Alta & Alta & Média \\
+				\hline \bf "Retina Scan" & Alta & Alta & Média & Baixa \\
+				\hline \bf Assinatura & Baixa & Baixa & Baixa & Alta\\
+				\hline \bf Voz & Média & Baixa & Baixa & Média \\
+				\hline \bf Termograma & Alta & Alta & Baixa & Alta \\
+				\hline
+			\end{tabular}
+		\end{center}
+		\caption{Requisitos teóricos para algoritmos de reconhecimento facial.}
+		\label{tabelaRequisitosTeoricos}
+	\end{table}
 
-
-	\begin{tabular}{|c|c|c|c|}
-		\hline Biometria & Desempenho & Aceitação & Evasão \\
-		\hline Face & Baixa & Alta & Baixa\\
-		\hline Digital & Alta & Média &  Alta\\
-		\hline Geometria da Mão & Média & Média & Média\\
-		\hline "Hand Vein" & Média & Média & Alta\\
-		\hline Iris & Média & Média & Alta\\
-		\hline "Retina Scan" & Alta & Baixa & Alta\\
-		\hline Assinatura & Baixa & Alta & Baixa \\
-		\hline Voz & Baixa & Alta & Baixa \\
-		\hline Termograma & Média & Alta & Alta \\
-		\hline
-	\end{tabular}
-	\end{center}
+	\begin{table}[htbp]
+		\begin{center}
+			\begin{tabular}{|c|c|c|c|}
+				\hline \bf Biometria & \bf Desempenho & \bf Aceitação & \bf Evasão \\
+				\hline \hline \bf Face & Baixa & Alta & Baixa\\
+				\hline \bf Digital & Alta & Média &  Alta\\
+				\hline \bf Geometria da Mão & Média & Média & Média\\
+				\hline \bf "Hand Vein" & Média & Média & Alta\\
+				\hline \bf Iris  & Média & Média & Alta\\
+				\hline \bf "Retina Scan" & Alta & Baixa & Alta\\
+				\hline \bf Assinatura & Baixa & Alta & Baixa \\
+				\hline \bf Voz & Baixa & Alta & Baixa \\
+				\hline \bf Termograma & Média & Alta & Alta \\
+				\hline
+			\end{tabular}
+		\end{center}
+		\caption{Requisitos práticos para algoritmos de reconhecimento facial.}
+		\label{tabelaRequisitosPraticos}
+	\end{table}
 
 
 Um dos motivos que icentivou os diversos estudos sobre reconhecimento facial são as vantagens que o mesmo possui em relação a impressão digital e a íris.  No reconhecimento por impressão digital, a desvantagem consiste no fato que nem todas as pessoas possuem uma impressão digital com "qualidade" suficiente para ser reconhecida por um sistema. Já o reconhecimento por íris apresenta uma alta confiabilidade e larga variação, sendo estável pela vida toda. Porém, a desvantagem está relacionada ao modo de captura da íris que necessita de uma alinhamento entre a câmera e os olhos da pessoa \cite{saocarlos}.
