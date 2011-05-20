@@ -14,7 +14,6 @@
 \backcite {saocarlos}{{2}{1}{chapter.1}}
 \backcite {saocarlos}{{2}{1}{chapter.1}}
 \backcite {alegomes}{{2}{1}{chapter.1}}
-\backcite {kinecturl}{{2}{1}{chapter.1}}
 \backcite {hong}{{3}{2.1}{section.2.1}}
 \backcite {drovetto}{{3}{2.1}{section.2.1}}
 \backcite {hong}{{3}{2.1}{section.2.1}}
@@ -34,6 +33,8 @@
 \backcite {drovetto}{{6}{2.1}{equation.2.1.1}}
 \backcite {drovetto}{{6}{2.2}{equation.2.1.2}}
 \backcite {drovetto}{{6}{2.1}{equation.2.1.2}}
+\backcite {oliveira}{{6}{2.2}{section.2.2}}
 \backcite {saocarlos}{{6}{2.2}{section.2.2}}
-\backcite {saocarlos}{{6}{2.2}{section.2.2}}
-\backcite {hong}{{6}{2.2}{section.2.2}}
+\backcite {drovetto}{{6}{2.2}{section.2.2}}
+\backcite {saocarlos}{{6}{2.2}{Item.9}}
+\backcite {hong}{{6}{2.2}{Item.9}}

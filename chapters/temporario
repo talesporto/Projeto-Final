@@ -10,11 +10,15 @@ roteiro
 	 -Localização
 
 	 -Reconhecimento Facial
-	 		dificuldades do reconhecimento facial
-	 		reconhecimento usando imagens 2d e 3d
-	 		técnicas de reconhecimento facial
-
-
+	 		biometria
+	 		reconhecimento facial
+	 			enrola sobre reconhecimento
+	 			tipos
+	 				geometria
+	 				template
+	 					imagens 2d
+	 					imagens 3d
+	 				
 #######################################################################################
 -Facial Features-Based method for Human Tracking
 	Roughly speaking, face recognition algorithms can be cat- egorized into two classes [6]. In the first class, i.e. geometric, feature-based matching algorithms, salient facial landmarks such as eyes must be detected before any other processing can take place. In the second class, i.e. algorithms based on template matching, faces must be correctly aligned before recognition, which is usually performed based on the detection of eyes. In fact, as both the position of the eyes and the interoc- ular distance are relatively constant for most people, detecting the eyes serves as an important role in face normalization, and thus facilitates further localization of facial landmarks [7]. Therefore, the detection of the eyes is a vital component in automatic face recognition systems.
