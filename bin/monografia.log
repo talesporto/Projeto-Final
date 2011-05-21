@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2011.4.25)  20 MAY 2011 10:40
+This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2011.4.25)  21 MAY 2011 17:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -499,7 +499,7 @@ See the natbib package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.175 ...and\NAT@force@numbers{}\NAT@force@numbers
+l.184 ...and\NAT@force@numbers{}\NAT@force@numbers
                                                   
 ? r
 OK, entering \nonstopmode...
@@ -741,14 +741,14 @@ File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 35.
-
-Overfull \hbox (25.49876pt too wide) in paragraph at lines 45--58
+ [4 <./figuras/2.FundamentacaoTeorica/caracteristicasBiometricas.png (PNG copy)
+>]
+Overfull \hbox (25.49876pt too wide) in paragraph at lines 53--66
  [] 
  []
 
-[4 <./figuras/2.FundamentacaoTeorica/caracteristicasBiometricas.png (PNG copy)>
-] [5]) (./chapters/2.FundamentacaoTeorica/reconhecimento_facial.tex)) [6]
-(./bin/monografia.bbl (./bin/monografia.brf)
+[5]) (./chapters/2.FundamentacaoTeorica/reconhecimento_facial.tex [6]))
+[7] (./bin/monografia.bbl (./bin/monografia.brf)
 \tf@brf=\write7
 \openout7 = `monografia.brf'.
 
@@ -784,7 +784,7 @@ Underfull \hbox (badness 1708) in paragraph at lines 42--42
 
 )
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 73.
- [7
+ [8
 
 
 ]
@@ -808,13 +808,13 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 73.
  )
 (\end occurred when \iffalse on line 462 was incomplete) 
 Here is how much of TeX's memory you used:
- 7777 strings out of 493763
- 109813 string characters out of 3144954
- 219484 words of memory out of 3000000
+ 7781 strings out of 493763
+ 109840 string characters out of 3144954
+ 217484 words of memory out of 3000000
  10879 multiletter control sequences out of 15000+200000
  13994 words of font info for 33 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
- 43i,8n,69p,880b,411s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 43i,8n,69p,1014b,411s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/local/texlive/201
 0/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/local/texlive/2010/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2010/t
@@ -828,10 +828,10 @@ onts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2010/texmf-dist/fon
 ts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2010/texmf-dist/fonts
 /type1/public/cm-super/sfrm2074.pfb></usr/local/texlive/2010/texmf-dist/fonts/t
 ype1/public/cm-super/sfti1200.pfb>
-Output written on ./bin/monografia.pdf (17 pages, 374132 bytes).
+Output written on ./bin/monografia.pdf (18 pages, 376554 bytes).
 PDF statistics:
- 296 PDF objects out of 1000 (max. 8388607)
- 259 compressed objects within 3 object streams
- 59 named destinations out of 1000 (max. 500000)
+ 308 PDF objects out of 1000 (max. 8388607)
+ 270 compressed objects within 3 object streams
+ 63 named destinations out of 1000 (max. 500000)
  91 words of extra memory for PDF output out of 10000 (max. 10000000)
 

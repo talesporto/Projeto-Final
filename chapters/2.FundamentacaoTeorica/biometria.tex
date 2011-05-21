@@ -37,6 +37,14 @@ São várias as vatangens que os sistemas biométricos têm em relação aos sis
 		\item os sistemas biométricos necessitam que a pessoa esteja presente no local da autenticação;
 	\end{itemize}
 
+Na prática um sistema biométrico deve ser capaz de \cite{hong}:
+		
+	\begin{enumerate}
+		\item atiginr uma acurácia aceitável e com uma velocidade razoável;
+		\item não ser prejudiciável pelos indivíduos e ser aceito pela população alvo;
+		\item ser suficientemente robusto para vários métodos fraudulentos;
+	\end{enumerate}
+
 Novas técnicas de reconhecimento por meio de faces, íris, retina e voz, entre outras, têm sido abordadas para aplicações em sistemas de reconhecimento automático \cite{bolle,saocarlos}. O reconhecimento facial é apenas uma das nove características biométricas utilizadas atualmente \cite{milene}. Nas tabelas \ref{tabelaRequisitosTeoricos} e \ref{tabelaRequisitosPraticos} são mostradadas as noves características e seus respectivos comportamentos baseados nos requisitos mencionados acima.
 		
 	\begin{table}[htb]
@@ -78,6 +86,10 @@ Novas técnicas de reconhecimento por meio de faces, íris, retina e voz, entre 
 		\end{center}
 		\label{tabelaRequisitosPraticos}
 	\end{table}
+
+Os sistemas biométricos podem ser classificados em sistemas de verificação ou identificação. Sistemas de verificação são aqueles que autenticam a identidade dos usuários comparando-os com os próprios templates. Eles conduzem uma comparação ``um para um'' e determinam se o usuário é quem realmente diz ser. O maior desáfio para esse tipo de sistema é a acurácia. Geralmente, não é muito difícil satisfazer o requisito de tempo de resposta pois somente uma comparação ``um para um'' é feita.
+
+Sistemas de identificação reconhecem um indivíduo pesquisando em todo o banco de dados procurando por uma correspondência. Eles conduzem uma comparação ``um para muitos'' para estabelecer a identidade do indivíduo. Ao contrátio dos sistemas de verificação, nesse tipo de sistema tanto a acurácia quanto o tempo são os grandes desafios, por causa da necessidade de explorar todo o banco de dados. Geralmente, é muito mais difícil desenvolver um sistemas de identificação que um de verificação.
 
 Um sistema biométrico responde a dois eventos: um usuário é ou não quem afirma ser. Como resposta a esses eventos, o sistema pode classificar o usuário como um cliente ou um impostor. Nessa tomada de decisão pode ocorrer dois tipos de erros: uma falsa aceitação, ao aceitar um impostor, (\textit{False Acceptance} - FA) ou uma falsa rejeição (\textit{False Rejection} - FR), ao rejeitar um cliente. Baseado nesses erros, duas taxas são utilizadas para avaliar sistemas biométricos: taxa de falsa aceitação (\textit{False Acceptance Rate} - FAR) e taxa de falsa rejeição (\textit{False Rejection Rate} - FRR) \cite{drovetto}.
 
