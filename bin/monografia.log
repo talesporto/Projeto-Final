@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2011.4.25)  21 MAY 2011 18:49
+This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2011.4.25)  22 MAY 2011 11:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -499,7 +499,7 @@ See the natbib package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.199 ...and\NAT@force@numbers{}\NAT@force@numbers
+l.218 ...and\NAT@force@numbers{}\NAT@force@numbers
                                                   
 ? r
 OK, entering \nonstopmode...
@@ -629,7 +629,7 @@ LaTeX Font Warning: Font shape `T1/cmr/m/n' in size <20> not available
 LaTeX Font Warning: Font shape `T1/ua1/bx/n' in size <20> not available
 (Font)              size <20.74> substituted on input line 35.
 
-<positivo_cor.pdf, id=44, 119.44624pt x 60.225pt>
+<positivo_cor.pdf, id=52, 119.44624pt x 60.225pt>
 File: positivo_cor.pdf Graphic file (type pdf)
  <use positivo_cor.pdf>
 Package pdftex.def Info: positivo_cor.pdf used on input line 35.
@@ -718,7 +718,7 @@ Cap\'{\i }tulo 1.
 ]) (./chapters/2.FundamentacaoTeorica/fundamentacao_teorica.tex [2]
 Cap\'{\i }tulo 2.
 (./chapters/2.FundamentacaoTeorica/biometria.tex
-<figuras/2.FundamentacaoTeorica/caracteristicasBiometricas.png, id=157, 681.546
+<figuras/2.FundamentacaoTeorica/caracteristicasBiometricas.png, id=170, 681.546
 25pt x 466.74374pt>
 File: figuras/2.FundamentacaoTeorica/caracteristicasBiometricas.png Graphic fil
 e (type png)
@@ -747,8 +747,18 @@ Overfull \hbox (25.49876pt too wide) in paragraph at lines 53--66
  [] 
  []
 
-[5]) (./chapters/2.FundamentacaoTeorica/reconhecimento_facial.tex [6]))
-[7] (./bin/monografia.bbl (./bin/monografia.brf)
+[5]) (./chapters/2.FundamentacaoTeorica/reconhecimento_facial.tex [6] [7]
+<figuras/2.FundamentacaoTeorica/enquadramentoRosto.png, id=250, 558.085pt x 420
+.57124pt>
+File: figuras/2.FundamentacaoTeorica/enquadramentoRosto.png Graphic file (type 
+png)
+ <use figuras/2.FundamentacaoTeorica/enquadramentoRosto.png>
+Package pdftex.def Info: figuras/2.FundamentacaoTeorica/enquadramentoRosto.png 
+used on input line 47.
+(pdftex.def)             Requested size: 355.66591pt x 270.30055pt.
+))
+[8 <./figuras/2.FundamentacaoTeorica/enquadramentoRosto.png (PNG copy)>]
+[9] (./bin/monografia.bbl (./bin/monografia.brf)
 \tf@brf=\write7
 \openout7 = `monografia.brf'.
 
@@ -784,7 +794,7 @@ Underfull \hbox (badness 1708) in paragraph at lines 42--42
 
 )
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 73.
- [8
+ [10
 
 
 ]
@@ -808,11 +818,11 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 73.
  )
 (\end occurred when \iffalse on line 462 was incomplete) 
 Here is how much of TeX's memory you used:
- 7783 strings out of 493763
- 109854 string characters out of 3144954
- 218484 words of memory out of 3000000
- 10879 multiletter control sequences out of 15000+200000
- 13994 words of font info for 33 fonts, out of 3000000 for 9000
+ 7801 strings out of 493763
+ 110263 string characters out of 3144954
+ 218575 words of memory out of 3000000
+ 10887 multiletter control sequences out of 15000+200000
+ 14769 words of font info for 34 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
  43i,8n,69p,1014b,411s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/local/texlive/201
@@ -821,17 +831,18 @@ texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2010/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2010/tex
 mf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2010/texm
 f-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2010/texmf-
-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/texlive/2010/texmf-di
-st/fonts/type1/public/cm-super/sfbx2488.pfb></usr/local/texlive/2010/texmf-dist
-/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2010/texmf-dist/f
-onts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2010/texmf-dist/fon
-ts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2010/texmf-dist/fonts
-/type1/public/cm-super/sfrm2074.pfb></usr/local/texlive/2010/texmf-dist/fonts/t
-ype1/public/cm-super/sfti1200.pfb>
-Output written on ./bin/monografia.pdf (18 pages, 377201 bytes).
+dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2010/texmf-di
+st/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/texlive/2010/texmf-dist
+/fonts/type1/public/cm-super/sfbx2488.pfb></usr/local/texlive/2010/texmf-dist/f
+onts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2010/texmf-dist/fon
+ts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2010/texmf-dist/fonts
+/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2010/texmf-dist/fonts/t
+ype1/public/cm-super/sfrm2074.pfb></usr/local/texlive/2010/texmf-dist/fonts/typ
+e1/public/cm-super/sfti1200.pfb>
+Output written on ./bin/monografia.pdf (20 pages, 728470 bytes).
 PDF statistics:
- 315 PDF objects out of 1000 (max. 8388607)
- 277 compressed objects within 3 object streams
- 65 named destinations out of 1000 (max. 500000)
- 91 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 361 PDF objects out of 1000 (max. 8388607)
+ 318 compressed objects within 4 object streams
+ 73 named destinations out of 1000 (max. 500000)
+ 112 words of extra memory for PDF output out of 10000 (max. 10000000)
 

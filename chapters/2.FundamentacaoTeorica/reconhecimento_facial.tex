@@ -34,6 +34,68 @@ Basicamente, o processo de reconhecimento facial pode ser divido em duas tarefas
 		\item Reconhecmento das faces encontradas;
 	\end{enumerate}
 
+Falaremos dessas duas tarefas separadamente nas próximas subseções.
+
+\subsection{Detecção de Faces em imagens}
+	
+A primeira etapa para o reconhecimento de faces é a detecção de um rosto em uma imagem, e a partir daí a comparação do mesmo com modelos conhecidos pelo sistema \cite{hong, oliveira}. Em um sistema de reconhecimento facial, tanto o tempo de resposta quanto a confiabilidade desta etapa influência diretamente no desempenho e o emprego deste sistema \cite{oliveira}.
+
+A detecção de faces é definida como o processo que determina a existência ou não de faces em uma imagem e uma vez encotrada alguma face, sua localização deve ser apontada através de um enquadramento ou através de suas coordenadas dentro da imagem \cite{oliveira}. A figura \ref{enquadramentoRosto} representa um exemplo da detecção de uma face em uma imagem.
+
+	\begin{figure}[hbt]
+		\begin{center}
+			\includegraphics[height=9.5cm,width=12.5cm]{figuras/2.FundamentacaoTeorica/enquadramentoRosto.png}
+		\end{center}
+		\caption{Exemplo de um processo de detecção de uma face em uma imagem.}
+		\label{enquadramentoRosto}
+	\end{figure}
+
+O processo de detecção de faces geralmente é dificultado por três principais razões mostradas a seguir:
+
+	\begin{enumerate}
+		\item Embora a maiora das faces apresente estruturas semelhantes (olhos, bocas, nariz, entre outros) e dispostos aproximadamente na mesma configuração de espaço, pode haver um grande número de componentes não rigídos e texturas diferentes entre as faces. Outro fator que dificulta são as flexibilizações causadas pelas expressões faciais \cite{oliveira};
+		\item A presença de acessórios (óculos, bigode, entro outros) ocultam características faciais básicas importantes para o processo de detecção através do surgimento de sombras ou reflexos \cite{oliveira}.
+		\item A não previsibilidade das condições da imagem em ambientes sem restrições de ilimuniação, cores e objetos de fundo \cite{oliveira}.
+	\end{enumerate}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\subsection{Reconhecimento das Faces encontradas}
+
 
 
 
