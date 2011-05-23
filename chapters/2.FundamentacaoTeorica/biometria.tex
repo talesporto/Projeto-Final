@@ -2,7 +2,7 @@
 
 As abordagens de identificação pessoal que utilizam ``alguma coisa que você sabe'', como Número de Identificação Pessoal (PIN - ``Personal Identification Number''), ou ``alguma coisa que você tenha'', como um cartão de identificação, não são confiáveis o suficiente para satisfazer os requisitos de segurança de um sistema de transações eletrônicas porque não têm a capacidade de diferenciar um usuário legítimo de um impostor que adiquiriu de forma ilegal o privilégio de acesso \cite{hong}. Esta fragilidade pode ser evitada se utilzarmos o nosso corpo como chave do sistema. Alguns traços fisícos ou comportamentais são muito mais complicados de serem forjados que uma cadeia de caracteres \cite{drovetto}.
 
-Biometria é uma tecnologia utilizada para identificação de um indivíduo baseado em suas características físicas ou comportamentais, baseia-se em ``alguma coisa que você é ou faz'' para realizar a identificação e, por isso, tem a capacidade de diferenciar entre um indivíduo legítimo de um impostor \cite{hong}. As características físicas estão relacionadas a composição do corpo humano e seu formato e as comportamentais estão relacionadas ao comportamento das pessoas \cite{drovetto}. A figura \ref{caracteristicasBiometricas}contém alguns exemplos desses dois tipos diferentes de características biométricas.
+Biometria é uma tecnologia utilizada para identificação de um indivíduo baseado em suas características físicas ou comportamentais, baseia-se em ``alguma coisa que você é ou faz'' para realizar a identificação e, por isso, tem a capacidade de diferenciar entre um indivíduo legítimo de um impostor \cite{hong}. As características físicas estão relacionadas a composição do corpo humano e seu formato e as comportamentais estão relacionadas ao comportamento das pessoas \cite{drovetto}. A figura \ref{caracteristicasBiometricas} contém alguns exemplos desses dois tipos diferentes de características biométricas.
 
 	\begin{figure}[hbt]
 		\begin{center}
@@ -15,10 +15,10 @@ Biometria é uma tecnologia utilizada para identificação de um indivíduo base
 Teoricamente, qualquer característica física/comportamental pode ser utilizada para identificação caso siga alguns dos seguintes requisitos \cite{milene}: 
 
 	\begin{enumerate}
-		\item \textbf{universidade}: qualquer pessoa pode ser avaliada sobre essa característica;
-		\item \textbf{singularidade}: dada duas pessoas distinas, elas não podem ter a mesma característica;
-		\item \textbf{permanência}: a característica não pode mudar de acordo com o tempo;
-		\item \textbf{exigibilidade}: significa que a característica pode ser mensurada quantitativamente;
+		\item \textbf{universidade}: qualquer pessoa comum pode ser avaliada sobre essa característica;
+		\item \textbf{singularidade}: dada duas pessoas distinas, elas não podem ter a mesma característica dentro de uma proporção satisfatória;
+		\item \textbf{permanência}: a característica não pode mudar significativamente de acordo com o tempo;
+		\item \textbf{exigibilidade}: pode ser mensurada quantitativamente;
 	\end{enumerate}
 
 Porém, na prática também são considerados outros requisitos \cite{milene}:
@@ -29,7 +29,7 @@ Porém, na prática também são considerados outros requisitos \cite{milene}:
 		\item \textbf{evasão}: refere a facilidade de ser adulterado;
 	\end{enumerate}
 
-São várias as vatangens que os sistemas biométricos têm em relação aos sistemas convencionais. Listamos as vatagens vistas como principais \cite{drovetto}:
+São várias as vantangens que os sistemas biométricos têm em relação aos sistemas convencionais. Listamos as vantagens principais \cite{drovetto}:
 	
 	\begin{itemize}
 		\item características biométricas não podem ser perdidas ou esquecidas;
@@ -40,12 +40,12 @@ São várias as vatangens que os sistemas biométricos têm em relação aos sis
 Na prática um sistema biométrico deve ser capaz de \cite{hong}:
 		
 	\begin{enumerate}
-		\item atiginr uma acurácia aceitável e com uma velocidade razoável;
-		\item não ser prejudiciável pelos indivíduos e ser aceito pela população alvo;
-		\item ser suficientemente robusto para vários métodos fraudulentos;
+		\item atingir uma acurácia aceitável e com uma velocidade razoável;
+		\item não ser prejudiciável aos indivíduos e ser aceito pela população alvo;
+		\item ser suficientemente robusto para métodos fraudulentos;
 	\end{enumerate}
 
-Novas técnicas de reconhecimento por meio de faces, íris, retina e voz, entre outras, têm sido abordadas para aplicações em sistemas de reconhecimento automático \cite{bolle,saocarlos}. O reconhecimento facial é apenas uma das nove características biométricas utilizadas atualmente \cite{milene}. Nas tabelas \ref{tabelaRequisitosTeoricos} e \ref{tabelaRequisitosPraticos} são mostradadas as noves características e seus respectivos comportamentos baseados nos requisitos mencionados acima.
+Novas técnicas de reconhecimento por meio de face, íris, retina e voz, entre outras, têm sido abordadas para aplicações em sistemas de reconhecimento automático \cite{bolle,saocarlos}. Das nove características utilizadas atualmente a face é uma das mais populares \cite{milene}. Nas tabelas \ref{tabelaRequisitosTeoricos} e \ref{tabelaRequisitosPraticos} são mostradadas as noves características e seus respectivos comportamentos baseados nos requisitos mencionados acima.
 		
 	\begin{table}[htb]
 		\begin{center}
@@ -89,20 +89,22 @@ Novas técnicas de reconhecimento por meio de faces, íris, retina e voz, entre 
 
 Os sistemas biométricos podem ser classificados em sistemas de verificação ou identificação. Sistemas de verificação são aqueles que autenticam a identidade dos usuários comparando-os com os próprios templates. Eles conduzem uma comparação ``um para um'' e determinam se o usuário é quem realmente diz ser. O maior desáfio para esse tipo de sistema é a acurácia. Geralmente, não é muito difícil satisfazer o requisito de tempo de resposta pois somente uma comparação ``um para um'' é feita \cite{hong}.
 
-Sistemas de identificação reconhecem um indivíduo pesquisando em todo o banco de dados procurando por uma correspondência. Eles conduzem uma comparação ``um para muitos'' para estabelecer a identidade do indivíduo. Ao contrário dos sistemas de verificação, nesse tipo de sistema tanto a acurácia quanto o tempo são os grandes desafios, por causa da necessidade de explorar todo o banco de dados. Geralmente, é muito mais difícil desenvolver um sistemas de identificação que um de verificação \cite{hong}.
+Sistemas de identificação reconhecem um indivíduo pesquisando em todo o banco de dados procurando por uma correspondência. Eles conduzem uma comparação ``um para muitos'' para estabelecer a identidade do indivíduo. Ao contrário dos sistemas de verificação, nesse tipo de sistema tanto a acurácia quanto o tempo são os grandes desafios, por causa da necessidade de explorar todo o banco de dados. Geralmente, sistemas de identificação são mais complexos que sistemas de verificação \cite{hong}.
 
-Um sistema biométrico responde a dois eventos: um usuário é ou não quem afirma ser. Como resposta a esses eventos, o sistema pode classificar o usuário como um cliente ou um impostor. Nessa tomada de decisão pode ocorrer dois tipos de erros: uma falsa aceitação, ao aceitar um impostor, (\textit{False Acceptance} - FA) ou uma falsa rejeição (\textit{False Rejection} - FR), ao rejeitar um cliente. Baseado nesses erros, duas taxas são utilizadas para avaliar sistemas biométricos: taxa de falsa aceitação (\textit{False Acceptance Rate} - FAR) e taxa de falsa rejeição (\textit{False Rejection Rate} - FRR) \cite{drovetto}.
+Em um sistema biométrico exitem duas possíveis respostas, um usuário é ou não é quem afirma ser, sendo assim o sistema pode classificar o usuário como cliente ou impostor. Nessa tomada de decisão pode ocorrer dois tipos de erros: uma falsa aceitação, ao aceitar um impostor, (\textit{False Acceptance} - FA) ou uma falsa rejeição (\textit{False Rejection} - FR), ao rejeitar um cliente. Baseado nesses erros, duas taxas são utilizadas para avaliar sistemas biométricos: taxa de falsa aceitação (\textit{False Acceptance Rate} - FAR) e taxa de falsa rejeição (\textit{False Rejection Rate} - FRR) \cite{drovetto}.
 
-A FAR é a probabilidade de um sistema biométrico aceitar um impostor como cliente. Ela é calculada pela equação (2.1) em que $\displaystyle Nfa$ é o número de falsas aceitações e $\displaystyle Ni$ é o número de impostores que tentaram acessar o sistema. A variação da taxa é representada pelo intervalo fechado $\displaystyle [0,1]$, onde o valor $\displaystyle 1$ significa que todos os impostores foram falsamente aceitos e o valor $\displaystyle 0$ significa que todos impostores foram identificados como tao. Logo quando menor o FAR mais seguro o sistema é \cite{drovetto}.
+A FAR é a probabilidade de um sistema biométrico aceitar um impostor como cliente. Essa probabilidade é calculada pela equação (\ref{equacaoProbabilidadeFAR}) em que $\displaystyle Nfa$ é o número de falsas aceitações e $\displaystyle Ni$ é o número de impostores que tentaram acessar o sistema. A variação da taxa é representada pelo intervalo fechado $\displaystyle [0,1]$, onde o valor $\displaystyle 1$ significa que todos os impostores foram falsamente aceitos e o valor $\displaystyle 0$ significa que todos impostores foram rejeitados. Logo quanto menor o FAR mais seguro o sistema é \cite{drovetto}.
 
 	\begin{equation}
 		FAR = \frac{Nfa}{Ni} \cite{drovetto}
+		\label{equacaoProbabilidadeFAR}
 	\end{equation} 
 
-A FRR é a probabilidade de um sistema biométrico rejeitar um cliente e classifica-lo como impostor. Ela é calculada pela equação (2.2) em que $\displaystyle Nfr$ é o número de falsas rejeições e $\displaystyle Nc$ é o número de clientes que tentaram acessar o sistema. A variação da taxa é representada pelo intervalo fechado $\displaystyle [0,1]$, onde o valor $\displaystyle 1$ significa que todos os clientes foram falsamente rejeitados e o valor $\displaystyle 0$ significa que todo os cliente foram aceitos corretamente. Em sistemas cuja performance tem maior grau de prioridade que a segurança, deve-se reduzir a FRR para minimizar a ocorrência de falsas rejeições \cite{drovetto}.
+A FRR é a probabilidade de um sistema biométrico rejeitar um cliente e classifica-lo como impostor. Essa probabilidade é calculada pela equação (\ref{equacaoProbabilidadeFRR}) em que $\displaystyle Nfr$ é o número de falsas rejeições e $\displaystyle Nc$ é o número de clientes que tentaram acessar o sistema. A variação da taxa é representada pelo intervalo fechado $\displaystyle [0,1]$, onde o valor $\displaystyle 1$ significa que todos os clientes foram falsamente rejeitados e o valor $\displaystyle 0$ significa que todo os cliente foram aceitos corretamente. Em sistemas cuja performance tem maior grau de prioridade que a segurança, deve-se reduzir a FRR para minimizar a ocorrência de falsas rejeições \cite{drovetto}.
 
 	\begin{equation}
 		FRR = \frac{Nfr}{Nc} \cite{drovetto}
+		\label{equacaoProbabilidadeFRR}
 	\end{equation} 
 
-A partir dessas taxas de erro, pode-se obter outras medidas como a \textit{Equal Error Rate} (ERR). Esta corresponde a taxa de erro na qual a tanto a FAR quanto a FRR possuem o mesmo valor. Como diferentes sistemas têm comportamentos diferentes, a ERR normalmente é utilizada para uma comparação mais rigorosa entre o sistemas. Quanto menor for a ERR, mas presciso é considerado o sistema \cite{drovetto}.
+A partir dessas taxas de erro, pode-se obter outras medidas como a \textit{Equal Error Rate} (ERR). Esta corresponde a taxa de erro na qual tanto a FAR quanto a FRR possuem o mesmo valor. Como muitos sistemas têm comportamentos diferentes, a ERR normalmente é utilizada para uma comparação mais rigorosa entre o sistemas. Quanto menor for a ERR, mas presciso é considerado o sistema \cite{drovetto}.
