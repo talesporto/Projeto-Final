@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2011.4.25)  22 MAY 2011 21:56
+This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2011.4.25)  23 MAY 2011 16:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -754,7 +754,7 @@ File: figuras/2.FundamentacaoTeorica/enquadramentoRosto.png Graphic file (type
 png)
  <use figuras/2.FundamentacaoTeorica/enquadramentoRosto.png>
 Package pdftex.def Info: figuras/2.FundamentacaoTeorica/enquadramentoRosto.png 
-used on input line 47.
+used on input line 49.
 (pdftex.def)             Requested size: 355.66591pt x 270.30055pt.
 ))
 [8 <./figuras/2.FundamentacaoTeorica/enquadramentoRosto.png (PNG copy)>]
