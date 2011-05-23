@@ -1,23 +1,27 @@
-roteiro
+Template - Carla Denise Castanho
+	1 - Introdução
+	2 - Fundamentação teorica
+	3 - Trabalhos correlatos
+	4 - Problema / Proposta
+	6 - Implementação
+	7 - Testes
+	8 - Conclusão
 
- - Introdução
-
-	-Organização do Trabalho
-		-falar da estrutura da monigrafia
+Roteiro real
+	1 - Introdução
+		1.1 - Organização do Trabalho
+			  Falar da estrutura da monigrafia
 		
- - Localizaçao e Reconhecimento Facial
-
-	 -Localização
-
-	 -Reconhecimento Facial
-	 		biometria
-	 		reconhecimento facial
-	 			enrola sobre reconhecimento
-	 			tipos
-	 				geometria
-	 				template
-	 					imagens 2d
-	 					imagens 3d
+	2 - Localizaçao e Reconhecimento Facial
+		2.1 - Localização
+		2.2 - Reconhecimento Facial
+			2.2.1 - Biometria
+			2.2.2 - Reconhecimento facial
+			        Enrolar sobre reconhecimento. Falar sobre os tipos:
+	 				- Geometria
+	 				- Template
+	 					Imagens 2d
+	 					Imagens 3d
 	 				
 #######################################################################################
 -Facial Features-Based method for Human Tracking
