@@ -1,0 +1,40 @@
+Template - Carla Denise Castanho
+	1 - Introdução
+	2 - Fundamentação teorica
+	3 - Trabalhos correlatos
+	4 - Problema / Proposta
+	6 - Implementação
+	7 - Testes
+	8 - Conclusão
+
+Roteiro real
+	1 - Introdução
+		1.1 - Organização do Trabalho
+			  Falar da estrutura da monigrafia
+		
+	2 - Localizaçao e Reconhecimento Facial
+		2.1 - Localização
+		2.2 - Reconhecimento Facial
+			2.2.1 - Biometria
+			2.2.2 - Reconhecimento facial
+			        Enrolar sobre reconhecimento. Falar sobre os tipos:
+	 				- Geometria
+	 				- Template
+	 					Imagens 2d
+	 					Imagens 3d
+	 				
+#######################################################################################
+-Facial Features-Based method for Human Tracking
+	Roughly speaking, face recognition algorithms can be cat- egorized into two classes [6]. In the first class, i.e. geometric, feature-based matching algorithms, salient facial landmarks such as eyes must be detected before any other processing can take place. In the second class, i.e. algorithms based on template matching, faces must be correctly aligned before recognition, which is usually performed based on the detection of eyes. In fact, as both the position of the eyes and the interoc- ular distance are relatively constant for most people, detecting the eyes serves as an important role in face normalization, and thus facilitates further localization of facial landmarks [7]. Therefore, the detection of the eyes is a vital component in automatic face recognition systems.
+
+	o artigo Face recognition- features versus templates fala mais sobre cada tipo.
+
+
+-http://www.ademar.org/texts/seguranca-processamento-imagens.pdf
+	O problema de detecção e reconhecimento facial tem vários níveis de aplicação
+	e dificuldade. Por ser um órgão 3D e socialmente alterável, a face está suscetível a uma
+	variedade de modificações por parte da pessoa (idade, posição, estado emocional, etc)
+	e do ambiente (iluminação, cores do ambiente, etc).
+	O reconhecimento facial depara-se  com dois grandes desafios: que são
+	encontrar a face na imagem[5,6] e encontrar características nessa face[6], gerando um
+	modelo para armazenamento e comparação.
