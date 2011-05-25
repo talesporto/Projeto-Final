@@ -6,7 +6,7 @@ No anos 70, os estudos do reconhecimento facial eram baseados sobre atributos fa
 
 Um dos motivos que incentivou os diversos estudos sobre reconhecimento facial são as vantagens que o mesmo possui em relação a impressão digital e a íris.  No reconhecimento por impressão digital, a desvantagem consiste no fato que nem todas as pessoas possuem uma impressão digital com ``qualidade'' suficiente para ser reconhecida por um sistema. Já o reconhecimento por íris apresenta uma alta confiabilidade e larga variação, sendo estável pela vida toda. Porém, a desvantagem está relacionada ao modo de captura da íris que necessita de uma alinhamento entre a câmera e os olhos da pessoa \cite{saocarlos}. 
 
-Basicamnente existem duas particularidades que fazem da face uma característica biométrica bastante atrativa \cite{drovetto}:
+Basicamente existem duas particularidades que fazem da face uma característica biométrica bastante atrativa \cite{drovetto}:
 
 	\begin{enumerate}
 		\item A aquisição da face é feita de forma fácil e não-intrusiva;
@@ -52,13 +52,19 @@ A detecção de faces é definida como o processo que determina a existência ou
 		\label{enquadramentoRosto}
 	\end{figure}
 
-O processo de detecção de faces geralmente é dificultado por três principais razões mostradas a seguir:
+O processo de detecção de faces geralmente é pelas seguintes razões mostradas a seguir:
 
 	\begin{enumerate}
-		\item Embora a maioria das faces apresente estruturas semelhantes (olhos, bocas, nariz, entre outros) e são dispostas aproximadamente na mesma configuração de espaço, pode haver um grande número de componentes não rigídos e texturas diferentes entre as faces. Um exemplo são as flexibilizações causadas pelas expressões faciais \cite{oliveira};
-		\item A presença de acessórios (óculos, bigode, entro outros) ocultam características faciais básicas importantes para o processo de detecção através do surgimento de sombras ou reflexos \cite{oliveira}.
-		\item A não previsibilidade das condições da imagem em ambientes sem restrições de ilimuniação, cores e objetos de fundo \cite{oliveira}.
+		\item \textbf{Pose}: as imagens de uma face podem variar de acordo com a posição relativa entre a camêra e a face (frontal, 45 graus, perfil, ``de cabeça para baixo''), e com isso algumas características da face, como olhos e nariz, podem ficar parcialmente ou totalmente ocultadas \cite{yang}.
+		\item \textbf{Presença de acessórios}: características faciais básicas importantes para o processo de detecção podem ficar ocultadas pela presença de acessórios, como óculos, bigode, barba, entre outros \cite{oliveira, yang}. 
+		\item \textbf{Expressões faciais}: embora a maioria das faces apresente estruturas semelhantes (olhos, bocas, nariz, entre outros) e são dispostas aproximadamente na mesma configuração de espaço, pode haver um grande número de componentes não rigídos e texturas diferentes entre as faces. Um exemplo são as flexibilizações causadas pelas expressões faciais \cite{oliveira, yang};
+		\item \textbf{Obstrução}: faces podem ser obstruídas por outros objetos. Em uma imagem com várias faces, uma face pode obstruir outra \cite{yang}.
+		\item \textbf{Condiçoes da imagem}: a não previsibilidade das condições da imagem em ambientes sem restrições de ilimuniação, cores e objetos de fundo \cite{oliveira, yang}.
 	\end{enumerate}
+
+
+
+
 
 
 
