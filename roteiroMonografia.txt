@@ -21,7 +21,12 @@ Roteiro real
 	 				- Geometria
 	 				- Template
 	 					Imagens 2d
+	 						-focar nas desvantagens
 	 					Imagens 3d
+	 						-falar sobre imagens 3d
+	 						- aquisição: como funciona o sensor de profundidade
+	 						- pre-processamento: como tirar imperfeiçÕes q degradam a performance dos algoritmos de reconhecimento
+	 						- algoritmos
 	 				
 #######################################################################################
 -Facial Features-Based method for Human Tracking
