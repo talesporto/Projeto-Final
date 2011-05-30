@@ -43,3 +43,10 @@ Roteiro real
 	O reconhecimento facial depara-se  com dois grandes desafios: que são
 	encontrar a face na imagem[5,6] e encontrar características nessa face[6], gerando um
 	modelo para armazenamento e comparação.
+
+
+	W. Zhao, R. Chellappa, A. Rosenfeld, and P. J. Phillips, “Face recog- nition: A literature survey,” Univ. Maryland, College Park, MD, Tech. Rep. CS-TR4167, Oct. 2000.
+[2]	F. Forster, P. Rummel, M. Lang, and B. Radig, “The hiscore camera: A real time three dimensional and color camera,” in Proc. IEEE Int. Conf. Image Processing, vol. 2, Oct. 2001, pp. 598–601.
+[3] E. Trucco and A. Verri, Introductory Techniques for 3-D Computer Vi- sion.	Englewood Cliffs, NJ: Prentice-Hall, 1998. 07 458.
+TSALAKANIDOU et al.: FACE LOCALIZATION AND AUTHENTICATION
+[4] J. C. Lee and E. Milios, “Matching range images of human faces,” in Proc. 3rd IEEE Int. Conf. Image Processing, Dec. 1990, pp. 722–726.
