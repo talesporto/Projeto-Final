@@ -1,0 +1,80 @@
+\begin{thebibliography}{10}
+
+\bibitem{gregoryabowd}
+G.~Abowd, C.~Atkeson, and I.~Essa.
+\newblock Ubiquitous smart spaces.
+\newblock {\em A white paper submitted to DARPA (in response to RFI)}, 1998.
+
+\bibitem{milene}
+M.~Arantes, A.~N. Ide, and J.~H. Saito.
+\newblock A system for fingerprint minutiae classification and recognition.
+\newblock In {\em Proceedings of the 9th International Conference on Neural
+  Information Processing(ICONIP'O2)}, volume~5, pages 2474 -- 2478.
+
+\bibitem{saocarlos}
+{\^A}.~R. Bianchini.
+\newblock Arquitetura de redes neurais para o reconhecimento facial baseado no
+  neocognitron.
+\newblock Master's thesis, S{\~a}o Carlos,
+  http://www.bdtd.ufscar.br/htdocs/tedeSimplificado//tde\_busca/arquivo.php?co%
+dArquivo=164, 2001.
+
+\bibitem{fabriciobuzzeto}
+F.~N. Buzeto.
+\newblock Um conjunto de solu{\c c}{\~o}es para a constru{\c c}{\~a}o de
+  aplicativos de computa{\c c}{\~a}o ub{\'\i}qua.
+\newblock Master's thesis, Universidade de Bras{\'\i}lia, 2010.
+
+\bibitem{daugman}
+J.~Daugman.
+\newblock Face and gesture recognition: Overview.
+\newblock {\em IEEE Transactions on Pattern Analysis and Machine Intelligence},
+  19(7), 1997.
+
+\bibitem{alegomes}
+A.~R. Gomes.
+\newblock Ubiquitos -- uma proposta de arquitetura de middleware para a
+  adaptabilidade de servi{\c c}os em sistemas de computa{\c c}{\~a}o
+  ub{\'\i}qua.
+\newblock Master's thesis, Universidade de Bras{\'\i}lia; Departamento de
+  Ci{\^e}ncia da Computa{\c c}{\~a}o,
+  http://monografias.cic.unb.br/dspace/handle/123456789/110, 2007.
+
+\bibitem{drovetto}
+S.~A.~D. Junior.
+\newblock Reconhecimento facial 3d utilizando o simulated annealing com as
+  medidas surface interpenetration measure e m-estimator sample consensus.
+\newblock Master's thesis, Universidade Federal do Paran{\'a}, 2007.
+
+\bibitem{hong}
+Hong L. and Jain A.
+\newblock Integrating faces and fingerprints for personal identification.
+\newblock {\em IEEE Transactions on Pattern and Machine Intelligence},
+  20(12):1295--1307, dezembro 1998.
+
+\bibitem{yang}
+N.~Ahuja M.~Yang, D. J.~Kriegman.
+\newblock Detecting faces in images: A survey.
+\newblock {\em IEEE Transactions on Pattern Analysis and Machine Intelligence},
+  24(1):34--58, janeiro 2002.
+
+\bibitem{oliveira}
+D.~R. Oliveira.
+\newblock Reconhecimento de faces usando redes neurais e biometria.
+\newblock Master's thesis, INPE, 2006.
+
+\bibitem{bolle}
+S.~{Pankanti}, R.~M. {Bolle}, and A.~{Jain}.
+\newblock Biometrics: The future of identification, 2000.
+
+\bibitem{weiser1}
+M.~Weiser.
+\newblock The computer for the 21st century.
+\newblock {\em Scientific American}, 1991.
+
+\bibitem{weiser2}
+M.~Weiser.
+\newblock The world is not a desktop.
+\newblock {\em ACM Interactions}, 1993.
+
+\end{thebibliography}
