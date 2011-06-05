@@ -157,6 +157,34 @@ Em Eigenface, a distância entre duas imagens é a distância euclidiana entre o
 
 Muitas técnicas avançadas de reconhecimento de face são extensões deste conceito básico. A principal diferença entre Eigenface e estas técnicas avançadas é o processo de definição do subespaço. Em vez de usar PCA, o subespaço pode ser baseada em Análise de Componentes Independentes (ICA) ou em Análise Discriminante Linear (LDA), e assim por diante.
 
+Em nossa definição de uma linha como um subespaço 1D, usamos X e Y coordenadas para definir m, que é sua inclinação em 2D. Quando m é um componente principal de um conjunto de pontos, tem outro nome, é um autovetor que em ingles ``eingenvector'' daí o nome eigenface. Autovetores são um conceito de álgebra linear. Esse conceito é importante para nós aqui apenas como um nome alternativo para componentes principais. 
+
+Para o reconhecimento facial em imagens de 50x50, cada autovetor representa a inclinação de uma linha em um espaço de 2.500 dimenções. Como no caso 2D, precisamos de todas as 2.500 dimensões para definir a inclinação de cada linha. Embora seja impossível visualizar uma linha em muitas dimensões, podemos visualizar os autovetores de uma maneira diferente. Podemos converter as suas 2.500 dimenções em uma simples imagem usando a sua ``inclinação'' para colocar cada pixel valor em seu local correspondente. Quando fazemos isso, obtemos imagens ``facelike'' chamadas de eigenfaces.
+
+Eigenfaces são interessantes para olhar, e dar-nos alguma intuição sobre os componentes principais para o nosso conjunto de dados. O lado esquerdo da Figura \ref{exemploEigenfaces} mostra o rosto de imagens para dez pessoas. Estas imagens são do rosto de ``Yale Face Database B (referências 4 e 5)''. Ele contém imagens de rostos com uma variedade de condições de iluminação. Eu usei sete imagens de cada uma dessas dez pessoas para criar um subespaço PCA. 
+
+O lado direito da Figura \ref{exemploEigenfaces} mostra os seis primeiros componentes principais deste conjunto de dados, apresentados como eigenfaces. O eigenfaces muitas vezes têm um olhar fantasmagórico, porque combinam elementos de várias faces. O mais brilhante e os pixels mais escuros em cada marca Eigenface regiões rosto que mais contribuíram para esse componente principal. 
+
+	\begin{figure}[hbt]
+		\begin{center}
+			\includegraphics[width=12cm]{figuras/2.FundamentacaoTeorica/eigenfaces.png}
+		\end{center}
+		\caption{Direita: imagens de rosto para dez pessoas. Esquerda: os seis primeiros componentes principais, visto como eigenfaces.}
+		\label{exemploEigenfaces}
+	\end{figure}
+
+Os principais componentes que encontra APC são os rumos da maior variação nos dados. Um dos pressupostos na Eigenface é que a variabilidade nas imagens subjacente corresponde à diferença entre as faces individuais. Esta suposição é, infelizmente, nem sempre válido. A Figura \ref{exemplosImagensIluminacaoo} mostra os rostos de duas pessoas. A face de cada indivíduo é apresentada em quatro diferentes condições de iluminação.
+
+Estas imagens são também do ``Yale Face Database B''. Na verdade, eles são imagens de faces de duas das dez pessoas mostrado na Figura \ref{exemploEigenfaces}. Você pode dizer qual é qual? Eigenface não pode. Quando a iluminação é muito variável, Eigenface muitas vezes não o faz melhor palpite aleatório faria.
+
+	\begin{figure}[hbt]
+		\begin{center}
+			\includegraphics[width=14cm]{figuras/2.FundamentacaoTeorica/exemplosImagensIluminacaoo.png}
+		\end{center}
+		\caption{Face imagens de dois indivíduos. A face de cada indivíduo é apresentada em quatro diferentes condições de iluminação. A variabilidade devido à iluminação aqui é maior do que a variabilidade entre os indivíduos. Eigenface tende a confundir as pessoas quando os efeitos de iluminação são fortes.}
+		\label{exemplosImagensIluminacaoo}
+	\end{figure}
+
 
 %Como mencionado em cima, essa idéia básica - redução de dimensionalidade seguido pelo cálculo da distância em um subespaço - é amplamente utilizado no trabalho de visão computacional. Também é utilizado em outros ramos da AI. Na verdade, é uma das principais ferramentas para gerenciar a complexidade e para encontrar padrões escondidos dentro de enormes quantidades de dados do mundo real.
 
