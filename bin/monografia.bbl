@@ -16,8 +16,8 @@ M.~Arantes, A.~N. Ide, and J.~H. Saito.
 \newblock Arquitetura de redes neurais para o reconhecimento facial baseado no
   neocognitron.
 \newblock Master's thesis, S{\~a}o Carlos,
-  http://www.bdtd.ufscar.br/htdocs/tedeSimplificado//tde\_busca/arquivo.php?codArquivo=164,
-  2001.
+  http://www.bdtd.ufscar.br/htdocs/tedeSimplificado//tde\_busca/arquivo.php?co%
+dArquivo=164, 2001.
 
 \bibitem{fabriciobuzzeto}
 F.~N. Buzeto.
@@ -39,6 +39,11 @@ A.~R. Gomes.
 \newblock Master's thesis, Universidade de Bras{\'\i}lia; Departamento de
   Ci{\^e}ncia da Computa{\c c}{\~a}o,
   http://monografias.cic.unb.br/dspace/handle/123456789/110, 2007.
+
+\bibitem{hewitt}
+R.~Hewitt.
+\newblock Face recognition with eigenface.
+\newblock {\em SERVO Magazine}, 2007.
 
 \bibitem{drovetto}
 S.~A.~D. Junior.
