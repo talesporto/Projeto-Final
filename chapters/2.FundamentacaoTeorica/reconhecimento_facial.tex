@@ -81,7 +81,7 @@ Na etapa de reconhecimento, as faces detectadas e processadas, serão comparadas
 		\item \textbf{Fisher Faces} []
 	\end{enumerate}
 
-Com o surgimento da tecnologia 3D o reconhecimento facial se trasformou mais confiavel pois a imagem 3D evita problemas comum em reconhecimentos faciais 2D como a mudança na iluminação, diferentes expressões faciais, maquiagem e orientação da cabeça.
+Com o surgimento da tecnologia 3D o reconhecimento facial se trasformou mais confiável pois a imagem 3D evita problemas comum em reconhecimentos faciais 2D como a mudança na iluminação, diferentes expressões faciais, maquiagem e orientação da cabeça.
 	Técnicas 3D:
 	\begin{enumerate}
 		\item \textbf{``Face Recognition Homepage''} []
@@ -91,7 +91,7 @@ Com o surgimento da tecnologia 3D o reconhecimento facial se trasformou mais con
 
 
 O Eigenface é um algoritmo de reconhecimento facial 2D simples e fácil de implementar. Os passos utilizados pelo Eigenface também são utilizados em muitos métodos avançados. Os princípios básicos por trás dele como PCA(``Principal Component Analisys'') e ``distance-based matching'' aparecem mais e mais na computação visual e aplicações diversas de maquinas inteligentes.
-O Eigenface trabalha de forma simples, dada uma imagem de um rosto desconhecido e imagens do rosto das pessoas conhecidas.
+O Eigenface trabalha de forma simples, dada uma imagem de um rosto desconhecido e imagens do rosto das pessoas conhecidas executa as seguintes ações.
 	\begin{enumerate}
 		\item Computa a distância entre a nova imagem e cada uma das imagens já conhecidas.
 		\item Seleciona a imagem mais proxima do novo rosto.
@@ -99,11 +99,7 @@ O Eigenface trabalha de forma simples, dada uma imagem de um rosto desconhecido 
 	\end{enumerate}
 
 
-A distância entre as imagens é medida ponto a ponto. Esta é também chamado de distância euclidiana. Em duas dimensões (2D), a distância euclidiana entre os pontos $P_1$ e $P_2$ \ref{distanciaEntrePontos}.
- 
- 	\begin{equation}
- 	d_{12} = \sqrt(d_{x2} + d_{y2}),  onde    d_x = x_2-x_1 e d_y = y_2-y_1.
- 	\end{equation}
+A distância entre as imagens é medida ponto a ponto. Esta é também chamado de distância euclidiana. Em duas dimensões (2D), a distância euclidiana entre os pontos $P_1$ e $P_2$ é dada pela fórmula $\displaystyle d_{12} = \sqrt(d_{x2} + d_{y2})$, onde $\displaystyle d_x = x_2 - x_1$ e $\displaystyle d_y = y_2-y_1$ e representada na Figura \ref{distanciaEntrePontos}.
 
     \begin{figure}[hbt]
 		\begin{center}
@@ -114,7 +110,7 @@ A distância entre as imagens é medida ponto a ponto. Esta é também chamado d
 	\end{figure}
 
 
-Imagens possuem ``ruídos'' e vamos definir ruído como qualquer coisa que atrapalhe na identificação, intensidade de luz, por exemplo, é uma delas. Cada pixel possui uma intensidade de ruído diferente e com cada pixel dando a sua contribuição fica muito difícil encontrar a imagem correta. Uma solução é diminuir a dimensionalidade da imagem tornando assim o ruido menor e sendo possível extrair as informações importante da imagem.
+Imagens possuem ``ruídos'' e vamos definir ruído como qualquer coisa que atrapalhe na identificação, como por exemplo as diferenças na luminosidade. Cada pixel possui uma intensidade de ruído diferente e com cada pixel dando a sua contribuição fica muito difícil encontrar a imagem correta. Uma solução é diminuir a dimensionalidade da imagem tornando assim o ruido menor e sendo possível extrair as informações importante da imagem.
 
 Um dos métodos existentes para redução de imagem é o ``PCA - Principal Components Analysis''.
 
