@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.4.27)  6 JUN 2011 17:13
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.4.27)  6 JUN 2011 17:54
 entering extended mode
  %&-line parsing enabled.
 **monografia.tex
@@ -741,15 +741,15 @@ File: figuras/2.FundamentacaoTeorica/PCAexemploMapa.png Graphic file (type png)
 mentacaoTeorica/PCAexemploMapa.png (PNG copy)>] [12]
 <figuras/2.FundamentacaoTeorica/eigenfaces.png, id=324, 158.994pt x 186.9384pt>
 File: figuras/2.FundamentacaoTeorica/eigenfaces.png Graphic file (type png)
-<use figuras/2.FundamentacaoTeorica/eigenfaces.png> [13 <./figuras/2.Fundamenta
-caoTeorica/eigenfaces.png (PNG copy)>]
-<figuras/2.FundamentacaoTeorica/exemplosImagensIluminacaoo.png, id=331, 238.641
+<use figuras/2.FundamentacaoTeorica/eigenfaces.png>
+<figuras/2.FundamentacaoTeorica/exemplosImagensIluminacaoo.png, id=327, 238.641
 56pt x 119.69719pt>
 File: figuras/2.FundamentacaoTeorica/exemplosImagensIluminacaoo.png Graphic fil
 e (type png)
 
-<use figuras/2.FundamentacaoTeorica/exemplosImagensIluminacaoo.png>)) [14 <./fi
-guras/2.FundamentacaoTeorica/exemplosImagensIluminacaoo.png (PNG copy)>]
+<use figuras/2.FundamentacaoTeorica/exemplosImagensIluminacaoo.png> [13 <./figu
+ras/2.FundamentacaoTeorica/eigenfaces.png (PNG copy)>])) [14 <./figuras/2.Funda
+mentacaoTeorica/exemplosImagensIluminacaoo.png (PNG copy)>]
 (./bin/monografia.bbl (./bin/monografia.brf)
 \tf@brf=\write7
 \openout7 = `monografia.brf'.
@@ -819,7 +819,7 @@ c/cm-super/sfrm1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.
 pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1440.pfb></usr/share/texm
 f/fonts/type1/public/cm-super/sfrm2074.pfb></usr/share/texmf/fonts/type1/public
 /cm-super/sfti1200.pfb>
-Output written on ./bin/monografia.pdf (26 pages, 1007570 bytes).
+Output written on ./bin/monografia.pdf (26 pages, 1007410 bytes).
 PDF statistics:
  446 PDF objects out of 1000 (max. 8388607)
  95 named destinations out of 1000 (max. 500000)

@@ -114,9 +114,7 @@ Imagens possuem ``ruídos'' e vamos definir ruído como qualquer coisa que atrap
 
 Um dos métodos existentes para redução de imagem é o ``PCA - Principal Components Analysis''.
 
-Para se ter uma idéia do que é o PCA, vejamos um caso especial chamado de ``least squares line fit''. O lado esquerdo da Figura \ref{exemploPCA} mostra um exemplo de uma linha média entre três pontos, que são, no mapa em 2D, Los Angeles, Chicago e Nova York.
-
-Estes três pontos do mapa são quase, mas não completamente, uma única linha. Se você estava planejando uma viagem, essa relação já seria uma informação útil. Nesse sentido, uma única linha expressa algo essencial sobre seu relacionamento. A linha tem apenas uma dimensão, por isso, se podemos substituir localizações dos pontos de 2D com localizações ao longo de uma única linha, vamos ter reduzido a sua dimensionalidade.
+Para se ter uma idéia do que é o PCA, vejamos um caso especial chamado de ``least squares line fit''. O lado esquerdo da Figura \ref{exemploPCA} mostra um exemplo de uma linha média entre três pontos, que são, no mapa em 2D, Los Angeles, Chicago e Nova York. Estes três pontos do mapa são quase, mas não completamente, uma única linha. Se você estava planejando uma viagem, essa relação já seria uma informação útil. Nesse sentido, uma única linha expressa algo essencial sobre seu relacionamento. A linha tem apenas uma dimensão, por isso, se podemos substituir localizações dos pontos de 2D com localizações ao longo de uma única linha, vamos ter reduzido a sua dimensionalidade.
 
 Como eles já estão quase alinhados, uma linha pode ser traçada através deles com pouco erro. O erro no ajuste da linha é medido pela soma do quadrado da distância de cada ponto da linha. A linha de melhor ajuste é aquela que possui o menor erro.
 
@@ -135,31 +133,31 @@ Se posicionarmos a origem do nosso plano cartesiano em algum lugar dessa linha, 
 
 Quando ele é descrito desta maneira, a linha é um subespaço do espaço 2D definido pelo sistema de coordenadas. Esta descrição enfatiza o aspecto dos dados que estamos interessados, ou seja, a direção que mantém esses pontos mais separados um do outro.
 
-Esta direção da separação maxima é chamada de primeira componente principal de um conjunto de dados. A próxima direção com maxima separação é a perpendicular a esta. Essa é a segunda componente principal. Em um conjunto de dados 2D, podemos ter no máximo dois componentes principais.
+Esta direção da separação máxima é chamada de primeira componente principal de um conjunto de dados. A próxima direção com máxima separação é a perpendicular a esta. Essa é a segunda componente principal. Em um conjunto de dados 2D, podemos ter no máximo duas componentes principais.
 
-No entanto, o número de componentes principais que podemos encontrar também é limitada pelo número de pontos de dados. Para ver o porque disto podemos pensar em um conjunto de dados que consiste de apenas um ponto. Qual é o sentido da separação máxima para esse conjunto de dados? Não há um só, porque não há nada para separar. Agora, considere um conjunto de dados com apenas dois pontos. A linha que conecta esses dois pontos é o primeiro componente principal. Mas não há segundo componente principal, porque não há nada mais para separar: os dois pontos estão totalmente na linha.
+No entanto, o número de componentes principais que podemos encontrar também é limitada pelo número de pontos de dados. Para ver o porque disto, podemos pensar em um conjunto de dados que consiste de apenas um ponto. Não há sentido da separação máxima para esse conjunto de dados, porque não há nada para separar. Agora, considere um conjunto de dados com apenas dois pontos. A linha que conecta esses dois pontos é a primeira componente principal. Mas não há uma segunda componente principal, porque não há nada mais para separar, pois os dois pontos estão totalmente na linha.
 
 Em Eigenface, cada imagem da face, de tamanho 50x50, é tratada como um ponto (com espaço dimensional de 2500). Portanto, o número de componentes principais, podemos encontrar nunca será mais do que o número de imagens de faces menos um.
 
-Embora seja importante ter um entendimento conceitual do que os componentes principais são, você não precisa saber os detalhes de como encontrá-los para implementar o Eigenface. Essa parte já foi feito para você pelo ``OpenCV''.
+Embora seja importante ter um entendimento conceitual do que as componentes principais são, você não precisa saber os detalhes de como encontrá-las para implementar o Eigenface. Essa parte já foi implementada em bibliotecas de processamento de imagens \textit{open source}, como por exemplo a bliblioteca ``OpenCV''.
 
-Voltando ao mapa da Figura \ref{exemploPCA}, agora que nós encontramos um subespaço 1D, temos uma maneira de converter os pontos em 2D para 1D. Esse processo se chama projeção. Quando você projeta um ponto em um subespaço, você atribui a ele a localização do subespaço mais próximo de sua localização no espaço de dimensão superior. Para projetar um ponto do mapa para a linha, você encontra o ponto da linha que está mais próximo do ponto 2D. Essa é sua projeção.
+Voltando ao mapa da Figura \ref{exemploPCA}, agora que nós encontramos um subespaço 1D, temos uma maneira de converter os pontos em 2D para 1D. Esse processo se chama projeção. Para projetar um ponto do mapa para a linha, você encontra o ponto da linha que está mais próximo do ponto 2D. Essa é sua projeção.
 
 Há uma função no ``OpenCV'' para projetar os pontos sobre um subespaço, então, novamente, você só precisa de um entendimento conceitual. Você pode deixar os detalhes algorítmicos para a biblioteca.
 
 As marcas azuis na Figura \ref{exemploPCA} mostram as localizações no subespaço das três cidades que definiram a linha. Outros pontos 2D também pode ser projetado para esta linha. O lado direito da Figura \ref{exemploPCA} mostra a localização prevista para Phoenix, Albuquerque, Boston.
 
-Em Eigenface, a distância entre duas imagens é a distância euclidiana entre os pontos projetados em um subespaço, ao invés da distância no espaço original da imagem de 2500 dimenções. A distância entre as faces neste subespaço de menor dimensão é a técnica que utiliza Eigenface para melhorar a relação sinal / ruído.
+Em Eigenface, a distância entre duas imagens é a distância euclidiana entre os pontos projetados em um subespaço, ao invés da distância no espaço original da imagem de 2500 dimenções. A distância entre as faces neste subespaço de menor dimensão é a técnica utilizada para melhorar a relação sinal / ruído.
 
 Muitas técnicas avançadas de reconhecimento de face são extensões deste conceito básico. A principal diferença entre Eigenface e estas técnicas avançadas é o processo de definição do subespaço. Em vez de usar PCA, o subespaço pode ser baseada em Análise de Componentes Independentes (ICA) ou em Análise Discriminante Linear (LDA), e assim por diante.
 
-Em nossa definição de uma linha como um subespaço 1D, usamos X e Y coordenadas para definir m, que é sua inclinação em 2D. Quando m é um componente principal de um conjunto de pontos, tem outro nome, é um autovetor que em ingles ``eingenvector'' daí o nome eigenface. Autovetores são um conceito de álgebra linear. Esse conceito é importante para nós aqui apenas como um nome alternativo para componentes principais. 
+Em nossa definição de uma linha como um subespaço 1D, usamos X e Y coordenadas para definir m, que é sua inclinação em 2D. Quando m é um componente principal de um conjunto de pontos, ela é chamada de autovetor ou ``eingenvector'', daí o nome eigenface. 
 
 Para o reconhecimento facial em imagens de 50x50, cada autovetor representa a inclinação de uma linha em um espaço de 2.500 dimenções. Como no caso 2D, precisamos de todas as 2.500 dimensões para definir a inclinação de cada linha. Embora seja impossível visualizar uma linha em muitas dimensões, podemos visualizar os autovetores de uma maneira diferente. Podemos converter as suas 2.500 dimenções em uma simples imagem usando a sua ``inclinação'' para colocar cada pixel valor em seu local correspondente. Quando fazemos isso, obtemos imagens ``facelike'' chamadas de eigenfaces.
 
-Eigenfaces são interessantes para olhar, e dar-nos alguma intuição sobre os componentes principais para o nosso conjunto de dados. O lado esquerdo da Figura \ref{exemploEigenfaces} mostra o rosto de imagens para dez pessoas. Estas imagens são do rosto de ``Yale Face Database B (referências 4 e 5)''. Ele contém imagens de rostos com uma variedade de condições de iluminação. Eu usei sete imagens de cada uma dessas dez pessoas para criar um subespaço PCA. 
+Eigenfaces é um método interessante para dar-nos alguma intuição sobre os componentes principais para o nosso conjunto de dados. O lado esquerdo da Figura \ref{exemploEigenfaces} mostra as imagens das faces de dez pessoas. Estas imagens foram encontradas no ``Yale Face Database B (referências 4 e 5)''. Ele contém imagens de rostos com uma variedade de condições de iluminação. Foram usadas sete imagens de cada uma dessas dez pessoas para criar um subespaço PCA. 
 
-O lado direito da Figura \ref{exemploEigenfaces} mostra os seis primeiros componentes principais deste conjunto de dados, apresentados como eigenfaces. O eigenfaces muitas vezes têm um olhar fantasmagórico, porque combinam elementos de várias faces. O mais brilhante e os pixels mais escuros em cada marca Eigenface regiões rosto que mais contribuíram para esse componente principal. 
+O lado direito da Figura \ref{exemploEigenfaces} mostra os seis primeiros componentes principais deste conjunto de dados, apresentados como eigenfaces. O eigenfaces muitas vezes têm um olhar fantasmagórico, porque combinam elementos de várias faces. As regiões de pixels mais brilhantes e as regiões mais escuras em cada imagem foram os que mais contribuíram para esse componente principal. 
 
 	\begin{figure}[hbt]
 		\begin{center}
