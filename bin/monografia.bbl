@@ -1,5 +1,9 @@
 \begin{thebibliography}{10}
 
+\bibitem{servodetection}
+How face detection works.
+\newblock {\em SERVO Magazine}, fevereiro 2007.
+
 \bibitem{gregoryabowd}
 G.~Abowd, C.~Atkeson, and I.~Essa.
 \newblock Ubiquitous smart spaces.
@@ -16,8 +20,8 @@ M.~Arantes, A.~N. Ide, and J.~H. Saito.
 \newblock Arquitetura de redes neurais para o reconhecimento facial baseado no
   neocognitron.
 \newblock Master's thesis, S{\~a}o Carlos,
-  http://www.bdtd.ufscar.br/htdocs/tedeSimplificado//tde\_busca/arquivo.php?co%
-dArquivo=164, 2001.
+  http://www.bdtd.ufscar.br/htdocs/tedeSimplificado//tde\_busca/arquivo.php?codArquivo=164,
+  2001.
 
 \bibitem{fabriciobuzzeto}
 F.~N. Buzeto.
@@ -67,6 +71,13 @@ N.~Ahuja M.~Yang, D. J.~Kriegman.
 D.~R. Oliveira.
 \newblock Reconhecimento de faces usando redes neurais e biometria.
 \newblock Master's thesis, INPE, 2006.
+
+\bibitem{violajones}
+M.~Jones P.~Viola.
+\newblock Robust real-time object detection.
+\newblock {\em Second International Workshop on Statistical and Computational
+  Theories of Vision -- Modeling, Learning, Computing, and Sampling}, julho
+  2001.
 
 \bibitem{bolle}
 S.~{Pankanti}, R.~M. {Bolle}, and A.~{Jain}.

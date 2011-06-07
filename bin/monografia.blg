@@ -1,49 +1,52 @@
-This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
+This is BibTeX, Version 0.99d (TeX Live 2010)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: bin/monografia.aux
 The style file: plain.bst
 Database file #1: bibliografia.bib
 Warning--entry type for "bolle" isn't style-file defined
---line 80 of file bibliografia.bib
+--line 97 of file bibliografia.bib
+Warning--to sort, need author or key in servodetection
+Warning--empty author in servodetection
 Warning--empty year in milene
-You've used 14 entries,
+You've used 16 entries,
             2118 wiz_defined-function locations,
-            577 strings with 6167 characters,
-and the built_in function-call counts, 3540 in all, are:
-= -- 352
-> -- 137
+            585 strings with 6408 characters,
+and the built_in function-call counts, 3912 in all, are:
+= -- 388
+> -- 145
 < -- 2
-+ -- 59
-- -- 42
-* -- 194
-:= -- 639
-add.period$ -- 41
-call.type$ -- 14
-change.case$ -- 63
++ -- 63
+- -- 44
+* -- 217
+:= -- 700
+add.period$ -- 46
+call.type$ -- 16
+change.case$ -- 70
 chr.to.int$ -- 0
-cite$ -- 15
-duplicate$ -- 146
-empty$ -- 280
-format.name$ -- 42
-if$ -- 728
+cite$ -- 19
+duplicate$ -- 166
+empty$ -- 315
+format.name$ -- 44
+if$ -- 805
 int.to.chr$ -- 0
-int.to.str$ -- 14
-missing$ -- 8
-newline$ -- 72
-num.names$ -- 28
-pop$ -- 59
+int.to.str$ -- 16
+missing$ -- 10
+newline$ -- 81
+num.names$ -- 30
+pop$ -- 67
 preamble$ -- 1
-purify$ -- 49
+purify$ -- 54
 quote$ -- 0
-skip$ -- 114
+skip$ -- 128
 stack$ -- 0
-substring$ -- 159
-swap$ -- 24
+substring$ -- 169
+swap$ -- 26
 text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 56
-warning$ -- 1
-while$ -- 32
-width$ -- 16
-write$ -- 151
-(There were 2 warnings)
+type$ -- 64
+warning$ -- 3
+while$ -- 34
+width$ -- 18
+write$ -- 169
+(There were 4 warnings)

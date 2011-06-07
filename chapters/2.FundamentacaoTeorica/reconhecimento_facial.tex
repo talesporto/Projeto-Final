@@ -36,13 +36,13 @@ Basicamente, o processo de reconhecimento facial pode ser divido em duas tarefas
 
 Falaremos dessas duas tarefas separadamente nas próximas subseções.
 
-
+% ################################################################################################################################
 
 \subsection{Detecção de Faces em imagens}
 	
 A primeira etapa para o reconhecimento de faces é a detecção de um rosto, e a partir daí a comparação do mesmo com modelos conhecidos pelo sistema \cite{hong, oliveira}. Em um sistema de reconhecimento facial, tanto o tempo de resposta quanto a confiabilidade desta etapa influência diretamente no desempenho e o emprego deste sistema \cite{oliveira}.
 
-A detecção de faces é definida como o processo que determina a existência ou não de faces em uma imagem e uma vez encotrada alguma face, sua localização deve ser apontada através de um enquadramento ou através de suas coordenadas dentro da imagem \cite{oliveira}. A figura \ref{enquadramentoRosto} representa um exemplo da detecção de uma face em uma imagem.
+A detecção de faces é definida como o processo que determina a existência ou não de faces em uma imagem e uma vez encontrada alguma face, sua localização deve ser apontada através de um enquadramento ou através de suas coordenadas dentro da imagem \cite{oliveira}. A figura \ref{enquadramentoRosto} representa um exemplo da detecção de uma face em uma imagem.
 
 	\begin{figure}[hbt]
 		\begin{center}
@@ -52,19 +52,36 @@ A detecção de faces é definida como o processo que determina a existência ou
 		\label{enquadramentoRosto}
 	\end{figure}
 
-O processo de detecção de faces geralmente é pelas seguintes razões mostradas a seguir:
+O processo de detecção de faces geralmente é dificultado pelas seguintes razões mostradas a seguir:
 
 	\begin{enumerate}
 		\item \textbf{Pose}: as imagens de uma face podem variar de acordo com a posição relativa entre a camêra e a face (frontal, 45 graus, perfil, ``de cabeça para baixo''), e com isso algumas características da face, como olhos e nariz, podem ficar parcialmente ou totalmente ocultadas \cite{yang}.
 		\item \textbf{Presença de acessórios}: características faciais básicas importantes para o processo de detecção podem ficar ocultadas pela presença de acessórios, como óculos, bigode, barba, entre outros \cite{oliveira, yang}. 
 		\item \textbf{Expressões faciais}: embora a maioria das faces apresente estruturas semelhantes (olhos, bocas, nariz, entre outros) e são dispostas aproximadamente na mesma configuração de espaço, pode haver um grande número de componentes não rigídos e texturas diferentes entre as faces. Um exemplo são as flexibilizações causadas pelas expressões faciais \cite{oliveira, yang};
 		\item \textbf{Obstrução}: faces podem ser obstruídas por outros objetos. Em uma imagem com várias faces, uma face pode obstruir outra \cite{yang}.
-		\item \textbf{Condiçoes da imagem}: a não previsibilidade das condições da imagem em ambientes sem restrições de ilimuniação, cores e objetos de fundo \cite{oliveira, yang}.
+		\item \textbf{Condições da imagem}: a não previsibilidade das condições da imagem em ambientes sem restrições de ilimuniação, cores e objetos de fundo \cite{oliveira, yang}.
 	\end{enumerate}
 
-Atualmente, já existem diferentes métodos/técnicas de detecção de faces. Faleremos um pouco sobre os métodos baseados em imagens de itensidade e de cor e depois falaremos sobre os baseados em imagens 3D.
+Atualmente, já existem diferentes métodos/técnicas de detecção de faces. Tais métodos podem ser baseados em imagens de intensidade e de cor ou em imanges 3D. Focaremos nos principais métodos de imagens de cor e de intensidade que serão utilizados neste trabalho:
+	
+	\begin{itemize}
+		\item \textbf{Método Viola-Jones}: método para detecção de objetos que minimiza o tempo de computação e possui uma alta acurácia. Esse método foi usado para construir uma abordagem de detecção facial rápido e eficaz~\cite{violajones}.
+	\end{itemize}
+
+O Método Viola-Jones para detecção facila utiliza quatro conceitos chaves~\cite{servodetection,violajones}:
+	
+	\begin{enumerate}
+		\item \textbf{\textit{Haar features}:} simples características retangulares;
+		\item \textbf{\textit{Integral Image}:} uma nova representação da imagem que permite uma rápida avaliação de recursos e caracterísitcas;
+		\item \textbf{O método \textit{AdaBoost}}: um método de aprendizagem de máquina utilizado para construir um classificador,  selecionando um pequeno número de características importantes usando AdaBoost;
+	\end{enumerate}
+
+
+
 
 Um problema relacionado e muito importante é como avaliar a performance dos métodos de detecção de faces propostos. Com isso, muitas métricas foram adotadas como tempo de aprendizagem, número de amostras necessárias no treinamento e a proporção entre taxas de detecção e ``falso alarme''. Esta última é dificultada pelas diferentes definições para as taxas de detecção e falso alarme adotadas pelos pesquisadores \cite{yang}.
+
+% ################################################################################################################################
 
 \subsection{Reconhecimento das Faces encontradas}
 
