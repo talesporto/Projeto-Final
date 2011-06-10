@@ -42,7 +42,7 @@ Falaremos dessas duas tarefas separadamente nas próximas subseções.
 	
 A primeira etapa para o reconhecimento de faces é a detecção de um rosto, e a partir daí a comparação do mesmo com modelos conhecidos pelo sistema \cite{hong, oliveira}. Em um sistema de reconhecimento facial, tanto o tempo de resposta quanto a confiabilidade desta etapa influência diretamente no desempenho e o emprego deste sistema \cite{oliveira}.
 
-A detecção de faces é definida como o processo que determina a existência ou não de faces em uma imagem e uma vez encontrada alguma face, sua localização deve ser apontada através de um enquadramento ou através de suas coordenadas dentro da imagem \cite{oliveira}. A figura \ref{enquadramentoRosto} representa um exemplo da detecção de uma face em uma imagem.
+A detecção de faces é definida como o processo que determina a existência ou não de faces em uma imagem e uma vez encontrada alguma face, sua localização deve ser apontada através de um enquadramento ou através de suas coordenadas dentro da imagem \cite{oliveira}. A Figura \ref{enquadramentoRosto} representa um exemplo da detecção de uma face em uma imagem.
 
 	\begin{figure}[hbt]
 		\begin{center}
@@ -57,7 +57,7 @@ O processo de detecção de faces geralmente é dificultado pelas seguintes raz�
 	\begin{enumerate}
 		\item \textbf{Pose}: as imagens de uma face podem variar de acordo com a posição relativa entre a camêra e a face (frontal, 45 graus, perfil, ``de cabeça para baixo''), e com isso algumas características da face, como olhos e nariz, podem ficar parcialmente ou totalmente ocultadas \cite{yang}.
 		\item \textbf{Presença de acessórios}: características faciais básicas importantes para o processo de detecção podem ficar ocultadas pela presença de acessórios, como óculos, bigode, barba, entre outros \cite{oliveira, yang}. 
-		\item \textbf{Expressões faciais}: embora a maioria das faces apresente estruturas semelhantes (olhos, bocas, nariz, entre outros) e são dispostas aproximadamente na mesma configuração de espaço, pode haver um grande número de componentes não rigídos e texturas diferentes entre as faces. Um exemplo são as flexibilizações causadas pelas expressões faciais \cite{oliveira, yang};
+		\item \textbf{Expressões faciais}: embora a maioria das faces apresente estruturas semelhantes (olhos, bocas, nariz, entre outros) e são dispostas aproximadamente na mesma configuração de espaço, pode haver um grande número de componentes não rigídos e texturas diferentes entre as faces. Um exemplo são as flexibilizações causadas pelas expressões faciais~\cite{oliveira, yang};
 		\item \textbf{Obstrução}: faces podem ser obstruídas por outros objetos. Em uma imagem com várias faces, uma face pode obstruir outra \cite{yang}.
 		\item \textbf{Condições da imagem}: a não previsibilidade das condições da imagem em ambientes sem restrições de ilimuniação, cores e objetos de fundo \cite{oliveira, yang}.
 	\end{enumerate}
@@ -73,11 +73,11 @@ O Método Viola-Jones para detecção facial utiliza quatro conceitos chaves~\ci
 	\begin{enumerate}
 		\item \textbf{\textit{Haar features}:} simples características retangulares;
 		\item \textbf{\textit{Integral Image}:} uma nova representação da imagem que permite uma rápida avaliação de recursos e caracterísitcas;
-		\item \textbf{O método \textit{AdaBoost}}: um método de aprendizagem de máquina utilizado para construir um classificador,  selecionando um pequeno número de características importantes usando AdaBoost;
+		\item \textbf{O método \textit{AdaBoost}}: um método de aprendizagem de máquina utilizado para construir um classificador,  selecionando um pequeno número de características importantes usando \textit{AdaBoost};
 		\item \textbf{Classificador em Cascata}: classificador que combina muitas características de maneira eficiente;
 	\end{enumerate}
 
-A detecção facial em imagens é baseado em simples caracteríticas retangulares (\textit{Haar features}), exemplificada na Figura \ref{haarfeatures}. Existem vários motivos para se usar essas características ao invés de usar diretamente os pixels. Uma das principais é que sistemas baseados em características são muito mais rápidos que sistemas baseados em pixels~\cite{violajones}. 
+A detecção facial em imagens é baseado em simples caracteríticas retangulares (\textit{Haar features}), exemplificada na Figura \ref{haarfeatures}. Existem vários motivos para se usar essas características ao invés de usar diretamente os pixels da imagem. Uma das principais é que sistemas baseados em características são muito mais rápidos que sistemas baseados em pixels~\cite{violajones}. 
 
 	\begin{figure}[hbt]
 		\begin{center}
@@ -97,7 +97,37 @@ Tais simples características são remanecentes das funções de base \textit{Ha
 		\label{haarfeaturestypes}
 	\end{figure}
 
-Um problema relacionado e muito importante é como avaliar a performance dos métodos de detecção de faces propostos. Com isso, muitas métricas foram adotadas como tempo de aprendizagem, número de amostras necessárias no treinamento e a proporção entre taxas de detecção e ``falso alarme''. Esta última é dificultada pelas diferentes definições para as taxas de detecção e falso alarme adotadas pelos pesquisadores \cite{yang}.
+O Método Viola-Jones não trabalha diretamente com as intensidades da imagem. Para determinar a presença ou ausência de centenas de \textit{Haar features} em cada posição de imagem e em várias escalas de forma eficiente, utiliza uma técnica chamada \textit{Integral Image}. Basicamente, o método consiste em acrescentar pequenas unidades juntas. Neste caso, pequenas unidades são valores de pixels. O valor ``integral'' para cada pixel é a soma de todos os pixels acima e a esqueda. Começando pelo canto superior esquerdo da imagem e atravessando para direita e para baixo, toda a imagem pode ser ``integrada'' com poucas operações por pixels~\cite{servodetection, violajones}. Com a nova representação de imagem criada, qualquer \textit{Haar Feature} pode ser computada para qualquer escala e localização em um tempo constante~\cite{violajones}.
+
+	\begin{figure}[hbt]
+		\begin{center}
+			\includegraphics[height=6.5cm,width=12.5cm]{figuras/2.FundamentacaoTeorica/integral_image.png}
+		\end{center}
+		\caption{Exemplo da aplicação da técnica \texit{Integral Image}. Após a ``integração'' o pixel $\displaystyle (x,y)$ contém a soma dos valores dos pixels do retângulo sombreado. Adaptada de~\cite{servodetection}.}
+		\label{integralimage}
+	\end{figure}
+
+Na Figura \ref{integralimage}, após a ``integração'', o pixel $\displaystyle (x,y)$ contém a soma de todos os valores de pixels dentro da região retangular sombreada no canto superior esquerdo de $\displaystyle (x,y)$. Para calcular a média dos valores de pixel neste retângulo, basta dividir o valor em $\displaystyle (x,y)$ pela área do retângulo~\cite{servodetection}.
+
+	\begin{figure}[hbt]
+		\begin{center}
+			\includegraphics[height=6.5cm,width=12.5cm]{figuras/2.FundamentacaoTeorica/integral_image2.png}
+		\end{center}
+		\caption{Exemplo utlizado para mostrar como calcular a soma dos valores de pixel de um retângulo que não está localizado no canto superior esquerdo da imagem utilizando \textit{Integral Image}. Adaptado de~\cite{servodetection}.}
+		\label{integralimage2}
+	\end{figure}
+
+A Figura \ref{integralimage2} mostra como calcular os valores de um retângulo que não está localizado no canto superior esquerdo da imagem. Suponha que se deseja obter a soma dos valores do retângulo em $\displaystyle D$. De maneira intuitiva, pode-se realizar esse cálculo somando os valores dos pixels no retângulo formado por $\displaystyle A+B+C+D$, menos a soma nos retângulos $\displaystyle A+B$ e $\displaystyle A+C$, mais a soma dos valores de pixel em $\displaystyle A$. Em outras palavra, $\displaystyle D = A+B+C+D-(A+B)-(A+C)+A$~\cite{servodetection, violajones}.
+
+Porém, usando \textit{Integral Image}, $\displaystyle A+B+C+D$ é o valor do ponto $\displaystyle 4$, $\displaystyle A+B$ é o valor do ponto $\displaystyle 2$, $\displaystyle A+C$ é o valor do ponto $\displaystyle 3$, e $\displaystyle A$ é o valor do ponto $\displaystyle 1$. Então, com \textit{Integral Image}, você pode obter a soma dos valores de pixel de qualquer retângulo na imagem original usando somente três operações~\cite{servodetection, violajones}:
+
+	\begin{equation}
+		(x_4,y_4) - (x_2,y_2) - (x_3,y_3) + (x_1,y_1)
+		\label{equacaointegralimage}
+	\end{equation} 
+
+
+Um problema relacionado e muito importante é como avaliar a performance dos métodos de detecção de faces propostos. Com isso, muitas métricas foram adotadas como tempo de aprendizagem, número de amostras necessárias no treinamento e a proporção entre taxas de detecção e ``falso alarme''. Esta última é dificultada pelas diferentes definições para as taxas de detecção e falso alarme adotadas pelos pesquisadores~\cite{yang}.
 
 % ################################################################################################################################
 
