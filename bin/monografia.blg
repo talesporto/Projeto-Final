@@ -4,49 +4,50 @@ The top-level auxiliary file: bin/monografia.aux
 The style file: plain.bst
 Database file #1: bibliografia.bib
 Warning--entry type for "bolle" isn't style-file defined
---line 97 of file bibliografia.bib
+--line 104 of file bibliografia.bib
 Warning--to sort, need author or key in servodetection
 Warning--empty author in servodetection
 Warning--empty year in milene
-You've used 16 entries,
+Warning--empty year in lopes
+You've used 17 entries,
             2118 wiz_defined-function locations,
-            585 strings with 6408 characters,
-and the built_in function-call counts, 3912 in all, are:
-= -- 388
-> -- 145
+            589 strings with 6544 characters,
+and the built_in function-call counts, 4109 in all, are:
+= -- 408
+> -- 152
 < -- 2
-+ -- 63
-- -- 44
-* -- 217
-:= -- 700
-add.period$ -- 46
-call.type$ -- 16
-change.case$ -- 70
++ -- 66
+- -- 46
+* -- 226
+:= -- 739
+add.period$ -- 49
+call.type$ -- 17
+change.case$ -- 75
 chr.to.int$ -- 0
-cite$ -- 19
-duplicate$ -- 166
-empty$ -- 315
-format.name$ -- 44
-if$ -- 805
+cite$ -- 21
+duplicate$ -- 174
+empty$ -- 330
+format.name$ -- 46
+if$ -- 843
 int.to.chr$ -- 0
-int.to.str$ -- 16
+int.to.str$ -- 17
 missing$ -- 10
-newline$ -- 81
-num.names$ -- 30
-pop$ -- 67
+newline$ -- 86
+num.names$ -- 32
+pop$ -- 72
 preamble$ -- 1
-purify$ -- 54
+purify$ -- 57
 quote$ -- 0
-skip$ -- 128
+skip$ -- 132
 stack$ -- 0
-substring$ -- 169
+substring$ -- 174
 swap$ -- 26
 text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 64
-warning$ -- 3
-while$ -- 34
-width$ -- 18
-write$ -- 169
-(There were 4 warnings)
+type$ -- 68
+warning$ -- 4
+while$ -- 36
+width$ -- 19
+write$ -- 179
+(There were 5 warnings)
