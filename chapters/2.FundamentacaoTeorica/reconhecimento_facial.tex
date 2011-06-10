@@ -68,16 +68,34 @@ Atualmente, já existem diferentes métodos/técnicas de detecção de faces. Ta
 		\item \textbf{Método Viola-Jones}: método para detecção de objetos que minimiza o tempo de computação e possui uma alta acurácia. Esse método foi usado para construir uma abordagem de detecção facial rápido e eficaz~\cite{violajones}.
 	\end{itemize}
 
-O Método Viola-Jones para detecção facila utiliza quatro conceitos chaves~\cite{servodetection,violajones}:
+O Método Viola-Jones para detecção facial utiliza quatro conceitos chaves~\cite{servodetection,violajones}:
 	
 	\begin{enumerate}
 		\item \textbf{\textit{Haar features}:} simples características retangulares;
 		\item \textbf{\textit{Integral Image}:} uma nova representação da imagem que permite uma rápida avaliação de recursos e caracterísitcas;
 		\item \textbf{O método \textit{AdaBoost}}: um método de aprendizagem de máquina utilizado para construir um classificador,  selecionando um pequeno número de características importantes usando AdaBoost;
+		\item \textbf{Classificador em Cascata}: classificador que combina muitas características de maneira eficiente;
 	\end{enumerate}
 
+A detecção facial em imagens é baseado em simples caracteríticas retangulares (\textit{Haar features}), exemplificada na Figura \ref{haarfeatures}. Existem vários motivos para se usar essas características ao invés de usar diretamente os pixels. Uma das principais é que sistemas baseados em características são muito mais rápidos que sistemas baseados em pixels~\cite{violajones}. 
 
+	\begin{figure}[hbt]
+		\begin{center}
+			\includegraphics[height=6.5cm,width=12.5cm]{figuras/2.FundamentacaoTeorica/haar_features.png}
+		\end{center}
+		\caption{Exemplo de simples características retangulares (\texit{Haar Features}). Adaptada de \cite{servodetection}.}
+		\label{haarfeatures}
+	\end{figure}
 
+Tais simples características são remanecentes das funções de base \textit{Haar}. O método utiliza três tipos de características, exemplificadas na Figura \ref{haarfeaturestypes}: características com dois, três ou quatro retângulos~\cite{violajones}. A presença de uma característica em uma imagem é determinada pela subtração da média dos valores dos pixels da região escura pela média dos valores dos pixels da região clara. Caso o valor seja maior que um limiar, então essa característica é tida como presente~\cite{servodetection}.
+
+	\begin{figure}[hbt]
+		\begin{center}
+			\includegraphics[height=6.5cm,width=12.5cm]{figuras/2.FundamentacaoTeorica/haarfeaturestypes.png}
+		\end{center}
+		\caption{\texit{Haar Features} com dois, três e quatro retângulos~\cite{violajones}.}
+		\label{haarfeaturestypes}
+	\end{figure}
 
 Um problema relacionado e muito importante é como avaliar a performance dos métodos de detecção de faces propostos. Com isso, muitas métricas foram adotadas como tempo de aprendizagem, número de amostras necessárias no treinamento e a proporção entre taxas de detecção e ``falso alarme''. Esta última é dificultada pelas diferentes definições para as taxas de detecção e falso alarme adotadas pelos pesquisadores \cite{yang}.
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2011.4.25)  7 JUN 2011 10:27
+This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2011.4.25)  9 JUN 2011 23:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -499,7 +499,7 @@ See the natbib package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.367 ...and\NAT@force@numbers{}\NAT@force@numbers
+l.391 ...and\NAT@force@numbers{}\NAT@force@numbers
                                                   
 ? r
 OK, entering \nonstopmode...
@@ -718,7 +718,7 @@ Cap\'{\i }tulo 1.
 ]) (./chapters/2.FundamentacaoTeorica/fundamentacao_teorica.tex [2]
 Cap\'{\i }tulo 2.
 (./chapters/2.FundamentacaoTeorica/biometria.tex
-<figuras/2.FundamentacaoTeorica/caracteristicasBiometricas.png, id=187, 681.546
+<figuras/2.FundamentacaoTeorica/caracteristicasBiometricas.png, id=196, 681.546
 25pt x 466.74374pt>
 File: figuras/2.FundamentacaoTeorica/caracteristicasBiometricas.png Graphic fil
 e (type png)
@@ -748,7 +748,7 @@ Overfull \hbox (25.49876pt too wide) in paragraph at lines 53--66
  []
 
 [5]) (./chapters/2.FundamentacaoTeorica/reconhecimento_facial.tex [6] [7]
-<figuras/2.FundamentacaoTeorica/enquadramentoRosto.png, id=266, 558.085pt x 420
+<figuras/2.FundamentacaoTeorica/enquadramentoRosto.png, id=275, 558.085pt x 420
 .57124pt>
 File: figuras/2.FundamentacaoTeorica/enquadramentoRosto.png Graphic file (type 
 png)
@@ -756,45 +756,120 @@ png)
 Package pdftex.def Info: figuras/2.FundamentacaoTeorica/enquadramentoRosto.png 
 used on input line 49.
 (pdftex.def)             Requested size: 355.66591pt x 270.30055pt.
- [8 <./figuras/2.FundamentacaoTeorica/enquadramentoRosto.png (PNG copy)>] [9]
-<figuras/2.FundamentacaoTeorica/graficoDistanciaEntrePontos.png, id=311, 153.21
+ [8 <./figuras/2.FundamentacaoTeorica/enquadramentoRosto.png (PNG copy)>]
+<figuras/2.FundamentacaoTeorica/haar_features.png, id=300, 750.18295pt x 305.36
+62pt>
+File: figuras/2.FundamentacaoTeorica/haar_features.png Graphic file (type png)
+ <use figuras/2.FundamentacaoTeorica/haar_features.png>
+Package pdftex.def Info: figuras/2.FundamentacaoTeorica/haar_features.png used 
+on input line 84.
+(pdftex.def)             Requested size: 355.66524pt x 184.94514pt.
+
+! Undefined control sequence.
+<argument> ...racterísticas retangulares (\texit 
+                                                  {Haar Features}). Adaptada...
+l.86 ...res}). Adaptada de \cite{servodetection}.}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...racterísticas retangulares (\texit 
+                                                  {Haar Features}). Adaptada...
+l.86 ...res}). Adaptada de \cite{servodetection}.}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...racterísticas retangulares (\texit 
+                                                  {Haar Features}). Adaptada...
+l.86 ...res}). Adaptada de \cite{servodetection}.}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[9]
+<figuras/2.FundamentacaoTeorica/haarfeaturestypes.png, id=323, 347.2975pt x 303
+.1325pt>
+File: figuras/2.FundamentacaoTeorica/haarfeaturestypes.png Graphic file (type p
+ng)
+ <use figuras/2.FundamentacaoTeorica/haarfeaturestypes.png>
+Package pdftex.def Info: figuras/2.FundamentacaoTeorica/haarfeaturestypes.png u
+sed on input line 94.
+(pdftex.def)             Requested size: 355.67487pt x 184.94293pt.
+
+! Undefined control sequence.
+<argument> ...e \endcsname }{\ignorespaces \texit 
+                                                  {Haar Features} com dois, ...
+l.96 ...s e quatro retângulos~\cite{violajones}.}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...e \endcsname : \ignorespaces \texit 
+                                                  {Haar Features} com dois, ...
+l.96 ...s e quatro retângulos~\cite{violajones}.}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[10 <./figuras/2.FundamentacaoTeorica/haar_features.png> <./figuras/2.Fundament
+acaoTeorica/haarfeaturestypes.png (PNG copy)>]
+<figuras/2.FundamentacaoTeorica/graficoDistanciaEntrePontos.png, id=335, 153.21
 24pt x 120.9318pt>
 File: figuras/2.FundamentacaoTeorica/graficoDistanciaEntrePontos.png Graphic fi
 le (type png)
 
 <use figuras/2.FundamentacaoTeorica/graficoDistanciaEntrePontos.png>
 Package pdftex.def Info: figuras/2.FundamentacaoTeorica/graficoDistanciaEntrePo
-ntos.png used on input line 119.
+ntos.png used on input line 137.
 (pdftex.def)             Requested size: 355.7148pt x 270.35576pt.
- [10]
-<figuras/2.FundamentacaoTeorica/PCAexemploMapa.png, id=334, 445.665pt x 207.776
+ [11]
+<figuras/2.FundamentacaoTeorica/PCAexemploMapa.png, id=358, 445.665pt x 207.776
 25pt>
 File: figuras/2.FundamentacaoTeorica/PCAexemploMapa.png Graphic file (type png)
 
  <use figuras/2.FundamentacaoTeorica/PCAexemploMapa.png>
 Package pdftex.def Info: figuras/2.FundamentacaoTeorica/PCAexemploMapa.png used
- on input line 136.
+ on input line 154.
 (pdftex.def)             Requested size: 355.66205pt x 270.33417pt.
- [11 <./figuras/2.FundamentacaoTeorica/graficoDistanciaEntrePontos.png (PNG cop
-y)>] [12 <./figuras/2.FundamentacaoTeorica/PCAexemploMapa.png (PNG copy)>]
-<figuras/2.FundamentacaoTeorica/eigenfaces.png, id=366, 158.994pt x 186.9384pt>
+ [12 <./figuras/2.FundamentacaoTeorica/graficoDistanciaEntrePontos.png (PNG cop
+y)>] [13 <./figuras/2.FundamentacaoTeorica/PCAexemploMapa.png (PNG copy)>]
+<figuras/2.FundamentacaoTeorica/eigenfaces.png, id=390, 158.994pt x 186.9384pt>
 File: figuras/2.FundamentacaoTeorica/eigenfaces.png Graphic file (type png)
 <use figuras/2.FundamentacaoTeorica/eigenfaces.png>
 Package pdftex.def Info: figuras/2.FundamentacaoTeorica/eigenfaces.png used on 
-input line 177.
+input line 195.
 (pdftex.def)             Requested size: 341.43306pt x 401.50467pt.
 
-<figuras/2.FundamentacaoTeorica/exemplosImagensIluminacaoo.png, id=373, 238.641
+<figuras/2.FundamentacaoTeorica/exemplosImagensIluminacaoo.png, id=397, 238.641
 56pt x 119.69719pt>
 File: figuras/2.FundamentacaoTeorica/exemplosImagensIluminacaoo.png Graphic fil
 e (type png)
 
 <use figuras/2.FundamentacaoTeorica/exemplosImagensIluminacaoo.png>
 Package pdftex.def Info: figuras/2.FundamentacaoTeorica/exemplosImagensIluminac
-aoo.png used on input line 189.
+aoo.png used on input line 207.
 (pdftex.def)             Requested size: 398.33858pt x 199.80956pt.
-)) [13]
-[14 <./figuras/2.FundamentacaoTeorica/eigenfaces.png (PNG copy)>] [15 <./figura
+)) [14]
+[15 <./figuras/2.FundamentacaoTeorica/eigenfaces.png (PNG copy)>] [16 <./figura
 s/2.FundamentacaoTeorica/exemplosImagensIluminacaoo.png (PNG copy)>]
 (./bin/monografia.bbl (./bin/monografia.brf)
 \tf@brf=\write7
@@ -830,12 +905,12 @@ Underfull \hbox (badness 1708) in paragraph at lines 46--46
 -cia da Com-pu-ta-��o,
  []
 
-[16
+[17
 
 
 ])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 74.
- [17]
+ [18]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 74.
  (./bin/monografia.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 74.
@@ -856,10 +931,10 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 74.
  )
 (\end occurred when \iffalse on line 462 was incomplete) 
 Here is how much of TeX's memory you used:
- 7876 strings out of 493763
- 111958 string characters out of 3144954
- 220398 words of memory out of 3000000
- 10928 multiletter control sequences out of 15000+200000
+ 7893 strings out of 493763
+ 112506 string characters out of 3144954
+ 220725 words of memory out of 3000000
+ 10939 multiletter control sequences out of 15000+200000
  15468 words of font info for 35 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
  43i,8n,69p,1015b,488s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -881,10 +956,10 @@ e1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1
 ublic/cm-super/sfrm1440.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/pub
 lic/cm-super/sfrm2074.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/publi
 c/cm-super/sfti1200.pfb>
-Output written on ./bin/monografia.pdf (27 pages, 988962 bytes).
+Output written on ./bin/monografia.pdf (28 pages, 1123328 bytes).
 PDF statistics:
- 514 PDF objects out of 1000 (max. 8388607)
- 451 compressed objects within 5 object streams
- 102 named destinations out of 1000 (max. 500000)
- 132 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 543 PDF objects out of 1000 (max. 8388607)
+ 475 compressed objects within 5 object streams
+ 106 named destinations out of 1000 (max. 500000)
+ 142 words of extra memory for PDF output out of 10000 (max. 10000000)
 
