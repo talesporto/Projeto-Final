@@ -1,5 +1,9 @@
 \begin{thebibliography}{10}
 
+\bibitem{servodetection}
+How face detection works.
+\newblock {\em SERVO Magazine}, fevereiro 2007.
+
 \bibitem{gregoryabowd}
 G.~Abowd, C.~Atkeson, and I.~Essa.
 \newblock Ubiquitous smart spaces.
@@ -57,6 +61,12 @@ Hong L. and Jain A.
 \newblock {\em IEEE Transactions on Pattern and Machine Intelligence},
   20(12):1295--1307, dezembro 1998.
 
+\bibitem{lopes}
+E~.~C. Lopes.
+\newblock Detec{\c c}{\~a}o de faces e caracter{\'\i}sticas faciais.
+\newblock Technical report, Pontif{\'\i}cia Universidade Cat{\'o}lica do Rio
+  Grande do Sul.
+
 \bibitem{yang}
 N.~Ahuja M.~Yang, D. J.~Kriegman.
 \newblock Detecting faces in images: A survey.
@@ -67,6 +77,13 @@ N.~Ahuja M.~Yang, D. J.~Kriegman.
 D.~R. Oliveira.
 \newblock Reconhecimento de faces usando redes neurais e biometria.
 \newblock Master's thesis, INPE, 2006.
+
+\bibitem{violajones}
+M.~Jones P.~Viola.
+\newblock Robust real-time object detection.
+\newblock {\em Second International Workshop on Statistical and Computational
+  Theories of Vision -- Modeling, Learning, Computing, and Sampling}, julho
+  2001.
 
 \bibitem{bolle}
 S.~{Pankanti}, R.~M. {Bolle}, and A.~{Jain}.

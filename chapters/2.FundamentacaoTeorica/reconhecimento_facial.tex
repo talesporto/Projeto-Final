@@ -36,13 +36,13 @@ Basicamente, o processo de reconhecimento facial pode ser divido em duas tarefas
 
 Falaremos dessas duas tarefas separadamente nas próximas subseções.
 
-
+% ################################################################################################################################
 
 \subsection{Detecção de Faces em imagens}
 	
 A primeira etapa para o reconhecimento de faces é a detecção de um rosto, e a partir daí a comparação do mesmo com modelos conhecidos pelo sistema \cite{hong, oliveira}. Em um sistema de reconhecimento facial, tanto o tempo de resposta quanto a confiabilidade desta etapa influência diretamente no desempenho e o emprego deste sistema \cite{oliveira}.
 
-A detecção de faces é definida como o processo que determina a existência ou não de faces em uma imagem e uma vez encotrada alguma face, sua localização deve ser apontada através de um enquadramento ou através de suas coordenadas dentro da imagem \cite{oliveira}. A figura \ref{enquadramentoRosto} representa um exemplo da detecção de uma face em uma imagem.
+A detecção de faces é definida como o processo que determina a existência ou não de faces em uma imagem e uma vez encontrada alguma face, sua localização deve ser apontada através de um enquadramento ou através de suas coordenadas dentro da imagem \cite{oliveira}. A Figura \ref{enquadramentoRosto} representa um exemplo da detecção de uma face em uma imagem.
 
 	\begin{figure}[hbt]
 		\begin{center}
@@ -52,19 +52,95 @@ A detecção de faces é definida como o processo que determina a existência ou
 		\label{enquadramentoRosto}
 	\end{figure}
 
-O processo de detecção de faces geralmente é pelas seguintes razões mostradas a seguir:
+O processo de detecção de faces geralmente é dificultado pelas seguintes razões mostradas a seguir:
 
 	\begin{enumerate}
 		\item \textbf{Pose}: as imagens de uma face podem variar de acordo com a posição relativa entre a camêra e a face (frontal, 45 graus, perfil, ``de cabeça para baixo''), e com isso algumas características da face, como olhos e nariz, podem ficar parcialmente ou totalmente ocultadas \cite{yang}.
 		\item \textbf{Presença de acessórios}: características faciais básicas importantes para o processo de detecção podem ficar ocultadas pela presença de acessórios, como óculos, bigode, barba, entre outros \cite{oliveira, yang}. 
-		\item \textbf{Expressões faciais}: embora a maioria das faces apresente estruturas semelhantes (olhos, bocas, nariz, entre outros) e são dispostas aproximadamente na mesma configuração de espaço, pode haver um grande número de componentes não rigídos e texturas diferentes entre as faces. Um exemplo são as flexibilizações causadas pelas expressões faciais \cite{oliveira, yang};
+		\item \textbf{Expressões faciais}: embora a maioria das faces apresente estruturas semelhantes (olhos, bocas, nariz, entre outros) e são dispostas aproximadamente na mesma configuração de espaço, pode haver um grande número de componentes não rigídos e texturas diferentes entre as faces. Um exemplo são as flexibilizações causadas pelas expressões faciais~\cite{oliveira, yang};
 		\item \textbf{Obstrução}: faces podem ser obstruídas por outros objetos. Em uma imagem com várias faces, uma face pode obstruir outra \cite{yang}.
-		\item \textbf{Condiçoes da imagem}: a não previsibilidade das condições da imagem em ambientes sem restrições de ilimuniação, cores e objetos de fundo \cite{oliveira, yang}.
+		\item \textbf{Condições da imagem}: a não previsibilidade das condições da imagem em ambientes sem restrições de ilimuniação, cores e objetos de fundo \cite{oliveira, yang}.
 	\end{enumerate}
 
-Atualmente, já existem diferentes métodos/técnicas de detecção de faces. Faleremos um pouco sobre os métodos baseados em imagens de itensidade e de cor e depois falaremos sobre os baseados em imagens 3D.
+Atualmente, já existem diferentes métodos/técnicas de detecção de faces. Tais métodos podem ser baseados em imagens de intensidade e de cor ou em imanges 3D. Focaremos nos principais métodos de imagens de cor e de intensidade que serão utilizados neste trabalho. Estes podem ser divididos em 4 categorias:
 
-Um problema relacionado e muito importante é como avaliar a performance dos métodos de detecção de faces propostos. Com isso, muitas métricas foram adotadas como tempo de aprendizagem, número de amostras necessárias no treinamento e a proporção entre taxas de detecção e ``falso alarme''. Esta última é dificultada pelas diferentes definições para as taxas de detecção e falso alarme adotadas pelos pesquisadores \cite{yang}.
+	\begin{enumerate}
+		\item \textbf{Métodos baseados em Conhecimento:} métodos, desenvolvidos principalmente para localização facial, beaseados em regras derivadas do conhecimento dos pesquisadores do que constitui uma típica face humana. Normalmente, captura as relações existentes entre as características faciais. É fácil econtrar regras que descrevem as caracterísicas faciais. Por exemplo, uma face sempre é constituída por dois olhos simétricos, um nariz e uma boca. As relações entre essas características podem ser representadas pelas distâncias relativas e posições. Este método possui desvantagens em relação a construção do conjunto de regras. Se estas são muito gerais, corre-se o risco de que o sistema que as utiliza apresentar uma alta taxa de falsos positivos. Se são muito específicas podem ser ineficazes ao tentar detectar faces por não satisfizerem todas as regras, diminuindo muito a precisão da detecção~\cite{yang,lopes};
+
+		\item \textbf{Métodos baseados em Características Invariantes:} esses algoritmos tem como objetivo principal encontrar as características estruturais que existem mesmo quando a postura, ``ponto de vista'', condições de iluminação variam. E por meio dessas características localizar a face. São desenvolvidos principalmente para localização facial \cite{yang}. A principal desvantagem desse método é que tais características invariantes podem ser corrompidas devido a condições de ilumincação ou algum tipo de ruído, comprometendo a eficiência. A cor da pele e a textura da face são as principais características invariantes que podem ser utilizadas para separar a face de outros objetos~\cite{lopes};
+
+		\item \textbf{Métodos baseados em Templates:} vários padrões comuns de um rosto são armazenados tanto para descrever o rosto como um todo quanto para descrever as características faciais separadamente. As correlações entre as imagens de entrada e os padrões armazenados são comuptados para detecção. Esses métodos são desenvolvidos para serem utlizados como localização e detecção facial~\cite{yang};
+
+		\item \textbf{Métodos baseados em Aparência:} recebem este nome devido ao fato de não utilizarem nenhum conhecimento a priori sobre o objeto ou características a serem detectadas. Em contraste com os métodos baseado em templates, os modelos são retirados de um conjunto de imagens de treinamento que devem capturar a variabilidade da face. Esses modelos retirados são utilizados para detecção. Nesta classe de algoritmos surge os conceitos de aprendizado e treinamento, uma vez que as informações necessárias para realizar a tarefa de detecção são retiradas do próprio conjunto de imagens sem intervenção externa. São métodos desenvolvidos principalmente para detecção de faces~\cite{yang, lopes};
+
+	\end{enumerate}
+	
+	\begin{itemize}
+		\item \textbf{Método Viola-Jones}: método para detecção de objetos que minimiza o tempo de computação e possui uma alta acurácia. Esse método foi usado para construir uma abordagem de detecção facial rápido e eficaz~\cite{violajones}.
+	\end{itemize}
+
+O Método Viola-Jones para detecção facial utiliza quatro conceitos chaves~\cite{servodetection,violajones}:
+	
+	\begin{enumerate}
+		\item \textbf{\textit{Haar features}:} simples características retangulares;
+		\item \textbf{\textit{Integral Image}:} uma nova representação da imagem que permite uma rápida avaliação de recursos e caracterísitcas;
+		\item \textbf{O método \textit{AdaBoost}}: um método de aprendizagem de máquina utilizado para construir um classificador,  selecionando um pequeno número de características importantes usando \textit{AdaBoost};
+		\item \textbf{Classificador em Cascata}: classificador que combina muitas características de maneira eficiente;
+	\end{enumerate}
+
+A detecção facial em imagens é baseado em simples caracteríticas retangulares (\textit{Haar features}), exemplificada na Figura \ref{haarfeatures}. Existem vários motivos para se usar essas características ao invés de usar diretamente os pixels da imagem. Uma das principais é que sistemas baseados em características são muito mais rápidos que sistemas baseados em pixels~\cite{violajones}. 
+
+	\begin{figure}[hbt]
+		\begin{center}
+			\includegraphics[height=6.5cm,width=12.5cm]{figuras/2.FundamentacaoTeorica/haar_features.png}
+		\end{center}
+		\caption{Exemplo de simples características retangulares (\texit{Haar Features}). Adaptada de \cite{servodetection}.}
+		\label{haarfeatures}
+	\end{figure}
+
+Tais simples características são remanecentes das funções de base \textit{Haar}. O método utiliza três tipos de características, exemplificadas na Figura \ref{haarfeaturestypes}: características com dois, três ou quatro retângulos~\cite{violajones}. A presença de uma característica em uma imagem é determinada pela subtração da média dos valores dos pixels da região escura pela média dos valores dos pixels da região clara. Caso o valor seja maior que um limiar, então essa característica é tida como presente~\cite{servodetection}.
+
+	\begin{figure}[hbt]
+		\begin{center}
+			\includegraphics[height=6.5cm,width=12.5cm]{figuras/2.FundamentacaoTeorica/haarfeaturestypes.png}
+		\end{center}
+		\caption{\texit{Haar Features} com dois, três e quatro retângulos~\cite{violajones}.}
+		\label{haarfeaturestypes}
+	\end{figure}
+
+O Método Viola-Jones não trabalha diretamente com as intensidades da imagem. Para determinar a presença ou ausência de centenas de \textit{Haar features} em cada posição de imagem e em várias escalas de forma eficiente, utiliza uma técnica chamada \textit{Integral Image}. Basicamente, o método consiste em acrescentar pequenas unidades juntas. Neste caso, pequenas unidades são valores de pixels. O valor ``integral'' para cada pixel é a soma de todos os pixels acima e a esqueda. Começando pelo canto superior esquerdo da imagem e atravessando para direita e para baixo, toda a imagem pode ser ``integrada'' com poucas operações por pixels~\cite{servodetection, violajones}. Com a nova representação de imagem criada, qualquer \textit{Haar Feature} pode ser computada para qualquer escala e localização em um tempo constante~\cite{violajones}.
+
+	\begin{figure}[hbt]
+		\begin{center}
+			\includegraphics[height=6.5cm,width=12.5cm]{figuras/2.FundamentacaoTeorica/integral_image.png}
+		\end{center}
+		\caption{Exemplo da aplicação da técnica \texit{Integral Image}. Após a ``integração'' o pixel $\displaystyle (x,y)$ contém a soma dos valores dos pixels do retângulo sombreado. Adaptada de~\cite{servodetection}.}
+		\label{integralimage}
+	\end{figure}
+
+Na Figura \ref{integralimage}, após a ``integração'', o pixel $\displaystyle (x,y)$ contém a soma de todos os valores de pixels dentro da região retangular sombreada no canto superior esquerdo de $\displaystyle (x,y)$. Para calcular a média dos valores de pixel neste retângulo, basta dividir o valor em $\displaystyle (x,y)$ pela área do retângulo~\cite{servodetection}.
+
+	\begin{figure}[hbt]
+		\begin{center}
+			\includegraphics[height=6.5cm,width=12.5cm]{figuras/2.FundamentacaoTeorica/integral_image2.png}
+		\end{center}
+		\caption{Exemplo utlizado para mostrar como calcular a soma dos valores de pixel de um retângulo que não está localizado no canto superior esquerdo da imagem utilizando \textit{Integral Image}. Adaptado de~\cite{servodetection}.}
+		\label{integralimage2}
+	\end{figure}
+
+A Figura \ref{integralimage2} mostra como calcular os valores de um retângulo que não está localizado no canto superior esquerdo da imagem. Suponha que se deseja obter a soma dos valores do retângulo em $\displaystyle D$. De maneira intuitiva, pode-se realizar esse cálculo somando os valores dos pixels no retângulo formado por $\displaystyle A+B+C+D$, menos a soma nos retângulos $\displaystyle A+B$ e $\displaystyle A+C$, mais a soma dos valores de pixel em $\displaystyle A$. Em outras palavra, $\displaystyle D = A+B+C+D-(A+B)-(A+C)+A$~\cite{servodetection, violajones}.
+
+Porém, usando \textit{Integral Image}, $\displaystyle A+B+C+D$ é o valor do ponto $\displaystyle 4$, $\displaystyle A+B$ é o valor do ponto $\displaystyle 2$, $\displaystyle A+C$ é o valor do ponto $\displaystyle 3$, e $\displaystyle A$ é o valor do ponto $\displaystyle 1$. Então, com \textit{Integral Image}, você pode obter a soma dos valores de pixel de qualquer retângulo na imagem original usando somente três operações~\cite{servodetection, violajones}:
+
+	\begin{equation}
+		(x_4,y_4) - (x_2,y_2) - (x_3,y_3) + (x_1,y_1)
+		\label{equacaointegralimage}
+	\end{equation} 
+
+
+Um problema relacionado e muito importante é como avaliar a performance dos métodos de detecção de faces propostos. Com isso, muitas métricas foram adotadas como tempo de aprendizagem, número de amostras necessárias no treinamento e a proporção entre taxas de detecção e ``falso alarme''. Esta última é dificultada pelas diferentes definições para as taxas de detecção e falso alarme adotadas pelos pesquisadores~\cite{yang}.
+
+% ################################################################################################################################
 
 \subsection{Reconhecimento das Faces encontradas}
 
@@ -177,15 +253,3 @@ Na verdade, elas são imagens de faces de duas das dez pessoas mostradas na Figu
 %Como mencionado em cima, essa idéia básica - redução de dimensionalidade seguido pelo cálculo da distância em um subespaço - é amplamente utilizado no trabalho de visão computacional. Também é utilizado em outros ramos da AI. Na verdade, é uma das principais ferramentas para gerenciar a complexidade e para encontrar padrões escondidos dentro de enormes quantidades de dados do mundo real.
 
 
-% Os métodos baseados em imagens de intensidade e cor podem ser divididos em 4 categorias \cite{yang}:
-
-% 	\begin{enumerate}
-% 		\item \textbf{``Knowladge-based methods'':} métodos, desenvolvidos principalmente para localização facial, beaseados em regras derivadas do conhecimento dos pesquisadores do que constitui uma típica face humana. Normalmente, captura as relações existentes entre as características faciais. É fácil econtrar regras que descrevem as caracterísicas faciais. Por exemplo, uma face sempre é constituída por dois olhos simétricos, um nariz e uma boca. As relações entre essas características podem ser representadas pelas distâncias relativas e posições.  \cite{yang};
-
-% 		\item \textbf{``Feature invariant approaches'':} esses algoritmos tem como objetivo principal encontrar as características estruturais que existem mesmo quando a postura, ``ponto de vista'', condições de iluminação variam. E por meio dessas características localizar a face. São desenvolvidos principalmente para localização facial \cite{yang};
-
-% 		\item \textbf{``Template matching methods'':} vários padrões comuns de um rosto são armazenados tanto para descrever o rosto como um todo quanto para descrever as características faciais separadamente. As correlações entre as imagens de entrada e os padrões armazenados são comuptados para detecção. Esses métodos são desenvolvidos para serem utlizados como localização e detecção facial \cite{yang};
-
-% 		\item \textbf{``Appearence-based methods'':} Em contraste com os métodos do item anterior, os modelos são retirados de um conjunto de imagens de treinamento que devem capturar a variabilidade da face. Esses modelos retirados são utilizados para detecção. São métodos desenvolvidos principalmente para detecção de faces \cite{yang};
-
-% 	\end{enumerate}
