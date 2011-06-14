@@ -1,18 +1,15 @@
-This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
+This is BibTeX, Version 0.99d (TeX Live 2010)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: bin/monografia.aux
 The style file: plain.bst
 Database file #1: bibliografia.bib
-Warning--I'm ignoring weiser1's extra "address" field
---line 144 of file bibliografia.bib
-Warning--I'm ignoring weiser2's extra "address" field
---line 166 of file bibliografia.bib
 Warning--to sort, need author or key in servodetection
 Warning--empty author in servodetection
 Warning--empty year in lopes
 Warning--empty year in milene
 You've used 17 entries,
             2118 wiz_defined-function locations,
-            598 strings with 6691 characters,
+            596 strings with 6601 characters,
 and the built_in function-call counts, 4094 in all, are:
 = -- 420
 > -- 119
@@ -51,4 +48,4 @@ warning$ -- 4
 while$ -- 41
 width$ -- 19
 write$ -- 184
-(There were 6 warnings)
+(There were 4 warnings)

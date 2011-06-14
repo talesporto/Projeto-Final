@@ -139,7 +139,25 @@ Porém, usando \textit{Integral Image}, $\displaystyle A+B+C+D$ é o valor do po
 		\label{equacaointegralimage}
 	\end{equation} 
 
-Para selecionar os \textit{Haar features} que serão utilizados e para definir os limiares, o método \textit{Viola-Jones} utiliza um método de aprendizagem de máquina chamado \textit{AdaBoost}. Este combina vários classificardores ``fracos'' para criar um classificador ``forte''. Um classificador fraco é aquele que só obtém a resposta correta um pouco mais frequente que um ``palpite aleatório''. A combinação desses classficadores ``fracos'', onde cada um ``empurra'' a resposta final um pouco na direção certa, pode ser considerado como um classificador ``forte''. O método \texit{AdaBoost} seleciona um conjunto de classificadores ``fracos'' para combinar e atribui pesos a cada um. Essa combinação ponderada resulta em um classificador ``forte''~\cite{servodetection}.
+Para selecionar os \textit{Haar features} que serão utilizados e para definir os limiares, o método \textit{Viola-Jones} utiliza um método de aprendizagem de máquina chamado \textit{AdaBoost}. Este combina vários classificardores ``fracos'' para criar um classificador ``forte''. 
+
+Um classificador fraco é aquele que só obtém a resposta correta um pouco mais frequente que um ``palpite aleatório''. A combinação desses classficadores ``fracos'', onde cada um ``empurra'' a resposta final um pouco na direção certa, pode ser considerado como um classificador ``forte''. O método \texit{AdaBoost} seleciona um conjunto de classificadores ``fracos'' para combinar e atribui pesos a cada um. Essa combinação ponderada resulta em um classificador ``forte''~\cite{servodetection}.
+
+	\begin{figure}[htb]
+		\begin{center}
+			\includegraphics[height=10cm,width=7.5cm]{figuras/2.FundamentacaoTeorica/filterchain.png}
+		\end{center}
+		\caption{Ilustração de uma classificador em cascata composto com uma cadeia de filtros~\cite{servodetection}.}
+		\label{filterchain}
+	\end{figure}
+
+O método \textit{Viola-Jones} combina uma série de classificadores \textit{AdaBoost} na forma de uma cadeia de filtros, como na Figura \ref{filterchain}. Cada filtro em si é um classificador \textit{AdaBoost} com um número relativamente pequeno de classificadores ``fracos''~\cite{servodetection}. 
+
+O limiar de aceitação em cada nível é definido ``baixo'' o suficiente para que passe por todos, ou quase todos, os exemplos de face do conjunto de treinamento (um grande banco de imagens contendo faces). Os filtros em cada nível são treinados para classificar imagens de treinamento que passaram por todas fases anteriores.
+
+Durante a utilização, se alguma região de uma imagem falhar em passar um desses filtros, esta é imediatamente classificada como ``não face''. Quando uma região de uma imagem passa por um filtro, ela vai para o próximo filtro na cadeia. As regiões das imagens que passarem por todos os filtros na cadeia são classificadas como ``faces''. Essa cadeia de filtros recebe o nome de Classificador em Cascata~\cite{servodetection}.
+
+A ordem dos filtros no classificador é baseado nos pesos que o método \textit{AdaBoost} define para cada filtro. Os filtros com maior peso são colocados no início, para eliminar as regiões das imagens que não são faces o mais rápido possível~\cite{servodetection}.
 
 % ################################################################################################################################
 
