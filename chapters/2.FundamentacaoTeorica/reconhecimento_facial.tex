@@ -76,11 +76,9 @@ Atualmente, já existem diferentes métodos/técnicas de detecção de faces. Ta
 	\end{enumerate}
 
 Um problema relacionado e muito importante é como avaliar a performance dos métodos de detecção de faces propostos. Para isso, muitas métricas foram adotadas como tempo de aprendizagem, número de amostras necessárias no treinamento e a proporção entre taxas de detecção e ``falso alarme''. Esta última é dificultada pelas diferentes definições para as taxas de detecção e falso alarme adotadas pelos pesquisadores~\cite{yang}.
-	
-	\begin{itemize}
-		\item \textbf{Método \textit{Viola-Jones}}: método para detecção de objetos que minimiza o tempo de computação e possui uma alta acurácia. Esse método foi usado para construir uma abordagem de detecção facial rápido e eficaz~\cite{violajones}.
-	\end{itemize}
 
+O método que será utilizado nesse trabalho será o método \textit{Viola-Jones}}. Este é um  método para detecção de objetos que minimiza o tempo de computação e possui uma alta acurácia permindo detecção de faces em tempo real. Esse método foi usado para construir uma abordagem de detecção facial rápida e eficaz~\cite{violajones}. É o método utilizado na biblioteca \textit{OpenCV}(Open Source Computer Vision) e muito utilizado autalmente.
+	
 O Método \textit{Viola-Jones} para detecção facial utiliza quatro conceitos chaves~\cite{servodetection,violajones}:
 	
 	\begin{enumerate}
@@ -143,6 +141,8 @@ Para selecionar os \textit{Haar features} que serão utilizados e para definir o
 
 Um classificador fraco é aquele que só obtém a resposta correta um pouco mais frequente que um ``palpite aleatório''. A combinação desses classficadores ``fracos'', onde cada um ``empurra'' a resposta final um pouco na direção certa, pode ser considerado como um classificador ``forte''. O método \texit{AdaBoost} seleciona um conjunto de classificadores ``fracos'' para combinar e atribui pesos a cada um. Essa combinação ponderada resulta em um classificador ``forte''~\cite{servodetection}.
 
+Em qualquer região de uma imagem, o número total de \textit{Haar features} é muito grande, muito maior que o número de pixels. Para assegurar uma classficação rápida, o processo de aprendizagem deve excluir o maior número de características disponíveis, e focar nas que são críticas. A seleção dessas características é alcançada através de uma simples modificação no método \textit{AdaBoost}: o mecanismo de aprendizagem é construído de forma que cada classificador ``fraco'' retornado dependa de somente uma única característica. Como resultado, cada estágio do processo seleciona um novo classificador ``fraco'' o que pode ser visto como um processo de seleção de características. \textit{AdaBoost} fornece um algoritmo de aprendizagem eficaz~\cite{violajones}.
+
 	\begin{figure}[htb]
 		\begin{center}
 			\includegraphics[height=10cm,width=7.5cm]{figuras/2.FundamentacaoTeorica/filterchain.png}
@@ -151,14 +151,15 @@ Um classificador fraco é aquele que só obtém a resposta correta um pouco mais
 		\label{filterchain}
 	\end{figure}
 
-O método \textit{Viola-Jones} combina uma série de classificadores \textit{AdaBoost} na forma de uma cadeia de filtros, como na Figura \ref{filterchain}. Cada filtro em si é um classificador \textit{AdaBoost} com um número relativamente pequeno de classificadores ``fracos''~\cite{servodetection}. 
+O método \textit{Viola-Jones} combina uma série de classificadores \textit{AdaBoost} na forma de uma cadeia de filtros, como na Figura \ref{filterchain}, que recebe o nome de Classificadores em Cascata. Cada filtro em si é um classificador \textit{AdaBoost} com um número relativamente pequeno de classificadores ``fracos''~\cite{servodetection}. 
 
-O limiar de aceitação em cada nível é definido ``baixo'' o suficiente para que passe por todos, ou quase todos, os exemplos de face do conjunto de treinamento (um grande banco de imagens contendo faces). Os filtros em cada nível são treinados para classificar imagens de treinamento que passaram por todas fases anteriores.
+O limiar de aceitação em cada nível é definido ``baixo'' o suficiente para que passe por todos, ou quase todos, os exemplos de face do conjunto de treinamento (um grande banco de imagens contendo faces). Os filtros em cada nível são treinados para classificar imagens de treinamento que passaram por todas fases anteriores~\cite{servodetection}.
 
-Durante a utilização, se alguma região de uma imagem falhar em passar um desses filtros, esta é imediatamente classificada como ``não face''. Quando uma região de uma imagem passa por um filtro, ela vai para o próximo filtro na cadeia. As regiões das imagens que passarem por todos os filtros na cadeia são classificadas como ``faces''. Essa cadeia de filtros recebe o nome de Classificador em Cascata~\cite{servodetection}.
+Durante a utilização, se alguma região de uma imagem falhar em passar em um desses filtros, esta é imediatamente classificada como ``não face''. Quando uma região de uma imagem passa por um filtro, ela vai para o próximo filtro na cadeia. As regiões das imagens que passarem por todos os filtros na cadeia são classificadas como ``faces''~\cite{servodetection}.
 
-A ordem dos filtros no classificador é baseado nos pesos que o método \textit{AdaBoost} define para cada filtro. Os filtros com maior peso são colocados no início, para eliminar as regiões das imagens que não são faces o mais rápido possível~\cite{servodetection}.
+O algoritmo utilizado para construção dos Classificadores em Cascata alcança um ótimo desempenho e, ao mesmo tempo, reduz drasticamente o tempo de computação. O aspecto chave é que os menores classficadores (filtros), e por isso mais eficientes, podem ser utilizados para rejeitar a maioria das regiões das imagens que não são faces antes que os classifcadores mais complexos sejam utilizados~\cite{violajones}. A ordem dos filtros no classificador é baseado nos pesos que o método \textit{AdaBoost} define para cada filtro. Os filtros com maior peso são colocados no início, para eliminar as regiões das imagens que não são faces o mais rápido possível~\cite{servodetection}. 
 
+O método \textit{Viola-Jones} é adequado para utilização em sistemas de detecção de faces em tempo real. Agora, o próximo passo para o processo de Reconhecimento Facial é comparar as faces encontradas com modelos conhecidos com o sistema para realizar a identificação, o que será mostrado na próxima subseção.
 % ################################################################################################################################
 
 \subsection{Reconhecimento das Faces encontradas}
