@@ -40,7 +40,7 @@ Falaremos dessas duas tarefas separadamente nas próximas subseções.
 
 \subsection{Detecção de Faces em imagens}
 	
-A primeira etapa para o reconhecimento de faces é a detecção de um rosto, e a partir daí a comparação do mesmo com modelos conhecidos pelo sistema \cite{hong, oliveira}. Em um sistema de reconhecimento facial, tanto o tempo de resposta quanto a confiabilidade desta etapa influência diretamente no desempenho e o emprego deste sistema \cite{oliveira}.
+A primeira etapa para o reconhecimento de faces é a detecção de um rosto, e a partir daí a comparação do mesmo com modelos conhecidos pelo sistema \cite{hong, oliveira}. Em um sistema de reconhecimento facial, tanto o tempo de resposta quanto a confiabilidade desta etapa influênciam diretamente no desempenho e o emprego deste sistema \cite{oliveira}.
 
 A detecção de faces é definida como o processo que determina a existência ou não de faces em uma imagem e uma vez encontrada alguma face, sua localização deve ser apontada através de um enquadramento ou através de suas coordenadas dentro da imagem \cite{oliveira}. A Figura \ref{enquadramentoRosto} representa um exemplo da detecção de uma face em uma imagem.
 
@@ -74,12 +74,14 @@ Atualmente, já existem diferentes métodos/técnicas de detecção de faces. Ta
 		\item \textbf{Métodos baseados em Aparência:} recebem este nome devido ao fato de não utilizarem nenhum conhecimento a priori sobre o objeto ou características a serem detectadas. Em contraste com os métodos baseado em templates, os modelos são retirados de um conjunto de imagens de treinamento que devem capturar a variabilidade da face. Esses modelos retirados são utilizados para detecção. Nesta classe de algoritmos surge os conceitos de aprendizado e treinamento, uma vez que as informações necessárias para realizar a tarefa de detecção são retiradas do próprio conjunto de imagens sem intervenção externa. São métodos desenvolvidos principalmente para detecção de faces~\cite{yang, lopes};
 
 	\end{enumerate}
+
+Um problema relacionado e muito importante é como avaliar a performance dos métodos de detecção de faces propostos. Para isso, muitas métricas foram adotadas como tempo de aprendizagem, número de amostras necessárias no treinamento e a proporção entre taxas de detecção e ``falso alarme''. Esta última é dificultada pelas diferentes definições para as taxas de detecção e falso alarme adotadas pelos pesquisadores~\cite{yang}.
 	
 	\begin{itemize}
-		\item \textbf{Método Viola-Jones}: método para detecção de objetos que minimiza o tempo de computação e possui uma alta acurácia. Esse método foi usado para construir uma abordagem de detecção facial rápido e eficaz~\cite{violajones}.
+		\item \textbf{Método \textit{Viola-Jones}}: método para detecção de objetos que minimiza o tempo de computação e possui uma alta acurácia. Esse método foi usado para construir uma abordagem de detecção facial rápido e eficaz~\cite{violajones}.
 	\end{itemize}
 
-O Método Viola-Jones para detecção facial utiliza quatro conceitos chaves~\cite{servodetection,violajones}:
+O Método \textit{Viola-Jones} para detecção facial utiliza quatro conceitos chaves~\cite{servodetection,violajones}:
 	
 	\begin{enumerate}
 		\item \textbf{\textit{Haar features}:} simples características retangulares;
@@ -87,8 +89,6 @@ O Método Viola-Jones para detecção facial utiliza quatro conceitos chaves~\ci
 		\item \textbf{O método \textit{AdaBoost}}: um método de aprendizagem de máquina utilizado para construir um classificador,  selecionando um pequeno número de características importantes usando \textit{AdaBoost};
 		\item \textbf{Classificador em Cascata}: classificador que combina muitas características de maneira eficiente;
 	\end{enumerate}
-
-A detecção facial em imagens é baseado em simples caracteríticas retangulares (\textit{Haar features}), exemplificada na Figura \ref{haarfeatures}. Existem vários motivos para se usar essas características ao invés de usar diretamente os pixels da imagem. Uma das principais é que sistemas baseados em características são muito mais rápidos que sistemas baseados em pixels~\cite{violajones}. 
 
 	\begin{figure}[hbt]
 		\begin{center}
@@ -98,9 +98,9 @@ A detecção facial em imagens é baseado em simples caracteríticas retangulare
 		\label{haarfeatures}
 	\end{figure}
 
-Tais simples características são remanecentes das funções de base \textit{Haar}. O método utiliza três tipos de características, exemplificadas na Figura \ref{haarfeaturestypes}: características com dois, três ou quatro retângulos~\cite{violajones}. A presença de uma característica em uma imagem é determinada pela subtração da média dos valores dos pixels da região escura pela média dos valores dos pixels da região clara. Caso o valor seja maior que um limiar, então essa característica é tida como presente~\cite{servodetection}.
+A detecção facial em imagens é baseado em simples caracteríticas retangulares (\textit{Haar features}), exemplificada na Figura \ref{haarfeatures}. Existem vários motivos para se usar essas características ao invés de usar diretamente os pixels da imagem. Uma das principais é que sistemas baseados em características são muito mais rápidos que sistemas baseados em pixels~\cite{violajones}. 
 
-	\begin{figure}[hbt]
+\begin{figure}[hbt]
 		\begin{center}
 			\includegraphics[height=6.5cm,width=12.5cm]{figuras/2.FundamentacaoTeorica/haarfeaturestypes.png}
 		\end{center}
@@ -108,7 +108,9 @@ Tais simples características são remanecentes das funções de base \textit{Ha
 		\label{haarfeaturestypes}
 	\end{figure}
 
-O Método Viola-Jones não trabalha diretamente com as intensidades da imagem. Para determinar a presença ou ausência de centenas de \textit{Haar features} em cada posição de imagem e em várias escalas de forma eficiente, utiliza uma técnica chamada \textit{Integral Image}. Basicamente, o método consiste em acrescentar pequenas unidades juntas. Neste caso, pequenas unidades são valores de pixels. O valor ``integral'' para cada pixel é a soma de todos os pixels acima e a esqueda. Começando pelo canto superior esquerdo da imagem e atravessando para direita e para baixo, toda a imagem pode ser ``integrada'' com poucas operações por pixels~\cite{servodetection, violajones}. Com a nova representação de imagem criada, qualquer \textit{Haar Feature} pode ser computada para qualquer escala e localização em um tempo constante~\cite{violajones}.
+Tais simples características são remanecentes das funções de base \textit{Haar}. O método utiliza três tipos de características, exemplificadas na Figura \ref{haarfeaturestypes}: características com dois, três ou quatro retângulos~\cite{violajones}. A presença de uma característica em uma imagem é determinada pela subtração da média dos valores dos pixels da região escura pela média dos valores dos pixels da região clara. Caso o valor seja maior que um limiar, então essa característica é tida como presente~\cite{servodetection}.
+
+O Método \textit{Viola-Jones} não trabalha diretamente com as intensidades da imagem. Para determinar a presença ou ausência de centenas de \textit{Haar features} em cada posição de imagem e em várias escalas de forma eficiente, utiliza uma técnica chamada \textit{Integral Image}. Basicamente, o método consiste em acrescentar pequenas unidades juntas. Neste caso, pequenas unidades são valores de pixels. O valor ``integral'' para cada pixel é a soma de todos os pixels acima e a esqueda. Começando pelo canto superior esquerdo da imagem e atravessando para direita e para baixo, toda a imagem pode ser ``integrada'' com poucas operações por pixels~\cite{servodetection, violajones}. Com a nova representação de imagem criada, qualquer \textit{Haar Feature} pode ser computada para qualquer escala e localização em um tempo constante~\cite{violajones}.
 
 	\begin{figure}[hbt]
 		\begin{center}
@@ -137,8 +139,7 @@ Porém, usando \textit{Integral Image}, $\displaystyle A+B+C+D$ é o valor do po
 		\label{equacaointegralimage}
 	\end{equation} 
 
-
-Um problema relacionado e muito importante é como avaliar a performance dos métodos de detecção de faces propostos. Com isso, muitas métricas foram adotadas como tempo de aprendizagem, número de amostras necessárias no treinamento e a proporção entre taxas de detecção e ``falso alarme''. Esta última é dificultada pelas diferentes definições para as taxas de detecção e falso alarme adotadas pelos pesquisadores~\cite{yang}.
+Para selecionar os \textit{Haar features} que serão utilizados e para definir os limiares, o método \textit{Viola-Jones} utiliza um método de aprendizagem de máquina chamado \textit{AdaBoost}. Este combina vários classificardores ``fracos'' para criar um classificador ``forte''. Um classificador fraco é aquele que só obtém a resposta correta um pouco mais frequente que um ``palpite aleatório''. A combinação desses classficadores ``fracos'', onde cada um ``empurra'' a resposta final um pouco na direção certa, pode ser considerado como um classificador ``forte''. O método \texit{AdaBoost} seleciona um conjunto de classificadores ``fracos'' para combinar e atribui pesos a cada um. Essa combinação ponderada resulta em um classificador ``forte''~\cite{servodetection}.
 
 % ################################################################################################################################
 

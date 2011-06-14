@@ -4,30 +4,19 @@
 How face detection works.
 \newblock {\em SERVO Magazine}, fevereiro 2007.
 
-\bibitem{gregoryabowd}
-G.~Abowd, C.~Atkeson, and I.~Essa.
-\newblock Ubiquitous smart spaces.
-\newblock {\em A white paper submitted to DARPA (in response to RFI)}, 1998.
-
-\bibitem{milene}
-M.~Arantes, A.~N. Ide, and J.~H. Saito.
-\newblock A system for fingerprint minutiae classification and recognition.
-\newblock In {\em Proceedings of the 9th International Conference on Neural
-  Information Processing(ICONIP'O2)}, volume~5, pages 2474 -- 2478.
-
 \bibitem{saocarlos}
 {\^A}.~R. Bianchini.
 \newblock Arquitetura de redes neurais para o reconhecimento facial baseado no
   neocognitron.
-\newblock Master's thesis, S{\~a}o Carlos,
-  http://www.bdtd.ufscar.br/htdocs/tedeSimplificado//tde\_busca/arquivo.php?codArquivo=164,
-  2001.
+\newblock Master's thesis, S{\~a}o Carlos, 2001.
 
 \bibitem{fabriciobuzzeto}
 F.~N. Buzeto.
 \newblock Um conjunto de solu{\c c}{\~o}es para a constru{\c c}{\~a}o de
   aplicativos de computa{\c c}{\~a}o ub{\'\i}qua.
-\newblock Master's thesis, Universidade de Bras{\'\i}lia, 2010.
+\newblock Master's thesis, Departamento de Ci{\^e}ncia da Computa{\c c}{\~a}o,
+  Universidade de Bras{\'\i}lia,
+  http://monografias.cic.unb.br/dspace/handle/123456789/257, 2010.
 
 \bibitem{daugman}
 J.~Daugman.
@@ -35,13 +24,18 @@ J.~Daugman.
 \newblock {\em IEEE Transactions on Pattern Analysis and Machine Intelligence},
   19(7), 1997.
 
+\bibitem{gregoryabowd}
+I.~Essa G.~Abowd, C.~Atkeson.
+\newblock Ubiquitous smart spaces.
+\newblock {\em A white paper submitted to DARPA (in response to RFI)}, 1998.
+
 \bibitem{alegomes}
 A.~R. Gomes.
 \newblock Ubiquitos -- uma proposta de arquitetura de middleware para a
   adaptabilidade de servi{\c c}os em sistemas de computa{\c c}{\~a}o
   ub{\'\i}qua.
-\newblock Master's thesis, Universidade de Bras{\'\i}lia; Departamento de
-  Ci{\^e}ncia da Computa{\c c}{\~a}o,
+\newblock Master's thesis, Departamento de Ci{\^e}ncia da Computa{\c c}{\~a}o,
+  Universidade de Bras{\'\i}lia,
   http://monografias.cic.unb.br/dspace/handle/123456789/110, 2007.
 
 \bibitem{hewitt}
@@ -53,7 +47,9 @@ R.~Hewitt.
 S.~A.~D. Junior.
 \newblock Reconhecimento facial 3d utilizando o simulated annealing com as
   medidas surface interpenetration measure e m-estimator sample consensus.
-\newblock Master's thesis, Universidade Federal do Paran{\'a}, 2007.
+\newblock Master's thesis, Programa de P{\'o}s-Gradua{\c c}{\~a}o em
+  Inform{\'a}tica, Setor de Ci{\^e}ncias Exatas, Universidade Federal do
+  Paran{\'a}, 2007.
 
 \bibitem{hong}
 Hong L. and Jain A.
@@ -67,6 +63,12 @@ E~.~C. Lopes.
 \newblock Technical report, Pontif{\'\i}cia Universidade Cat{\'o}lica do Rio
   Grande do Sul.
 
+\bibitem{milene}
+J.~H.~Saito M.~Arantes, A. N.~Ide.
+\newblock A system for fingerprint minutiae classification and recognition.
+\newblock In {\em Proceedings of the 9th International Conference on Neural
+  Information Processing(ICONIP'O2)}, volume~5, pages 2474 -- 2478.
+
 \bibitem{yang}
 N.~Ahuja M.~Yang, D. J.~Kriegman.
 \newblock Detecting faces in images: A survey.
@@ -76,7 +78,8 @@ N.~Ahuja M.~Yang, D. J.~Kriegman.
 \bibitem{oliveira}
 D.~R. Oliveira.
 \newblock Reconhecimento de faces usando redes neurais e biometria.
-\newblock Master's thesis, INPE, 2006.
+\newblock Master's thesis, S{\~a}o Jos{\'e} dos Campos: Instituto Nacional de
+  Pesquisas Espaciais (INPE), setembro 2003.
 
 \bibitem{violajones}
 M.~Jones P.~Viola.
@@ -86,17 +89,18 @@ M.~Jones P.~Viola.
   2001.
 
 \bibitem{bolle}
-S.~{Pankanti}, R.~M. {Bolle}, and A.~{Jain}.
-\newblock Biometrics: The future of identification, 2000.
-
-\bibitem{weiser1}
-M.~Weiser.
-\newblock The computer for the 21st century.
-\newblock {\em Scientific American}, 1991.
+A.~Jain S.~Pankanti, R. M.~Bolle.
+\newblock Guest editors' introduction: Biometrics-the future of identification.
+\newblock {\em Computer}, 33:46--49, 2000.
 
 \bibitem{weiser2}
 M.~Weiser.
 \newblock The world is not a desktop.
-\newblock {\em ACM Interactions}, 1993.
+\newblock {\em Interactions}, 1:7--8, Janeiro 1994.
+
+\bibitem{weiser1}
+M.~Weiser.
+\newblock The computer for the 21st century.
+\newblock {\em SIGMOBILE Mob. Comput. Commun. Rev.}, 3:3--11, Julho 1999.
 
 \end{thebibliography}
