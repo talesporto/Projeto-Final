@@ -3,14 +3,15 @@
 \select@language {brazil}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Exemplos de algumas caracter\IeC {\'\i }sticas biom\IeC {\'e}tricas \cite {drovetto}.}}{4}{figure.2.1}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Exemplo de um processo de detec\IeC {\c c}\IeC {\~a}o de uma face em uma imagem.}}{8}{figure.2.2}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Exemplo de simples caracter\IeC {\'\i }sticas retangulares ({Haar Features}). Adaptada de \cite {servodetection}.}}{11}{figure.2.3}
-\contentsline {figure}{\numberline {2.4}{\ignorespaces {Haar Features} com dois, tr\IeC {\^e}s e quatro ret\IeC {\^a}ngulos~\cite {violajones}.}}{12}{figure.2.4}
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Exemplo da aplica\IeC {\c c}\IeC {\~a}o da t\IeC {\'e}cnica {Integral Image}. Ap\IeC {\'o}s a ``integra\IeC {\c c}\IeC {\~a}o'' o pixel $\displaystyle (x,y)$ cont\IeC {\'e}m a soma dos valores dos pixels do ret\IeC {\^a}ngulo sombreado. Adaptada de~\cite {servodetection}.}}{13}{figure.2.5}
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Exemplo utlizado para mostrar como calcular a soma dos valores de pixel de um ret\IeC {\^a}ngulo que n\IeC {\~a}o est\IeC {\'a} localizado no canto superior esquerdo da imagem utilizando \textit {Integral Image}. Adaptado de~\cite {servodetection}.}}{14}{figure.2.6}
-\contentsline {figure}{\numberline {2.7}{\ignorespaces Ilustra\IeC {\c c}\IeC {\~a}o de uma classificador em cascata composto com uma cadeia de filtros~\cite {servodetection}.}}{15}{figure.2.7}
-\contentsline {figure}{\numberline {2.8}{\ignorespaces Dist\IeC {\^a}ncia Euclidiana entre dois pontos em duas dimens\IeC {\~o}es \cite {hewitt}.}}{16}{figure.2.8}
-\contentsline {figure}{\numberline {2.9}{\ignorespaces Mapa exemplo para redu\IeC {\c c}\IeC {\~a}o de dimensionalidade \cite {hewitt}.}}{17}{figure.2.9}
-\contentsline {figure}{\numberline {2.10}{\ignorespaces Direita: imagens de rosto para dez pessoas. Esquerda: os seis primeiros componentes principais, visto como eigenfaces \cite {hewitt}.}}{19}{figure.2.10}
-\contentsline {figure}{\numberline {2.11}{\ignorespaces Face imagens de dois indiv\IeC {\'\i }duos. A face de cada indiv\IeC {\'\i }duo \IeC {\'e} apresentada em quatro diferentes cosndi\IeC {\c c}\IeC {\~o}es de ilumina\IeC {\c c}\IeC {\~a}o. A variabilidade devido \IeC {\`a} ilumina\IeC {\c c}\IeC {\~a}o aqui \IeC {\'e} maior do que a variabilidade entre os indiv\IeC {\'\i }duos. Eigenfaces tende a confundir as pessoas quando os efeitos de ilumina\IeC {\c c}\IeC {\~a}o s\IeC {\~a}o fortes \cite {hewitt}.}}{20}{figure.2.11}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Exemplos de algumas caracter\IeC {\'\i }sticas biom\IeC {\'e}tricas \cite {drovetto}.}}{5}{figure.3.1}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Exemplo de um processo de detec\IeC {\c c}\IeC {\~a}o de uma face em uma imagem.}}{9}{figure.3.2}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Exemplo de simples caracter\IeC {\'\i }sticas retangulares ({Haar Features}). Adaptada de \cite {servodetection}.}}{12}{figure.3.3}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces {Haar Features} com dois, tr\IeC {\^e}s e quatro ret\IeC {\^a}ngulos~\cite {violajones}.}}{13}{figure.3.4}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Exemplo da aplica\IeC {\c c}\IeC {\~a}o da t\IeC {\'e}cnica {Integral Image}. Ap\IeC {\'o}s a ``integra\IeC {\c c}\IeC {\~a}o'' o pixel $\displaystyle (x,y)$ cont\IeC {\'e}m a soma dos valores dos pixels do ret\IeC {\^a}ngulo sombreado. Adaptada de~\cite {servodetection}.}}{14}{figure.3.5}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Exemplo utlizado para mostrar como calcular a soma dos valores de pixel de um ret\IeC {\^a}ngulo que n\IeC {\~a}o est\IeC {\'a} localizado no canto superior esquerdo da imagem utilizando \textit {Integral Image}. Adaptado de~\cite {servodetection}.}}{15}{figure.3.6}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Ilustra\IeC {\c c}\IeC {\~a}o de uma classificador em cascata composto com uma cadeia de filtros~\cite {servodetection}.}}{16}{figure.3.7}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Dist\IeC {\^a}ncia Euclidiana entre dois pontos em duas dimens\IeC {\~o}es \cite {hewitt}.}}{17}{figure.3.8}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Mapa exemplo para redu\IeC {\c c}\IeC {\~a}o de dimensionalidade \cite {hewitt}.}}{18}{figure.3.9}
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Direita: imagens de rosto para dez pessoas. Esquerda: os seis primeiros componentes principais, visto como eigenfaces \cite {hewitt}.}}{20}{figure.3.10}
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Face imagens de dois indiv\IeC {\'\i }duos. A face de cada indiv\IeC {\'\i }duo \IeC {\'e} apresentada em quatro diferentes cosndi\IeC {\c c}\IeC {\~o}es de ilumina\IeC {\c c}\IeC {\~a}o. A variabilidade devido \IeC {\`a} ilumina\IeC {\c c}\IeC {\~a}o aqui \IeC {\'e} maior do que a variabilidade entre os indiv\IeC {\'\i }duos. Eigenfaces tende a confundir as pessoas quando os efeitos de ilumina\IeC {\c c}\IeC {\~a}o s\IeC {\~a}o fortes \cite {hewitt}.}}{21}{figure.3.11}

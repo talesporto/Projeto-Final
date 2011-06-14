@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2011.4.25)  14 JUN 2011 16:24
+This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2011.4.25)  14 JUN 2011 20:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -499,7 +499,7 @@ See the natbib package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.484 ...and\NAT@force@numbers{}\NAT@force@numbers
+l.487 ...and\NAT@force@numbers{}\NAT@force@numbers
                                                   
 ? r
 OK, entering \nonstopmode...
@@ -629,7 +629,7 @@ LaTeX Font Warning: Font shape `T1/cmr/m/n' in size <20> not available
 LaTeX Font Warning: Font shape `T1/ua1/bx/n' in size <20> not available
 (Font)              size <20.74> substituted on input line 36.
 
-<positivo_cor.pdf, id=52, 119.44624pt x 60.225pt>
+<positivo_cor.pdf, id=56, 119.44624pt x 60.225pt>
 File: positivo_cor.pdf Graphic file (type pdf)
  <use positivo_cor.pdf>
 Package pdftex.def Info: positivo_cor.pdf used on input line 36.
@@ -717,8 +717,12 @@ Cap\'{\i }tulo 1.
 
 ]) (./chapters/2.FundamentacaoTeorica/fundamentacao_teorica.tex [2]
 Cap\'{\i }tulo 2.
+(./chapters/2.FundamentacaoTeorica/localizacao.tex) [3
+
+]
+Cap\'{\i }tulo 3.
 (./chapters/2.FundamentacaoTeorica/biometria.tex
-<figuras/2.FundamentacaoTeorica/caracteristicasBiometricas.png, id=214, 681.546
+<figuras/2.FundamentacaoTeorica/caracteristicasBiometricas.png, id=224, 681.546
 25pt x 466.74374pt>
 File: figuras/2.FundamentacaoTeorica/caracteristicasBiometricas.png Graphic fil
 e (type png)
@@ -732,7 +736,7 @@ Overfull \hbox (28.45952pt too wide) in paragraph at lines 9--10
  [] 
  []
 
-[3
+[4
 
 ]
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 35.
@@ -741,14 +745,14 @@ File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 35.
- [4 <./figuras/2.FundamentacaoTeorica/caracteristicasBiometricas.png (PNG copy)
+ [5 <./figuras/2.FundamentacaoTeorica/caracteristicasBiometricas.png (PNG copy)
 >]
 Overfull \hbox (25.49876pt too wide) in paragraph at lines 53--66
  [] 
  []
 
-[5]) (./chapters/2.FundamentacaoTeorica/reconhecimento_facial.tex [6] [7]
-<figuras/2.FundamentacaoTeorica/enquadramentoRosto.png, id=291, 558.085pt x 420
+[6]) (./chapters/2.FundamentacaoTeorica/reconhecimento_facial.tex [7] [8]
+<figuras/2.FundamentacaoTeorica/enquadramentoRosto.png, id=300, 558.085pt x 420
 .57124pt>
 File: figuras/2.FundamentacaoTeorica/enquadramentoRosto.png Graphic file (type 
 png)
@@ -756,13 +760,13 @@ png)
 Package pdftex.def Info: figuras/2.FundamentacaoTeorica/enquadramentoRosto.png 
 used on input line 49.
 (pdftex.def)             Requested size: 355.66591pt x 270.30055pt.
- [8 <./figuras/2.FundamentacaoTeorica/enquadramentoRosto.png (PNG copy)>]
+ [9 <./figuras/2.FundamentacaoTeorica/enquadramentoRosto.png (PNG copy)>]
 Overfull \hbox (0.42082pt too wide) in paragraph at lines 70--71
 \T1/cmr/m/n/12 ob-je-tivo prin-ci-pal en-con-trar as ca-rac-te-rís-ti-cas es-tr
 u-tu-rais que exis-tem mesmo quando
  []
 
-[9]
+[10]
 ! Too many }'s.
 <recently read> }
                  
@@ -772,7 +776,7 @@ You've closed more groups than you opened.
 Such booboos are generally harmless, so keep going.
 
 
-<figuras/2.FundamentacaoTeorica/haar_features.png, id=335, 750.18295pt x 305.36
+<figuras/2.FundamentacaoTeorica/haar_features.png, id=344, 750.18295pt x 305.36
 62pt>
 File: figuras/2.FundamentacaoTeorica/haar_features.png Graphic file (type png)
  <use figuras/2.FundamentacaoTeorica/haar_features.png>
@@ -814,7 +818,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-<figuras/2.FundamentacaoTeorica/haarfeaturestypes.png, id=341, 347.2975pt x 303
+<figuras/2.FundamentacaoTeorica/haarfeaturestypes.png, id=350, 347.2975pt x 303
 .1325pt>
 File: figuras/2.FundamentacaoTeorica/haarfeaturestypes.png Graphic file (type p
 ng)
@@ -845,8 +849,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[10]
-<figuras/2.FundamentacaoTeorica/integral_image.png, id=360, 384.41489pt x 307.5
+[11]
+<figuras/2.FundamentacaoTeorica/integral_image.png, id=369, 384.41489pt x 307.5
 3192pt>
 File: figuras/2.FundamentacaoTeorica/integral_image.png Graphic file (type png)
 
@@ -889,7 +893,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-<figuras/2.FundamentacaoTeorica/integral_image2.png, id=365, 372.11362pt x 299.
+<figuras/2.FundamentacaoTeorica/integral_image2.png, id=374, 372.11362pt x 299.
 84361pt>
 File: figuras/2.FundamentacaoTeorica/integral_image2.png Graphic file (type png
 )
@@ -897,7 +901,7 @@ File: figuras/2.FundamentacaoTeorica/integral_image2.png Graphic file (type png
 Package pdftex.def Info: figuras/2.FundamentacaoTeorica/integral_image2.png use
 d on input line 125.
 (pdftex.def)             Requested size: 355.67491pt x 184.94946pt.
- [11 <./figuras/2.FundamentacaoTeorica/haar_features.png>]
+ [12 <./figuras/2.FundamentacaoTeorica/haar_features.png>]
 ! Undefined control sequence.
 l.142 ...classificador ``forte''. O mÃ©todo \texit
                                                   {AdaBoost} seleciona um co...
@@ -908,16 +912,16 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-<figuras/2.FundamentacaoTeorica/filterchain.png, id=382, 31.25677pt x 37.94176p
+<figuras/2.FundamentacaoTeorica/filterchain.png, id=391, 31.25677pt x 37.94176p
 t>
 File: figuras/2.FundamentacaoTeorica/filterchain.png Graphic file (type png)
  <use figuras/2.FundamentacaoTeorica/filterchain.png>
 Package pdftex.def Info: figuras/2.FundamentacaoTeorica/filterchain.png used on
  input line 148.
 (pdftex.def)             Requested size: 213.44122pt x 284.55832pt.
- [12 <./figuras/2.FundamentacaoTeorica/haarfeaturestypes.png (PNG copy)>] [13 <
+ [13 <./figuras/2.FundamentacaoTeorica/haarfeaturestypes.png (PNG copy)>] [14 <
 ./figuras/2.FundamentacaoTeorica/integral_image.png>]
-<figuras/2.FundamentacaoTeorica/graficoDistanciaEntrePontos.png, id=408, 153.21
+<figuras/2.FundamentacaoTeorica/graficoDistanciaEntrePontos.png, id=417, 153.21
 24pt x 120.9318pt>
 File: figuras/2.FundamentacaoTeorica/graficoDistanciaEntrePontos.png Graphic fi
 le (type png)
@@ -926,8 +930,8 @@ le (type png)
 Package pdftex.def Info: figuras/2.FundamentacaoTeorica/graficoDistanciaEntrePo
 ntos.png used on input line 199.
 (pdftex.def)             Requested size: 355.7148pt x 270.35576pt.
- [14 <./figuras/2.FundamentacaoTeorica/integral_image2.png>]
-<figuras/2.FundamentacaoTeorica/PCAexemploMapa.png, id=426, 445.665pt x 207.776
+ [15 <./figuras/2.FundamentacaoTeorica/integral_image2.png>]
+<figuras/2.FundamentacaoTeorica/PCAexemploMapa.png, id=436, 445.665pt x 207.776
 25pt>
 File: figuras/2.FundamentacaoTeorica/PCAexemploMapa.png Graphic file (type png)
 
@@ -935,17 +939,17 @@ File: figuras/2.FundamentacaoTeorica/PCAexemploMapa.png Graphic file (type png)
 Package pdftex.def Info: figuras/2.FundamentacaoTeorica/PCAexemploMapa.png used
  on input line 216.
 (pdftex.def)             Requested size: 355.66205pt x 270.33417pt.
- [15 <./figuras/2.FundamentacaoTeorica/filterchain.png (PNG copy)>] [16 <./figu
-ras/2.FundamentacaoTeorica/graficoDistanciaEntrePontos.png (PNG copy)>] [17 <./
+ [16 <./figuras/2.FundamentacaoTeorica/filterchain.png (PNG copy)>] [17 <./figu
+ras/2.FundamentacaoTeorica/graficoDistanciaEntrePontos.png (PNG copy)>] [18 <./
 figuras/2.FundamentacaoTeorica/PCAexemploMapa.png (PNG copy)>]
-<figuras/2.FundamentacaoTeorica/eigenfaces.png, id=463, 158.994pt x 186.9384pt>
+<figuras/2.FundamentacaoTeorica/eigenfaces.png, id=472, 158.994pt x 186.9384pt>
 File: figuras/2.FundamentacaoTeorica/eigenfaces.png Graphic file (type png)
 <use figuras/2.FundamentacaoTeorica/eigenfaces.png>
 Package pdftex.def Info: figuras/2.FundamentacaoTeorica/eigenfaces.png used on 
 input line 254.
 (pdftex.def)             Requested size: 341.43306pt x 401.50467pt.
 
-<figuras/2.FundamentacaoTeorica/exemplosImagensIluminacaoo.png, id=470, 238.641
+<figuras/2.FundamentacaoTeorica/exemplosImagensIluminacaoo.png, id=479, 238.641
 56pt x 119.69719pt>
 File: figuras/2.FundamentacaoTeorica/exemplosImagensIluminacaoo.png Graphic fil
 e (type png)
@@ -954,8 +958,8 @@ e (type png)
 Package pdftex.def Info: figuras/2.FundamentacaoTeorica/exemplosImagensIluminac
 aoo.png used on input line 266.
 (pdftex.def)             Requested size: 398.33858pt x 199.80956pt.
-)) [18]
-[19 <./figuras/2.FundamentacaoTeorica/eigenfaces.png (PNG copy)>] [20 <./figura
+)) [19]
+[20 <./figuras/2.FundamentacaoTeorica/eigenfaces.png (PNG copy)>] [21 <./figura
 s/2.FundamentacaoTeorica/exemplosImagensIluminacaoo.png (PNG copy)>]
 (./bin/monografia.bbl (./bin/monografia.brf)
 \tf@brf=\write7
@@ -973,12 +977,12 @@ Underfull \hbox (badness 1867) in paragraph at lines 40--40
 si-dade de Bra-sí-lia,
  []
 
-[21
+[22
 
 
 ])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 74.
- [22]
+ [23]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 74.
  (./bin/monografia.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 74.
@@ -999,10 +1003,10 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 74.
  )
 (\end occurred when \iffalse on line 462 was incomplete) 
 Here is how much of TeX's memory you used:
- 7931 strings out of 493763
- 113439 string characters out of 3144954
+ 7937 strings out of 493763
+ 113573 string characters out of 3144954
  221386 words of memory out of 3000000
- 10961 multiletter control sequences out of 15000+200000
+ 10962 multiletter control sequences out of 15000+200000
  15468 words of font info for 35 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
  43i,8n,69p,1116b,484s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1024,10 +1028,10 @@ e1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1
 ublic/cm-super/sfrm1440.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/pub
 lic/cm-super/sfrm2074.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/publi
 c/cm-super/sfti1200.pfb>
-Output written on ./bin/monografia.pdf (32 pages, 1225358 bytes).
+Output written on ./bin/monografia.pdf (33 pages, 1227907 bytes).
 PDF statistics:
- 629 PDF objects out of 1000 (max. 8388607)
- 548 compressed objects within 6 object streams
- 119 named destinations out of 1000 (max. 500000)
- 157 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 639 PDF objects out of 1000 (max. 8388607)
+ 557 compressed objects within 6 object streams
+ 121 named destinations out of 1000 (max. 500000)
+ 165 words of extra memory for PDF output out of 10000 (max. 10000000)
 
