@@ -8,7 +8,13 @@ How face detection works.
 {\^A}.~R. Bianchini.
 \newblock Arquitetura de redes neurais para o reconhecimento facial baseado no
   neocognitron.
+<<<<<<< HEAD
 \newblock Master's thesis, S{\~a}o Carlos, 2001.
+=======
+\newblock Master's thesis, S{\~a}o Carlos,
+  http://www.bdtd.ufscar.br/htdocs/tedeSimplificado//tde\_busca/arquivo.php?co%
+dArquivo=164, 2001.
+>>>>>>> 582eb6e36aefe1f630ab8ac349943d9795c4deff
 
 \bibitem{fabriciobuzzeto}
 F.~N. Buzeto.

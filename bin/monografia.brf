@@ -93,16 +93,26 @@
 \backcite {servodetection}{{11}{2.2.1}{figure.2.6}}
 \backcite {violajones}{{11}{2.2.1}{figure.2.6}}
 \backcite {violajones}{{12}{2.4}{figure.2.4}}
+<<<<<<< HEAD
 \backcite {servodetection}{{12}{2.2.1}{equation.2.2.3}}
+=======
+>>>>>>> 582eb6e36aefe1f630ab8ac349943d9795c4deff
 \backcite {servodetection}{{13}{2.5}{figure.2.5}}
 \backcite {hewitt}{{13}{2.2.2}{Item.33}}
 \backcite {hewitt}{{13}{2.2.2}{Item.33}}
 \backcite {hewitt}{{13}{2.2.2}{Item.36}}
 \backcite {hewitt}{{13}{2.2.2}{figure.2.7}}
 \backcite {hewitt}{{13}{2.2.2}{figure.2.7}}
+<<<<<<< HEAD
 \backcite {servodetection}{{14}{2.6}{figure.2.6}}
 \backcite {hewitt}{{14}{2.2.2}{figure.2.7}}
 \backcite {hewitt}{{14}{2.2.2}{figure.2.7}}
+=======
+\backcite {hewitt}{{13}{2.2.2}{figure.2.7}}
+\backcite {servodetection}{{14}{2.6}{figure.2.6}}
+\backcite {hewitt}{{14}{2.2.2}{figure.2.7}}
+\backcite {hewitt}{{14}{2.2.2}{figure.2.8}}
+>>>>>>> 582eb6e36aefe1f630ab8ac349943d9795c4deff
 \backcite {hewitt}{{14}{2.2.2}{figure.2.8}}
 \backcite {hewitt}{{14}{2.2.2}{figure.2.8}}
 \backcite {hewitt}{{14}{2.2.2}{figure.2.8}}
