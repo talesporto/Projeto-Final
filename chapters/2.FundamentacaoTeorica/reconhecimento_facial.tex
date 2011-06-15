@@ -160,18 +160,21 @@ Durante a utilização, se alguma região de uma imagem falhar em passar em um d
 O algoritmo utilizado para construção dos Classificadores em Cascata alcança um ótimo desempenho e, ao mesmo tempo, reduz drasticamente o tempo de computação. O aspecto chave é que os menores classificadores (filtros), e por isso mais eficientes, podem ser utilizados para rejeitar a maioria das regiões das imagens que não são faces antes que os classifcadores mais complexos sejam utilizados~\cite{violajones}. A ordem dos filtros no classificador é baseado nos pesos que o método \textit{AdaBoost} define para cada filtro. Os filtros com maior peso são colocados no início, para eliminar as regiões das imagens que não são faces o mais rápido possível~\cite{servodetection}. 
 
 O método \textit{Viola-Jones} é adequado para utilização em sistemas de detecção de faces em tempo real. Agora, o próximo passo para o processo de Reconhecimento Facial é comparar as faces encontradas com modelos conhecidos com o sistema para realizar a identificação, o que será mostrado na próxima subseção.
+
+% ################################################################################################################################
+% ################################################################################################################################
 % ################################################################################################################################
 
 \subsection{Reconhecimento das Faces encontradas}
 
 Na etapa de reconhecimento, as faces detectadas e processadas, serão comparadas com um banco de dados de faces conhecidas. Essa comparação tem uma acurácia média de 30-90\% entre as diversas técnicas. Esse é um forte campo de pesquisa desde a década de 90 e as técnicas se invovam ano ápos ano.
 
-Existem duas variações principais entre as técnicas, as que usam como entrada dados imagens 2D (imagens de intensidade e cor) e as que usam como entradas dados imagens 3D (\texit{depth images}).
+Existem duas variações principais entre as técnicas, as que usam como entrada dados imagens 2D (imagens de intensidade e cor) e as que usam como entradas dados imagens 3D (\textit{depth images}).
 As principais técnicas 2D são:
 	\begin{enumerate}
 		\item \textbf{\textit{Eigenfaces}}
 		\item \textbf{Redes Neurais}
-		\item \textbf{Fisher Faces}
+		\item \textbf{\textit{Fisher Faces}}
 	\end{enumerate}
 
 % Com o surgimento da tecnologia 3D o reconhecimento facial se trasformou mais confiável pois a imagem 3D evita problemas comum em reconhecimentos faciais 2D como a mudança na iluminação, diferentes expressões faciais, maquiagem e orientação da cabeça.
@@ -182,9 +185,9 @@ As principais técnicas 2D são:
 % 		\item \textbf{``Active Appearance Models''}
 % 	\end{enumerate}
 
-De todos os metodos apresentados o \textit{Eigenfaces} se mostrou de melhor custo benefício, devido ao seu baixo custo computacional e a sua, relativamente alta, confiabilidade.
+De todos os métodos apresentados o \textit{Eigenfaces} se mostrou de melhor custo benefício, devido ao seu baixo custo computacional e a sua, relativamente alta, confiabilidade.
 
-Este é um algoritmo simples e fácil de implementar e os passos utilizados por ele também são utilizados em muitos métodos avançados. Os princípios básicos por trás dele, como PCA(\textit{Principal Component Analisys} - Analíse de componente principal) \textit{Distance-Based Matching} (Correspondência Baseada na Distância) aparecem mais e mais na computação visual e em diversas aplicações de inteligencia artificial \cite{hewitt}.
+Este é um algoritmo simples e fácil de implementar e os passos utilizados por ele também são utilizados em muitos métodos avançados. Os princípios básicos por trás dele, como PCA (\textit{Principal Component Analisys} - Analíse de componente principal) e \textit{Distance-Based Matching} (Correspondência Baseada na Distância) aparecem cada vez mais na computação visual e em diversas aplicações de inteligencia artificial \cite{hewitt}.
 O \textit{Eigenfaces} trabalha de forma simples, dada uma imagem de um rosto desconhecido e imagens do rosto das pessoas conhecidas executa as seguintes ações \cite{hewitt}:
 	\begin{enumerate}
 		\item Computa a distância entre a nova imagem e cada uma das imagens já conhecidas.
@@ -203,11 +206,11 @@ A distância entre as imagens é medida ponto a ponto. Esta é também chamado d
 	\end{figure}
 
 
-Imagens possuem ``ruídos'' e vamos definir ruído como qualquer coisa que atrapalhe na identificação, como por exemplo as diferenças na luminosidade. Cada pixel possui uma intensidade de ruído diferente e com cada pixel dando a sua contribuição ao ruído total se torna de extrema difículdade encontrar a imagem correta, referente a imagem testada. Uma solução é diminuir a dimensionalidade da imagem tornando assim o ruído menor e sendo possível extrair da imagem as informações importantes \cite{hewitt}.
+Imagens possuem ``ruídos'' e vamos definir ruído como qualquer coisa que atrapalhe na identificação, como por exemplo as diferenças na luminosidade. Cada pixel possui uma intensidade de ruído diferente. Com cada pixel contribuindo para o ruído total, este dificulta o processo de encontrar a imagem correta referente a imagem testada. Uma solução é diminuir a dimensionalidade da imagem tornando assim o ruído menor e sendo possível extrair da imagem as informações importantes \cite{hewitt}.
 
 Um dos métodos existentes para reduzir a dimesionalidade da imagem é o ``PCA - Principal Components Analysis'' \cite{hewitt}.
 
-Para se ter uma idéia do que é o PCA, vejamos um caso especial chamado de ``least squares line fit''. O lado esquerdo da Figura \ref{exemploPCA} mostra um exemplo de uma linha média entre três pontos, que são, no mapa em 2D, Los Angeles, Chicago e Nova York. Estes três pontos do mapa são quase, mas não completamente, uma única linha. A linha tem apenas uma dimensão. Por isso, se podemos substituir localizações dos pontos de 2D com localizações ao longo de uma única linha 1D, vamos ter reduzido a sua dimensionalidade \cite{hewitt}.
+Para se ter uma idéia do que é o PCA, vejamos um caso especial chamado de \textit{least squares line fit}. O lado esquerdo da Figura \ref{exemploPCA} mostra um exemplo de uma linha média entre três pontos, que são, no mapa em 2D, Los Angeles, Chicago e Nova York. Estes três pontos do mapa são quase, mas não completamente, uma única linha. A linha tem apenas uma dimensão. Por isso, se podemos substituir localizações dos pontos de 2D com localizações ao longo de uma única linha 1D, vamos ter reduzido a sua dimensionalidade \cite{hewitt}.
 
 Como os pontos, nos quais se baseia o nosso exemplo, estão praticamente alinhados, uma linha pode ser traçada através deles com pouco erro. O erro no ajuste da linha é medido pela soma do quadrado da distância de cada ponto da linha. A linha de melhor ajuste é aquela que possui o menor erro \cite{hewitt}.
 
@@ -219,11 +222,11 @@ Como os pontos, nos quais se baseia o nosso exemplo, estão praticamente alinhad
 		\label{exemploPCA}
 	\end{figure}
 
-Embora a linha encontrada acima é um objeto 1D, é localizado dentro de um espaço maior, 2D, e tem como orientação sua inclinação. A inclinação da linha expressa algo importante sobre os três pontos. Ele indica a direção em que eles estão mais espalhados \cite{hewitt}.
+Embora a linha encontrada acima seja um objeto 1D, esta é localizada dentro de um espaço maior, 2D, e tem como orientação sua inclinação. A inclinação da linha expressa algo importante sobre os três pontos. Ele indica a direção em que eles estão mais espalhados \cite{hewitt}.
 
-Se posicionarmos a origem do nosso plano cartesiano em algum lugar dessa linha, podemos escrever a equação da linha como uma simples $y = mx$, onde m é a inclinação da linha: $dy / dx$ \cite{hewitt}.
+Se posicionarmos a origem do nosso plano cartesiano em algum lugar dessa linha, podemos escrever a equação da linha como uma simples $y = mx$, onde $\displaystyle m$ é a inclinação da linha: $dy / dx$ \cite{hewitt}.
 
-Quando ele é descrito desta maneira, a linha é um subespaço do espaço 2D definido pelo sistema de coordenadas. Esta descrição enfatiza o aspecto dos dados que estamos interessados, ou seja, a direção que mantém esses pontos mais separados um do outro \cite{hewitt}.
+Quando ela é descrito desta maneira, a linha é um subespaço do espaço 2D definido pelo sistema de coordenadas. Esta descrição enfatiza o aspecto dos dados que estamos interessados, ou seja, a direção que mantém esses pontos mais separados um do outro \cite{hewitt}.
 
 Esta direção da separação máxima é chamada de primeira componente principal de um conjunto de dados. A próxima direção com máxima separação é a perpendicular a esta. Essa é a segunda componente principal. Em um conjunto de dados 2D, podemos ter no máximo duas componentes principais \cite{hewitt}.
 
@@ -231,9 +234,9 @@ No entanto, o número de componentes principais que podemos encontrar também é
 
 Em \textit{Eigenfaces}, cada imagem da face, de tamanho 50x50, é tratada como um ponto com 2500 dimenções. Portanto, o número de componentes principais que podemos encontrar nunca será maior que o número de imagens de faces menos um \cite{hewitt}.
 
-Embora seja importante ter um entendimento conceitual do que as componentes principais são, você não precisa saber os detalhes de como encontrá-las para implementar o \textit{Eigenface}. Essa parte já foi implementada em bibliotecas de processamento de imagens \textit{open source}, como por exemplo a bliblioteca ``OpenCV'' \cite{hewitt}.
+Embora seja importante ter um entendimento conceitual do que as componentes principais são, você não precisa saber os detalhes de como encontrá-las para implementar o \textit{Eigenface}. Essa parte já foi implementada em bibliotecas de processamento de imagens \textit{open source}, como por exemplo a bliblioteca \textit{OpenCV} \cite{hewitt}.
 
-O processo de encontrar um ponto correspondente num subespaço de menor dimensão se chama projeção. Há uma função no ``OpenCV'' para projetar os pontos sobre um subespaço, então, novamente, você só precisa de um entendimento conceitual. Você pode deixar os detalhes algorítmicos para a biblioteca \cite{hewitt}.
+O processo de encontrar um ponto correspondente num subespaço de menor dimensão se chama projeção. Há uma função no \textit{OpenCV} para projetar os pontos sobre um subespaço, então, novamente, você só precisa de um entendimento conceitual. Você pode deixar os detalhes algorítmicos para a biblioteca \cite{hewitt}.
 
 As marcas azuis na Figura \ref{exemploPCA} mostram as localizações no subespaço das três cidades que definiram a linha. Outros pontos 2D também pode ser projetado para esta linha. O lado direito da Figura \ref{exemploPCA} mostra a localização prevista para Phoenix, Albuquerque, Boston \cite{hewitt}.
 
@@ -241,11 +244,11 @@ Em \textit{Eigenface}, a distância entre duas imagens é a distância euclidian
 
 Muitas técnicas avançadas de reconhecimento de face são extensões deste conceito básico. A principal diferença entre \textit{Eigenface} e estas técnicas avançadas é o processo de definição do subespaço. Em vez de usar PCA, o subespaço pode ser baseada em Análise de Componentes Independentes (ICA) ou em Análise Discriminante Linear (LDA), e assim por diante \cite{hewitt}.
 
-Em nossa definição de uma linha como um subespaço 1D, usamos X e Y coordenadas para definir m, que é sua inclinação em 2D. Quando m é um componente principal de um conjunto de pontos, ela é chamada de autovetor ou ``eingenvector'', daí o nome \textit{Eigenface} \cite{hewitt}. 
+Em nossa definição de uma linha como um subespaço 1D, usamos $\displaystyle x$ e $\displaystyle y$ coordenadas para definir $\displaystyle m$, que é sua inclinação em 2D. Quando $\displaystyle m$ é um componente principal de um conjunto de pontos, ela é chamada de autovetor ou \textit{eingenvector}, daí o nome \textit{Eigenface} \cite{hewitt}. 
 
-Para o reconhecimento facial em imagens de 50x50, cada autovetor representa a inclinação de uma linha em um espaço de 2.500 dimenções. Como no caso 2D, precisamos de todas as 2.500 dimensões para definir a inclinação de cada linha. Embora seja impossível visualizar uma linha em muitas dimensões, podemos visualizar os autovetores de uma maneira diferente. Podemos converter as suas 2.500 dimenções em uma simples imagem usando a sua ``inclinação'' para colocar cada pixel valor em seu local correspondente. Quando fazemos isso, obtemos imagens ``facelike'' chamadas de \textit{Eigenface} \cite{hewitt}.
+Para o reconhecimento facial em imagens de 50x50, cada autovetor representa a inclinação de uma linha em um espaço de 2.500 dimenções. Como no caso 2D, precisamos de todas as 2.500 dimensões para definir a inclinação de cada linha. Embora seja impossível visualizar uma linha em muitas dimensões, podemos visualizar os autovetores de uma maneira diferente. Podemos converter as suas 2.500 dimenções em uma simples imagem usando a sua ``inclinação'' para colocar cada pixel valor em seu local correspondente. Quando fazemos isso, obtemos imagens \textit{facelike} chamadas de \textit{Eigenface} \cite{hewitt}.
 
-\textit{Eigenfaces} é um método interessante para dar-nos alguma intuição sobre os componentes principais para o nosso conjunto de dados. O lado esquerdo da Figura \ref{exemploEigenfaces} mostra as imagens das faces de dez pessoas. Estas imagens foram encontradas no ``Yale Face Database B (referências 4 e 5)''. Ele contém imagens de rostos com uma variedade de condições de iluminação. Foram usadas sete imagens de cada uma dessas dez pessoas para criar um subespaço PCA \cite{hewitt}. 
+\textit{Eigenfaces} é um método interessante para dar-nos alguma intuição sobre os componentes principais para o nosso conjunto de dados. O lado esquerdo da Figura \ref{exemploEigenfaces} mostra as imagens das faces de dez pessoas. Estas imagens foram encontradas no \textit{Yale Face Database B} (referências 4 e 5). Ele contém imagens de rostos com uma variedade de condições de iluminação. Foram usadas sete imagens de cada uma dessas dez pessoas para criar um subespaço PCA \cite{hewitt}. 
 
 O lado direito da Figura \ref{exemploEigenfaces} mostra os seis primeiros componentes principais deste conjunto de dados, apresentados como eigenfaces. O \textit{Eigenfaces} muitas vezes têm um olhar fantasmagórico, porque combinam elementos de várias faces. As regiões de pixels mais brilhantes e as regiões mais escuras em cada imagem são as que mais contribuem para as componentes principais \cite{hewitt}. 
 
