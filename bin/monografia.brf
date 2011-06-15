@@ -8,6 +8,7 @@
 \backcite {hewitt}{{vi}{(document)}{Doc-Start}}
 \backcite {hewitt}{{vi}{(document)}{Doc-Start}}
 \backcite {hewitt}{{vi}{(document)}{Doc-Start}}
+\backcite {hewitt}{{vi}{(document)}{Doc-Start}}
 \backcite {milene}{{vii}{(document)}{Doc-Start}}
 \backcite {milene}{{vii}{(document)}{Doc-Start}}
 \backcite {weiser2}{{1}{1}{chapter.1}}
@@ -130,5 +131,12 @@
 \backcite {hewitt}{{19}{3.2.2}{figure.3.9}}
 \backcite {hewitt}{{19}{3.2.2}{figure.3.10}}
 \backcite {hewitt}{{19}{3.2.2}{figure.3.10}}
+\backcite {hewitt}{{19}{3.2.2}{figure.3.11}}
+\backcite {hewitt}{{19}{3.2.2}{figure.3.11}}
+\backcite {hewitt}{{19}{3.2.2}{figure.3.11}}
 \backcite {hewitt}{{20}{3.10}{figure.3.10}}
+\backcite {hewitt}{{20}{3.2.2}{figure.3.11}}
+\backcite {hewitt}{{20}{3.2.2}{figure.3.11}}
+\backcite {hewitt}{{20}{3.2.2}{figure.3.11}}
 \backcite {hewitt}{{21}{3.11}{figure.3.11}}
+\backcite {hewitt}{{22}{3.12}{figure.3.12}}

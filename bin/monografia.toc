@@ -9,4 +9,4 @@
 \contentsline {section}{\numberline {3.2}Reconhecimento Facial}{7}{section.3.2}
 \contentsline {subsection}{\numberline {3.2.1}Detec\IeC {\c c}\IeC {\~a}o de Faces em imagens}{9}{subsection.3.2.1}
 \contentsline {subsection}{\numberline {3.2.2}Reconhecimento das Faces encontradas}{14}{subsection.3.2.2}
-\contentsline {chapter}{Refer\^encias}{22}{section*.8}
+\contentsline {chapter}{Refer\^encias}{23}{section*.8}
