@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.4.27)  14 JUN 2011 22:49
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.4.27)  15 JUN 2011 16:26
 entering extended mode
  %&-line parsing enabled.
 **monografia.tex
@@ -488,7 +488,7 @@ See the natbib package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.512 ...and\NAT@force@numbers{}\NAT@force@numbers
+l.224 ...and\NAT@force@numbers{}\NAT@force@numbers
                                                   
 ? r
 OK, entering \nonstopmode...
@@ -880,7 +880,7 @@ le (type png)
 
 <use figuras/2.FundamentacaoTeorica/graficoDistanciaEntrePontos.png> [15 <./fig
 uras/2.FundamentacaoTeorica/integral_image2.png>]
-<figuras/2.FundamentacaoTeorica/PCAexemploMapa.png, id=440, 445.665pt x 207.776
+<figuras/2.FundamentacaoTeorica/PCAexemploMapa.png, id=439, 445.665pt x 207.776
 25pt>
 File: figuras/2.FundamentacaoTeorica/PCAexemploMapa.png Graphic file (type png)
 
@@ -888,25 +888,25 @@ File: figuras/2.FundamentacaoTeorica/PCAexemploMapa.png Graphic file (type png)
 mentacaoTeorica/filterchain.png (PNG copy)>] [17 <./figuras/2.FundamentacaoTeor
 ica/graficoDistanciaEntrePontos.png (PNG copy)>] [18 <./figuras/2.Fundamentacao
 Teorica/PCAexemploMapa.png (PNG copy)>]
-<figuras/2.FundamentacaoTeorica/eigenfaces.png, id=476, 158.994pt x 186.9384pt>
+<figuras/2.FundamentacaoTeorica/eigenfaces.png, id=473, 158.994pt x 186.9384pt>
 File: figuras/2.FundamentacaoTeorica/eigenfaces.png Graphic file (type png)
-<use figuras/2.FundamentacaoTeorica/eigenfaces.png>
-<figuras/2.FundamentacaoTeorica/exemplosImagensIluminacaoo.png, id=483, 238.641
+<use figuras/2.FundamentacaoTeorica/eigenfaces.png> [19 <./figuras/2.Fundamenta
+caoTeorica/eigenfaces.png (PNG copy)>]
+<figuras/2.FundamentacaoTeorica/exemplosImagensIluminacaoo.png, id=484, 238.641
 56pt x 119.69719pt>
 File: figuras/2.FundamentacaoTeorica/exemplosImagensIluminacaoo.png Graphic fil
 e (type png)
 
-<use figuras/2.FundamentacaoTeorica/exemplosImagensIluminacaoo.png> [19]
+<use figuras/2.FundamentacaoTeorica/exemplosImagensIluminacaoo.png> [20 <./figu
+ras/2.FundamentacaoTeorica/exemplosImagensIluminacaoo.png (PNG copy)>]
 <figuras/2.FundamentacaoTeorica/espacoPCA.png, id=498, 18.60953pt x 39.4775pt>
 File: figuras/2.FundamentacaoTeorica/espacoPCA.png Graphic file (type png)
 
 <use figuras/2.FundamentacaoTeorica/espacoPCA.png>
 
-LaTeX Warning: Float too large for page by 29.81187pt on input line 294.
+LaTeX Warning: Float too large for page by 29.81187pt on input line 295.
 
-)) [20 <./figuras/2.FundamentacaoTeorica/eigenfaces.png (PNG copy)>] [21 <./fig
-uras/2.FundamentacaoTeorica/exemplosImagensIluminacaoo.png (PNG copy)>]
-[22 <./figuras/2.FundamentacaoTeorica/espacoPCA.png (PNG copy)>]
+)) [21] [22 <./figuras/2.FundamentacaoTeorica/espacoPCA.png (PNG copy)>]
 (./bin/monografia.bbl (./bin/monografia.brf)
 \tf@brf=\write7
 \openout7 = `monografia.brf'.
@@ -934,16 +934,19 @@ LaTeX Font Warning: Size substitutions with differences
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  )
 (\end occurred when \iffalse on line 462 was incomplete) 
 Here is how much of TeX's memory you used:
- 7110 strings out of 495041
- 99418 string characters out of 1181897
+ 7107 strings out of 495041
+ 99397 string characters out of 1181897
  193312 words of memory out of 3000000
  9992 multiletter control sequences out of 15000+50000
  15468 words of font info for 35 fonts, out of 3000000 for 9000
  30 hyphenation exceptions out of 8191
- 45i,8n,69p,1116b,459s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 45i,8n,69p,1116b,463s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/share/texmf/fonts
 /enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texmf-texlive/fonts/type1/publi
 c/amsfonts/cm/cmex10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/
@@ -959,9 +962,9 @@ pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texm
 f/fonts/type1/public/cm-super/sfrm1440.pfb></usr/share/texmf/fonts/type1/public
 /cm-super/sfrm2074.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1200.p
 fb>
-Output written on ./bin/monografia.pdf (34 pages, 1339801 bytes).
+Output written on ./bin/monografia.pdf (34 pages, 1331009 bytes).
 PDF statistics:
- 656 PDF objects out of 1000 (max. 8388607)
- 123 named destinations out of 1000 (max. 500000)
+ 596 PDF objects out of 1000 (max. 8388607)
+ 120 named destinations out of 1000 (max. 500000)
  170 words of extra memory for PDF output out of 10000 (max. 10000000)
 
