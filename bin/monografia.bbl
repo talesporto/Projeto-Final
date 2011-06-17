@@ -69,6 +69,11 @@ J.~H.~Saito M.~Arantes, A. N.~Ide.
 \newblock In {\em Proceedings of the 9th International Conference on Neural
   Information Processing(ICONIP'O2)}, volume~5, pages 2474 -- 2478.
 
+\bibitem{turk}
+A.~Pentland M.~Turk.
+\newblock Eigenfaces for recognition.
+\newblock {\em Journal of Cognitive Neuroscience}, 3(1):71--86, 1991.
+
 \bibitem{yang}
 N.~Ahuja M.~Yang, D. J.~Kriegman.
 \newblock Detecting faces in images: A survey.
@@ -80,6 +85,12 @@ D.~R. Oliveira.
 \newblock Reconhecimento de faces usando redes neurais e biometria.
 \newblock Master's thesis, S{\~a}o Jos{\'e} dos Campos: Instituto Nacional de
   Pesquisas Espaciais (INPE), setembro 2003.
+
+\bibitem{belhumeur}
+D.~J.~Kriegman P.~N.~Belhumeur, J. P.~Hespanha.
+\newblock Eigenfaces vs. fisherfaces: Recognition using class specific linear
+  projection.
+\newblock {\em European Conference on Computer Vision}, 1996.
 
 \bibitem{violajones}
 M.~Jones P.~Viola.
