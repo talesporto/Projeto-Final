@@ -185,9 +185,11 @@ Existem duas variações principais entre as técnicas, as que usam como entrada
 
 As principais técnicas 2D são:
 	\begin{enumerate}
-		\item \textbf{\textit{Eigenfaces}}
-		\item \textbf{Redes Neurais}
-		\item \textbf{\textit{Fisher Faces}}
+		\item \textbf{\textit{Eigenfaces}:} extrai as informações relevantes de uma face, codifica-a da maneira mais eficiente possível, e a compara com um banco de faces codificadas de maneira similar. Extrai as informações relevantes contidas em uma imagem de uma face de uma maneira simples captando a variação em uma coleção de imagens de face e usando essa informação para codificar e comparar imagens individuais de faces~\cite{turk}. É baseado em projeção linear das imagens em uma espaço de imagens de menor dimensão. Para redução dimensional utiliza PCA (\textit{Principal Component Analisys}) maximizando a dispersão total entre todas as imagens~\cite{belhumeur};
+
+		\item \textbf{Redes Neurais:} uma rede neural artificial é um modelo computacional capaz de, entre outras funções, armazenar, classificar padrões, realizar interpolação de funções não-lineares e apresentar soluções heurísticas para problemas de otimização. Isso é conseguido através de um processo denominado \textit{aprendizado}. O uso de redes visa tornar o sistema de reconhecimento capaz de absorver pequenas variações ocorridas no momento da coleta de medidas faciais. Espera-se, portanto,  mais robustez a falhas e que responda de forma mais confiável~\cite{oliveira};
+
+		\item \textbf{\textit{Fisher Faces}:} método derivado de FLD (\textit{Fisher's Linear Discrimant})
 	\end{enumerate}
 
 % Com o surgimento da tecnologia 3D o reconhecimento facial se trasformou mais confiável pois a imagem 3D evita problemas comum em reconhecimentos faciais 2D como a mudança na iluminação, diferentes expressões faciais, maquiagem e orientação da cabeça.
@@ -201,8 +203,6 @@ As principais técnicas 2D são:
 \subsubsection{Reconhecimento Facial com \textit{Eigenfaces}}
 
 De todos os métodos apresentados o \textit{Eigenfaces} se mostrou de melhor custo benefício, devido ao seu baixo custo computacional e a sua, relativamente alta, confiabilidade.
-
-Na teoria, esse método extrai as informações relevantes de uma face, codifica-a da maneira mais eficiente possível, e a compara com um banco de faces codificadas de maneira similar. Uma maneira simples de extrair as informações relevantes contidas em uma imagem de uma face é, de alguma maneira, captar a variação em uma coleção de imagens de face e usar essa informação para codificar e comparar imagens individuais de faces~\cite{turk}. 
 
 Este é um algoritmo simples e fácil de implementar e os passos utilizados por ele também são utilizados em muitos métodos avançados. Os princípios básicos por trás dele, como PCA (\textit{Principal Component Analisys} - Analíse de componente principal) e \textit{Distance-Based Matching} (Correspondência Baseada na Distância) aparecem cada vez mais na computação visual e em diversas aplicações de inteligencia artificial~\cite{hewitt}.
 

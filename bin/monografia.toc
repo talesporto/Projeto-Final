@@ -10,9 +10,9 @@
 \contentsline {subsection}{\numberline {3.2.1}Detec\IeC {\c c}\IeC {\~a}o de Faces em imagens}{9}{subsection.3.2.1}
 \contentsline {subsubsection}{M\IeC {\'e}todo Viola-Jones}{12}{section*.8}
 \contentsline {subsection}{\numberline {3.2.2}Reconhecimento das Faces encontradas}{15}{subsection.3.2.2}
-\contentsline {subsubsection}{Reconhecimento Facial com \textit {Eigenfaces}}{16}{section*.9}
+\contentsline {subsubsection}{Reconhecimento Facial com \textit {Eigenfaces}}{17}{section*.9}
 \contentsline {subsubsection}{Redu\IeC {\c c}\IeC {\~a}o de dimensionalidade utilizando PCA}{18}{section*.10}
 \contentsline {subsubsection}{Retratando as componentes principais}{19}{section*.11}
 \contentsline {subsubsection}{As limita\IeC {\c c}\IeC {\~o}es do \textit {Eigenfaces}}{20}{section*.12}
-\contentsline {subsubsection}{``Passo a passo'' da abordagem de Reconhecimento Facial com \textit {Eigenfaces}}{22}{section*.13}
+\contentsline {subsubsection}{``Passo a passo'' da abordagem de Reconhecimento Facial com \textit {Eigenfaces}}{21}{section*.13}
 \contentsline {chapter}{Refer\^encias}{24}{section*.14}

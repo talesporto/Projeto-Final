@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2011.4.25)  17 JUN 2011 00:09
+This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2011.4.25)  18 JUN 2011 19:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -499,7 +499,7 @@ See the natbib package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.533 ...and\NAT@force@numbers{}\NAT@force@numbers
+l.536 ...and\NAT@force@numbers{}\NAT@force@numbers
                                                   
 ? r
 OK, entering \nonstopmode...
@@ -932,7 +932,7 @@ Package pdftex.def Info: figuras/2.FundamentacaoTeorica/filterchain.png used on
  [14 <./figuras/2.FundamentacaoTeorica/integral_image.png>] [15 <./figuras/2.Fu
 ndamentacaoTeorica/integral_image2.png>] [16 <./figuras/2.FundamentacaoTeorica/
 filterchain.png (PNG copy)>]
-<figuras/2.FundamentacaoTeorica/graficoDistanciaEntrePontos.png, id=450, 153.21
+<figuras/2.FundamentacaoTeorica/graficoDistanciaEntrePontos.png, id=451, 153.21
 24pt x 120.9318pt>
 File: figuras/2.FundamentacaoTeorica/graficoDistanciaEntrePontos.png Graphic fi
 le (type png)
@@ -943,7 +943,7 @@ ntos.png used on input line 221.
 (pdftex.def)             Requested size: 355.7148pt x 270.35576pt.
  [17 <./figuras/2.FundamentacaoTeorica/graficoDistanciaEntrePontos.png (PNG cop
 y)>]
-<figuras/2.FundamentacaoTeorica/PCAexemploMapa.png, id=467, 445.665pt x 207.776
+<figuras/2.FundamentacaoTeorica/PCAexemploMapa.png, id=469, 445.665pt x 207.776
 25pt>
 File: figuras/2.FundamentacaoTeorica/PCAexemploMapa.png Graphic file (type png)
 
@@ -952,14 +952,14 @@ Package pdftex.def Info: figuras/2.FundamentacaoTeorica/PCAexemploMapa.png used
  on input line 240.
 (pdftex.def)             Requested size: 355.66205pt x 270.33417pt.
  [18 <./figuras/2.FundamentacaoTeorica/PCAexemploMapa.png (PNG copy)>] [19]
-<figuras/2.FundamentacaoTeorica/eigenfaces.png, id=495, 158.994pt x 186.9384pt>
+<figuras/2.FundamentacaoTeorica/eigenfaces.png, id=497, 158.994pt x 186.9384pt>
 File: figuras/2.FundamentacaoTeorica/eigenfaces.png Graphic file (type png)
 <use figuras/2.FundamentacaoTeorica/eigenfaces.png>
 Package pdftex.def Info: figuras/2.FundamentacaoTeorica/eigenfaces.png used on 
 input line 284.
 (pdftex.def)             Requested size: 341.43306pt x 401.50467pt.
- [20 <./figuras/2.FundamentacaoTeorica/eigenfaces.png (PNG copy)>]
-<figuras/2.FundamentacaoTeorica/exemplosImagensIluminacaoo.png, id=507, 238.641
+
+<figuras/2.FundamentacaoTeorica/exemplosImagensIluminacaoo.png, id=504, 238.641
 56pt x 119.69719pt>
 File: figuras/2.FundamentacaoTeorica/exemplosImagensIluminacaoo.png Graphic fil
 e (type png)
@@ -968,9 +968,8 @@ e (type png)
 Package pdftex.def Info: figuras/2.FundamentacaoTeorica/exemplosImagensIluminac
 aoo.png used on input line 298.
 (pdftex.def)             Requested size: 398.33858pt x 199.80956pt.
- [21 <./figuras/2.FundamentacaoTeorica/exemplosImagensIluminacaoo.png (PNG copy
-)>]
-<figuras/2.FundamentacaoTeorica/espacoPCA.png, id=522, 18.60953pt x 39.4775pt>
+
+<figuras/2.FundamentacaoTeorica/espacoPCA.png, id=513, 18.60953pt x 39.4775pt>
 File: figuras/2.FundamentacaoTeorica/espacoPCA.png Graphic file (type png)
 
 <use figuras/2.FundamentacaoTeorica/espacoPCA.png>
@@ -981,6 +980,7 @@ nput line 320.
 
 LaTeX Warning: Float too large for page by 29.81187pt on input line 324.
 
+[20]
 ! Undefined control sequence.
 l.328 ...para o reconhecimento facial com \texitit
                                                   {Eigenfaces} requer as seg...
@@ -999,8 +999,10 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-)) [22] [23 <./figuras/2.FundamentacaoTeorica/espacoPCA.png (PNG copy)>]
-(./bin/monografia.bbl (./bin/monografia.brf)
+[21 <./figuras/2.FundamentacaoTeorica/eigenfaces.png (PNG copy)>])) [22 <./figu
+ras/2.FundamentacaoTeorica/exemplosImagensIluminacaoo.png (PNG copy)>] [23 <./f
+iguras/2.FundamentacaoTeorica/espacoPCA.png (PNG copy)>] (./bin/monografia.bbl
+(./bin/monografia.brf)
 \tf@brf=\write7
 \openout7 = `monografia.brf'.
 
@@ -1067,10 +1069,10 @@ e1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1
 ublic/cm-super/sfrm1440.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/pub
 lic/cm-super/sfrm2074.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/publi
 c/cm-super/sfti1200.pfb>
-Output written on ./bin/monografia.pdf (35 pages, 1734224 bytes).
+Output written on ./bin/monografia.pdf (35 pages, 1736165 bytes).
 PDF statistics:
- 692 PDF objects out of 1000 (max. 8388607)
- 603 compressed objects within 7 object streams
+ 696 PDF objects out of 1000 (max. 8388607)
+ 607 compressed objects within 7 object streams
  136 named destinations out of 1000 (max. 500000)
  175 words of extra memory for PDF output out of 10000 (max. 10000000)
 
