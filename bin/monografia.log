@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2011.4.25)  18 JUN 2011 19:19
+This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2011.4.25)  19 JUN 2011 23:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -499,7 +499,7 @@ See the natbib package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.536 ...and\NAT@force@numbers{}\NAT@force@numbers
+l.604 ...and\NAT@force@numbers{}\NAT@force@numbers
                                                   
 ? r
 OK, entering \nonstopmode...
@@ -629,7 +629,7 @@ LaTeX Font Warning: Font shape `T1/cmr/m/n' in size <20> not available
 LaTeX Font Warning: Font shape `T1/ua1/bx/n' in size <20> not available
 (Font)              size <20.74> substituted on input line 36.
 
-<positivo_cor.pdf, id=56, 119.44624pt x 60.225pt>
+<positivo_cor.pdf, id=72, 119.44624pt x 60.225pt>
 File: positivo_cor.pdf Graphic file (type pdf)
  <use positivo_cor.pdf>
 Package pdftex.def Info: positivo_cor.pdf used on input line 36.
@@ -722,7 +722,7 @@ Cap\'{\i }tulo 2.
 ]
 Cap\'{\i }tulo 3.
 (./chapters/2.FundamentacaoTeorica/biometria.tex
-<figuras/2.FundamentacaoTeorica/caracteristicasBiometricas.png, id=238, 681.546
+<figuras/2.FundamentacaoTeorica/caracteristicasBiometricas.png, id=263, 681.546
 25pt x 466.74374pt>
 File: figuras/2.FundamentacaoTeorica/caracteristicasBiometricas.png Graphic fil
 e (type png)
@@ -752,7 +752,7 @@ Overfull \hbox (25.49876pt too wide) in paragraph at lines 53--66
  []
 
 [6]) (./chapters/2.FundamentacaoTeorica/reconhecimento_facial.tex [7]
-<figuras/2.FundamentacaoTeorica/diferencailuminacao.png, id=300, 912.40875pt x 
+<figuras/2.FundamentacaoTeorica/diferencailuminacao.png, id=325, 912.40875pt x 
 643.40375pt>
 File: figuras/2.FundamentacaoTeorica/diferencailuminacao.png Graphic file (type
  png)
@@ -762,7 +762,7 @@ Package pdftex.def Info: figuras/2.FundamentacaoTeorica/diferencailuminacao.png
 (pdftex.def)             Requested size: 355.657pt x 270.30627pt.
 
 [8] [9 <./figuras/2.FundamentacaoTeorica/diferencailuminacao.png (PNG copy)>]
-<figuras/2.FundamentacaoTeorica/enquadramentoRosto.png, id=327, 558.085pt x 420
+<figuras/2.FundamentacaoTeorica/enquadramentoRosto.png, id=352, 558.085pt x 420
 .57124pt>
 File: figuras/2.FundamentacaoTeorica/enquadramentoRosto.png Graphic file (type 
 png)
@@ -786,7 +786,7 @@ You've closed more groups than you opened.
 Such booboos are generally harmless, so keep going.
 
 
-<figuras/2.FundamentacaoTeorica/haar_features.png, id=369, 750.18295pt x 305.36
+<figuras/2.FundamentacaoTeorica/haar_features.png, id=394, 750.18295pt x 305.36
 62pt>
 File: figuras/2.FundamentacaoTeorica/haar_features.png Graphic file (type png)
  <use figuras/2.FundamentacaoTeorica/haar_features.png>
@@ -828,7 +828,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-<figuras/2.FundamentacaoTeorica/haarfeaturestypes.png, id=375, 347.2975pt x 303
+<figuras/2.FundamentacaoTeorica/haarfeaturestypes.png, id=400, 347.2975pt x 303
 .1325pt>
 File: figuras/2.FundamentacaoTeorica/haarfeaturestypes.png Graphic file (type p
 ng)
@@ -860,7 +860,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 [12 <./figuras/2.FundamentacaoTeorica/haar_features.png>]
-<figuras/2.FundamentacaoTeorica/integral_image.png, id=394, 384.41489pt x 307.5
+<figuras/2.FundamentacaoTeorica/integral_image.png, id=420, 384.41489pt x 307.5
 3192pt>
 File: figuras/2.FundamentacaoTeorica/integral_image.png Graphic file (type png)
 
@@ -903,7 +903,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-<figuras/2.FundamentacaoTeorica/integral_image2.png, id=399, 372.11362pt x 299.
+<figuras/2.FundamentacaoTeorica/integral_image2.png, id=425, 372.11362pt x 299.
 84361pt>
 File: figuras/2.FundamentacaoTeorica/integral_image2.png Graphic file (type png
 )
@@ -922,7 +922,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-<figuras/2.FundamentacaoTeorica/filterchain.png, id=414, 31.25677pt x 37.94176p
+<figuras/2.FundamentacaoTeorica/filterchain.png, id=439, 31.25677pt x 37.94176p
 t>
 File: figuras/2.FundamentacaoTeorica/filterchain.png Graphic file (type png)
  <use figuras/2.FundamentacaoTeorica/filterchain.png>
@@ -932,7 +932,7 @@ Package pdftex.def Info: figuras/2.FundamentacaoTeorica/filterchain.png used on
  [14 <./figuras/2.FundamentacaoTeorica/integral_image.png>] [15 <./figuras/2.Fu
 ndamentacaoTeorica/integral_image2.png>] [16 <./figuras/2.FundamentacaoTeorica/
 filterchain.png (PNG copy)>]
-<figuras/2.FundamentacaoTeorica/graficoDistanciaEntrePontos.png, id=451, 153.21
+<figuras/2.FundamentacaoTeorica/graficoDistanciaEntrePontos.png, id=476, 153.21
 24pt x 120.9318pt>
 File: figuras/2.FundamentacaoTeorica/graficoDistanciaEntrePontos.png Graphic fi
 le (type png)
@@ -943,7 +943,7 @@ ntos.png used on input line 221.
 (pdftex.def)             Requested size: 355.7148pt x 270.35576pt.
  [17 <./figuras/2.FundamentacaoTeorica/graficoDistanciaEntrePontos.png (PNG cop
 y)>]
-<figuras/2.FundamentacaoTeorica/PCAexemploMapa.png, id=469, 445.665pt x 207.776
+<figuras/2.FundamentacaoTeorica/PCAexemploMapa.png, id=494, 445.665pt x 207.776
 25pt>
 File: figuras/2.FundamentacaoTeorica/PCAexemploMapa.png Graphic file (type png)
 
@@ -952,14 +952,14 @@ Package pdftex.def Info: figuras/2.FundamentacaoTeorica/PCAexemploMapa.png used
  on input line 240.
 (pdftex.def)             Requested size: 355.66205pt x 270.33417pt.
  [18 <./figuras/2.FundamentacaoTeorica/PCAexemploMapa.png (PNG copy)>] [19]
-<figuras/2.FundamentacaoTeorica/eigenfaces.png, id=497, 158.994pt x 186.9384pt>
+<figuras/2.FundamentacaoTeorica/eigenfaces.png, id=522, 158.994pt x 186.9384pt>
 File: figuras/2.FundamentacaoTeorica/eigenfaces.png Graphic file (type png)
 <use figuras/2.FundamentacaoTeorica/eigenfaces.png>
 Package pdftex.def Info: figuras/2.FundamentacaoTeorica/eigenfaces.png used on 
 input line 284.
 (pdftex.def)             Requested size: 341.43306pt x 401.50467pt.
 
-<figuras/2.FundamentacaoTeorica/exemplosImagensIluminacaoo.png, id=504, 238.641
+<figuras/2.FundamentacaoTeorica/exemplosImagensIluminacaoo.png, id=529, 238.641
 56pt x 119.69719pt>
 File: figuras/2.FundamentacaoTeorica/exemplosImagensIluminacaoo.png Graphic fil
 e (type png)
@@ -969,7 +969,7 @@ Package pdftex.def Info: figuras/2.FundamentacaoTeorica/exemplosImagensIluminac
 aoo.png used on input line 298.
 (pdftex.def)             Requested size: 398.33858pt x 199.80956pt.
 
-<figuras/2.FundamentacaoTeorica/espacoPCA.png, id=513, 18.60953pt x 39.4775pt>
+<figuras/2.FundamentacaoTeorica/espacoPCA.png, id=538, 18.60953pt x 39.4775pt>
 File: figuras/2.FundamentacaoTeorica/espacoPCA.png Graphic file (type png)
 
 <use figuras/2.FundamentacaoTeorica/espacoPCA.png>
@@ -999,10 +999,34 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[21 <./figuras/2.FundamentacaoTeorica/eigenfaces.png (PNG copy)>])) [22 <./figu
-ras/2.FundamentacaoTeorica/exemplosImagensIluminacaoo.png (PNG copy)>] [23 <./f
-iguras/2.FundamentacaoTeorica/espacoPCA.png (PNG copy)>] (./bin/monografia.bbl
-(./bin/monografia.brf)
+[21 <./figuras/2.FundamentacaoTeorica/eigenfaces.png (PNG copy)>]))
+(./chapters/3.TrabalhosCorrelatos/trabalhoscorrelatos.tex [22 <./figuras/2.Fund
+amentacaoTeorica/exemplosImagensIluminacaoo.png (PNG copy)>] [23 <./figuras/2.F
+undamentacaoTeorica/espacoPCA.png (PNG copy)>]
+Cap\'{\i }tulo 4.
+[24
+
+] [25]
+! Undefined control sequence.
+<recently read> \displaysyle 
+                             
+l.63 ... \textit{SmartSpace}. A cada $\displaysyle
+                                                   200ms$ imagens das ``caix...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+<figuras/3.TrabalhosCorrelatos/chil.png, id=594, 605.26125pt x 456.70625pt>
+File: figuras/3.TrabalhosCorrelatos/chil.png Graphic file (type png)
+
+<use figuras/3.TrabalhosCorrelatos/chil.png>
+Package pdftex.def Info: figuras/3.TrabalhosCorrelatos/chil.png used on input l
+ine 67.
+(pdftex.def)             Requested size: 242.1002pt x 182.67926pt.
+) [26 <./figuras/3.TrabalhosCorrelatos/chil.png (PNG copy)>] (./bin/monografia.
+bbl (./bin/monografia.brf)
 \tf@brf=\write7
 \openout7 = `monografia.brf'.
 
@@ -1018,16 +1042,16 @@ Underfull \hbox (badness 1867) in paragraph at lines 40--40
 si-dade de Bra-sí-lia,
  []
 
-[24
+[27
 
 
 ])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 74.
- [25]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 74.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 75.
+ [28]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 75.
  (./bin/monografia.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 74.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 74.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 75.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 75.
 Package rerunfilecheck Info: File `monografia.out' has not changed.
 (rerunfilecheck)             Checksum: <no file>.
 Package rerunfilecheck Info: File `monografia.brf' has not changed.
@@ -1040,14 +1064,14 @@ LaTeX Font Warning: Size substitutions with differences
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 74.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 75.
  )
 (\end occurred when \iffalse on line 462 was incomplete) 
 Here is how much of TeX's memory you used:
- 7976 strings out of 493763
- 114375 string characters out of 3144954
- 223022 words of memory out of 3000000
- 10984 multiletter control sequences out of 15000+200000
+ 8009 strings out of 493763
+ 114987 string characters out of 3144954
+ 223211 words of memory out of 3000000
+ 11000 multiletter control sequences out of 15000+200000
  15468 words of font info for 35 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
  43i,8n,69p,1116b,488s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1069,10 +1093,10 @@ e1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1
 ublic/cm-super/sfrm1440.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/pub
 lic/cm-super/sfrm2074.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/publi
 c/cm-super/sfti1200.pfb>
-Output written on ./bin/monografia.pdf (35 pages, 1736165 bytes).
+Output written on ./bin/monografia.pdf (38 pages, 2058201 bytes).
 PDF statistics:
- 696 PDF objects out of 1000 (max. 8388607)
- 607 compressed objects within 7 object streams
- 136 named destinations out of 1000 (max. 500000)
- 175 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 766 PDF objects out of 1000 (max. 8388607)
+ 672 compressed objects within 7 object streams
+ 147 named destinations out of 1000 (max. 500000)
+ 212 words of extra memory for PDF output out of 10000 (max. 10000000)
 
