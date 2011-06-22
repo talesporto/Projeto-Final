@@ -268,15 +268,15 @@ Na verdade, elas são imagens de faces de duas das dez pessoas mostradas na Figu
 		\begin{center}
 			\includegraphics[width=14cm]{figuras/2.FundamentacaoTeorica/exemplosImagensIluminacaoo.png}
 		\end{center}
-		\caption{Imagens das faces de dois indivíduos. A face de cada indivíduo é apresentada em quatro diferentes cosndições de iluminação. A variabilidade devido à iluminação aqui é maior do que a variabilidade entre os indivíduos. Eigenfaces tende a confundir as pessoas quando os efeitos de iluminação são muito fortes \cite{hewitt}.}
+		\caption{Imagens das faces de dois indivíduos. A face de cada indivíduo é apresentada em quatro diferentes cosndições de iluminação. A variabilidade devido à iluminação aqui é maior do que a variabilidade entre os indivíduos. \textit{Eigenfaces} tende a confundir as pessoas quando os efeitos de iluminação são muito fortes \cite{hewitt}.}
 		\label{exemplosImagensIluminacaoo}
 	\end{figure}
 
 Outros fatores que podem aumentar a variabilidade da imagem em direções que tendem a diluir a identidade no espaço PCA incluem mudanças na expressão, ângulo da câmera e posição da cabeça \cite{hewitt}.
 
-A Figura \ref{exemploEspacoPCA} mostra como a distribuição de dados afeta o desempenho do Eigenfaces.
+A Figura \ref{exemploEspacoPCA} mostra como a distribuição de dados afeta o desempenho do \textit{Eigenfaces}.
 
-Quando os pontos referentes as imagens de cada indivíduo ficam aglutinadas e satisfatoriamente separadas das imagens do conjunto de imagens de outros individuos temos o melhor caso para o funcionamento do Eigenfaces.
+Quando os pontos referentes as imagens de cada indivíduo ficam aglutinadas e satisfatoriamente separadas das imagens do conjunto de imagens de outros individuos temos o melhor caso para o funcionamento do \textit{Eigenfaces}.
 
 Caso os pontos referentes as imagens dos indivíduos tenham uma variabilidade muito grande, a probabilidade de choque de imagens de dois indivíduos num mesmo ponto do subespaço PCA se torna muito grande tornando extremamente difícil separar os dois indivíduos \cite{hewitt}.
 
@@ -290,7 +290,7 @@ Mesmo com sistemas altamente ajustados, sistemas de reconhecimento facial estão
 		\begin{center}
 			\includegraphics[width=10cm]{figuras/2.FundamentacaoTeorica/espacoPCA.png}
 		\end{center}
-		\caption{Como as distribuições de dados afetam o reconhecimento com Eigenfaces. Topo: O melhor cenário possível - pontos de dados para cada pessoa bem separados. Meio: O pior cenário - a variabilidade entre as imagens das faces de cada individuo é maior do que a variabilidade entre os indivíduos. Embaixo: um cenário realista - separação razoável, com alguma sobreposição \cite{hewitt}.}
+		\caption{Como as distribuições de dados afetam o reconhecimento com \textit{Eigenfaces}. Topo: O melhor cenário possível - pontos de dados para cada pessoa bem separados. Meio: O pior cenário - a variabilidade entre as imagens das faces de cada individuo é maior do que a variabilidade entre os indivíduos. Embaixo: um cenário realista - separação razoável, com alguma sobreposição \cite{hewitt}.}
 		\label{exemploEspacoPCA}
 	\end{figure}
 
