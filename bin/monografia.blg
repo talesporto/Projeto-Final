@@ -9,45 +9,45 @@ Warning--to sort, need author or key in servodetection
 Warning--empty author in servodetection
 Warning--empty year in lopes
 Warning--empty year in milene
-You've used 20 entries,
+You've used 21 entries,
             2118 wiz_defined-function locations,
-            615 strings with 7086 characters,
-and the built_in function-call counts, 4994 in all, are:
-= -- 505
-> -- 156
+            620 strings with 7322 characters,
+and the built_in function-call counts, 5487 in all, are:
+= -- 547
+> -- 199
 < -- 3
-+ -- 69
-- -- 46
-* -- 285
-:= -- 881
-add.period$ -- 59
-call.type$ -- 20
-change.case$ -- 84
++ -- 86
+- -- 62
+* -- 335
+:= -- 969
+add.period$ -- 62
+call.type$ -- 21
+change.case$ -- 95
 chr.to.int$ -- 0
-cite$ -- 24
-duplicate$ -- 220
-empty$ -- 420
-format.name$ -- 46
-if$ -- 1038
+cite$ -- 25
+duplicate$ -- 231
+empty$ -- 445
+format.name$ -- 62
+if$ -- 1132
 int.to.chr$ -- 0
-int.to.str$ -- 20
-missing$ -- 14
-newline$ -- 102
-num.names$ -- 38
-pop$ -- 71
+int.to.str$ -- 21
+missing$ -- 15
+newline$ -- 107
+num.names$ -- 40
+pop$ -- 80
 preamble$ -- 1
-purify$ -- 63
+purify$ -- 73
 quote$ -- 0
-skip$ -- 159
+skip$ -- 166
 stack$ -- 0
-substring$ -- 260
-swap$ -- 35
+substring$ -- 280
+swap$ -- 36
 text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 80
+type$ -- 84
 warning$ -- 4
-while$ -- 50
-width$ -- 22
-write$ -- 216
+while$ -- 53
+width$ -- 23
+write$ -- 227
 (There was 1 error message)

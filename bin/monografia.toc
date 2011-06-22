@@ -19,4 +19,7 @@
 \contentsline {section}{\numberline {4.1}Projeto CHIL}{24}{section.4.1}
 \contentsline {subsection}{\numberline {4.1.1}Rastreamento e Lozaliza\IeC {\c c}\IeC {\~a}o de Pessoas}{24}{subsection.4.1.1}
 \contentsline {subsection}{\numberline {4.1.2}Identifica\IeC {\c c}\IeC {\~a}o das Pessoas}{26}{subsection.4.1.2}
-\contentsline {chapter}{Refer\^encias}{27}{section*.14}
+\contentsline {section}{\numberline {4.2}Identifica\IeC {\c c}\IeC {\~a}o multimodal e localiza\IeC {\c c}\IeC {\~a}o de usu\IeC {\'a}rios em um ambiente inteligente}{27}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Detec\IeC {\c c}\IeC {\~a}o de movimento, Localiza\IeC {\c c}\IeC {\~a}o e Rastreamento}{28}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Detec\IeC {\c c}\IeC {\~a}o e Reconhecimento Facial}{28}{subsection.4.2.2}
+\contentsline {chapter}{Refer\^encias}{30}{section*.14}

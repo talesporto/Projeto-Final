@@ -78,7 +78,63 @@ As decisões obtidas do vários pontos de vista das várias camêras são combin
 
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\section{Identificação multimodal e localização de usuários em um ambiente inteligente}
+
+Esse trabalho propõe um sistema que realiza detecção de movimento, rastreamento de pessoas, reconhecimento facial, identificação baseado em características, localização baseada em áudio, módulos de identificação baseado em áudio, e fusão de todas essas informações utilizando filtro de partículas para obter um sistema robusto de identificação e localização. O sistema foi projetado para operar de uma maneira completamente automática, sem intervenção do usuário~\cite{salah}.
+
+Os \textit{streams} de dados são processados com ajuda de um \textit{middleware} servidor-cliente genérico chamado \textit{SmartFlow}, o que resulta em uma arquitetura portável para diferentes plataformas. Este \textit{middleware} permite transporte de grande quantidade de dados de sensores para algoritmos de reconhecimento em nós distribuídos na rede ~\cite{salah}.
+
+	\begin{figure}[hbt]
+		\begin{center}
+			\includegraphics[scale=0.4]{figuras/3.TrabalhosCorrelatos/upc.png}
+		\end{center}
+		\caption{A configuração do \textit{SmartSpace}~\cite{salah}.}
+		\label{upc}
+	\end{figure}
+
+Os sensores utilizados e as condições do \textit{SmartSpace} deste projeto são descritos pela Figura \ref{upc}. Os seguintes sensores foram utilizados~\cite{salah}:
+
+	\begin{itemize}
+		\item quatro camêras nos cantos da sala (rotuladas como Cam1 a Cam4 na Figura \ref{upc});
+		\item uma camêra \textit{zenithal fish-eye} no telhado (rotulada como Cam8 na Figura \ref{upc});
+		\item uma camêra ativa apontadae com zoom para a porta de entrada para capturar as faces das pessoas que entram na sala (rotulada como PTZ na Figura \ref{upc});
+		\item um \textit{array} de microfones NIST Mark III de 64 canais ;
+		\item três \textit{clusters} de microfone de 4 canais no formato de T;
+		\item oito microfones no teto;
+	\end{itemize}
+
+O projeto conectar diferentes métodos de rastreamento e reconhecimento prover serviços de recohecimento e rastreamento multimodal no \textit{SmartSpace}. A Figura \ref{workflow} o fluxo de informação no sistema multimodal. O objetivo do sistema é identificar cada usuário ao entrar pela porta e rastrea-lo no ambiente. Para ter um sistema robusto que rastreia e identifica todas as pessoas ao mesmo tempo, utilizaram uma abordagem multimodal~\cite{salah}.
+
+\begin{figure}[hbt]
+		\begin{center}
+			\includegraphics[scale=0.5]{figuras/3.TrabalhosCorrelatos/workflow.png}
+		\end{center}
+		\caption{\textit{Workflow} da informação na arquitetura do \textit{SmartSpace}~\cite{salah}.}
+		\label{workflow}
+	\end{figure}
+
+As camêras no sistema são responsáveis pela detecção de movimento, rastreamento, detecção e reconhecimento facial que são as funcionalidades que nos interessam.
+
+\subsection{Detecção de movimento, Localização e Rastreamento}
+
+A detecção de movimento tenta separar o ``primeiro plano'' do ``fundo''para o seu funcionamento. O método utilizado é baseado na detecção objetos em movimento sob a suposição que imagens em uma cena sem objetos em movimento mostra regularidades, que pode ser modelada utilizando métodos estáticos. O conjunto de treinamento é contruídos por sequências pequenas de gravações \textit{offline} feitas da sala vazia~\cite{salah}.
+
+Para localização e rastreamento foi utilizado a abordagem de um mapa de ocupação probabilística (\textit{probabilistic occupancy map} - POM) simplificado para ambientes internos, onde as trajetórias de movimentos são curtase menos frequentes quando comparadas com trajetórias em ambientes externos~\cite{salah}.
+
+\subsection{Detecção e Reconhecimento Facial}
+
+A detecção de movimento é feita utilizando o método \textit{Viola-Jones} já descrito anteriormente utilizando a biblioteca \textit{OpenCV}. 
+
+Para realizar o reconhecimento facial utiliza uma técnica que aproveita a vantagem que o ambiente é constantemente monitorado e combina a informação de várias imagens para realizar o reconhecimento. As imagens das faces são fornecidas pelo módulo de detecção.
+Para cada sequência de imagens, as faces de um mesmo indivíduo são agrupadas. Então, para cada grupo, o sistema compara as imagens com a galeria de imagens~\cite{salah}. 
+
+Uma abordagem baseada em PCA (\textit{Principal Component Analisys}) foi utilizado para comparação entre as imagens.
+
+
+
+	
 
 
 
