@@ -1,10 +1,10 @@
 \section{Reconhecimento Facial}
 
-O reconhecimento facial é uma das atividades mais comuns realizadas diariamente por seres vivos dotados de certa inteligência. Essa simples atividade vem despertando o interesse de pesquisadores que trabalham com Visão Computacional e Inteligência Artificial. O objetivo desses pesquisadores é de construir sistemas artificiais capazes de realizar o reconhecimento de faces humanas e a partir desta capacidade construir os mais diferentes tipos de aplicações: sistemas de vigilância, controles de acesso, definções automáticas de perfis, entre outros~\cite{oliveira}.
+O reconhecimento facial é uma das atividades mais comuns realizadas diariamente por seres vivos dotados de certa inteligência. Essa simples atividade vem despertando o interesse de pesquisadores que trabalham com computação visual e inteligência artificial. O objetivo desses pesquisadores é de construir sistemas artificiais capazes de realizar o reconhecimento de faces humanas e a partir desta capacidade, construir os mais diferentes tipos de aplicações: sistemas de vigilância, controles de acesso, definições automáticas de perfis, entre outros~\cite{oliveira}.
 
 No anos 70, os estudos do reconhecimento facial eram baseados sobre atributos faciais mensuráveis como olhos, nariz, sobrancelhas, bocas, entre outros. Porém, os recursos computacionais eram escassos e os algoritmos de extração de características eram ineficiêntes. Nos anos 90, as pesquisas na área ressurgiram, inovando os métodos existentes~\cite{hong, saocarlos} e disseminando a técnica.
 
-Um dos motivos que incentivou os diversos estudos sobre reconhecimento facial são as vantagens que o mesmo possui em relação a impressão digital e a íris.  No reconhecimento por impressão digital, a desvantagem consiste no fato que nem todas as pessoas possuem uma impressão digital com ``qualidade'' suficiente para ser reconhecida por um sistema. Já o reconhecimento por íris apresenta uma alta confiabilidade e larga variação, sendo estável pela vida toda. Porém, a desvantagem está relacionada ao modo de captura da íris que necessita de um alinhamento entre a câmera e os olhos da pessoa~\cite{saocarlos}. 
+Um dos motivos que incentivou os diversos estudos sobre reconhecimento facial são as vantagens que o mesmo possui em relação a impressão digital e a íris.  No reconhecimento por impressão digital a desvantagem consiste no fato que nem todas as pessoas possuem uma impressão digital com ``qualidade'' suficiente para ser reconhecida por um sistema. Já o reconhecimento por íris apresenta uma alta confiabilidade e larga variação, sendo estável pela vida toda. Porém, a desvantagem está relacionada ao modo de captura da íris que necessita de um alinhamento entre a câmera e os olhos da pessoa~\cite{saocarlos}. 
 
 Basicamente existem duas particularidades que fazem da face uma característica biométrica bastante atrativa~\cite{drovetto}:
 
@@ -72,16 +72,16 @@ O processo de detecção de faces geralmente é dificultado pelas seguintes raz�
 		\item \textbf{Condições da imagem}: a não previsibilidade das condições da imagem em ambientes sem restrições de ilimuniação, cores e objetos de fundo~\cite{oliveira, yang}.
 	\end{enumerate}
 
-Atualmente, já existem diferentes métodos/técnicas de detecção de faces. Tais métodos podem ser baseados em imagens de intensidade e de cor ou em imanges 3D. Focaremos nos principais métodos de imagens de cor e de intensidade que serão utilizados neste trabalho. Estes podem ser divididos em 4 categorias:
+Atualmente, já existem diferentes métodos/técnicas de detecção de faces. Tais métodos podem ser baseados em imagens de intensidade e em imagens de cor ou também em imagens de três dimenções. Focaremos nos principais métodos de imagens de cor e de intensidade que serão utilizados neste trabalho. Estes podem ser divididos em 4 categorias:
 
 	\begin{enumerate}
-		\item \textbf{Métodos baseados em Conhecimento:} métodos, desenvolvidos principalmente para localização facial, beaseados em regras derivadas do conhecimento dos pesquisadores do que constitui uma típica face humana. Normalmente, captura as relações existentes entre as características faciais. É fácil econtrar regras que descrevem as caracterísicas faciais. Por exemplo, uma face sempre é constituída por dois olhos simétricos, um nariz e uma boca. As relações entre essas características podem ser representadas pelas distâncias relativas e posições. Este método possui desvantagens em relação a construção do conjunto de regras. Se estas são muito gerais, corre-se o risco de que o sistema que as utiliza apresentar uma alta taxa de falsos positivos. Se são muito específicas podem ser ineficazes ao tentar detectar faces por não satisfizerem todas as regras, diminuindo muito a precisão da detecção~\cite{yang,lopes};
+		\item \textbf{Métodos baseados em conhecimento:} métodos, desenvolvidos principalmente para localização facial, baseados em regras derivadas do conhecimento dos pesquisadores do que constitui uma típica face humana. Normalmente, captura as relações existentes entre as características faciais. É fácil encontrar regras que descrevem as caracterísicas faciais. Por exemplo, uma face sempre é constituída por dois olhos simétricos, um nariz e uma boca. As relações entre essas características podem ser representadas pelas distâncias relativas e posições. Este método possui desvantagens em relação a construção do conjunto de regras. Se estas são muito gerais, corre-se o risco, de que o sistema que as utiliza, apresentar uma alta taxa de falsos positivos. Se são muito específicas, podem ser ineficazes ao tentar detectar faces por não satisfizerem todas as regras, diminuindo muito a precisão da detecção~\cite{yang,lopes};
 
-		\item \textbf{Métodos baseados em Características Invariantes:} esses algoritmos tem como objetivo principal encontrar as características estruturais que existem mesmo quando a postura, ``ponto de vista'', condições de iluminação variam. E por meio dessas características localizar a face. São desenvolvidos principalmente para localização facial~\cite{yang}. A principal desvantagem desse método é que tais características invariantes podem ser corrompidas devido a condições de ilumincação ou algum tipo de ruído, comprometendo a eficiência. A cor da pele e a textura da face são as principais características invariantes que podem ser utilizadas para separar a face de outros objetos~\cite{lopes};
+		\item \textbf{Métodos baseados em características invariantes:} esses algoritmos tem como objetivo principal encontrar as características estruturais que existem mesmo quando a pose, o ângulo e as condições de iluminação variam. E por meio dessas características localizar a face. São desenvolvidos principalmente para localização facial~\cite{yang}. A principal desvantagem desse método é que tais características invariantes podem ser corrompidas devido a algum tipo de ruído ou a fortes variações nas condições de iluminacação, comprometendo a eficiência. A cor da pele e a textura da face são as principais características invariantes que podem ser utilizadas para separar a face de outros objetos~\cite{lopes};
 
-		\item \textbf{Métodos baseados em Templates:} vários padrões comuns de um rosto são armazenados tanto para descrever o rosto como um todo quanto para descrever as características faciais separadamente. As correlações entre as imagens de entrada e os padrões armazenados são comuptados para detecção. Esses métodos são desenvolvidos para serem utlizados como localização e detecção facial~\cite{yang};
+		\item \textbf{Métodos baseados em \textit{templates}:} vários padrões comuns de um rosto são armazenados tanto para descrever o rosto como um todo quanto para descrever as características faciais separadamente. As correlações entre as imagens de entrada e os padrões armazenados são computados para detecção. Esses métodos são desenvolvidos para serem utilizados tanto para localização e como para detecção facial~\cite{yang};
 
-		\item \textbf{Métodos baseados em Aparência:} recebem este nome devido ao fato de não utilizarem nenhum conhecimento a priori sobre o objeto ou características a serem detectadas. Em contraste com os métodos baseado em templates, os modelos são retirados de um conjunto de imagens de treinamento que devem capturar a variabilidade da face. Esses modelos retirados são utilizados para detecção. Nesta classe de algoritmos surge os conceitos de aprendizado e treinamento, uma vez que as informações necessárias para realizar a tarefa de detecção são retiradas do próprio conjunto de imagens sem intervenção externa. São métodos desenvolvidos principalmente para detecção de faces~\cite{yang, lopes};
+		\item \textbf{Métodos baseados em aparência:} recebem este nome devido ao fato de não utilizarem nenhum conhecimento, a priori, sobre o objeto ou características a serem detectadas. Em contraste com os métodos baseado em \textit{templates}, os modelos são retirados de um conjunto de imagens de treinamento que devem capturar a variabilidade da face. Esses modelos retirados são utilizados para detecção. Nesta classe de algoritmos surge os conceitos de aprendizado e treinamento, uma vez que as informações necessárias para realizar a tarefa de detecção são retiradas do próprio conjunto de imagens sem intervenção externa. São métodos desenvolvidos principalmente para detecção de faces~\cite{yang, lopes};
 
 	\end{enumerate}
 
@@ -89,71 +89,71 @@ Um problema relacionado e muito importante é como avaliar a performance dos mé
 
 \subsubsection{Método Viola-Jones}
 
-O método que será utilizado nesse trabalho será o método \textit{Viola-Jones}}. Este é um  método para detecção de objetos que minimiza o tempo de computação e possui uma alta acurácia permindo detecção de faces em tempo real. Esse método pode ser utilizado para construir uma abordagem de detecção facial rápida e eficaz~\cite{violajones}. É o método utilizado na biblioteca \textit{OpenCV}(Open Source Computer Vision) e muito utilizado autalmente.
+O método que será utilizado nesse trabalho será o método \textit{Viola-Jones}}. Este é um  método para detecção de objetos que minimiza o tempo de computação e possui uma alta acurácia permindo detecção de faces em tempo real. Esse método pode ser utilizado para construir uma abordagem de detecção facial rápida e eficaz~\cite{violajones}. É o método utilizado na biblioteca \textit{OpenCV}(\textit{Open Source Computer Vision}) e muito utilizado atualmente.
 	
 O Método \textit{Viola-Jones} para detecção facial utiliza quatro conceitos chaves~\cite{servodetection,violajones}:
 	
 	\begin{enumerate}
 		\item \textbf{\textit{Haar features}:} simples características retangulares;
-		\item \textbf{\textit{Integral Image}:} uma nova representação da imagem que permite uma rápida avaliação de recursos e caracterísitcas;
+		\item \textbf{\textit{Integral image}:} uma nova representação da imagem que permite uma rápida avaliação de recursos e caracterísitcas;
 		\item \textbf{O método \textit{AdaBoost}}: um método de aprendizagem de máquina utilizado para construir um classificador,  selecionando um pequeno número de características importantes usando \textit{AdaBoost};
-		\item \textbf{Classificador em Cascata}: classificador que combina muitas características de maneira eficiente;
+		\item \textbf{Classificador em cascata}: classificador que combina muitas características de maneira eficiente;
 	\end{enumerate}
 
 	\begin{figure}[hbt]
 		\begin{center}
 			\includegraphics[height=6.5cm,width=12.5cm]{figuras/2.FundamentacaoTeorica/haar_features.png}
 		\end{center}
-		\caption{Exemplo de simples características retangulares (\texit{Haar Features}). Adaptada de~\cite{servodetection}.}
+		\caption{Exemplo de simples características retangulares (\textit{Haar Features}). Adaptada de~\cite{servodetection}.}
 		\label{haarfeatures}
 	\end{figure}
 
-A detecção facial em imagens é baseado em simples caracteríticas retangulares (\textit{Haar features}), exemplificada na Figura \ref{haarfeatures}. Existem vários motivos para se usar essas características ao invés de usar diretamente os pixels da imagem. Uma das principais é que sistemas baseados em características são muito mais rápidos que sistemas baseados em pixels~\cite{violajones}. 
+A detecção facial em imagens é baseado em simples caracteríticas retangulares (\textit{Haar features}), exemplificada na Figura \ref{haarfeatures}. Existem vários motivos para se usar essas características ao invés de usar diretamente os \textit{pixels} da imagem. Uma das principais é que sistemas baseados em características são muito mais rápidos que sistemas baseados em \textit{pixels}~\cite{violajones}. 
 
 \begin{figure}[hbt]
 		\begin{center}
 			\includegraphics[height=6.5cm,width=12.5cm]{figuras/2.FundamentacaoTeorica/haarfeaturestypes.png}
 		\end{center}
-		\caption{\texit{Haar Features} com dois, três e quatro retângulos~\cite{violajones}.}
+		\caption{\textit{Haar Features} com dois, três e quatro retângulos~\cite{violajones}.}
 		\label{haarfeaturestypes}
 	\end{figure}
 
-Tais simples características são remanecentes das funções de base \textit{Haar}. O método utiliza três tipos de características, exemplificadas na Figura \ref{haarfeaturestypes}: características com dois, três ou quatro retângulos~\cite{violajones}. A presença de uma característica em uma imagem é determinada pela subtração da média dos valores dos pixels da região escura pela média dos valores dos pixels da região clara. Caso o valor seja maior que um limiar, então essa característica é tida como presente~\cite{servodetection}.
+Tais simples características são remanecentes das funções de base \textit{Haar}. O método utiliza três tipos de características, exemplificadas na Figura \ref{haarfeaturestypes}: características com dois, três ou quatro retângulos~\cite{violajones}. A presença de uma característica em uma imagem é determinada pela subtração da média dos valores dos \textit{pixels} da região escura pela média dos valores dos \textit{pixels} da região clara. Caso o valor seja maior que um limiar, então essa característica é tida como presente~\cite{servodetection}.
 
-O Método \textit{Viola-Jones} não trabalha diretamente com as intensidades da imagem. Para determinar a presença ou ausência de centenas de \textit{Haar features} em cada posição de imagem e em várias escalas de forma eficiente, utiliza uma técnica chamada \textit{Integral Image}. Basicamente, o método consiste em acrescentar pequenas unidades juntas. Neste caso, pequenas unidades são valores de pixels. O valor ``integral'' para cada pixel é a soma de todos os pixels acima e a esquerda. Começando pelo canto superior esquerdo da imagem e atravessando para direita e para baixo, toda a imagem pode ser ``integrada'' com poucas operações por pixels~\cite{servodetection, violajones}. Com a nova representação de imagem criada, qualquer \textit{Haar Feature} pode ser computada para qualquer escala e localização em um tempo constante~\cite{violajones}.
+O Método \textit{Viola-Jones} não trabalha diretamente com as intensidades da imagem. Para determinar a presença ou ausência de centenas de \textit{Haar features} em cada posição de imagem e em várias escalas de forma eficiente, utiliza-se uma técnica chamada \textit{Integral image}. Basicamente, o método consiste em acrescentar pequenas unidades juntas. Neste caso, pequenas unidades são valores de \textit{pixels}. O valor ``integral'' para cada \textit{pixel} é a soma de todos os \textit{pixels} acima e a esquerda. Começando pelo canto superior esquerdo da imagem e atravessando para direita e para baixo, toda a imagem pode ser ``integrada'' com poucas operações por \textit{pixels}~\cite{servodetection, violajones}. Com a nova representação de imagem criada, qualquer \textit{Haar feature} pode ser computada para qualquer escala e localização em um tempo constante~\cite{violajones}.
 
 	\begin{figure}[hbt]
 		\begin{center}
 			\includegraphics[height=6.5cm,width=12.5cm]{figuras/2.FundamentacaoTeorica/integral_image.png}
 		\end{center}
-		\caption{Exemplo da aplicação da técnica \texit{Integral Image}. Após a ``integração'' o pixel $\displaystyle (x,y)$ contém a soma dos valores dos pixels do retângulo sombreado. Adaptada de~\cite{servodetection}.}
+		\caption{Exemplo da aplicação da técnica \textit{Integral image}. Após a ``integração'' o \textit{pixel} $\displaystyle (x,y)$ contém a soma dos valores dos \textit{pixels} do retângulo sombreado. Adaptada de~\cite{servodetection}.}
 		\label{integralimage}
 	\end{figure}
 
-Na Figura \ref{integralimage}, após a ``integração'', o pixel $\displaystyle (x,y)$ contém a soma de todos os valores de pixels dentro da região retangular sombreada no canto superior esquerdo de $\displaystyle (x,y)$. Para calcular a média dos valores de pixel neste retângulo, basta dividir o valor em $\displaystyle (x,y)$ pela área do retângulo~\cite{servodetection}.
+Na Figura \ref{integralimage}, após a ``integração'', o \textit{pixel} $\displaystyle (x,y)$ contém a soma de todos os valores de \textit{pixels} dentro da região retangular sombreada no canto superior esquerdo de $\displaystyle (x,y)$. Para calcular a média dos valores de \textit{pixel} neste retângulo, basta dividir o valor em $\displaystyle (x,y)$ pela área do retângulo~\cite{servodetection}.
 
 	\begin{figure}[hbt]
 		\begin{center}
 			\includegraphics[height=6.5cm,width=12.5cm]{figuras/2.FundamentacaoTeorica/integral_image2.png}
 		\end{center}
-		\caption{Exemplo utlizado para mostrar como calcular a soma dos valores de pixel de um retângulo que não está localizado no canto superior esquerdo da imagem utilizando \textit{Integral Image}. Adaptado de~\cite{servodetection}.}
+		\caption{Exemplo utlizado para mostrar como calcular a soma dos valores de \textit{pixel} de um retângulo que não está localizado no canto superior esquerdo da imagem utilizando \textit{Integral image}. Adaptado de~\cite{servodetection}.}
 		\label{integralimage2}
 	\end{figure}
 
-A Figura \ref{integralimage2} mostra como calcular os valores de um retângulo que não está localizado no canto superior esquerdo da imagem. Suponha que se deseja obter a soma dos valores do retângulo em $\displaystyle D$. De maneira intuitiva, pode-se realizar esse cálculo somando os valores dos pixels no retângulo formado por $\displaystyle A+B+C+D$, menos a soma nos retângulos $\displaystyle A+B$ e $\displaystyle A+C$, mais a soma dos valores de pixel em $\displaystyle A$. Em outras palavra, $\displaystyle D = A+B+C+D-(A+B)-(A+C)+A$~\cite{servodetection, violajones}.
+A Figura \ref{integralimage2} mostra como calcular os valores de um retângulo que não está localizado no canto superior esquerdo da imagem. Suponha que se deseja obter a soma dos valores do retângulo em $\displaystyle D$. De maneira intuitiva, pode-se realizar esse cálculo somando os valores dos \textit{pixels} no retângulo formado por $\displaystyle A+B+C+D$, menos a soma nos retângulos $\displaystyle A+B$ e $\displaystyle A+C$, mais a soma dos valores de \textit{pixel} em $\displaystyle A$. Em outras palavra, $\displaystyle D = A+B+C+D-(A+B)-(A+C)+A$~\cite{servodetection, violajones}.
 
-Porém, usando \textit{Integral Image}, $\displaystyle A+B+C+D$ é o valor do ponto $\displaystyle 4$, $\displaystyle A+B$ é o valor do ponto $\displaystyle 2$, $\displaystyle A+C$ é o valor do ponto $\displaystyle 3$, e $\displaystyle A$ é o valor do ponto $\displaystyle 1$. Então, com \textit{Integral Image}, você pode obter a soma dos valores de pixel de qualquer retângulo na imagem original usando somente três operações~\cite{servodetection, violajones}:
+Porém, usando \textit{Integral image}, $\displaystyle A+B+C+D$ é o valor do ponto $\displaystyle 4$, $\displaystyle A+B$ é o valor do ponto $\displaystyle 2$, $\displaystyle A+C$ é o valor do ponto $\displaystyle 3$, e $\displaystyle A$ é o valor do ponto $\displaystyle 1$. Então, com \textit{Integral image}, você pode obter a soma dos valores de \textit{pixel} de qualquer retângulo na imagem original usando somente três operações~\cite{servodetection, violajones}:
 
 	\begin{equation}
 		(x_4,y_4) - (x_2,y_2) - (x_3,y_3) + (x_1,y_1)
 		\label{equacaointegralimage}
 	\end{equation} 
 
-Para selecionar os \textit{Haar features} que serão utilizados e para definir os limiares, o método \textit{Viola-Jones} utiliza um método de aprendizagem de máquina chamado \textit{AdaBoost}. Este combina vários classificardores ``fracos'' para criar um classificador ``forte''. 
+Para selecionar os \textit{Haar features} que serão utilizados e para definir os limiares, o método \textit{Viola-Jones} utiliza um método de aprendizagem de máquina chamado \textit{AdaBoost}. Este combina vários classificadores ``fracos'' para criar um classificador ``forte''. 
 
-Um classificador fraco é aquele que só obtém a resposta correta um pouco mais frequente que um ``palpite aleatório''. A combinação desses classficadores ``fracos'', onde cada um ``empurra'' a resposta final um pouco na direção certa, pode ser considerado como um classificador ``forte''. O método \texit{AdaBoost} seleciona um conjunto de classificadores ``fracos'' para combinar e atribui pesos a cada um. Essa combinação ponderada resulta em um classificador ``forte''~\cite{servodetection}.
+Um classificador fraco é aquele que só obtém a resposta correta um pouco mais frequente que um ``palpite aleatório''. A combinação desses classficadores ``fracos'', onde cada um ``empurra'' a resposta final um pouco na direção certa, pode ser considerado como um classificador ``forte''. O método \textit{AdaBoost} seleciona um conjunto de classificadores ``fracos'' para combinar e atribui pesos a cada um. Essa combinação ponderada resulta em um classificador ``forte''~\cite{servodetection}.
 
-Em qualquer região de uma imagem, o número total de \textit{Haar features} é muito grande, muito maior que o número de pixels. Para assegurar uma classficação rápida, o processo de aprendizagem deve excluir o maior número de características disponíveis, e focar nas que são críticas. A seleção dessas características é alcançada através de uma simples modificação no método \textit{AdaBoost}: o mecanismo de aprendizagem é construído de forma que cada classificador ``fraco'' retornado dependa de somente uma única característica. Como resultado, cada estágio do processo seleciona um novo classificador ``fraco'' o que pode ser visto como um processo de seleção de características. \textit{AdaBoost} fornece um algoritmo de aprendizagem eficaz~\cite{violajones}.
+Em qualquer região de uma imagem, o número total de \textit{Haar features} é muito grande, muito maior que o número de \textit{pixels}. Para assegurar uma classficação rápida, o processo de aprendizagem deve excluir o maior número de características disponíveis, e focar nas que são críticas. A seleção dessas características é alcançada através de uma simples modificação no método \textit{AdaBoost}: o mecanismo de aprendizagem é construído de forma que cada classificador ``fraco'' retornado dependa de somente uma única característica. Como resultado, cada estágio do processo seleciona um novo classificador ``fraco'' o que pode ser visto como um processo de seleção de características. \textit{AdaBoost} fornece um algoritmo de aprendizagem eficaz~\cite{violajones}.
 
 	\begin{figure}[htb]
 		\begin{center}
@@ -163,15 +163,15 @@ Em qualquer região de uma imagem, o número total de \textit{Haar features} é 
 		\label{filterchain}
 	\end{figure}
 
-O método \textit{Viola-Jones} combina uma série de classificadores \textit{AdaBoost} na forma de uma cadeia de filtros, como na Figura \ref{filterchain}, que recebe o nome de Classificadores em Cascata. Cada filtro em si é um classificador \textit{AdaBoost} com um número relativamente pequeno de classificadores ``fracos''~\cite{servodetection}. 
+O método \textit{Viola-Jones} combina uma série de classificadores \textit{AdaBoost} na forma de uma cadeia de filtros, como na Figura \ref{filterchain}, que recebe o nome de ´``Classificadores em Cascata''. Cada filtro em si é um classificador \textit{AdaBoost} com um número relativamente pequeno de classificadores ``fracos''~\cite{servodetection}. 
 
-O limiar de aceitação em cada nível é definido ``baixo'' o suficiente para que passe por todos, ou quase todos, os exemplos de face do conjunto de treinamento (um grande banco de imagens contendo faces). Os filtros em cada nível são treinados para classificar imagens de treinamento que passaram por todas fases anteriores~\cite{servodetection}.
+O limiar de aceitação, em cada nível, é definido ``baixo'' o suficiente para que passe por todos, ou quase todos, os exemplos de face do conjunto de treinamento (um grande banco de imagens contendo faces). Os filtros em cada nível são treinados para classificar imagens de treinamento que passaram por todas fases anteriores~\cite{servodetection}.
 
 Durante a utilização, se alguma região de uma imagem falhar em passar em um desses filtros, esta é imediatamente classificada como ``não face''. Quando uma região de uma imagem passa por um filtro, ela vai para o próximo filtro na cadeia. As regiões das imagens que passarem por todos os filtros na cadeia são classificadas como ``faces''~\cite{servodetection}.
 
-O algoritmo utilizado para construção dos Classificadores em Cascata alcança um ótimo desempenho e, ao mesmo tempo, reduz drasticamente o tempo de computação. O aspecto chave é que os menores classificadores (filtros), e por isso mais eficientes, podem ser utilizados para rejeitar a maioria das regiões das imagens que não são faces antes que os classifcadores mais complexos sejam utilizados~\cite{violajones}. A ordem dos filtros no classificador é baseado nos pesos que o método \textit{AdaBoost} define para cada filtro. Os filtros com maior peso são colocados no início, para eliminar as regiões das imagens que não são faces o mais rápido possível~\cite{servodetection}. 
+O algoritmo utilizado para construção dos ``Classificadores em Cascata'' alcança um ótimo desempenho e, ao mesmo tempo, reduz drasticamente o tempo de computação. O aspecto chave é que os menores classificadores (filtros), e por isso mais eficientes, podem ser utilizados para rejeitar a maioria das regiões das imagens que não são faces antes que os classifcadores mais complexos sejam utilizados~\cite{violajones}. A ordem dos filtros no classificador é baseado nos pesos que o método \textit{AdaBoost} define para cada filtro. Os filtros com maior peso são colocados no início, para eliminar as regiões das imagens que não são faces o mais rápido possível~\cite{servodetection}. 
 
-O método \textit{Viola-Jones} é adequado para utilização em sistemas de detecção de faces em tempo real. Agora, o próximo passo para o processo de Reconhecimento Facial é comparar as faces encontradas com modelos conhecidos com o sistema para realizar a identificação, o que será mostrado na próxima subseção.
+O método \textit{Viola-Jones} é adequado para utilização em sistemas de detecção de faces em tempo real. Agora, o próximo passo para o processo de ``Reconhecimento Facial'' é comparar as faces encontradas com modelos conhecidos pelo sistema para realizar a identificação.
 
 % ####################################################################################################################
 % ####################################################################################################################
@@ -179,18 +179,18 @@ O método \textit{Viola-Jones} é adequado para utilização em sistemas de dete
 
 \subsection{Reconhecimento das Faces encontradas}
 
-Na etapa de reconhecimento, as faces detectadas e processadas, serão comparadas com um banco de dados de faces conhecidas. Essa comparação tem uma acurácia média de 30-90\% entre as diversas técnicas. Esse é um forte campo de pesquisa desde a década de 90 e as técnicas se invovam ano ápos ano.
+Na etapa de reconhecimento, as faces detectadas, serão comparadas com um banco de dados de faces conhecidas. Várias técnicas são usadas para acelerar essa comparação já que para identificar o usuário é necessário um grande numero de comparações. Dentre as técnicas utilizadas existem duas variações principais, as que usam como entrada dados de imagens 2D (imagens de intensidade e imagens de cor) e as que usam como entradas dados de imagens 3D (imagens de profundidade).
 
-Existem duas variações principais entre as técnicas, as que usam como entrada dados imagens 2D (imagens de intensidade e cor) e as que usam como entradas dados imagens 3D (\textit{depth images}).
-
-As principais técnicas 2D são:
+Mais antiga e mais comum, as técnicas 2D são amplamente utilizadas e as principais são:
 	\begin{enumerate}
 		\item \textbf{\textit{Eigenfaces}:} extrai as informações relevantes de uma face, codifica-a da maneira mais eficiente possível, e a compara com um banco de faces codificadas de maneira similar. Extrai as informações relevantes contidas em uma imagem de uma face de uma maneira simples captando a variação em uma coleção de imagens de face e usando essa informação para codificar e comparar imagens individuais de faces~\cite{turk}. É baseado em projeção linear das imagens em uma espaço de imagens de menor dimensão. Para redução dimensional utiliza PCA (\textit{Principal Component Analisys}) maximizando a dispersão total entre todas as imagens~\cite{belhumeur};
 
-		\item \textbf{Redes Neurais:} uma rede neural artificial é um modelo computacional capaz de, entre outras funções, armazenar, classificar padrões, realizar interpolação de funções não-lineares e apresentar soluções heurísticas para problemas de otimização. Isso é conseguido através de um processo denominado \textit{aprendizado}. O uso de redes visa tornar o sistema de reconhecimento capaz de absorver pequenas variações ocorridas no momento da coleta de medidas faciais. Espera-se, portanto,  mais robustez a falhas e que responda de forma mais confiável~\cite{oliveira};
+		\item \textbf{Redes Neurais:} uma rede neural artificial é um modelo computacional capaz de, entre outras funções, armazenar, classificar padrões, realizar interpolação de funções não-lineares e apresentar soluções heurísticas para problemas de otimização. Isso é conseguido através de um processo denominado ``aprendizado''. O uso de redes neurais visa tornar o sistema de reconhecimento capaz de absorver pequenas variações ocorridas no momento da coleta de medidas faciais. Espera-se, portanto,  mais robustez a falhas e que responda de forma mais confiável~\cite{oliveira};
 
 		\item \textbf{\textit{Fisher Faces}:} método derivado de FLD (\textit{Fisher's Linear Discrimant})
 	\end{enumerate}
+
+As técnicas 3D não será o foco desse trabalho pois ainda não estão maduras o suficiente e o objetivo não é propor um algoritmo de reconhecimento.
 
 % Com o surgimento da tecnologia 3D o reconhecimento facial se trasformou mais confiável pois a imagem 3D evita problemas comum em reconhecimentos faciais 2D como a mudança na iluminação, diferentes expressões faciais, maquiagem e orientação da cabeça.
 % Algumas técnicas 3D são:
@@ -200,36 +200,36 @@ As principais técnicas 2D são:
 % 		\item \textbf{``Active Appearance Models''}
 % 	\end{enumerate}
 
-\subsubsection{Reconhecimento Facial com \textit{Eigenfaces}}
+\subsubsection{Reconhecimento facial com \textit{Eigenfaces}}
 
-De todos os métodos apresentados o \textit{Eigenfaces} se mostrou de melhor custo benefício, devido ao seu baixo custo computacional e a sua, relativamente alta, confiabilidade.
+De todos os métodos apresentados o \textit{Eigenfaces} se mostrou o de melhor custo benefício, devido ao seu baixo custo computacional e a sua, relativamente alta, confiabilidade.
 
 Este é um algoritmo simples e fácil de implementar e os passos utilizados por ele também são utilizados em muitos métodos avançados. Os princípios básicos por trás dele, como PCA (\textit{Principal Component Analisys} - Analíse de componente principal) e \textit{Distance-Based Matching} (Correspondência Baseada na Distância) aparecem cada vez mais na computação visual e em diversas aplicações de inteligencia artificial~\cite{hewitt}.
 
-Basicamente, as estapas do processo de reconhecimento são simples e bem definidas. Dada uma imagem de um rosto desconhecido e imagens do rosto das pessoas conhecidas executa as seguintes ações~\cite{hewitt}:
+Basicamente, as etapas do processo de reconhecimento são simples e bem definidas. Dada uma imagem de um rosto desconhecido e imagens do rosto das pessoas conhecidas executa as seguintes ações~\cite{hewitt}:
 
 	\begin{enumerate}
-		\item Computa a distância entre a nova imagem e cada uma das imagens já conhecidas.
-		\item Seleciona a imagem mais proxima do novo rosto.
-		\item Se a distância da nova imagem para a imagem já catalogada for menor que o limite predefinido, ``reconhece'' a imagem caso contrário classifica como ``desconhecida''.
+		\item Computa a ``distância'' entre a nova imagem e cada uma das imagens já conhecidas.
+		\item Seleciona a imagem mais proxima do rosto em questão.
+		\item Se a ``distância'' da nova imagem para a imagem já catalogada for menor que o limite predefinido, ``reconhece'' a imagem caso contrário classifica como ``desconhecida''.
 	\end{enumerate}
 
-Em \textit{Eigenfaces}, a distância entre as imagens é medida ponto a ponto, que também conhecida como Distância Euclidiana. A distância euclidiana em duas dimensões entre os pontos $P_1$ e $P_2$ é dada pela fórmula $\displaystyle d_{12} = \sqrt(d_{x} + d_{y})$, onde $\displaystyle d_x = x_2 - x_1$ e $\displaystyle d_y = y_2-y_1$ e representada na Figura \ref{distanciaEntrePontos}~\cite{hewitt}.
+Em \textit{Eigenfaces}, a distância entre as imagens é medida ponto a ponto, que também conhecida como ``Distância Euclidiana''. A distância euclidiana em duas dimensões entre os pontos $P_1$ e $P_2$ é dada pela fórmula $\displaystyle d_{12} = \sqrt(d_{x} + d_{y})$, onde $\displaystyle d_x = x_2 - x_1$ e $\displaystyle d_y = y_2-y_1$ e representada na Figura \ref{distanciaEntrePontos}~\cite{hewitt}.
 
     \begin{figure}[hbt]
 		\begin{center}
 			\includegraphics[height=9.5cm,width=12.5cm]{figuras/2.FundamentacaoTeorica/graficoDistanciaEntrePontos.png}
 		\end{center}
-		\caption{Distância Euclidiana entre dois pontos em duas dimensões~\cite{hewitt}.}
+		\caption{Distância euclidiana entre dois pontos em duas dimensões~\cite{hewitt}.}
 		\label{distanciaEntrePontos}
 	\end{figure}
 
 
-Imagens possuem ``ruídos'' e vamos definir ruído como qualquer coisa que atrapalhe na identificação, como por exemplo as diferenças na luminosidade. Cada pixel possui uma intensidade de ruído diferente. Com cada pixel contribuindo para o ruído total, este se torna muito elevado comparado com a informação útil que se possa retirar da imagem, dificultando o processo de reconhecimento. Uma solução é diminuir a dimensionalidade da imagem, tornando assim o ruído menor e sendo possível extrair, da imagem, as informações importantes~\cite{hewitt}.
+Imagens possuem ``ruídos'' e vamos definir ruído como qualquer coisa que atrapalhe na identificação, como por exemplo, as diferenças na luminosidade. Cada \textit{pixel} possui uma intensidade de ruído diferente. Com cada \textit{pixel} contribuindo para o ruído total, este se torna muito elevado comparado com a informação útil que se possa retirar da imagem, dificultando o processo de reconhecimento. Uma solução é diminuir a dimensionalidade da imagem, tornando assim o ruído menor e possibilitando extrair, da imagem, as informações importantes~\cite{hewitt}.
 
 \subsubsection{Redução de dimensionalidade utilizando PCA}
 
-O \textit{Eigenfaces} utiliza o método PCA (\textit{Principal Components Analysis}) para reduzir a dimensionalidade de uma imagem~\cite{hewitt}.
+O \textit{Eigenfaces} utiliza o método PCA (\textit{Principal Components Analysis}) para reduzir a dimensionalidade da imagem~\cite{hewitt}.
 
 Para se ter uma idéia de como o PCA funciona, vejamos um caso especial chamado de \textit{least squares line fit}. O lado esquerdo da Figura \ref{exemploPCA} mostra um exemplo de uma linha média entre três pontos, que são, no mapa em 2D, Los Angeles, Chicago e Nova York. Estes três pontos do mapa são quase, mas não completamente, uma única linha. A linha tem apenas uma dimensão. Por isso, se conseguirmos substituir as localizações 2D dos pontos com localizações ao longo de uma única linha, vamos ter reduzido a sua dimensionalidade~\cite{hewitt}.
 
@@ -275,9 +275,9 @@ Basicamente, a idéia explicada até agora consiste na redução da dimensionali
 
 Em nossa definição de uma linha como um subespaço 1D, usamos $\displaystyle x$ e $\displaystyle y$ coordenadas para definir $\displaystyle m$, que é sua inclinação em 2D. Quando $\displaystyle m$ é um componente principal de um conjunto de pontos, ela é chamada de autovetor ou \textit{eingenvector}, daí o nome \textit{Eigenface}~\cite{hewitt}. 
 
-Para o reconhecimento facial em imagens de 50x50, cada autovetor representa a inclinação de uma linha em um espaço de 2.500 dimenções. Como no caso 2D, precisamos de todas as 2.500 dimensões para definir a inclinação de cada linha. Embora seja impossível visualizar uma linha em muitas dimensões, podemos visualizar os autovetores de uma maneira diferente. Podemos converter as suas 2.500 dimenções em uma simples imagem usando a sua ``inclinação'' para colocar cada pixel valor em seu local correspondente. Quando fazemos isso, obtemos imagens \textit{facelike} chamadas de \textit{eigenfaces}~\cite{hewitt}.
+Para o reconhecimento facial em imagens de 50x50, cada autovetor representa a inclinação de uma linha em um espaço de 2.500 dimenções. Como no caso 2D, precisamos de todas as 2.500 dimensões para definir a inclinação de cada linha. Embora seja impossível visualizar uma linha em muitas dimensões, podemos visualizar os autovetores de uma maneira diferente. Podemos converter as suas 2.500 dimenções em uma simples imagem usando a sua ``inclinação'' para colocar cada \textit{pixel} valor em seu local correspondente. Quando fazemos isso, obtemos imagens \textit{facelike} chamadas de \textit{eigenfaces}~\cite{hewitt}.
 
-\textit{Eigenfaces} é um método interessante para dar-nos alguma intuição sobre os componentes principais para o nosso conjunto de dados. O lado esquerdo da Figura \ref{exemploEigenfaces} mostra as imagens das faces de dez pessoas. O lado direito  mostra os seis primeiros componentes principais deste conjunto de dados, apresentados como eigenfaces. O \textit{Eigenfaces} muitas vezes têm um olhar fantasmagórico, porque combinam elementos de várias faces. As regiões de pixels mais brilhantes e as regiões mais escuras em cada imagem são as que mais contribuem para as componentes principais~\cite{hewitt}. 
+\textit{Eigenfaces} é um método interessante para dar-nos alguma intuição sobre os componentes principais para o nosso conjunto de dados. O lado esquerdo da Figura \ref{exemploEigenfaces} mostra as imagens das faces de dez pessoas. O lado direito  mostra os seis primeiros componentes principais deste conjunto de dados, apresentados como eigenfaces. O \textit{Eigenfaces} muitas vezes têm um olhar fantasmagórico, porque combinam elementos de várias faces. As regiões de \textit{pixels} mais brilhantes e as regiões mais escuras em cada imagem são as que mais contribuem para as componentes principais~\cite{hewitt}. 
 
 	\begin{figure}[hbt]
 		\begin{center}
@@ -325,11 +325,11 @@ Mesmo com sistemas altamente ajustados, sistemas de reconhecimento facial estão
 
 \subsubsection{``Passo a passo'' da abordagem de Reconhecimento Facial com \textit{Eigenfaces}}
 
-A abordagem para o reconhecimento facial com \texitit{Eigenfaces} requer as seguinte operações de inicialização~\cite{turk}:
+A abordagem para o reconhecimento facial com \textit{Eigenfaces} requer as seguinte operações de inicialização~\cite{turk}:
 
 	\begin{enumerate}
 		\item Adquirir um conjunto inicial de imagens para serem usadas como conjunto de treinamento;
-		\item Calcular os \texit{eigenfaces} do conjunto de treinamento, mantendo somente as $\displaystyle M$ que correspondem aos maiores \textit{eigenvalues}. Essas $\displaystyle M$ imagens correspondem ao ``espaço de faces'';
+		\item Calcular os \textit{eigenfaces} do conjunto de treinamento, mantendo somente as $\displaystyle M$ que correspondem aos maiores \textit{eigenvalues}. Essas $\displaystyle M$ imagens correspondem ao ``espaço de faces'';
 		\item Calcular a distribuição correspondente em um espaço M-dimensional ponderado para cada indivíduo conhecido, projetando imagens de suas face no ``espaço faces'';
 	\end{enumerate}
 
