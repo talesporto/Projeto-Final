@@ -1,4 +1,12 @@
+<<<<<<< HEAD
 This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2011.4.25)  21 JUN 2011 23:34
+=======
+<<<<<<< HEAD
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.4.27)  15 JUN 2011 16:28
+=======
+This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2011.4.25)  19 JUN 2011 23:27
+>>>>>>> 751c3a9bedd48c33ac5b7db497ed00b9d2a434b9
+>>>>>>> dfba561b6eacaddcb6231fc9ac6c555d82762265
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -499,7 +507,15 @@ See the natbib package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
+<<<<<<< HEAD
 l.645 ...and\NAT@force@numbers{}\NAT@force@numbers
+=======
+<<<<<<< HEAD
+l.509 ...and\NAT@force@numbers{}\NAT@force@numbers
+=======
+l.604 ...and\NAT@force@numbers{}\NAT@force@numbers
+>>>>>>> 751c3a9bedd48c33ac5b7db497ed00b9d2a434b9
+>>>>>>> dfba561b6eacaddcb6231fc9ac6c555d82762265
                                                   
 ? r
 OK, entering \nonstopmode...
@@ -1080,7 +1096,10 @@ LaTeX Font Warning: Size substitutions with differences
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
+<<<<<<< HEAD
+=======
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 75.
+>>>>>>> 751c3a9bedd48c33ac5b7db497ed00b9d2a434b9
  )
 (\end occurred when \iffalse on line 462 was incomplete) 
 Here is how much of TeX's memory you used:
@@ -1089,6 +1108,30 @@ Here is how much of TeX's memory you used:
  223394 words of memory out of 3000000
  11019 multiletter control sequences out of 15000+200000
  15468 words of font info for 35 fonts, out of 3000000 for 9000
+<<<<<<< HEAD
+ 30 hyphenation exceptions out of 8191
+ 45i,8n,69p,1116b,459s stack positions out of 5000i,500n,10000p,200000b,50000s
+{/usr/share/texmf/fonts
+/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texmf-texlive/fonts/type1/publi
+c/amsfonts/cm/cmex10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/
+cm/cmmi12.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi8.pf
+b></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/shar
+e/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-texli
+ve/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf/fonts/type1/publ
+ic/cm-super/sfbi1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1200
+.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/tex
+mf/fonts/type1/public/cm-super/sfbx1728.pfb></usr/share/texmf/fonts/type1/publi
+c/cm-super/sfbx2488.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.
+pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texm
+f/fonts/type1/public/cm-super/sfrm1440.pfb></usr/share/texmf/fonts/type1/public
+/cm-super/sfrm2074.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1200.p
+fb>
+Output written on ./bin/monografia.pdf (34 pages, 1340819 bytes).
+PDF statistics:
+ 650 PDF objects out of 1000 (max. 8388607)
+ 120 named destinations out of 1000 (max. 500000)
+ 170 words of extra memory for PDF output out of 10000 (max. 10000000)
+=======
  715 hyphenation exceptions out of 8191
  43i,8n,69p,1116b,488s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/local/texlive/201
@@ -1111,8 +1154,16 @@ lic/cm-super/sfrm2074.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/publi
 c/cm-super/sfti1200.pfb>
 Output written on ./bin/monografia.pdf (41 pages, 2420376 bytes).
 PDF statistics:
+<<<<<<< HEAD
  822 PDF objects out of 1000 (max. 8388607)
  722 compressed objects within 8 object streams
  156 named destinations out of 1000 (max. 500000)
  246 words of extra memory for PDF output out of 10000 (max. 10000000)
+=======
+ 766 PDF objects out of 1000 (max. 8388607)
+ 672 compressed objects within 7 object streams
+ 147 named destinations out of 1000 (max. 500000)
+ 212 words of extra memory for PDF output out of 10000 (max. 10000000)
+>>>>>>> 751c3a9bedd48c33ac5b7db497ed00b9d2a434b9
+>>>>>>> dfba561b6eacaddcb6231fc9ac6c555d82762265
 
