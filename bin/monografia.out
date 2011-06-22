@@ -1,13 +1,17 @@
-\BOOKMARK [0][-]{dedication.0}{Dedicat\363ria}{}
-\BOOKMARK [0][-]{acknowledgements.0}{Agradecimentos}{}
-\BOOKMARK [0][-]{resumo.0}{Resumo}{}
-\BOOKMARK [0][-]{abstract.0}{Abstract}{}
-\BOOKMARK [0][-]{chapter.1}{Introdu\347\343o}{}
-\BOOKMARK [1][-]{section.1.1}{Organiza\347\343o do trabalho}{chapter.1}
-\BOOKMARK [0][-]{chapter.2}{Localiza\347\343o de usu\341rios em um SmartSpace}{}
-\BOOKMARK [0][-]{chapter.3}{Reconhecimento Facial}{}
-\BOOKMARK [1][-]{section.3.1}{Biometria}{chapter.3}
-\BOOKMARK [1][-]{section.3.2}{Reconhecimento Facial}{chapter.3}
-\BOOKMARK [2][-]{subsection.3.2.1}{Detec\347\343o de Faces em imagens}{section.3.2}
-\BOOKMARK [2][-]{subsection.3.2.2}{Reconhecimento das Faces encontradas}{section.3.2}
-\BOOKMARK [0][-]{section*.8}{Refer\352ncias}{}
+\BOOKMARK [0][-]{dedication.0}{Dedicat\363ria}{}% 1
+\BOOKMARK [0][-]{acknowledgements.0}{Agradecimentos}{}% 2
+\BOOKMARK [0][-]{resumo.0}{Resumo}{}% 3
+\BOOKMARK [0][-]{abstract.0}{Abstract}{}% 4
+\BOOKMARK [0][-]{chapter.1}{Introdu\347\343o}{}% 5
+\BOOKMARK [1][-]{section.1.1}{Organiza\347\343o do trabalho}{chapter.1}% 6
+\BOOKMARK [0][-]{chapter.2}{Localiza\347\343o e Rastreamento de pessoas em um SmartSpace}{}% 7
+\BOOKMARK [0][-]{chapter.3}{Reconhecimento Facial}{}% 8
+\BOOKMARK [1][-]{section.3.1}{Biometria}{chapter.3}% 9
+\BOOKMARK [1][-]{section.3.2}{Reconhecimento Facial}{chapter.3}% 10
+\BOOKMARK [2][-]{subsection.3.2.1}{Detec\347\343o de Faces em imagens}{section.3.2}% 11
+\BOOKMARK [2][-]{subsection.3.2.2}{Reconhecimento das Faces encontradas}{section.3.2}% 12
+\BOOKMARK [0][-]{chapter.4}{Trabalhos Correlatos}{}% 13
+\BOOKMARK [1][-]{section.4.1}{Projeto CHIL}{chapter.4}% 14
+\BOOKMARK [2][-]{subsection.4.1.1}{Rastreamento e Lozaliza\347\343o de Pessoas}{section.4.1}% 15
+\BOOKMARK [2][-]{subsection.4.1.2}{Identifica\347\343o das Pessoas}{section.4.1}% 16
+\BOOKMARK [0][-]{section*.14}{Refer\352ncias}{}% 17

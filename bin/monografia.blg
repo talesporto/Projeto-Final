@@ -1,50 +1,54 @@
-This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
+This is BibTeX, Version 0.99d (TeX Live 2010)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: bin/monografia.aux
 The style file: plain.bst
 Database file #1: bibliografia.bib
+A bad cross reference---entry "chil"
+refers to entry "DBLP:conf/fgr/2008", which doesn't exist
+Warning--I didn't find a database entry for "DBLP:conf/fgr/2008"
 Warning--to sort, need author or key in servodetection
 Warning--empty author in servodetection
 Warning--empty year in lopes
 Warning--empty year in milene
-You've used 17 entries,
+You've used 20 entries,
             2118 wiz_defined-function locations,
-            596 strings with 6601 characters,
-and the built_in function-call counts, 4094 in all, are:
-= -- 420
-> -- 119
-< -- 2
-+ -- 54
-- -- 34
-* -- 230
-:= -- 730
-add.period$ -- 50
-call.type$ -- 17
-change.case$ -- 69
+            615 strings with 7086 characters,
+and the built_in function-call counts, 4994 in all, are:
+= -- 505
+> -- 156
+< -- 3
++ -- 69
+- -- 46
+* -- 285
+:= -- 881
+add.period$ -- 59
+call.type$ -- 20
+change.case$ -- 84
 chr.to.int$ -- 0
-cite$ -- 21
-duplicate$ -- 180
-empty$ -- 343
-format.name$ -- 34
-if$ -- 844
+cite$ -- 24
+duplicate$ -- 220
+empty$ -- 420
+format.name$ -- 46
+if$ -- 1038
 int.to.chr$ -- 0
-int.to.str$ -- 17
-missing$ -- 11
-newline$ -- 87
-num.names$ -- 32
-pop$ -- 55
+int.to.str$ -- 20
+missing$ -- 14
+newline$ -- 102
+num.names$ -- 38
+pop$ -- 71
 preamble$ -- 1
-purify$ -- 51
+purify$ -- 63
 quote$ -- 0
-skip$ -- 131
+skip$ -- 159
 stack$ -- 0
-substring$ -- 218
-swap$ -- 26
-text.length$ -- 2
+substring$ -- 260
+swap$ -- 35
+text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 68
+type$ -- 80
 warning$ -- 4
-while$ -- 41
-width$ -- 19
-write$ -- 184
-(There were 4 warnings)
+while$ -- 50
+width$ -- 22
+write$ -- 216
+(There was 1 error message)
