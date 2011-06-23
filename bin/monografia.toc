@@ -11,15 +11,15 @@
 \contentsline {subsubsection}{M\IeC {\'e}todo Viola-Jones}{12}{section*.8}
 \contentsline {subsection}{\numberline {3.2.2}Reconhecimento das Faces encontradas}{15}{subsection.3.2.2}
 \contentsline {subsubsection}{Reconhecimento facial com \textit {Eigenfaces}}{17}{section*.9}
-\contentsline {subsubsection}{Redu\IeC {\c c}\IeC {\~a}o de dimensionalidade utilizando PCA}{18}{section*.10}
-\contentsline {subsubsection}{Retratando as componentes principais}{19}{section*.11}
+\contentsline {subsubsection}{Redu\IeC {\c c}\IeC {\~a}o do ru\IeC {\'\i }do utilizando PCA}{18}{section*.10}
+\contentsline {subsubsection}{As componentes principais - autovetor(\textit {eingenvector})}{19}{section*.11}
 \contentsline {subsubsection}{As limita\IeC {\c c}\IeC {\~o}es do \textit {Eigenfaces}}{20}{section*.12}
-\contentsline {subsubsection}{``Passo a passo'' da abordagem de Reconhecimento Facial com \textit {Eigenfaces}}{21}{section*.13}
-\contentsline {chapter}{\numberline {4}Trabalhos Correlatos}{24}{chapter.4}
-\contentsline {section}{\numberline {4.1}Projeto CHIL}{24}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}Rastreamento e Lozaliza\IeC {\c c}\IeC {\~a}o de Pessoas}{24}{subsection.4.1.1}
-\contentsline {subsection}{\numberline {4.1.2}Identifica\IeC {\c c}\IeC {\~a}o das Pessoas}{26}{subsection.4.1.2}
-\contentsline {section}{\numberline {4.2}Identifica\IeC {\c c}\IeC {\~a}o multimodal e localiza\IeC {\c c}\IeC {\~a}o de usu\IeC {\'a}rios em um ambiente inteligente}{27}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Detec\IeC {\c c}\IeC {\~a}o de movimento, Localiza\IeC {\c c}\IeC {\~a}o e Rastreamento}{28}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}Detec\IeC {\c c}\IeC {\~a}o e Reconhecimento Facial}{28}{subsection.4.2.2}
-\contentsline {chapter}{Refer\^encias}{30}{section*.14}
+\contentsline {subsubsection}{``Passo a passo'' sobre \textit {Eigenfaces}}{21}{section*.13}
+\contentsline {chapter}{\numberline {4}Trabalhos Correlatos}{25}{chapter.4}
+\contentsline {section}{\numberline {4.1}Projeto CHIL}{25}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Rastreamento e Lozaliza\IeC {\c c}\IeC {\~a}o de Pessoas}{25}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Identifica\IeC {\c c}\IeC {\~a}o das Pessoas}{27}{subsection.4.1.2}
+\contentsline {section}{\numberline {4.2}Identifica\IeC {\c c}\IeC {\~a}o multimodal e localiza\IeC {\c c}\IeC {\~a}o de usu\IeC {\'a}rios em um ambiente inteligente}{28}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Detec\IeC {\c c}\IeC {\~a}o de movimento, Localiza\IeC {\c c}\IeC {\~a}o e Rastreamento}{29}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Detec\IeC {\c c}\IeC {\~a}o e Reconhecimento Facial}{29}{subsection.4.2.2}
+\contentsline {chapter}{Refer\^encias}{31}{section*.14}
