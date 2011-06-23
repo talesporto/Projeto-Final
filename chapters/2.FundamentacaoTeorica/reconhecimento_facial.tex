@@ -56,7 +56,7 @@ A detecção de faces é definida como o processo que determina a existência ou
 
 	\begin{figure}[hbt]
 		\begin{center}
-			\includegraphics[height=9.5cm,width=12.5cm]{figuras/2.FundamentacaoTeorica/enquadramentoRosto.png}
+			\includegraphics[width=14cm]{figuras/2.FundamentacaoTeorica/enquadramentoRosto.png}
 		\end{center}
 		\caption{Exemplo de um processo de detecção de uma face em uma imagem.}
 		\label{enquadramentoRosto}
@@ -183,7 +183,7 @@ Na etapa de reconhecimento, as faces detectadas, serão comparadas com um banco 
 
 Mais antiga e mais comum, as técnicas 2D são amplamente utilizadas e as principais são:
 	\begin{enumerate}
-		\item \textbf{\textit{Eigenfaces}:} extrai as informações relevantes de uma face, codifica-a da maneira mais eficiente possível, e a compara com um banco de faces codificadas de maneira similar. Extrai as informações relevantes contidas em uma imagem de uma face de uma maneira simples captando a variação em uma coleção de imagens de face e usando essa informação para codificar e comparar imagens individuais de faces~\cite{turk}. É baseado em projeção linear das imagens em uma espaço de imagens de menor dimensão. Para redução dimensional utiliza PCA (\textit{Principal Component Analisys}) maximizando a dispersão total entre todas as imagens~\cite{belhumeur};
+		\item \textbf{\textit{Eigenfaces}:} extrai as informações relevantes de uma face, codifica-a da maneira mais eficiente possível, e a compara com um banco de faces codificadas de maneira similar. Extrai as informações relevantes contidas em uma imagem de uma face de uma maneira simples captando a variação em uma coleção de imagens de face e usando essa informação para codificar e comparar imagens individuais de faces~\cite{turk}. É baseado em projeção linear das imagens em uma espaço de imagens de menor dimensão. Para redução dimensional utiliza PCA - ``\textit{Principal Component Analisys} (Analíse de componente principal)'' maximizando a dispersão total entre todas as imagens~\cite{belhumeur};
 
 		\item \textbf{Redes Neurais:} uma rede neural artificial é um modelo computacional capaz de, entre outras funções, armazenar, classificar padrões, realizar interpolação de funções não-lineares e apresentar soluções heurísticas para problemas de otimização. Isso é conseguido através de um processo denominado ``aprendizado''. O uso de redes neurais visa tornar o sistema de reconhecimento capaz de absorver pequenas variações ocorridas no momento da coleta de medidas faciais. Espera-se, portanto,  mais robustez a falhas e que responda de forma mais confiável~\cite{oliveira};
 
@@ -196,7 +196,7 @@ As técnicas 3D não será o foco desse trabalho pois ainda não estão maduras 
 
 De todos os métodos apresentados o \textit{Eigenfaces} se mostrou o de melhor custo benefício, devido ao seu baixo custo computacional e a sua, relativamente alta, confiabilidade.
 
-Este é um algoritmo simples e fácil de implementar e os passos utilizados por ele também são utilizados em muitos métodos avançados. Os princípios básicos por trás dele, como PCA (\textit{Principal Component Analisys} - Analíse de componente principal) e \textit{Distance-Based Matching} (Correspondência Baseada na Distância) aparecem cada vez mais na computação visual e em diversas aplicações de inteligencia artificial~\cite{hewitt}.
+Este é um algoritmo simples e fácil de implementar e os passos utilizados por ele também são utilizados em muitos métodos avançados. Os princípios básicos por trás dele, como PCA - ``\textit{Principal Component Analisys} (Analíse de componente principal)'' e \textit{Distance-Based Matching} (Correspondência Baseada na Distância) aparecem cada vez mais na computação visual e em diversas aplicações de inteligencia artificial~\cite{hewitt}.
 
 Basicamente, as etapas do processo de reconhecimento são simples e bem definidas. Dada uma imagem de um rosto desconhecido e imagens do rosto das pessoas conhecidas executa as seguintes ações~\cite{hewitt}:
 
@@ -221,7 +221,7 @@ Imagens possuem ``ruídos'' e vamos definir ruído como qualquer coisa que atrap
 
 \subsubsection{Redução do ruído utilizando PCA}
 
-O \textit{Eigenfaces} utiliza o método PCA (\textit{Principal Components Analysis}) para reduzir a dimensionalidade da imagem~\cite{hewitt}.
+O \textit{Eigenfaces} utiliza o método PCA - ``\textit{Principal Component Analisys} (Analíse de componente principal)'' para reduzir a dimensionalidade da imagem~\cite{hewitt}.
 
 Para se ter uma idéia de como o PCA funciona, vejamos um caso especial chamado de \textit{``least squares line fit''}. O lado esquerdo da Figura \ref{exemploPCA} mostra um exemplo de uma linha média entre três pontos, que são, no mapa em duas dimenções, Los Angeles, Chicago e Nova York. Estes três pontos do mapa são quase, mas não completamente, uma única linha. A linha tem apenas uma dimensão. Por isso, se conseguirmos substituir as localizações dos pontos em duas dimenções por localizações ao longo de uma única linha, vamos ter reduzido a dimenção do ponto em questão~\cite{hewitt}.
 

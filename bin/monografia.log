@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.4.27)  23 JUN 2011 15:31
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.4.27)  23 JUN 2011 15:46
 entering extended mode
  %&-line parsing enabled.
 **monografia.tex
@@ -731,12 +731,12 @@ File: figuras/2.FundamentacaoTeorica/diferencailuminacao.png Graphic file (type
  png)
  <use figuras/2.FundamentacaoTeorica/diferencailuminacao.png>
 [8] [9 <./figuras/2.FundamentacaoTeorica/diferencailuminacao.png (PNG copy)>]
-<figuras/2.FundamentacaoTeorica/enquadramentoRosto.png, id=372, 558.085pt x 420
-.57124pt>
+<figuras/2.FundamentacaoTeorica/enquadramentoRosto.png, id=372, 504.88625pt x 5
+04.88625pt>
 File: figuras/2.FundamentacaoTeorica/enquadramentoRosto.png Graphic file (type 
 png)
- <use figuras/2.FundamentacaoTeorica/enquadramentoRosto.png> [10 <./figuras/2.F
-undamentacaoTeorica/enquadramentoRosto.png (PNG copy)>]
+ <use figuras/2.FundamentacaoTeorica/enquadramentoRosto.png>
+[10 <./figuras/2.FundamentacaoTeorica/enquadramentoRosto.png (PNG copy)>]
 Overfull \hbox (0.42082pt too wide) in paragraph at lines 80--81
 \T1/cmr/m/n/12 ob-je-tivo prin-ci-pal en-con-trar as ca-rac-te-rís-ti-cas es-tr
 u-tu-rais que exis-tem mesmo quando
@@ -760,43 +760,43 @@ File: figuras/2.FundamentacaoTeorica/haar_features.png Graphic file (type png)
 .1325pt>
 File: figuras/2.FundamentacaoTeorica/haarfeaturestypes.png Graphic file (type p
 ng)
- <use figuras/2.FundamentacaoTeorica/haarfeaturestypes.png> [12 <./figuras/2.Fu
-ndamentacaoTeorica/haar_features.png>]
-<figuras/2.FundamentacaoTeorica/integral_image.png, id=438, 384.41489pt x 307.5
+ <use figuras/2.FundamentacaoTeorica/haarfeaturestypes.png> [12]
+<figuras/2.FundamentacaoTeorica/integral_image.png, id=437, 384.41489pt x 307.5
 3192pt>
 File: figuras/2.FundamentacaoTeorica/integral_image.png Graphic file (type png)
 
  <use figuras/2.FundamentacaoTeorica/integral_image.png>
-<figuras/2.FundamentacaoTeorica/integral_image2.png, id=443, 372.11362pt x 299.
+<figuras/2.FundamentacaoTeorica/integral_image2.png, id=442, 372.11362pt x 299.
 84361pt>
 File: figuras/2.FundamentacaoTeorica/integral_image2.png Graphic file (type png
 )
  <use figuras/2.FundamentacaoTeorica/integral_image2.png> [13 <./figuras/2.Fund
-amentacaoTeorica/haarfeaturestypes.png (PNG copy)>]
-<figuras/2.FundamentacaoTeorica/filterchain.png, id=457, 31.25677pt x 37.94176p
+amentacaoTeorica/haar_features.png>]
+<figuras/2.FundamentacaoTeorica/filterchain.png, id=459, 31.25677pt x 37.94176p
 t>
 File: figuras/2.FundamentacaoTeorica/filterchain.png Graphic file (type png)
  <use figuras/2.FundamentacaoTeorica/filterchain.png> [14 <./figuras/2.Fundamen
-tacaoTeorica/integral_image.png>] [15 <./figuras/2.FundamentacaoTeorica/integra
-l_image2.png>] [16 <./figuras/2.FundamentacaoTeorica/filterchain.png (PNG copy)
->]
-<figuras/2.FundamentacaoTeorica/graficoDistanciaEntrePontos.png, id=494, 153.21
+tacaoTeorica/haarfeaturestypes.png (PNG copy)>] [15 <./figuras/2.FundamentacaoT
+eorica/integral_image.png>] [16 <./figuras/2.FundamentacaoTeorica/integral_imag
+e2.png>]
+<figuras/2.FundamentacaoTeorica/graficoDistanciaEntrePontos.png, id=498, 153.21
 24pt x 120.9318pt>
 File: figuras/2.FundamentacaoTeorica/graficoDistanciaEntrePontos.png Graphic fi
 le (type png)
 
 <use figuras/2.FundamentacaoTeorica/graficoDistanciaEntrePontos.png> [17 <./fig
-uras/2.FundamentacaoTeorica/graficoDistanciaEntrePontos.png (PNG copy)>]
+uras/2.FundamentacaoTeorica/filterchain.png (PNG copy)>]
 <figuras/2.FundamentacaoTeorica/PCAexemploMapa.png, id=512, 445.665pt x 207.776
 25pt>
 File: figuras/2.FundamentacaoTeorica/PCAexemploMapa.png Graphic file (type png)
 
  <use figuras/2.FundamentacaoTeorica/PCAexemploMapa.png> [18 <./figuras/2.Funda
-mentacaoTeorica/PCAexemploMapa.png (PNG copy)>] [19]
-<figuras/2.FundamentacaoTeorica/eigenfaces.png, id=540, 158.994pt x 186.9384pt>
+mentacaoTeorica/graficoDistanciaEntrePontos.png (PNG copy)>] [19 <./figuras/2.F
+undamentacaoTeorica/PCAexemploMapa.png (PNG copy)>]
+<figuras/2.FundamentacaoTeorica/eigenfaces.png, id=539, 158.994pt x 186.9384pt>
 File: figuras/2.FundamentacaoTeorica/eigenfaces.png Graphic file (type png)
 <use figuras/2.FundamentacaoTeorica/eigenfaces.png>
-<figuras/2.FundamentacaoTeorica/exemplosImagensIluminacaoo.png, id=547, 238.641
+<figuras/2.FundamentacaoTeorica/exemplosImagensIluminacaoo.png, id=546, 238.641
 56pt x 119.69719pt>
 File: figuras/2.FundamentacaoTeorica/exemplosImagensIluminacaoo.png Graphic fil
 e (type png)
@@ -878,7 +878,7 @@ Here is how much of TeX's memory you used:
  10051 multiletter control sequences out of 15000+50000
  15468 words of font info for 35 fonts, out of 3000000 for 9000
  30 hyphenation exceptions out of 8191
- 45i,8n,69p,1119b,463s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 45i,8n,69p,1119b,461s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/share/texmf/fonts
 /enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texmf-texlive/fonts/type1/publi
 c/amsfonts/cm/cmex10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/
@@ -894,9 +894,9 @@ pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texm
 f/fonts/type1/public/cm-super/sfrm1440.pfb></usr/share/texmf/fonts/type1/public
 /cm-super/sfrm2074.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1200.p
 fb>
-Output written on ./bin/monografia.pdf (42 pages, 2524526 bytes).
+Output written on ./bin/monografia.pdf (42 pages, 2608936 bytes).
 PDF statistics:
- 816 PDF objects out of 1000 (max. 8388607)
+ 818 PDF objects out of 1000 (max. 8388607)
  156 named destinations out of 1000 (max. 500000)
  246 words of extra memory for PDF output out of 10000 (max. 10000000)
 
