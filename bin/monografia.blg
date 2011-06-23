@@ -11,43 +11,43 @@ Warning--empty year in lopes
 Warning--empty year in milene
 You've used 21 entries,
             2118 wiz_defined-function locations,
-            620 strings with 7322 characters,
-and the built_in function-call counts, 5487 in all, are:
-= -- 547
-> -- 199
+            621 strings with 7335 characters,
+and the built_in function-call counts, 5628 in all, are:
+= -- 560
+> -- 210
 < -- 3
-+ -- 86
-- -- 62
-* -- 335
-:= -- 969
++ -- 90
+- -- 66
+* -- 353
+:= -- 989
 add.period$ -- 62
 call.type$ -- 21
-change.case$ -- 95
+change.case$ -- 97
 chr.to.int$ -- 0
 cite$ -- 25
-duplicate$ -- 231
-empty$ -- 445
-format.name$ -- 62
-if$ -- 1132
+duplicate$ -- 232
+empty$ -- 454
+format.name$ -- 66
+if$ -- 1162
 int.to.chr$ -- 0
 int.to.str$ -- 21
 missing$ -- 15
 newline$ -- 107
 num.names$ -- 40
-pop$ -- 80
+pop$ -- 82
 preamble$ -- 1
-purify$ -- 73
+purify$ -- 75
 quote$ -- 0
-skip$ -- 166
+skip$ -- 165
 stack$ -- 0
-substring$ -- 280
+substring$ -- 301
 swap$ -- 36
 text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 84
 warning$ -- 4
-while$ -- 53
+while$ -- 54
 width$ -- 23
 write$ -- 227
 (There was 1 error message)
