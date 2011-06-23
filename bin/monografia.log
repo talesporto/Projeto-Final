@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.4.27)  23 JUN 2011 15:46
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.4.27)  23 JUN 2011 16:18
 entering extended mode
  %&-line parsing enabled.
 **monografia.tex
@@ -488,7 +488,7 @@ See the natbib package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.642 ...and\NAT@force@numbers{}\NAT@force@numbers
+l.648 ...and\NAT@force@numbers{}\NAT@force@numbers
                                                   
 ? r
 OK, entering \nonstopmode...
@@ -793,16 +793,16 @@ File: figuras/2.FundamentacaoTeorica/PCAexemploMapa.png Graphic file (type png)
  <use figuras/2.FundamentacaoTeorica/PCAexemploMapa.png> [18 <./figuras/2.Funda
 mentacaoTeorica/graficoDistanciaEntrePontos.png (PNG copy)>] [19 <./figuras/2.F
 undamentacaoTeorica/PCAexemploMapa.png (PNG copy)>]
-<figuras/2.FundamentacaoTeorica/eigenfaces.png, id=539, 158.994pt x 186.9384pt>
+<figuras/2.FundamentacaoTeorica/eigenfaces.png, id=541, 158.994pt x 186.9384pt>
 File: figuras/2.FundamentacaoTeorica/eigenfaces.png Graphic file (type png)
 <use figuras/2.FundamentacaoTeorica/eigenfaces.png>
-<figuras/2.FundamentacaoTeorica/exemplosImagensIluminacaoo.png, id=546, 238.641
+<figuras/2.FundamentacaoTeorica/exemplosImagensIluminacaoo.png, id=548, 238.641
 56pt x 119.69719pt>
 File: figuras/2.FundamentacaoTeorica/exemplosImagensIluminacaoo.png Graphic fil
 e (type png)
 
 <use figuras/2.FundamentacaoTeorica/exemplosImagensIluminacaoo.png> [20]
-<figuras/2.FundamentacaoTeorica/espacoPCA.png, id=561, 18.60953pt x 39.4775pt>
+<figuras/2.FundamentacaoTeorica/espacoPCA.png, id=564, 18.60953pt x 39.4775pt>
 File: figuras/2.FundamentacaoTeorica/espacoPCA.png Graphic file (type png)
 
 <use figuras/2.FundamentacaoTeorica/espacoPCA.png>
@@ -828,17 +828,17 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-<figuras/3.TrabalhosCorrelatos/chil.png, id=614, 605.26125pt x 456.70625pt>
+<figuras/3.TrabalhosCorrelatos/chil.png, id=617, 605.26125pt x 456.70625pt>
 File: figuras/3.TrabalhosCorrelatos/chil.png Graphic file (type png)
 
 <use figuras/3.TrabalhosCorrelatos/chil.png> [27 <./figuras/3.TrabalhosCorrelat
 os/chil.png (PNG copy)>]
-<figuras/3.TrabalhosCorrelatos/upc.png, id=627, 1033.8625pt x 634.37pt>
+<figuras/3.TrabalhosCorrelatos/upc.png, id=630, 1033.8625pt x 634.37pt>
 File: figuras/3.TrabalhosCorrelatos/upc.png Graphic file (type png)
 
 <use figuras/3.TrabalhosCorrelatos/upc.png> [28 <./figuras/3.TrabalhosCorrelato
 s/upc.png (PNG copy)>]
-<figuras/3.TrabalhosCorrelatos/workflow.png, id=640, 761.84625pt x 484.81125pt>
+<figuras/3.TrabalhosCorrelatos/workflow.png, id=643, 761.84625pt x 484.81125pt>
 File: figuras/3.TrabalhosCorrelatos/workflow.png Graphic file (type png)
 <use figuras/3.TrabalhosCorrelatos/workflow.png> [29 <./figuras/3.TrabalhosCorr
 elatos/workflow.png (PNG copy)>]) [30] (./bin/monografia.bbl
@@ -872,10 +872,10 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
  )
 (\end occurred when \iffalse on line 462 was incomplete) 
 Here is how much of TeX's memory you used:
- 7211 strings out of 495041
- 101260 string characters out of 1181897
+ 7220 strings out of 495041
+ 101418 string characters out of 1181897
  193312 words of memory out of 3000000
- 10051 multiletter control sequences out of 15000+50000
+ 10059 multiletter control sequences out of 15000+50000
  15468 words of font info for 35 fonts, out of 3000000 for 9000
  30 hyphenation exceptions out of 8191
  45i,8n,69p,1119b,461s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -894,9 +894,9 @@ pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texm
 f/fonts/type1/public/cm-super/sfrm1440.pfb></usr/share/texmf/fonts/type1/public
 /cm-super/sfrm2074.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1200.p
 fb>
-Output written on ./bin/monografia.pdf (42 pages, 2608936 bytes).
+Output written on ./bin/monografia.pdf (42 pages, 2609794 bytes).
 PDF statistics:
- 818 PDF objects out of 1000 (max. 8388607)
- 156 named destinations out of 1000 (max. 500000)
+ 823 PDF objects out of 1000 (max. 8388607)
+ 157 named destinations out of 1000 (max. 500000)
  246 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -63,6 +63,11 @@ E~.~C. Lopes.
 \newblock Technical report, Pontif{\'\i}cia Universidade Cat{\'o}lica do Rio
   Grande do Sul.
 
+\bibitem{turkpentland}
+A.~P.~Pentland M.~A.~Turk.
+\newblock Face recognition using eigenfaces.
+\newblock {\em IEEE Computer Society Confer}, 1991.
+
 \bibitem{milene}
 J.~H.~Saito M.~Arantes, A. N.~Ide.
 \newblock A system for fingerprint minutiae classification and recognition.

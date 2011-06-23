@@ -104,7 +104,7 @@ O Método \textit{Viola-Jones} para detecção facial utiliza quatro conceitos c
 		\begin{center}
 			\includegraphics[height=6.5cm,width=12.5cm]{figuras/2.FundamentacaoTeorica/haar_features.png}
 		\end{center}
-		\caption{Exemplo de simples características retangulares (\textit{Haar Features}). Adaptada de~\cite{servodetection}.}
+		\caption{Exemplo de simples características retangulares (\textit{Haar features}). Adaptada de~\cite{servodetection}.}
 		\label{haarfeatures}
 	\end{figure}
 
@@ -114,7 +114,7 @@ A detecção facial em imagens é baseado em simples caracteríticas retangulare
 		\begin{center}
 			\includegraphics[height=6.5cm,width=12.5cm]{figuras/2.FundamentacaoTeorica/haarfeaturestypes.png}
 		\end{center}
-		\caption{\textit{Haar Features} com dois, três e quatro retângulos~\cite{violajones}.}
+		\caption{\textit{Haar features} com dois, três e quatro retângulos~\cite{violajones}.}
 		\label{haarfeaturestypes}
 	\end{figure}
 
@@ -259,11 +259,11 @@ Basicamente, a idéia explicada até agora consiste na transformação da imagem
 
 Em nossa definição de uma linha como um subespaço, usamos $\displaystyle x$ e $\displaystyle y$ como coordenadas para definir $\displaystyle m$, que é sua inclinação no espaço gerador. Quando $\displaystyle m$ é um componente principal de um conjunto de pontos, ela é chamada de autovetor ou \textit{eingenvector}, daí o nome \textit{Eigenfaces}~\cite{hewitt}. 
 
-Para o reconhecimento facial, cada autovetor representa a inclinação de uma linha em um espaço de 2500 dimenções. Como no caso de duas dimenções, precisamos de todas as 2500 dimensões para definir a inclinação de cada linha. Embora seja impossível visualizar uma linha em muitas dimensões, podemos visualiza-las em uma simples imagem convertendo o ponto projetado para colocar o valor de cada \textit{pixel} correspondente, ou seja, ao projetar o ponto em uma linha obtemos uma nova localização no espaço e ao converter essa nova localização de volta em imagem obtemos imagens \textit{facelike} também chamadas de \textit{eigenfaces}~\cite{hewitt}.
+Para o reconhecimento facial, cada autovetor representa a inclinação de uma linha em um espaço de 2500 dimenções. Como no caso de duas dimenções, precisamos de todas as 2500 dimensões para definir a inclinação de cada linha. Embora seja impossível visualizar uma linha em muitas dimensões, podemos visualiza-las em uma simples imagem convertendo o ponto projetado para colocar o valor de cada \textit{pixel} correspondente, ou seja, ao projetar o ponto em uma linha obtemos uma nova localização no espaço e ao converter essa nova localização de volta em imagem obtemos imagens \textit{facelike} também chamadas de \textit{eigenfaces}~\cite{hewitt,turkpentland}.
 
 O \textit{Eigenfaces} é um método interessante para dar-nos alguma intuição sobre os componentes principais para o nosso conjunto de dados. O lado esquerdo da Figura \ref{exemploEigenfaces} mostra as imagens das faces de dez pessoas. O lado direito  mostra os seis primeiros componentes principais deste conjunto de dados, apresentados como \textit{eigenfaces}. Uma \textit{eigenface} da componente principal é uma imagem média de todas as \textit{eigenfaces} que estão projetadas na mesma. Essas \textit{eigenfaces} muitas vezes têm um olhar fantasmagórico, porque combinam elementos de várias faces. As regiões de \textit{pixels} mais brilhantes e as regiões mais escuras em cada imagem são as que mais contribuem para as componentes principais~\cite{hewitt}. 
 
-As \textit{eigenfaces} médias das componentes principais são usadas para que a partir delas possa se estimar a distância euclidiana entre a imagem que se deseja reconhecer e as imagens presentes no banco e a partir dessas distâncias dizer de qual delas a nova imagem mais se aproxima.
+As \textit{eigenfaces} médias das componentes principais são usadas para que a partir delas possa se estimar a distância euclidiana entre a imagem que se deseja reconhecer e as imagens presentes no banco e a partir dessas distâncias dizer de qual delas a nova imagem mais se aproxima~\cite{turkpentland}.
 
 	\begin{figure}[hbt]
 		\begin{center}
