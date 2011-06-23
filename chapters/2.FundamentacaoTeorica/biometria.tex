@@ -2,7 +2,7 @@
 
 As abordagens de identificação pessoal que utilizam ``alguma coisa que você sabe'', como Número de Identificação Pessoal (PIN - ``Personal Identification Number''), ou ``alguma coisa que você tenha'', como um cartão de identificação, não são confiáveis o suficiente para satisfazer os requisitos de segurança de um sistema de transações eletrônicas porque não têm a capacidade de diferenciar um usuário legítimo de um impostor que adiquiriu de forma ilegal o privilégio de acesso \cite{hong}. Esta fragilidade pode ser evitada se utilzarmos o nosso corpo como chave do sistema. Alguns traços fisícos ou comportamentais são muito mais complicados de serem forjados que uma cadeia de caracteres \cite{drovetto}.
 
-Biometria é uma tecnologia utilizada para identificação de um indivíduo baseado em suas características físicas ou comportamentais, baseia-se em ``alguma coisa que você é ou faz'' para realizar a identificação e, por isso, tem a capacidade de diferenciar entre um indivíduo legítimo de um impostor \cite{hong}. As características físicas estão relacionadas a composição do corpo humano e seu formato e as comportamentais estão relacionadas ao comportamento das pessoas \cite{drovetto}. A figura \ref{caracteristicasBiometricas} contém alguns exemplos desses dois tipos diferentes de características biométricas.
+Biometria é uma tecnologia utilizada para identificação de um indivíduo baseado em suas características físicas ou comportamentais, baseia-se em ``alguma coisa que você é ou faz'' para realizar a identificação e, por isso, tem a capacidade de diferenciar entre um indivíduo legítimo de um impostor \cite{hong}. As características físicas estão relacionadas a composição do corpo humano e seu formato e as comportamentais estão relacionadas a forma como o corpo humano faz algo \cite{drovetto}. A figura \ref{caracteristicasBiometricas} contém alguns exemplos desses dois tipos diferentes de características biométricas.
 
 	\begin{figure}[hbt]
 		\begin{center}
@@ -26,7 +26,7 @@ Porém, na prática também são considerados outros requisitos \cite{milene}:
 	\begin{enumerate}
 		\item \textbf{desempenho}: o processo de identificação deve apresentar um resultado aceitável;
 		\item \textbf{aceitação}: indica em que ponto as pessoas estão dispostas a aceitar o sistema biométrico;
-		\item \textbf{evasão}: refere a facilidade de ser adulterado;
+		\item \textbf{evasão}: refere-se a facilidade de ser adulterado;
 	\end{enumerate}
 
 São várias as vantangens que os sistemas biométricos têm em relação aos sistemas convencionais. Listamos as vantagens principais \cite{drovetto}:
@@ -41,7 +41,7 @@ Na prática um sistema biométrico deve ser capaz de \cite{hong}:
 		
 	\begin{enumerate}
 		\item atingir uma acurácia aceitável e com uma velocidade razoável;
-		\item não ser prejudiciável aos indivíduos e ser aceito pela população alvo;
+		\item não ser prejudicial aos indivíduos e ser aceito pela população alvo;
 		\item ser suficientemente robusto para métodos fraudulentos;
 	\end{enumerate}
 
@@ -55,9 +55,9 @@ Novas técnicas de reconhecimento por meio de face, íris, retina e voz, entre o
 				\hline \hline \bf Face & Alta & Baixa & Média & Alta \\
 				\hline \bf  Digital & Média & Alta & Alta & Média \\
 				\hline \bf Geometria da Mão & Média & Média & Média & Alta \\
-				\hline \bf ``Hand Vein'' & Média & Média & Média & Média \\
+				\hline \bf \textit{``Hand Vein''} & Média & Média & Média & Média \\
 				\hline \bf Iris & Alta & Alta & Alta & Média \\
-				\hline \bf ``Retina Scan'' & Alta & Alta & Média & Baixa \\
+				\hline \bf \textit{``Retina Scan''} & Alta & Alta & Média & Baixa \\
 				\hline \bf Assinatura & Baixa & Baixa & Baixa & Alta\\
 				\hline \bf Voz & Média & Baixa & Baixa & Média \\
 				\hline \bf Termograma & Alta & Alta & Baixa & Alta \\
@@ -75,9 +75,9 @@ Novas técnicas de reconhecimento por meio de face, íris, retina e voz, entre o
 				\hline \hline \bf Face & Baixa & Alta & Baixa\\
 				\hline \bf Digital & Alta & Média &  Alta\\
 				\hline \bf Geometria da Mão & Média & Média & Média\\
-				\hline \bf ``Hand Vein'' & Média & Média & Alta\\
+				\hline \bf \textit{``Hand Vein''} & Média & Média & Alta\\
 				\hline \bf Iris  & Média & Média & Alta\\
-				\hline \bf ``Retina Scan'' & Alta & Baixa & Alta\\
+				\hline \bf \textit{``Retina Scan''} & Alta & Baixa & Alta\\
 				\hline \bf Assinatura & Baixa & Alta & Baixa \\
 				\hline \bf Voz & Baixa & Alta & Baixa \\
 				\hline \bf Termograma & Média & Alta & Alta \\
@@ -93,18 +93,18 @@ Sistemas de identificação reconhecem um indivíduo pesquisando em todo o banco
 
 Em um sistema biométrico exitem duas possíveis respostas, um usuário é ou não é quem afirma ser, sendo assim o sistema pode classificar o usuário como cliente ou impostor. Nessa tomada de decisão pode ocorrer dois tipos de erros: uma falsa aceitação, ao aceitar um impostor, (\textit{False Acceptance} - FA) ou uma falsa rejeição (\textit{False Rejection} - FR), ao rejeitar um cliente. Baseado nesses erros, duas taxas são utilizadas para avaliar sistemas biométricos: taxa de falsa aceitação (\textit{False Acceptance Rate} - FAR) e taxa de falsa rejeição (\textit{False Rejection Rate} - FRR) \cite{drovetto}.
 
-A FAR é a probabilidade de um sistema biométrico aceitar um impostor como cliente. Essa probabilidade é calculada pela equação (\ref{equacaoProbabilidadeFAR}) em que $\displaystyle Nfa$ é o número de falsas aceitações e $\displaystyle Ni$ é o número de impostores que tentaram acessar o sistema. A variação da taxa é representada pelo intervalo fechado $\displaystyle [0,1]$, onde o valor $\displaystyle 1$ significa que todos os impostores foram falsamente aceitos e o valor $\displaystyle 0$ significa que todos impostores foram rejeitados. Logo quanto menor o FAR mais seguro o sistema é \cite{drovetto}.
+A FAR é a probabilidade de um sistema biométrico aceitar um impostor como cliente. Essa probabilidade é calculada pela equação \ref{equacaoProbabilidadeFAR} em que $\displaystyle Nfa$ é o número de falsas aceitações e $\displaystyle Ni$ é o número de impostores que tentaram acessar o sistema. A variação da taxa é representada pelo intervalo fechado $\displaystyle [0,1]$, onde o valor $\displaystyle 1$ significa que todos os impostores foram falsamente aceitos e o valor $\displaystyle 0$ significa que todos impostores foram rejeitados. Logo quanto menor o FAR mais seguro o sistema é \cite{drovetto}.
 
 	\begin{equation}
 		FAR = \frac{Nfa}{Ni} \cite{drovetto}
 		\label{equacaoProbabilidadeFAR}
 	\end{equation} 
 
-A FRR é a probabilidade de um sistema biométrico rejeitar um cliente e classifica-lo como impostor. Essa probabilidade é calculada pela equação (\ref{equacaoProbabilidadeFRR}) em que $\displaystyle Nfr$ é o número de falsas rejeições e $\displaystyle Nc$ é o número de clientes que tentaram acessar o sistema. A variação da taxa é representada pelo intervalo fechado $\displaystyle [0,1]$, onde o valor $\displaystyle 1$ significa que todos os clientes foram falsamente rejeitados e o valor $\displaystyle 0$ significa que todo os cliente foram aceitos corretamente. Em sistemas cuja performance tem maior grau de prioridade que a segurança, deve-se reduzir a FRR para minimizar a ocorrência de falsas rejeições \cite{drovetto}.
+A FRR é a probabilidade de um sistema biométrico rejeitar um cliente e classifica-lo como impostor. Essa probabilidade é calculada pela equação \ref{equacaoProbabilidadeFRR} em que $\displaystyle Nfr$ é o número de falsas rejeições e $\displaystyle Nc$ é o número de clientes que tentaram acessar o sistema. A variação da taxa é representada pelo intervalo fechado $\displaystyle [0,1]$, onde o valor $\displaystyle 1$ significa que todos os clientes foram falsamente rejeitados e o valor $\displaystyle 0$ significa que todos os clientes foram aceitos corretamente. Em sistemas cuja performance tem maior grau de prioridade que a segurança, deve-se reduzir a FRR para minimizar a ocorrência de falsas rejeições \cite{drovetto}.
 
 	\begin{equation}
 		FRR = \frac{Nfr}{Nc} \cite{drovetto}
 		\label{equacaoProbabilidadeFRR}
 	\end{equation} 
 
-A partir dessas taxas de erro, pode-se obter outras medidas como a \textit{Equal Error Rate} (ERR). Esta corresponde a taxa de erro na qual tanto a FAR quanto a FRR possuem o mesmo valor. Como muitos sistemas têm comportamentos diferentes, a ERR normalmente é utilizada para uma comparação mais rigorosa entre o sistemas. Quanto menor for a ERR, mas presciso é considerado o sistema \cite{drovetto}.
+A partir dessas taxas de erro, pode-se obter outras medidas como a \textit{Equal Error Rate} (ERR). Esta corresponde a taxa de erro na qual tanto a FAR quanto a FRR possuem o mesmo valor. Como muitos sistemas têm comportamentos diferentes, a ERR normalmente é utilizada para uma comparação mais rigorosa entre os sistemas. Quanto menor for a ERR, mais preciso é considerado o sistema \cite{drovetto}.
