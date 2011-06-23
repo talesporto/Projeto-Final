@@ -13,8 +13,10 @@
 \backcite {chil}{{vi}{(document)}{Doc-Start}}
 \backcite {salah}{{vi}{(document)}{Doc-Start}}
 \backcite {salah}{{vi}{(document)}{Doc-Start}}
-\backcite {milene}{{vii}{(document)}{Doc-Start}}
-\backcite {milene}{{vii}{(document)}{Doc-Start}}
+\backcite {trivedi}{{vi}{(document)}{Doc-Start}}
+\backcite {trivedi}{{vii}{(document)}{Doc-Start}}
+\backcite {milene}{{viii}{(document)}{Doc-Start}}
+\backcite {milene}{{viii}{(document)}{Doc-Start}}
 \backcite {weiser2}{{1}{1}{chapter.1}}
 \backcite {weiser1}{{1}{1}{chapter.1}}
 \backcite {weiser1}{{1}{1}{chapter.1}}
@@ -173,3 +175,14 @@
 \backcite {salah}{{28}{4.2.1}{subsection.4.2.1}}
 \backcite {salah}{{28}{4.2.1}{subsection.4.2.1}}
 \backcite {salah}{{29}{4.2.2}{subsection.4.2.2}}
+\backcite {trivedi}{{29}{4.3}{section.4.3}}
+\backcite {trivedi}{{29}{4.3}{section.4.3}}
+\backcite {trivedi}{{29}{4.3}{section.4.3}}
+\backcite {trivedi}{{29}{4.3}{section.4.3}}
+\backcite {trivedi}{{29}{4.3}{figure.4.4}}
+\backcite {trivedi}{{29}{4.3}{figure.4.4}}
+\backcite {trivedi}{{30}{4.4}{figure.4.4}}
+\backcite {trivedi}{{30}{4.3}{figure.4.4}}
+\backcite {trivedi}{{30}{4.3}{figure.4.4}}
+\backcite {trivedi}{{30}{4.3}{figure.4.4}}
+\backcite {trivedi}{{31}{4.5}{figure.4.5}}

@@ -22,4 +22,6 @@
 \contentsline {section}{\numberline {4.2}Identifica\IeC {\c c}\IeC {\~a}o multimodal e localiza\IeC {\c c}\IeC {\~a}o de usu\IeC {\'a}rios em um ambiente inteligente}{27}{section.4.2}
 \contentsline {subsection}{\numberline {4.2.1}Detec\IeC {\c c}\IeC {\~a}o de movimento, Localiza\IeC {\c c}\IeC {\~a}o e Rastreamento}{28}{subsection.4.2.1}
 \contentsline {subsection}{\numberline {4.2.2}Detec\IeC {\c c}\IeC {\~a}o e Reconhecimento Facial}{28}{subsection.4.2.2}
-\contentsline {chapter}{Refer\^encias}{30}{section*.14}
+\contentsline {section}{\numberline {4.3}Captura de contexto din\IeC {\^a}mico e \textit {Arrays} de v\IeC {\'\i }deos distribu\IeC {\'\i }dos para \textit {SmartSpaces}}{29}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Rastreamento, Detec\IeC {\c c}\IeC {\~a}o de faces e Reconhecimento facial}{30}{subsection.4.3.1}
+\contentsline {chapter}{Refer\^encias}{32}{section*.14}

@@ -57,10 +57,10 @@ No rastreamento multimodal, era esperado que a fusão dos diferentes tipos de da
 \subsection{Identificação das Pessoas}
 
 
-A fim de realizar identificação de forma natural e implicita, os sensores distribuídos no ambiente devem monitorar continuamente o espaço, e captura de dados audiovisual das pessoas discretamente quando eles aparecem. Ou seja, o sistema de identificação de pessoas
+A fim de realizar identificação de forma natural e implicita, os sensores distribuídos no ambiente devem monitorar continuamente o espaço, e captura de dados áudio-visual das pessoas discretamente quando eles aparecem. Ou seja, o sistema de identificação de pessoas
 deve operar em segundo plano, sem necessitar de atenção e cooperação das pessoas. Dependendo da localização de uma pessoa e sua distância dos sensores, os dados recebidos podem variar~\cite{chil}. 
 
-Para reconhecimento facial, o sistema utiliza sequencias de imagens fornecidas pelas várias camêras no \textit{SmartSpace}. A cada $\displaysyle 200ms$ imagens das ``caixas delimitadoras das faces'' e posições dos centros dos olhos são fornecidas, como exemplificado na Figura \ref{chil}. As faces, então, são alinhadas utilizando os centros dos olhos ou utilizando as ``caixas delimitadoras das faces''. Para obter robustez contra alguns erros, o sistema gera algumas imagens alinhadas adicionais modificando rótulos dos centros dos olhos ou os rótulos das ``caixas delimitadoras das faces''~\cite{chil}.
+Para reconhecimento facial, o sistema utiliza sequencias de imagens fornecidas pelas várias câmeras no \textit{SmartSpace}. A cada $\displaysyle 200ms$ imagens das ``caixas delimitadoras das faces'' e posições dos centros dos olhos são fornecidas, como exemplificado na Figura \ref{chil}. As faces, então, são alinhadas utilizando os centros dos olhos ou utilizando as ``caixas delimitadoras das faces''. Para obter robustez contra alguns erros, o sistema gera algumas imagens alinhadas adicionais modificando rótulos dos centros dos olhos ou os rótulos das ``caixas delimitadoras das faces''~\cite{chil}.
 
 	\begin{figure}[hbt]
 		\begin{center}
@@ -74,7 +74,7 @@ Uma das abordagens utiliza reconhecimento facial baseado na aparência utilizand
 
 Nesse projeto foi observado que selecionando somente as imagens frontais de faces, ao invés das amostras disponíveis, é prejudicial para a performance do sistema de reconhecimento~\cite{chil}.
 
-As decisões obtidas do vários pontos de vista das várias camêras são combinados por meio de uma regra de soma ponderada. Os pesos são determinado de acordo com a separação dos dois melhores resultados~\cite{chil}.
+As decisões obtidas do vários pontos de vista das várias câmeras são combinados por meio de uma regra de soma ponderada. Os pesos são determinado de acordo com a separação dos dois melhores resultados~\cite{chil}.
 
 
 
@@ -97,7 +97,7 @@ Os \textit{streams} de dados são processados com ajuda de um \textit{middleware
 Os sensores utilizados e as condições do \textit{SmartSpace} deste projeto são descritos pela Figura \ref{upc}. Os seguintes sensores foram utilizados~\cite{salah}:
 
 	\begin{itemize}
-		\item quatro camêras nos cantos da sala (rotuladas como Cam1 a Cam4 na Figura \ref{upc});
+		\item quatro câmeras nos cantos da sala (rotuladas como Cam1 a Cam4 na Figura \ref{upc});
 		\item uma camêra \textit{zenithal fish-eye} no telhado (rotulada como Cam8 na Figura \ref{upc});
 		\item uma camêra ativa apontadae com zoom para a porta de entrada para capturar as faces das pessoas que entram na sala (rotulada como PTZ na Figura \ref{upc});
 		\item um \textit{array} de microfones NIST Mark III de 64 canais ;
@@ -115,7 +115,7 @@ O projeto conectar diferentes métodos de rastreamento e reconhecimento prover s
 		\label{workflow}
 	\end{figure}
 
-As camêras no sistema são responsáveis pela detecção de movimento, rastreamento, detecção e reconhecimento facial que são as funcionalidades que nos interessam.
+As câmeras no sistema são responsáveis pela detecção de movimento, rastreamento, detecção e reconhecimento facial que são as funcionalidades que nos interessam.
 
 \subsection{Detecção de movimento, Localização e Rastreamento}
 
@@ -132,9 +132,71 @@ Para cada sequência de imagens, as faces de um mesmo indivíduo são agrupadas.
 
 Uma abordagem baseada em PCA (\textit{Principal Component Analisys}) foi utilizado para comparação entre as imagens.
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\section{Captura de contexto dinâmico e \textit{Arrays} de vídeos distribuídos para \textit{SmartSpaces}}
 
+Esse trabalho apresenta detalhes de um projeto de pesquisa de longo prazo, onde \textit{SmartSpaces} de uma gama de funcionalidades úteis são projetados, construídos e avaliados sistematicamente. Algumas das funcionalidades chave incluem: detecção de intrusos; rastreamento várias pessoas; pose do corpo e análise de postura; identificação de pessoas; modelagem do corpo humano; e análise do movimento~\cite{trivedi}.
+
+O sistema proposto monitora o ambiente em baixa resolução de forma contínua, detectando somente a presença e localização das pessoas e suas dimensões. Formas de acquisição de imagens mais detalhadas são ativadas quando um evento ou atividade de potencial interesse é detectado. Esses eventos serão os focos de atenção do sistema~\cite{trivedi}.
+
+O monitoramente de baixa resolução e de grande área do ambiente é alcançado graças a algumas câmeras de amplo ângulo de visão e estáticas. Com um pequeno número de câmeras PTZ (\textit{pan/tilt/zoom}) ativas, múltiplos focos de atenção podem ser mantidos de forma simultânea~\cite{trivedi}.
+
+Foi desenvolvido uma arquitetura de sistema para o \textit{SmartSpace} chamada DIVA. Ela pode ser vista como uma rede inteligente e ativa de câmeras, onde várias câmeras ão controladas para prover uma ampla gama de funcionalidades~\cite{trivedi}.
+
+	\begin{figure}[hbt]
+		\begin{center}
+			\includegraphics[scale=0.5]{figuras/3.TrabalhosCorrelatos/micasa_aviary.png}
+		\end{center}
+		\caption{Representação dos \textit{SmartSpaces} MICASA e AVIARY~\cite{trivedi}.}
+		\label{micasa_aviary}
+	\end{figure}
+
+O projeto inclui dois \textit{SmartSpaces} separados, mas conectados. O primeiro é chamado de AVIARY foi projetado para ser uma pequena sala de conferências. O segundo chamado de MICASA foi projetado para ser uma pequena sala de aula. A Figura \ref{micasa_aviary} mostra fotos dos dois \textit{SmartSpaces} e como estão conectados, além da disposição dos sensores utilizados.
+
+Os sensores na sala AVIARY incluem~\cite{trivedi}:
+
+	\begin{itemize}
+		\item uma rede de quatro câmeras omnidirecionais;
+		\item quatro câmeras PTZ;
+		\item quatro câmeras retilíneas státicas;
+		\item dois \textit{arrays} de microfones com quatro microfones cada;
+	\end{itemize}
+
+As quatro câmeras ominidirecionais (ODVSs) estão perto dos cantos de uma mesa de reunião, cobrindo o quarto inteiro de dentro para fora, como mostrado na Figura \ref{micasa_aviary}. As câmeras PTZ e retilíneas estão nos ``vértices'' da sala a $\displaysytle 1.4m$ acima do chão. Os dois \textit{arrays} de microfones foram instalados na parede e no teto~\cite{trivedi}.
+
+Um computador é alocado para rastreamento, utilizando imagens das quatro câmeras ominidirecionais ou imagens das quatro câmeras retílinas estáticas. Outro computador é utilizado para analizar os eventos de áudio e de vídeo. Um terceiro computador é utilizado para arquivar \textit{streams} de áudio e vídeo para posterior recuperação~\cite{trivedi}.
+
+O \textit{SmartSpace} MICASA é duas vezes maior que o AVIARY. Os sensores utilizados nessa sala são~\cite{trivedi}:
 	
+	\begin{itemize}
+		\item uma rede de quatro câmeras omnidirecionais;
+		\item quatro câmeras PTZ;
+		\item oito câmeras retilíneas státicas;
+	\end{itemize}
+
+As câmeras omnidirecionais são instaladas no teto, como mostrado na Figura \ref{micasa_aviary}. As câmeras PTZ e quatro câmeras retilíneas foram instaldas de maneira similar ao \textit{SmartSpace} AVIARY. As quatro câmeras retilíneas restantes foram instaladas nas paredes como mostrado como mostrado na Figura \ref{micasa_aviary}. As câmeras nos vértices possuem maior campo de visão para cobrir toda a sala e fazem parte do array de câmeras para rastreamento~\cite{trivedi}.
+
+\subsection{Rastreamento, Detecção de faces e Reconhecimento facial}
+ 
+Foi desenvolvido um sistema em tempo-real que utiliza a rede de camêras omnidirecionais que é responsável pelo rastreamento, detecção das faces e reconhecimento facial. 
+
+O rastreamento baseado na câmeras omnidirecionais é feito detectando a silhuetas das pessoas por meio da subtração do fundo com remoção de sombras.
+
+O vídeo capturado é processado para detecção e reconhecimento de faces como mostrado na Figura \ref{facerec}. Para detecção de faces utiliza o método de segmentação de tom de pele. As imagens resultantes são classificadas para rejeitar as imagens sem faces. Então, o método \textit{Eigenface} é utilizada tanto para classificação da face quanto para reconhecimento. 
+
+	\begin{figure}[hbt]
+		\begin{center}
+			\includegraphics[scale=0.8]{figuras/3.TrabalhosCorrelatos/facerec.png}
+		\end{center}
+		\caption{Método de detecção e reconhecimento facial~\cite{trivedi}.}
+		\label{facerec}
+	\end{figure}
+
+
+
+
+
 
 
 
