@@ -196,17 +196,17 @@ As técnicas 3D não será o foco desse trabalho pois ainda não estão maduras 
 
 De todos os métodos apresentados o \textit{Eigenfaces} se mostrou o de melhor custo benefício, devido ao seu baixo custo computacional e a sua, relativamente alta, confiabilidade.
 
-Este é um algoritmo simples e fácil de implementar e os passos utilizados por ele também são utilizados em muitos métodos avançados. Os princípios básicos por trás dele, como PCA - ``\textit{Principal Component Analisys} (Analíse de componente principal)'' e \textit{Distance-Based Matching} (Correspondência Baseada na Distância) aparecem cada vez mais na computação visual e em diversas aplicações de inteligencia artificial~\cite{hewitt}.
+Este é um algoritmo simples e fácil de implementar e os passos utilizados por ele também são utilizados em muitos métodos avançados. Os princípios básicos por trás dele, como PCA - ``\textit{Principal Component Analisys} (Analíse de componente principal)'' e \textit{Distance-Based Matching} (Correspondência Baseada na Distância) aparecem cada vez mais na computação visual e em diversas aplicações de inteligência artificial~\cite{hewitt}.
 
 Basicamente, as etapas do processo de reconhecimento são simples e bem definidas. Dada uma imagem de um rosto desconhecido e imagens do rosto das pessoas conhecidas executa as seguintes ações~\cite{hewitt}:
 
 	\begin{enumerate}
 		\item Computa a ``distância'' entre a nova imagem e cada uma das imagens já conhecidas.
 		\item Seleciona a imagem mais proxima do rosto em questão.
-		\item Se a ``distância'' da nova imagem para a imagem já catalogada for menor que o limite predefinido, ``reconhece'' a imagem caso contrário classifica como ``desconhecida''.
+		\item Se a ``distância'' da nova imagem para a imagem já catalogada for menor que o limite pré-definido, ``reconhece'' a imagem caso contrário classifica como ``desconhecida''.
 	\end{enumerate}
 
-Em \textit{Eigenfaces}, a distância entre as imagens é medida ponto a ponto, que também conhecida como ``Distância Euclidiana''. A distância euclidiana em duas dimensões entre os pontos $P_1$ e $P_2$ é dada pela fórmula $\displaystyle d_{12} = \sqrt(d_{x} + d_{y})$, onde $\displaystyle d_x = x_2 - x_1$ e $\displaystyle d_y = y_2-y_1$ e representada na Figura \ref{distanciaEntrePontos}~\cite{hewitt}.
+Em \textit{Eigenfaces}, a distância entre as imagens é medida ponto a ponto e é conhecida como ``Distância Euclidiana''. A distância euclidiana em duas dimensões entre os pontos $P_1$ e $P_2$ é dada pela fórmula $\displaystyle d_{12} = \sqrt(d_{x} + d_{y})$, onde $\displaystyle d_x = x_2 - x_1$ e $\displaystyle d_y = y_2-y_1$ e representada na Figura \ref{distanciaEntrePontos}~\cite{hewitt}.
 
     \begin{figure}[hbt]
 		\begin{center}

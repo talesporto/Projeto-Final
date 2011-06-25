@@ -18,8 +18,11 @@
 \contentsline {figure}{\numberline {3.12}{\ignorespaces Imagens das faces de dois indiv\IeC {\'\i }duos. A face de cada indiv\IeC {\'\i }duo \IeC {\'e} apresentada em quatro diferentes cosndi\IeC {\c c}\IeC {\~o}es de ilumina\IeC {\c c}\IeC {\~a}o. A variabilidade devido \IeC {\`a} ilumina\IeC {\c c}\IeC {\~a}o aqui \IeC {\'e} maior do que a variabilidade entre os indiv\IeC {\'\i }duos. \textit {Eigenfaces} tende a confundir as pessoas quando os efeitos de ilumina\IeC {\c c}\IeC {\~a}o s\IeC {\~a}o muito fortes \cite {hewitt}.}}{23}{figure.3.12}
 \contentsline {figure}{\numberline {3.13}{\ignorespaces Como as distribui\IeC {\c c}\IeC {\~o}es de dados afetam o reconhecimento com \textit {Eigenfaces}. Topo: O melhor cen\IeC {\'a}rio poss\IeC {\'\i }vel - pontos de dados para cada pessoa bem separados. Meio: O pior cen\IeC {\'a}rio - a variabilidade entre as imagens das faces de cada individuo \IeC {\'e} maior do que a variabilidade entre os indiv\IeC {\'\i }duos. Embaixo: um cen\IeC {\'a}rio realista - separa\IeC {\c c}\IeC {\~a}o razo\IeC {\'a}vel, com alguma sobreposi\IeC {\c c}\IeC {\~a}o \cite {hewitt}.}}{24}{figure.3.13}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Exemplo do sistema de indetifica\IeC {\c c}\IeC {\~a}o facial do Projeto CHIL. No canto inferior direito, pode-se observar a imagem da face extra\IeC {\'\i }da~\cite {chil}.}}{27}{figure.4.1}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces A configura\IeC {\c c}\IeC {\~a}o do \textit {SmartSpace}~\cite {salah}.}}{28}{figure.4.2}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces \textit {Workflow} da informa\IeC {\c c}\IeC {\~a}o na arquitetura do \textit {SmartSpace}~\cite {salah}.}}{29}{figure.4.3}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Representa\IeC {\c c}\IeC {\~a}o dos \textit {SmartSpaces} MICASA e AVIARY~\cite {trivedi}.}}{31}{figure.4.4}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces M\IeC {\'e}todo de detec\IeC {\c c}\IeC {\~a}o e reconhecimento facial~\cite {trivedi}.}}{32}{figure.4.5}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Foto do Kinect.}}{25}{figure.4.1}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Organiza\IeC {\c c}\IeC {\~a}o interna do Kinect~\cite {kinect}.}}{26}{figure.4.2}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Exemplo do sistema de indetifica\IeC {\c c}\IeC {\~a}o facial do Projeto CHIL. No canto inferior direito, pode-se observar a imagem da face extra\IeC {\'\i }da~\cite {chil}.}}{29}{figure.5.1}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces A configura\IeC {\c c}\IeC {\~a}o do \textit {SmartSpace}~\cite {salah}.}}{30}{figure.5.2}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces \textit {Workflow} da informa\IeC {\c c}\IeC {\~a}o na arquitetura do \textit {SmartSpace}~\cite {salah}.}}{31}{figure.5.3}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Representa\IeC {\c c}\IeC {\~a}o dos \textit {SmartSpaces} MICASA e AVIARY~\cite {trivedi}.}}{33}{figure.5.4}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces M\IeC {\'e}todo de detec\IeC {\c c}\IeC {\~a}o e reconhecimento facial~\cite {trivedi}.}}{34}{figure.5.5}
