@@ -1,5 +1,4 @@
-This is BibTeX, Version 0.99d (TeX Live 2010)
-Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
 The top-level auxiliary file: bin/monografia.aux
 The style file: plain.bst
 Database file #1: bibliografia.bib
@@ -10,80 +9,45 @@ Warning--to sort, need author or key in servodetection
 Warning--empty author in servodetection
 Warning--empty year in lopes
 Warning--empty year in milene
-You've used 22 entries,
+You've used 23 entries,
             2118 wiz_defined-function locations,
-<<<<<<< HEAD
-            628 strings with 7553 characters,
-and the built_in function-call counts, 6002 in all, are:
-= -- 596
-> -- 228
+            632 strings with 7652 characters,
+and the built_in function-call counts, 6206 in all, are:
+= -- 616
+> -- 235
 < -- 3
-+ -- 97
-- -- 72
-* -- 387
-:= -- 1051
-add.period$ -- 65
-call.type$ -- 22
-change.case$ -- 103
++ -- 100
+- -- 74
+* -- 395
+:= -- 1090
+add.period$ -- 68
+call.type$ -- 23
+change.case$ -- 107
 chr.to.int$ -- 0
-cite$ -- 26
-duplicate$ -- 243
-empty$ -- 483
-format.name$ -- 72
-if$ -- 1239
-=======
-            625 strings with 7434 characters,
-and the built_in function-call counts, 5832 in all, are:
-= -- 580
-> -- 217
-< -- 3
-+ -- 93
-- -- 68
-* -- 361
-:= -- 1028
-add.period$ -- 65
-call.type$ -- 22
-change.case$ -- 101
-chr.to.int$ -- 0
-cite$ -- 26
-duplicate$ -- 242
-empty$ -- 471
-format.name$ -- 68
-if$ -- 1203
->>>>>>> e99674fe830b2c6fc190ca1a625db76b54fcb51a
+cite$ -- 27
+duplicate$ -- 253
+empty$ -- 500
+format.name$ -- 74
+if$ -- 1280
 int.to.chr$ -- 0
-int.to.str$ -- 22
-missing$ -- 16
-newline$ -- 112
-num.names$ -- 42
-pop$ -- 86
+int.to.str$ -- 23
+missing$ -- 17
+newline$ -- 117
+num.names$ -- 44
+pop$ -- 90
 preamble$ -- 1
-<<<<<<< HEAD
-purify$ -- 80
+purify$ -- 83
 quote$ -- 0
-skip$ -- 172
+skip$ -- 179
 stack$ -- 0
-substring$ -- 333
-=======
-purify$ -- 78
-quote$ -- 0
-skip$ -- 172
-stack$ -- 0
-substring$ -- 306
->>>>>>> e99674fe830b2c6fc190ca1a625db76b54fcb51a
-swap$ -- 37
+substring$ -- 338
+swap$ -- 38
 text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 88
+type$ -- 92
 warning$ -- 4
-<<<<<<< HEAD
-while$ -- 57
-width$ -- 24
-write$ -- 238
-=======
-while$ -- 56
-width$ -- 24
-write$ -- 237
->>>>>>> e99674fe830b2c6fc190ca1a625db76b54fcb51a
+while$ -- 59
+width$ -- 25
+write$ -- 248
 (There was 1 error message)

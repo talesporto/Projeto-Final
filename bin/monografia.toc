@@ -24,4 +24,7 @@
 \contentsline {subsection}{\numberline {4.2.2}Detec\IeC {\c c}\IeC {\~a}o e Reconhecimento Facial}{29}{subsection.4.2.2}
 \contentsline {section}{\numberline {4.3}Captura de contexto din\IeC {\^a}mico e \textit {Arrays} de v\IeC {\'\i }deos distribu\IeC {\'\i }dos para \textit {SmartSpaces}}{30}{section.4.3}
 \contentsline {subsection}{\numberline {4.3.1}Rastreamento, Detec\IeC {\c c}\IeC {\~a}o de faces e Reconhecimento facial}{31}{subsection.4.3.1}
-\contentsline {chapter}{Refer\^encias}{33}{section*.14}
+\contentsline {chapter}{\numberline {5}Problema e Proposta}{33}{chapter.5}
+\contentsline {section}{\numberline {5.1}Problema}{33}{section.5.1}
+\contentsline {section}{\numberline {5.2}Proposta}{33}{section.5.2}
+\contentsline {chapter}{Refer\^encias}{35}{section*.14}
