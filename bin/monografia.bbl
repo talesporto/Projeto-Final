@@ -95,6 +95,10 @@ D.~R. Oliveira.
 \newblock Master's thesis, S{\~a}o Jos{\'e} dos Campos: Instituto Nacional de
   Pesquisas Espaciais (INPE), setembro 2003.
 
+\bibitem{openni}
+OpenNI.
+\newblock {\em User Guide}.
+
 \bibitem{belhumeur}
 D.~J.~Kriegman P.~N.~Belhumeur, J. P.~Hespanha.
 \newblock Eigenfaces vs. fisherfaces: Recognition using class specific linear
@@ -143,5 +147,10 @@ M.~Weiser.
 M.~Weiser.
 \newblock The computer for the 21st century.
 \newblock {\em SIGMOBILE Mob. Comput. Commun. Rev.}, 3:3--11, Julho 1999.
+
+\bibitem{yilmaz}
+A.~Yilmaz, O.~Javed, and M.~Shah.
+\newblock {Object tracking: A survey}.
+\newblock {\em ACM Comput. Surv.}, 38(4):13+, December 2006.
 
 \end{thebibliography}
