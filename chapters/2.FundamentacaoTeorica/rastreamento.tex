@@ -28,7 +28,51 @@
 			\item variação na iluminação do ambiente~\cite{yilmaz};
 			\item processamento em tempo-real~\cite{yilmaz};
 		\end{enumerate}
-	
+
+\subsection{Representação do Objeto}
+
+	Nos sistemas de rastreamentos, os objetos rastreados devem ser representados de alguma maneira. Eles podem ser representados baseados em suas formas. Em geral, existe uma forte relação entre a representação do objeto e o algoritmo de rastreamento escolhido. A representação geramente é escolhida baseada no domínio da aplicação. As representações mais utilizadas são~\cite{yilmaz}:
+
+	\begin{figure}[hbt]
+		\begin{center}
+			\includegraphics[scale=0.5]{figuras/2.FundamentacaoTeorica/representacao.png}
+		\end{center}
+		\caption{Representação de objetos rastreados. (a) Centróide, (b) múltiplos pontos, (c) representação retangular, (d) representação elíptica, (e) representação de múltiplas partes, (f) esqueleto do objeto, , (g) conotorno completo do objeto, (h) contorno do objeto por pontos, (i) silhueta do objeto~\cite{yilmaz}}
+		\label{representacao}
+	\end{figure}
+
+	\begin{itemize}
+		\item \textbf{Pontos:} o objeto é representado por um ponto, como por exemplo a centróide da Figura \ref{representacao}(a), ou por vários pontos, como por exemplo na Figura \ref{representacao}(b). Essa representaçao é mais adequada para rastreamentod e objetos que ocupam uma pequena região na imagem;
+		\item \textbf{Formas geométricas primitivas:} o objeto é representado por formas geométricas simples como um retângulo e uma elipse, como mostrados nas Figuras \ref{representacao}(c) e (d). Essa representação é mais adequada para simples objetos rígidos;
+		\item \textbf{Silhueta e Contorno:} representação por contorno define os limites de um objeto, como mostrado nas Figura \ref{representacao}(g) e (h). A região interna do contorno é chamada de Silhueta, como mostrado na Figura \ref{representacao}(i). Essa represetação é mais adequada para rastrear objetos complexos de forma não rígida;
+		\item \textbf{Modelos de formas articuladas:} objetos articulados são compostos por partes do corpo que se ligam por meio de juntas. Para representar objetos articulados, utiliza-se figuras geométricas para cada parte do corpo, como mostrado na Figura \ref{representacao}(e);
+		\item \textbf{Modelos de Esqueletos:} modelos de esqueletos são extraídos do objeto rastreado. Essa representação pode ser utilizada tanto para objetos articulad rígidos quanto não rígidos;
+	\end{itemize}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 % Adaptive Particle Filter with Body Part Segmentation for Full Body Tracking
