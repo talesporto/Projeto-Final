@@ -3,18 +3,11 @@ Reconhecedor e localizador de usuários em tempo real dentro de um SmartSpace.
 
 Autores: Danilo Ávila e Tales Porto
 
-Estrutura projeto definido junto a Carla Denise Castanho
--------
-	1. Introdução
-	2. Fundamentação teorica
-	3. Trabalhos correlatos
-	4. Problema / Proposta
-	6. Implementação
-	7. Testes
-	8. Conclusão
 
 Links Utéis
 -------
+
+* [Projeto final](https://github.com/talesporto/Projeto-Final) -- Repositorio da monografia.
 
 * [Apresentação do trabalho](https://github.com/talesporto/Seminario-TG1) -- Slides com a apresentação do projeto.
 
