@@ -4,17 +4,6 @@
 
 	Basicamente, rastreamento pode ser definido como o problema de estimar a trajetória de um objeto em um plano de imagem a medida em que se move na cena. Em outras palavras, um rastreador atribui \textit{labels} para os objetos monitorados em diferentes quadros de um vídeo~\cite{yilmaz}.
 
-	Várias abordagens para rastreamento de objetos já foram propostas. Basicamente, elas se diferem na forma que tratam as seguintes perguntas~\cite{yilmaz}: 
-		
-		\begin{itemize}
-			\item Qual representação do objeto é adequada para o rastreamento?
-			\item Qual recurso de imagem deve ser utilizado?
-			\item Como o movimento, aparência e a forma do objeto deve ser modelada? 
-		\end{itemize}
-
-	As respostas para estas perguntas depdendem do contexto/ambiente onde o rastreamento será utilizado e do uso final para o qual as informações de rastreamento~\cite{yilmaz}.
-	
-
 	A detecção e o rastreamento de pessoas tem um grande potencial em aplicações em domínios tão diversos como animação, interação humano-computador, vigilância automatizada (monitorar uma cena para detectar atividades suspeitas), entre outros. Por esta razão, tem havido um crescimento notável na investigação deste problema.
 
 	O rastreamento de pessoas em um ambiente é considerada como uma tarefa complexa devido a:
@@ -23,11 +12,21 @@
 			\item complexidade do corpo humano;
 			\item alta dinamicidade do ambiente;
 			\item ruído nas imagens~\cite{yilmaz};
-			\item complexidade do movimento das pessoas~\cite{yilmaz};
-			\item oclusões parciais ou totais de pessoas~\cite{yilmaz};
+			\item complexidade do movimento das pessoas;
+			\item oclusões parciais ou totais de pessoas;
 			\item variação na iluminação do ambiente~\cite{yilmaz};
 			\item processamento em tempo-real~\cite{yilmaz};
 		\end{enumerate}
+
+	Várias abordagens para rastreamento de objetos já foram propostas. Basicamente, elas se diferem na forma que tratam as seguintes perguntas~\cite{yilmaz}: 
+		
+		\begin{itemize}
+			\item Qual representação do objeto é adequada para o rastreamento?
+			\item Qual recurso de imagem deve ser utilizado?
+			\item Como o movimento, aparência e a forma do objeto deve ser modelada? 
+		\end{itemize}
+
+	As respostas para estas perguntas dependem do contexto/ambiente onde o rastreamento será utilizado e do uso final para o qual as informações de rastreamento~\cite{yilmaz}.
 
 \subsection{Representação do Objeto}
 
@@ -46,8 +45,11 @@
 		\item \textbf{Formas geométricas primitivas:} o objeto é representado por formas geométricas simples como um retângulo e uma elipse, como mostrados nas Figuras \ref{representacao}(c) e (d). Essa representação é mais adequada para simples objetos rígidos;
 		\item \textbf{Silhueta e Contorno:} representação por contorno define os limites de um objeto, como mostrado nas Figura \ref{representacao}(g) e (h). A região interna do contorno é chamada de Silhueta, como mostrado na Figura \ref{representacao}(i). Essa represetação é mais adequada para rastrear objetos complexos de forma não rígida;
 		\item \textbf{Modelos de formas articuladas:} objetos articulados são compostos por partes do corpo que se ligam por meio de juntas. Para representar objetos articulados, utiliza-se figuras geométricas para cada parte do corpo, como mostrado na Figura \ref{representacao}(e);
-		\item \textbf{Modelos de Esqueletos:} modelos de esqueletos são extraídos do objeto rastreado. Essa representação pode ser utilizada tanto para objetos articulad rígidos quanto não rígidos;
+		\item \textbf{Modelos de Esqueletos:} modelos de esqueletos são extraídos do objeto rastreado, como mostrado na Figura \ref{representacao}(f). Essa representação pode ser utilizada tanto para objetos articulado rígidos quanto não rígidos;
 	\end{itemize}
+
+	Para rastreamento de pessoas a representação por meio de contorno ou silhuetas são as mais adequadas~\cite{yilmaz}.
+
 
 
 
