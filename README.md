@@ -1,6 +1,8 @@
 Reconhecedor e localizador de usuários em tempo real dentro de um SmartSpace.
 =============
 
+Autores: Danilo Ávila e Tales Porto
+
 Estrutura projeto definido junto a Carla Denise Castanho
 -------
 	1. Introdução
