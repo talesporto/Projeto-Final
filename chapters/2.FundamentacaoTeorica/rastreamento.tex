@@ -1,0 +1,42 @@
+\section {Rastreamento}	
+
+	Rastreamento de objetos é uma importante tarefa do campo da computação visual. A ploriferação de computadores com um alto poder computacional, a disponibilidade de camêras de alta qualidade e preço acessível e a crescente necessidade de sistemas automáticos de análise de vídeos têm gerado um grante interesse em algoritmos de rastreamento de objetos~\cite{yilmaz}.
+
+	Basicamente, rastreamento pode ser definido como o problema de estimar a trajetória de um objeto em um plano de imagem a medida em que se move na cena. Em outras palavras, um rastreador atribui \textit{labels} para os objetos monitorados em diferentes quadros de um vídeo~\cite{yilmaz}.
+
+	Várias abordagens para rastreamento de objetos já foram propostas. Basicamente, elas se diferem na forma que tratam as seguintes perguntas~\cite{yilmaz}: 
+		
+		\begin{itemize}
+			\item Qual representação do objeto é adequada para o rastreamento?
+			\item Qual recurso de imagem deve ser utilizado?
+			\item Como o movimento, aparência e a forma do objeto deve ser modelada? 
+		\end{itemize}
+
+	As respostas para estas perguntas depdendem do contexto/ambiente onde o rastreamento será utilizado e do uso final para o qual as informações de rastreamento~\cite{yilmaz}.
+	
+
+	A detecção e o rastreamento de pessoas tem um grande potencial em aplicações em domínios tão diversos como animação, interação humano-computador, vigilância automatizada (monitorar uma cena para detectar atividades suspeitas), entre outros. Por esta razão, tem havido um crescimento notável na investigação deste problema.
+
+	O rastreamento de pessoas em um ambiente é considerada como uma tarefa complexa devido a:
+
+		\begin{enumerate}
+			\item complexidade do corpo humano;
+			\item alta dinamicidade do ambiente;
+			\item ruído nas imagens~\cite{yilmaz};
+			\item complexidade do movimento das pessoas~\cite{yilmaz};
+			\item oclusões parciais ou totais de pessoas~\cite{yilmaz};
+			\item variação na iluminação do ambiente~\cite{yilmaz};
+			\item processamento em tempo-real~\cite{yilmaz};
+		\end{enumerate}
+	
+
+
+% Adaptive Particle Filter with Body Part Segmentation for Full Body Tracking
+% 	The existing full body tracking algorithms can be classified into two types. One is the method with monocular or multi-view images [2, 3, 4, 5], and the other is the method with 3D reconstructed data [1, 6, 7, 8]. The approaches with 2D images have the advantage that they work with a simple hardware setup. However, self-occlusion makes the 2D tracking problem hard for arbitrary movements. Thus the existing systems assume some a-priori knowledge of the type of movement and/or the viewpoint under which it is observed [9]. With the 3D reconstructed data we can process more kinds of action and
+
+
+% Tracking Human Motion in Structured Environments Using a Distributed-Camera System
+% 	2	SINGLE VIEW TRACKING
+% 	Tracking from a single view includes two major components: preprocessing and feature correspondence between consecutive frames. Three stages of preprocessing are performed:
+% 	Segmenting the moving objects from the still background, 
+% 	Distinguishing human subjects from other segmented nonbackground objects, and Extracting features from the segmented human subjects.

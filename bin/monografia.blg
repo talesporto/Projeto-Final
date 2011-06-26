@@ -1,9 +1,10 @@
-This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
+This is BibTeX, Version 0.99d (TeX Live 2010)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: bin/monografia.aux
 The style file: plain.bst
 Database file #1: bibliografia.bib
 Warning--entry type for "kinect" isn't style-file defined
---line 12 of file bibliografia.bib
+--line 35 of file bibliografia.bib
 A bad cross reference---entry "chil"
 refers to entry "DBLP:conf/fgr/2008", which doesn't exist
 Warning--I didn't find a database entry for "DBLP:conf/fgr/2008"
@@ -11,89 +12,45 @@ Warning--to sort, need author or key in servodetection
 Warning--empty author in servodetection
 Warning--empty year in lopes
 Warning--empty year in milene
-<<<<<<< HEAD
-You've used 24 entries,
+You've used 26 entries,
             2118 wiz_defined-function locations,
-            635 strings with 7685 characters,
-and the built_in function-call counts, 6399 in all, are:
-= -- 632
-> -- 242
+            645 strings with 7803 characters,
+and the built_in function-call counts, 6860 in all, are:
+= -- 676
+> -- 261
 < -- 3
-+ -- 103
-- -- 76
-* -- 400
-:= -- 1121
-add.period$ -- 70
-call.type$ -- 24
-change.case$ -- 111
++ -- 111
+- -- 82
+* -- 434
+:= -- 1197
+add.period$ -- 75
+call.type$ -- 26
+change.case$ -- 120
 chr.to.int$ -- 0
-cite$ -- 28
-duplicate$ -- 260
-empty$ -- 522
-format.name$ -- 76
-if$ -- 1322
+cite$ -- 30
+duplicate$ -- 279
+empty$ -- 562
+format.name$ -- 82
+if$ -- 1418
 int.to.chr$ -- 0
-int.to.str$ -- 24
-missing$ -- 17
-newline$ -- 121
-num.names$ -- 46
-pop$ -- 98
+int.to.str$ -- 26
+missing$ -- 18
+newline$ -- 130
+num.names$ -- 48
+pop$ -- 107
 preamble$ -- 1
-purify$ -- 86
+purify$ -- 94
 quote$ -- 0
-skip$ -- 189
+skip$ -- 200
 stack$ -- 0
-substring$ -- 343
-swap$ -- 39
+substring$ -- 363
+swap$ -- 41
 text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 96
+type$ -- 104
 warning$ -- 4
-while$ -- 61
-width$ -- 26
-write$ -- 255
-=======
-You've used 23 entries,
-            2118 wiz_defined-function locations,
-            632 strings with 7652 characters,
-and the built_in function-call counts, 6206 in all, are:
-= -- 616
-> -- 235
-< -- 3
-+ -- 100
-- -- 74
-* -- 395
-:= -- 1090
-add.period$ -- 68
-call.type$ -- 23
-change.case$ -- 107
-chr.to.int$ -- 0
-cite$ -- 27
-duplicate$ -- 253
-empty$ -- 500
-format.name$ -- 74
-if$ -- 1280
-int.to.chr$ -- 0
-int.to.str$ -- 23
-missing$ -- 17
-newline$ -- 117
-num.names$ -- 44
-pop$ -- 90
-preamble$ -- 1
-purify$ -- 83
-quote$ -- 0
-skip$ -- 179
-stack$ -- 0
-substring$ -- 338
-swap$ -- 38
-text.length$ -- 3
-text.prefix$ -- 0
-top$ -- 0
-type$ -- 92
-warning$ -- 4
-while$ -- 59
-width$ -- 25
-write$ -- 248
->>>>>>> 371ab1ddd65f43feef19348ac6d2e1b08e5e27fe
+while$ -- 64
+width$ -- 28
+write$ -- 273
 (There was 1 error message)
