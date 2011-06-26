@@ -12,7 +12,11 @@ Warning--to sort, need author or key in servodetection
 Warning--empty author in servodetection
 Warning--empty year in lopes
 Warning--empty year in milene
+<<<<<<< HEAD
 You've used 26 entries,
+=======
+You've used 24 entries,
+>>>>>>> 6de314a0ce8b88726ef6c3408f4c22360ed24420
             2118 wiz_defined-function locations,
             645 strings with 7803 characters,
 and the built_in function-call counts, 6860 in all, are:
@@ -50,7 +54,13 @@ text.prefix$ -- 0
 top$ -- 0
 type$ -- 104
 warning$ -- 4
+<<<<<<< HEAD
 while$ -- 64
 width$ -- 28
 write$ -- 273
+=======
+while$ -- 61
+width$ -- 26
+write$ -- 255
+>>>>>>> 6de314a0ce8b88726ef6c3408f4c22360ed24420
 (There was 1 error message)
