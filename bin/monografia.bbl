@@ -1,0 +1,156 @@
+\begin{thebibliography}{10}
+
+\bibitem{servodetection}
+How face detection works.
+\newblock {\em SERVO Magazine}, fevereiro 2007.
+
+\bibitem{gregoryabowd}
+G.~Abowd, C.~Atkeson, and I.~Essa.
+\newblock Ubiquitous smart spaces.
+\newblock {\em Georgia Institute of Technology, College of Computing}, 1998.
+
+\bibitem{saocarlos}
+{\^A}.~R. Bianchini.
+\newblock Arquitetura de redes neurais para o reconhecimento facial baseado no
+  neocognitron.
+\newblock Master's thesis, Universidade Federal de S{\~a}o Carlos, 2001.
+
+\bibitem{fabriciobuzzeto}
+F.~N. Buzeto.
+\newblock Um conjunto de solu{\c c}{\~o}es para a constru{\c c}{\~a}o de
+  aplicativos de computa{\c c}{\~a}o ub{\'\i}qua.
+\newblock Master's thesis, Departamento de Ci{\^e}ncia da Computa{\c c}{\~a}o,
+  Universidade de Bras{\'\i}lia,
+  http://monografias.cic.unb.br/dspace/handle/123456789/257, 2010.
+
+\bibitem{daugman}
+J.~Daugman.
+\newblock Face and gesture recognition: Overview.
+\newblock {\em IEEE Transactions on Pattern Analysis and Machine Intelligence},
+  19(7):675--676, 1997.
+
+\bibitem{kinect}
+H.~Fairhead.
+\newblock All about kinect.
+
+\bibitem{alegomes}
+A.~R. Gomes.
+\newblock Ubiquitos -- uma proposta de arquitetura de middleware para a
+  adaptabilidade de servi{\c c}os em sistemas de computa{\c c}{\~a}o
+  ub{\'\i}qua.
+\newblock Master's thesis, Departamento de Ci{\^e}ncia da Computa{\c c}{\~a}o,
+  Universidade de Bras{\'\i}lia,
+  http://monografias.cic.unb.br/dspace/handle/123456789/110, 2007.
+
+\bibitem{hewitt}
+R.~Hewitt.
+\newblock Face recognition with eigenface.
+\newblock {\em SERVO Magazine}, 2007.
+
+\bibitem{drovetto}
+S.~A.~D. Junior.
+\newblock Reconhecimento facial 3d utilizando o simulated annealing com as
+  medidas surface interpenetration measure e m-estimator sample consensus.
+\newblock Master's thesis, Programa de P{\'o}s-Gradua{\c c}{\~a}o em
+  Inform{\'a}tica, Setor de Ci{\^e}ncias Exatas, Universidade Federal do
+  Paran{\'a}, 2007.
+
+\bibitem{hong}
+Hong L. and Jain A.
+\newblock Integrating faces and fingerprints for personal identification.
+\newblock {\em IEEE Transactions on Pattern and Machine Intelligence},
+  20(12):1295--1307, dezembro 1998.
+
+\bibitem{lopes}
+E~.~C. Lopes.
+\newblock Detec{\c c}{\~a}o de faces e caracter{\'\i}sticas faciais.
+\newblock Technical report, Pontif{\'\i}cia Universidade Cat{\'o}lica do Rio
+  Grande do Sul.
+
+\bibitem{turkpentland}
+A.~P.~Pentland M.~A.~Turk.
+\newblock Face recognition using eigenfaces.
+\newblock {\em IEEE Computer Society Confer}, 1991.
+
+\bibitem{milene}
+J.~H.~Saito M.~Arantes, A. N.~Ide.
+\newblock A system for fingerprint minutiae classification and recognition.
+\newblock In {\em Proceedings of the 9th International Conference on Neural
+  Information Processing(ICONIP'O2)}, volume~5, pages 2474 -- 2478.
+
+\bibitem{turk}
+A.~Pentland M.~Turk.
+\newblock Eigenfaces for recognition.
+\newblock {\em Journal of Cognitive Neuroscience}, 3(1):71--86, 1991.
+
+\bibitem{yang}
+N.~Ahuja M.~Yang, D. J.~Kriegman.
+\newblock Detecting faces in images: A survey.
+\newblock {\em IEEE Transactions on Pattern Analysis and Machine Intelligence},
+  24(1):34--58, janeiro 2002.
+
+\bibitem{oliveira}
+D.~R. Oliveira.
+\newblock Reconhecimento de faces usando redes neurais e biometria.
+\newblock Master's thesis, S{\~a}o Jos{\'e} dos Campos: Instituto Nacional de
+  Pesquisas Espaciais (INPE), setembro 2003.
+
+\bibitem{openni}
+OpenNI.
+\newblock {\em User Guide}.
+
+\bibitem{belhumeur}
+D.~J.~Kriegman P.~N.~Belhumeur, J. P.~Hespanha.
+\newblock Eigenfaces vs. fisherfaces: Recognition using class specific linear
+  projection.
+\newblock {\em European Conference on Computer Vision}, 1996.
+
+\bibitem{violajones}
+M.~Jones P.~Viola.
+\newblock Robust real-time object detection.
+\newblock {\em Second International Workshop on Statistical and Computational
+  Theories of Vision -- Modeling, Learning, Computing, and Sampling}, julho
+  2001.
+
+\bibitem{bolle}
+A.~Jain S.~Pankanti, R. M.~Bolle.
+\newblock Guest editors' introduction: Biometrics-the future of identification.
+\newblock {\em Computer}, 33:46--49, 2000.
+
+\bibitem{salah}
+A.~Ali Salah, R.~Morros, J.~Luque, C.~Segura, J.~Hernando, O.~Ambekar,
+  B.~Schouten, and E.~Pauwels.
+\newblock Multimodal identification and localization of users in a smart
+  environment.
+\newblock {\em Journal on Multimodal User Interfaces}, 2(2):75--91, setembro
+  2008.
+
+\bibitem{chil}
+R.~Stiefelhagen, K.~Bernardin, H.~Kemal Ekenel, and M.~Voit.
+\newblock Tracking identities and attention in smart environments -
+  contributions and progress in the chil project.
+\newblock In {\em FG}, pages 1--8, 2008.
+
+\bibitem{trivedi}
+M.~M. Trivedi, K.~S. Huang, and I.~Mikic.
+\newblock Dynamic context capture and distributed video arrays for intelligent
+  spaces.
+\newblock {\em Ieee Transactions On Systems, Man, and Cybernetics---part A:
+  Systems and Humans}, 35(1):145 -- 163, janeiro 2005.
+
+\bibitem{weiser2}
+M.~Weiser.
+\newblock The world is not a desktop.
+\newblock {\em Interactions}, 1:7--8, Janeiro 1994.
+
+\bibitem{weiser1}
+M.~Weiser.
+\newblock The computer for the 21st century.
+\newblock {\em SIGMOBILE Mob. Comput. Commun. Rev.}, 3:3--11, Julho 1999.
+
+\bibitem{yilmaz}
+A.~Yilmaz, O.~Javed, and M.~Shah.
+\newblock {Object tracking: A survey}.
+\newblock {\em ACM Comput. Surv.}, 38(4):13+, December 2006.
+
+\end{thebibliography}

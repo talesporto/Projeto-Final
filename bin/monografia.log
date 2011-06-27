@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.4.27)  27 JUN 2011 16:41
-=======
-This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2011.4.25)  27 JUN 2011 16:51
->>>>>>> b09ad093499151534f5069d19b5a1c06406ab406
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.4.27)  27 JUN 2011 18:28
 entering extended mode
  %&-line parsing enabled.
 **monografia.tex
@@ -492,7 +488,7 @@ See the natbib package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.775 ...and\NAT@force@numbers{}\NAT@force@numbers
+l.779 ...and\NAT@force@numbers{}\NAT@force@numbers
                                                   
 ? r
 OK, entering \nonstopmode...
@@ -614,7 +610,7 @@ LaTeX Font Warning: Font shape `T1/cmr/m/n' in size <20> not available
 LaTeX Font Warning: Font shape `T1/ua1/bx/n' in size <20> not available
 (Font)              size <20.74> substituted on input line 36.
 
-<positivo_cor.pdf, id=119, 119.44624pt x 60.225pt>
+<positivo_cor.pdf, id=123, 119.44624pt x 60.225pt>
 File: positivo_cor.pdf Graphic file (type pdf)
  <use positivo_cor.pdf>
 \len@lskipoffset=\skip48
@@ -686,12 +682,11 @@ l.53 \begin{abstract}
 \tf@lof=\write5
 \openout5 = `monografia.lof'.
 
- [7]
-No file monografia.lot.
+ [7] (./bin/monografia.lot)
 \tf@lot=\write6
 \openout6 = `monografia.lot'.
 
-[8
+ [8
 
 ] (./chapters/1.Introducao/introducao.tex
 Cap\'{\i }tulo 1.
@@ -712,14 +707,29 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
  [3
 
 ]
-<figuras/2.FundamentacaoTeorica/representacao.png, id=358, 842.14626pt x 445.66
+<figuras/2.FundamentacaoTeorica/representacao.png, id=370, 842.14626pt x 445.66
 5pt>
 File: figuras/2.FundamentacaoTeorica/representacao.png Graphic file (type png)
  <use figuras/2.FundamentacaoTeorica/representacao.png> [4 <./figuras/2.Fundame
-ntacaoTeorica/representacao.png (PNG copy)>]) [5]
+ntacaoTeorica/representacao.png (PNG copy)>] [5]
+
+! Package inputenc Error: Unicode char \u8:á¹• not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.99 ...o obtidas e o rastreador encontra correá¹•
+                                                  ondÃªncia entre os objetos...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+) [6] [7]
 Cap\'{\i }tulo 3.
 (./chapters/2.FundamentacaoTeorica/biometria.tex
-<figuras/2.FundamentacaoTeorica/caracteristicasBiometricas.png, id=387, 681.546
+<figuras/2.FundamentacaoTeorica/caracteristicasBiometricas.png, id=410, 681.546
 25pt x 466.74374pt>
 File: figuras/2.FundamentacaoTeorica/caracteristicasBiometricas.png Graphic fil
 e (type png)
@@ -729,28 +739,28 @@ Overfull \hbox (28.45952pt too wide) in paragraph at lines 9--10
  [] 
  []
 
-[6
+[8
 
-] [7 <./figuras/2.FundamentacaoTeorica/caracteristicasBiometricas.png (PNG copy
+] [9 <./figuras/2.FundamentacaoTeorica/caracteristicasBiometricas.png (PNG copy
 )>]
 Overfull \hbox (25.49876pt too wide) in paragraph at lines 53--66
  [] 
  []
 
-[8]) (./chapters/2.FundamentacaoTeorica/reconhecimento_facial.tex [9]
-<figuras/2.FundamentacaoTeorica/diferencailuminacao.png, id=452, 912.40875pt x 
+[10]) (./chapters/2.FundamentacaoTeorica/reconhecimento_facial.tex [11]
+<figuras/2.FundamentacaoTeorica/diferencailuminacao.png, id=472, 912.40875pt x 
 643.40375pt>
 File: figuras/2.FundamentacaoTeorica/diferencailuminacao.png Graphic file (type
  png)
  <use figuras/2.FundamentacaoTeorica/diferencailuminacao.png>
-[10] [11 <./figuras/2.FundamentacaoTeorica/diferencailuminacao.png (PNG copy)>]
+[12] [13 <./figuras/2.FundamentacaoTeorica/diferencailuminacao.png (PNG copy)>]
 
-<figuras/2.FundamentacaoTeorica/enquadramentoRosto.png, id=477, 504.88625pt x 5
+<figuras/2.FundamentacaoTeorica/enquadramentoRosto.png, id=497, 504.88625pt x 5
 04.88625pt>
 File: figuras/2.FundamentacaoTeorica/enquadramentoRosto.png Graphic file (type 
 png)
  <use figuras/2.FundamentacaoTeorica/enquadramentoRosto.png>
-[12 <./figuras/2.FundamentacaoTeorica/enquadramentoRosto.png (PNG copy)>]
+[14 <./figuras/2.FundamentacaoTeorica/enquadramentoRosto.png (PNG copy)>]
 Overfull \hbox (0.42082pt too wide) in paragraph at lines 80--81
 \T1/cmr/m/n/12 ob-je-tivo prin-ci-pal en-con-trar as ca-rac-te-rís-ti-cas es-tr
 u-tu-rais que exis-tem mesmo quando
@@ -764,84 +774,84 @@ l.92 ...alho serÃ¡ o mÃ©todo \textit{Viola-Jones}}
 You've closed more groups than you opened.
 Such booboos are generally harmless, so keep going.
 
-[13]
-<figuras/2.FundamentacaoTeorica/haar_features.png, id=519, 750.18295pt x 305.36
+[15]
+<figuras/2.FundamentacaoTeorica/haar_features.png, id=540, 750.18295pt x 305.36
 62pt>
 File: figuras/2.FundamentacaoTeorica/haar_features.png Graphic file (type png)
  <use figuras/2.FundamentacaoTeorica/haar_features.png>
-<figuras/2.FundamentacaoTeorica/haarfeaturestypes.png, id=525, 347.2975pt x 303
+<figuras/2.FundamentacaoTeorica/haarfeaturestypes.png, id=546, 347.2975pt x 303
 .1325pt>
 File: figuras/2.FundamentacaoTeorica/haarfeaturestypes.png Graphic file (type p
 ng)
- <use figuras/2.FundamentacaoTeorica/haarfeaturestypes.png> [14 <./figuras/2.Fu
+ <use figuras/2.FundamentacaoTeorica/haarfeaturestypes.png> [16 <./figuras/2.Fu
 ndamentacaoTeorica/haar_features.png>]
-<figuras/2.FundamentacaoTeorica/integral_image.png, id=544, 384.41489pt x 307.5
+<figuras/2.FundamentacaoTeorica/integral_image.png, id=564, 384.41489pt x 307.5
 3192pt>
 File: figuras/2.FundamentacaoTeorica/integral_image.png Graphic file (type png)
 
  <use figuras/2.FundamentacaoTeorica/integral_image.png>
-<figuras/2.FundamentacaoTeorica/integral_image2.png, id=549, 372.11362pt x 299.
+<figuras/2.FundamentacaoTeorica/integral_image2.png, id=569, 372.11362pt x 299.
 84361pt>
 File: figuras/2.FundamentacaoTeorica/integral_image2.png Graphic file (type png
 )
- <use figuras/2.FundamentacaoTeorica/integral_image2.png> [15 <./figuras/2.Fund
+ <use figuras/2.FundamentacaoTeorica/integral_image2.png> [17 <./figuras/2.Fund
 amentacaoTeorica/haarfeaturestypes.png (PNG copy)>]
-<figuras/2.FundamentacaoTeorica/filterchain.png, id=565, 31.25677pt x 37.94176p
+<figuras/2.FundamentacaoTeorica/filterchain.png, id=585, 31.25677pt x 37.94176p
 t>
 File: figuras/2.FundamentacaoTeorica/filterchain.png Graphic file (type png)
- <use figuras/2.FundamentacaoTeorica/filterchain.png> [16 <./figuras/2.Fundamen
-tacaoTeorica/integral_image.png>] [17 <./figuras/2.FundamentacaoTeorica/integra
-l_image2.png>] [18 <./figuras/2.FundamentacaoTeorica/filterchain.png (PNG copy)
+ <use figuras/2.FundamentacaoTeorica/filterchain.png> [18 <./figuras/2.Fundamen
+tacaoTeorica/integral_image.png>] [19 <./figuras/2.FundamentacaoTeorica/integra
+l_image2.png>] [20 <./figuras/2.FundamentacaoTeorica/filterchain.png (PNG copy)
 >]
-<figuras/2.FundamentacaoTeorica/graficoDistanciaEntrePontos.png, id=599, 153.21
+<figuras/2.FundamentacaoTeorica/graficoDistanciaEntrePontos.png, id=620, 153.21
 24pt x 120.9318pt>
 File: figuras/2.FundamentacaoTeorica/graficoDistanciaEntrePontos.png Graphic fi
 le (type png)
 
-<use figuras/2.FundamentacaoTeorica/graficoDistanciaEntrePontos.png> [19 <./fig
+<use figuras/2.FundamentacaoTeorica/graficoDistanciaEntrePontos.png> [21 <./fig
 uras/2.FundamentacaoTeorica/graficoDistanciaEntrePontos.png (PNG copy)>]
-<figuras/2.FundamentacaoTeorica/PCAexemploMapa.png, id=617, 445.665pt x 207.776
+<figuras/2.FundamentacaoTeorica/PCAexemploMapa.png, id=638, 445.665pt x 207.776
 25pt>
 File: figuras/2.FundamentacaoTeorica/PCAexemploMapa.png Graphic file (type png)
 
- <use figuras/2.FundamentacaoTeorica/PCAexemploMapa.png> [20 <./figuras/2.Funda
-mentacaoTeorica/PCAexemploMapa.png (PNG copy)>] [21]
-<figuras/2.FundamentacaoTeorica/eigenfaces.png, id=648, 158.994pt x 186.9384pt>
+ <use figuras/2.FundamentacaoTeorica/PCAexemploMapa.png> [22 <./figuras/2.Funda
+mentacaoTeorica/PCAexemploMapa.png (PNG copy)>] [23]
+<figuras/2.FundamentacaoTeorica/eigenfaces.png, id=668, 158.994pt x 186.9384pt>
 File: figuras/2.FundamentacaoTeorica/eigenfaces.png Graphic file (type png)
 <use figuras/2.FundamentacaoTeorica/eigenfaces.png>
-<figuras/2.FundamentacaoTeorica/exemplosImagensIluminacaoo.png, id=655, 238.641
+<figuras/2.FundamentacaoTeorica/exemplosImagensIluminacaoo.png, id=675, 238.641
 56pt x 119.69719pt>
 File: figuras/2.FundamentacaoTeorica/exemplosImagensIluminacaoo.png Graphic fil
 e (type png)
 
-<use figuras/2.FundamentacaoTeorica/exemplosImagensIluminacaoo.png> [22]
-<figuras/2.FundamentacaoTeorica/espacoPCA.png, id=670, 18.60953pt x 39.4775pt>
+<use figuras/2.FundamentacaoTeorica/exemplosImagensIluminacaoo.png> [24]
+<figuras/2.FundamentacaoTeorica/espacoPCA.png, id=690, 18.60953pt x 39.4775pt>
 File: figuras/2.FundamentacaoTeorica/espacoPCA.png Graphic file (type png)
 
 <use figuras/2.FundamentacaoTeorica/espacoPCA.png>)
-(./chapters/2.FundamentacaoTeorica/kinect.tex [23] [24 <./figuras/2.Fundamentac
-aoTeorica/eigenfaces.png (PNG copy)>] [25 <./figuras/2.FundamentacaoTeorica/exe
-mplosImagensIluminacaoo.png (PNG copy)>] [26 <./figuras/2.FundamentacaoTeorica/
+(./chapters/2.FundamentacaoTeorica/kinect.tex [25] [26 <./figuras/2.Fundamentac
+aoTeorica/eigenfaces.png (PNG copy)>] [27 <./figuras/2.FundamentacaoTeorica/exe
+mplosImagensIluminacaoo.png (PNG copy)>] [28 <./figuras/2.FundamentacaoTeorica/
 espacoPCA.png (PNG copy)>]
 Cap\'{\i }tulo 4.
 
-<figuras/2.FundamentacaoTeorica/kinect.jpg, id=700, 765.86125pt x 428.60126pt>
+<figuras/2.FundamentacaoTeorica/kinect.jpg, id=720, 765.86125pt x 428.60126pt>
 File: figuras/2.FundamentacaoTeorica/kinect.jpg Graphic file (type jpg)
 
-<use figuras/2.FundamentacaoTeorica/kinect.jpg> [27
+<use figuras/2.FundamentacaoTeorica/kinect.jpg> [29
 
  <./figuras/2.FundamentacaoTeorica/kinect.jpg>]
-<figuras/2.FundamentacaoTeorica/kinect_interno.png, id=708, 479.7925pt x 272.01
+<figuras/2.FundamentacaoTeorica/kinect_interno.png, id=728, 479.7925pt x 272.01
 625pt>
 File: figuras/2.FundamentacaoTeorica/kinect_interno.png Graphic file (type png)
 
  <use figuras/2.FundamentacaoTeorica/kinect_interno.png>))
-(./chapters/3.TrabalhosCorrelatos/trabalhoscorrelatos.tex [28 <./figuras/2.Fund
+(./chapters/3.TrabalhosCorrelatos/trabalhoscorrelatos.tex [30 <./figuras/2.Fund
 amentacaoTeorica/kinect_interno.png (PNG copy)>]
 Cap\'{\i }tulo 5.
-[29
+[31
 
-] [30]
+] [32]
 ! Undefined control sequence.
 <recently read> \displaysyle 
                              
@@ -853,21 +863,21 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-<figuras/3.TrabalhosCorrelatos/chil.png, id=739, 605.26125pt x 456.70625pt>
+<figuras/3.TrabalhosCorrelatos/chil.png, id=760, 605.26125pt x 456.70625pt>
 File: figuras/3.TrabalhosCorrelatos/chil.png Graphic file (type png)
 
-<use figuras/3.TrabalhosCorrelatos/chil.png> [31 <./figuras/3.TrabalhosCorrelat
+<use figuras/3.TrabalhosCorrelatos/chil.png> [33 <./figuras/3.TrabalhosCorrelat
 os/chil.png (PNG copy)>]
-<figuras/3.TrabalhosCorrelatos/upc.png, id=751, 1033.8625pt x 634.37pt>
+<figuras/3.TrabalhosCorrelatos/upc.png, id=772, 1033.8625pt x 634.37pt>
 File: figuras/3.TrabalhosCorrelatos/upc.png Graphic file (type png)
 
-<use figuras/3.TrabalhosCorrelatos/upc.png> [32 <./figuras/3.TrabalhosCorrelato
+<use figuras/3.TrabalhosCorrelatos/upc.png> [34 <./figuras/3.TrabalhosCorrelato
 s/upc.png (PNG copy)>]
-<figuras/3.TrabalhosCorrelatos/workflow.png, id=765, 761.84625pt x 484.81125pt>
+<figuras/3.TrabalhosCorrelatos/workflow.png, id=785, 761.84625pt x 484.81125pt>
 File: figuras/3.TrabalhosCorrelatos/workflow.png Graphic file (type png)
-<use figuras/3.TrabalhosCorrelatos/workflow.png> [33 <./figuras/3.TrabalhosCorr
+<use figuras/3.TrabalhosCorrelatos/workflow.png> [35 <./figuras/3.TrabalhosCorr
 elatos/workflow.png (PNG copy)>]
-<figuras/3.TrabalhosCorrelatos/micasa_aviary.png, id=778, 1026.83624pt x 585.18
+<figuras/3.TrabalhosCorrelatos/micasa_aviary.png, id=798, 1026.83624pt x 585.18
 625pt>
 File: figuras/3.TrabalhosCorrelatos/micasa_aviary.png Graphic file (type png)
  <use figuras/3.TrabalhosCorrelatos/micasa_aviary.png>
@@ -886,36 +896,43 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[34] [35 <./figuras/3.TrabalhosCorrelatos/micasa_aviary.png (PNG copy)>]
-<figuras/3.TrabalhosCorrelatos/facerec.png, id=799, 541.02126pt x 233.87375pt>
+[36] [37 <./figuras/3.TrabalhosCorrelatos/micasa_aviary.png (PNG copy)>]
+<figuras/3.TrabalhosCorrelatos/facerec.png, id=819, 541.02126pt x 233.87375pt>
 File: figuras/3.TrabalhosCorrelatos/facerec.png Graphic file (type png)
 
 <use figuras/3.TrabalhosCorrelatos/facerec.png>)
-(./chapters/4.ProblemaEProposta/problemaEproposta.tex [36 <./figuras/3.Trabalho
+(./chapters/4.ProblemaEProposta/problemaEproposta.tex [38 <./figuras/3.Trabalho
 sCorrelatos/facerec.png (PNG copy)>]
 Cap\'{\i }tulo 6.
 
-<figuras/4.ProblemaEProposta/esquemaSmartSpaceProposto.jpg, id=806, 796.9775pt 
+<figuras/4.ProblemaEProposta/esquemaSmartSpaceProposto.jpg, id=827, 796.9775pt 
 x 1127.21124pt>
 File: figuras/4.ProblemaEProposta/esquemaSmartSpaceProposto.jpg Graphic file (t
 ype jpg)
 
-<use figuras/4.ProblemaEProposta/esquemaSmartSpaceProposto.jpg> [37
+<use figuras/4.ProblemaEProposta/esquemaSmartSpaceProposto.jpg> [39
 
-]) [38 <./figuras/4.ProblemaEProposta/esquemaSmartSpaceProposto.jpg>] (./monogr
-afia.bbl
-(./bin/monografia.brf)
+]) [40 <./figuras/4.ProblemaEProposta/esquemaSmartSpaceProposto.jpg>] (./bin/mo
+nografia.bbl (./bin/monografia.brf)
 \tf@brf=\write7
 \openout7 = `monografia.brf'.
 
 
+Underfull \hbox (badness 1194) in paragraph at lines 44--44
+\T1/cmr/m/n/12 a adap-ta-bi-li-dade de ser-vi-ços em sis-te-mas de com-pu-ta-çã
+o ubí-qua.  Mas-ter's
+ []
 
-Package natbib Warning: Empty `thebibliography' environment on input line 3.
 
-) [39
+Underfull \hbox (badness 1867) in paragraph at lines 44--44
+\T1/cmr/m/n/12 the-sis, De-par-ta-mento de Ci-ên-cia da Com-pu-ta-ção, Uni-ver-
+si-dade de Bra-sí-lia,
+ []
+
+[41
 
 
-] (./bin/monografia.aux)
+]) [42] (./bin/monografia.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.74pt have occurred.
@@ -923,138 +940,37 @@ LaTeX Font Warning: Size substitutions with differences
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  )
 (\end occurred when \iffalse on line 462 was incomplete) 
 Here is how much of TeX's memory you used:
- 7295 strings out of 495041
- 103144 string characters out of 1181897
- 196161 words of memory out of 3000000
- 10082 multiletter control sequences out of 15000+50000
+ 7354 strings out of 495041
+ 104184 string characters out of 1181897
+ 194312 words of memory out of 3000000
+ 10134 multiletter control sequences out of 15000+50000
  16168 words of font info for 36 fonts, out of 3000000 for 9000
-<<<<<<< HEAD
  30 hyphenation exceptions out of 8191
- 45i,8n,69p,1119b,419s stack positions out of 5000i,500n,10000p,200000b,50000s
-pdfTeX warning (dest): 
-name{cite.openni} has been referenced but does not exist, replaced by a fixed o
-ne
-
-pdfTeX warning (dest): name{cite.turkpentland} has been referenced but does not
- exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.turk} has been referenced but does not exist, 
-replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.lopes} has been referenced but does not exist,
- replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.yang} has been referenced but does not exist, 
-replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.oliveira} has been referenced but does not exi
-st, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.milene} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.hong} has been referenced but does not exist, 
-replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.alegomes} has been referenced but does not exi
-st, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.daugman} has been referenced but does not exis
-t, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.bolle} has been referenced but does not exist,
- replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.saocarlos} has been referenced but does not ex
-ist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.fabriciobuzzeto} has been referenced but does 
-not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.gregoryabowd} has been referenced but does not
- exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.weiser1} has been referenced but does not exis
-t, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.weiser2} has been referenced but does not exis
-t, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.trivedi} has been referenced but does not exis
-t, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.salah} has been referenced but does not exist,
- replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.chil} has been referenced but does not exist, 
-replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.kinect} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.hewitt} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.violajones} has been referenced but does not e
-xist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.servodetection} has been referenced but does n
-ot exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.belhumeur} has been referenced but does not ex
-ist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.drovetto} has been referenced but does not exi
-st, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.yilmaz} has been referenced but does not exist
-, replaced by a fixed one
-
-{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texmf-te
-xlive/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-texlive/fonts
-/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-texlive/fonts/type1/publ
-ic/amsfonts/cm/cmmi8.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/
-cm/cmr12.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr8.pfb>
-</usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share
-/texmf/fonts/type1/public/cm-super/sfbi1200.pfb></usr/share/texmf/fonts/type1/p
-ublic/cm-super/sfbi1728.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1
-200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/
-texmf/fonts/type1/public/cm-super/sfbx1728.pfb></usr/share/texmf/fonts/type1/pu
-blic/cm-super/sfbx2488.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm10
-00.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/t
-exmf/fonts/type1/public/cm-super/sfrm1440.pfb></usr/share/texmf/fonts/type1/pub
-lic/cm-super/sfrm2074.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti120
-0.pfb>
-Output written on ./bin/monografia.pdf (50 pages, 3179887 bytes).
-=======
- 715 hyphenation exceptions out of 8191
- 43i,8n,69p,1119b,488s stack positions out of 5000i,500n,10000p,200000b,50000s
-{/usr/local/texlive/201
-0/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/local/texlive/2010/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2010/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2010/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2010/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2010/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2010/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2010/texmf-dist
-/fonts/type1/public/cm-super/sfbi1200.pfb></usr/local/texlive/2010/texmf-dist/f
-onts/type1/public/cm-super/sfbi1728.pfb></usr/local/texlive/2010/texmf-dist/fon
-ts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2010/texmf-dist/fonts
-/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2010/texmf-dist/fonts/t
-ype1/public/cm-super/sfbx1728.pfb></usr/local/texlive/2010/texmf-dist/fonts/typ
-e1/public/cm-super/sfbx2488.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1
-/public/cm-super/sfrm1000.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/p
-ublic/cm-super/sfrm1200.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/pub
-lic/cm-super/sfrm1440.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/publi
-c/cm-super/sfrm2074.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/
-cm-super/sfti1200.pfb>
-Output written on ./bin/monografia.pdf (51 pages, 3089129 bytes).
->>>>>>> b09ad093499151534f5069d19b5a1c06406ab406
+ 45i,8n,69p,1119b,463s stack positions out of 5000i,500n,10000p,200000b,50000s
+{/usr/share/texmf/fonts
+/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texmf-texlive/fonts/type1/publi
+c/amsfonts/cm/cmex10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/
+cm/cmmi12.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi8.pf
+b></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/shar
+e/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-texli
+ve/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf/fonts/type1/publ
+ic/cm-super/sfbi1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbi1728
+.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/tex
+mf/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf/fonts/type1/publi
+c/cm-super/sfbx1728.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx2488.
+pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texm
+f/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/public
+/cm-super/sfrm1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm2074.p
+fb></usr/share/texmf/fonts/type1/public/cm-super/sfti1200.pfb>
+Output written on ./bin/monografia.pdf (53 pages, 3209088 bytes).
 PDF statistics:
- 920 PDF objects out of 1000 (max. 8388607)
- 193 named destinations out of 1000 (max. 500000)
- 348 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1024 PDF objects out of 1200 (max. 8388607)
+ 198 named destinations out of 1000 (max. 500000)
+ 356 words of extra memory for PDF output out of 10000 (max. 10000000)
 

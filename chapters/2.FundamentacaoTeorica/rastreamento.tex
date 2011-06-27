@@ -78,25 +78,25 @@
 
 	\end{itemize}
 
-
-
-
+De todas as características, a mais utilizada para rastreamento é a cor~\cite{yilmaz}.
 
 \subsection{Detecção de objeto}
 
-	Todo metodo de Rastreamento requer um mecanismo de detecção de objetos seja comparando cada frame com seu posterior ou quando o objeto aparece pela primeira vez no video.
+	Todo metodo de Rastreamento requer um mecanismo de detecção de objetos seja comparando cada frame com seu posterior ou quando o objeto aparece pela primeira vez no video~\cite{yilmaz}.
 
 	\begin{itemize}
 		\item \textbf{Detector de pontos:} esses detectores são usados para encontrar pontos de interesses dentro da imagem que tem uma expressiva textura na sua respectiva localização. Pontos de interesse são amplamente usados no contexto do movimento, estereo e o problema do rastreamento. A qualidade desejável para o ponto de interesse é que seja inveriante diante das mudanças de iluminação e ângulo da camera.
 	
-	\begin{itemize}
 		\item \textbf{Subtração de fundo:} arquiva a frame inicial usada para construir a representação da cena chamada de ``modelo de fundo''. Qualquer mudança significativa em qualquer região da imagem apartir do modelo do fundo constitui um movimento. Geralmente, um algoritmo de conecção de componentes é aplicado para obter regiões conectadas que correspondem a um objeto.
 
-	\begin{itemize}
 		\item \textbf{Segmentação:} o objetivo do algoritmo de segmentação é particionar a imagem em regiões com certo percentual de similaridade. Todo algoritmo de segmentação tem dois problemas o criterio para definir uma boa partição e o metodo para arquivar particionamentos eficientes.
 
-	\begin{itemize}
-		\item \textbf{Aprendizagem supervisionada:} detecção de objetos podem ser desenvolvidas pelo aprendizado automatico de diferentes objetos 
+		\item \textbf{Aprendizagem supervisionada:} detecção de objetos podem ser desenvolvidas pelo aprendizado automatico de diferentes objetos. O aprendizado automatico de objetos requer a armazenagem de um conjunto de informações denominados ``\textit{template}''. Apartir desse conjunto de informações o algoritmo gera uma a função que mapeia as possíveis entradas para as saídas desejadas. Um problema padrão é a classificação onde a a função gera um valor continuo apartir de um determinado comportamento do objeto. No contexto da detecção de objetos as informações armazenadas são compostas por um par de caracteríscas de objetos e uma classe associada onde ambos os valores são manualmente definidos. Seleção de características tem um papel importante no desempenho da classificação, portanto, é importante usar um conjunto de características que seja possível discriminar uma classe das outras.
+	\end{itemize}
+
+\subsection{Rastreamento de objeto}
+
+	O objetivo do rastreamento de objeto é conhecer a trajetoria do objeto no tempo localizando sua posição em cada \textit{frame}. Rastreamento de objetos também podem fornecer a área completa que o objeto ocupava em qualquer momento do rastreamento. As atividades de detecção de objetos e de estabelecimento de correspondências entre a objetos e as instâncias dos \textit{frames} podem ser realizadas tanto separadamente como concomitantemente. No primeiro caso as provaveis regiões de objetos são obtidas e o rastreador encontra correṕondência entre os objetos e os frames. No último caso as provaveis regiões e as correspondências são feitas juntas e estimadas pela atualização iterativa da localização do objeto e de regiões de informações obtidos dos \textit{frames} anteriores.
 
 
 
