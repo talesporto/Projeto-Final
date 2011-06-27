@@ -86,13 +86,17 @@
 
 	Todo metodo de Rastreamento requer um mecanismo de detecção de objetos seja comparando cada frame com seu posterior ou quando o objeto aparece pela primeira vez no video.
 
-
-
-
 	\begin{itemize}
 		\item \textbf{Detector de pontos:} esses detectores são usados para encontrar pontos de interesses dentro da imagem que tem uma expressiva textura na sua respectiva localização. Pontos de interesse são amplamente usados no contexto do movimento, estereo e o problema do rastreamento. A qualidade desejável para o ponto de interesse é que seja inveriante diante das mudanças de iluminação e ângulo da camera.
+	
+	\begin{itemize}
+		\item \textbf{Subtração de fundo:} arquiva a frame inicial usada para construir a representação da cena chamada de ``modelo de fundo''. Qualquer mudança significativa em qualquer região da imagem apartir do modelo do fundo constitui um movimento. Geralmente, um algoritmo de conecção de componentes é aplicado para obter regiões conectadas que correspondem a um objeto.
 
+	\begin{itemize}
+		\item \textbf{Segmentação:} o objetivo do algoritmo de segmentação é particionar a imagem em regiões com certo percentual de similaridade. Todo algoritmo de segmentação tem dois problemas o criterio para definir uma boa partição e o metodo para arquivar particionamentos eficientes.
 
+	\begin{itemize}
+		\item \textbf{Aprendizagem supervisionada:} detecção de objetos podem ser desenvolvidas pelo aprendizado automatico de diferentes objetos 
 
 
 
