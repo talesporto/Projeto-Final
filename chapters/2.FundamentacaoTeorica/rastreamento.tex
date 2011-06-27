@@ -53,7 +53,7 @@
 
 	\begin{itemize}
 		\item \textbf{Pontos:} o objeto é representado por um ponto, como por exemplo a centróide da Figura \ref{representacao}(a), ou por vários pontos, como por exemplo na Figura \ref{representacao}(b). Essa representaçao é mais adequada para rastreamento de objetos que ocupam uma pequena região na imagem;
-		\item \textbf{Formas geométricas primitivas:} o objeto é representado por formas geométricas simples como um retângulo e uma elipse, como mostrados nas Figuras \ref{representacao}(c) e (d). Essa representação é mais adequada para simples objetos rígidos;
+		\item \textbf{Formas geométricas primitivas:} o objeto é representado por formas geométricas simples como um retângulo ou uma elipse, como mostrados nas Figuras \ref{representacao}(c) e (d). Essa representação é mais adequada para simples objetos rígidos;
 		\item \textbf{Silhueta e Contorno:} representação por contorno define os limites de um objeto, como mostrado nas Figura \ref{representacao}(g) e (h). A região interna do contorno é chamada de Silhueta, como mostrado na Figura \ref{representacao}(i). Essa represetação é mais adequada para rastrear objetos complexos de forma não rígida;
 		\item \textbf{Modelos de formas articuladas:} objetos articulados são compostos por partes do corpo que se ligam por meio de juntas. Para representar objetos articulados, utiliza-se figuras geométricas para cada parte do corpo, como mostrado na Figura \ref{representacao}(e);
 		\item \textbf{Modelos de Esqueletos:} modelos de esqueletos são extraídos do objeto rastreado, como mostrado na Figura \ref{representacao}(f). Essa representação pode ser utilizada tanto para objetos articulados rígidos quanto não rígidos;
@@ -65,12 +65,12 @@
 
 \subsection{Características para rastreamento}
 
-	A seleção das características é uma tarefa crítica para o rastreamento e está fortemente relacionada com a representação do objeto. Em geral, a seleção procura as características mais singulares para que o objeto rastreado seja facilmente distinguido. As características mais comuns utilizadas autlamente são~\cite{yilmaz}:
+	A seleção das características é uma tarefa crítica para o rastreamento e está fortemente relacionada com a representação do objeto. Em geral, a seleção procura as características mais singulares para que o objeto rastreado seja facilmente distinguido. As características mais comuns utilizadas atualmente são~\cite{yilmaz}:
 
 	\begin{itemize}
-		\item \textbf{Cor:} a cor do objeto é influênciada principalmente por duas características: a distribuição da iluminação e a propriedade de reflectância do objeto. Geralmente, o \textit{RGB} geralmente é utilizado para representar a cor;
+		\item \textbf{Cor:} a cor do objeto é influênciada principalmente por duas características: a distribuição da iluminação e a propriedade de reflectância do objeto. Geralmente, a representação \textit{RGB} é utilizada para representar a cor;
 
-		\item \textbf{Borda:} Os limites de um objeto gera uma grande variação na intensidade da imagem. A detecção por meio das bordas é utilizadado para identificar essas variações. As bordas são menos sensíveis a variações na iluminação comparado com as cores. Os algoritmos que detectam as bordas do objeto geralmente as utiliza para representação do mesmo;
+		\item \textbf{Borda:} os limites de um objeto geram uma grande variação na intensidade na imagem e são menos sensíveis a variações na iluminação comparado com as cores. A detecção por meio das bordas é utilizadado para identificar essas variações de itensidade na imagem. Os algoritmos que detectam as bordas do objeto geralmente as utiliza para representação do mesmo;
 
 		\item \textbf{Fluxo Óptico:} é um campo denso de vetores de deslocamento que define a tradução de cada pixel em uma região. Ele é calculado a partir da restrição de luminosidade, que pressupõe a constância de brilho de pixels correspondentes nas \textit{frames} consecutivas;
 
@@ -82,21 +82,22 @@ De todas as características, a mais utilizada para rastreamento é a cor~\cite{
 
 \subsection{Detecção de objeto}
 
-	Todo metodo de Rastreamento requer um mecanismo de detecção de objetos seja comparando cada frame com seu posterior ou quando o objeto aparece pela primeira vez no video~\cite{yilmaz}.
+	Todo método de rastreamento requer um mecanismo de detecção de objetos que pode ser realizada a cada \textit{frame} obtida ou na primeira vez que o objeto aparece no vídeo. Os método mais populares são~\cite{yilmaz}:
+
 
 	\begin{itemize}
-		\item \textbf{Detector de pontos:} esses detectores são usados para encontrar pontos de interesses dentro da imagem que tem uma expressiva textura na sua respectiva localização. Pontos de interesse são amplamente usados no contexto do movimento, estereo e o problema do rastreamento. A qualidade desejável para o ponto de interesse é que seja inveriante diante das mudanças de iluminação e ângulo da camera.
+		\item \textbf{Detector de pontos:} esses detectores são usados para encontrar pontos de interesses dentro da imagem que tem uma expressiva textura na sua respectiva localização. Pontos de interesse são amplamente usados no contexto do movimento e no rastreamento. A qualidade desejável para o ponto de interesse é que seja invariante diante das mudanças de iluminação e ângulo de visão da camera.
 	
-		\item \textbf{Subtração de fundo:} arquiva a frame inicial usada para construir a representação da cena chamada de ``modelo de fundo''. Qualquer mudança significativa em qualquer região da imagem apartir do modelo do fundo constitui um movimento. Geralmente, um algoritmo de conecção de componentes é aplicado para obter regiões conectadas que correspondem a um objeto.
+		\item \textbf{Subtração de fundo:} arquiva a \textit{frame} inicial usada para construir a representação da cena chamada de ``modelo de fundo''. Qualquer mudança significativa em qualquer região da imagem a partir do modelo do fundo constitui um movimento. Geralmente, um algoritmo de conexão de componentes é aplicado para obter regiões conectadas que correspondem a um objeto.
 
-		\item \textbf{Segmentação:} o objetivo do algoritmo de segmentação é particionar a imagem em regiões com certo percentual de similaridade. Todo algoritmo de segmentação tem dois problemas o criterio para definir uma boa partição e o metodo para arquivar particionamentos eficientes.
+		\item \textbf{Segmentação:} o objetivo do algoritmo de segmentação é particionar a imagem em regiões com certo grau de similaridade. Todo algoritmo de segmentação tem dois problemas: o critério para definir uma boa partição e o método para arquivar particionamentos eficientes.
 
-		\item \textbf{Aprendizagem supervisionada:} detecção de objetos podem ser desenvolvidas pelo aprendizado automatico de diferentes objetos. O aprendizado automatico de objetos requer a armazenagem de um conjunto de informações denominados ``\textit{template}''. Apartir desse conjunto de informações o algoritmo gera uma a função que mapeia as possíveis entradas para as saídas desejadas. Um problema padrão é a classificação onde a a função gera um valor continuo apartir de um determinado comportamento do objeto. No contexto da detecção de objetos as informações armazenadas são compostas por um par de caracteríscas de objetos e uma classe associada onde ambos os valores são manualmente definidos. Seleção de características tem um papel importante no desempenho da classificação, portanto, é importante usar um conjunto de características que seja possível discriminar uma classe das outras.
+		\item \textbf{Aprendizagem supervisionada:} detecção de objetos podem ser desenvolvidas pelo aprendizado automático de diferentes objetos. O aprendizado automático de objetos requer o armazenamento de um conjunto de informações denominados \textit{``template''}. A partir desse conjunto de informações o algoritmo gera uma função que mapeia as possíveis entradas para as saídas desejadas. Um problema padrão é a classificação onde a função gera um valor contínuo a partir de um determinado comportamento do objeto. No contexto da detecção de objetos as informações armazenadas são compostas por um par de caracteríscas de objetos e uma classe associada onde ambos os valores são manualmente definidos. Seleção de características tem um papel importante no desempenho da classificação, portanto, é importante usar um conjunto de características que seja possível discriminar uma classe das outras.
 	\end{itemize}
 
 \subsection{Rastreamento de objeto}
 
-	O objetivo do rastreamento de objeto é conhecer a trajetoria do objeto no tempo localizando sua posição em cada \textit{frame}. Rastreamento de objetos também podem fornecer a área completa que o objeto ocupava em qualquer momento do rastreamento. As atividades de detecção de objetos e de estabelecimento de correspondências entre a objetos e as instâncias dos \textit{frames} podem ser realizadas tanto separadamente como concomitantemente. No primeiro caso as provaveis regiões de objetos são obtidas e o rastreador encontra correṕondência entre os objetos e os frames. No último caso as provaveis regiões e as correspondências são feitas juntas e estimadas pela atualização iterativa da localização do objeto e de regiões de informações obtidos dos \textit{frames} anteriores.
+	O objetivo do rastreamento de objeto é conhecer a trajetória do mesmo no tempo localizando sua posição em cada \textit{frame}. Rastreamento de objetos também pode fornecer a área completa que o objeto ocupava em qualquer momento do rastreamento. As atividades de detecção de objetos e de estabelecimento de correspondências entre a objetos e as instâncias dos \textit{frames} podem ser realizadas tanto separadamente como concomitantemente. No primeiro caso, as prováveis regiões de objetos são obtidas e o rastreador encontra correpondência entre os objetos e os \textit{frame}s. No último caso as prováveis regiões e as correspondências são feitas juntas e estimadas pela atualização iterativa da localização do objeto e de regiões de informações obtidos dos \textit{frames} anteriores.
 
 
 
@@ -107,6 +108,6 @@ De todas as características, a mais utilizada para rastreamento é a cor~\cite{
 
 % Tracking Human Motion in Structured Environments Using a Distributed-Camera System
 % 	2	SINGLE VIEW TRACKING
-% 	Tracking from a single view includes two major components: preprocessing and feature correspondence between consecutive frames. Three stages of preprocessing are performed:
+% 	Tracking from a single view includes two major components: preprocessing and feature correspondence between consecutive \textit{frame}s. Three stages of preprocessing are performed:
 % 	Segmenting the moving objects from the still background, 
 % 	Distinguishing human subjects from other segmented nonbackground objects, and Extracting features from the segmented human subjects.
