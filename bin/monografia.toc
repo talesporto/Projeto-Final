@@ -9,28 +9,28 @@
 \contentsline {subsection}{\numberline {2.1.2}Caracter\IeC {\'\i }sticas para rastreamento}{5}{subsection.2.1.2}
 \contentsline {subsection}{\numberline {2.1.3}Detec\IeC {\c c}\IeC {\~a}o de objeto}{6}{subsection.2.1.3}
 \contentsline {subsection}{\numberline {2.1.4}Rastreamento de objeto}{6}{subsection.2.1.4}
-\contentsline {chapter}{\numberline {3}Reconhecimento Facial}{7}{chapter.3}
-\contentsline {section}{\numberline {3.1}Biometria}{7}{section.3.1}
-\contentsline {section}{\numberline {3.2}Reconhecimento Facial}{10}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Detec\IeC {\c c}\IeC {\~a}o de Faces em imagens}{12}{subsection.3.2.1}
-\contentsline {subsubsection}{M\IeC {\'e}todo Viola-Jones}{15}{section*.8}
-\contentsline {subsection}{\numberline {3.2.2}Reconhecimento das Faces encontradas}{18}{subsection.3.2.2}
-\contentsline {subsubsection}{Reconhecimento facial com \textit {Eigenfaces}}{20}{section*.9}
-\contentsline {subsubsection}{Redu\IeC {\c c}\IeC {\~a}o do ru\IeC {\'\i }do utilizando PCA}{21}{section*.10}
-\contentsline {subsubsection}{As componentes principais - autovetor(\textit {eingenvector})}{22}{section*.11}
-\contentsline {subsubsection}{As limita\IeC {\c c}\IeC {\~o}es do \textit {Eigenfaces}}{23}{section*.12}
-\contentsline {subsubsection}{``Passo a passo'' sobre \textit {Eigenfaces}}{24}{section*.13}
-\contentsline {chapter}{\numberline {4}Kinect}{28}{chapter.4}
-\contentsline {chapter}{\numberline {5}Trabalhos Correlatos}{30}{chapter.5}
-\contentsline {section}{\numberline {5.1}Projeto CHIL}{30}{section.5.1}
-\contentsline {subsection}{\numberline {5.1.1}Rastreamento e Lozaliza\IeC {\c c}\IeC {\~a}o de Pessoas}{30}{subsection.5.1.1}
-\contentsline {subsection}{\numberline {5.1.2}Identifica\IeC {\c c}\IeC {\~a}o das Pessoas}{32}{subsection.5.1.2}
-\contentsline {section}{\numberline {5.2}Identifica\IeC {\c c}\IeC {\~a}o multimodal e localiza\IeC {\c c}\IeC {\~a}o de usu\IeC {\'a}rios em um ambiente inteligente}{33}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}Detec\IeC {\c c}\IeC {\~a}o de movimento, Localiza\IeC {\c c}\IeC {\~a}o e Rastreamento}{34}{subsection.5.2.1}
-\contentsline {subsection}{\numberline {5.2.2}Detec\IeC {\c c}\IeC {\~a}o e Reconhecimento Facial}{34}{subsection.5.2.2}
-\contentsline {section}{\numberline {5.3}Captura de contexto din\IeC {\^a}mico e \textit {Arrays} de v\IeC {\'\i }deos distribu\IeC {\'\i }dos para \textit {SmartSpaces}}{35}{section.5.3}
-\contentsline {subsection}{\numberline {5.3.1}Rastreamento, Detec\IeC {\c c}\IeC {\~a}o de faces e Reconhecimento facial}{36}{subsection.5.3.1}
-\contentsline {chapter}{\numberline {6}Problema e Proposta}{38}{chapter.6}
-\contentsline {section}{\numberline {6.1}Problema}{38}{section.6.1}
-\contentsline {section}{\numberline {6.2}Proposta}{38}{section.6.2}
-\contentsline {chapter}{Refer\^encias}{40}{section*.14}
+\contentsline {chapter}{\numberline {3}Reconhecimento Facial}{8}{chapter.3}
+\contentsline {section}{\numberline {3.1}Biometria}{8}{section.3.1}
+\contentsline {section}{\numberline {3.2}Reconhecimento Facial}{11}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Detec\IeC {\c c}\IeC {\~a}o de Faces em imagens}{13}{subsection.3.2.1}
+\contentsline {subsubsection}{M\IeC {\'e}todo Viola-Jones}{16}{section*.8}
+\contentsline {subsection}{\numberline {3.2.2}Reconhecimento das Faces encontradas}{19}{subsection.3.2.2}
+\contentsline {subsubsection}{Reconhecimento facial com \textit {Eigenfaces}}{21}{section*.9}
+\contentsline {subsubsection}{Redu\IeC {\c c}\IeC {\~a}o do ru\IeC {\'\i }do utilizando PCA}{22}{section*.10}
+\contentsline {subsubsection}{As componentes principais - autovetor(\textit {eingenvector})}{23}{section*.11}
+\contentsline {subsubsection}{As limita\IeC {\c c}\IeC {\~o}es do \textit {Eigenfaces}}{24}{section*.12}
+\contentsline {subsubsection}{``Passo a passo'' sobre \textit {Eigenfaces}}{25}{section*.13}
+\contentsline {chapter}{\numberline {4}Kinect}{29}{chapter.4}
+\contentsline {chapter}{\numberline {5}Trabalhos Correlatos}{31}{chapter.5}
+\contentsline {section}{\numberline {5.1}Projeto CHIL}{31}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}Rastreamento e Lozaliza\IeC {\c c}\IeC {\~a}o de Pessoas}{31}{subsection.5.1.1}
+\contentsline {subsection}{\numberline {5.1.2}Identifica\IeC {\c c}\IeC {\~a}o das Pessoas}{33}{subsection.5.1.2}
+\contentsline {section}{\numberline {5.2}Identifica\IeC {\c c}\IeC {\~a}o multimodal e localiza\IeC {\c c}\IeC {\~a}o de usu\IeC {\'a}rios em um ambiente inteligente}{34}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Detec\IeC {\c c}\IeC {\~a}o de movimento, Localiza\IeC {\c c}\IeC {\~a}o e Rastreamento}{35}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}Detec\IeC {\c c}\IeC {\~a}o e Reconhecimento Facial}{35}{subsection.5.2.2}
+\contentsline {section}{\numberline {5.3}Captura de contexto din\IeC {\^a}mico e \textit {Arrays} de v\IeC {\'\i }deos distribu\IeC {\'\i }dos para \textit {SmartSpaces}}{36}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Rastreamento, Detec\IeC {\c c}\IeC {\~a}o de faces e Reconhecimento facial}{37}{subsection.5.3.1}
+\contentsline {chapter}{\numberline {6}Problema e Proposta}{39}{chapter.6}
+\contentsline {section}{\numberline {6.1}Problema}{39}{section.6.1}
+\contentsline {section}{\numberline {6.2}Proposta}{39}{section.6.2}
+\contentsline {chapter}{Refer\^encias}{41}{section*.14}

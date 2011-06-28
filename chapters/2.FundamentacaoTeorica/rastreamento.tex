@@ -88,26 +88,28 @@ De todas as características, a mais utilizada para rastreamento é a cor~\cite{
 	\begin{itemize}
 		\item \textbf{Detector de pontos:} esses detectores são usados para encontrar pontos de interesses dentro da imagem que tem uma expressiva textura na sua respectiva localização. Pontos de interesse são amplamente usados no contexto do movimento e no rastreamento. A qualidade desejável para o ponto de interesse é que seja invariante diante das mudanças de iluminação e ângulo de visão da camera.
 	
-		\item \textbf{Subtração de fundo:} arquiva a \textit{frame} inicial usada para construir a representação da cena chamada de ``modelo de fundo''. Qualquer mudança significativa em qualquer região da imagem a partir do modelo do fundo constitui um movimento. Geralmente, um algoritmo de conexão de componentes é aplicado para obter regiões conectadas que correspondem a um objeto.
+		\item \textbf{Subtração de fundo:} a detecção do objeto pode ser alcançada pela construção de uma representação da cena chamada de modelo de fundo, e em seguida encontra os desvios do modelo para cada quadro de entrada. Qualquer mudança significativa em qualquer região da imagem a partir do modelo do fundo constitui um movimento. Geralmente, um algoritmo de componentes conectadas é aplicado para obter regiões conectadas que correspondem a um objeto.
 
 		\item \textbf{Segmentação:} o objetivo do algoritmo de segmentação é particionar a imagem em regiões com certo grau de similaridade. Todo algoritmo de segmentação tem dois problemas: o critério para definir uma boa partição e o método para arquivar particionamentos eficientes.
 
-		\item \textbf{Aprendizagem supervisionada:} detecção de objetos podem ser desenvolvidas pelo aprendizado automático de diferentes objetos. O aprendizado automático de objetos requer o armazenamento de um conjunto de informações denominados \textit{``template''}. A partir desse conjunto de informações o algoritmo gera uma função que mapeia as possíveis entradas para as saídas desejadas. Um problema padrão é a classificação onde a função gera um valor contínuo a partir de um determinado comportamento do objeto. No contexto da detecção de objetos as informações armazenadas são compostas por um par de caracteríscas de objetos e uma classe associada onde ambos os valores são manualmente definidos. Seleção de características tem um papel importante no desempenho da classificação, portanto, é importante usar um conjunto de características que seja possível discriminar uma classe das outras.
+		\item \textbf{Aprendizagem supervisionada:} a detecção de objetos pode ser feita pelo aprendizado automático de diferentes objetos de um conjunto de exemplos por meio de um mecanismo de aprendizado. Esse aprendizado requer o armazenamento de um um conjunto de \textit{templares}. A partir desse conjunto de informações, o algoritmo gera uma função que mapeia as possíveis entradas para as saídas desejadas. Um problema padrão é a classificação onde a função gera um valor contínuo a partir de um determinado comportamento do objeto. No contexto da detecção de objetos as informações armazenadas são compostas por um par de caracteríscas de objetos e uma classe associada onde ambos os valores são manualmente definidos. Seleção de características tem um papel importante no desempenho da classificação, portanto, é importante usar um conjunto de características que seja possível discriminar uma classe das outras.
 	\end{itemize}
 
 \subsection{Rastreamento de objeto}
 
-	O objetivo do rastreamento de objeto é conhecer a trajetória do mesmo no tempo localizando sua posição em cada \textit{frame}. Rastreamento de objetos também pode fornecer a área completa que o objeto ocupava em qualquer momento do rastreamento. As atividades de detecção de objetos e de estabelecimento de correspondências entre a objetos e as instâncias dos \textit{frames} podem ser realizadas tanto separadamente como concomitantemente. No primeiro caso, as prováveis regiões de objetos são obtidas e o rastreador encontra correpondência entre os objetos e os \textit{frame}s. No último caso as prováveis regiões e as correspondências são feitas juntas e estimadas pela atualização iterativa da localização do objeto e de regiões de informações obtidos dos \textit{frames} anteriores.
+	O objetivo do rastreamento de objeto é conhecer a trajetória do mesmo no tempo localizando sua posição em cada \textit{frame}. O rastreamento de objetos tam'bem pode prover a região completa na imagem ocupada pelo objeto a cada instante~\cite{yilmaz}. 
+
+	As atividades de detecção de objetos e de estabelecimento de correspondências entre a objetos e as instâncias dos \textit{frames} podem ser realizadas tanto separadamente como concomitantemente. No primeiro caso, as prováveis regiões de objetos são obtidas e o rastreador encontra correpondência entre os objetos e os \textit{frame}s. No último caso, as prováveis regiões e as correspondências são feitas juntas e estimadas pela atualização iterativa da localização do objeto e de regiões de informações obtidos dos \textit{frames} anteriores~\cite{yilmaz}.
+
+	Os métodos de rastreametno de objetos mais utilizados atualmente são~\cite{yilmaz}:
+
+	\begin{itemize}
+		\item \textbf{Rastreamento de pontos:} os objetos detectados a cada frame são representados por pontos e a associação entre os pontos é feita com base no estados anterior do objeto que pode incluir a posição e o movimento. Essa abordagem requer um mecanismo externo para detectar o objeto a cada \textit{frame};
+
+		\item \textbf{Reastreamento de \textit{kernel}}: os objetos são rastreados pelo cálculo do movimento do \textit{kernel} em \textit{frames} consecutivas. Esse movimento geralemnte esta na forma de transformações paramétrocas como translação e rotação. \textit{Kernel} se refere ao formato ou aparência do objeto.
+
+		\item \textbf{Rastreamento de Silhuetas:} o rastreamento é feito estimando a região do objeto a cada \textit{frame}. Esse método utiliza informação contida dentro da região do objeto. Esta informação pode ser na forma de densidade de aparência e modelos de forma que estão, geralmente, na forma de mapas borda. Dado os modelos de objeto, silhuetas são rastreadas por qualquer forma de correspondência ou evolução de contorno. Ambos os métodos podem ser essencialmente considerados como segmentação de objetos aplicada no domínio temporal utilizando os priores gerados a partir dos \textit{frames} anteriores.
+	\end{itemize}
 
 
 
-
-% Adaptive Particle Filter with Body Part Segmentation for Full Body Tracking
-% 	The existing full body tracking algorithms can be classified into two types. One is the method with monocular or multi-view images [2, 3, 4, 5], and the other is the method with 3D reconstructed data [1, 6, 7, 8]. The approaches with 2D images have the advantage that they work with a simple hardware setup. However, self-occlusion makes the 2D tracking problem hard for arbitrary movements. Thus the existing systems assume some a-priori knowledge of the type of movement and/or the viewpoint under which it is observed [9]. With the 3D reconstructed data we can process more kinds of action and
-
-
-% Tracking Human Motion in Structured Environments Using a Distributed-Camera System
-% 	2	SINGLE VIEW TRACKING
-% 	Tracking from a single view includes two major components: preprocessing and feature correspondence between consecutive \textit{frame}s. Three stages of preprocessing are performed:
-% 	Segmenting the moving objects from the still background, 
-% 	Distinguishing human subjects from other segmented nonbackground objects, and Extracting features from the segmented human subjects.
