@@ -187,14 +187,12 @@ Mais antiga e mais comum, as técnicas 2D são amplamente utilizadas e as princi
 
 		\item \textbf{Redes Neurais:} uma rede neural artificial é um modelo computacional capaz de, entre outras funções, armazenar, classificar padrões, realizar interpolação de funções não-lineares e apresentar soluções heurísticas para problemas de otimização. Isso é conseguido através de um processo denominado ``aprendizado''. O uso de redes neurais visa tornar o sistema de reconhecimento capaz de absorver pequenas variações ocorridas no momento da coleta de medidas faciais. Espera-se, portanto,  mais robustez a falhas e que responda de forma mais confiável~\cite{oliveira};
 
-		\item \textbf{\textit{Fisher Faces}:} método derivado de FLD (\textit{Fisher's Linear Discrimant})
+		\item \textbf{\textit{Fisher Faces}:}igual ao \textit{Eigenfaces}, é um método que procura uma projeção linear das faces para um espaço dimensional menor onde os impactos causados pelas variações de luz e expressões faciais são minimizados. O método é derivado da discriminante linear de Fisher (FLD)~\cite{belhumeur}.
 	\end{enumerate}
 
-As técnicas 3D não será o foco desse trabalho pois ainda não estão maduras o suficiente e o objetivo não é propor um algoritmo de reconhecimento.
+O \textit{Eigenfaces} mostrou um ótimo custo benefício, devido ao seu baixo custo computacional e a sua, relativamente alta, confiabilidade. Então, falaremos mais detalhadamente como ele funciona.
 
 \subsubsection{Reconhecimento facial com \textit{Eigenfaces}}
-
-De todos os métodos apresentados o \textit{Eigenfaces} se mostrou o de melhor custo benefício, devido ao seu baixo custo computacional e a sua, relativamente alta, confiabilidade.
 
 Este é um algoritmo simples e fácil de implementar e os passos utilizados por ele também são utilizados em muitos métodos avançados. Os princípios básicos por trás dele, como PCA - ``\textit{Principal Component Analisys} (Analíse de componente principal)'' e \textit{Distance-Based Matching} (Correspondência Baseada na Distância) aparecem cada vez mais na computação visual e em diversas aplicações de inteligência artificial~\cite{hewitt}.
 

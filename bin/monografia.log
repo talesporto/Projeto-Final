@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2011.4.25)  29 JUN 2011 23:10
+This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2011.4.25)  1 JUL 2011 16:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -499,7 +499,7 @@ See the natbib package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.850 ...and\NAT@force@numbers{}\NAT@force@numbers
+l.853 ...and\NAT@force@numbers{}\NAT@force@numbers
                                                   
 ? r
 OK, entering \nonstopmode...
@@ -843,31 +843,31 @@ Package pdftex.def Info: figuras/2.FundamentacaoTeorica/filterchain.png used on
  [18 <./figuras/2.FundamentacaoTeorica/integral_image.png>] [19 <./figuras/2.Fu
 ndamentacaoTeorica/integral_image2.png>] [20 <./figuras/2.FundamentacaoTeorica/
 filterchain.png (PNG copy)>]
-<figuras/2.FundamentacaoTeorica/graficoDistanciaEntrePontos.png, id=656, 153.21
+<figuras/2.FundamentacaoTeorica/graficoDistanciaEntrePontos.png, id=657, 153.21
 24pt x 120.9318pt>
 File: figuras/2.FundamentacaoTeorica/graficoDistanciaEntrePontos.png Graphic fi
 le (type png)
 
 <use figuras/2.FundamentacaoTeorica/graficoDistanciaEntrePontos.png>
 Package pdftex.def Info: figuras/2.FundamentacaoTeorica/graficoDistanciaEntrePo
-ntos.png used on input line 213.
+ntos.png used on input line 211.
 (pdftex.def)             Requested size: 355.7148pt x 270.35576pt.
  [21 <./figuras/2.FundamentacaoTeorica/graficoDistanciaEntrePontos.png (PNG cop
 y)>]
-<figuras/2.FundamentacaoTeorica/PCAexemploMapa.png, id=674, 445.665pt x 207.776
+<figuras/2.FundamentacaoTeorica/PCAexemploMapa.png, id=676, 445.665pt x 207.776
 25pt>
 File: figuras/2.FundamentacaoTeorica/PCAexemploMapa.png Graphic file (type png)
 
  <use figuras/2.FundamentacaoTeorica/PCAexemploMapa.png>
 Package pdftex.def Info: figuras/2.FundamentacaoTeorica/PCAexemploMapa.png used
- on input line 232.
+ on input line 230.
 (pdftex.def)             Requested size: 355.66205pt x 270.33417pt.
  [22 <./figuras/2.FundamentacaoTeorica/PCAexemploMapa.png (PNG copy)>] [23]
 <figuras/2.FundamentacaoTeorica/eigenfaces.png, id=705, 158.994pt x 186.9384pt>
 File: figuras/2.FundamentacaoTeorica/eigenfaces.png Graphic file (type png)
 <use figuras/2.FundamentacaoTeorica/eigenfaces.png>
 Package pdftex.def Info: figuras/2.FundamentacaoTeorica/eigenfaces.png used on 
-input line 270.
+input line 268.
 (pdftex.def)             Requested size: 369.88582pt x 434.96387pt.
 
 <figuras/2.FundamentacaoTeorica/exemplosImagensIluminacaoo.png, id=712, 238.641
@@ -877,15 +877,15 @@ e (type png)
 
 <use figuras/2.FundamentacaoTeorica/exemplosImagensIluminacaoo.png>
 Package pdftex.def Info: figuras/2.FundamentacaoTeorica/exemplosImagensIluminac
-aoo.png used on input line 284.
+aoo.png used on input line 282.
 (pdftex.def)             Requested size: 426.79134pt x 214.0831pt.
  [24]
-<figuras/2.FundamentacaoTeorica/espacoPCA.png, id=727, 18.60953pt x 39.4775pt>
+<figuras/2.FundamentacaoTeorica/espacoPCA.png, id=728, 18.60953pt x 39.4775pt>
 File: figuras/2.FundamentacaoTeorica/espacoPCA.png Graphic file (type png)
 
 <use figuras/2.FundamentacaoTeorica/espacoPCA.png>
 Package pdftex.def Info: figuras/2.FundamentacaoTeorica/espacoPCA.png used on i
-nput line 306.
+nput line 304.
 (pdftex.def)             Requested size: 199.16928pt x 422.51152pt.
 )
 (./chapters/2.FundamentacaoTeorica/kinect.tex [25] [26 <./figuras/2.Fundamentac
@@ -894,7 +894,7 @@ mplosImagensIluminacaoo.png (PNG copy)>] [28 <./figuras/2.FundamentacaoTeorica/
 espacoPCA.png (PNG copy)>]
 Cap\'{\i }tulo 4.
 
-<figuras/2.FundamentacaoTeorica/kinect.jpg, id=757, 765.86125pt x 428.60126pt>
+<figuras/2.FundamentacaoTeorica/kinect.jpg, id=758, 765.86125pt x 428.60126pt>
 File: figuras/2.FundamentacaoTeorica/kinect.jpg Graphic file (type jpg)
 
 <use figuras/2.FundamentacaoTeorica/kinect.jpg>
@@ -904,7 +904,7 @@ t line 7.
  [29
 
  <./figuras/2.FundamentacaoTeorica/kinect.jpg>]
-<figuras/2.FundamentacaoTeorica/kinect_interno.png, id=765, 479.7925pt x 272.01
+<figuras/2.FundamentacaoTeorica/kinect_interno.png, id=766, 479.7925pt x 272.01
 625pt>
 File: figuras/2.FundamentacaoTeorica/kinect_interno.png Graphic file (type png)
 
@@ -930,7 +930,7 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-<figuras/3.TrabalhosCorrelatos/chil.png, id=798, 605.26125pt x 456.70625pt>
+<figuras/3.TrabalhosCorrelatos/chil.png, id=799, 605.26125pt x 456.70625pt>
 File: figuras/3.TrabalhosCorrelatos/chil.png Graphic file (type png)
 
 <use figuras/3.TrabalhosCorrelatos/chil.png>
@@ -938,7 +938,7 @@ Package pdftex.def Info: figuras/3.TrabalhosCorrelatos/chil.png used on input l
 ine 67.
 (pdftex.def)             Requested size: 242.1002pt x 182.67926pt.
  [33 <./figuras/3.TrabalhosCorrelatos/chil.png (PNG copy)>]
-<figuras/3.TrabalhosCorrelatos/upc.png, id=810, 1033.8625pt x 634.37pt>
+<figuras/3.TrabalhosCorrelatos/upc.png, id=811, 1033.8625pt x 634.37pt>
 File: figuras/3.TrabalhosCorrelatos/upc.png Graphic file (type png)
 
 <use figuras/3.TrabalhosCorrelatos/upc.png>
@@ -946,14 +946,14 @@ Package pdftex.def Info: figuras/3.TrabalhosCorrelatos/upc.png used on input li
 ne 91.
 (pdftex.def)             Requested size: 413.53767pt x 253.7435pt.
  [34 <./figuras/3.TrabalhosCorrelatos/upc.png (PNG copy)>]
-<figuras/3.TrabalhosCorrelatos/workflow.png, id=823, 761.84625pt x 484.81125pt>
+<figuras/3.TrabalhosCorrelatos/workflow.png, id=824, 761.84625pt x 484.81125pt>
 File: figuras/3.TrabalhosCorrelatos/workflow.png Graphic file (type png)
 <use figuras/3.TrabalhosCorrelatos/workflow.png>
 Package pdftex.def Info: figuras/3.TrabalhosCorrelatos/workflow.png used on inp
 ut line 112.
 (pdftex.def)             Requested size: 380.9222pt x 242.40503pt.
  [35 <./figuras/3.TrabalhosCorrelatos/workflow.png (PNG copy)>]
-<figuras/3.TrabalhosCorrelatos/micasa_aviary.png, id=836, 1026.83624pt x 585.18
+<figuras/3.TrabalhosCorrelatos/micasa_aviary.png, id=837, 1026.83624pt x 585.18
 625pt>
 File: figuras/3.TrabalhosCorrelatos/micasa_aviary.png Graphic file (type png)
  <use figuras/3.TrabalhosCorrelatos/micasa_aviary.png>
@@ -977,7 +977,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 [36] [37 <./figuras/3.TrabalhosCorrelatos/micasa_aviary.png (PNG copy)>]
-<figuras/3.TrabalhosCorrelatos/facerec.png, id=857, 541.02126pt x 233.87375pt>
+<figuras/3.TrabalhosCorrelatos/facerec.png, id=858, 541.02126pt x 233.87375pt>
 File: figuras/3.TrabalhosCorrelatos/facerec.png Graphic file (type png)
 
 <use figuras/3.TrabalhosCorrelatos/facerec.png>
@@ -989,7 +989,7 @@ t line 190.
 sCorrelatos/facerec.png (PNG copy)>]
 Cap\'{\i }tulo 6.
 
-<figuras/4.ProblemaEProposta/esquemaSmartSpaceProposto.jpg, id=865, 796.9775pt 
+<figuras/4.ProblemaEProposta/esquemaSmartSpaceProposto.jpg, id=866, 796.9775pt 
 x 1127.21124pt>
 File: figuras/4.ProblemaEProposta/esquemaSmartSpaceProposto.jpg Graphic file (t
 ype jpg)
@@ -1069,10 +1069,10 @@ ublic/cm-super/sfrm1200.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/pub
 lic/cm-super/sfrm1440.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/publi
 c/cm-super/sfrm2074.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/
 cm-super/sfti1200.pfb>
-Output written on ./bin/monografia.pdf (54 pages, 3097727 bytes).
+Output written on ./bin/monografia.pdf (54 pages, 3097809 bytes).
 PDF statistics:
- 1076 PDF objects out of 1200 (max. 8388607)
- 953 compressed objects within 10 object streams
+ 1077 PDF objects out of 1200 (max. 8388607)
+ 954 compressed objects within 10 object streams
  203 named destinations out of 1000 (max. 500000)
  372 words of extra memory for PDF output out of 10000 (max. 10000000)
 
