@@ -23,6 +23,18 @@ F.~N. Buzeto.
   Universidade de Bras{\'\i}lia,
   http://monografias.cic.unb.br/dspace/handle/123456789/257, 2010.
 
+\bibitem{veenman}
+C.J.Veenman, M.J.T. Reinders, and E.~Backer.
+\newblock {Resolving Motion Correspondence for Densely Moving Points}.
+\newblock {\em {IEEE Transactions on Pattern Analysis and Machine
+  Intelligence}}, 23(1):54--72, jan 2001.
+
+\bibitem{comaniciu}
+D.~Comaniciu, V.~Ramesh, and P.~Meer.
+\newblock {Kernel-Based Object Tracking}.
+\newblock {\em {IEEE Transactions on Pattern Analysis and Machine
+  Intelligence}}, 25(5):564--575, may 2003.
+
 \bibitem{daugman}
 J.~Daugman.
 \newblock Face and gesture recognition: Overview.
@@ -53,6 +65,11 @@ N.~Grammalidis, G.~Goussis, G.~Troufakos, and M.~G. Strintzis.
 R.~Hewitt.
 \newblock Face recognition with eigenface.
 \newblock {\em SERVO Magazine}, 2007.
+
+\bibitem{horn}
+B.~Horn and B.~Schunk.
+\newblock {Determining optical flow}.
+\newblock {\em {Artificial Intelligence Laboratory}}, 17:185--203, 1981.
 
 \bibitem{weiming}
 W.~Hu, T.~Tan, Fellow, IEEE, L.~Wang, and S.~Maybank.
@@ -144,6 +161,18 @@ A.~Ali Salah, R.~Morros, J.~Luque, C.~Segura, J.~Hernando, O.~Ambekar,
 \newblock {\em Journal on Multimodal User Interfaces}, 2(2):75--91, setembro
   2008.
 
+\bibitem{serby}
+D.~Serby, E.~Koller-Meier, and L.~Van Gool.
+\newblock {Probabilistic Object Tracking Using Multiple Features}.
+\newblock {\em {17th International Conference on Pattern Recognition (ICPR)}},
+  2:184--187, 2004.
+
+\bibitem{shi}
+J.~Shi and J.~Malik.
+\newblock {Normalized cuts and image segmentation}.
+\newblock {\em {IEEE Transactions on Pattern Analysis and Machine
+  Intelligence}}, 22(8):888--905, 2000.
+
 \bibitem{chil}
 R.~Stiefelhagen, K.~Bernardin, H.~Kemal Ekenel, and M.~Voit.
 \newblock Tracking identities and attention in smart environments -
@@ -171,5 +200,12 @@ M.~Weiser.
 A.~Yilmaz, O.~Javed, and M.~Shah.
 \newblock {Object tracking: A survey}.
 \newblock {\em ACM Comput. Surv.}, 38(4):13+, December 2006.
+
+\bibitem{yilmaz2}
+A.~Yilmaz, X.~Li, and M.~Shah.
+\newblock {Contour-Based Object Tracking with Occlusion Handling in Video
+  Acquired Using Mobile Cameras}.
+\newblock {\em {IEEE Transactions on Pattern Analysis and Machine
+  Intelligence}}, 26(11):1531--1536, nov 2004.
 
 \end{thebibliography}
