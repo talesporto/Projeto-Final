@@ -1,6 +1,6 @@
 \section{Biometria}
 
-As abordagens de identificação pessoal que utilizam ``alguma coisa que você sabe'', como Número de Identificação Pessoal (PIN - ``Personal Identification Number''), ou ``alguma coisa que você tenha'', como um cartão de identificação, não são confiáveis o suficiente para satisfazer os requisitos de segurança de um sistema de transações eletrônicas porque não têm a capacidade de diferenciar um usuário legítimo de um impostor que adiquiriu de forma ilegal o privilégio de acesso \cite{hong}. Esta fragilidade pode ser evitada se utilzarmos o nosso corpo como chave do sistema. Alguns traços fisícos ou comportamentais são muito mais complicados de serem forjados que uma cadeia de caracteres \cite{drovetto}.
+As abordagens de identificação pessoal que utilizam ``alguma coisa que você sabe'', como Número de Identificação Pessoal (PIN - ``Personal Identification Number''), ou ``alguma coisa que você tenha'', como um cartão de identificação, não são confiáveis o suficiente para satisfazer os requisitos de segurança de um sistema de transações eletrônicas porque não têm a capacidade de diferenciar um usuário legítimo de um impostor que adquiriu de forma ilegal o privilégio de acesso \cite{hong}. Esta fragilidade pode ser evitada se utilizarmos o nosso corpo como chave do sistema. Alguns traços físicos ou comportamentais são muito mais complicados de serem forjados que uma cadeia de caracteres \cite{drovetto}.
 
 Biometria é uma tecnologia utilizada para identificação de um indivíduo baseado em suas características físicas ou comportamentais, baseia-se em ``alguma coisa que você é ou faz'' para realizar a identificação e, por isso, tem a capacidade de diferenciar entre um indivíduo legítimo de um impostor \cite{hong}. As características físicas estão relacionadas a composição do corpo humano e seu formato e as comportamentais estão relacionadas a forma como o corpo humano faz algo \cite{drovetto}. A figura \ref{caracteristicasBiometricas} contém alguns exemplos desses dois tipos diferentes de características biométricas.
 
@@ -16,7 +16,7 @@ Teoricamente, qualquer característica física/comportamental pode ser utilizada
 
 	\begin{enumerate}
 		\item \textbf{universidade}: qualquer pessoa comum pode ser avaliada sobre essa característica;
-		\item \textbf{singularidade}: dada duas pessoas distinas, elas não podem ter a mesma característica dentro de uma proporção satisfatória;
+		\item \textbf{singularidade}: dada duas pessoas distintas, elas não podem ter a mesma característica dentro de uma proporção satisfatória;
 		\item \textbf{permanência}: a característica não pode mudar significativamente de acordo com o tempo;
 		\item \textbf{exigibilidade}: pode ser mensurada quantitativamente;
 	\end{enumerate}
@@ -29,7 +29,7 @@ Porém, na prática também são considerados outros requisitos \cite{milene}:
 		\item \textbf{evasão}: refere-se a facilidade de ser adulterado;
 	\end{enumerate}
 
-São várias as vantangens que os sistemas biométricos têm em relação aos sistemas convencionais. Listamos as vantagens principais \cite{drovetto}:
+São várias as vantagens que os sistemas biométricos têm em relação aos sistemas convencionais. Listamos as vantagens principais \cite{drovetto}:
 	
 	\begin{itemize}
 		\item características biométricas não podem ser perdidas ou esquecidas;
@@ -45,7 +45,7 @@ Na prática um sistema biométrico deve ser capaz de \cite{hong}:
 		\item ser suficientemente robusto para métodos fraudulentos;
 	\end{enumerate}
 
-Novas técnicas de reconhecimento por meio de face, íris, retina e voz, entre outras, têm sido abordadas para aplicações em sistemas de reconhecimento automático \cite{bolle,saocarlos}. Das nove características utilizadas atualmente a face é uma das mais populares \cite{milene}. Nas tabelas \ref{tabelaRequisitosTeoricos} e \ref{tabelaRequisitosPraticos} são mostradadas as noves características e seus respectivos comportamentos baseados nos requisitos mencionados acima.
+Novas técnicas de reconhecimento por meio de face, íris, retina e voz, entre outras, têm sido abordadas para aplicações em sistemas de reconhecimento automático \cite{bolle,saocarlos}. Das nove características utilizadas atualmente a face é uma das mais populares \cite{milene}. Nas tabelas \ref{tabelaRequisitosTeoricos} e \ref{tabelaRequisitosPraticos} são mostradas as noves características e seus respectivos comportamentos baseados nos requisitos mencionados acima.
 		
 	\begin{table}[htb]
 		\begin{center}
@@ -87,7 +87,7 @@ Novas técnicas de reconhecimento por meio de face, íris, retina e voz, entre o
 		\label{tabelaRequisitosPraticos}
 	\end{table}
 
-Os sistemas biométricos podem ser classificados em sistemas de verificação ou identificação. Sistemas de verificação são aqueles que autenticam a identidade dos usuários comparando-os com os próprios templates. Eles conduzem uma comparação ``um para um'' e determinam se o usuário é quem realmente diz ser. O maior desafio para esse tipo de sistema é a acurácia. Geralmente, não é muito difícil satisfazer o requisito de tempo de resposta pois somente uma comparação ``um para um'' é feita \cite{hong}.
+Os sistemas biométricos podem ser classificados em sistemas de verificação ou identificação. Sistemas de verificação são aqueles que autenticam a identidade dos usuários comparando-os com os próprios \textit{templates}. Eles conduzem uma comparação ``um para um'' e determinam se o usuário é quem realmente diz ser. O maior desafio para esse tipo de sistema é a acurácia. Geralmente, não é muito difícil satisfazer o requisito de tempo de resposta pois somente uma comparação ``um para um'' é feita \cite{hong}.
 
 Sistemas de identificação reconhecem um indivíduo pesquisando em todo o banco de dados procurando por uma correspondência. Eles conduzem uma comparação ``um para muitos'' para estabelecer a identidade do indivíduo. Ao contrário dos sistemas de verificação, nesse tipo de sistema tanto a acurácia quanto o tempo são os grandes desafios, por causa da necessidade de explorar todo o banco de dados. Geralmente, sistemas de identificação são mais complexos que sistemas de verificação \cite{hong}.
 
