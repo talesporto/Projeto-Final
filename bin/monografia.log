@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.4.27)  29 JUN 2011 21:53
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.4.27)  2 JUL 2011 11:18
 entering extended mode
  %&-line parsing enabled.
 **monografia.tex
@@ -488,7 +488,7 @@ See the natbib package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.789 ...and\NAT@force@numbers{}\NAT@force@numbers
+l.848 ...and\NAT@force@numbers{}\NAT@force@numbers
                                                   
 ? r
 OK, entering \nonstopmode...
@@ -610,7 +610,7 @@ LaTeX Font Warning: Font shape `T1/cmr/m/n' in size <20> not available
 LaTeX Font Warning: Font shape `T1/ua1/bx/n' in size <20> not available
 (Font)              size <20.74> substituted on input line 36.
 
-<positivo_cor.pdf, id=127, 119.44624pt x 60.225pt>
+<positivo_cor.pdf, id=123, 119.44624pt x 60.225pt>
 File: positivo_cor.pdf Graphic file (type pdf)
  <use positivo_cor.pdf>
 \len@lskipoffset=\skip48
@@ -693,28 +693,32 @@ Cap\'{\i }tulo 1.
 [1
 
 
-]) (./chapters/2.FundamentacaoTeorica/fundamentacao_teorica.tex [2]
+]) (./chapters/2.FundamentacaoTeorica/fundamentacao_teorica.tex
+(./chapters/2.FundamentacaoTeorica/rastreamento.tex [2]
 Cap\'{\i }tulo 2.
-(./chapters/2.FundamentacaoTeorica/localizacao.tex)
-(./chapters/2.FundamentacaoTeorica/rastreamento.tex
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 24.
+[3
 
-(/usr/share/texmf-texlive/tex/latex/base/omscmr.fd
+]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 28.
+ (/usr/share/texmf-texlive/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 24.
- [3
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 28.
 
-]
-<figuras/2.FundamentacaoTeorica/representacao.png, id=375, 842.14626pt x 445.66
+<figuras/2.FundamentacaoTeorica/representacao.png, id=372, 842.14626pt x 445.66
 5pt>
 File: figuras/2.FundamentacaoTeorica/representacao.png Graphic file (type png)
- <use figuras/2.FundamentacaoTeorica/representacao.png> [4 <./figuras/2.Fundame
-ntacaoTeorica/representacao.png (PNG copy)>] [5] [6]) [7]
+ <use figuras/2.FundamentacaoTeorica/representacao.png>
+
+LaTeX Warning: Reference `representa\IeC {\c c}\IeC {\~a}o' on page 4 undefined
+ on input line 61.
+
+[4] [5 <./figuras/2.FundamentacaoTeorica/representacao.png (PNG copy)>]
+[6]) [7]
 Cap\'{\i }tulo 3.
 (./chapters/2.FundamentacaoTeorica/biometria.tex
-<figuras/2.FundamentacaoTeorica/caracteristicasBiometricas.png, id=418, 681.546
+<figuras/2.FundamentacaoTeorica/caracteristicasBiometricas.png, id=433, 681.546
 25pt x 466.74374pt>
 File: figuras/2.FundamentacaoTeorica/caracteristicasBiometricas.png Graphic fil
 e (type png)
@@ -733,14 +737,14 @@ Overfull \hbox (25.49876pt too wide) in paragraph at lines 53--66
  []
 
 [10]) (./chapters/2.FundamentacaoTeorica/reconhecimento_facial.tex [11]
-<figuras/2.FundamentacaoTeorica/diferencailuminacao.png, id=479, 912.40875pt x 
+<figuras/2.FundamentacaoTeorica/diferencailuminacao.png, id=494, 912.40875pt x 
 643.40375pt>
 File: figuras/2.FundamentacaoTeorica/diferencailuminacao.png Graphic file (type
  png)
  <use figuras/2.FundamentacaoTeorica/diferencailuminacao.png>
 [12] [13 <./figuras/2.FundamentacaoTeorica/diferencailuminacao.png (PNG copy)>]
 
-<figuras/2.FundamentacaoTeorica/enquadramentoRosto.png, id=504, 504.88625pt x 5
+<figuras/2.FundamentacaoTeorica/enquadramentoRosto.png, id=520, 504.88625pt x 5
 04.88625pt>
 File: figuras/2.FundamentacaoTeorica/enquadramentoRosto.png Graphic file (type 
 png)
@@ -760,57 +764,57 @@ You've closed more groups than you opened.
 Such booboos are generally harmless, so keep going.
 
 [15]
-<figuras/2.FundamentacaoTeorica/haar_features.png, id=547, 750.18295pt x 305.36
+<figuras/2.FundamentacaoTeorica/haar_features.png, id=560, 750.18295pt x 305.36
 62pt>
 File: figuras/2.FundamentacaoTeorica/haar_features.png Graphic file (type png)
  <use figuras/2.FundamentacaoTeorica/haar_features.png>
-<figuras/2.FundamentacaoTeorica/haarfeaturestypes.png, id=553, 347.2975pt x 303
+<figuras/2.FundamentacaoTeorica/haarfeaturestypes.png, id=566, 347.2975pt x 303
 .1325pt>
 File: figuras/2.FundamentacaoTeorica/haarfeaturestypes.png Graphic file (type p
 ng)
  <use figuras/2.FundamentacaoTeorica/haarfeaturestypes.png> [16 <./figuras/2.Fu
 ndamentacaoTeorica/haar_features.png>]
-<figuras/2.FundamentacaoTeorica/integral_image.png, id=571, 384.41489pt x 307.5
+<figuras/2.FundamentacaoTeorica/integral_image.png, id=584, 384.41489pt x 307.5
 3192pt>
 File: figuras/2.FundamentacaoTeorica/integral_image.png Graphic file (type png)
 
  <use figuras/2.FundamentacaoTeorica/integral_image.png>
-<figuras/2.FundamentacaoTeorica/integral_image2.png, id=576, 372.11362pt x 299.
+<figuras/2.FundamentacaoTeorica/integral_image2.png, id=589, 372.11362pt x 299.
 84361pt>
 File: figuras/2.FundamentacaoTeorica/integral_image2.png Graphic file (type png
 )
  <use figuras/2.FundamentacaoTeorica/integral_image2.png> [17 <./figuras/2.Fund
 amentacaoTeorica/haarfeaturestypes.png (PNG copy)>]
-<figuras/2.FundamentacaoTeorica/filterchain.png, id=592, 31.25677pt x 37.94176p
+<figuras/2.FundamentacaoTeorica/filterchain.png, id=605, 31.25677pt x 37.94176p
 t>
 File: figuras/2.FundamentacaoTeorica/filterchain.png Graphic file (type png)
  <use figuras/2.FundamentacaoTeorica/filterchain.png> [18 <./figuras/2.Fundamen
 tacaoTeorica/integral_image.png>] [19 <./figuras/2.FundamentacaoTeorica/integra
 l_image2.png>] [20 <./figuras/2.FundamentacaoTeorica/filterchain.png (PNG copy)
 >]
-<figuras/2.FundamentacaoTeorica/graficoDistanciaEntrePontos.png, id=627, 153.21
+<figuras/2.FundamentacaoTeorica/graficoDistanciaEntrePontos.png, id=641, 153.21
 24pt x 120.9318pt>
 File: figuras/2.FundamentacaoTeorica/graficoDistanciaEntrePontos.png Graphic fi
 le (type png)
 
-<use figuras/2.FundamentacaoTeorica/graficoDistanciaEntrePontos.png> [21 <./fig
-uras/2.FundamentacaoTeorica/graficoDistanciaEntrePontos.png (PNG copy)>]
-<figuras/2.FundamentacaoTeorica/PCAexemploMapa.png, id=645, 445.665pt x 207.776
+<use figuras/2.FundamentacaoTeorica/graficoDistanciaEntrePontos.png>
+<figuras/2.FundamentacaoTeorica/PCAexemploMapa.png, id=648, 445.665pt x 207.776
 25pt>
 File: figuras/2.FundamentacaoTeorica/PCAexemploMapa.png Graphic file (type png)
 
- <use figuras/2.FundamentacaoTeorica/PCAexemploMapa.png> [22 <./figuras/2.Funda
-mentacaoTeorica/PCAexemploMapa.png (PNG copy)>] [23]
-<figuras/2.FundamentacaoTeorica/eigenfaces.png, id=675, 158.994pt x 186.9384pt>
+ <use figuras/2.FundamentacaoTeorica/PCAexemploMapa.png> [21] [22 <./figuras/2.
+FundamentacaoTeorica/graficoDistanciaEntrePontos.png (PNG copy)>] [23 <./figura
+s/2.FundamentacaoTeorica/PCAexemploMapa.png (PNG copy)>]
+<figuras/2.FundamentacaoTeorica/eigenfaces.png, id=688, 158.994pt x 186.9384pt>
 File: figuras/2.FundamentacaoTeorica/eigenfaces.png Graphic file (type png)
 <use figuras/2.FundamentacaoTeorica/eigenfaces.png>
-<figuras/2.FundamentacaoTeorica/exemplosImagensIluminacaoo.png, id=682, 238.641
+<figuras/2.FundamentacaoTeorica/exemplosImagensIluminacaoo.png, id=695, 238.641
 56pt x 119.69719pt>
 File: figuras/2.FundamentacaoTeorica/exemplosImagensIluminacaoo.png Graphic fil
 e (type png)
 
 <use figuras/2.FundamentacaoTeorica/exemplosImagensIluminacaoo.png> [24]
-<figuras/2.FundamentacaoTeorica/espacoPCA.png, id=697, 18.60953pt x 39.4775pt>
+<figuras/2.FundamentacaoTeorica/espacoPCA.png, id=711, 18.60953pt x 39.4775pt>
 File: figuras/2.FundamentacaoTeorica/espacoPCA.png Graphic file (type png)
 
 <use figuras/2.FundamentacaoTeorica/espacoPCA.png>)
@@ -820,13 +824,13 @@ mplosImagensIluminacaoo.png (PNG copy)>] [28 <./figuras/2.FundamentacaoTeorica/
 espacoPCA.png (PNG copy)>]
 Cap\'{\i }tulo 4.
 
-<figuras/2.FundamentacaoTeorica/kinect.jpg, id=727, 765.86125pt x 428.60126pt>
+<figuras/2.FundamentacaoTeorica/kinect.jpg, id=741, 765.86125pt x 428.60126pt>
 File: figuras/2.FundamentacaoTeorica/kinect.jpg Graphic file (type jpg)
 
 <use figuras/2.FundamentacaoTeorica/kinect.jpg> [29
 
  <./figuras/2.FundamentacaoTeorica/kinect.jpg>]
-<figuras/2.FundamentacaoTeorica/kinect_interno.png, id=735, 479.7925pt x 272.01
+<figuras/2.FundamentacaoTeorica/kinect_interno.png, id=749, 479.7925pt x 272.01
 625pt>
 File: figuras/2.FundamentacaoTeorica/kinect_interno.png Graphic file (type png)
 
@@ -848,21 +852,21 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-<figuras/3.TrabalhosCorrelatos/chil.png, id=767, 605.26125pt x 456.70625pt>
+<figuras/3.TrabalhosCorrelatos/chil.png, id=781, 605.26125pt x 456.70625pt>
 File: figuras/3.TrabalhosCorrelatos/chil.png Graphic file (type png)
 
 <use figuras/3.TrabalhosCorrelatos/chil.png> [33 <./figuras/3.TrabalhosCorrelat
 os/chil.png (PNG copy)>]
-<figuras/3.TrabalhosCorrelatos/upc.png, id=779, 1033.8625pt x 634.37pt>
+<figuras/3.TrabalhosCorrelatos/upc.png, id=793, 1033.8625pt x 634.37pt>
 File: figuras/3.TrabalhosCorrelatos/upc.png Graphic file (type png)
 
 <use figuras/3.TrabalhosCorrelatos/upc.png> [34 <./figuras/3.TrabalhosCorrelato
 s/upc.png (PNG copy)>]
-<figuras/3.TrabalhosCorrelatos/workflow.png, id=792, 761.84625pt x 484.81125pt>
+<figuras/3.TrabalhosCorrelatos/workflow.png, id=806, 761.84625pt x 484.81125pt>
 File: figuras/3.TrabalhosCorrelatos/workflow.png Graphic file (type png)
 <use figuras/3.TrabalhosCorrelatos/workflow.png> [35 <./figuras/3.TrabalhosCorr
 elatos/workflow.png (PNG copy)>]
-<figuras/3.TrabalhosCorrelatos/micasa_aviary.png, id=805, 1026.83624pt x 585.18
+<figuras/3.TrabalhosCorrelatos/micasa_aviary.png, id=819, 1026.83624pt x 585.18
 625pt>
 File: figuras/3.TrabalhosCorrelatos/micasa_aviary.png Graphic file (type png)
  <use figuras/3.TrabalhosCorrelatos/micasa_aviary.png>
@@ -882,7 +886,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 [36] [37 <./figuras/3.TrabalhosCorrelatos/micasa_aviary.png (PNG copy)>]
-<figuras/3.TrabalhosCorrelatos/facerec.png, id=826, 541.02126pt x 233.87375pt>
+<figuras/3.TrabalhosCorrelatos/facerec.png, id=840, 541.02126pt x 233.87375pt>
 File: figuras/3.TrabalhosCorrelatos/facerec.png Graphic file (type png)
 
 <use figuras/3.TrabalhosCorrelatos/facerec.png>)
@@ -890,7 +894,7 @@ File: figuras/3.TrabalhosCorrelatos/facerec.png Graphic file (type png)
 sCorrelatos/facerec.png (PNG copy)>]
 Cap\'{\i }tulo 6.
 
-<figuras/4.ProblemaEProposta/esquemaSmartSpaceProposto.jpg, id=834, 796.9775pt 
+<figuras/4.ProblemaEProposta/esquemaSmartSpaceProposto.jpg, id=848, 796.9775pt 
 x 1127.21124pt>
 File: figuras/4.ProblemaEProposta/esquemaSmartSpaceProposto.jpg Graphic file (t
 ype jpg)
@@ -917,7 +921,7 @@ si-dade de Bra-sí-lia,
 [41
 
 
-]) [42] (./bin/monografia.aux)
+] [42]) [43] (./bin/monografia.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.74pt have occurred.
@@ -926,18 +930,18 @@ LaTeX Font Warning: Size substitutions with differences
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+LaTeX Warning: There were undefined references.
 
  )
 (\end occurred when \iffalse on line 462 was incomplete) 
 Here is how much of TeX's memory you used:
- 7354 strings out of 495041
- 104196 string characters out of 1181897
+ 7378 strings out of 495041
+ 104377 string characters out of 1181897
  193312 words of memory out of 3000000
- 10134 multiletter control sequences out of 15000+50000
+ 10158 multiletter control sequences out of 15000+50000
  16168 words of font info for 36 fonts, out of 3000000 for 9000
  30 hyphenation exceptions out of 8191
- 45i,8n,69p,1120b,463s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 45i,8n,69p,1120b,515s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/share/texmf/fonts
 /enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texmf-texlive/fonts/type1/publi
 c/amsfonts/cm/cmex10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/
@@ -953,9 +957,9 @@ pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texm
 f/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/public
 /cm-super/sfrm1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm2074.p
 fb></usr/share/texmf/fonts/type1/public/cm-super/sfti1200.pfb>
-Output written on ./bin/monografia.pdf (53 pages, 3211878 bytes).
+Output written on ./bin/monografia.pdf (54 pages, 3217332 bytes).
 PDF statistics:
- 1032 PDF objects out of 1200 (max. 8388607)
- 198 named destinations out of 1000 (max. 500000)
- 364 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1055 PDF objects out of 1200 (max. 8388607)
+ 201 named destinations out of 1000 (max. 500000)
+ 356 words of extra memory for PDF output out of 10000 (max. 10000000)
 

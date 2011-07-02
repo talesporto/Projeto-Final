@@ -4,12 +4,11 @@
 \BOOKMARK [0][-]{abstract.0}{Abstract}{}
 \BOOKMARK [0][-]{chapter.1}{Introdu\347\343o}{}
 \BOOKMARK [1][-]{section.1.1}{Organiza\347\343o do trabalho}{chapter.1}
-\BOOKMARK [0][-]{chapter.2}{Localiza\347\343o e Rastreamento de pessoas}{}
-\BOOKMARK [1][-]{section.2.1}{Rastreamento}{chapter.2}
-\BOOKMARK [2][-]{subsection.2.1.1}{Representa\347\343o do Objeto}{section.2.1}
-\BOOKMARK [2][-]{subsection.2.1.2}{Caracter\355sticas para rastreamento}{section.2.1}
-\BOOKMARK [2][-]{subsection.2.1.3}{Detec\347\343o de objeto}{section.2.1}
-\BOOKMARK [2][-]{subsection.2.1.4}{Rastreamento de objeto}{section.2.1}
+\BOOKMARK [0][-]{chapter.2}{Rastreamento}{}
+\BOOKMARK [1][-]{section.2.1}{Representa\347\343o do Objeto}{chapter.2}
+\BOOKMARK [1][-]{section.2.2}{Caracter\355sticas para rastreamento}{chapter.2}
+\BOOKMARK [1][-]{section.2.3}{Detec\347\343o de objeto}{chapter.2}
+\BOOKMARK [1][-]{section.2.4}{Rastreamento de objeto}{chapter.2}
 \BOOKMARK [0][-]{chapter.3}{Reconhecimento Facial}{}
 \BOOKMARK [1][-]{section.3.1}{Biometria}{chapter.3}
 \BOOKMARK [1][-]{section.3.2}{Reconhecimento Facial}{chapter.3}

@@ -42,10 +42,24 @@ A.~R. Gomes.
   Universidade de Bras{\'\i}lia,
   http://monografias.cic.unb.br/dspace/handle/123456789/110, 2007.
 
+\bibitem{nikos}
+N.~Grammalidis, G.~Goussis, G.~Troufakos, and M.~G. Strintzis.
+\newblock 3-d human body tracking from depth images using analysis by
+  synthesis.
+\newblock {\em Department of Electrical and Computer Engineering University of
+  Thessaloniki}, 2001.
+
 \bibitem{hewitt}
 R.~Hewitt.
 \newblock Face recognition with eigenface.
 \newblock {\em SERVO Magazine}, 2007.
+
+\bibitem{weiming}
+W.~Hu, T.~Tan, Fellow, IEEE, L.~Wang, and S.~Maybank.
+\newblock A survey on visual surveillance of a survey on visual surveillance of
+  object motion and behaviors.
+\newblock {\em IEEE Transactions On Systems, Man, and Cybernetics---part C:
+  Applications and Reviews}, 34(3):334--352, augusto 2004.
 
 \bibitem{drovetto}
 S.~A.~D. Junior.
@@ -88,6 +102,11 @@ N.~Ahuja M.~Yang, D. J.~Kriegman.
 \newblock Detecting faces in images: A survey.
 \newblock {\em IEEE Transactions on Pattern Analysis and Machine Intelligence},
   24(1):34--58, janeiro 2002.
+
+\bibitem{moeslund}
+T.~B. Moeslund and E.~Granum.
+\newblock A survey of computer vision-based human motion capture.
+\newblock {\em Comput. Vis. Image Underst.}, 81:231--268, March 2001.
 
 \bibitem{oliveira}
 D.~R. Oliveira.
