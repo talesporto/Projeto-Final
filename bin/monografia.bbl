@@ -54,12 +54,23 @@ R.~Hewitt.
 \newblock Face recognition with eigenface.
 \newblock {\em SERVO Magazine}, 2007.
 
+\bibitem{triangulacao}
+J.~Hightower and G.~Borriello.
+\newblock Location sensing techniques.
+\newblock {\em University of Washington, Computer Science and Engineering},
+  agosto 2001.
+
 \bibitem{weiming}
 W.~Hu, T.~Tan, Fellow, IEEE, L.~Wang, and S.~Maybank.
 \newblock A survey on visual surveillance of a survey on visual surveillance of
   object motion and behaviors.
 \newblock {\em IEEE Transactions On Systems, Man, and Cybernetics---part C:
   Applications and Reviews}, 34(3):334--352, augusto 2004.
+
+\bibitem{jain}
+R.~Jain, R.~Kasturi, and B.~G. Schunck.
+\newblock {\em Machine vision}.
+\newblock McGraw-Hill, Inc., New York, NY, USA, 1995.
 
 \bibitem{drovetto}
 S.~A.~D. Junior.

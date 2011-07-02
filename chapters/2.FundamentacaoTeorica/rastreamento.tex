@@ -1,6 +1,4 @@
-\chapter {Rastreamento}	
-
-	Neste capítulo será mostrada uma visão geral do processo de rastreamento de objetos e quais as dificuldades mais comuns encontradas. Mostraremos as técnicas mais comuns de detecção e rastreamento de objetos, as maneiras de representar os objetos rastreados e algumas caracterísiticas do objeto utilizadas.
+\section {Rastreamento}	
 
 	Rastreamento de objetos é uma importante tarefa do campo da computação visual. A ploriferação de computadores com um alto poder computacional, a disponibilidade de camêras de alta qualidade e preço acessível e a crescente necessidade de sistemas automáticos de análise de vídeos têm gerado um grante interesse em algoritmos de rastreamento de objetos~\cite{yilmaz}.
 
@@ -45,7 +43,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 
-\section{Representação do Objeto}
+\subsection{Representação do Objeto}
 
 	Nos sistemas de rastreamento, os objetos rastreados devem ser representados de alguma maneira. Geralmente, as representações são baseados em suas formas. Existe uma forte relação entre a representação do objeto e o algoritmo de rastreamento escolhido~\cite{yilmaz}. A representação é escolhida baseada no domínio da aplicação e as mais utilizadas são:
 
@@ -75,7 +73,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Características para rastreamento}
+\subsection{Características para rastreamento}
 
 	A seleção das características é uma tarefa crítica para o rastreamento e está fortemente relacionada com a representação do objeto. Em geral, a seleção procura as características mais singulares para que o objeto rastreado seja facilmente distinguido~\cite{yilmaz}. As características mais comuns utilizadas atualmente são:
 
@@ -92,7 +90,7 @@
 
 De todas as características, a mais utilizada para rastreamento é a cor~\cite{yilmaz}.
 
-\section{Detecção de objeto}
+\subsection{Detecção de objeto}
 
 	Todo método de rastreamento requer um mecanismo de detecção de objetos que pode ser realizada a cada \textit{frame} obtida ou na primeira vez que o objeto aparece no vídeo. Os método mais populares são:
 
@@ -108,7 +106,7 @@ De todas as características, a mais utilizada para rastreamento é a cor~\cite{
 	\end{itemize}
 
 
-\section{Rastreamento de objeto}
+\subsection{Rastreamento de objeto}
 
 	O objetivo do rastreamento de objeto é conhecer a trajetória do mesmo no tempo localizando sua posição em cada \textit{frame}. O rastreamento de objetos tam'bem pode prover a região completa na imagem ocupada pelo objeto a cada instante~\cite{yilmaz}. 
 
@@ -123,6 +121,7 @@ De todas as características, a mais utilizada para rastreamento é a cor~\cite{
 
 		\item \textbf{Rastreamento de Silhuetas:} o rastreamento é feito estimando a região do objeto a cada \textit{frame}. Esse método utiliza informação contida dentro da região do objeto. Esta informação pode ser na forma de densidade de aparência e modelos de forma que estão, geralmente, na forma de mapas borda. Dado os modelos de objeto, silhuetas são rastreadas por qualquer forma de correspondência ou evolução de contorno. Ambos os métodos podem ser essencialmente considerados como segmentação de objetos aplicada no domínio temporal utilizando os priores gerados a partir dos \textit{frames} anteriores~\cite{yilmaz}.
 	\end{itemize}
+
 
 
 
