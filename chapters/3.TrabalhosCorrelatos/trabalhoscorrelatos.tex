@@ -8,9 +8,9 @@ Neste capítulo analisaremos alguns projetos que procuram obter informações de
 
 O Projeto CHIL (\textit{Computers in the Human Interaction Loop}) é composto por um time de quinze laboratórios internacionais de pesquisa acadêmica e industrial . Eles colaboram entre si no desenvolvimento de serviços que visam ajudar as pessoas de forma proativa durante suas atividades diárias e, em particular, durante sua interação com as outras pessoas. 
 
-Alguns dos protótipos que foram desenvolvidos no projeto incluem um \textit{workspace} perceptivo e colaborativo, diversos serviços que facilitam a colaboração em reuniões e em salas de palestras, e um sistema perceptivo de assitência a um escrtitório virtual~\cite{chil}.
+Alguns dos protótipos que foram desenvolvidos no projeto incluem um \textit{workspace} perceptivo e colaborativo, diversos serviços que facilitam a colaboração em reuniões e em salas de palestras, e um sistema perceptivo de assistência a um escritório virtual~\cite{chil}.
 
-\subsection{Rastreamento e Lozalização de Pessoas}
+\subsection{Rastreamento e Localização de Pessoas}
 
 A pesquisa sobre rastreamento de pessoas foi focada principalmente no rastreamento de pessoas dentro de \textit{SmartSpaces}. O objetivo desse monitoramento foi determinar, para todos os pontos no tempo, as coordenadas dos ocupantes do \textit{SmartSpaces} na cena em relação a uma \textit{frame} de coordenadas. O que contradiz com a maioria das pesquisas de rastreamento visual, onde somente as coordenadas na imagem  são estimadas~\cite{chil}.
 
@@ -19,7 +19,7 @@ Os sensores usados no \textit{SmartSpace} incluem~\cite{chil}:
 	\begin{itemize}
 		\item um mínimo de quatro câmeras fixas instaladas nos cantos da sala, com campos de visão sobrepostos;
 		\item uma câmera com grande ângulo de visão fixa com vista para o quarto inteiro;
-		\item três arrays de micrfones em forma de T de 4 canais;
+		\item três arrays de microfones em forma de T de 4 canais;
 		\item um microfone de Mark III de 64 canais;
 	\end{itemize}
 
@@ -29,7 +29,7 @@ Do ponto de vista do áudio, é importante mencionar que o Projeto CHIL represen
 	 
 O sistema de rastreamento e localização foi amplamente testado usando os dados dos seminários e reuniões CHIL~\cite{chil}.
 
-Durante o projeto, muito progresso foi feito partindo de sistemas de única modalidade com a inicialização manual ou implícita, usando recursos simples, o que implica várias etapas de processamento manualmente concatenadas offline e acompanhamento de no máximo uma pessoa, para um sistema totalmente automático, com auto-inicialização, em tempo real, usando uma combinação de recursos, fusão dos \textit{streams} de vários sensores de áuido e video e capaz de rastrear alvos múltiplos~\cite{chil}.
+Durante o projeto, muito progresso foi feito partindo de sistemas de única modalidade com a inicialização manual ou implícita, usando recursos simples, o que implica várias etapas de processamento manualmente concatenadas offline e acompanhamento de no máximo uma pessoa, para um sistema totalmente automático, com auto-inicialização, em tempo real, usando uma combinação de recursos, fusão dos \textit{streams} de vários sensores de áudio e vídeo e capaz de rastrear alvos múltiplos~\cite{chil}.
 
 Sobre os algoritmos de rastreamento visual, duas abordagens principais foram seguidas pelos vários sistemas de rastreamento desenvolvidos~\cite{chil}:
 	
@@ -52,12 +52,12 @@ Sobre os algoritmos de rastreamento por áudio, três abordagens principais fora
 
 As abordagens de rastreamento por meio de áudio e vídeo foram combinas em um rastreamento multimodal. Esse rastreamento multimodal é, notavelmente, baseado em filtro de partículas uma vez que permitem uma integração flexível de recursos através dos sensores~\cite{chil}.
 
-No rastreamento multimodal, era esperado que a fusão dos diferentes tipos de dados proveria resultados mais precisos, eliminando, assim, os efeitos de decisões erradas tomadas por algum rastreamento monomodal. Porém, não aconteu o que se esperava. O rastreamento multimodal é altamente dependente das tarefas e dados em mãos, e exige um cuidadoso equilíbrio na disponibilidade e qualidade dos dados~\cite{chil}.
+No rastreamento multimodal, era esperado que a fusão dos diferentes tipos de dados proveria resultados mais precisos, eliminando, assim, os efeitos de decisões erradas tomadas por algum rastreamento monomodal. Porém, não aconteceu o que se esperava. O rastreamento multimodal é altamente dependente das tarefas e dados em mãos, e exige um cuidadoso equilíbrio na disponibilidade e qualidade dos dados~\cite{chil}.
 
 \subsection{Identificação das Pessoas}
 
 
-A fim de realizar identificação de forma natural e implicita, os sensores distribuídos no ambiente devem monitorar continuamente o espaço, e captura de dados áudio-visual das pessoas discretamente quando eles aparecem. Ou seja, o sistema de identificação de pessoas
+A fim de realizar identificação de forma natural e implícita, os sensores distribuídos no ambiente devem monitorar continuamente o espaço, e captura de dados áudio-visual das pessoas discretamente quando eles aparecem. Ou seja, o sistema de identificação de pessoas
 deve operar em segundo plano, sem necessitar de atenção e cooperação das pessoas. Dependendo da localização de uma pessoa e sua distância dos sensores, os dados recebidos podem variar~\cite{chil}. 
 
 Para reconhecimento facial, o sistema utiliza sequencias de imagens fornecidas pelas várias câmeras no \textit{SmartSpace}. A cada $\displaysyle 200ms$ imagens das ``caixas delimitadoras das faces'' e posições dos centros dos olhos são fornecidas, como exemplificado na Figura \ref{chil}. As faces, então, são alinhadas utilizando os centros dos olhos ou utilizando as ``caixas delimitadoras das faces''. Para obter robustez contra alguns erros, o sistema gera algumas imagens alinhadas adicionais modificando rótulos dos centros dos olhos ou os rótulos das ``caixas delimitadoras das faces''~\cite{chil}.
@@ -66,7 +66,7 @@ Para reconhecimento facial, o sistema utiliza sequencias de imagens fornecidas p
 		\begin{center}
 			\includegraphics[scale=0.4]{figuras/3.TrabalhosCorrelatos/chil.png}
 		\end{center}
-		\caption{Exemplo do sistema de indetificação facial do Projeto CHIL. No canto inferior direito, pode-se observar a imagem da face extraída~\cite{chil}.}
+		\caption{Exemplo do sistema de identificação facial do Projeto CHIL. No canto inferior direito, pode-se observar a imagem da face extraída~\cite{chil}.}
 		\label{chil}
 	\end{figure}
 
@@ -98,14 +98,14 @@ Os sensores utilizados e as condições do \textit{SmartSpace} deste projeto sã
 
 	\begin{itemize}
 		\item quatro câmeras nos cantos da sala (rotuladas como Cam1 a Cam4 na Figura \ref{upc});
-		\item uma camêra \textit{zenithal fish-eye} no telhado (rotulada como Cam8 na Figura \ref{upc});
-		\item uma camêra ativa apontadae com zoom para a porta de entrada para capturar as faces das pessoas que entram na sala (rotulada como PTZ na Figura \ref{upc});
+		\item uma câmera \textit{zenithal fish-eye} no telhado (rotulada como Cam8 na Figura \ref{upc});
+		\item uma câmera ativa apontada e com zoom para a porta de entrada para capturar as faces das pessoas que entram na sala (rotulada como PTZ na Figura \ref{upc});
 		\item um \textit{array} de microfones NIST Mark III de 64 canais ;
 		\item três \textit{clusters} de microfone de 4 canais no formato de T;
 		\item oito microfones no teto;
 	\end{itemize}
 
-O projeto conectar diferentes métodos de rastreamento e reconhecimento prover serviços de recohecimento e rastreamento multimodal no \textit{SmartSpace}. A Figura \ref{workflow} o fluxo de informação no sistema multimodal. O objetivo do sistema é identificar cada usuário ao entrar pela porta e rastrea-lo no ambiente. Para ter um sistema robusto que rastreia e identifica todas as pessoas ao mesmo tempo, utilizaram uma abordagem multimodal~\cite{salah}.
+O projeto conectar diferentes métodos de rastreamento e reconhecimento prover serviços de recohecimento e rastreamento multimodal no \textit{SmartSpace}. A Figura \ref{workflow} o fluxo de informação no sistema multimodal. O objetivo do sistema é identificar cada usuário ao entrar pela porta e rastreá-lo no ambiente. Para ter um sistema robusto que rastreia e identifica todas as pessoas ao mesmo tempo, utilizaram uma abordagem multimodal~\cite{salah}.
 
 \begin{figure}[hbt]
 		\begin{center}
@@ -119,9 +119,9 @@ As câmeras no sistema são responsáveis pela detecção de movimento, rastream
 
 \subsection{Detecção de movimento, Localização e Rastreamento}
 
-A detecção de movimento tenta separar o ``primeiro plano'' do ``fundo''para o seu funcionamento. O método utilizado é baseado na detecção objetos em movimento sob a suposição que imagens em uma cena sem objetos em movimento mostra regularidades, que pode ser modelada utilizando métodos estáticos. O conjunto de treinamento é contruídos por sequências pequenas de gravações \textit{offline} feitas da sala vazia~\cite{salah}.
+A detecção de movimento tenta separar o ``primeiro plano'' do ``fundo''para o seu funcionamento. O método utilizado é baseado na detecção objetos em movimento sob a suposição que imagens em uma cena sem objetos em movimento mostra regularidades, que pode ser modelada utilizando métodos estáticos. O conjunto de treinamento é construído por sequências pequenas de gravações \textit{offline} feitas da sala vazia~\cite{salah}.
 
-Para localização e rastreamento foi utilizado a abordagem de um mapa de ocupação probabilística (\textit{probabilistic occupancy map} - POM) simplificado para ambientes internos, onde as trajetórias de movimentos são curtase menos frequentes quando comparadas com trajetórias em ambientes externos~\cite{salah}.
+Para localização e rastreamento foi utilizado a abordagem de um mapa de ocupação probabilística (\textit{probabilistic occupancy map} - POM) simplificado para ambientes internos, onde as trajetórias de movimentos são curtas e menos frequentes quando comparadas com trajetórias em ambientes externos~\cite{salah}.
 
 \subsection{Detecção e Reconhecimento Facial}
 
@@ -138,9 +138,9 @@ Uma abordagem baseada em PCA (\textit{Principal Component Analisys}) foi utiliza
 
 Esse trabalho apresenta detalhes de um projeto de pesquisa de longo prazo, onde \textit{SmartSpaces} de uma gama de funcionalidades úteis são projetados, construídos e avaliados sistematicamente. Algumas das funcionalidades chave incluem: detecção de intrusos; rastreamento várias pessoas; pose do corpo e análise de postura; identificação de pessoas; modelagem do corpo humano; e análise do movimento~\cite{trivedi}.
 
-O sistema proposto monitora o ambiente em baixa resolução de forma contínua, detectando somente a presença e localização das pessoas e suas dimensões. Formas de acquisição de imagens mais detalhadas são ativadas quando um evento ou atividade de potencial interesse é detectado. Esses eventos serão os focos de atenção do sistema~\cite{trivedi}.
+O sistema proposto monitora o ambiente em baixa resolução de forma contínua, detectando somente a presença e localização das pessoas e suas dimensões. Formas de aquisição de imagens mais detalhadas são ativadas quando um evento ou atividade de potencial interesse é detectado. Esses eventos serão os focos de atenção do sistema~\cite{trivedi}.
 
-O monitoramente de baixa resolução e de grande área do ambiente é alcançado graças a algumas câmeras de amplo ângulo de visão e estáticas. Com um pequeno número de câmeras PTZ (\textit{pan/tilt/zoom}) ativas, múltiplos focos de atenção podem ser mantidos de forma simultânea~\cite{trivedi}.
+O monitoramento de baixa resolução e de grande área do ambiente é alcançado graças a algumas câmeras de amplo ângulo de visão e estáticas. Com um pequeno número de câmeras PTZ (\textit{pan/tilt/zoom}) ativas, múltiplos focos de atenção podem ser mantidos de forma simultânea~\cite{trivedi}.
 
 Foi desenvolvido uma arquitetura de sistema para o \textit{SmartSpace} chamada DIVA. Ela pode ser vista como uma rede inteligente e ativa de câmeras, onde várias câmeras ão controladas para prover uma ampla gama de funcionalidades~\cite{trivedi}.
 
@@ -159,13 +159,13 @@ Os sensores na sala AVIARY incluem~\cite{trivedi}:
 	\begin{itemize}
 		\item uma rede de quatro câmeras omnidirecionais;
 		\item quatro câmeras PTZ;
-		\item quatro câmeras retilíneas státicas;
+		\item quatro câmeras retilíneas estáticas;
 		\item dois \textit{arrays} de microfones com quatro microfones cada;
 	\end{itemize}
 
-As quatro câmeras ominidirecionais (ODVSs) estão perto dos cantos de uma mesa de reunião, cobrindo o quarto inteiro de dentro para fora, como mostrado na Figura \ref{micasa_aviary}. As câmeras PTZ e retilíneas estão nos ``vértices'' da sala a $\displaysytle 1.4m$ acima do chão. Os dois \textit{arrays} de microfones foram instalados na parede e no teto~\cite{trivedi}.
+As quatro câmeras omnidirecionais (ODVSs) estão perto dos cantos de uma mesa de reunião, cobrindo o quarto inteiro de dentro para fora, como mostrado na Figura \ref{micasa_aviary}. As câmeras PTZ e retilíneas estão nos ``vértices'' da sala a $\displaysytle 1.4m$ acima do chão. Os dois \textit{arrays} de microfones foram instalados na parede e no teto~\cite{trivedi}.
 
-Um computador é alocado para rastreamento, utilizando imagens das quatro câmeras ominidirecionais ou imagens das quatro câmeras retílinas estáticas. Outro computador é utilizado para analizar os eventos de áudio e de vídeo. Um terceiro computador é utilizado para arquivar \textit{streams} de áudio e vídeo para posterior recuperação~\cite{trivedi}.
+Um computador é alocado para rastreamento, utilizando imagens das quatro câmeras omnidirecionais ou imagens das quatro câmeras retilíneas estáticas. Outro computador é utilizado para analisar os eventos de áudio e de vídeo. Um terceiro computador é utilizado para arquivar \textit{streams} de áudio e vídeo para posterior recuperação~\cite{trivedi}.
 
 O \textit{SmartSpace} MICASA é duas vezes maior que o AVIARY. Os sensores utilizados nessa sala são~\cite{trivedi}:
 	
@@ -175,11 +175,11 @@ O \textit{SmartSpace} MICASA é duas vezes maior que o AVIARY. Os sensores utili
 		\item oito câmeras retilíneas státicas;
 	\end{itemize}
 
-As câmeras omnidirecionais são instaladas no teto, como mostrado na Figura \ref{micasa_aviary}. As câmeras PTZ e quatro câmeras retilíneas foram instaldas de maneira similar ao \textit{SmartSpace} AVIARY. As quatro câmeras retilíneas restantes foram instaladas nas paredes como mostrado como mostrado na Figura \ref{micasa_aviary}. As câmeras nos vértices possuem maior campo de visão para cobrir toda a sala e fazem parte do array de câmeras para rastreamento~\cite{trivedi}.
+As câmeras omnidirecionais são instaladas no teto, como mostrado na Figura \ref{micasa_aviary}. As câmeras PTZ e quatro câmeras retilíneas foram instaladas de maneira similar ao \textit{SmartSpace} AVIARY. As quatro câmeras retilíneas restantes foram instaladas nas paredes como mostrado como mostrado na Figura \ref{micasa_aviary}. As câmeras nos vértices possuem maior campo de visão para cobrir toda a sala e fazem parte do array de câmeras para rastreamento~\cite{trivedi}.
 
 \subsection{Rastreamento, Detecção de faces e Reconhecimento facial}
  
-Foi desenvolvido um sistema em tempo-real que utiliza a rede de camêras omnidirecionais que é responsável pelo rastreamento, detecção das faces e reconhecimento facial. 
+Foi desenvolvido um sistema em tempo-real que utiliza a rede de câmeras omnidirecionais que é responsável pelo rastreamento, detecção das faces e reconhecimento facial. 
 
 O rastreamento baseado na câmeras omnidirecionais é feito detectando a silhuetas das pessoas por meio da subtração do fundo com remoção de sombras.
 

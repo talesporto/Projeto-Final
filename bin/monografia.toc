@@ -23,7 +23,7 @@
 \contentsline {chapter}{\numberline {4}Kinect}{29}{chapter.4}
 \contentsline {chapter}{\numberline {5}Trabalhos Correlatos}{31}{chapter.5}
 \contentsline {section}{\numberline {5.1}Projeto CHIL}{31}{section.5.1}
-\contentsline {subsection}{\numberline {5.1.1}Rastreamento e Lozaliza\IeC {\c c}\IeC {\~a}o de Pessoas}{31}{subsection.5.1.1}
+\contentsline {subsection}{\numberline {5.1.1}Rastreamento e Localiza\IeC {\c c}\IeC {\~a}o de Pessoas}{31}{subsection.5.1.1}
 \contentsline {subsection}{\numberline {5.1.2}Identifica\IeC {\c c}\IeC {\~a}o das Pessoas}{33}{subsection.5.1.2}
 \contentsline {section}{\numberline {5.2}Identifica\IeC {\c c}\IeC {\~a}o multimodal e localiza\IeC {\c c}\IeC {\~a}o de usu\IeC {\'a}rios em um ambiente inteligente}{34}{section.5.2}
 \contentsline {subsection}{\numberline {5.2.1}Detec\IeC {\c c}\IeC {\~a}o de movimento, Localiza\IeC {\c c}\IeC {\~a}o e Rastreamento}{35}{subsection.5.2.1}
