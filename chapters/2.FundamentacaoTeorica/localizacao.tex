@@ -17,7 +17,7 @@
 	Em contraste com imagens de itensidade, imagens cujo valor em cada pixel é uma função da distância do ponto correspondente na cena do sensor são chamadas de imagens de pronfunidade, exemplificada na Figura \ref{depthimage}. Tais imagens pode ser adiquiras diretamente utilizando sensores específicos. Os dois métodos mais comuns para obter imagens de profundidade são~\cite{jain}:
 
 		\begin{enumerate}
-			\item \textbf{Radar:} a distância até o objeto é calculado observando a diferença de tempo entre o pulso eletromagnético transmitido e recebido. A informação de profundidade também pode ser obtida através da dectecção da diferença de fase entre as ondas trasnsmitidas e as recebidas de um feixe de amplitude modulada;
+			\item \textbf{Radar:} a distância até o objeto é calculado observando a diferença de tempo entre o pulso eletromagnético transmitido e recebido. A informação de profundidade também pode ser obtida através da dectecção da diferença de fase entre as ondas trasnsmitidas e as recebidas de um feixe de amplitude modulada~\cite{jain};
 			\item \textbf{Triangulação:} utiliza as propriedades geométricas do triângulo para calcular a localização de objetos. Pode ser dividido em duas subcategorias: \textit{lateration} e angulação. \textit{Lateration} computa a posição de um objeto estimando sua distância de múltiplos ponto de referência. Calcular a posição de um objeto em duas dimensões requer estimativas de distância de três pontos não colineares como mostrado na Figura \ref{lateration}. Já em três dimensões são necessários quatro pontos não coplanares. Ângulação utiliza ângulos para determinar a distância do objeto. Em geral, ângulação em duas dimensões requer estimativas de dois ângulos e a estimativa da distância entre dois pontos de referência como mostrado na Figura \ref{angulation}~\cite{triangulacao};
 		\end{enumerate}
 
@@ -38,5 +38,5 @@
 	\end{figure}
 
 
-	Imagens de profundidade são úteis devido a sua especificação explícita de valores de profundidade. Ao mesmo tempo acreditava-se que se a informação de imagem fosse disponobilizada de maneira explícita, o processamento posterior da imagem seria facilitado. Tournou-se claro que a informação de profundiade ajuda, porém a tarefa básica de interpretação de imagens mantém todas as suas dificuldades~\cite{jain}.
+	Imagens de profundidade são úteis devido a sua especificação explícita de valores de profundidade. Ao mesmo tempo acreditava-se que se a informação de profundidade fosse disponobilizada de maneira explícita, o processamento posterior da imagem seria facilitado. Tournou-se claro que a informação de profundiade ajuda, porém a tarefa básica de interpretação de imagens mantém todas as suas dificuldades~\cite{jain}.
 
