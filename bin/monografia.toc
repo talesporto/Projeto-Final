@@ -17,7 +17,7 @@
 \contentsline {subsubsection}{M\IeC {\'e}todo Viola-Jones}{19}{section*.8}
 \contentsline {subsection}{\numberline {3.2.2}Reconhecimento das Faces encontradas}{22}{subsection.3.2.2}
 \contentsline {subsubsection}{Reconhecimento facial com \textit {Eigenfaces}}{24}{section*.9}
-\contentsline {subsubsection}{Redu\IeC {\c c}\IeC {\~a}o do ru\IeC {\'\i }do utilizando PCA}{24}{section*.10}
+\contentsline {subsubsection}{Redu\IeC {\c c}\IeC {\~a}o do ru\IeC {\'\i }do utilizando PCA}{25}{section*.10}
 \contentsline {subsubsection}{As componentes principais - autovetor(\textit {eingenvector})}{27}{section*.11}
 \contentsline {subsubsection}{As limita\IeC {\c c}\IeC {\~o}es do \textit {Eigenfaces}}{27}{section*.12}
 \contentsline {subsubsection}{``Passo a passo'' sobre \textit {Eigenfaces}}{28}{section*.13}

@@ -60,7 +60,7 @@ No rastreamento multimodal, era esperado que a fusão dos diferentes tipos de da
 A fim de realizar identificação de forma natural e implícita, os sensores distribuídos no ambiente devem monitorar continuamente o espaço, e captura de dados áudio-visual das pessoas discretamente quando eles aparecem. Ou seja, o sistema de identificação de pessoas
 deve operar em segundo plano, sem necessitar de atenção e cooperação das pessoas. Dependendo da localização de uma pessoa e sua distância dos sensores, os dados recebidos podem variar~\cite{chil}. 
 
-Para reconhecimento facial, o sistema utiliza sequencias de imagens fornecidas pelas várias câmeras no \textit{SmartSpace}. A cada $\displaysyle 200ms$ imagens das ``caixas delimitadoras das faces'' e posições dos centros dos olhos são fornecidas, como exemplificado na Figura \ref{chil}. As faces, então, são alinhadas utilizando os centros dos olhos ou utilizando as ``caixas delimitadoras das faces''. Para obter robustez contra alguns erros, o sistema gera algumas imagens alinhadas adicionais modificando rótulos dos centros dos olhos ou os rótulos das ``caixas delimitadoras das faces''~\cite{chil}.
+Para reconhecimento facial, o sistema utiliza sequências de imagens fornecidas pelas várias câmeras no \textit{SmartSpace}. A cada $\displaysyle 200ms$ imagens das ``caixas delimitadoras das faces'' e posições dos centros dos olhos são fornecidas, como exemplificado na Figura \ref{chil}. As faces, então, são alinhadas utilizando os centros dos olhos ou utilizando as ``caixas delimitadoras das faces''. Para obter robustez contra alguns erros, o sistema gera algumas imagens alinhadas adicionais modificando rótulos dos centros dos olhos ou os rótulos das ``caixas delimitadoras das faces''~\cite{chil}.
 
 	\begin{figure}[hbt]
 		\begin{center}
@@ -105,7 +105,7 @@ Os sensores utilizados e as condições do \textit{SmartSpace} deste projeto sã
 		\item oito microfones no teto;
 	\end{itemize}
 
-O projeto conectar diferentes métodos de rastreamento e reconhecimento prover serviços de recohecimento e rastreamento multimodal no \textit{SmartSpace}. A Figura \ref{workflow} o fluxo de informação no sistema multimodal. O objetivo do sistema é identificar cada usuário ao entrar pela porta e rastreá-lo no ambiente. Para ter um sistema robusto que rastreia e identifica todas as pessoas ao mesmo tempo, utilizaram uma abordagem multimodal~\cite{salah}.
+O projeto conecta diferentes métodos de rastreamento e reconhecimento para prover serviços de recohecimento e rastreamento multimodal no \textit{SmartSpace}. A Figura \ref{workflow} o fluxo de informação no sistema multimodal. O objetivo do sistema é identificar cada usuário ao entrar pela porta e rastreá-lo no ambiente. Para ter um sistema robusto que rastreia e identifica todas as pessoas ao mesmo tempo, utilizaram uma abordagem multimodal~\cite{salah}.
 
 \begin{figure}[hbt]
 		\begin{center}
@@ -119,7 +119,7 @@ As câmeras no sistema são responsáveis pela detecção de movimento, rastream
 
 \subsection{Detecção de movimento, Localização e Rastreamento}
 
-A detecção de movimento tenta separar o ``primeiro plano'' do ``fundo''para o seu funcionamento. O método utilizado é baseado na detecção objetos em movimento sob a suposição que imagens em uma cena sem objetos em movimento mostra regularidades, que pode ser modelada utilizando métodos estáticos. O conjunto de treinamento é construído por sequências pequenas de gravações \textit{offline} feitas da sala vazia~\cite{salah}.
+A detecção de movimento tenta separar o ``primeiro plano'' do ``fundo''para o seu funcionamento. O método utilizado é baseado na detecção de objetos em movimento sob a suposição que imagens em uma cena sem objetos em movimento mostra regularidades, que pode ser modelada utilizando métodos estáticos. O conjunto de treinamento é construído por sequências pequenas de gravações \textit{offline} feitas da sala vazia~\cite{salah}.
 
 Para localização e rastreamento foi utilizado a abordagem de um mapa de ocupação probabilística (\textit{probabilistic occupancy map} - POM) simplificado para ambientes internos, onde as trajetórias de movimentos são curtas e menos frequentes quando comparadas com trajetórias em ambientes externos~\cite{salah}.
 
@@ -183,7 +183,7 @@ Foi desenvolvido um sistema em tempo-real que utiliza a rede de câmeras omnidir
 
 O rastreamento baseado na câmeras omnidirecionais é feito detectando a silhuetas das pessoas por meio da subtração do fundo com remoção de sombras.
 
-O vídeo capturado é processado para detecção e reconhecimento de faces como mostrado na Figura \ref{facerec}. Para detecção de faces utiliza o método de segmentação de tom de pele. As imagens resultantes são classificadas para rejeitar as imagens sem faces. Então, o método \textit{Eigenface} é utilizada tanto para classificação da face quanto para reconhecimento. 
+O vídeo capturado é processado para detecção e reconhecimento de faces como mostrado na Figura \ref{facerec}. Para detecção de faces utiliza o método de segmentação de tom de pele. As imagens resultantes são classificadas para rejeitar as imagens sem faces. Então, o método \textit{Eigenface} é utilizado tanto para classificação da face quanto para reconhecimento. 
 
 	\begin{figure}[hbt]
 		\begin{center}
