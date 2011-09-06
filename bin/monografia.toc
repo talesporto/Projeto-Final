@@ -21,17 +21,19 @@
 \contentsline {subsubsection}{As componentes principais - autovetor(\textit {eingenvector})}{27}{section*.11}
 \contentsline {subsubsection}{As limita\IeC {\c c}\IeC {\~o}es do \textit {Eigenfaces}}{27}{section*.12}
 \contentsline {subsubsection}{``Passo a passo'' sobre \textit {Eigenfaces}}{28}{section*.13}
-\contentsline {chapter}{\numberline {4}Kinect}{32}{chapter.4}
-\contentsline {chapter}{\numberline {5}Trabalhos Correlatos}{34}{chapter.5}
-\contentsline {section}{\numberline {5.1}Projeto CHIL}{34}{section.5.1}
-\contentsline {subsection}{\numberline {5.1.1}Rastreamento e Localiza\IeC {\c c}\IeC {\~a}o de Pessoas}{34}{subsection.5.1.1}
-\contentsline {subsection}{\numberline {5.1.2}Identifica\IeC {\c c}\IeC {\~a}o das Pessoas}{36}{subsection.5.1.2}
-\contentsline {section}{\numberline {5.2}Identifica\IeC {\c c}\IeC {\~a}o multimodal e localiza\IeC {\c c}\IeC {\~a}o de usu\IeC {\'a}rios em um ambiente inteligente}{37}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}Detec\IeC {\c c}\IeC {\~a}o de movimento, Localiza\IeC {\c c}\IeC {\~a}o e Rastreamento}{38}{subsection.5.2.1}
-\contentsline {subsection}{\numberline {5.2.2}Detec\IeC {\c c}\IeC {\~a}o e Reconhecimento Facial}{38}{subsection.5.2.2}
-\contentsline {section}{\numberline {5.3}Captura de contexto din\IeC {\^a}mico e \textit {Arrays} de v\IeC {\'\i }deos distribu\IeC {\'\i }dos para \textit {SmartSpaces}}{39}{section.5.3}
-\contentsline {subsection}{\numberline {5.3.1}Rastreamento, Detec\IeC {\c c}\IeC {\~a}o de faces e Reconhecimento facial}{40}{subsection.5.3.1}
-\contentsline {chapter}{\numberline {6}Problema e Proposta}{42}{chapter.6}
-\contentsline {section}{\numberline {6.1}Problema}{42}{section.6.1}
-\contentsline {section}{\numberline {6.2}Proposta}{42}{section.6.2}
+\contentsline {chapter}{\numberline {4}Trabalhos Correlatos}{32}{chapter.4}
+\contentsline {section}{\numberline {4.1}Projeto CHIL}{32}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Rastreamento e Localiza\IeC {\c c}\IeC {\~a}o de Pessoas}{32}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Identifica\IeC {\c c}\IeC {\~a}o das Pessoas}{34}{subsection.4.1.2}
+\contentsline {section}{\numberline {4.2}Identifica\IeC {\c c}\IeC {\~a}o multimodal e localiza\IeC {\c c}\IeC {\~a}o de usu\IeC {\'a}rios em um ambiente inteligente}{35}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Detec\IeC {\c c}\IeC {\~a}o de movimento, Localiza\IeC {\c c}\IeC {\~a}o e Rastreamento}{36}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Detec\IeC {\c c}\IeC {\~a}o e Reconhecimento Facial}{36}{subsection.4.2.2}
+\contentsline {section}{\numberline {4.3}Captura de contexto din\IeC {\^a}mico e \textit {Arrays} de v\IeC {\'\i }deos distribu\IeC {\'\i }dos para \textit {SmartSpaces}}{37}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Rastreamento, Detec\IeC {\c c}\IeC {\~a}o de faces e Reconhecimento facial}{38}{subsection.4.3.1}
+\contentsline {chapter}{\numberline {5}Problema e Proposta}{40}{chapter.5}
+\contentsline {section}{\numberline {5.1}M\IeC {\'o}dulo de Reconhecimento}{40}{section.5.1}
+\contentsline {section}{\numberline {5.2}M\IeC {\'o}dulo de Rastreamento}{41}{section.5.2}
+\contentsline {section}{\numberline {5.3}Rela\IeC {\c c}\IeC {\~a}o Rastreamento e Reconhecimento}{41}{section.5.3}
+\contentsline {section}{\numberline {5.4}M\IeC {\'o}dulo de Registro}{41}{section.5.4}
+\contentsline {section}{\numberline {5.5}Kinect}{41}{section.5.5}
 \contentsline {chapter}{Refer\^encias}{44}{section*.14}

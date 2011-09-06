@@ -1,28 +1,35 @@
 \chapter{Problema e Proposta}
 
+Observando a realidade de um \textit{SmartSpace} fica claro que as informações como posição das pessoas e suas respectivas identidades são imprescindíveis para que decisões possam ser tomadas. Atualmente, a maioria das soluções encontradas para fornecer esse tipo de informação foram projetadas para funcionar em ambientes específicos. Com isso, não seria adequado tentar incorporar soluções como estas em um ambiente com diferentes dimensões, condição de iluminação, posição dos móveis pois este se resultaria em um cenário totalmente diferente. Além disso, precisamos de uma solução que seja integrada com o middleware \textit{UbiquitOS} que gere nosso \textit{SmartSpace}.
 
-\section{Problema}
-	O problema que nos propomos a resolver se refere ao fato do \textit{middleware} chamado \textit{UbiquitOS} não ter capacidade de reconhecer, de forma não intrusiva, a presença, identificação e localização de usuários dentro do \textit{SmartSpace}.
+Propomos, então, um sistema aberto de rastreamento, localização e identificação de pessoas em nosso \textit{SmartSpace} que forneça essas informações de contexto para o \textit{UbiquitOS}. Apelidamos esse sistema de TRUE, \textit{\textbf{T}rack and \textbf{R}ecognize \textbf{U}sers in \textbf{E}nvironment}.
 
-	Essas informações são importantes para o \textit{middleware}, pois para conseguir uma boa interação entre as diversas peças que compõem o \textit{SmartSpace} é necessário que se tenha a disposição informações de contexto. Informações de contexto são importantes para definir ajustes finos nos componentes do ambiente, como, por exemplo, definir o identificar perfis do usuário e, a partir do mesmo, ajustar os dispositivos presentes no ambiente.
+O sistema \textit{True} utiliza tanto imagens de cor quanto de pronfunidade. As imagens de profunidade são utilizadas no rastreamento e localização dos usuários no ambiente, e as imagens de cor são utilizadas no reconhecimento facial e no cadastro dos usuários. Então os dispositivos presentes no ambiente devem ser capazes de fornecer esses tipos de dados a um taxa e qualidade adequada. 
 
-\section{Proposta}
+Para obter esses dados do ambiente, decidimos utilizar o sensor \textit{Kinect} da Microsoft~\ref{sec:kinect}, um dispositivo bastante acessível e capaz de fornecer ao sistema imagens de cor e de profundidade sincronizadas.
 
-	Nosso objetivo é propor um sistema eficiente para reconhecimento e localização de usuários dentro de um \textit{SmartSpace} em tempo real. Para alcançar esse objetivo iremos implementar um sistema eficiente que, através de imagens de cor e de profundidade providas pelo \textit{Kinect} e utilizando as bibliotecas \textit{OpenCV} e \textit{OpenNI}, reconheça e rastreie os usuários durante a sua permanência no \textit{SmartSpace}.
+O sistema \textit{True} pode ser dividido em três módulos principais:
 
+	\begin{itemize}
+		\item \textbf{Módulo de Rastreamento}: parte do sistema responsável pelo rastreamento dos usuários no ambiente.
+		\item \textbf{Módulo de Reconhecimento}: parte do sistema responsável por reconhecer os usuários rastreados.
+		\item \textbf{Módulo de Registro}: parte do sitema responsável pelo cadastro de novos usuários e treino do algoritmo.
+	\end{itemize}
 
-	Ao todo usaremos 4 \textit{Kinects} dispostos conforme a Figura \ref{smartSpaceProposto}. Essa disposição foi definida para evitar problemas de obstrução de usuários que podem atrapalhar o reconhecimento e o rastreamento dos usuários e também para maximizar o alcance dos \textit{Kinects} e aumentar a robustez graças a redundância de dados.
+\section{Módulo de Reconhecimento}
 
-	\begin{figure}[hbt]
-		\begin{center}
-			\includegraphics[scale=0.3]{figuras/4.ProblemaEProposta/esquemaSmartSpaceProposto.jpg}
-		\end{center}
-		\caption{Esquema proposto para o \textit{SmartSpace} com \textit{Kinect}.}
-		\label{smartSpaceProposto}
-	\end{figure}
+	O Módulo de Reconhecimento, como se deduz do próprio nome, é responsável pelo reconhecimento facial dos usuários no ambiente. Para isso, é necessário detectar a face do usuário em questão em uma imagem e depois realizar o reconhecimento da mesma em tempo real. 
 
-	Para detecção de faces utilizaremos o método de \textit{Viola-Jones} e para o reconhecimento facial utilizaremos \textit{Eigenfaces}. Ambos os métodos já são implementados pela biblioteca \textit{OpenCV} (\textit{Open Source Computer Vision}), que é uma biblioteca aberta para computação visual muito utilizada. Estes métodos serão aplicados nas imagens de cor providas pela câmera de cor do \textit{Kinect}.
+	Para realizar a deteção facial foi utilizado o método \textit{Viola-Jones}~\ref{sec:viola-jones}. Um método que pode ser utilizado para construir uma abordagem de detecção facial rápida e eficaz~\cite{violajones} em tempo real. Além disso, este método é implementado pela biblioteca \textit{OpenCV} (\textit{Open Source Computer Vision}) onde bons classificadores em cascata de \textit{Haar features} são fornecidos, como por exemplo um classificador de faces frontais utilizado nesse trabalho.
 
-	Para localização e rastreamento dos usuários no \textit{SmartSpace} utilizaremos a biblioteca \textit{OpenNI} (\textit{Open Natural Interaction}). Esta é uma biblioteca aberta que define APIs para o desenvolvimento de aplicações utilizando interação natural. A API padrão permite aos desenvolvedores rastrear cenas (3D) da vida real, utilizando tipos de dados que são calculados a partir da entrada de um sensor, como por exemplo: a representação de um corpo completo, a representação da localização da mão, uma matriz de  \textit{pixels} em mapa de profundidade e assim por diante~\cite{openni}. Com isso, utilizaremos essa API e as imagens de profundidade providas pelas câmeras de profundidade do \textit{Kinect}, para rastrear e localizar os usuários em tempo real.
+	Para realizar o reconhecimento facial foi utilizado \textit{Eigenfaces}~\ref{sec:eigenfaces}. Uma técnica bastante satisfatória quando utilizada sobre uma base de dados (faces) relativamente grande, permitindo ao sistema inferir, das imagens suas principais características e, partindo delas, realizar o reconhecimento das imagens utilizando um número bastante reduzido de cálculos~\cite{artigo-eigenface}, permitindo, assim, um reconhecimento em tempo real.
 
-	A partir dessa proposta esperamos que o nosso sistema funcione em tempo real e que tenha o índice mínimo de confiança de 95\%. 
+	O reconhecimento é feito em imagens de usuários que são passadas ao mesmo pelo Módulo de Rastramento. Essa imagens são compostas somente pela região da imagem em que o usuário que se deseja reconhecer se encontra.
+
+\section{Módulo de Rastreamento}
+
+\section{Relação Rastreamento e Reconhecimento}
+
+\section{Módulo de Registro}
+
+\input{chapters/4.ProblemaEProposta/kinect.tex}

@@ -88,6 +88,7 @@ Atualmente, já existem diferentes métodos/técnicas de detecção de faces. Ta
 Um problema relacionado e muito importante é como avaliar a performance dos métodos de detecção de faces propostos. Para isso, muitas métricas foram adotadas como tempo de aprendizagem, número de amostras necessárias no treinamento e a proporção entre taxas de detecção e ``falso alarme''. Esta última é dificultada pelas diferentes definições para as taxas de detecção e falso alarme adotadas pelos pesquisadores~\cite{yang}.
 
 \subsubsection{Método Viola-Jones}
+\label{sec:viola-jones}
 
 O método que será utilizado nesse trabalho será o método \textit{Viola-Jones}}. Este é um  método baseado em características para detecção de objetos que minimiza o tempo de computação e possui uma alta acurácia permitindo detecção de faces em tempo real. Esse método pode ser utilizado para construir uma abordagem de detecção facial rápida e eficaz~\cite{violajones}. É o método utilizado na biblioteca \textit{OpenCV}(\textit{Open Source Computer Vision}) e muito utilizado atualmente.
 	
@@ -187,12 +188,13 @@ Mais antiga e mais comum, as técnicas 2D são amplamente utilizadas e as princi
 
 		\item \textbf{Redes Neurais:} uma rede neural artificial é um modelo computacional capaz de, entre outras funções, armazenar, classificar padrões, realizar interpolação de funções não-lineares e apresentar soluções heurísticas para problemas de otimização. Isso é conseguido através de um processo denominado ``aprendizado''. O uso de redes neurais visa tornar o sistema de reconhecimento capaz de absorver pequenas variações ocorridas no momento da coleta de medidas faciais. Espera-se, portanto,  mais robustez a falhas e que responda de forma mais confiável~\cite{oliveira};
 
-		\item \textbf{\textit{Fisher Faces}:}igual ao \textit{Eigenfaces}, é um método que procura uma projeção linear das faces para um espaço dimensional menor onde os impactos causados pelas variações de luz e expressões faciais são minimizados. O método é derivado da discriminante linear de Fisher (FLD)~\cite{belhumeur}.
+		\item \textbf{\textit{Fisher Faces}:} igual ao \textit{Eigenfaces}, é um método que procura uma projeção linear das faces para um espaço dimensional menor onde os impactos causados pelas variações de luz e expressões faciais são minimizados. O método é derivado da discriminante linear de Fisher (FLD)~\cite{belhumeur}.
 	\end{enumerate}
 
 O \textit{Eigenfaces} mostrou um ótimo custo benefício, devido ao seu baixo custo computacional e a sua, relativamente alta, confiabilidade. Então, falaremos mais detalhadamente como ele funciona.
 
 \subsubsection{Reconhecimento facial com \textit{Eigenfaces}}
+\label{sec:eigenfaces}
 
 Este é um algoritmo simples e fácil de implementar e os passos utilizados por ele também são utilizados em muitos métodos avançados. Os princípios básicos por trás dele, como PCA - ``\textit{Principal Component Analisys} (Análise de componente principal)'' e \textit{Distance-Based Matching} (Correspondência Baseada na Distância) aparecem cada vez mais na computação visual e em diversas aplicações de inteligência artificial~\cite{hewitt}.
 

@@ -41,6 +41,11 @@ J.~Daugman.
 \newblock {\em IEEE Transactions on Pattern Analysis and Machine Intelligence},
   19(7):675--676, 1997.
 
+\bibitem{artigo-eigenface}
+T.~S.~K{\"o}rting e~N.~L. D.~Filho.
+\newblock Utilizando eigenfaces para reconhecimento de imagens.
+\newblock {\em Funda{\c c}{\~a}o Universidade Federal do Rio Grande}.
+
 \bibitem{kinect}
 H.~Fairhead.
 \newblock All about kinect.
@@ -141,10 +146,6 @@ D.~R. Oliveira.
 \newblock Reconhecimento de faces usando redes neurais e biometria.
 \newblock Master's thesis, S{\~a}o Jos{\'e} dos Campos: Instituto Nacional de
   Pesquisas Espaciais (INPE), setembro 2003.
-
-\bibitem{openni}
-OpenNI.
-\newblock {\em User Guide}.
 
 \bibitem{belhumeur}
 D.~J.~Kriegman P.~N.~Belhumeur, J. P.~Hespanha.

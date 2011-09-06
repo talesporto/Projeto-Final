@@ -4,53 +4,54 @@ The top-level auxiliary file: bin/monografia.aux
 The style file: plain.bst
 Database file #1: bibliografia.bib
 Warning--entry type for "kinect" isn't style-file defined
---line 93 of file bibliografia.bib
+--line 100 of file bibliografia.bib
 A bad cross reference---entry "chil"
 refers to entry "DBLP:conf/fgr/2008", which doesn't exist
 Warning--I didn't find a database entry for "DBLP:conf/fgr/2008"
 Warning--to sort, need author or key in servodetection
 Warning--empty author in servodetection
+Warning--empty year in artigo-eigenface
 Warning--empty year in lopes
 Warning--empty year in milene
 You've used 37 entries,
             2118 wiz_defined-function locations,
-            710 strings with 9478 characters,
-and the built_in function-call counts, 10591 in all, are:
-= -- 1044
-> -- 459
+            711 strings with 9610 characters,
+and the built_in function-call counts, 10652 in all, are:
+= -- 1048
+> -- 465
 < -- 3
-+ -- 190
-- -- 148
-* -- 732
-:= -- 1837
-add.period$ -- 108
++ -- 192
+- -- 150
+* -- 736
+:= -- 1855
+add.period$ -- 109
 call.type$ -- 37
-change.case$ -- 185
+change.case$ -- 186
 chr.to.int$ -- 0
-cite$ -- 41
-duplicate$ -- 399
+cite$ -- 42
+duplicate$ -- 401
 empty$ -- 831
-format.name$ -- 148
-if$ -- 2164
+format.name$ -- 150
+if$ -- 2171
 int.to.chr$ -- 0
 int.to.str$ -- 37
-missing$ -- 30
-newline$ -- 185
-num.names$ -- 70
-pop$ -- 160
+missing$ -- 31
+newline$ -- 186
+num.names$ -- 72
+pop$ -- 161
 preamble$ -- 1
 purify$ -- 149
 quote$ -- 0
-skip$ -- 280
+skip$ -- 282
 stack$ -- 0
-substring$ -- 616
+substring$ -- 615
 swap$ -- 52
 text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 146
-warning$ -- 4
-while$ -- 101
+warning$ -- 5
+while$ -- 103
 width$ -- 39
-write$ -- 392
+write$ -- 394
 (There was 1 error message)
