@@ -1,6 +1,6 @@
 \chapter{Problema e Proposta}
 
-Observando a realidade de um \textit{SmartSpace} fica claro que as informações como posição das pessoas e suas respectivas identidades são imprescindíveis para que decisões possam ser tomadas. Atualmente, a maioria das soluções encontradas para fornecer esse tipo de informação foram projetadas para funcionar em ambientes específicos. Com isso, não seria adequado tentar incorporar soluções como estas em um ambiente com diferentes dimensões, condição de iluminação, posição dos móveis pois este se resultaria em um cenário totalmente diferente. Além disso, precisamos de uma solução que seja integrada com o middleware \textit{UbiquitOS} que gere nosso \textit{SmartSpace}.
+Observando a realidade de um \textit{SmartSpace} fica claro que as informações como posição das pessoas e suas respectivas identidades são imprescindíveis para que decisões possam ser tomadas. Atualmente, a maioria das soluções encontradas para fornecer esse tipo de informação foram projetadas para funcionar em ambientes específicos. Com isso, não seria adequado tentar incorporar soluções como estas em um ambiente com diferentes dimensões, condições de iluminação, posição dos móveis pois este se resultaria em um cenário totalmente diferente. Além disso, precisamos de uma solução que seja integrada com o middleware \textit{UbiquitOS} que gere nosso \textit{SmartSpace}.
 
 Propomos, então, um sistema aberto de rastreamento, localização e identificação de pessoas em nosso \textit{SmartSpace} que forneça essas informações de contexto para o \textit{UbiquitOS}. Apelidamos esse sistema de TRUE, \textit{\textbf{T}rack and \textbf{R}ecognize \textbf{U}sers in \textbf{E}nvironment}.
 
@@ -20,11 +20,27 @@ O sistema \textit{True} pode ser dividido em três módulos principais:
 
 	O Módulo de Reconhecimento, como se deduz do próprio nome, é responsável pelo reconhecimento facial dos usuários no ambiente. Para isso, é necessário detectar a face do usuário em questão em uma imagem e depois realizar o reconhecimento da mesma em tempo real. 
 
-	Para realizar a deteção facial foi utilizado o método \textit{Viola-Jones}~\ref{sec:viola-jones}. Um método que pode ser utilizado para construir uma abordagem de detecção facial rápida e eficaz~\cite{violajones} em tempo real. Além disso, este método é implementado pela biblioteca \textit{OpenCV} (\textit{Open Source Computer Vision}) onde bons classificadores em cascata de \textit{Haar features} são fornecidos, como por exemplo um classificador de faces frontais utilizado nesse trabalho.
+	Para realizar a deteção facial foi utilizado o método \textit{Viola-Jones}~\ref{sec:viola-jones}. Um método que pode ser utilizado para construir uma abordagem de detecção facial rápida e eficaz~\cite{violajones} em tempo real. Além disso, este método é implementado pela biblioteca \textit{OpenCV} (\textit{Open Source Computer Vision}) onde bons classificadores em cascata de \textit{Haar features} são fornecidos, como por exemplo um classificador de faces frontais, utilizado nesse trabalho.
 
 	Para realizar o reconhecimento facial foi utilizado \textit{Eigenfaces}~\ref{sec:eigenfaces}. Uma técnica bastante satisfatória quando utilizada sobre uma base de dados (faces) relativamente grande, permitindo ao sistema inferir, das imagens suas principais características e, partindo delas, realizar o reconhecimento das imagens utilizando um número bastante reduzido de cálculos~\cite{artigo-eigenface}, permitindo, assim, um reconhecimento em tempo real.
 
-	O reconhecimento é feito em imagens de usuários que são passadas ao mesmo pelo Módulo de Rastramento. Essa imagens são compostas somente pela região da imagem em que o usuário que se deseja reconhecer se encontra.
+	O reconhecimento é feito em imagens de usuários que são passadas ao mesmo pelo Módulo de Rastramento. Essa imagens são compostas somente pela região da imagem em que o usuário que se deseja reconhecer se encontra, como mostrado na Figura (\textbf{colocar figura aqui.}). Basicamente, o processo de reconhecimento é realizado pelas seguintes etapas e ilustrado na Figura~\ref{fig:processo-reconhecimento}:
+
+		\begin{enumerate}
+			\item Obtém a imagem de entrada correspondente a imagem formada somente pelo usuário cujo reconhecimento foi requisitado.
+			\item Realiza detecção facial na imagem. Caso nenhuma face seja encontrada, retorna ``vazio''. Vale a pena ressaltar que no máximo uma face pode ser encontrada nesta imagem.
+			\item Pré-processamento da imagem: a imagem é convertida em escala de cinza, uma nova imagem é criada recortando a região da face encontrada, a imagem, então, é redimensionada e equalizada criando assim uma padrão de tamanho, brilho e contraste nas imagens aumentando a acurácia do reconhecimento.
+			\item Reconhecimento facial com \textit{Eigenfaces} é realizado.
+			\item Retorna o nome da face ``mais parecida'' e a confiança do reconhecimento.
+		\end{enumerate}
+
+		\begin{figure}[hbt]
+			\begin{center}
+				\includegraphics[scale=2.0]{figuras/4.ProblemaEProposta/reconhecimento.png}
+			\end{center}
+			\caption{Representação das etapas do reconhecimento facial no Módulo de Reconhecimento.}
+			\label{fig:processo-reconhecimento}
+		\end{figure}
 
 \section{Módulo de Rastreamento}
 
@@ -33,3 +49,16 @@ O sistema \textit{True} pode ser dividido em três módulos principais:
 \section{Módulo de Registro}
 
 \input{chapters/4.ProblemaEProposta/kinect.tex}
+
+
+
+
+
+
+
+
+
+
+
+
+

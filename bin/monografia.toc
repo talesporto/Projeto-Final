@@ -36,4 +36,4 @@
 \contentsline {section}{\numberline {5.3}Rela\IeC {\c c}\IeC {\~a}o Rastreamento e Reconhecimento}{41}{section.5.3}
 \contentsline {section}{\numberline {5.4}M\IeC {\'o}dulo de Registro}{41}{section.5.4}
 \contentsline {section}{\numberline {5.5}Kinect}{41}{section.5.5}
-\contentsline {chapter}{Refer\^encias}{44}{section*.14}
+\contentsline {chapter}{Refer\^encias}{45}{section*.14}

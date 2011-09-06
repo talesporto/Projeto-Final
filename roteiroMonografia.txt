@@ -1,2 +1,3 @@
 - falar de distancia mahalanobis
+-falar sobre pré-processamento da imagem: greyescalte, equaliza, resize
 - colocar figura no modulo de reconhecimento da cena toda e da imagem so com usuario
