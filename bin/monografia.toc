@@ -31,9 +31,10 @@
 \contentsline {section}{\numberline {4.3}Captura de contexto din\IeC {\^a}mico e \textit {Arrays} de v\IeC {\'\i }deos distribu\IeC {\'\i }dos para \textit {SmartSpaces}}{37}{section.4.3}
 \contentsline {subsection}{\numberline {4.3.1}Rastreamento, Detec\IeC {\c c}\IeC {\~a}o de faces e Reconhecimento facial}{38}{subsection.4.3.1}
 \contentsline {chapter}{\numberline {5}Problema e Proposta}{40}{chapter.5}
-\contentsline {section}{\numberline {5.1}M\IeC {\'o}dulo de Reconhecimento}{40}{section.5.1}
+\contentsline {section}{\numberline {5.1}M\IeC {\'o}dulo de Reconhecimento}{41}{section.5.1}
 \contentsline {section}{\numberline {5.2}M\IeC {\'o}dulo de Rastreamento}{41}{section.5.2}
-\contentsline {section}{\numberline {5.3}Rela\IeC {\c c}\IeC {\~a}o Rastreamento e Reconhecimento}{41}{section.5.3}
-\contentsline {section}{\numberline {5.4}M\IeC {\'o}dulo de Registro}{41}{section.5.4}
-\contentsline {section}{\numberline {5.5}Kinect}{41}{section.5.5}
-\contentsline {chapter}{Refer\^encias}{45}{section*.14}
+\contentsline {section}{\numberline {5.3}Rela\IeC {\c c}\IeC {\~a}o Rastreamento e Reconhecimento}{43}{section.5.3}
+\contentsline {section}{\numberline {5.4}M\IeC {\'o}dulo de Registro}{43}{section.5.4}
+\contentsline {section}{\numberline {5.5}\textit {SmartSpace} Laico}{43}{section.5.5}
+\contentsline {section}{\numberline {5.6}Kinect}{43}{section.5.6}
+\contentsline {chapter}{Refer\^encias}{47}{section*.14}

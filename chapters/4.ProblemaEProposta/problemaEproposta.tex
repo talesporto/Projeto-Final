@@ -4,7 +4,7 @@ Observando a realidade de um \textit{SmartSpace} fica claro que as informações
 
 Propomos, então, um sistema aberto de rastreamento, localização e identificação de pessoas em nosso \textit{SmartSpace} que forneça essas informações de contexto para o \textit{UbiquitOS}. Apelidamos esse sistema de TRUE, \textit{\textbf{T}rack and \textbf{R}ecognize \textbf{U}sers in \textbf{E}nvironment}.
 
-O sistema \textit{True} utiliza tanto imagens de cor quanto de pronfunidade. As imagens de profunidade são utilizadas no rastreamento e localização dos usuários no ambiente, e as imagens de cor são utilizadas no reconhecimento facial e no cadastro dos usuários. Então os dispositivos presentes no ambiente devem ser capazes de fornecer esses tipos de dados a um taxa e qualidade adequada. 
+O sistema \textit{True} utiliza tanto imagens de cor quanto de pronfunidade. As imagens de profunidade são utilizadas no rastreamento e localização dos usuários no ambiente, e as imagens de cor são utilizadas no reconhecimento facial e no cadastro dos usuários. Então, os dispositivos presentes no ambiente devem ser capazes de fornecer esses tipos de dados a um taxa e qualidade adequada. 
 
 Para obter esses dados do ambiente, decidimos utilizar o sensor \textit{Kinect} da Microsoft~\ref{sec:kinect}, um dispositivo bastante acessível e capaz de fornecer ao sistema imagens de cor e de profundidade sincronizadas.
 
@@ -16,6 +16,8 @@ O sistema \textit{True} pode ser dividido em três módulos principais:
 		\item \textbf{Módulo de Registro}: parte do sitema responsável pelo cadastro de novos usuários e treino do algoritmo.
 	\end{itemize}
 
+A entidade Usuário em nosso sistema possui um identificador inteiro fornecido pelo módulo de rastreamento quando é detectado, um nome fornecido pelo módulo de reconhecimento quando é reocnhecido, o número de vezes que foi reconhecido e a confiança do reconhecimento.
+
 \section{Módulo de Reconhecimento}
 
 	O Módulo de Reconhecimento, como se deduz do próprio nome, é responsável pelo reconhecimento facial dos usuários no ambiente. Para isso, é necessário detectar a face do usuário em questão em uma imagem e depois realizar o reconhecimento da mesma em tempo real. 
@@ -26,14 +28,6 @@ O sistema \textit{True} pode ser dividido em três módulos principais:
 
 	O reconhecimento é feito em imagens de usuários que são passadas ao mesmo pelo Módulo de Rastramento. Essa imagens são compostas somente pela região da imagem em que o usuário que se deseja reconhecer se encontra, como mostrado na Figura (\textbf{colocar figura aqui.}). Basicamente, o processo de reconhecimento é realizado pelas seguintes etapas e ilustrado na Figura~\ref{fig:processo-reconhecimento}:
 
-		\begin{enumerate}
-			\item Obtém a imagem de entrada correspondente a imagem formada somente pelo usuário cujo reconhecimento foi requisitado.
-			\item Realiza detecção facial na imagem. Caso nenhuma face seja encontrada, retorna ``vazio''. Vale a pena ressaltar que no máximo uma face pode ser encontrada nesta imagem.
-			\item Pré-processamento da imagem: a imagem é convertida em escala de cinza, uma nova imagem é criada recortando a região da face encontrada, a imagem, então, é redimensionada e equalizada criando assim uma padrão de tamanho, brilho e contraste nas imagens aumentando a acurácia do reconhecimento.
-			\item Reconhecimento facial com \textit{Eigenfaces} é realizado.
-			\item Retorna o nome da face ``mais parecida'' e a confiança do reconhecimento.
-		\end{enumerate}
-
 		\begin{figure}[hbt]
 			\begin{center}
 				\includegraphics[scale=2.0]{figuras/4.ProblemaEProposta/reconhecimento.png}
@@ -42,11 +36,57 @@ O sistema \textit{True} pode ser dividido em três módulos principais:
 			\label{fig:processo-reconhecimento}
 		\end{figure}
 
+		\begin{enumerate}
+			\item Obtém a imagem de entrada correspondente a imagem formada somente pelo usuário cujo reconhecimento foi requisitado.
+			\item Realiza detecção facial na imagem. Caso nenhuma face seja encontrada, retorna ``vazio''. Vale a pena ressaltar que no máximo uma face pode ser encontrada nesta imagem.
+			\item Pré-processamento da imagem: a imagem é convertida em escala de cinza, uma nova imagem é criada recortando a região da face encontrada, a imagem, então, é redimensionada e equalizada criando assim uma padrão de tamanho, brilho e contraste nas imagens aumentando a acurácia do reconhecimento.
+			\item Reconhecimento facial com \textit{Eigenfaces} é realizado.
+			\item Retorna o nome da face ``mais parecida'' e a confiança do reconhecimento.
+		\end{enumerate}
+
+	O Módulo de Reconhecimento é independente dos demais módulos. Ele fica ocioso até que seja requisitado reconhecimento de um determinado usuário. No caso, o autor da requisição é o Módulo de Rastreamento. Explicaremos mais detalhadamente a relação entre os dois módulos na seção~\ref{sec:rastreamento-reconheicmento}.
+
 \section{Módulo de Rastreamento}
 
+	O Módulo de Rastreamento é responsável por rastrear os usuário no \textit{SmartSpace}, determinar a localização física de cada um em relação ao \textit{Kinect} e gerenciar suas identidades.
+
+	Para realizar rastreamento e localização dos usuários foi utilizado a implementação existente na biblioteca \textit{OpenNI} (\textit{Open Natural Interaction}). Trata-se de um \textit{framework} que define \textit{APIs} para o desenvolvimento de aplicações utilizando interação natural. Utilizando as imagens de profundidade, a detecção e o rastreamento dos usuários é feita utilizando subtração de fundo~\ref{sec:deteccao-objeto} e a representação dos usuários é feita por silhuetas~\ref{sec:representacao-objeto}. 
+
+	O rastreamento e a localização são feitas utilizando as imagens de profundidades providas pelo \textit{Kinect}, tornando-os não susceptíveis as variações nas condições de iluminação. Essas imagens de profundidades nada mais são que \textit{depth maps} (mapas de profundidade), em que cada pixel da imagem contém o valor estimado da distância em relação ao sensor. O \textit{Kinect} fornece esses dados a uma taxa de $\displaystyle 30 fps$ (\textit{frames} por segundo) com uma resolução $\displaystyle 640px$ x $\displaystyle 480px$.
+	
+	Com esses mapas de profundidade, a biblioteca \textit{OpenNI} consegue calcular as coodernadas $\displaystle (x,y,z)$ em relação ao \textit{Kinect} de qualquer pixel na imagem. Ou seja, se temos a representação de um usuário rastreado na imagem, conseguimos obter sua localização realativa ao \textit{Kinect}. Então, fixando a posição do mesmo no ambiente, conseguimos estimar a localização de qualquer usuário rastreado em tempo real.
+
+	Basicamente, o processo de rastreamento funciona da seguinte maneira:
+
+
 \section{Relação Rastreamento e Reconhecimento}
+\label{sec:rastreamento-reconheicmento}
+
+	Até agora, mostramos como os Módulos de Rastreamento e de Reconhecimento funcionam de maneira independente, mas não mostramos como se relacionam. O Módulo de Rastreamento detém as informações sobre todos os usuários rastreados no ambiente e é responsável por requisitar reconhecimento ao Módulo de Reconhecimento.
+
+	Basicamente, quando um novo usuário é detectado a relação entre rastreamento e reconhecimento se dá de acordo com as seguintes etapas e representado na Figura~\ref{fig:rastreamento-reconhecimento}:
+
+		\begin{figure}[hbt]
+			\begin{center}
+				\includegraphics[scale=1.5]{figuras/4.ProblemaEProposta/esquema-tracker-reco.png}
+			\end{center}
+			\caption{Representação das etapas da relação que o Módulo de Rastreamento tem com o Módulo de Reconhecimento..}
+			\label{fig:rastreamento-reconhecimento}
+		\end{figure}
+	
+		\begin{enumerate}
+		 	\item O Módulo de Rastreamento detecta novo usuário, e obtém um número pré-definido de imagens sucessivas do novo usuário. Para cada imagem, ele cria uma nova imagem de cor contendo somente aquele usuário, como mostrado na Figura (\textbf{colocar a figura aqui}), e a envia para o Módulo de Reconhecimento.
+		 	\item Para cada imagem recebida, o Módulo de Reconhecimento tenta reconhecer o novo usuário e retorna ``vazio'' ou o nome e a confiança do reconhecimento.
+		 	\item O Módulo de Rastreamento verifica se a confiança é maior que um limiar pré-definido, se for ele incrementa o contador que armazena o número de vezes que o usuário foi reconhecido, armazena o nome obtido juntamente com a confiança e calcula qual nome será atribuído ao novo usuário.
+	 	\end{enumerate} 
+	
+	Ao invés de tentar realizar o reconhecimento somente quando novos usuários são detectados, o sistema \textit{True} continua a tentar reconhecer os usuários já reconhecidos para melhorar a confiança no reconhecimento. Essas tentativas de reconhecer novamente os usuários ocorrem em intervalos de tempo pré-definido seguindo as mesmas etapas de quando um novo usuário é detectado. A única etapa que difere é a primeira: ao invés de obter várias imagens de uma mesmo usuário, são obtidas uma imagem de cada usuário rastreado e as mesmas são enviadas ao Módulo de Reconhecimento.
+
+
 
 \section{Módulo de Registro}
+
+\section{\textit{SmartSpace} Laico}
 
 \input{chapters/4.ProblemaEProposta/kinect.tex}
 
