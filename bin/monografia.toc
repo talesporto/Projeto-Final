@@ -35,6 +35,6 @@
 \contentsline {section}{\numberline {5.2}M\IeC {\'o}dulo de Rastreamento}{41}{section.5.2}
 \contentsline {section}{\numberline {5.3}Rela\IeC {\c c}\IeC {\~a}o Rastreamento e Reconhecimento}{43}{section.5.3}
 \contentsline {section}{\numberline {5.4}M\IeC {\'o}dulo de Registro}{43}{section.5.4}
-\contentsline {section}{\numberline {5.5}\textit {SmartSpace} Laico}{43}{section.5.5}
-\contentsline {section}{\numberline {5.6}Kinect}{43}{section.5.6}
-\contentsline {chapter}{Refer\^encias}{47}{section*.14}
+\contentsline {section}{\numberline {5.5}\textit {SmartSpace} Laico}{44}{section.5.5}
+\contentsline {section}{\numberline {5.6}Kinect}{44}{section.5.6}
+\contentsline {chapter}{Refer\^encias}{49}{section*.14}

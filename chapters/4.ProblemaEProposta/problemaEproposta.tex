@@ -70,7 +70,7 @@ A entidade Usuário em nosso sistema possui um identificador inteiro fornecido p
 			\begin{center}
 				\includegraphics[scale=1.5]{figuras/4.ProblemaEProposta/esquema-tracker-reco.png}
 			\end{center}
-			\caption{Representação das etapas da relação que o Módulo de Rastreamento tem com o Módulo de Reconhecimento..}
+			\caption{Representação das etapas da relação que o Módulo de Rastreamento tem com o Módulo de Reconhecimento.}
 			\label{fig:rastreamento-reconhecimento}
 		\end{figure}
 	
@@ -82,9 +82,31 @@ A entidade Usuário em nosso sistema possui um identificador inteiro fornecido p
 	
 	Ao invés de tentar realizar o reconhecimento somente quando novos usuários são detectados, o sistema \textit{True} continua a tentar reconhecer os usuários já reconhecidos para melhorar a confiança no reconhecimento. Essas tentativas de reconhecer novamente os usuários ocorrem em intervalos de tempo pré-definido seguindo as mesmas etapas de quando um novo usuário é detectado. A única etapa que difere é a primeira: ao invés de obter várias imagens de uma mesmo usuário, são obtidas uma imagem de cada usuário rastreado e as mesmas são enviadas ao Módulo de Reconhecimento.
 
+	Desta maneira, o Módulo de Rastreamento consegue reunir em um só lugar todas as informações sobre os usuários rastreados, como localização corrente, nome, confiança do reconhecimento, quantas vezes o usuário foi reconhecido e quais diferentes nomes foi atribuído ao mesmo.
 
 
 \section{Módulo de Registro}
+
+	O Módulo de Registro é responsável por cadastrar novos usuários no sistema e treiná-lo para também reconhecer esse novo usuário. Basicamente, o processo de registro segue as seguintes etapas e ilustrada na Figura~\ref{fig:registro}:
+
+		\begin{figure}[hbt]
+			\begin{center}
+				\includegraphics[scale=2.5]{figuras/4.ProblemaEProposta/registro.png}
+			\end{center}
+			\caption{Etapas de cadastro de um novo usuário no sistema.}
+			\label{fig:registro}
+		\end{figure}		
+
+		\begin{enumerate}
+			\item O novo usuário fica em uma posição fixa e frontal em relação ao \textit{Kinect}. 
+			\item O sistema obtém um número pré-definido de imagens frontais do usuário.
+			\item O usuário, então, rotaciona um pouco a face para a esquerda e o sistema obtém um número pré-definido de imagens do usuário. Depois, rotaciona um pouco para direita e o sistema obtém mais imagens do usuário.
+			\item As imagens obtidas são processadas: as imagens são convertidas em escala de cinza, novas imagens são criadas recortando a região da face encontrada, as imagens, então, são redimensionadas e equalizadas criando assim uma padrão de tamanho, brilho e contraste nas imagens.
+			\item Amarzena-se as imagens.
+			\item O sistema é treinado para reconhecer mais esse usuário.
+		\end{enumerate}
+
+	Após o treinamento, o sistema \textit{True} deve ser reiniciado para que o reconhecimento sejam feito utilizando as novas informações obtidas com treinamento.
 
 \section{\textit{SmartSpace} Laico}
 
