@@ -37,4 +37,4 @@
 \contentsline {section}{\numberline {5.4}M\IeC {\'o}dulo de Registro}{43}{section.5.4}
 \contentsline {section}{\numberline {5.5}\textit {SmartSpace} Laico}{44}{section.5.5}
 \contentsline {section}{\numberline {5.6}Kinect}{44}{section.5.6}
-\contentsline {chapter}{Refer\^encias}{49}{section*.14}
+\contentsline {chapter}{Refer\^encias}{50}{section*.14}

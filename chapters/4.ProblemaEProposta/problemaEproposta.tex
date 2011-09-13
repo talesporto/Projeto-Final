@@ -16,7 +16,7 @@ O sistema \textit{True} pode ser dividido em três módulos principais:
 		\item \textbf{Módulo de Registro}: parte do sitema responsável pelo cadastro de novos usuários e treino do algoritmo.
 	\end{itemize}
 
-A entidade Usuário em nosso sistema possui um identificador inteiro fornecido pelo módulo de rastreamento quando é detectado, um nome fornecido pelo módulo de reconhecimento quando é reocnhecido, o número de vezes que foi reconhecido e a confiança do reconhecimento.
+A entidade Usuário em nosso sistema possui um identificador inteiro fornecido pelo módulo de rastreamento quando é detectado, um nome fornecido pelo módulo de reconhecimento quando é reconhecido, o número de vezes que foi reconhecido e a confiança do reconhecimento.
 
 \section{Módulo de Reconhecimento}
 
@@ -52,12 +52,9 @@ A entidade Usuário em nosso sistema possui um identificador inteiro fornecido p
 
 	Para realizar rastreamento e localização dos usuários foi utilizado a implementação existente na biblioteca \textit{OpenNI} (\textit{Open Natural Interaction}). Trata-se de um \textit{framework} que define \textit{APIs} para o desenvolvimento de aplicações utilizando interação natural. Utilizando as imagens de profundidade, a detecção e o rastreamento dos usuários é feita utilizando subtração de fundo~\ref{sec:deteccao-objeto} e a representação dos usuários é feita por silhuetas~\ref{sec:representacao-objeto}. 
 
-	O rastreamento e a localização são feitas utilizando as imagens de profundidades providas pelo \textit{Kinect}, tornando-os não susceptíveis as variações nas condições de iluminação. Essas imagens de profundidades nada mais são que \textit{depth maps} (mapas de profundidade), em que cada pixel da imagem contém o valor estimado da distância em relação ao sensor. O \textit{Kinect} fornece esses dados a uma taxa de $\displaystyle 30 fps$ (\textit{frames} por segundo) com uma resolução $\displaystyle 640px$ x $\displaystyle 480px$.
+	O rastreamento e a localização são feitas utilizando as imagens de profundidades providas pelo \textit{Kinect}, tornando-os não susceptíveis as variações nas condições de iluminação. Essas imagens de profundidade nada mais são que \textit{depth maps} (mapas de profundidade), em que cada pixel da imagem contém o valor estimado da distância em relação ao sensor. O \textit{Kinect} fornece esses dados a uma taxa de $\displaystyle 30 fps$ (\textit{frames} por segundo) com uma resolução $\displaystyle 640px$ x $\displaystyle 480px$.
 	
 	Com esses mapas de profundidade, a biblioteca \textit{OpenNI} consegue calcular as coodernadas $\displaystle (x,y,z)$ em relação ao \textit{Kinect} de qualquer pixel na imagem. Ou seja, se temos a representação de um usuário rastreado na imagem, conseguimos obter sua localização realativa ao \textit{Kinect}. Então, fixando a posição do mesmo no ambiente, conseguimos estimar a localização de qualquer usuário rastreado em tempo real.
-
-	Basicamente, o processo de rastreamento funciona da seguinte maneira:
-
 
 \section{Relação Rastreamento e Reconhecimento}
 \label{sec:rastreamento-reconheicmento}
@@ -80,7 +77,7 @@ A entidade Usuário em nosso sistema possui um identificador inteiro fornecido p
 		 	\item O Módulo de Rastreamento verifica se a confiança é maior que um limiar pré-definido, se for ele incrementa o contador que armazena o número de vezes que o usuário foi reconhecido, armazena o nome obtido juntamente com a confiança e calcula qual nome será atribuído ao novo usuário.
 	 	\end{enumerate} 
 	
-	Ao invés de tentar realizar o reconhecimento somente quando novos usuários são detectados, o sistema \textit{True} continua a tentar reconhecer os usuários já reconhecidos para melhorar a confiança no reconhecimento. Essas tentativas de reconhecer novamente os usuários ocorrem em intervalos de tempo pré-definido seguindo as mesmas etapas de quando um novo usuário é detectado. A única etapa que difere é a primeira: ao invés de obter várias imagens de uma mesmo usuário, são obtidas uma imagem de cada usuário rastreado e as mesmas são enviadas ao Módulo de Reconhecimento.
+	Ao invés de tentar realizar o reconhecimento somente quando novos usuários são detectados, o sistema \textit{True} continua a tentar reconhecer os usuários já reconhecidos para melhorar a confiança no reconhecimento. Essas tentativas de reconhecer novamente os usuários ocorrem em intervalos de tempo pré-definidos seguindo as mesmas etapas de quando um novo usuário é detectado. A única etapa que difere é a primeira: ao invés de obter várias imagens de uma mesmo usuário, são obtidas uma imagem de cada usuário rastreado e as mesmas são enviadas ao Módulo de Reconhecimento.
 
 	Desta maneira, o Módulo de Rastreamento consegue reunir em um só lugar todas as informações sobre os usuários rastreados, como localização corrente, nome, confiança do reconhecimento, quantas vezes o usuário foi reconhecido e quais diferentes nomes foi atribuído ao mesmo.
 
@@ -103,12 +100,22 @@ A entidade Usuário em nosso sistema possui um identificador inteiro fornecido p
 			\item O usuário, então, rotaciona um pouco a face para a esquerda e o sistema obtém um número pré-definido de imagens do usuário. Depois, rotaciona um pouco para direita e o sistema obtém mais imagens do usuário.
 			\item As imagens obtidas são processadas: as imagens são convertidas em escala de cinza, novas imagens são criadas recortando a região da face encontrada, as imagens, então, são redimensionadas e equalizadas criando assim uma padrão de tamanho, brilho e contraste nas imagens.
 			\item Amarzena-se as imagens.
-			\item O sistema é treinado para reconhecer mais esse usuário.
+			\item O sistema é treinado para, também, reconhecer esse usuário.
 		\end{enumerate}
 
-	Após o treinamento, o sistema \textit{True} deve ser reiniciado para que o reconhecimento sejam feito utilizando as novas informações obtidas com treinamento.
+	Após o treinamento, o sistema \textit{True} deve ser reiniciado para que o reconhecimento seja feito utilizando as novas informações obtidas com o treinamento.
 
 \section{\textit{SmartSpace} Laico}
+
+	O ambiente para o qual o sistema \textit{True} foi projetado, desenvolvido e testado foi o LAICO (\textbf{LA}boratório de sistemas \textbf{I}ntegrados e \textbf{CO}ncorrente), um laboratório do Departamento de Ciência da Computação da Universidade de Brasília. O LAICO possui dimensões de, aproximadamente,  $\displaystyle 7,67m$ x $\displaystyle 6,45m$ ilustrado pela Figura~\ref{fig:laico}.
+
+	\begin{figure}[hbt]
+			\begin{center}
+				\includegraphics[scale=0.6]{figuras/4.ProblemaEProposta/laico.png}
+			\end{center}
+			\caption{Planta do \textit{SmartSpace} Laico.}
+			\label{fig:laico}
+		\end{figure}	
 
 \input{chapters/4.ProblemaEProposta/kinect.tex}
 
