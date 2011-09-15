@@ -28,8 +28,8 @@
 \contentsline {figure}{\numberline {4.4}{\ignorespaces Representa\IeC {\c c}\IeC {\~a}o dos \textit {SmartSpaces} MICASA e AVIARY~\cite {trivedi}.}}{38}{figure.4.4}
 \contentsline {figure}{\numberline {4.5}{\ignorespaces M\IeC {\'e}todo de detec\IeC {\c c}\IeC {\~a}o e reconhecimento facial~\cite {trivedi}.}}{39}{figure.4.5}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Representa\IeC {\c c}\IeC {\~a}o das etapas do reconhecimento facial no M\IeC {\'o}dulo de Reconhecimento.}}{42}{figure.5.1}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Representa\IeC {\c c}\IeC {\~a}o das etapas da rela\IeC {\c c}\IeC {\~a}o que o M\IeC {\'o}dulo de Rastreamento tem com o M\IeC {\'o}dulo de Reconhecimento.}}{46}{figure.5.2}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Representa\IeC {\c c}\IeC {\~a}o das etapas propostas para o reconhecimento facial no M\IeC {\'o}dulo de Reconhecimento.}}{42}{figure.5.1}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Representa\IeC {\c c}\IeC {\~a}o da rela\IeC {\c c}\IeC {\~a}o que o M\IeC {\'o}dulo de Rastreamento ter\IeC {\'a} com o M\IeC {\'o}dulo de Reconhecimento quando um novo usu\IeC {\'a}rio for detectado.}}{46}{figure.5.2}
 \contentsline {figure}{\numberline {5.3}{\ignorespaces Etapas de cadastro de um novo usu\IeC {\'a}rio no sistema.}}{47}{figure.5.3}
 \contentsline {figure}{\numberline {5.4}{\ignorespaces Planta do \textit {SmartSpace} Laico.}}{48}{figure.5.4}
 \contentsline {figure}{\numberline {5.5}{\ignorespaces Sensor Kinect da Microsoft.}}{48}{figure.5.5}
