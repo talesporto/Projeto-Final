@@ -1,10 +1,16 @@
 \chapter{Rastreamento e Localização}
 
-	Neste capítulo será mostrada uma abordagem conceitual sobre localização e rastreamento de objetos em um ambiente.
+	O Rastreamento de entidades, como pessoas, é uma importante tarefa do campo da computação visual. A proliferação de computadores com um alto poder computacional, a disponibilidade de câmeras de alta qualidade e preço acessível e a crescente necessidade de sistemas automáticos de análise de vídeos têm gerado um grande interesse em algoritmos de rastreamento~\cite{yilmaz}.
 
-	Sobre localização de objetos será mostrada uma visão geral de como obter a posicão do objeto relativa a uma camêra utilizando imagens de pronfundidade.
+	Em um \textit{SmartSpace}, o rastreamento de pessoas é uma das principais ferramentas para detectar novos usuários no ambiente e serve como base para que novas informações possam ser colhidas. Por exemplo, para que seja possível realizar reconhecimento facial de uma pessoa é necessário, primeiramente, obter imagens de sua face, porém isso só é possível se soubermos onde tal pessoa se encontra na imagem, ou seja, é necessário detectá-la e rastreá-la.
 
-	Sobre rastreamento de objetos será mostrada uma visão geral do processo e quais as dificuldades mais comuns encontradas. Mostraremos as técnicas mais comuns de detecção e rastreamento de objetos, as maneiras de representar os objetos rastreados e algumas características do objeto utilizadas.
+	Com o rastreamento mesclado com informações de profundidade é possível, também, obter a localização física das pessoas rastreadas. Tal informação é muito útil em um ambiente informatizado, como um \textit{SmartSpace} onde o ambiente interage de maneira automática com usuário, pois o ambiente tem conhecimento da atual posição do usuário e com isso pode tomar melhores decisões.
+
+	Neste capítulo será mostrada uma abordagem conceitual sobre rastreamento de entidades e localização das mesmas em um ambiente.
+
+	Sobre rastreamento será mostrada uma visão geral do processo e quais as dificuldades mais comuns encontradas. Mostraremos as técnicas mais comuns de detecção e rastreamento de objetos, as maneiras de representar os objetos rastreados e algumas características do objeto utilizadas.
+
+	Sobre localização de objetos será mostrada uma visão geral de como obter a posição do objeto relativa a uma câmera utilizando imagens de profundidade.
 
 	\input{chapters/2.FundamentacaoTeorica/rastreamento}
 	\input{chapters/2.FundamentacaoTeorica/localizacao}

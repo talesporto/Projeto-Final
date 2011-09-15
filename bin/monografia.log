@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2011.4.25)  14 SEP 2011 23:50
+This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2011.4.25)  15 SEP 2011 09:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -724,33 +724,32 @@ Cap\'{\i }tulo 2.
 (./chapters/2.FundamentacaoTeorica/rastreamento.tex [3
 
 ]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 26.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 24.
 
 (/usr/local/texlive/2010/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 26.
-
-<figuras/2.FundamentacaoTeorica/representacao.png, id=420, 842.14626pt x 445.66
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 24.
+ [4]
+<figuras/2.FundamentacaoTeorica/representacao.png, id=432, 842.14626pt x 445.66
 5pt>
 File: figuras/2.FundamentacaoTeorica/representacao.png Graphic file (type png)
  <use figuras/2.FundamentacaoTeorica/representacao.png>
 Package pdftex.def Info: figuras/2.FundamentacaoTeorica/representacao.png used 
-on input line 53.
+on input line 51.
 (pdftex.def)             Requested size: 421.0721pt x 222.83195pt.
- [4] [5 <./figuras/2.FundamentacaoTeorica/representacao.png (PNG copy)>] [6] [7
-])
+ [5 <./figuras/2.FundamentacaoTeorica/representacao.png (PNG copy)>] [6] [7])
 (./chapters/2.FundamentacaoTeorica/localizacao.tex
-<figuras/2.FundamentacaoTeorica/depthimage.png, id=498, 495.8525pt x 512.91624p
+<figuras/2.FundamentacaoTeorica/depthimage.png, id=497, 495.8525pt x 512.91624p
 t>
 File: figuras/2.FundamentacaoTeorica/depthimage.png Graphic file (type png)
  <use figuras/2.FundamentacaoTeorica/depthimage.png>
 Package pdftex.def Info: figuras/2.FundamentacaoTeorica/depthimage.png used on 
 input line 11.
 (pdftex.def)             Requested size: 247.92564pt x 256.45749pt.
- [8 <./figuras/2.FundamentacaoTeorica/depthimage.png (PNG copy)>]
-<figuras/2.FundamentacaoTeorica/lateration.png, id=512, 917.4275pt x 657.45625p
+ [8]
+<figuras/2.FundamentacaoTeorica/lateration.png, id=513, 917.4275pt x 657.45625p
 t>
 File: figuras/2.FundamentacaoTeorica/lateration.png Graphic file (type png)
  <use figuras/2.FundamentacaoTeorica/lateration.png>
@@ -763,7 +762,7 @@ Overfull \hbox (3.46852pt too wide) in paragraph at lines 26--27
  []
 
 
-<figuras/2.FundamentacaoTeorica/angulation.png, id=515, 580.1675pt x 350.30875p
+<figuras/2.FundamentacaoTeorica/angulation.png, id=516, 580.1675pt x 350.30875p
 t>
 File: figuras/2.FundamentacaoTeorica/angulation.png Graphic file (type png)
  <use figuras/2.FundamentacaoTeorica/angulation.png>
@@ -779,8 +778,9 @@ LaTeX Warning: Command \textordmasculine invalid in math mode on input line 36.
 LaTeX Warning: Command \textordmasculine invalid in math mode on input line 36.
 
 
-) [9 <./figuras/2.FundamentacaoTeorica/lateration.png (PNG copy)>] [10 <./figur
-as/2.FundamentacaoTeorica/angulation.png (PNG copy)>]
+) [9 <./figuras/2.FundamentacaoTeorica/depthimage.png (PNG copy)>] [10 <./figur
+as/2.FundamentacaoTeorica/lateration.png (PNG copy)> <./figuras/2.Fundamentacao
+Teorica/angulation.png (PNG copy)>]
 Cap\'{\i }tulo 3.
 (./chapters/2.FundamentacaoTeorica/biometria.tex
 <figuras/2.FundamentacaoTeorica/caracteristicasBiometricas.png, id=533, 681.546
@@ -1130,7 +1130,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 75.
 Here is how much of TeX's memory you used:
  8334 strings out of 493763
  121230 string characters out of 3144954
- 226564 words of memory out of 3000000
+ 226565 words of memory out of 3000000
  11200 multiletter control sequences out of 15000+200000
  16932 words of font info for 37 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
@@ -1155,10 +1155,10 @@ lic/cm-super/sfrm1200.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/publi
 c/cm-super/sfrm1440.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/
 cm-super/sfrm2074.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/cm
 -super/sfti1200.pfb>
-Output written on ./bin/monografia.pdf (63 pages, 3631679 bytes).
+Output written on ./bin/monografia.pdf (63 pages, 3632381 bytes).
 PDF statistics:
- 1247 PDF objects out of 1440 (max. 8388607)
- 1101 compressed objects within 12 object streams
+ 1248 PDF objects out of 1440 (max. 8388607)
+ 1102 compressed objects within 12 object streams
  245 named destinations out of 1000 (max. 500000)
  426 words of extra memory for PDF output out of 10000 (max. 10000000)
 
