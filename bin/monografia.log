@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2011.4.25)  12 SEP 2011 23:17
+This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2011.4.25)  14 SEP 2011 17:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1155,7 +1155,7 @@ lic/cm-super/sfrm1200.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/publi
 c/cm-super/sfrm1440.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/
 cm-super/sfrm2074.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/cm
 -super/sfti1200.pfb>
-Output written on ./bin/monografia.pdf (63 pages, 3501425 bytes).
+Output written on ./bin/monografia.pdf (63 pages, 3631578 bytes).
 PDF statistics:
  1247 PDF objects out of 1440 (max. 8388607)
  1101 compressed objects within 12 object streams
