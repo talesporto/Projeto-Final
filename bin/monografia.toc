@@ -3,24 +3,25 @@
 \select@language {brazil}
 \contentsline {chapter}{\numberline {1}Introdu\IeC {\c c}\IeC {\~a}o}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}Organiza\IeC {\c c}\IeC {\~a}o do trabalho}{2}{section.1.1}
-\contentsline {chapter}{\numberline {2}Rastreamento e Localiza\IeC {\c c}\IeC {\~a}o}{3}{chapter.2}
-\contentsline {section}{\numberline {2.1}Rastreamento}{3}{section.2.1}
-\contentsline {subsection}{\numberline {2.1.1}Representa\IeC {\c c}\IeC {\~a}o do Objeto}{5}{subsection.2.1.1}
-\contentsline {subsection}{\numberline {2.1.2}Caracter\IeC {\'\i }sticas para rastreamento}{6}{subsection.2.1.2}
-\contentsline {subsection}{\numberline {2.1.3}Detec\IeC {\c c}\IeC {\~a}o de objeto}{6}{subsection.2.1.3}
-\contentsline {subsection}{\numberline {2.1.4}Rastreamento de objeto}{7}{subsection.2.1.4}
-\contentsline {section}{\numberline {2.2}Localiza\IeC {\c c}\IeC {\~a}o}{8}{section.2.2}
+\contentsline {chapter}{\numberline {2}Fundamenta\IeC {\c c}\IeC {\~a}o Te\IeC {\'o}rica}{3}{chapter.2}
+\contentsline {section}{\numberline {2.1}Rastreamento e Localiza\IeC {\c c}\IeC {\~a}o}{3}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}Rastreamento}{3}{subsection.2.1.1}
+\contentsline {subsubsection}{Representa\IeC {\c c}\IeC {\~a}o da Entidade}{5}{section*.8}
+\contentsline {subsubsection}{Caracter\IeC {\'\i }sticas para rastreamento}{6}{section*.9}
+\contentsline {subsubsection}{Detec\IeC {\c c}\IeC {\~a}o de entidades}{6}{section*.10}
+\contentsline {subsubsection}{Rastreamento de entidades}{7}{section*.11}
+\contentsline {subsection}{\numberline {2.1.2}Localiza\IeC {\c c}\IeC {\~a}o}{8}{subsection.2.1.2}
 \contentsline {chapter}{\numberline {3}Reconhecimento Facial}{11}{chapter.3}
 \contentsline {section}{\numberline {3.1}Biometria}{11}{section.3.1}
 \contentsline {section}{\numberline {3.2}Reconhecimento Facial}{14}{section.3.2}
 \contentsline {subsection}{\numberline {3.2.1}Detec\IeC {\c c}\IeC {\~a}o de Faces em imagens}{16}{subsection.3.2.1}
-\contentsline {subsubsection}{M\IeC {\'e}todo Viola-Jones}{19}{section*.8}
+\contentsline {subsubsection}{M\IeC {\'e}todo Viola-Jones}{19}{section*.12}
 \contentsline {subsection}{\numberline {3.2.2}Reconhecimento das Faces encontradas}{22}{subsection.3.2.2}
-\contentsline {subsubsection}{Reconhecimento facial com \textit {Eigenfaces}}{24}{section*.9}
-\contentsline {subsubsection}{Redu\IeC {\c c}\IeC {\~a}o do ru\IeC {\'\i }do utilizando PCA}{25}{section*.10}
-\contentsline {subsubsection}{As componentes principais - autovetor(\textit {eingenvector})}{27}{section*.11}
-\contentsline {subsubsection}{As limita\IeC {\c c}\IeC {\~o}es do \textit {Eigenfaces}}{27}{section*.12}
-\contentsline {subsubsection}{``Passo a passo'' sobre \textit {Eigenfaces}}{28}{section*.13}
+\contentsline {subsubsection}{Reconhecimento facial com \textit {Eigenfaces}}{24}{section*.13}
+\contentsline {subsubsection}{Redu\IeC {\c c}\IeC {\~a}o do ru\IeC {\'\i }do utilizando PCA}{25}{section*.14}
+\contentsline {subsubsection}{As componentes principais - autovetor(\textit {eingenvector})}{27}{section*.15}
+\contentsline {subsubsection}{As limita\IeC {\c c}\IeC {\~o}es do \textit {Eigenfaces}}{27}{section*.16}
+\contentsline {subsubsection}{``Passo a passo'' sobre \textit {Eigenfaces}}{28}{section*.17}
 \contentsline {chapter}{\numberline {4}Trabalhos Correlatos}{32}{chapter.4}
 \contentsline {section}{\numberline {4.1}Projeto CHIL}{32}{section.4.1}
 \contentsline {subsection}{\numberline {4.1.1}Rastreamento e Localiza\IeC {\c c}\IeC {\~a}o de Pessoas}{32}{subsection.4.1.1}
@@ -37,4 +38,4 @@
 \contentsline {section}{\numberline {5.4}M\IeC {\'o}dulo de Registro}{43}{section.5.4}
 \contentsline {section}{\numberline {5.5}\textit {SmartSpace} Laico}{44}{section.5.5}
 \contentsline {section}{\numberline {5.6}Kinect}{44}{section.5.6}
-\contentsline {chapter}{Refer\^encias}{50}{section*.14}
+\contentsline {chapter}{Refer\^encias}{50}{section*.18}
