@@ -79,7 +79,7 @@
 	\begin{itemize}
 		\item \textbf{Cor:} a cor da entidade é influenciada principalmente por duas características: a distribuição da iluminação e a propriedade de reflectância da entidade. Geralmente, a representação \textit{RGB} é utilizada para representar a cor~\cite{yilmaz};
 
-		\item \textbf{Borda:} os limites de uma entidade geram uma grande variação na intensidade na imagem e são menos sensíveis a variações na iluminação comparado com as cores. A detecção por meio das bordas é utilizada para identificar essas variações de intensidade na imagem. Os algoritmos que detectam as bordas geralmente as utilizam para representação dos mesmos~\cite{yilmaz};
+		\item \textbf{Borda:} os limites de uma entidade geram uma grande variação de intensidade na imagem e são menos sensíveis a variações na iluminação comparado com as cores. A detecção por meio das bordas é utilizada para identificar essas variações de intensidade na imagem. Os algoritmos que detectam as bordas geralmente as utilizam para representação dos mesmos~\cite{yilmaz};
 
 		\item \textbf{Fluxo óptico:} é um campo denso de vetores de deslocamento que define a tradução de cada \textit{pixel} em uma região. Ele é calculado a partir da restrição de luminosidade, que pressupõe a constância de brilho de \textit{pixels} correspondentes nas \textit{frames} consecutivas~\cite{yilmaz, horn};
 
@@ -118,9 +118,9 @@ De todas as características, a mais utilizada para rastreamento é a cor~\cite{
 	Os métodos de rastreamento de entidades mais utilizados atualmente são:
 
 	\begin{itemize}
-		\item \textbf{Rastreamento de pontos:} as entidades detectados a cada frame são representados por pontos e a associação entre os pontos é feita com base no estados anterior da entidade que pode incluir a posição e o movimento. Essa abordagem requer um mecanismo externo para detectar a entidade a cada \textit{frame}~\cite{yilmaz};
+		\item \textbf{Rastreamento de pontos:} as entidades detectadas a cada frame são representadas por pontos e a associação entre os pontos é feita com base no estado anterior da entidade que pode incluir a posição e o movimento. Essa abordagem requer um mecanismo externo para detectar a entidade a cada \textit{frame}~\cite{yilmaz};
 
-		\item \textbf{Rastreamento de \textit{kernel}}: as entidades são rastreados pelo cálculo do movimento do núcleo em \textit{frames} consecutivas. Esse movimento geralmente esta na forma de transformações paramétricas como translação e rotação. o núcleo se refere ao formato ou aparência da entidade~\cite{yilmaz}.
+		\item \textbf{Rastreamento de núcleo}: as entidades são rastreados pelo cálculo do movimento do núcleo em \textit{frames} consecutivas. Esse movimento geralmente esta na forma de transformações paramétricas como translação e rotação. O núcleo se refere ao formato ou aparência da entidade~\cite{yilmaz}.
 
 		\item \textbf{Rastreamento de silhuetas:} o rastreamento é feito estimando a região da entidade a cada \textit{frame}. Esse método utiliza informação contida dentro da região da mesma. Esta informação pode ser na forma de densidade de aparência e modelos de forma que estão, geralmente, na forma de mapas de borda. Dado os modelos de entidades, silhuetas são rastreadas por qualquer forma de correspondência ou evolução de contorno. Ambos os métodos podem ser essencialmente considerados como segmentação de entidades aplicada no domínio temporal utilizando os priores gerados a partir dos \textit{frames} anteriores~\cite{yilmaz}.
 	\end{itemize}

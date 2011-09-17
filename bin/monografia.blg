@@ -1,56 +1,62 @@
-This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
+This is BibTeX, Version 0.99d (TeX Live 2010)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: bin/monografia.aux
 The style file: plain.bst
 Database file #1: bibliografia.bib
+Warning--entry type for "img-strutuctured-light" isn't style-file defined
+--line 10 of file bibliografia.bib
 Warning--entry type for "kinect" isn't style-file defined
---line 100 of file bibliografia.bib
+--line 126 of file bibliografia.bib
 A bad cross reference---entry "chil"
 refers to entry "DBLP:conf/fgr/2008", which doesn't exist
+A bad cross reference---entry "fall-detection"
+refers to entry "conf/icost/2011", which doesn't exist
+Warning--I didn't find a database entry for "conf/icost/2011"
 Warning--I didn't find a database entry for "DBLP:conf/fgr/2008"
 Warning--to sort, need author or key in servodetection
 Warning--empty author in servodetection
 Warning--empty year in artigo-eigenface
 Warning--empty year in lopes
 Warning--empty year in milene
-You've used 37 entries,
+You've used 39 entries,
             2118 wiz_defined-function locations,
-            711 strings with 9610 characters,
-and the built_in function-call counts, 10652 in all, are:
-= -- 1048
-> -- 465
-< -- 3
-+ -- 192
-- -- 150
-* -- 736
-:= -- 1855
-add.period$ -- 109
-call.type$ -- 37
-change.case$ -- 186
+            725 strings with 10026 characters,
+and the built_in function-call counts, 11492 in all, are:
+= -- 1121
+> -- 517
+< -- 5
++ -- 211
+- -- 167
+* -- 797
+:= -- 1987
+add.period$ -- 115
+call.type$ -- 39
+change.case$ -- 198
 chr.to.int$ -- 0
-cite$ -- 42
-duplicate$ -- 401
-empty$ -- 831
-format.name$ -- 150
-if$ -- 2171
+cite$ -- 44
+duplicate$ -- 432
+empty$ -- 896
+format.name$ -- 167
+if$ -- 2355
 int.to.chr$ -- 0
-int.to.str$ -- 37
-missing$ -- 31
-newline$ -- 186
-num.names$ -- 72
-pop$ -- 161
+int.to.str$ -- 39
+missing$ -- 32
+newline$ -- 195
+num.names$ -- 78
+pop$ -- 178
 preamble$ -- 1
-purify$ -- 149
+purify$ -- 159
 quote$ -- 0
-skip$ -- 282
+skip$ -- 311
 stack$ -- 0
-substring$ -- 615
-swap$ -- 52
-text.length$ -- 3
+substring$ -- 653
+swap$ -- 66
+text.length$ -- 5
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 146
+type$ -- 154
 warning$ -- 5
-while$ -- 103
-width$ -- 39
-write$ -- 394
-(There was 1 error message)
+while$ -- 110
+width$ -- 41
+write$ -- 414
+(There were 2 error messages)

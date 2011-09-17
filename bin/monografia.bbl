@@ -160,6 +160,14 @@ M.~Jones P.~Viola.
   Theories of Vision -- Modeling, Learning, Computing, and Sampling}, julho
   2001.
 
+\bibitem{fall-detection}
+Caroline Rougier, Edouard Auvinet, Jacqueline Rousseau, Max Mignotte, and Jean
+  Meunier.
+\newblock Fall detection from depth map video sequences.
+\newblock In Bessam Abdulrazak, Sylvain Giroux, Bruno Bouchard, H{\'e}l{\`e}ne
+  Pigot, and Mounir Mokhtari, editors, {\em ICOST}, volume 6719 of {\em Lecture
+  Notes in Computer Science}, pages 121--128. Springer, 2011.
+
 \bibitem{bolle}
 A.~Jain S.~Pankanti, R. M.~Bolle.
 \newblock Guest editors' introduction: Biometrics-the future of identification.
@@ -184,6 +192,10 @@ J.~Shi and J.~Malik.
 \newblock {Normalized cuts and image segmentation}.
 \newblock {\em {IEEE Transactions on Pattern Analysis and Machine
   Intelligence}}, 22(8):888--905, 2000.
+
+\bibitem{img-strutuctured-light}
+Becky Stern.
+\newblock How-to: Modded camera looks at kinect infrared output.
 
 \bibitem{chil}
 R.~Stiefelhagen, K.~Bernardin, H.~Kemal Ekenel, and M.~Voit.
