@@ -1,4 +1,4 @@
-\section{Reconhecimento Facial}
+\subsection{Reconhecimento Facial}
 
 O reconhecimento facial é uma das atividades mais comuns realizadas diariamente por seres vivos dotados de certa inteligência. Essa simples atividade vem despertando o interesse de pesquisadores que trabalham com computação visual e inteligência artificial. O objetivo desses pesquisadores é de construir sistemas artificiais capazes de realizar o reconhecimento de faces humanas e a partir desta capacidade, construir os mais diferentes tipos de aplicações: sistemas de vigilância, controles de acesso, definições automáticas de perfis, entre outros~\cite{oliveira}.
 
@@ -39,7 +39,7 @@ Falaremos dessas duas tarefas separadamente nas próximas subseções.
 
 % ###################################################################################################################
 
-\subsection{Detecção de Faces em imagens}
+\subsubsection{Detecção de Faces em imagens}
 	
 A primeira etapa para o reconhecimento de faces é a detecção de um rosto, e a partir daí a comparação do mesmo com modelos conhecidos pelo sistema~\cite{hong, oliveira}. Em um sistema de reconhecimento facial, tanto o tempo de resposta quanto a confiabilidade desta etapa influenciam diretamente no desempenho e o emprego deste sistema~\cite{oliveira}.
 
@@ -78,7 +78,7 @@ Atualmente, já existem diferentes métodos/técnicas de detecção de faces. Ta
 
 Um problema relacionado e muito importante é como avaliar a performance dos métodos de detecção de faces propostos. Para isso, muitas métricas foram adotadas como tempo de aprendizagem, número de amostras necessárias no treinamento e a proporção entre taxas de detecção e ``falso alarme''. Esta última é dificultada pelas diferentes definições para as taxas de detecção e falso alarme adotadas pelos pesquisadores~\cite{yang}.
 
-\subsubsection{Método Viola-Jones}
+\subsubsubsection{Método Viola-Jones}
 \label{sec:viola-jones}
 
 O método que será utilizado nesse trabalho será o método \textit{Viola-Jones}}. Este é um  método baseado em características para detecção de objetos que minimiza o tempo de computação e possui uma alta acurácia permitindo detecção de faces em tempo real. Esse método pode ser utilizado para construir uma abordagem de detecção facial rápida e eficaz~\cite{violajones}. É o método utilizado na biblioteca \textit{OpenCV}(\textit{Open Source Computer Vision}) e muito utilizado atualmente.
@@ -169,7 +169,7 @@ O método \textit{Viola-Jones} é adequado para utilização em sistemas de dete
 % ####################################################################################################################
 % ####################################################################################################################
 
-\subsection{Reconhecimento das Faces encontradas}
+\subsubsection{Reconhecimento das Faces encontradas}
 
 Na etapa de reconhecimento, as faces detectadas, serão comparadas com um banco de dados de faces conhecidas. Várias técnicas são usadas para acelerar essa comparação já que para identificar o usuário é necessário um grande número de comparações. Dentre as técnicas utilizadas existem duas variações principais, as que usam como entrada dados de imagens 2D (imagens de intensidade e imagens de cor) e as que usam como entradas dados de imagens 3D (imagens de profundidade).
 
@@ -184,7 +184,7 @@ Mais antiga e mais comum, as técnicas 2D são amplamente utilizadas e as princi
 
 O \textit{Eigenfaces} mostrou um ótimo custo benefício, devido ao seu baixo custo computacional e a sua, relativamente alta, confiabilidade. Então, falaremos mais detalhadamente como ele funciona.
 
-\subsubsection{Reconhecimento facial com \textit{Eigenfaces}}
+\subsubsubsection{Reconhecimento facial com \textit{Eigenfaces}}
 \label{sec:eigenfaces}
 
 Este é um algoritmo simples e fácil de implementar e os passos utilizados por ele também são utilizados em muitos métodos avançados. Os princípios básicos por trás dele, como PCA - ``\textit{Principal Component Analisys} (Análise de componente principal)'' e \textit{Distance-Based Matching} (Correspondência Baseada na Distância) aparecem cada vez mais na computação visual e em diversas aplicações de inteligência artificial~\cite{hewitt}.
@@ -210,7 +210,7 @@ Em \textit{Eigenfaces}, a distância entre as imagens é medida ponto a ponto e 
 
 Imagens possuem ``ruídos'' e vamos definir ruído como qualquer coisa que atrapalhe na identificação, como por exemplo, as diferenças na luminosidade. Cada \textit{pixel} possui uma intensidade de ruído diferente. Com cada \textit{pixel} contribuindo para o ruído total, este se torna muito elevado comparado com a informação útil que se possa retirar da imagem, dificultando o processo de reconhecimento. Uma solução é diminuir a dimensionalidade da imagem, tornando assim o ruído menor e possibilitando extrair, da imagem, as informações importantes~\cite{hewitt}.
 
-\subsubsection{Redução do ruído utilizando PCA}
+\subsubsubsection{Redução do ruído utilizando PCA}
 
 O \textit{Eigenfaces} utiliza o método PCA - ``\textit{Principal Component Analisys} (Analíse de componente principal)'' para reduzir a dimensionalidade da imagem~\cite{hewitt}.
 
@@ -246,7 +246,7 @@ Em \textit{Eigenfaces}, a diferença entre duas imagens é a distância euclidia
 
 Basicamente, a ideia explicada até agora consiste na transformação da imagem em um ponto no espaço, a redução da dimensão desse ponto, seguida do cálculo da distância entre os pontos.
 
-\subsubsection{As componentes principais - autovetor(\textit{eingenvector})}
+\subsubsubsection{As componentes principais - autovetor(\textit{eingenvector})}
 
 Em nossa definição de uma linha como um subespaço, usamos $\displaystyle x$ e $\displaystyle y$ como coordenadas para definir $\displaystyle m$, que é sua inclinação no espaço gerador. Quando $\displaystyle m$ é um componente principal de um conjunto de pontos, ela é chamada de autovetor ou \textit{eingenvector}, daí o nome \textit{Eigenfaces}~\cite{hewitt}. 
 
@@ -264,7 +264,7 @@ As \textit{eigenfaces} médias das componentes principais são usadas para que a
 		\label{exemploEigenfaces}
 	\end{figure}
 
-\subsubsection{As limitações do \textit{Eigenfaces}}
+\subsubsubsection{As limitações do \textit{Eigenfaces}}
 
 As componentes principais encontradas pelo PCA apontam para a maior variação de dados. Uma das premissas do \textit{Eigenfaces} é que a variabilidade das imagens subjacentes corresponde à diferença entre as faces. Esta suposição nem sempre é válida. A Figura \ref{exemplosImagensIluminacaoo} mostra as faces de dois indivíduos apresentadas em quatro diferentes condições de iluminação~\cite{hewitt}.
 

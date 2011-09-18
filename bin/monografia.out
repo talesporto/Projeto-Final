@@ -8,25 +8,23 @@
 \BOOKMARK [1][-]{section.2.1}{Rastreamento e Localiza\347\343o}{chapter.2}% 8
 \BOOKMARK [2][-]{subsection.2.1.1}{Rastreamento}{section.2.1}% 9
 \BOOKMARK [2][-]{subsection.2.1.2}{Localiza\347\343o}{section.2.1}% 10
-\BOOKMARK [0][-]{chapter.3}{Reconhecimento Facial}{}% 11
-\BOOKMARK [1][-]{section.3.1}{Biometria}{chapter.3}% 12
-\BOOKMARK [1][-]{section.3.2}{Reconhecimento Facial}{chapter.3}% 13
-\BOOKMARK [2][-]{subsection.3.2.1}{Detec\347\343o de Faces em imagens}{section.3.2}% 14
-\BOOKMARK [2][-]{subsection.3.2.2}{Reconhecimento das Faces encontradas}{section.3.2}% 15
-\BOOKMARK [0][-]{chapter.4}{Trabalhos Correlatos}{}% 16
-\BOOKMARK [1][-]{section.4.1}{Projeto CHIL}{chapter.4}% 17
-\BOOKMARK [2][-]{subsection.4.1.1}{Rastreamento e Localiza\347\343o de Pessoas}{section.4.1}% 18
-\BOOKMARK [2][-]{subsection.4.1.2}{Identifica\347\343o das Pessoas}{section.4.1}% 19
-\BOOKMARK [1][-]{section.4.2}{Identifica\347\343o multimodal e localiza\347\343o de usu\341rios em um ambiente inteligente}{chapter.4}% 20
-\BOOKMARK [2][-]{subsection.4.2.1}{Detec\347\343o de movimento, Localiza\347\343o e Rastreamento}{section.4.2}% 21
-\BOOKMARK [2][-]{subsection.4.2.2}{Detec\347\343o e Reconhecimento Facial}{section.4.2}% 22
-\BOOKMARK [1][-]{section.4.3}{Captura de contexto din\342mico e Arrays de v\355deos distribu\355dos para SmartSpaces}{chapter.4}% 23
-\BOOKMARK [2][-]{subsection.4.3.1}{Rastreamento, Detec\347\343o de faces e Reconhecimento facial}{section.4.3}% 24
-\BOOKMARK [0][-]{chapter.5}{Problema e Proposta}{}% 25
-\BOOKMARK [1][-]{section.5.1}{M\363dulo de Reconhecimento}{chapter.5}% 26
-\BOOKMARK [1][-]{section.5.2}{M\363dulo de Rastreamento}{chapter.5}% 27
-\BOOKMARK [1][-]{section.5.3}{Rela\347\343o Rastreamento e Reconhecimento}{chapter.5}% 28
-\BOOKMARK [1][-]{section.5.4}{M\363dulo de Registro}{chapter.5}% 29
-\BOOKMARK [1][-]{section.5.5}{SmartSpace Laico}{chapter.5}% 30
-\BOOKMARK [1][-]{section.5.6}{Kinect}{chapter.5}% 31
-\BOOKMARK [0][-]{section*.18}{Refer\352ncias}{}% 32
+\BOOKMARK [1][-]{section.2.2}{Identifica\347\343o}{chapter.2}% 11
+\BOOKMARK [2][-]{subsection.2.2.1}{Biometria}{section.2.2}% 12
+\BOOKMARK [2][-]{subsection.2.2.2}{Reconhecimento Facial}{section.2.2}% 13
+\BOOKMARK [0][-]{chapter.3}{Trabalhos Correlatos}{}% 14
+\BOOKMARK [1][-]{section.3.1}{Projeto CHIL}{chapter.3}% 15
+\BOOKMARK [2][-]{subsection.3.1.1}{Rastreamento e Localiza\347\343o de Pessoas}{section.3.1}% 16
+\BOOKMARK [2][-]{subsection.3.1.2}{Identifica\347\343o das Pessoas}{section.3.1}% 17
+\BOOKMARK [1][-]{section.3.2}{Identifica\347\343o multimodal e localiza\347\343o de usu\341rios em um ambiente inteligente}{chapter.3}% 18
+\BOOKMARK [2][-]{subsection.3.2.1}{Detec\347\343o de movimento, Localiza\347\343o e Rastreamento}{section.3.2}% 19
+\BOOKMARK [2][-]{subsection.3.2.2}{Detec\347\343o e Reconhecimento Facial}{section.3.2}% 20
+\BOOKMARK [1][-]{section.3.3}{Captura de contexto din\342mico e Arrays de v\355deos distribu\355dos para SmartSpaces}{chapter.3}% 21
+\BOOKMARK [2][-]{subsection.3.3.1}{Rastreamento, Detec\347\343o de faces e Reconhecimento facial}{section.3.3}% 22
+\BOOKMARK [0][-]{chapter.4}{Problema e Proposta}{}% 23
+\BOOKMARK [1][-]{section.4.1}{M\363dulo de Reconhecimento}{chapter.4}% 24
+\BOOKMARK [1][-]{section.4.2}{M\363dulo de Rastreamento}{chapter.4}% 25
+\BOOKMARK [1][-]{section.4.3}{Rela\347\343o Rastreamento e Reconhecimento}{chapter.4}% 26
+\BOOKMARK [1][-]{section.4.4}{M\363dulo de Registro}{chapter.4}% 27
+\BOOKMARK [1][-]{section.4.5}{SmartSpace Laico}{chapter.4}% 28
+\BOOKMARK [1][-]{section.4.6}{Kinect}{chapter.4}% 29
+\BOOKMARK [0][-]{section*.15}{Refer\352ncias}{}% 30
