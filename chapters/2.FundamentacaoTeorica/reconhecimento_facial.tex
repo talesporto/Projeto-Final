@@ -45,7 +45,7 @@ A detecção de faces é definida como o processo que determina a existência ou
 
 	\begin{figure}[hbt]
 		\begin{center}
-			\includegraphics[scale=0.5]{figuras/2.FundamentacaoTeorica/enquadramentoRosto.png}
+			\includegraphics[scale=0.3]{figuras/2.FundamentacaoTeorica/enquadramentoRosto.png}
 		\end{center}
 		\caption{Exemplo de um processo de detecção de uma face em uma imagem.}
 		\label{enquadramentoRosto}
@@ -68,7 +68,7 @@ Atualmente, já existem diferentes métodos/técnicas de detecção de faces. Ta
 
 		\item \textbf{Métodos baseados em características invariantes:} esses algoritmos tem como objetivo principal encontrar as características estruturais que existem mesmo quando a pose, o ângulo e as condições de iluminação variam. E por meio dessas características localizar a face. São desenvolvidos principalmente para localização facial~\cite{yang}. A principal desvantagem desse método é que tais características invariantes podem ser corrompidas devido a algum tipo de ruído ou as fortes variações nas condições de iluminação, comprometendo a eficiência. A cor da pele e a textura da face são as principais características invariantes que podem ser utilizadas para separar a face de outros objetos~\cite{lopes};
 
-		\item \textbf{Métodos baseados em \textit{templates}:} vários padrões comuns de um rosto são armazenados tanto para descrever o rosto como um todo quanto para descrever as características faciais separadamente. As correlações entre as imagens de entrada e os padrões armazenados são computados para detecção. Esses métodos são desenvolvidos para serem utilizados tanto para localização e como para detecção facial~\cite{yang};
+		\item \textbf{Métodos baseados em padrões:} vários padrões comuns de um rosto são armazenados tanto para descrever o rosto como um todo quanto para descrever as características faciais separadamente. As correlações entre as imagens de entrada e os padrões armazenados são computados para detecção. Esses métodos são desenvolvidos para serem utilizados tanto para localização e como para detecção facial~\cite{yang};
 
 		\item \textbf{Métodos baseados em aparência:} recebem este nome devido ao fato de não utilizarem nenhum conhecimento, a priori, sobre o objeto ou características a serem detectadas. Em contraste com os métodos baseado em \textit{templates}, os modelos são retirados de um conjunto de imagens de treinamento que devem capturar a variabilidade da face. Esses modelos retirados são utilizados para detecção. Nesta classe de algoritmos surge os conceitos de aprendizado e treinamento, uma vez que as informações necessárias para realizar a tarefa de detecção são retiradas do próprio conjunto de imagens sem intervenção externa. São métodos desenvolvidos principalmente para detecção de faces~\cite{yang, lopes};
 
@@ -76,7 +76,7 @@ Atualmente, já existem diferentes métodos/técnicas de detecção de faces. Ta
 
 Um problema relacionado e muito importante é como avaliar a performance dos métodos de detecção de faces propostos. Para isso, muitas métricas foram adotadas como tempo de aprendizagem, número de amostras necessárias no treinamento e a proporção entre taxas de detecção e ``falso alarme''. Esta última é dificultada pelas diferentes definições para as taxas de detecção e falso alarme adotadas pelos pesquisadores~\cite{yang}.
 
-O método que será utilizado nesse trabalho será o método \textit{Viola-Jones}}. Este é um  método baseado em características para detecção de objetos que minimiza o tempo de computação e possui uma alta acurácia permitindo detecção de faces em tempo real. Esse método pode ser utilizado para construir uma abordagem de detecção facial rápida e eficaz~\cite{violajones}. É o método implementado pela biblioteca \textit{OpenCV}(\textit{Open Source Computer Vision}) e muito utilizado atualmente.
+O método que será utilizado nesse trabalho será o método \textit{Viola-Jones}}. Este é um  método baseado em padrões para detecção de objetos que minimiza o tempo de computação e possui uma alta acurácia permitindo detecção de faces em tempo real. Esse método pode ser utilizado para construir uma abordagem de detecção facial rápida e eficaz~\cite{violajones}. É o método implementado pela biblioteca \textit{OpenCV}(\textit{Open Source Computer Vision}) e muito utilizado atualmente.
 
 Este método utiliza apenas imagens em tons de cinza distinguindo-se dos outros métodos, pois não utiliza informações auxiliares como diferença de sequência de vídeos e uso de cores e mesmo assim obtém altas taxas de detecção~\cite{edsonma}.
 
@@ -120,7 +120,7 @@ A detecção facial em imagens é baseada em simples características retangular
 
 Tais simples características são remanescentes das funções de base \textit{Haar}. O método utiliza três tipos de características, exemplificadas na Figura \ref{haarfeaturestypes}: características com dois, três ou quatro retângulos~\cite{violajones}. A presença de uma característica em uma imagem é determinada pela subtração da média dos valores dos \textit{pixels} da região escura pela média dos valores dos \textit{pixels} da região clara. Caso o valor seja maior que um limiar, então essa característica é tida como presente~\cite{servodetection}.
 
-O Método \textit{Viola-Jones} não trabalha diretamente com as intensidades da imagem. Para determinar a presença ou ausência de centenas de características \textit{Haar} em cada posição de imagem e em várias escalas de forma eficiente, utiliza-se uma técnica chamada ``Imagem Integral''~\cite{servodetection, violajones}, em que uma nova nova representação de imagem é criada. Com isso, qualquer característica pode ser computada para qualquer escala e localização em um tempo constante~\cite{violajones}.
+O Método \textit{Viola-Jones} não trabalha diretamente com as intensidades da imagem. Para determinar a presença ou ausência de centenas de características \textit{Haar} em cada posição de imagem e em várias escalas de forma eficiente, utiliza-se uma técnica chamada ``Imagem Integral''~\cite{servodetection, violajones}, em que uma nova representação de imagem é criada. Com isso, qualquer característica pode ser computada para qualquer escala e localização em um tempo constante~\cite{violajones}.
 
 	% \begin{figure}[hbt]
 	% 	\begin{center}
@@ -157,7 +157,7 @@ Em qualquer região de uma imagem, o número total de características \textit{H
 
 	\begin{figure}[htb]
 		\begin{center}
-			\includegraphics[height=10cm,width=7.5cm]{figuras/2.FundamentacaoTeorica/filterchain.png}
+			\includegraphics[scale=5.0]{figuras/2.FundamentacaoTeorica/filterchain.png}
 		\end{center}
 		\caption{Ilustração de uma classificador em cascata composto com uma cadeia de filtros~\cite{servodetection}.}
 		\label{filterchain}
@@ -179,9 +179,9 @@ O método \textit{Viola-Jones} é adequado para utilização em sistemas de dete
 
 \subsubsection{Reconhecimento das Faces encontradas}
 
-Na etapa de reconhecimento, as faces detectadas, serão comparadas com um banco de dados de faces conhecidas. Várias técnicas são usadas para acelerar essa comparação já que para identificar o usuário é necessário um grande número de comparações. Dentre as técnicas utilizadas existem duas variações principais, as que usam como entrada dados de imagens 2D (imagens de intensidade e imagens de cor) e as que usam como entradas dados de imagens 3D (imagens de profundidade).
+Na etapa de reconhecimento, as faces detectadas, serão comparadas com um banco de dados de faces conhecidas. Várias técnicas são usadas para acelerar essa comparação já que para identificar o usuário é necessário um grande número de comparações. Dentre as técnicas utilizadas existem duas variações principais, as que usam como entrada dados de imagens de intensidade e de cor e as que usam como entradas dados de imagens de profundidade.
 
-Mais antiga e mais comum, as técnicas 2D são amplamente utilizadas e as principais são:
+As técnicas que utilizam imagens de cor e de intensidade são as mais antigas e comuns e são amplamente utilizadas. Dentre elas destacam-se:
 	\begin{enumerate}
 		\item \textbf{\textit{Eigenfaces}:} extrai as informações relevantes de uma face, codifica-a da maneira mais eficiente possível, e a compara com um banco de faces codificadas de maneira similar. Extrai as informações relevantes contidas em uma imagem de uma face de uma maneira simples captando a variação em uma coleção de imagens de face e usando essa informação para codificar e comparar imagens individuais de faces~\cite{turk}. É baseado em projeção linear das imagens em uma espaço de imagens de menor dimensão. Para redução dimensional utiliza PCA - ``\textit{Principal Component Analisys} (Análise de componente principal)'' maximizando a dispersão total entre todas as imagens~\cite{belhumeur};
 
@@ -190,12 +190,9 @@ Mais antiga e mais comum, as técnicas 2D são amplamente utilizadas e as princi
 		\item \textbf{\textit{Fisher Faces}:} igual ao \textit{Eigenfaces}, é um método que procura uma projeção linear das faces para um espaço dimensional menor onde os impactos causados pelas variações de luz e expressões faciais são minimizados. O método é derivado da discriminante linear de Fisher (FLD)~\cite{belhumeur}.
 	\end{enumerate}
 
-O \textit{Eigenfaces} mostrou um ótimo custo benefício, devido ao seu baixo custo computacional e a sua, relativamente alta, confiabilidade. Então, falaremos mais detalhadamente como ele funciona.
+O \textit{Eigenfaces}	é a técnica de reconhecimento facial que será utilizado nesse trabalho. Trata-se de uma técnica bastante satisfatória quando utilizada sobre uma base de dados (faces) relativamente grande, permitindo ao sistema inferir, das imagens suas principais características e, partindo delas, realizar o reconhecimento das imagens utilizando um número bastante reduzido de cálculos~\cite{artigo-eigenface}, permitindo, assim, um reconhecimento em tempo real.	
 
-\subsubsubsection{Reconhecimento facial com \textit{Eigenfaces}}
-\label{sec:eigenfaces}
-
-Este é um algoritmo simples e fácil de implementar e os passos utilizados por ele também são utilizados em muitos métodos avançados. Os princípios básicos por trás dele, como PCA - ``\textit{Principal Component Analisys} (Análise de componente principal)'' e \textit{Distance-Based Matching} (Correspondência Baseada na Distância) aparecem cada vez mais na computação visual e em diversas aplicações de inteligência artificial~\cite{hewitt}.
+Os princípios básicos por trás dele, como PCA - ``\textit{Principal Component Analisys} (Análise de componente principal)'' e \textit{Distance-Based Matching} (Correspondência Baseada na Distância) aparecem cada vez mais na computação visual e em diversas aplicações de inteligência artificial~\cite{hewitt}.
 
 Basicamente, as etapas do processo de reconhecimento são simples e bem definidas. Dada uma imagem de um rosto desconhecido e imagens do rosto das pessoas conhecidas executa as seguintes ações~\cite{hewitt}:
 
@@ -207,9 +204,11 @@ Basicamente, as etapas do processo de reconhecimento são simples e bem definida
 
 Em \textit{Eigenfaces}, a distância entre as imagens é medida ponto a ponto e é conhecida como ``Distância Euclidiana''. A distância euclidiana em duas dimensões entre os pontos $P_1$ e $P_2$ é dada pela fórmula $\displaystyle d_{12} = \sqrt(d_{x} + d_{y})$, onde $\displaystyle d_x = x_2 - x_1$ e $\displaystyle d_y = y_2-y_1$ e representada na Figura \ref{distanciaEntrePontos}~\cite{hewitt}.
 
+Falar aqui da distância Mahalanobis.
+
     \begin{figure}[hbt]
 		\begin{center}
-			\includegraphics[height=9.5cm,width=12.5cm]{figuras/2.FundamentacaoTeorica/graficoDistanciaEntrePontos.png}
+			\includegraphics[scale=1.0]{figuras/2.FundamentacaoTeorica/graficoDistanciaEntrePontos.png}
 		\end{center}
 		\caption{Distância euclidiana entre dois pontos em duas dimensões~\cite{hewitt}.}
 		\label{distanciaEntrePontos}
@@ -218,61 +217,59 @@ Em \textit{Eigenfaces}, a distância entre as imagens é medida ponto a ponto e 
 
 Imagens possuem ``ruídos'' e vamos definir ruído como qualquer coisa que atrapalhe na identificação, como por exemplo, as diferenças na luminosidade. Cada \textit{pixel} possui uma intensidade de ruído diferente. Com cada \textit{pixel} contribuindo para o ruído total, este se torna muito elevado comparado com a informação útil que se possa retirar da imagem, dificultando o processo de reconhecimento. Uma solução é diminuir a dimensionalidade da imagem, tornando assim o ruído menor e possibilitando extrair, da imagem, as informações importantes~\cite{hewitt}.
 
-\subsubsubsection{Redução do ruído utilizando PCA}
+% \subsubsubsection{Redução do ruído utilizando PCA}
 
-O \textit{Eigenfaces} utiliza o método PCA - ``\textit{Principal Component Analisys} (Analíse de componente principal)'' para reduzir a dimensionalidade da imagem~\cite{hewitt}.
+O \textit{Eigenfaces} utiliza o método PCA - ``\textit{Principal Component Analisys}'' (Analíse de componente principal) para reduzir a dimensionalidade da imagem~\cite{hewitt}.
 
-Para se ter uma ideia de como o PCA funciona, vejamos um caso especial chamado de \textit{``least squares line fit''}. O lado esquerdo da Figura \ref{exemploPCA} mostra um exemplo de uma linha média entre três pontos, que são, no mapa em duas dimensões, Los Angeles, Chicago e Nova York. Estes três pontos do mapa são quase, mas não completamente, uma única linha. A linha tem apenas uma dimensão. Por isso, se conseguirmos substituir as localizações dos pontos em duas dimensões por localizações ao longo de uma única linha, vamos ter reduzido a dimensão do ponto em questão~\cite{hewitt}.
+% Para se ter uma ideia de como o PCA funciona, vejamos um caso especial chamado de \textit{``least squares line fit''}. O lado esquerdo da Figura \ref{exemploPCA} mostra um exemplo de uma linha média entre três pontos, que são, no mapa em duas dimensões, Los Angeles, Chicago e Nova York. Estes três pontos do mapa são quase, mas não completamente, uma única linha. A linha tem apenas uma dimensão. Por isso, se conseguirmos substituir as localizações dos pontos em duas dimensões por localizações ao longo de uma única linha, vamos ter reduzido a dimensão do ponto em questão~\cite{hewitt}.
 
-Como os pontos, nos quais se baseia o nosso exemplo, estão praticamente alinhados, uma linha pode ser traçada através deles com pouco erro. O erro no ajuste da linha é medido pela soma do quadrado da distância de cada ponto da linha. A linha de melhor ajuste é aquela que possui o menor erro~\cite{hewitt}.
+% Como os pontos, nos quais se baseia o nosso exemplo, estão praticamente alinhados, uma linha pode ser traçada através deles com pouco erro. O erro no ajuste da linha é medido pela soma do quadrado da distância de cada ponto da linha. A linha de melhor ajuste é aquela que possui o menor erro~\cite{hewitt}.
 
-	\begin{figure}[hbt]
-		\begin{center}
-			\includegraphics[height=9.5cm,width=12.5cm]{figuras/2.FundamentacaoTeorica/PCAexemploMapa.png}
-		\end{center}
-		\caption{Exemplo para redução da dimensão do ponto~\cite{hewitt}.}
-		\label{exemploPCA}
-	\end{figure}
+	% \begin{figure}[hbt]
+	% 	\begin{center}
+	% 		\includegraphics[height=9.5cm,width=12.5cm]{figuras/2.FundamentacaoTeorica/PCAexemploMapa.png}
+	% 	\end{center}
+	% 	\caption{Exemplo para redução da dimensão do ponto~\cite{hewitt}.}
+	% 	\label{exemploPCA}
+	% \end{figure}
 
-Embora a linha encontrada acima seja um objeto de apenas uma dimensão, a mesma está localizada dentro de um espaço de duas dimensões e tem como orientação a sua inclinação. A inclinação da linha expressa algo importante sobre os três pontos, ela indica a direção em que os mesmos estão mais espalhados~\cite{hewitt}.
+% Embora a linha encontrada acima seja um objeto de apenas uma dimensão, a mesma está localizada dentro de um espaço de duas dimensões e tem como orientação a sua inclinação. A inclinação da linha expressa algo importante sobre os três pontos, ela indica a direção em que os mesmos estão mais espalhados~\cite{hewitt}.
 
-Se posicionarmos a origem do nosso plano cartesiano em algum lugar dessa linha, podemos escrever a equação da linha como uma simples $y = mx$, onde $\displaystyle m$ é a inclinação da linha: $dy / dx$~\cite{hewitt}.
+% Se posicionarmos a origem do nosso plano cartesiano em algum lugar dessa linha, podemos escrever a equação da linha como uma simples $y = mx$, onde $\displaystyle m$ é a inclinação da linha: $dy / dx$~\cite{hewitt}.
 
-Quando ela é descrita desta maneira, a linha se torna um subespaço do espaço gerador definido pelo sistema de coordenadas $\displaystyle (x,y)$. Esta descrição enfatiza o aspecto dos dados que estamos interessados, ou seja, a direção que mantém esses pontos mais separados um do outro~\cite{hewitt}.
+% Quando ela é descrita desta maneira, a linha se torna um subespaço do espaço gerador definido pelo sistema de coordenadas $\displaystyle (x,y)$. Esta descrição enfatiza o aspecto dos dados que estamos interessados, ou seja, a direção que mantém esses pontos mais separados um do outro~\cite{hewitt}.
 
-Esta direção da separação máxima é chamada de ``primeira componente principal'' de um conjunto de dados. A próxima direção com máxima separação é a perpendicular a esta e é denominada ``segunda componente principal''. Em um conjunto de dados com apenas duas dimensões, podemos ter no máximo duas componentes principais~\cite{hewitt}.
+% Esta direção da separação máxima é chamada de ``primeira componente principal'' de um conjunto de dados. A próxima direção com máxima separação é a perpendicular a esta e é denominada ``segunda componente principal''. Em um conjunto de dados com apenas duas dimensões, podemos ter no máximo duas componentes principais~\cite{hewitt}.
 
-Como em \textit{Eigenfaces} cada imagem da face, de tamanho 50x50, é tratada como um ponto em espaço de 2500 dimensões, podemos ter muitas componentes principais~\cite{hewitt}.
+% Como em \textit{Eigenfaces} cada imagem da face, de tamanho 50x50, é tratada como um ponto em espaço de 2500 dimensões, podemos ter muitas componentes principais~\cite{hewitt}.
 
-No entanto, o número de componentes principais que podemos encontrar também é limitada pelo número de pontos. Para ver o porque disto, podemos pensar em um conjunto de dados que consiste de apenas um ponto. Não há sentido em ter uma linha na direção da separação máxima desse conjunto de dados, porque não há nada a separar. Agora, considere um conjunto de dados com apenas dois pontos. A linha que conecta esses dois pontos é a primeira componente principal. Mas não há uma segunda componente principal, porque não há nada mais a separar. Portanto, o número de componentes principais que podemos encontrar nunca será maior que o número de pontos menos um~\cite{hewitt}.
+% No entanto, o número de componentes principais que podemos encontrar também é limitada pelo número de pontos. Para ver o porque disto, podemos pensar em um conjunto de dados que consiste de apenas um ponto. Não há sentido em ter uma linha na direção da separação máxima desse conjunto de dados, porque não há nada a separar. Agora, considere um conjunto de dados com apenas dois pontos. A linha que conecta esses dois pontos é a primeira componente principal. Mas não há uma segunda componente principal, porque não há nada mais a separar. Portanto, o número de componentes principais que podemos encontrar nunca será maior que o número de pontos menos um~\cite{hewitt}.
 
-Voltando ao exemplo da Figura \ref{exemploPCA}, agora que achamos um subespaço, precisamos de uma maneira de converter pontos do espaço gerador para pontos no subespaço. Esse processo recebe o nome de projeção. Quando você projeta um ponto em um subespaço, você define a ele a localização no subespaço que é a mais próxima da localização no espaço de dimensão maior. Por exemplo, para projetar um ponto de uma mapa de duas dimensões para uma linha você precisa achar o ponto na linha que é mais perto do ponto no mapa.~\cite{hewitt}.
+% Voltando ao exemplo da Figura \ref{exemploPCA}, agora que achamos um subespaço, precisamos de uma maneira de converter pontos do espaço gerador para pontos no subespaço. Esse processo recebe o nome de projeção. Quando você projeta um ponto em um subespaço, você define a ele a localização no subespaço que é a mais próxima da localização no espaço de dimensão maior. Por exemplo, para projetar um ponto de uma mapa de duas dimensões para uma linha você precisa achar o ponto na linha que é mais perto do ponto no mapa.~\cite{hewitt}.
 
-As marcas azuis na Figura \ref{exemploPCA} mostram as localizações no subespaço das três cidades que definiram a linha. Outros pontos também podem ser projetados para esta linha. O lado direito da Figura \ref{exemploPCA} mostra a localização projetada para Phoenix, Albuquerque, Boston~\cite{hewitt}.
+% As marcas azuis na Figura \ref{exemploPCA} mostram as localizações no subespaço das três cidades que definiram a linha. Outros pontos também podem ser projetados para esta linha. O lado direito da Figura \ref{exemploPCA} mostra a localização projetada para Phoenix, Albuquerque, Boston~\cite{hewitt}.
 
-Em \textit{Eigenfaces}, a diferença entre duas imagens é a distância euclidiana entre os pontos projetados em um determinado espaço. A projeção desses pontos em um subespaço de menor dimensão é a técnica utilizada para melhorar a relação sinal ruído~\cite{hewitt}.
+% Em \textit{Eigenfaces}, a diferença entre duas imagens é a distância euclidiana entre os pontos projetados em um determinado espaço. A projeção desses pontos em um subespaço de menor dimensão é a técnica utilizada para melhorar a relação sinal ruído~\cite{hewitt}.
 
-Basicamente, a ideia explicada até agora consiste na transformação da imagem em um ponto no espaço, a redução da dimensão desse ponto, seguida do cálculo da distância entre os pontos.
+% Basicamente, a ideia explicada até agora consiste na transformação da imagem em um ponto no espaço, a redução da dimensão desse ponto, seguida do cálculo da distância entre os pontos.
 
-\subsubsubsection{As componentes principais - autovetor(\textit{eingenvector})}
+% \subsubsubsection{As componentes principais - autovetor(\textit{eingenvector})}
 
-Em nossa definição de uma linha como um subespaço, usamos $\displaystyle x$ e $\displaystyle y$ como coordenadas para definir $\displaystyle m$, que é sua inclinação no espaço gerador. Quando $\displaystyle m$ é um componente principal de um conjunto de pontos, ela é chamada de autovetor ou \textit{eingenvector}, daí o nome \textit{Eigenfaces}~\cite{hewitt}. 
+% Em nossa definição de uma linha como um subespaço, usamos $\displaystyle x$ e $\displaystyle y$ como coordenadas para definir $\displaystyle m$, que é sua inclinação no espaço gerador. Quando $\displaystyle m$ é um componente principal de um conjunto de pontos, ela é chamada de autovetor ou \textit{eingenvector}, daí o nome \textit{Eigenfaces}~\cite{hewitt}. 
 
-Para o reconhecimento facial, cada autovetor representa a inclinação de uma linha em um espaço de 2500 dimensões. Como no caso de duas dimensões, precisamos de todas as 2500 dimensões para definir a inclinação de cada linha. Embora seja impossível visualizar uma linha em muitas dimensões, podemos visualiza-las em uma simples imagem convertendo o ponto projetado para colocar o valor de cada \textit{pixel} correspondente, ou seja, ao projetar o ponto em uma linha obtemos uma nova localização no espaço e ao converter essa nova localização de volta em imagem obtemos imagens \textit{facelike} também chamadas de \textit{eigenfaces}~\cite{hewitt,turkpentland}.
+% Para o reconhecimento facial, cada autovetor representa a inclinação de uma linha em um espaço de 2500 dimensões. Como no caso de duas dimensões, precisamos de todas as 2500 dimensões para definir a inclinação de cada linha. Embora seja impossível visualizar uma linha em muitas dimensões, podemos visualiza-las em uma simples imagem convertendo o ponto projetado para colocar o valor de cada \textit{pixel} correspondente, ou seja, ao projetar o ponto em uma linha obtemos uma nova localização no espaço e ao converter essa nova localização de volta em imagem obtemos imagens \textit{facelike} também chamadas de \textit{eigenfaces}~\cite{hewitt,turkpentland}.
 
 O \textit{Eigenfaces} é um método interessante para dar-nos alguma intuição sobre os componentes principais para o nosso conjunto de dados. O lado esquerdo da Figura \ref{exemploEigenfaces} mostra as imagens das faces de dez pessoas. O lado direito  mostra os seis primeiros componentes principais deste conjunto de dados, apresentados como \textit{eigenfaces}. Uma \textit{eigenface} da componente principal é uma imagem média de todas as \textit{eigenfaces} que estão projetadas na mesma. Essas \textit{eigenfaces} muitas vezes têm um olhar fantasmagórico, porque combinam elementos de várias faces. As regiões de \textit{pixels} mais brilhantes e as regiões mais escuras em cada imagem são as que mais contribuem para as componentes principais~\cite{hewitt}. 
 
-As \textit{eigenfaces} médias das componentes principais são usadas para que a partir delas possa se estimar a distância euclidiana entre a imagem que se deseja reconhecer e as imagens presentes no banco e a partir dessas distâncias dizer de qual delas a nova imagem mais se aproxima~\cite{turkpentland}.
+As \textit{eigenfaces} médias das componentes principais são usadas para que a partir delas possa se estimar a distância entre a imagem que se deseja reconhecer e as imagens presentes no banco e a partir dessas distâncias dizer de qual delas a nova imagem mais se aproxima~\cite{turkpentland}.
 
 	\begin{figure}[hbt]
 		\begin{center}
-			\includegraphics[width=13cm]{figuras/2.FundamentacaoTeorica/eigenfaces.png}
+			\includegraphics[scale=1.2]{figuras/2.FundamentacaoTeorica/eigenfaces.png}
 		\end{center}
 		\caption{Direita: imagens de rosto para dez pessoas. Esquerda: os seis primeiros componentes principais, visto como \textit{Eigenfaces}~\cite{hewitt}.}
 		\label{exemploEigenfaces}
 	\end{figure}
-
-\subsubsubsection{As limitações do \textit{Eigenfaces}}
 
 As componentes principais encontradas pelo PCA apontam para a maior variação de dados. Uma das premissas do \textit{Eigenfaces} é que a variabilidade das imagens subjacentes corresponde à diferença entre as faces. Esta suposição nem sempre é válida. A Figura \ref{exemplosImagensIluminacaoo} mostra as faces de dois indivíduos apresentadas em quatro diferentes condições de iluminação~\cite{hewitt}.
 
@@ -280,7 +277,7 @@ Na verdade, elas são imagens de faces de duas das dez pessoas mostradas na Figu
 
 	\begin{figure}[hbt]
 		\begin{center}
-			\includegraphics[width=15cm]{figuras/2.FundamentacaoTeorica/exemplosImagensIluminacaoo.png}
+			\includegraphics[scale=1.2]{figuras/2.FundamentacaoTeorica/exemplosImagensIluminacaoo.png}
 		\end{center}
 		\caption{Imagens das faces de dois indivíduos. A face de cada indivíduo é apresentada em quatro diferentes condições de iluminação. A variabilidade devido à iluminação aqui é maior do que a variabilidade entre os indivíduos. \textit{Eigenfaces} tende a confundir as pessoas quando os efeitos de iluminação são muito fortes \cite{hewitt}.}
 		\label{exemplosImagensIluminacaoo}
@@ -294,15 +291,13 @@ Quando os pontos referentes as imagens de cada indivíduo ficam aglutinadas e sa
 
 Caso os pontos referentes as imagens dos indivíduos tenham uma variabilidade muito grande, a probabilidade de choque de imagens de dois indivíduos num mesmo ponto do subespaço PCA se torna muito grande tornando extremamente difícil separar os dois indivíduos~\cite{hewitt}.
 
-Na prática, a projeção de determinadas imagens de uma pessoa no subespaço PCA provavelmente colidirá com projeções de imagens de outras pessoas. Como os autovetores (\textit{eigenvector}) são determinados pela variabilidade dos dados, ficamos limitados a quão grande deve ser essa. Podemos tomar medidas para limitar, ou para gerir de outra forma, as condições ambientais que podem confundi-lo. Por exemplo, colocar a câmera na altura do rosto irá reduzir a variabilidade no ângulo da câmera~\cite{hewitt}.
-
-As condições de iluminação, tais como iluminação lateral vinda de uma janela, são mais difíceis de controlar. Mas você pode considerar o acréscimo de inteligência em cima de reconhecimento facial para compensar isso. Por exemplo, se sabemos onde ele está localizado, e em que direção está olhando, ela pode comparar a imagem do rosto atual apenas com aquelas em situação semelhante~\cite{hewitt}.
+Na prática, a projeção de determinadas imagens de uma pessoa no subespaço PCA provavelmente colidirá com projeções de imagens de outras pessoas. Como os autovetores (\textit{eigenvector}) são determinados pela variabilidade dos dados, ficamos limitados a quão grande deve ser essa. Podemos tomar medidas para limitar, ou para gerir de outra forma, as condições ambientais que podem confundi-lo. Por exemplo, colocar a câmera na altura do rosto irá reduzir a variabilidade no ângulo da câmera. Porém, alguns fatores são mais difíceis de controlar como as condições de iluminação, tais como iluminação lateral vinda de uma janela~\cite{hewitt}.
 
 Mesmo com sistemas altamente ajustados, sistemas de reconhecimento facial estão sujeitos a casos de identidade equivocada~\cite{hewitt}.
 
 	\begin{figure}[hbt]
 		\begin{center}
-			\includegraphics[width=7cm]{figuras/2.FundamentacaoTeorica/espacoPCA.png}
+			\includegraphics[scale=6.0]{figuras/2.FundamentacaoTeorica/espacoPCA.png}
 		\end{center}
 		\caption{Como as distribuições de dados afetam o reconhecimento com \textit{Eigenfaces}. Topo: O melhor cenário possível - pontos de dados para cada pessoa bem separados. Meio: O pior cenário - a variabilidade entre as imagens das faces de cada individuo é maior do que a variabilidade entre os indivíduos. Embaixo: um cenário realista - separação razoável, com alguma sobreposição \cite{hewitt}.}
 		\label{exemploEspacoPCA}

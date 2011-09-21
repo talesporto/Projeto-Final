@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2011.4.25)  20 SEP 2011 22:30
+This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2011.4.25)  21 SEP 2011 15:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -499,7 +499,7 @@ See the natbib package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.911 ...and\NAT@force@numbers{}\NAT@force@numbers
+l.904 ...and\NAT@force@numbers{}\NAT@force@numbers
                                                   
 ? r
 OK, entering \nonstopmode...
@@ -703,26 +703,6 @@ l.52 \begin{abstract}
 LaTeX Warning: Command \textordmasculine invalid in math mode on input line 10.
 
 
-
-Package natbib Warning: Citation `hewitt' on page vi undefined on input line 18
-.
-
-
-Package natbib Warning: Citation `hewitt' on page vi undefined on input line 19
-.
-
-
-Package natbib Warning: Citation `hewitt' on page vi undefined on input line 20
-.
-
-
-Package natbib Warning: Citation `hewitt' on page vi undefined on input line 21
-.
-
-
-Package natbib Warning: Citation `hewitt' on page vi undefined on input line 22
-.
-
 [6
 
 ])
@@ -753,7 +733,7 @@ File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 24.
  [4]
-<figuras/2.FundamentacaoTeorica/representacao.png, id=404, 842.14626pt x 445.66
+<figuras/2.FundamentacaoTeorica/representacao.png, id=407, 842.14626pt x 445.66
 5pt>
 File: figuras/2.FundamentacaoTeorica/representacao.png Graphic file (type png)
  <use figuras/2.FundamentacaoTeorica/representacao.png>
@@ -762,7 +742,7 @@ on input line 51.
 (pdftex.def)             Requested size: 421.0721pt x 222.83195pt.
  [5 <./figuras/2.FundamentacaoTeorica/representacao.png (PNG copy)>] [6] [7])
 (./chapters/2.FundamentacaoTeorica/localizacao.tex
-<figuras/2.FundamentacaoTeorica/depthimage.png, id=473, 495.8525pt x 512.91624p
+<figuras/2.FundamentacaoTeorica/depthimage.png, id=476, 495.8525pt x 512.91624p
 t>
 File: figuras/2.FundamentacaoTeorica/depthimage.png Graphic file (type png)
  <use figuras/2.FundamentacaoTeorica/depthimage.png>
@@ -770,7 +750,7 @@ Package pdftex.def Info: figuras/2.FundamentacaoTeorica/depthimage.png used on
 input line 12.
 (pdftex.def)             Requested size: 148.7569pt x 153.87605pt.
  [8 <./figuras/2.FundamentacaoTeorica/depthimage.png (PNG copy)>]
-<figuras/2.FundamentacaoTeorica/structured-light.jpg, id=491, 602.25pt x 451.68
+<figuras/2.FundamentacaoTeorica/structured-light.jpg, id=494, 602.25pt x 451.68
 75pt>
 File: figuras/2.FundamentacaoTeorica/structured-light.jpg Graphic file (type jp
 g)
@@ -779,7 +759,7 @@ Package pdftex.def Info: figuras/2.FundamentacaoTeorica/structured-light.jpg us
 ed on input line 30.
 (pdftex.def)             Requested size: 301.12425pt x 225.84319pt.
 
-<figuras/2.FundamentacaoTeorica/lateration.png, id=494, 917.4275pt x 657.45625p
+<figuras/2.FundamentacaoTeorica/lateration.png, id=497, 917.4275pt x 657.45625p
 t>
 File: figuras/2.FundamentacaoTeorica/lateration.png Graphic file (type png)
  <use figuras/2.FundamentacaoTeorica/lateration.png>
@@ -787,7 +767,7 @@ Package pdftex.def Info: figuras/2.FundamentacaoTeorica/lateration.png used on
 input line 38.
 (pdftex.def)             Requested size: 183.48225pt x 131.48892pt.
 
-<figuras/2.FundamentacaoTeorica/angulation.png, id=497, 580.1675pt x 350.30875p
+<figuras/2.FundamentacaoTeorica/angulation.png, id=500, 580.1675pt x 350.30875p
 t>
 File: figuras/2.FundamentacaoTeorica/angulation.png Graphic file (type png)
  <use figuras/2.FundamentacaoTeorica/angulation.png>
@@ -806,7 +786,7 @@ LaTeX Warning: Command \textordmasculine invalid in math mode on input line 48.
 ) [9] [10 <./figuras/2.FundamentacaoTeorica/structured-light.jpg> <./figuras/2.
 FundamentacaoTeorica/lateration.png (PNG copy)>]
 (./chapters/2.FundamentacaoTeorica/biometria.tex
-<figuras/2.FundamentacaoTeorica/caracteristicasBiometricas.png, id=522, 681.546
+<figuras/2.FundamentacaoTeorica/caracteristicasBiometricas.png, id=525, 681.546
 25pt x 466.74374pt>
 File: figuras/2.FundamentacaoTeorica/caracteristicasBiometricas.png Graphic fil
 e (type png)
@@ -814,20 +794,15 @@ e (type png)
 <use figuras/2.FundamentacaoTeorica/caracteristicasBiometricas.png>
 Package pdftex.def Info: figuras/2.FundamentacaoTeorica/caracteristicasBiometri
 cas.png used on input line 6.
-(pdftex.def)             Requested size: 483.70363pt x 312.99443pt.
-
-Overfull \hbox (28.45952pt too wide) in paragraph at lines 6--7
- [] 
- []
-
-[11 <./figuras/2.FundamentacaoTeorica/angulation.png (PNG copy)>]
+(pdftex.def)             Requested size: 340.7723pt x 233.37129pt.
+ [11 <./figuras/2.FundamentacaoTeorica/angulation.png (PNG copy)>]
 Overfull \hbox (25.49876pt too wide) in paragraph at lines 50--63
  [] 
  []
 
 [12 <./figuras/2.FundamentacaoTeorica/caracteristicasBiometricas.png (PNG copy)
 >] [13]) (./chapters/2.FundamentacaoTeorica/reconhecimento_facial.tex
-<figuras/2.FundamentacaoTeorica/diferencailuminacao.png, id=566, 912.40875pt x 
+<figuras/2.FundamentacaoTeorica/diferencailuminacao.png, id=569, 912.40875pt x 
 643.40375pt>
 File: figuras/2.FundamentacaoTeorica/diferencailuminacao.png Graphic file (type
  png)
@@ -837,22 +812,22 @@ Package pdftex.def Info: figuras/2.FundamentacaoTeorica/diferencailuminacao.png
 (pdftex.def)             Requested size: 355.657pt x 270.30627pt.
 
 [14]
-<figuras/2.FundamentacaoTeorica/enquadramentoRosto.png, id=585, 504.88625pt x 5
+<figuras/2.FundamentacaoTeorica/enquadramentoRosto.png, id=588, 504.88625pt x 5
 04.88625pt>
 File: figuras/2.FundamentacaoTeorica/enquadramentoRosto.png Graphic file (type 
 png)
  <use figuras/2.FundamentacaoTeorica/enquadramentoRosto.png>
 Package pdftex.def Info: figuras/2.FundamentacaoTeorica/enquadramentoRosto.png 
 used on input line 48.
-(pdftex.def)             Requested size: 252.44249pt x 252.44249pt.
+(pdftex.def)             Requested size: 151.46703pt x 151.46703pt.
 
 [15 <./figuras/2.FundamentacaoTeorica/diferencailuminacao.png (PNG copy)>]
-[16 <./figuras/2.FundamentacaoTeorica/enquadramentoRosto.png (PNG copy)>]
 Overfull \hbox (0.42082pt too wide) in paragraph at lines 69--70
 \T1/cmr/m/n/12 ob-je-tivo prin-ci-pal en-con-trar as ca-rac-te-r�s-ti-cas es-tr
 u-tu-rais que exis-tem mesmo quando
  []
 
+[16 <./figuras/2.FundamentacaoTeorica/enquadramentoRosto.png (PNG copy)>]
 ! Too many }'s.
 <recently read> }
                  
@@ -862,7 +837,7 @@ You've closed more groups than you opened.
 Such booboos are generally harmless, so keep going.
 
 [17]
-<figuras/2.FundamentacaoTeorica/edsonma.png, id=642, 772.8875pt x 215.80624pt>
+<figuras/2.FundamentacaoTeorica/edsonma.png, id=646, 772.8875pt x 215.80624pt>
 File: figuras/2.FundamentacaoTeorica/edsonma.png Graphic file (type png)
 
 <use figuras/2.FundamentacaoTeorica/edsonma.png>
@@ -870,7 +845,7 @@ Package pdftex.def Info: figuras/2.FundamentacaoTeorica/edsonma.png used on inp
 ut line 97.
 (pdftex.def)             Requested size: 386.4428pt x 107.90285pt.
 
-<figuras/2.FundamentacaoTeorica/haar_features.png, id=644, 750.18295pt x 305.36
+<figuras/2.FundamentacaoTeorica/haar_features.png, id=648, 750.18295pt x 305.36
 62pt>
 File: figuras/2.FundamentacaoTeorica/haar_features.png Graphic file (type png)
  <use figuras/2.FundamentacaoTeorica/haar_features.png>
@@ -878,7 +853,7 @@ Package pdftex.def Info: figuras/2.FundamentacaoTeorica/haar_features.png used
 on input line 105.
 (pdftex.def)             Requested size: 355.66524pt x 184.94514pt.
 
-<figuras/2.FundamentacaoTeorica/haarfeaturestypes.png, id=649, 347.2975pt x 303
+<figuras/2.FundamentacaoTeorica/haarfeaturestypes.png, id=653, 347.2975pt x 303
 .1325pt>
 File: figuras/2.FundamentacaoTeorica/haarfeaturestypes.png Graphic file (type p
 ng)
@@ -886,271 +861,60 @@ ng)
 Package pdftex.def Info: figuras/2.FundamentacaoTeorica/haarfeaturestypes.png u
 sed on input line 115.
 (pdftex.def)             Requested size: 355.67487pt x 184.94293pt.
- [18 <./figuras/2.FundamentacaoTeorica/edsonma.png (PNG copy)>] [19 <./figuras/
-2.FundamentacaoTeorica/haar_features.png> <./figuras/2.FundamentacaoTeorica/haa
+ [18 <./figuras/2.FundamentacaoTeorica/edsonma.png (PNG copy)> <./figuras/2.Fun
+damentacaoTeorica/haar_features.png>] [19 <./figuras/2.FundamentacaoTeorica/haa
 rfeaturestypes.png (PNG copy)>]
-<figuras/2.FundamentacaoTeorica/filterchain.png, id=672, 31.25677pt x 37.94176p
+<figuras/2.FundamentacaoTeorica/filterchain.png, id=675, 31.25677pt x 37.94176p
 t>
 File: figuras/2.FundamentacaoTeorica/filterchain.png Graphic file (type png)
  <use figuras/2.FundamentacaoTeorica/filterchain.png>
 Package pdftex.def Info: figuras/2.FundamentacaoTeorica/filterchain.png used on
  input line 160.
-(pdftex.def)             Requested size: 213.44122pt x 284.55832pt.
- [20 <./figuras/2.FundamentacaoTeorica/filterchain.png (PNG copy)>]
-
-Package natbib Warning: Citation `turk' on page 21 undefined on input line 186.
-
-
-[21]
-! Undefined control sequence.
-l.195 \subsubsubsection
-                       {Reconhecimento facial com \textit{Eigenfaces}}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-Package natbib Warning: Citation `hewitt' on page 22 undefined on input line 19
-8.
-
-
-Package natbib Warning: Citation `hewitt' on page 22 undefined on input line 20
-0.
-
-
-Package natbib Warning: Citation `hewitt' on page 22 undefined on input line 20
-8.
-
-
-<figuras/2.FundamentacaoTeorica/graficoDistanciaEntrePontos.png, id=698, 153.21
+(pdftex.def)             Requested size: 156.28342pt x 189.70825pt.
+ [20 <./figuras/2.FundamentacaoTeorica/filterchain.png (PNG copy)>] [21]
+<figuras/2.FundamentacaoTeorica/graficoDistanciaEntrePontos.png, id=710, 153.21
 24pt x 120.9318pt>
 File: figuras/2.FundamentacaoTeorica/graficoDistanciaEntrePontos.png Graphic fi
 le (type png)
 
 <use figuras/2.FundamentacaoTeorica/graficoDistanciaEntrePontos.png>
 Package pdftex.def Info: figuras/2.FundamentacaoTeorica/graficoDistanciaEntrePo
-ntos.png used on input line 212.
-(pdftex.def)             Requested size: 355.7148pt x 270.35576pt.
+ntos.png used on input line 211.
+(pdftex.def)             Requested size: 153.212pt x 120.93149pt.
 
-
-Package natbib Warning: Citation `hewitt' on page 22 undefined on input line 21
-4.
-
-
-Package natbib Warning: Citation `hewitt' on page 22 undefined on input line 21
-9.
-
-! Undefined control sequence.
-l.221 \subsubsubsection
-                       {Redução do ruído utilizando PCA}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-Package natbib Warning: Citation `hewitt' on page 22 undefined on input line 22
-3.
-
-
-Package natbib Warning: Citation `hewitt' on page 22 undefined on input line 22
-5.
-
-
-Package natbib Warning: Citation `hewitt' on page 22 undefined on input line 22
-7.
-
-[22]
-<figuras/2.FundamentacaoTeorica/PCAexemploMapa.png, id=711, 445.665pt x 207.776
-25pt>
-File: figuras/2.FundamentacaoTeorica/PCAexemploMapa.png Graphic file (type png)
-
- <use figuras/2.FundamentacaoTeorica/PCAexemploMapa.png>
-Package pdftex.def Info: figuras/2.FundamentacaoTeorica/PCAexemploMapa.png used
- on input line 231.
-(pdftex.def)             Requested size: 355.66205pt x 270.33417pt.
-
-
-Package natbib Warning: Citation `hewitt' on page 23 undefined on input line 23
-3.
-
-
-Package natbib Warning: Citation `hewitt' on page 23 undefined on input line 23
-7.
-
-
-Package natbib Warning: Citation `hewitt' on page 23 undefined on input line 23
-9.
-
-
-Package natbib Warning: Citation `hewitt' on page 23 undefined on input line 24
-1.
-
-
-Package natbib Warning: Citation `hewitt' on page 23 undefined on input line 24
-3.
-
-
-Package natbib Warning: Citation `hewitt' on page 23 undefined on input line 24
-5.
-
-
-Package natbib Warning: Citation `hewitt' on page 23 undefined on input line 24
-7.
-
-[23 <./figuras/2.FundamentacaoTeorica/graficoDistanciaEntrePontos.png (PNG copy
-)>]
-
-Package natbib Warning: Citation `hewitt' on page 24 undefined on input line 24
-9.
-
-
-Package natbib Warning: Citation `hewitt' on page 24 undefined on input line 25
-1.
-
-
-Package natbib Warning: Citation `hewitt' on page 24 undefined on input line 25
-3.
-
-! Undefined control sequence.
-l.257 \subsubsubsection
-                       {As componentes principais - autovetor(\textit{eingen...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-[24 <./figuras/2.FundamentacaoTeorica/PCAexemploMapa.png (PNG copy)>]
-
-Package natbib Warning: Citation `hewitt' on page 25 undefined on input line 25
-9.
-
-
-Package natbib Warning: Citation `hewitt' on page 25 undefined on input line 26
-1.
-
-
-Package natbib Warning: Citation `turkpentland' on page 25 undefined on input l
-ine 261.
-
-
-Package natbib Warning: Citation `hewitt' on page 25 undefined on input line 26
-3.
-
-
-Package natbib Warning: Citation `turkpentland' on page 25 undefined on input l
-ine 265.
-
-
-<figuras/2.FundamentacaoTeorica/eigenfaces.png, id=725, 158.994pt x 186.9384pt>
+<figuras/2.FundamentacaoTeorica/eigenfaces.png, id=717, 158.994pt x 186.9384pt>
 File: figuras/2.FundamentacaoTeorica/eigenfaces.png Graphic file (type png)
 <use figuras/2.FundamentacaoTeorica/eigenfaces.png>
 Package pdftex.def Info: figuras/2.FundamentacaoTeorica/eigenfaces.png used on 
-input line 269.
-(pdftex.def)             Requested size: 369.88582pt x 434.96387pt.
-
-
-Package natbib Warning: Citation `hewitt' on page 25 undefined on input line 27
-1.
-
-
-Package natbib Warning: Citation `hewitt' on page 25 undefined on input line 27
-1.
-
-! Undefined control sequence.
-l.275 \subsubsubsection
-                       {As limitações do \textit{Eigenfaces}}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-Package natbib Warning: Citation `hewitt' on page 25 undefined on input line 27
-7.
-
-
-Package natbib Warning: Citation `hewitt' on page 25 undefined on input line 27
-9.
-
-
-<figuras/2.FundamentacaoTeorica/exemplosImagensIluminacaoo.png, id=728, 238.641
+input line 268.
+(pdftex.def)             Requested size: 190.79184pt x 224.32495pt.
+ [22 <./figuras/2.FundamentacaoTeorica/graficoDistanciaEntrePontos.png (PNG cop
+y)>]
+<figuras/2.FundamentacaoTeorica/exemplosImagensIluminacaoo.png, id=735, 238.641
 56pt x 119.69719pt>
 File: figuras/2.FundamentacaoTeorica/exemplosImagensIluminacaoo.png Graphic fil
 e (type png)
 
 <use figuras/2.FundamentacaoTeorica/exemplosImagensIluminacaoo.png>
 Package pdftex.def Info: figuras/2.FundamentacaoTeorica/exemplosImagensIluminac
-aoo.png used on input line 283.
-(pdftex.def)             Requested size: 426.79134pt x 214.0831pt.
+aoo.png used on input line 280.
+(pdftex.def)             Requested size: 286.36842pt x 143.6359pt.
 
-
-Package natbib Warning: Citation `hewitt' on page 25 undefined on input line 28
-5.
-
-
-Package natbib Warning: Citation `hewitt' on page 25 undefined on input line 28
-5.
-
-
-Package natbib Warning: Citation `hewitt' on page 25 undefined on input line 28
-9.
-
-
-Package natbib Warning: Citation `hewitt' on page 25 undefined on input line 29
-5.
-
-
-Package natbib Warning: Citation `hewitt' on page 25 undefined on input line 29
-7.
-
-[25]
-
-Package natbib Warning: Citation `hewitt' on page 26 undefined on input line 29
-9.
-
-
-Package natbib Warning: Citation `hewitt' on page 26 undefined on input line 30
-1.
-
-
-<figuras/2.FundamentacaoTeorica/espacoPCA.png, id=734, 18.60953pt x 39.4775pt>
+<figuras/2.FundamentacaoTeorica/espacoPCA.png, id=743, 18.60953pt x 39.4775pt>
 File: figuras/2.FundamentacaoTeorica/espacoPCA.png Graphic file (type png)
 
 <use figuras/2.FundamentacaoTeorica/espacoPCA.png>
 Package pdftex.def Info: figuras/2.FundamentacaoTeorica/espacoPCA.png used on i
-nput line 305.
-(pdftex.def)             Requested size: 199.16928pt x 422.51152pt.
-
-
-Package natbib Warning: Citation `hewitt' on page 26 undefined on input line 30
-7.
-
-
-Package natbib Warning: Citation `hewitt' on page 26 undefined on input line 30
-7.
-
-
-Package natbib Warning: Citation `turk' on page 26 undefined on input line 313.
-
-
-
-Package natbib Warning: Citation `turk' on page 26 undefined on input line 320.
-
-
-)) (./chapters/3.TrabalhosCorrelatos/trabalhoscorrelatos.tex [26] [27 <./figura
-s/2.FundamentacaoTeorica/eigenfaces.png (PNG copy)>] [28 <./figuras/2.Fundament
-acaoTeorica/exemplosImagensIluminacaoo.png (PNG copy)>] [29 <./figuras/2.Fundam
-entacaoTeorica/espacoPCA.png (PNG copy)>]
+nput line 300.
+(pdftex.def)             Requested size: 111.6568pt x 236.86432pt.
+ [23 <./figuras/2.FundamentacaoTeorica/eigenfaces.png (PNG copy)>]))
+(./chapters/3.TrabalhosCorrelatos/trabalhoscorrelatos.tex [24 <./figuras/2.Fund
+amentacaoTeorica/exemplosImagensIluminacaoo.png (PNG copy)>] [25 <./figuras/2.F
+undamentacaoTeorica/espacoPCA.png (PNG copy)>]
 Cap\'{\i }tulo 3.
-[30
+[26
 
-] [31]
+] [27]
 ! Undefined control sequence.
 <recently read> \displaysyle 
                              
@@ -1162,30 +926,30 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-<figuras/3.TrabalhosCorrelatos/chil.png, id=783, 605.26125pt x 456.70625pt>
+<figuras/3.TrabalhosCorrelatos/chil.png, id=792, 605.26125pt x 456.70625pt>
 File: figuras/3.TrabalhosCorrelatos/chil.png Graphic file (type png)
 
 <use figuras/3.TrabalhosCorrelatos/chil.png>
 Package pdftex.def Info: figuras/3.TrabalhosCorrelatos/chil.png used on input l
 ine 67.
 (pdftex.def)             Requested size: 242.1002pt x 182.67926pt.
- [32 <./figuras/3.TrabalhosCorrelatos/chil.png (PNG copy)>]
-<figuras/3.TrabalhosCorrelatos/upc.png, id=796, 1033.8625pt x 634.37pt>
+ [28 <./figuras/3.TrabalhosCorrelatos/chil.png (PNG copy)>]
+<figuras/3.TrabalhosCorrelatos/upc.png, id=805, 1033.8625pt x 634.37pt>
 File: figuras/3.TrabalhosCorrelatos/upc.png Graphic file (type png)
 
 <use figuras/3.TrabalhosCorrelatos/upc.png>
 Package pdftex.def Info: figuras/3.TrabalhosCorrelatos/upc.png used on input li
 ne 91.
 (pdftex.def)             Requested size: 413.53767pt x 253.7435pt.
- [33 <./figuras/3.TrabalhosCorrelatos/upc.png (PNG copy)>]
-<figuras/3.TrabalhosCorrelatos/workflow.png, id=810, 761.84625pt x 484.81125pt>
+ [29 <./figuras/3.TrabalhosCorrelatos/upc.png (PNG copy)>]
+<figuras/3.TrabalhosCorrelatos/workflow.png, id=818, 761.84625pt x 484.81125pt>
 File: figuras/3.TrabalhosCorrelatos/workflow.png Graphic file (type png)
 <use figuras/3.TrabalhosCorrelatos/workflow.png>
 Package pdftex.def Info: figuras/3.TrabalhosCorrelatos/workflow.png used on inp
 ut line 112.
 (pdftex.def)             Requested size: 380.9222pt x 242.40503pt.
- [34 <./figuras/3.TrabalhosCorrelatos/workflow.png (PNG copy)>]
-<figuras/3.TrabalhosCorrelatos/micasa_aviary.png, id=823, 1026.83624pt x 585.18
+ [30 <./figuras/3.TrabalhosCorrelatos/workflow.png (PNG copy)>]
+<figuras/3.TrabalhosCorrelatos/micasa_aviary.png, id=831, 1026.83624pt x 585.18
 625pt>
 File: figuras/3.TrabalhosCorrelatos/micasa_aviary.png Graphic file (type png)
  <use figuras/3.TrabalhosCorrelatos/micasa_aviary.png>
@@ -1208,8 +972,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[35] [36 <./figuras/3.TrabalhosCorrelatos/micasa_aviary.png (PNG copy)>]
-<figuras/3.TrabalhosCorrelatos/facerec.png, id=844, 541.02126pt x 233.87375pt>
+[31] [32 <./figuras/3.TrabalhosCorrelatos/micasa_aviary.png (PNG copy)>]
+<figuras/3.TrabalhosCorrelatos/facerec.png, id=853, 541.02126pt x 233.87375pt>
 File: figuras/3.TrabalhosCorrelatos/facerec.png Graphic file (type png)
 
 <use figuras/3.TrabalhosCorrelatos/facerec.png>
@@ -1217,13 +981,21 @@ Package pdftex.def Info: figuras/3.TrabalhosCorrelatos/facerec.png used on inpu
 t line 190.
 (pdftex.def)             Requested size: 432.81758pt x 187.09923pt.
 )
-(./chapters/4.ProblemaEProposta/problemaEproposta.tex [37 <./figuras/3.Trabalho
+(./chapters/4.ProblemaEProposta/problemaEproposta.tex [33 <./figuras/3.Trabalho
 sCorrelatos/facerec.png (PNG copy)>]
 Cap\'{\i }tulo 4.
-[38
+[34
 
 ]
-<figuras/4.ProblemaEProposta/reconhecimento.png, id=861, 240.9pt x 180.675pt>
+
+LaTeX Warning: Reference `sec:viola-jones' on page 35 undefined on input line 2
+7.
+
+
+LaTeX Warning: Reference `sec:eigenfaces' on page 35 undefined on input line 29
+.
+
+<figuras/4.ProblemaEProposta/reconhecimento.png, id=867, 240.9pt x 180.675pt>
 File: figuras/4.ProblemaEProposta/reconhecimento.png Graphic file (type png)
 
 <use figuras/4.ProblemaEProposta/reconhecimento.png>
@@ -1235,7 +1007,7 @@ Overfull \hbox (26.55469pt too wide) in paragraph at lines 35--36
  [] 
  []
 
-[39]
+[35]
 ! Undefined control sequence.
 <recently read> \displaystle 
                              
@@ -1247,8 +1019,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[40 <./figuras/4.ProblemaEProposta/reconhecimento.png>]
-<figuras/4.ProblemaEProposta/esquema-tracker-reco.png, id=882, 313.17pt x 385.4
+[36 <./figuras/4.ProblemaEProposta/reconhecimento.png>]
+<figuras/4.ProblemaEProposta/esquema-tracker-reco.png, id=887, 313.17pt x 385.4
 4pt>
 File: figuras/4.ProblemaEProposta/esquema-tracker-reco.png Graphic file (type p
 ng)
@@ -1261,15 +1033,15 @@ Overfull \hbox (14.50972pt too wide) in paragraph at lines 70--71
  [] 
  []
 
-<figuras/4.ProblemaEProposta/registro.png, id=884, 137.5539pt x 168.3891pt>
+<figuras/4.ProblemaEProposta/registro.png, id=889, 137.5539pt x 168.3891pt>
 File: figuras/4.ProblemaEProposta/registro.png Graphic file (type png)
 
 <use figuras/4.ProblemaEProposta/registro.png>
 Package pdftex.def Info: figuras/4.ProblemaEProposta/registro.png used on input
  line 93.
 (pdftex.def)             Requested size: 343.88385pt x 420.97168pt.
- [41]
-<figuras/4.ProblemaEProposta/laico.png, id=894, 581.17125pt x 484.81125pt>
+ [37]
+<figuras/4.ProblemaEProposta/laico.png, id=901, 581.17125pt x 484.81125pt>
 File: figuras/4.ProblemaEProposta/laico.png Graphic file (type png)
 
 <use figuras/4.ProblemaEProposta/laico.png>
@@ -1278,15 +1050,15 @@ ne 116.
 (pdftex.def)             Requested size: 348.70544pt x 290.88899pt.
 
 (./chapters/4.ProblemaEProposta/kinect.tex
-<figuras/2.FundamentacaoTeorica/kinect.jpg, id=896, 765.86125pt x 428.60126pt>
+<figuras/2.FundamentacaoTeorica/kinect.jpg, id=903, 765.86125pt x 428.60126pt>
 File: figuras/2.FundamentacaoTeorica/kinect.jpg Graphic file (type jpg)
 
 <use figuras/2.FundamentacaoTeorica/kinect.jpg>
 Package pdftex.def Info: figuras/2.FundamentacaoTeorica/kinect.jpg used on inpu
 t line 8.
 (pdftex.def)             Requested size: 382.92969pt x 214.3001pt.
- [42]
-<figuras/2.FundamentacaoTeorica/kinect_interno.png, id=910, 479.7925pt x 272.01
+ [38]
+<figuras/2.FundamentacaoTeorica/kinect_interno.png, id=916, 479.7925pt x 272.01
 625pt>
 File: figuras/2.FundamentacaoTeorica/kinect_interno.png Graphic file (type png)
 
@@ -1294,9 +1066,9 @@ File: figuras/2.FundamentacaoTeorica/kinect_interno.png Graphic file (type png)
 Package pdftex.def Info: figuras/2.FundamentacaoTeorica/kinect_interno.png used
  on input line 44.
 (pdftex.def)             Requested size: 383.8345pt x 217.61328pt.
-)) [43] [44 <./figuras/4.ProblemaEProposta/esquema-tracker-reco.png>] [45 <./fi
-guras/4.ProblemaEProposta/registro.png>] [46 <./figuras/4.ProblemaEProposta/lai
-co.png (PNG copy)> <./figuras/2.FundamentacaoTeorica/kinect.jpg>] [47 <./figura
+)) [39] [40 <./figuras/4.ProblemaEProposta/esquema-tracker-reco.png>] [41 <./fi
+guras/4.ProblemaEProposta/registro.png>] [42 <./figuras/4.ProblemaEProposta/lai
+co.png (PNG copy)> <./figuras/2.FundamentacaoTeorica/kinect.jpg>] [43 <./figura
 s/2.FundamentacaoTeorica/kinect_interno.png (PNG copy)>] (./bin/monografia.bbl
 (./bin/monografia.brf)
 \tf@brf=\write7
@@ -1314,15 +1086,12 @@ Underfull \hbox (badness 1867) in paragraph at lines 61--61
 si-dade de Bra-s�-lia,
  []
 
-[48
+[44
 
 
-] [49])
-
-Package natbib Warning: There were undefined citations.
-
+] [45])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 75.
-[50]
+ [46]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 75.
  (./bin/monografia.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 75.
@@ -1339,17 +1108,20 @@ LaTeX Font Warning: Size substitutions with differences
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
+
+LaTeX Warning: There were undefined references.
+
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 75.
  )
 (\end occurred when \iffalse on line 462 was incomplete) 
 Here is how much of TeX's memory you used:
- 8320 strings out of 493763
- 121144 string characters out of 3144954
- 226242 words of memory out of 3000000
- 11196 multiletter control sequences out of 15000+200000
+ 8327 strings out of 493763
+ 121109 string characters out of 3144954
+ 226087 words of memory out of 3000000
+ 11206 multiletter control sequences out of 15000+200000
  16932 words of font info for 37 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
- 43i,8n,69p,1124b,540s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 43i,8n,69p,1124b,544s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/local/texlive/201
 0/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/local/texlive/2010/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2010/t
@@ -1370,10 +1142,10 @@ lic/cm-super/sfrm1200.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/publi
 c/cm-super/sfrm1440.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/
 cm-super/sfrm2074.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/cm
 -super/sfti1200.pfb>
-Output written on ./bin/monografia.pdf (61 pages, 3755624 bytes).
+Output written on ./bin/monografia.pdf (57 pages, 3715660 bytes).
 PDF statistics:
- 1161 PDF objects out of 1200 (max. 8388607)
- 1025 compressed objects within 11 object streams
- 235 named destinations out of 1000 (max. 500000)
- 386 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1179 PDF objects out of 1200 (max. 8388607)
+ 1045 compressed objects within 11 object streams
+ 233 named destinations out of 1000 (max. 500000)
+ 381 words of extra memory for PDF output out of 10000 (max. 10000000)
 

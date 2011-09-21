@@ -66,6 +66,11 @@ N.~Grammalidis, G.~Goussis, G.~Troufakos, and M.~G. Strintzis.
 \newblock {\em Department of Electrical and Computer Engineering University of
   Thessaloniki}, 2001.
 
+\bibitem{hewitt}
+R.~Hewitt.
+\newblock Face recognition with eigenface.
+\newblock {\em SERVO Magazine}, 2007.
+
 \bibitem{triangulacao}
 J.~Hightower and G.~Borriello.
 \newblock Location sensing techniques.
@@ -109,11 +114,21 @@ E~.~C. Lopes.
 \newblock Technical report, Pontif{\'\i}cia Universidade Cat{\'o}lica do Rio
   Grande do Sul.
 
+\bibitem{turkpentland}
+A.~P.~Pentland M.~A.~Turk.
+\newblock Face recognition using eigenfaces.
+\newblock {\em IEEE Computer Society Confer}, 1991.
+
 \bibitem{milene}
 J.~H.~Saito M.~Arantes, A. N.~Ide.
 \newblock A system for fingerprint minutiae classification and recognition.
 \newblock In {\em Proceedings of the 9th International Conference on Neural
   Information Processing(ICONIP'O2)}, volume~5, pages 2474 -- 2478.
+
+\bibitem{turk}
+A.~Pentland M.~Turk.
+\newblock Eigenfaces for recognition.
+\newblock {\em Journal of Cognitive Neuroscience}, 3(1):71--86, 1991.
 
 \bibitem{yang}
 N.~Ahuja M.~Yang, D. J.~Kriegman.
