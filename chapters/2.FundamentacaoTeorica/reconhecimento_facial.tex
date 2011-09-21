@@ -61,12 +61,12 @@ O processo de detecção de faces geralmente é dificultado pelas seguintes raz�
 		\item \textbf{Condições da imagem}: a não previsibilidade das condições da imagem em ambientes sem restrições de iluminação, cores e objetos de fundo~\cite{oliveira, yang}.
 	\end{enumerate}
 
-Atualmente, já existem diferentes métodos/técnicas de detecção de faces. Tais métodos podem ser baseados em imagens de intensidade e em imagens de cor ou também em imagens de três dimensões. Focaremos nos principais métodos de imagens de cor e de intensidade que serão utilizados neste trabalho. Estes podem ser divididos em 4 categorias:
+Atualmente, já existem diferentes métodos/técnicas de detecção de faces. Tais métodos podem ser baseados em imagens de intensidade e em imagens de cor ou também em imagens de três dimensões. Os principais métodos de imagens de cor e de intensidade podem ser divididos em quatro categorias:
 
 	\begin{enumerate}
 		\item \textbf{Métodos baseados em conhecimento:} métodos, desenvolvidos principalmente para localização facial, baseados em regras derivadas do conhecimento dos pesquisadores do que constitui uma típica face humana. Normalmente, captura as relações existentes entre as características faciais. É fácil encontrar regras que descrevem as características faciais. Por exemplo, uma face sempre é constituída por dois olhos simétricos, um nariz e uma boca. As relações entre essas características podem ser representadas pelas distâncias relativas e posições. Este método possui desvantagens em relação a construção do conjunto de regras. Se estas são muito gerais, corre-se o risco, de que o sistema que as utilizam, apresentar uma alta taxa de falsos positivos. Se são muito específicas, podem ser ineficazes ao tentar detectar faces por não satisfizerem todas as regras, diminuindo muito a precisão da detecção~\cite{yang,lopes};
 
-		\item \textbf{Métodos baseados em características invariantes:} esses algoritmos tem como objetivo principal encontrar as características estruturais que existem mesmo quando a pose, o ângulo e as condições de iluminação variam. E por meio dessas características localizar a face. São desenvolvidos principalmente para localização facial~\cite{yang}. A principal desvantagem desse método é que tais características invariantes podem ser corrompidas devido a algum tipo de ruído ou a fortes variações nas condições de iluminação, comprometendo a eficiência. A cor da pele e a textura da face são as principais características invariantes que podem ser utilizadas para separar a face de outros objetos~\cite{lopes};
+		\item \textbf{Métodos baseados em características invariantes:} esses algoritmos tem como objetivo principal encontrar as características estruturais que existem mesmo quando a pose, o ângulo e as condições de iluminação variam. E por meio dessas características localizar a face. São desenvolvidos principalmente para localização facial~\cite{yang}. A principal desvantagem desse método é que tais características invariantes podem ser corrompidas devido a algum tipo de ruído ou as fortes variações nas condições de iluminação, comprometendo a eficiência. A cor da pele e a textura da face são as principais características invariantes que podem ser utilizadas para separar a face de outros objetos~\cite{lopes};
 
 		\item \textbf{Métodos baseados em \textit{templates}:} vários padrões comuns de um rosto são armazenados tanto para descrever o rosto como um todo quanto para descrever as características faciais separadamente. As correlações entre as imagens de entrada e os padrões armazenados são computados para detecção. Esses métodos são desenvolvidos para serem utilizados tanto para localização e como para detecção facial~\cite{yang};
 
@@ -76,74 +76,84 @@ Atualmente, já existem diferentes métodos/técnicas de detecção de faces. Ta
 
 Um problema relacionado e muito importante é como avaliar a performance dos métodos de detecção de faces propostos. Para isso, muitas métricas foram adotadas como tempo de aprendizagem, número de amostras necessárias no treinamento e a proporção entre taxas de detecção e ``falso alarme''. Esta última é dificultada pelas diferentes definições para as taxas de detecção e falso alarme adotadas pelos pesquisadores~\cite{yang}.
 
-\subsubsubsection{Método Viola-Jones}
-\label{sec:viola-jones}
+O método que será utilizado nesse trabalho será o método \textit{Viola-Jones}}. Este é um  método baseado em características para detecção de objetos que minimiza o tempo de computação e possui uma alta acurácia permitindo detecção de faces em tempo real. Esse método pode ser utilizado para construir uma abordagem de detecção facial rápida e eficaz~\cite{violajones}. É o método implementado pela biblioteca \textit{OpenCV}(\textit{Open Source Computer Vision}) e muito utilizado atualmente.
 
-O método que será utilizado nesse trabalho será o método \textit{Viola-Jones}}. Este é um  método baseado em características para detecção de objetos que minimiza o tempo de computação e possui uma alta acurácia permitindo detecção de faces em tempo real. Esse método pode ser utilizado para construir uma abordagem de detecção facial rápida e eficaz~\cite{violajones}. É o método utilizado na biblioteca \textit{OpenCV}(\textit{Open Source Computer Vision}) e muito utilizado atualmente.
-	
-O Método \textit{Viola-Jones} para detecção facial utiliza quatro conceitos chaves~\cite{servodetection,violajones}:
+Este método utiliza apenas imagens em tons de cinza distinguindo-se dos outros métodos, pois não utiliza informações auxiliares como diferença de sequência de vídeos e uso de cores e mesmo assim obtém altas taxas de detecção~\cite{edsonma}.
+
+O Método \textit{Viola-Jones} para detecção facial utiliza quatro conceitos chaves ilustrados na Figura~\ref{fig:edsonma}:
 	
 	\begin{enumerate}
-		\item \textbf{\textit{Haar features}:} simples características retangulares;
-		\item \textbf{\textit{Integral image}:} uma nova representação da imagem que permite uma rápida avaliação de recursos e características;
-		\item \textbf{O método \textit{AdaBoost}}: um método de aprendizagem de máquina utilizado para construir um classificador,  selecionando um pequeno número de características importantes usando \textit{AdaBoost};
-		\item \textbf{Classificador em cascata}: classificador que combina muitas características de maneira eficiente;
+		\item \textbf{Características \textit{Haar} básicas:} simples características retangulares avaliadas rapidamente por meio de uma nova representação da imagem chamada ``Imagem Integral''~\cite{servodetection,violajones,edsonma};
+
+		\item \textbf{Imagem Integral:} uma nova representação da imagem que permite uma rápida avaliação de recursos e características. Basicamente, o método consiste em acrescentar pequenas unidades juntas. Neste caso, pequenas unidades são valores de \textit{pixels}. O valor ``integral'' para cada \textit{pixel} é a soma de todos os \textit{pixels} acima e a esquerda. Começando pelo canto superior esquerdo da imagem e atravessando para direita e para baixo, toda a imagem pode ser ``integrada'' com poucas operações por \textit{pixel}~\cite{servodetection, violajones}.
+
+		\item \textbf{O método \textit{AdaBoost}}: um algoritmo de aprendizado \textit{boosting} utilizado para construir um classificador, selecionando um pequeno número de características importantes~\cite{servodetection,violajones, edsonma};
+
+		\item \textbf{Classificadores em cascata}: classificadores fracos \textit{boosted} em uma estrutura de árvore que geram inferências rápidas e robustas na construção de um classificador forte~\cite{servodetection,violajones,edsonma};
 	\end{enumerate}
+
+	\begin{figure}[hbt]
+		\begin{center}
+			\includegraphics[scale=0.5]{figuras/2.FundamentacaoTeorica/edsonma.png}
+		\end{center}
+		\caption{Componentes Básicos do Método \textit{Viola-Jones}~\cite{edsonma}.}
+		\label{fig:edsonma}
+	\end{figure}
 
 	\begin{figure}[hbt]
 		\begin{center}
 			\includegraphics[height=6.5cm,width=12.5cm]{figuras/2.FundamentacaoTeorica/haar_features.png}
 		\end{center}
-		\caption{Exemplo de simples características retangulares (\textit{Haar features}). Adaptada de~\cite{servodetection}.}
+		\caption{Exemplo de Características \textit{Haar} básicas. Adaptada de~\cite{servodetection}.}
 		\label{haarfeatures}
 	\end{figure}
 
-A detecção facial em imagens é baseado em simples características retangulares (\textit{Haar features}), exemplificada na Figura \ref{haarfeatures}. Existem vários motivos para se usar essas características ao invés de usar diretamente os \textit{pixels} da imagem. Uma das principais é que sistemas baseados em características são muito mais rápidos que sistemas baseados em \textit{pixels}~\cite{violajones}. 
+A detecção facial em imagens é baseada em simples características retangulares, exemplificada na Figura~\ref{haarfeatures}. Existem vários motivos para se usar essas características ao invés de usar diretamente os \textit{pixels} da imagem. Uma das principais é que sistemas baseados em características são muito mais rápidos que sistemas baseados em \textit{pixels}~\cite{violajones}. 
 
 \begin{figure}[hbt]
 		\begin{center}
 			\includegraphics[height=6.5cm,width=12.5cm]{figuras/2.FundamentacaoTeorica/haarfeaturestypes.png}
 		\end{center}
-		\caption{\textit{Haar features} com dois, três e quatro retângulos~\cite{violajones}.}
+		\caption{Características \textit{Haar} básicas com dois, três e quatro retângulos~\cite{violajones}.}
 		\label{haarfeaturestypes}
-	\end{figure}
+\end{figure}
 
 Tais simples características são remanescentes das funções de base \textit{Haar}. O método utiliza três tipos de características, exemplificadas na Figura \ref{haarfeaturestypes}: características com dois, três ou quatro retângulos~\cite{violajones}. A presença de uma característica em uma imagem é determinada pela subtração da média dos valores dos \textit{pixels} da região escura pela média dos valores dos \textit{pixels} da região clara. Caso o valor seja maior que um limiar, então essa característica é tida como presente~\cite{servodetection}.
 
-O Método \textit{Viola-Jones} não trabalha diretamente com as intensidades da imagem. Para determinar a presença ou ausência de centenas de \textit{Haar features} em cada posição de imagem e em várias escalas de forma eficiente, utiliza-se uma técnica chamada \textit{Integral image}. Basicamente, o método consiste em acrescentar pequenas unidades juntas. Neste caso, pequenas unidades são valores de \textit{pixels}. O valor ``integral'' para cada \textit{pixel} é a soma de todos os \textit{pixels} acima e a esquerda. Começando pelo canto superior esquerdo da imagem e atravessando para direita e para baixo, toda a imagem pode ser ``integrada'' com poucas operações por \textit{pixels}~\cite{servodetection, violajones}. Com a nova representação de imagem criada, qualquer \textit{Haar feature} pode ser computada para qualquer escala e localização em um tempo constante~\cite{violajones}.
+O Método \textit{Viola-Jones} não trabalha diretamente com as intensidades da imagem. Para determinar a presença ou ausência de centenas de características \textit{Haar} em cada posição de imagem e em várias escalas de forma eficiente, utiliza-se uma técnica chamada ``Imagem Integral''~\cite{servodetection, violajones}, em que uma nova nova representação de imagem é criada. Com isso, qualquer característica pode ser computada para qualquer escala e localização em um tempo constante~\cite{violajones}.
 
-	\begin{figure}[hbt]
-		\begin{center}
-			\includegraphics[height=6.5cm,width=12.5cm]{figuras/2.FundamentacaoTeorica/integral_image.png}
-		\end{center}
-		\caption{Exemplo da aplicação da técnica \textit{Integral image}. Após a ``integração'' o \textit{pixel} $\displaystyle (x,y)$ contém a soma dos valores dos \textit{pixels} do retângulo sombreado. Adaptada de~\cite{servodetection}.}
-		\label{integralimage}
-	\end{figure}
+	% \begin{figure}[hbt]
+	% 	\begin{center}
+	% 		\includegraphics[height=6.5cm,width=12.5cm]{figuras/2.FundamentacaoTeorica/integral_image.png}
+	% 	\end{center}
+	% 	\caption{Exemplo da aplicação da técnica \textit{Integral image}. Após a ``integração'' o \textit{pixel} $\displaystyle (x,y)$ contém a soma dos valores dos \textit{pixels} do retângulo sombreado. Adaptada de~\cite{servodetection}.}
+	% 	\label{integralimage}
+	% \end{figure}
 
-Na Figura \ref{integralimage}, após a ``integração'', o \textit{pixel} $\displaystyle (x,y)$ contém a soma de todos os valores de \textit{pixels} dentro da região retangular sombreada no canto superior esquerdo de $\displaystyle (x,y)$. Para calcular a média dos valores de \textit{pixel} neste retângulo, basta dividir o valor em $\displaystyle (x,y)$ pela área do retângulo~\cite{servodetection}.
+% Na Figura \ref{integralimage}, após a ``integração'', o \textit{pixel} $\displaystyle (x,y)$ contém a soma de todos os valores de \textit{pixels} dentro da região retangular sombreada no canto superior esquerdo de $\displaystyle (x,y)$. Para calcular a média dos valores de \textit{pixel} neste retângulo, basta dividir o valor em $\displaystyle (x,y)$ pela área do retângulo~\cite{servodetection}.
 
-	\begin{figure}[hbt]
-		\begin{center}
-			\includegraphics[height=6.5cm,width=12.5cm]{figuras/2.FundamentacaoTeorica/integral_image2.png}
-		\end{center}
-		\caption{Exemplo utilizado para mostrar como calcular a soma dos valores de \textit{pixel} de um retângulo que não está localizado no canto superior esquerdo da imagem utilizando \textit{Integral image}. Adaptado de~\cite{servodetection}.}
-		\label{integralimage2}
-	\end{figure}
+	% \begin{figure}[hbt]
+	% 	\begin{center}
+	% 		\includegraphics[height=6.5cm,width=12.5cm]{figuras/2.FundamentacaoTeorica/integral_image2.png}
+	% 	\end{center}
+	% 	\caption{Exemplo utilizado para mostrar como calcular a soma dos valores de \textit{pixel} de um retângulo que não está localizado no canto superior esquerdo da imagem utilizando \textit{Integral image}. Adaptado de~\cite{servodetection}.}
+	% 	\label{integralimage2}
+	% \end{figure}
 
-A Figura \ref{integralimage2} mostra como calcular os valores de um retângulo que não está localizado no canto superior esquerdo da imagem. Suponha que se deseja obter a soma dos valores do retângulo em $\displaystyle D$. De maneira intuitiva, pode-se realizar esse cálculo somando os valores dos \textit{pixels} no retângulo formado por $\displaystyle A+B+C+D$, menos a soma nos retângulos $\displaystyle A+B$ e $\displaystyle A+C$, mais a soma dos valores de \textit{pixel} em $\displaystyle A$. Em outras palavra, $\displaystyle D = A+B+C+D-(A+B)-(A+C)+A$~\cite{servodetection, violajones}.
+% A Figura \ref{integralimage2} mostra como calcular os valores de um retângulo que não está localizado no canto superior esquerdo da imagem. Suponha que se deseja obter a soma dos valores do retângulo em $\displaystyle D$. De maneira intuitiva, pode-se realizar esse cálculo somando os valores dos \textit{pixels} no retângulo formado por $\displaystyle A+B+C+D$, menos a soma nos retângulos $\displaystyle A+B$ e $\displaystyle A+C$, mais a soma dos valores de \textit{pixel} em $\displaystyle A$. Em outras palavra, $\displaystyle D = A+B+C+D-(A+B)-(A+C)+A$~\cite{servodetection, violajones}.
 
-Porém, usando \textit{Integral image}, $\displaystyle A+B+C+D$ é o valor do ponto $\displaystyle 4$, $\displaystyle A+B$ é o valor do ponto $\displaystyle 2$, $\displaystyle A+C$ é o valor do ponto $\displaystyle 3$, e $\displaystyle A$ é o valor do ponto $\displaystyle 1$. Então, com \textit{Integral image}, você pode obter a soma dos valores de \textit{pixel} de qualquer retângulo na imagem original usando somente três operações~\cite{servodetection, violajones}:
+% Porém, usando \textit{Integral image}, $\displaystyle A+B+C+D$ é o valor do ponto $\displaystyle 4$, $\displaystyle A+B$ é o valor do ponto $\displaystyle 2$, $\displaystyle A+C$ é o valor do ponto $\displaystyle 3$, e $\displaystyle A$ é o valor do ponto $\displaystyle 1$. Então, com \textit{Integral image}, você pode obter a soma dos valores de \textit{pixel} de qualquer retângulo na imagem original usando somente três operações~\cite{servodetection, violajones}:
 
-	\begin{equation}
-		(x_4,y_4) - (x_2,y_2) - (x_3,y_3) + (x_1,y_1)
-		\label{equacaointegralimage}
-	\end{equation} 
+% 	\begin{equation}
+% 		(x_4,y_4) - (x_2,y_2) - (x_3,y_3) + (x_1,y_1)
+% 		\label{equacaointegralimage}
+% 	\end{equation} 
 
-Para selecionar os \textit{Haar features} que serão utilizados e para definir os limiares, o método \textit{Viola-Jones} utiliza um método de aprendizagem de máquina chamado \textit{AdaBoost}. Este combina vários classificadores ``fracos'' para criar um classificador ``forte''. 
+Para selecionar características \textit{Haar} básicas que serão utilizados e para definir os limiares, o método \textit{Viola-Jones} utiliza um método de aprendizagem de máquina chamado \textit{AdaBoost}. Este combina vários classificadores ``fracos'' para criar um classificador ``forte''. 
 
 Um classificador fraco é aquele que só obtém a resposta correta um pouco mais frequente que um ``palpite aleatório''. A combinação desses classificadores ``fracos'', onde cada um ``empurra'' a resposta final um pouco na direção certa, pode ser considerado como um classificador ``forte''. O método \textit{AdaBoost} seleciona um conjunto de classificadores ``fracos'' para combinar e atribui pesos a cada um. Essa combinação ponderada resulta em um classificador ``forte''~\cite{servodetection}.
 
-Em qualquer região de uma imagem, o número total de \textit{Haar features} é muito grande, muito maior que o número de \textit{pixels}. Para assegurar uma classificação rápida, o processo de aprendizagem deve excluir o maior número de características disponíveis, e focar nas que são críticas. A seleção dessas características é alcançada através de uma simples modificação no método \textit{AdaBoost}: o mecanismo de aprendizagem é construído de forma que cada classificador ``fraco'' retornado dependa de somente uma única característica. Como resultado, cada estágio do processo seleciona um novo classificador ``fraco'' o que pode ser visto como um processo de seleção de características. \textit{AdaBoost} fornece um algoritmo de aprendizagem eficaz~\cite{violajones}.
+Em qualquer região de uma imagem, o número total de características \textit{Haar} básicas é muito grande. Para assegurar uma classificação rápida, o processo de aprendizagem deve excluir o maior número de características disponíveis, e focar nas que são críticas. A seleção dessas características é alcançada através de uma simples modificação no método \textit{AdaBoost}: o mecanismo de aprendizagem é construído de forma que cada classificador ``fraco'' retornado dependa de somente uma única característica. Como resultado, cada estágio do processo seleciona um novo classificador ``fraco'' o que pode ser visto como um processo de seleção de características. \textit{AdaBoost} fornece um algoritmo de aprendizagem eficaz~\cite{violajones}.
 
 	\begin{figure}[htb]
 		\begin{center}

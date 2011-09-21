@@ -4,13 +4,13 @@ The top-level auxiliary file: bin/monografia.aux
 The style file: plain.bst
 Database file #1: bibliografia.bib
 Warning--entry type for "img-strutuctured-light" isn't style-file defined
---line 10 of file bibliografia.bib
+--line 20 of file bibliografia.bib
 Warning--entry type for "kinect" isn't style-file defined
---line 126 of file bibliografia.bib
-A bad cross reference---entry "chil"
-refers to entry "DBLP:conf/fgr/2008", which doesn't exist
+--line 136 of file bibliografia.bib
 A bad cross reference---entry "fall-detection"
 refers to entry "conf/icost/2011", which doesn't exist
+A bad cross reference---entry "chil"
+refers to entry "DBLP:conf/fgr/2008", which doesn't exist
 Warning--I didn't find a database entry for "conf/icost/2011"
 Warning--I didn't find a database entry for "DBLP:conf/fgr/2008"
 Warning--to sort, need author or key in servodetection
@@ -18,45 +18,45 @@ Warning--empty author in servodetection
 Warning--empty year in artigo-eigenface
 Warning--empty year in lopes
 Warning--empty year in milene
-You've used 39 entries,
+You've used 37 entries,
             2118 wiz_defined-function locations,
-            725 strings with 10026 characters,
-and the built_in function-call counts, 11492 in all, are:
-= -- 1121
-> -- 517
+            716 strings with 10017 characters,
+and the built_in function-call counts, 11019 in all, are:
+= -- 1074
+> -- 503
 < -- 5
-+ -- 211
-- -- 167
-* -- 797
-:= -- 1987
-add.period$ -- 115
-call.type$ -- 39
-change.case$ -- 198
++ -- 205
+- -- 163
+* -- 770
+:= -- 1902
+add.period$ -- 109
+call.type$ -- 37
+change.case$ -- 190
 chr.to.int$ -- 0
-cite$ -- 44
-duplicate$ -- 432
-empty$ -- 896
-format.name$ -- 167
-if$ -- 2355
+cite$ -- 42
+duplicate$ -- 411
+empty$ -- 854
+format.name$ -- 163
+if$ -- 2257
 int.to.chr$ -- 0
-int.to.str$ -- 39
-missing$ -- 32
-newline$ -- 195
-num.names$ -- 78
-pop$ -- 178
+int.to.str$ -- 37
+missing$ -- 30
+newline$ -- 185
+num.names$ -- 74
+pop$ -- 172
 preamble$ -- 1
-purify$ -- 159
+purify$ -- 153
 quote$ -- 0
-skip$ -- 311
+skip$ -- 297
 stack$ -- 0
-substring$ -- 653
-swap$ -- 66
+substring$ -- 628
+swap$ -- 64
 text.length$ -- 5
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 154
+type$ -- 146
 warning$ -- 5
-while$ -- 110
-width$ -- 41
-write$ -- 414
+while$ -- 105
+width$ -- 39
+write$ -- 393
 (There were 2 error messages)

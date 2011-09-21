@@ -16,21 +16,21 @@
 \contentsline {subsection}{\numberline {2.2.2}Reconhecimento Facial}{14}{subsection.2.2.2}
 \contentsline {subsubsection}{Detec\IeC {\c c}\IeC {\~a}o de Faces em imagens}{15}{section*.12}
 \contentsline {subsubsection}{Reconhecimento das Faces encontradas}{21}{section*.13}
-\contentsline {subsubsection}{``Passo a passo'' sobre \textit {Eigenfaces}}{27}{section*.14}
-\contentsline {chapter}{\numberline {3}Trabalhos Correlatos}{31}{chapter.3}
-\contentsline {section}{\numberline {3.1}Projeto CHIL}{31}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}Rastreamento e Localiza\IeC {\c c}\IeC {\~a}o de Pessoas}{31}{subsection.3.1.1}
-\contentsline {subsection}{\numberline {3.1.2}Identifica\IeC {\c c}\IeC {\~a}o das Pessoas}{33}{subsection.3.1.2}
-\contentsline {section}{\numberline {3.2}Identifica\IeC {\c c}\IeC {\~a}o multimodal e localiza\IeC {\c c}\IeC {\~a}o de usu\IeC {\'a}rios em um ambiente inteligente}{34}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Detec\IeC {\c c}\IeC {\~a}o de movimento, Localiza\IeC {\c c}\IeC {\~a}o e Rastreamento}{35}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}Detec\IeC {\c c}\IeC {\~a}o e Reconhecimento Facial}{35}{subsection.3.2.2}
-\contentsline {section}{\numberline {3.3}Captura de contexto din\IeC {\^a}mico e \textit {Arrays} de v\IeC {\'\i }deos distribu\IeC {\'\i }dos para \textit {SmartSpaces}}{36}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Rastreamento, Detec\IeC {\c c}\IeC {\~a}o de faces e Reconhecimento facial}{37}{subsection.3.3.1}
-\contentsline {chapter}{\numberline {4}Problema e Proposta}{39}{chapter.4}
-\contentsline {section}{\numberline {4.1}M\IeC {\'o}dulo de Reconhecimento}{40}{section.4.1}
-\contentsline {section}{\numberline {4.2}M\IeC {\'o}dulo de Rastreamento}{40}{section.4.2}
-\contentsline {section}{\numberline {4.3}Rela\IeC {\c c}\IeC {\~a}o Rastreamento e Reconhecimento}{42}{section.4.3}
-\contentsline {section}{\numberline {4.4}M\IeC {\'o}dulo de Registro}{42}{section.4.4}
-\contentsline {section}{\numberline {4.5}\textit {SmartSpace} Laico}{43}{section.4.5}
-\contentsline {section}{\numberline {4.6}Kinect}{43}{section.4.6}
-\contentsline {chapter}{Refer\^encias}{49}{section*.15}
+\contentsline {subsubsection}{``Passo a passo'' sobre \textit {Eigenfaces}}{26}{section*.14}
+\contentsline {chapter}{\numberline {3}Trabalhos Correlatos}{30}{chapter.3}
+\contentsline {section}{\numberline {3.1}Projeto CHIL}{30}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Rastreamento e Localiza\IeC {\c c}\IeC {\~a}o de Pessoas}{30}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Identifica\IeC {\c c}\IeC {\~a}o das Pessoas}{32}{subsection.3.1.2}
+\contentsline {section}{\numberline {3.2}Identifica\IeC {\c c}\IeC {\~a}o multimodal e localiza\IeC {\c c}\IeC {\~a}o de usu\IeC {\'a}rios em um ambiente inteligente}{33}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Detec\IeC {\c c}\IeC {\~a}o de movimento, Localiza\IeC {\c c}\IeC {\~a}o e Rastreamento}{34}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Detec\IeC {\c c}\IeC {\~a}o e Reconhecimento Facial}{34}{subsection.3.2.2}
+\contentsline {section}{\numberline {3.3}Captura de contexto din\IeC {\^a}mico e \textit {Arrays} de v\IeC {\'\i }deos distribu\IeC {\'\i }dos para \textit {SmartSpaces}}{35}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Rastreamento, Detec\IeC {\c c}\IeC {\~a}o de faces e Reconhecimento facial}{36}{subsection.3.3.1}
+\contentsline {chapter}{\numberline {4}Problema e Proposta}{38}{chapter.4}
+\contentsline {section}{\numberline {4.1}M\IeC {\'o}dulo de Reconhecimento}{39}{section.4.1}
+\contentsline {section}{\numberline {4.2}M\IeC {\'o}dulo de Rastreamento}{39}{section.4.2}
+\contentsline {section}{\numberline {4.3}Rela\IeC {\c c}\IeC {\~a}o Rastreamento e Reconhecimento}{41}{section.4.3}
+\contentsline {section}{\numberline {4.4}M\IeC {\'o}dulo de Registro}{41}{section.4.4}
+\contentsline {section}{\numberline {4.5}\textit {SmartSpace} Laico}{42}{section.4.5}
+\contentsline {section}{\numberline {4.6}Kinect}{42}{section.4.6}
+\contentsline {chapter}{Refer\^encias}{48}{section*.15}
