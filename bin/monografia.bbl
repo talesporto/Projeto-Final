@@ -4,10 +4,26 @@
 How face detection works.
 \newblock {\em SERVO Magazine}, fevereiro 2007.
 
+\bibitem{chilref1}
+A.~Abad, C.~Canton-Ferrer, C.~Segura, J.~Landabaso, Luis, Macho, Du\v{s}an,
+  Casas, J.~Ramon, Hernando, Javier, Pard\`{a}s, Montse, and Climent Nadeu.
+\newblock Upc audio, video and multimodal person tracking systems in the clear
+  evaluation campaign.
+\newblock In {\em Proceedings of the 1st international evaluation conference on
+  Classification of events, activities and relationships}, CLEAR'06, pages
+  93--104, Berlin, Heidelberg, 2007. Springer-Verlag.
+
 \bibitem{gregoryabowd}
 G.~Abowd, C.~Atkeson, and I.~Essa.
 \newblock Ubiquitous smart spaces.
 \newblock {\em Georgia Institute of Technology, College of Computing}, 1998.
+
+\bibitem{chilref2}
+K.~Bernardin, T.~Gehrig, and R.~Stiefelhagen.
+\newblock Multimodal technologies for perception of humans.
+\newblock chapter Multi-level Particle Filter Fusion of Features and Cues for
+  Audio-Visual Person Tracking, pages 70--81. Springer-Verlag, Berlin,
+  Heidelberg, 2008.
 
 \bibitem{saocarlos}
 {\^A}.~R. Bianchini.
@@ -107,6 +123,12 @@ Hong L. and Jain A.
 \newblock Integrating faces and fingerprints for personal identification.
 \newblock {\em IEEE Transactions on Pattern and Machine Intelligence},
   20(12):1295--1307, dezembro 1998.
+
+\bibitem{chilref3}
+O.~Lanz, P.~Chippendale, and R.~Brunelli.
+\newblock Multimodal technologies for perception of humans.
+\newblock chapter An Appearance-Based Particle Filter for Visual Tracking in
+  Smart Rooms, pages 57--69. Springer-Verlag, Berlin, Heidelberg, 2008.
 
 \bibitem{lopes}
 E~.~C. Lopes.
@@ -217,6 +239,20 @@ M.~M. Trivedi, K.~S. Huang, and I.~Mikic.
 \newblock {\em Ieee Transactions On Systems, Man, and Cybernetics---part A:
   Systems and Humans}, 35(1):145 -- 163, janeiro 2005.
 
+\bibitem{chilref5}
+A.~Tyagi, G.~Potamianos, J.~W, Davis, and S.~M. Chu.
+\newblock Fusion of multiple camera views for kernel-based 3d tracking.
+\newblock In {\em Proceedings of the IEEE Workshop on Motion and Video
+  Computing}, pages 1--, Washington, DC, USA, 2007. IEEE Computer Society.
+
+\bibitem{computerschil}
+A.~Waibel, R.~Stiefelhagen, R.~Carlson, J.~R. Casas, J.~Kleindienst, L.~Lamel,
+  O.~Lanz, D.~Mostefa, M.~Omologo, F.~Pianesi, L.~Polymenakos, G.~Potamianos,
+  J.~Soldatos, G.~Sutschet, and J.~Terken.
+\newblock Computers in the human interaction loop.
+\newblock In {\em Handbook of Ambient Intelligence and Smart Environments},
+  pages 1071--1116. 2010.
+
 \bibitem{weiser2}
 M.~Weiser.
 \newblock The world is not a desktop.
@@ -238,5 +274,10 @@ A.~Yilmaz, X.~Li, and M.~Shah.
   Acquired Using Mobile Cameras}.
 \newblock {\em {IEEE Transactions on Pattern Analysis and Machine
   Intelligence}}, 26(11):1531--1536, nov 2004.
+
+\bibitem{chilref4}
+Z.~Zhang, G.~Potamianos, A.~W. Senior, and T.~S. Huang.
+\newblock Joint face and head tracking inside multi-camera smart rooms.
+\newblock In {\em Signal, Image and Video Processing}, pages 163--178, 2007.
 
 \end{thebibliography}
