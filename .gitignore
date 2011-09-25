@@ -1,3 +1,6 @@
+.project
+.texlipse
+monografia.brf
 bin/*.aux
 bin/*.bbl
 bin/*.blg
