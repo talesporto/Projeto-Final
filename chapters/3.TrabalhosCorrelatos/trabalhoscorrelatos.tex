@@ -16,15 +16,15 @@ Eles colaboram entre si no desenvolvimento de serviços que visam ajudar as pess
 
 Dentre os protótipos que foram desenvolvidos no projeto destacam-se um ambiente de trabalho perceptivo e colaborativo e um sistema perceptivo de assistência a um escritório virtual.
 
-O Projeto CHIL utiliza uma combinação de algoritmos monomodais para criar um sistema de rastreamento, identificação e localização multimodal utilizando dados audiovisual das pessoas no ambiente. Do ponto de vista do áudio, é importante mencionar que o Projeto CHIL representa uma das primeiras tentativas de realizar e avaliar sistematicamente rastreamento acústico com uma rede distribuída de microfones. Porém, será focado os algoritmos que utilizam somente dados visuais para realizar tais tarefas.
+O Projeto CHIL utiliza uma combinação de algoritmos monomodais para criar um sistema de rastreamento e identificação multimodal utilizando dados audiovisual das pessoas no ambiente. Do ponto de vista do áudio, é importante mencionar que o Projeto CHIL representa uma das primeiras tentativas de realizar e avaliar sistematicamente rastreamento acústico com uma rede distribuída de microfones. Porém, será focado os algoritmos que utilizam somente dados visuais para realizar tais tarefas.
 
-Como a equipe deste projeto é composta por vários laboratórios, diferentes sistemas de rastreamento, localização e identificação foram desenvolvidos. Contudo, será relatado somente aqueles que se destacaram.
+Referente a localização das pessoas no ambiente, o projeto focou somente na localização das pessoas que ``falam''~\cite{speaker-localization}.
 
-\subsection{Rastreamento e Localização de Pessoas}
+Como a equipe deste projeto é composta por vários laboratórios, diferentes sistemas de rastreamento e identificação foram desenvolvidos. Contudo, será relatado somente aqueles que se destacaram.
 
-A pesquisa sobre rastreamento de pessoas foi focada principalmente no rastreamento de pessoas dentro de um ambiente inteligente. 
+\subsection{Rastreamento de Pessoas}
 
-O objetivo desse monitoramento foi determinar,  de maneira contínua, as coordenadas dos ocupantes tanto na imagem quanto no ambiente. Ou seja, o rastreamento,  no Projeto CHIL, também engloba a localização física das pessoas. Esta abordagem se contrapõe a maioria das pesquisas de rastreamento visual, onde somente as coordenadas na imagem  são estimadas  \textbf{colocar refs aqui}.
+A pesquisa sobre rastreamento de pessoas foi focada principalmente no rastreamento de pessoas dentro de um ambiente inteligente. O rastreamento tinha o objetivo de determinar,  de maneira contínua, as coordenadas dos ocupantes na imagem.
 
 Os sensores utilizados no ambiente inteligente do Projeto CHIL incluem:	
 	\begin{itemize}
@@ -41,24 +41,15 @@ Durante o projeto, muito progresso foi feito. No início, os sistemas eram de um
 Sobre os algoritmos de rastreamento visual, duas abordagens principais foram seguidas pelos vários sistemas de rastreamento desenvolvidos no Projeto CHIL:
 
 	\begin{enumerate}
-		\item uma abordagem baseada em modelos, em que um modelo 3D do objeto rastreado é mantido~\cite{chilref1,chilref2,chilref3}.
+		\item uma abordagem baseada em modelos, em que um modelo 3D do objeto rastreado é mantido renderizando-o nos pontos de vista da camêra.~\cite{chilref1,chilref2,chilref3}.
 		\item  uma abordagem orientada a dados, onde sistemas de rastreamento 2D operam de forma independente sobre os diferentes ângulos de visão das câmeras e os dados do rastreamento pertencentes a um mesmo alvo são coletados no formato de um rastreamento 3D~\cite{chilref4,chilref5}.
 	\end{enumerate}	
 
- Em termos de desempenho, a abordagem baseada em modelos (1) geralmente prevê uma melhor acurácia, mas menos precisão do que a abordagem orientada a dados (2).  O tratamento das oclusões e da associação dos dados dos sistemas de rastreamentos independentes são as desvantagens do modelo orientado a dados. Foi identificado,  nesse projeto, que rastrear rosto em vez de corpos inteiros diminui o impacto desses problemas.
+ Em termos de desempenho, foi observado no projeto que a abordagem baseada em modelos (1) geralmente prevê uma melhor acurácia, mas menos precisão do que a abordagem orientada a dados (2).  O tratamento das oclusões e da associação dos dados dos sistemas de rastreamentos independentes são as desvantagens do modelo orientado a dados. Foi identificado,  nesse projeto, que rastrear rosto em vez de corpos inteiros diminui o impacto desses problemas.
 
- Os sistemas de rastreamento e localização foram amplamente testados utilizando-se dados dos seminários e reuniões do próprio Projeto CHIL.
+ Foi observado que a abordagem baseada em modelo também torna mais fácil incorporar diversos tipos de recursos, como segmentos de primeiro plano, histogramas de cor, etc, aumentando a robustez do rastreamento. Porém, as dificuldades encontradas nesta abordagem se resume na inicialização automática e na atualização dos modelos das pessoas.
 
-
-% Sobre os algoritmos de rastreamento por áudio, três abordagens principais foram seguidas~\cite{chil}:
-	
-	% \begin{enumerate}
-	% 	\item abordagens que dependem do cálculo de um campo de coerência global mais ou menos grosseiro, em que o rastreamento dos picos de correlação é realizada;
-	% 	\item abordagens filtro de partículas, que estima a posição da pessoa que fala através de um conjunto de amostras e medições dos sinais acústicos observados dado a cada amostra hipóteses sobre a posição;
-	% 	\item abordagens que se alimentam dos atrasos de chegada calculados entre os pares microfone como observações para um rastreador probabilístico.
-	% \end{enumerate}
-
-% Sobre os algoritmos de rastreamento por áudio, três abordagens principais foram seguidas. Entre elas, a que teve a melhor performance foi um sistema baseado em um \textit{Joint Probabilistic Data Association Filter}, que mantém o controle de uma série de fontes de áudio, incluindo fontes de ruídos, resolvendo associações dos dados e atualizando o conjunto de posições~\cite{chil}.
+ Os testes dos sistemas de rastreamentos desenvolvidos foram feitos utilizando-se os dados dos seminários do prórpio Projeto CHIL.
 
 % As abordagens de rastreamento por meio de áudio e vídeo foram combinas em um rastreamento multimodal. Esse rastreamento multimodal é, notavelmente, baseado em filtro de partículas uma vez que permitem uma integração flexível de recursos através dos sensores~\cite{chil}.
 

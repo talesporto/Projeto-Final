@@ -4,9 +4,9 @@ The top-level auxiliary file: bin/monografia.aux
 The style file: plain.bst
 Database file #1: bibliografia.bib
 Warning--entry type for "img-strutuctured-light" isn't style-file defined
---line 85 of file bibliografia.bib
+--line 98 of file bibliografia.bib
 Warning--entry type for "kinect" isn't style-file defined
---line 201 of file bibliografia.bib
+--line 214 of file bibliografia.bib
 A bad cross reference---entry "chil"
 refers to entry "DBLP:conf/fgr/2008", which doesn't exist
 A bad cross reference---entry "fall-detection"
@@ -20,46 +20,47 @@ Warning--empty year in artigo-eigenface
 Warning--empty booktitle in chilref3
 Warning--empty year in lopes
 Warning--empty year in milene
+Warning--empty booktitle in speaker-localization
 Warning--empty publisher in computerschil
-You've used 46 entries,
+You've used 47 entries,
             2118 wiz_defined-function locations,
-            763 strings with 11823 characters,
-and the built_in function-call counts, 15326 in all, are:
-= -- 1491
-> -- 762
-< -- 13
-+ -- 308
-- -- 257
-* -- 1092
-:= -- 2591
-add.period$ -- 141
-call.type$ -- 46
-change.case$ -- 264
+            767 strings with 11969 characters,
+and the built_in function-call counts, 15825 in all, are:
+= -- 1542
+> -- 785
+< -- 15
++ -- 317
+- -- 265
+* -- 1128
+:= -- 2665
+add.period$ -- 145
+call.type$ -- 47
+change.case$ -- 271
 chr.to.int$ -- 0
-cite$ -- 54
-duplicate$ -- 575
-empty$ -- 1143
-format.name$ -- 257
-if$ -- 3177
+cite$ -- 56
+duplicate$ -- 597
+empty$ -- 1181
+format.name$ -- 265
+if$ -- 3289
 int.to.chr$ -- 0
-int.to.str$ -- 46
-missing$ -- 39
-newline$ -- 230
-num.names$ -- 92
-pop$ -- 259
+int.to.str$ -- 47
+missing$ -- 40
+newline$ -- 235
+num.names$ -- 94
+pop$ -- 269
 preamble$ -- 1
-purify$ -- 218
+purify$ -- 224
 quote$ -- 0
-skip$ -- 417
+skip$ -- 432
 stack$ -- 0
-substring$ -- 844
-swap$ -- 120
-text.length$ -- 13
+substring$ -- 873
+swap$ -- 128
+text.length$ -- 15
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 182
-warning$ -- 8
-while$ -- 141
-width$ -- 48
-write$ -- 497
+type$ -- 186
+warning$ -- 9
+while$ -- 146
+width$ -- 49
+write$ -- 509
 (There were 2 error messages)

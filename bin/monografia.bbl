@@ -210,6 +210,12 @@ A.~Ali Salah, R.~Morros, J.~Luque, C.~Segura, J.~Hernando, O.~Ambekar,
 \newblock {\em Journal on Multimodal User Interfaces}, 2(2):75--91, setembro
   2008.
 
+\bibitem{speaker-localization}
+C.~Segura, A.~Abad, J.~Hernando, and C.~Nadeu.
+\newblock Multimodal technologies for perception of humans.
+\newblock chapter Multispeaker Localization and Tracking in Intelligent
+  Environments, pages 82--90. Springer-Verlag, Berlin, Heidelberg, 2008.
+
 \bibitem{serby}
 D.~Serby, E.~Koller-Meier, and L.~Van Gool.
 \newblock {Probabilistic Object Tracking Using Multiple Features}.

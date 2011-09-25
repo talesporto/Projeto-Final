@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2011.4.25)  24 SEP 2011 19:23
+This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2011.4.25)  25 SEP 2011 08:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -499,7 +499,7 @@ See the natbib package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.894 ...and\NAT@force@numbers{}\NAT@force@numbers
+l.898 ...and\NAT@force@numbers{}\NAT@force@numbers
                                                   
 ? r
 OK, entering \nonstopmode...
@@ -918,7 +918,7 @@ Cap\'{\i }tulo 3.
 ! Undefined control sequence.
 <recently read> \displaysyle 
                              
-l.73 ... \textit{SmartSpace}. A cada $\displaysyle
+l.64 ... \textit{SmartSpace}. A cada $\displaysyle
                                                    200ms$ imagens das ``caix...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -926,45 +926,45 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-<figuras/3.TrabalhosCorrelatos/chil.png, id=794, 605.26125pt x 456.70625pt>
+<figuras/3.TrabalhosCorrelatos/chil.png, id=796, 605.26125pt x 456.70625pt>
 File: figuras/3.TrabalhosCorrelatos/chil.png Graphic file (type png)
 
 <use figuras/3.TrabalhosCorrelatos/chil.png>
 Package pdftex.def Info: figuras/3.TrabalhosCorrelatos/chil.png used on input l
-ine 77.
+ine 68.
 (pdftex.def)             Requested size: 242.1002pt x 182.67926pt.
  [28 <./figuras/3.TrabalhosCorrelatos/chil.png (PNG copy)>]
-<figuras/3.TrabalhosCorrelatos/upc.png, id=807, 1033.8625pt x 634.37pt>
+<figuras/3.TrabalhosCorrelatos/upc.png, id=809, 1033.8625pt x 634.37pt>
 File: figuras/3.TrabalhosCorrelatos/upc.png Graphic file (type png)
 
 <use figuras/3.TrabalhosCorrelatos/upc.png>
 Package pdftex.def Info: figuras/3.TrabalhosCorrelatos/upc.png used on input li
-ne 101.
+ne 92.
 (pdftex.def)             Requested size: 413.53767pt x 253.7435pt.
  [29 <./figuras/3.TrabalhosCorrelatos/upc.png (PNG copy)>]
-<figuras/3.TrabalhosCorrelatos/workflow.png, id=820, 761.84625pt x 484.81125pt>
+<figuras/3.TrabalhosCorrelatos/workflow.png, id=822, 761.84625pt x 484.81125pt>
 File: figuras/3.TrabalhosCorrelatos/workflow.png Graphic file (type png)
 <use figuras/3.TrabalhosCorrelatos/workflow.png>
 Package pdftex.def Info: figuras/3.TrabalhosCorrelatos/workflow.png used on inp
-ut line 122.
+ut line 113.
 (pdftex.def)             Requested size: 380.9222pt x 242.40503pt.
  [30 <./figuras/3.TrabalhosCorrelatos/workflow.png (PNG copy)>]
-<figuras/3.TrabalhosCorrelatos/micasa_aviary.png, id=833, 1026.83624pt x 585.18
+<figuras/3.TrabalhosCorrelatos/micasa_aviary.png, id=835, 1026.83624pt x 585.18
 625pt>
 File: figuras/3.TrabalhosCorrelatos/micasa_aviary.png Graphic file (type png)
  <use figuras/3.TrabalhosCorrelatos/micasa_aviary.png>
 Package pdftex.def Info: figuras/3.TrabalhosCorrelatos/micasa_aviary.png used o
-n input line 159.
+n input line 150.
 (pdftex.def)             Requested size: 513.41687pt x 292.5924pt.
 
-Overfull \hbox (58.17276pt too wide) in paragraph at lines 159--160
+Overfull \hbox (58.17276pt too wide) in paragraph at lines 150--151
  [] 
  []
 
 ! Undefined control sequence.
 <recently read> \displaysytle 
                               
-l.176 ...os ``vértices'' da sala a $\displaysytle
+l.167 ...os ``vértices'' da sala a $\displaysytle
                                                    1.4m$ acima do chão. Os ...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -973,12 +973,12 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 [31] [32 <./figuras/3.TrabalhosCorrelatos/micasa_aviary.png (PNG copy)>]
-<figuras/3.TrabalhosCorrelatos/facerec.png, id=855, 541.02126pt x 233.87375pt>
+<figuras/3.TrabalhosCorrelatos/facerec.png, id=857, 541.02126pt x 233.87375pt>
 File: figuras/3.TrabalhosCorrelatos/facerec.png Graphic file (type png)
 
 <use figuras/3.TrabalhosCorrelatos/facerec.png>
 Package pdftex.def Info: figuras/3.TrabalhosCorrelatos/facerec.png used on inpu
-t line 200.
+t line 191.
 (pdftex.def)             Requested size: 432.81758pt x 187.09923pt.
 )
 (./chapters/4.ProblemaEProposta/problemaEproposta.tex [33 <./figuras/3.Trabalho
@@ -995,7 +995,7 @@ LaTeX Warning: Reference `sec:viola-jones' on page 35 undefined on input line 2
 LaTeX Warning: Reference `sec:eigenfaces' on page 35 undefined on input line 29
 .
 
-<figuras/4.ProblemaEProposta/reconhecimento.png, id=869, 240.9pt x 180.675pt>
+<figuras/4.ProblemaEProposta/reconhecimento.png, id=871, 240.9pt x 180.675pt>
 File: figuras/4.ProblemaEProposta/reconhecimento.png Graphic file (type png)
 
 <use figuras/4.ProblemaEProposta/reconhecimento.png>
@@ -1020,7 +1020,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 [36 <./figuras/4.ProblemaEProposta/reconhecimento.png>]
-<figuras/4.ProblemaEProposta/esquema-tracker-reco.png, id=889, 313.17pt x 385.4
+<figuras/4.ProblemaEProposta/esquema-tracker-reco.png, id=891, 313.17pt x 385.4
 4pt>
 File: figuras/4.ProblemaEProposta/esquema-tracker-reco.png Graphic file (type p
 ng)
@@ -1033,7 +1033,7 @@ Overfull \hbox (14.50972pt too wide) in paragraph at lines 70--71
  [] 
  []
 
-<figuras/4.ProblemaEProposta/registro.png, id=891, 137.5539pt x 168.3891pt>
+<figuras/4.ProblemaEProposta/registro.png, id=893, 137.5539pt x 168.3891pt>
 File: figuras/4.ProblemaEProposta/registro.png Graphic file (type png)
 
 <use figuras/4.ProblemaEProposta/registro.png>
@@ -1041,7 +1041,7 @@ Package pdftex.def Info: figuras/4.ProblemaEProposta/registro.png used on input
  line 93.
 (pdftex.def)             Requested size: 343.88385pt x 420.97168pt.
  [37]
-<figuras/4.ProblemaEProposta/laico.png, id=903, 581.17125pt x 484.81125pt>
+<figuras/4.ProblemaEProposta/laico.png, id=905, 581.17125pt x 484.81125pt>
 File: figuras/4.ProblemaEProposta/laico.png Graphic file (type png)
 
 <use figuras/4.ProblemaEProposta/laico.png>
@@ -1050,7 +1050,7 @@ ne 116.
 (pdftex.def)             Requested size: 348.70544pt x 290.88899pt.
 
 (./chapters/4.ProblemaEProposta/kinect.tex
-<figuras/2.FundamentacaoTeorica/kinect.jpg, id=905, 765.86125pt x 428.60126pt>
+<figuras/2.FundamentacaoTeorica/kinect.jpg, id=907, 765.86125pt x 428.60126pt>
 File: figuras/2.FundamentacaoTeorica/kinect.jpg Graphic file (type jpg)
 
 <use figuras/2.FundamentacaoTeorica/kinect.jpg>
@@ -1058,7 +1058,7 @@ Package pdftex.def Info: figuras/2.FundamentacaoTeorica/kinect.jpg used on inpu
 t line 8.
 (pdftex.def)             Requested size: 382.92969pt x 214.3001pt.
  [38]
-<figuras/2.FundamentacaoTeorica/kinect_interno.png, id=918, 479.7925pt x 272.01
+<figuras/2.FundamentacaoTeorica/kinect_interno.png, id=920, 479.7925pt x 272.01
 625pt>
 File: figuras/2.FundamentacaoTeorica/kinect_interno.png Graphic file (type png)
 
@@ -1115,13 +1115,13 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 75.
  )
 (\end occurred when \iffalse on line 462 was incomplete) 
 Here is how much of TeX's memory you used:
- 8370 strings out of 493763
- 121733 string characters out of 3144954
- 226183 words of memory out of 3000000
- 11242 multiletter control sequences out of 15000+200000
+ 8377 strings out of 493763
+ 121914 string characters out of 3144954
+ 226199 words of memory out of 3000000
+ 11248 multiletter control sequences out of 15000+200000
  16932 words of font info for 37 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
- 43i,8n,69p,1124b,592s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 43i,8n,69p,1124b,594s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/local/texlive/201
 0/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/local/texlive/2010/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2010/t
@@ -1142,10 +1142,10 @@ lic/cm-super/sfrm1200.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/publi
 c/cm-super/sfrm1440.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/
 cm-super/sfrm2074.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/cm
 -super/sfti1200.pfb>
-Output written on ./bin/monografia.pdf (58 pages, 3717819 bytes).
+Output written on ./bin/monografia.pdf (58 pages, 3718278 bytes).
 PDF statistics:
- 1191 PDF objects out of 1200 (max. 8388607)
- 1056 compressed objects within 11 object streams
- 240 named destinations out of 1000 (max. 500000)
+ 1195 PDF objects out of 1200 (max. 8388607)
+ 1060 compressed objects within 11 object streams
+ 241 named destinations out of 1000 (max. 500000)
  381 words of extra memory for PDF output out of 10000 (max. 10000000)
 

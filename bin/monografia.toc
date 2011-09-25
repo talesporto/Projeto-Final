@@ -19,7 +19,7 @@
 \contentsline {subsubsection}{``Passo a passo'' sobre \textit {Eigenfaces}}{24}{section*.14}
 \contentsline {chapter}{\numberline {3}Trabalhos Correlatos}{26}{chapter.3}
 \contentsline {section}{\numberline {3.1}Projeto CHIL}{26}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}Rastreamento e Localiza\IeC {\c c}\IeC {\~a}o de Pessoas}{27}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.1}Rastreamento de Pessoas}{27}{subsection.3.1.1}
 \contentsline {subsection}{\numberline {3.1.2}Identifica\IeC {\c c}\IeC {\~a}o das Pessoas}{28}{subsection.3.1.2}
 \contentsline {section}{\numberline {3.2}Identifica\IeC {\c c}\IeC {\~a}o multimodal e localiza\IeC {\c c}\IeC {\~a}o de usu\IeC {\'a}rios em um ambiente inteligente}{29}{section.3.2}
 \contentsline {subsection}{\numberline {3.2.1}Detec\IeC {\c c}\IeC {\~a}o de movimento, Localiza\IeC {\c c}\IeC {\~a}o e Rastreamento}{30}{subsection.3.2.1}
