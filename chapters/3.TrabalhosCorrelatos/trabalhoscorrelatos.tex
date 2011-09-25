@@ -58,26 +58,30 @@ Sobre os algoritmos de rastreamento visual, duas abordagens principais foram seg
 \subsection{Identificação das Pessoas}
 
 
-A fim de realizar identificação de forma natural e implícita, os sensores distribuídos no ambiente devem monitorar continuamente o espaço, e captura de dados áudio-visual das pessoas discretamente quando eles aparecem. Ou seja, o sistema de identificação de pessoas
-deve operar em segundo plano, sem necessitar de atenção e cooperação das pessoas. Dependendo da localização de uma pessoa e sua distância dos sensores, os dados recebidos podem variar~\cite{chil}. 
+A fim de realizar identificação de forma natural e implícita, os sensores distribuídos no ambiente devem monitorar continuamente o espaço. Então, o sistema de identificação de pessoas em um ambiente inteligente deve operar em segundo plano, sem necessitar de atenção e cooperação dos usuários. 
 
-Para reconhecimento facial, o sistema utiliza sequências de imagens fornecidas pelas várias câmeras no \textit{SmartSpace}. A cada $\displaysyle 200ms$ imagens das ``caixas delimitadoras das faces'' e posições dos centros dos olhos são fornecidas, como exemplificado na Figura \ref{chil}. As faces, então, são alinhadas utilizando os centros dos olhos ou utilizando as ``caixas delimitadoras das faces''. Para obter robustez contra alguns erros, o sistema gera algumas imagens alinhadas adicionais modificando rótulos dos centros dos olhos ou os rótulos das ``caixas delimitadoras das faces''~\cite{chil}.
+A face foi escolhida por ser uma característica biométrica que permite uma identificação de forma natural e implícita~\ref{sec:biometria}. Com isso, a equipe do Projeto CHIL desenvolveu diferentes sistemas de reconhecimento facial utilizando diferentes algoritmos. 
+
+Na tentativa de realizar o reconhecimento facial das pessoas presentes no ambiente inteligente, vários desafios foram encontrados no Projeto CHIL, como: grande variação da iluminação, sensores com baixa resolução, oclusão visual e dependendo da localização de uma pessoa e sua distância dos sensores, os dados recebidos podem variar.  Além do mais, foi observado que o fato das pessoas possuírem diferentes expressões faciais, cortes de cabelo, maquiagens, entre outros, dificultava ainda mais a tarefa. Mesmo assim, foi notado que o reconhecimento facial podia ser realizado de forma robusta utilizando múltiplos sensores no ambiente.
+
+Como dados, o sistema do Projeto CHIL utiliza sequências de imagens fornecidas pelas várias câmeras no ambiente inteligente. A cada $\displaysyle 200ms$ imagens das caixas delimitadoras das faces (uma maneira de apontar a localização da face na imagem por meio de um enquadramento) e posições dos centros dos olhos são extraídas, como exemplificado na Figura~\ref{chil}, em que no canto inferior direito, pode-se observar a imagem da face extraída. 
+
+As faces, então, são alinhadas utilizando os centros dos olhos ou as caixas delimitadoras das faces. Para obter robustez contra alguns erros, o sistema gera algumas imagens adicionais alinhadas modificando rótulos do centro dos olhos ou os rótulos das caixas delimitadoras das faces.
 
 	\begin{figure}[hbt]
 		\begin{center}
 			\includegraphics[scale=0.4]{figuras/3.TrabalhosCorrelatos/chil.png}
 		\end{center}
-		\caption{Exemplo do sistema de identificação facial do Projeto CHIL. No canto inferior direito, pode-se observar a imagem da face extraída~\cite{chil}.}
+		\caption{Exemplo do sistema de identificação facial do Projeto CHIL~\cite{chil}.}
 		\label{chil}
 	\end{figure}
 
-Uma das abordagens utiliza reconhecimento facial baseado na aparência utilizando transformada discreta de cosseno (DCT). Utiliza modelagem de variação intrapessoal de Gauss para avaliar a probabilidade de que a diferença de um rosto de uma galeria de imagens de faces é de fato intrapessoal. O sistema de reconhecimento utiliza um classificador do ``vizinho'' mais próximo ~\cite{chil}.
 
-Nesse projeto foi observado que selecionando somente as imagens frontais de faces, ao invés das amostras disponíveis, é prejudicial para a performance do sistema de reconhecimento~\cite{chil}.
+O Projeto CHIL testou diferentes abordagens para reconhecimento facial. Uma abordagem realiza reconhecimento baseado em aparência utilizando transformada discreta de cosseno (DCT - \textit{Discrete Cosine Transform})~\cite{chilref6, chilref7}. Abordagens baseadas em PCA também foram testadas, utilizando como medida da distância entre imagens uma versão modificada da distância euclidiana utilizando pesos~\cite{chilref8, chilref9}.  Foi testado também uma abordagem baseada em análise discriminante linear (LDA - \textit{Linear Discrimant Analysis}), mas sem sucesso pois as imagens das faces obtidas não eram linearmente separáveis~\cite{chilref8, chilref9}. 
 
-As decisões obtidas do vários pontos de vista das várias câmeras são combinados por meio de uma regra de soma ponderada. Os pesos são determinado de acordo com a separação dos dois melhores resultados~\cite{chil}.
+Todas as abordagens testadas utilizam um classificador do ``vizinho'' mais próximo e as decisões obtidas do vários pontos de vista das várias câmeras são combinados por meio de uma regra de soma ponderada~\cite{chilref8, chilref9}. 
 
-
+Experimentos realizados no projeto, utilizando os mesmos métodos para extração da face e normalização, mostraram que a abordagem baseada em aparência utilizando DCT foi a melhor. Além disso, foi observado que selecionando somente as imagens frontais de faces, ao invés das amostras disponíveis, é prejudicial para a performance do sistema de reconhecimento. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
