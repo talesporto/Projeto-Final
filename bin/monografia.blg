@@ -4,9 +4,9 @@ The top-level auxiliary file: bin/monografia.aux
 The style file: plain.bst
 Database file #1: bibliografia.bib
 Warning--entry type for "img-strutuctured-light" isn't style-file defined
---line 98 of file bibliografia.bib
+--line 151 of file bibliografia.bib
 Warning--entry type for "kinect" isn't style-file defined
---line 214 of file bibliografia.bib
+--line 267 of file bibliografia.bib
 A bad cross reference---entry "chil"
 refers to entry "DBLP:conf/fgr/2008", which doesn't exist
 A bad cross reference---entry "fall-detection"
@@ -17,50 +17,51 @@ Warning--to sort, need author or key in servodetection
 Warning--empty author in servodetection
 Warning--empty booktitle in chilref2
 Warning--empty year in artigo-eigenface
+Warning--empty booktitle in chilref6
 Warning--empty booktitle in chilref3
 Warning--empty year in lopes
 Warning--empty year in milene
 Warning--empty booktitle in speaker-localization
 Warning--empty publisher in computerschil
-You've used 47 entries,
+You've used 51 entries,
             2118 wiz_defined-function locations,
-            767 strings with 11969 characters,
-and the built_in function-call counts, 15825 in all, are:
-= -- 1542
-> -- 785
-< -- 15
-+ -- 317
-- -- 265
-* -- 1128
-:= -- 2665
-add.period$ -- 145
-call.type$ -- 47
-change.case$ -- 271
+            787 strings with 12731 characters,
+and the built_in function-call counts, 17705 in all, are:
+= -- 1750
+> -- 852
+< -- 20
++ -- 344
+- -- 287
+* -- 1246
+:= -- 2938
+add.period$ -- 161
+call.type$ -- 51
+change.case$ -- 294
 chr.to.int$ -- 0
-cite$ -- 56
-duplicate$ -- 597
-empty$ -- 1181
-format.name$ -- 265
-if$ -- 3289
+cite$ -- 61
+duplicate$ -- 686
+empty$ -- 1331
+format.name$ -- 287
+if$ -- 3725
 int.to.chr$ -- 0
-int.to.str$ -- 47
-missing$ -- 40
-newline$ -- 235
-num.names$ -- 94
-pop$ -- 269
+int.to.str$ -- 51
+missing$ -- 44
+newline$ -- 255
+num.names$ -- 102
+pop$ -- 295
 preamble$ -- 1
-purify$ -- 224
+purify$ -- 243
 quote$ -- 0
-skip$ -- 432
+skip$ -- 503
 stack$ -- 0
-substring$ -- 873
-swap$ -- 128
-text.length$ -- 15
+substring$ -- 1000
+swap$ -- 164
+text.length$ -- 20
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 186
-warning$ -- 9
-while$ -- 146
-width$ -- 49
-write$ -- 509
+type$ -- 202
+warning$ -- 10
+while$ -- 166
+width$ -- 53
+write$ -- 563
 (There were 2 error messages)

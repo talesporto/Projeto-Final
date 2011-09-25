@@ -20,9 +20,9 @@
 \contentsline {figure}{\numberline {2.15}{\ignorespaces Imagens das faces de dois indiv\IeC {\'\i }duos. A face de cada indiv\IeC {\'\i }duo \IeC {\'e} apresentada em quatro diferentes condi\IeC {\c c}\IeC {\~o}es de ilumina\IeC {\c c}\IeC {\~a}o. A variabilidade devido \IeC {\`a} ilumina\IeC {\c c}\IeC {\~a}o aqui \IeC {\'e} maior do que a variabilidade entre os indiv\IeC {\'\i }duos. \textit {Eigenfaces} tende a confundir as pessoas quando os efeitos de ilumina\IeC {\c c}\IeC {\~a}o s\IeC {\~a}o muito fortes \cite {hewitt}.}}{24}{figure.2.15}
 \contentsline {figure}{\numberline {2.16}{\ignorespaces Como as distribui\IeC {\c c}\IeC {\~o}es de dados afetam o reconhecimento com \textit {Eigenfaces}. Topo: O melhor cen\IeC {\'a}rio poss\IeC {\'\i }vel - pontos de dados para cada pessoa bem separados. Meio: O pior cen\IeC {\'a}rio - a variabilidade entre as imagens das faces de cada individuo \IeC {\'e} maior do que a variabilidade entre os indiv\IeC {\'\i }duos. Embaixo: um cen\IeC {\'a}rio realista - separa\IeC {\c c}\IeC {\~a}o razo\IeC {\'a}vel, com alguma sobreposi\IeC {\c c}\IeC {\~a}o \cite {hewitt}.}}{25}{figure.2.16}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Exemplo do sistema de identifica\IeC {\c c}\IeC {\~a}o facial do Projeto CHIL. No canto inferior direito, pode-se observar a imagem da face extra\IeC {\'\i }da~\cite {chil}.}}{28}{figure.3.1}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces A configura\IeC {\c c}\IeC {\~a}o do \textit {SmartSpace}~\cite {salah}.}}{29}{figure.3.2}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces \textit {Workflow} da informa\IeC {\c c}\IeC {\~a}o na arquitetura do \textit {SmartSpace}~\cite {salah}.}}{30}{figure.3.3}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Exemplo do sistema de identifica\IeC {\c c}\IeC {\~a}o facial do Projeto CHIL~\cite {chil}.}}{28}{figure.3.1}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces A configura\IeC {\c c}\IeC {\~a}o do \textit {SmartSpace}~\cite {salah}.}}{30}{figure.3.2}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces \textit {Workflow} da informa\IeC {\c c}\IeC {\~a}o na arquitetura do \textit {SmartSpace}~\cite {salah}.}}{31}{figure.3.3}
 \contentsline {figure}{\numberline {3.4}{\ignorespaces Representa\IeC {\c c}\IeC {\~a}o dos \textit {SmartSpaces} MICASA e AVIARY~\cite {trivedi}.}}{32}{figure.3.4}
 \contentsline {figure}{\numberline {3.5}{\ignorespaces M\IeC {\'e}todo de detec\IeC {\c c}\IeC {\~a}o e reconhecimento facial~\cite {trivedi}.}}{33}{figure.3.5}
 \addvspace {10\p@ }

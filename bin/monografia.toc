@@ -25,7 +25,7 @@
 \contentsline {subsection}{\numberline {3.2.1}Detec\IeC {\c c}\IeC {\~a}o de movimento, Localiza\IeC {\c c}\IeC {\~a}o e Rastreamento}{30}{subsection.3.2.1}
 \contentsline {subsection}{\numberline {3.2.2}Detec\IeC {\c c}\IeC {\~a}o e Reconhecimento Facial}{30}{subsection.3.2.2}
 \contentsline {section}{\numberline {3.3}Captura de contexto din\IeC {\^a}mico e \textit {Arrays} de v\IeC {\'\i }deos distribu\IeC {\'\i }dos para \textit {SmartSpaces}}{31}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Rastreamento, Detec\IeC {\c c}\IeC {\~a}o de faces e Reconhecimento facial}{32}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.1}Rastreamento, Detec\IeC {\c c}\IeC {\~a}o de faces e Reconhecimento facial}{33}{subsection.3.3.1}
 \contentsline {chapter}{\numberline {4}Problema e Proposta}{34}{chapter.4}
 \contentsline {section}{\numberline {4.1}M\IeC {\'o}dulo de Reconhecimento}{35}{section.4.1}
 \contentsline {section}{\numberline {4.2}M\IeC {\'o}dulo de Rastreamento}{35}{section.4.2}
