@@ -1,0 +1,10 @@
+bin/*.aux
+bin/*.bbl
+bin/*.blg
+bin/*.brf
+bin/*.lof
+bin/*.log
+bin/*.lot
+bin/*.out
+bin/*.toc
+
