@@ -85,21 +85,23 @@ Experimentos realizados no projeto, utilizando os mesmos métodos para extraçã
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Identificação multimodal e localização de usuários em um ambiente inteligente}
+\section{UPC Smart Room}
 
-Esse trabalho propõe um sistema que realiza detecção de movimento, rastreamento de pessoas, reconhecimento facial, identificação baseado em características, localização baseada em áudio, módulos de identificação baseado em áudio, e fusão de todas essas informações utilizando filtro de partículas para obter um sistema robusto de identificação e localização. O sistema foi projetado para operar de uma maneira completamente automática, sem intervenção do usuário~\cite{salah}.
+Esse projeto~\cite{salah} propõe um sistema que realiza detecção de movimento, rastreamento de pessoas, reconhecimento facial, identificação baseado em características, localização baseada em áudio, módulos de identificação baseado em áudio, e fusão de todas essas informações utilizando filtro de partículas para obter um sistema robusto de identificação e localização. O sistema foi projetado para operar de uma maneira completamente automática, sem intervenção do usuário.
 
-Os \textit{streams} de dados são processados com ajuda de um \textit{middleware} servidor-cliente genérico chamado \textit{SmartFlow}, o que resulta em uma arquitetura portável para diferentes plataformas. Este \textit{middleware} permite transporte de grande quantidade de dados de sensores para algoritmos de reconhecimento em nós distribuídos na rede ~\cite{salah}.
+O projeto conecta diferentes métodos de rastreamento e reconhecimento para prover serviços de reconhecimento e rastreamento multimodal no ambiente inteligente chamado de UPC.  A Figura \ref{workflow} mostra o fluxo das informações no sistema multimodal. O objetivo do sistema é identificar cada usuário ao entrar pela porta e rastreá-lo no ambiente. 
+
+Os \textit{streams} de dados são processados com ajuda de um \textit{middleware} servidor-cliente genérico chamado \textit{SmartFlow}, o que resulta em uma arquitetura portável para diferentes plataformas. Este \textit{middleware} permite transporte de grande quantidade de dados de sensores para algoritmos de reconhecimento em nós distribuídos na rede.
 
 	\begin{figure}[hbt]
 		\begin{center}
 			\includegraphics[scale=0.4]{figuras/3.TrabalhosCorrelatos/upc.png}
 		\end{center}
-		\caption{A configuração do \textit{SmartSpace}~\cite{salah}.}
+		\caption{A configuração do ambiente inteligente UPC~\cite{salah}.}
 		\label{upc}
 	\end{figure}
 
-Os sensores utilizados e as condições do \textit{SmartSpace} deste projeto são descritos pela Figura \ref{upc}. Os seguintes sensores foram utilizados~\cite{salah}:
+Os sensores utilizados e as condições do ambiente inteligente UPC deste projeto são descritos pela Figura \ref{upc}. Os seguintes sensores foram utilizados:
 
 	\begin{itemize}
 		\item quatro câmeras nos cantos da sala (rotuladas como Cam1 a Cam4 na Figura \ref{upc});
@@ -110,23 +112,32 @@ Os sensores utilizados e as condições do \textit{SmartSpace} deste projeto sã
 		\item oito microfones no teto;
 	\end{itemize}
 
-O projeto conecta diferentes métodos de rastreamento e reconhecimento para prover serviços de recohecimento e rastreamento multimodal no \textit{SmartSpace}. A Figura \ref{workflow} o fluxo de informação no sistema multimodal. O objetivo do sistema é identificar cada usuário ao entrar pela porta e rastreá-lo no ambiente. Para ter um sistema robusto que rastreia e identifica todas as pessoas ao mesmo tempo, utilizaram uma abordagem multimodal~\cite{salah}.
 
 \begin{figure}[hbt]
 		\begin{center}
 			\includegraphics[scale=0.5]{figuras/3.TrabalhosCorrelatos/workflow.png}
 		\end{center}
-		\caption{\textit{Workflow} da informação na arquitetura do \textit{SmartSpace}~\cite{salah}.}
+		\caption{\textit{Workflow} da informação na arquitetura do ambiente inteligente UPC~\cite{salah}.}
 		\label{workflow}
 	\end{figure}
 
-As câmeras no sistema são responsáveis pela detecção de movimento, rastreamento, detecção e reconhecimento facial que são as funcionalidades que nos interessam.
+As imagens coletadas pelas câmeras no sistema são utilizadas para detecção de movimento, rastreamento, detecção e reconhecimento facial e serão analisadas a seguir. Como mencionado, o sistema do projeto também promove localização dos usuários no ambiente, porém utiliza amostras de áudio como dados de entrada e por isso não será analisado.
 
-\subsection{Detecção de movimento, Localização e Rastreamento}
+\subsection{Detecção de movimento e Rastreamento}
 
-A detecção de movimento tenta separar o ``primeiro plano'' do ``fundo''para o seu funcionamento. O método utilizado é baseado na detecção de objetos em movimento sob a suposição que imagens em uma cena sem objetos em movimento mostra regularidades, que pode ser modelada utilizando métodos estáticos. O conjunto de treinamento é construído por sequências pequenas de gravações \textit{offline} feitas da sala vazia~\cite{salah}.
+A detecção de movimento utilizada tenta separar o ``primeiro plano'' do ``fundo'' para o seu funcionamento. O método que o projeto utiliza é baseado na detecção de objetos em movimento sob a suposição que imagens em uma cena sem objetos em movimento mostra regularidades, que podem ser modeladas utilizando métodos estáticos. O conjunto de treinamento é construído por sequências pequenas de gravações \textit{offline} feitas da sala vazia.
 
-Para localização e rastreamento foi utilizado a abordagem de um mapa de ocupação probabilística (\textit{probabilistic occupancy map} - POM) simplificado para ambientes internos, onde as trajetórias de movimentos são curtas e menos frequentes quando comparadas com trajetórias em ambientes externos~\cite{salah}.
+Para realizar o rastreamento foi utilizado a abordagem de um mapa de ocupação probabilística (\textit{probabilistic occupancy map} - POM)~\cite{pom} simplificado para ambientes internos, onde as trajetórias de movimentos são curtas e menos frequentes quando comparadas com trajetórias em ambientes externos. Somente as quatro câmeras nos cantos são utilizadas.
+
+Nesta abordagem, o mapa de ocupação é utilizado para projetar a imagem de um esboço de uma pessoa (um retângulo simples) em cada visão das câmeras.  As sobreposições dos esboços e as detecções de movimento na imagem entre as várias câmeras indicam a presença de uma pessoa. A Figura~\ref{fig:pom} ilustra a distribuição da probabilidade de ocupação produzida pelo algoritmo. 
+
+\begin{figure}[hbt]
+		\begin{center}
+			\includegraphics[scale=0.5]{figuras/3.TrabalhosCorrelatos/pom.png}
+		\end{center}
+		\caption{Mapa de ocupação probabilística. Adaptada de~\cite{salah}.}
+		\label{fig:pom}
+	\end{figure}
 
 \subsection{Detecção e Reconhecimento Facial}
 
