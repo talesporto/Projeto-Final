@@ -49,11 +49,20 @@
 		\label{diferencailuminacao}
 	\end{figure}
 
-Na Figura \ref{diferencailuminacao}, temos um exemplo de como uma mesma pessoa, com a mesma expressão facial, vista do mesmo ponto de vista, pode parecer drasticamente diferente quando as fontes de luz possuem diferentes direções~\cite{belhumeur}.
-
-No contexto de identificação, o reconhecimento facial se resume no reconhecimento de um ``retrato'' frontal, estático e controlado. Estático pois os ``retratos'' utilizados nada mais são que imagens, podendo ser tanto de intensidade quanto de profundidade e controlado pois a iluminação, o fundo, a resolução dos dispositivos de aquisição e a distância entre eles e as faces são essencialmente fixas durante o processo de aquisição da imagem~\cite{hong}.
-
-Basicamente, o processo de reconhecimento facial pode ser divido em duas tarefas principais~\cite{hong}:
+	Na Figura \ref{diferencailuminacao}, temos um exemplo de como uma mesma pessoa,
+	com a mesma expressão facial, vista do mesmo ponto de vista, pode parecer
+	drasticamente diferente quando as fontes de luz possuem diferentes
+	direções~\cite{belhumeur}.
+	
+	No contexto de identificação, o reconhecimento facial se resume no
+	reconhecimento de um ``retrato'' frontal, estático e controlado. Estático pois
+	os ``retratos'' utilizados nada mais são que imagens, podendo ser tanto de
+	intensidade quanto de profundidade e controlado pois a iluminação, o fundo, a
+	resolução dos dispositivos de aquisição e a distância entre eles e as faces são
+	essencialmente fixas durante o processo de aquisição da imagem~\cite{hong}.
+	
+	Basicamente, o processo de reconhecimento facial pode ser divido em duas tarefas
+	principais~\cite{hong}:
 
 	\begin{enumerate}
 		\item Detecção de faces em imagens;
@@ -62,19 +71,19 @@ Basicamente, o processo de reconhecimento facial pode ser divido em duas tarefas
 
 % ###################################################################################################################
 
-\subsubsection{Detecção de Faces em imagens}
+\subsubsection{Detecção de faces em imagens}
 	
-A primeira etapa para o reconhecimento de faces é a detecção de um rosto, e a
-partir daí a comparação do mesmo com modelos conhecidos pelo sistema~\cite{hong,
-oliveira}. Em um sistema de reconhecimento facial, tanto o tempo de resposta
-quanto a confiabilidade desta etapa influenciam diretamente no desempenho e o
-emprego deste sistema~\cite{oliveira}.
-
-A detecção de faces é definida como o processo que determina a existência ou não
-de faces em uma imagem e uma vez encontrada alguma face, sua localização deve
-ser apontada através de um enquadramento ou através de suas coordenadas dentro
-da imagem~\cite{oliveira}. A Figura \ref{enquadramentoRosto} representa um
-exemplo da detecção de uma face em uma imagem.
+	A primeira etapa para o reconhecimento de faces é a detecção de um rosto, e a
+	partir daí a comparação do mesmo com modelos conhecidos pelo sistema~\cite{hong,
+	oliveira}. Em um sistema de reconhecimento facial, tanto o tempo de resposta
+	quanto a confiabilidade desta etapa influenciam diretamente no desempenho e o
+	emprego deste sistema~\cite{oliveira}.
+	
+	A detecção de faces é definida como o processo que determina a existência ou não
+	de faces em uma imagem e uma vez encontrada alguma face, sua localização deve
+	ser apontada através de um enquadramento ou através de suas coordenadas dentro
+	da imagem~\cite{oliveira}. A Figura \ref{enquadramentoRosto} representa um
+	exemplo da detecção de uma face em uma imagem.
 
 	\begin{figure}[H]
 		\begin{center}
@@ -84,7 +93,8 @@ exemplo da detecção de uma face em uma imagem.
 		\label{enquadramentoRosto}
 	\end{figure}
 
-O processo de detecção de faces geralmente é dificultado pelas seguintes razões mostradas a seguir:
+	O processo de detecção de faces geralmente é dificultado pelas seguintes razões
+	mostradas a seguir:
 
 	\begin{enumerate}
 		\item \textbf{Pose}: as imagens de uma face podem variar de acordo com a posição relativa entre a câmera e a face (frontal, 45 graus, perfil, ``de cabeça para baixo''), e com isso algumas características da face, como olhos e nariz, podem ficar parcialmente ou totalmente ocultadas~\cite{yang}.
