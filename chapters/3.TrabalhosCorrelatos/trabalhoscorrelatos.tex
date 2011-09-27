@@ -77,7 +77,7 @@ As faces, então, são alinhadas utilizando os centros dos olhos ou as caixas de
 	\end{figure}
 
 
-O Projeto CHIL testou diferentes abordagens para reconhecimento facial. Uma abordagem realiza reconhecimento baseado em aparência utilizando transformada discreta de cosseno (DCT - \textit{Discrete Cosine Transform})~\cite{chilref6, chilref7}. Abordagens baseadas em PCA também foram testadas, utilizando como medida da distância entre imagens uma versão modificada da distância euclidiana utilizando pesos~\cite{chilref8, chilref9}.  Foi testado também uma abordagem baseada em análise discriminante linear (LDA - \textit{Linear Discrimant Analysis}), mas sem sucesso pois as imagens das faces obtidas não eram linearmente separáveis~\cite{chilref8, chilref9}. 
+O Projeto CHIL testou diferentes abordagens para reconhecimento facial. Uma delas realiza reconhecimento baseado em aparência utilizando transformada discreta de cosseno (DCT - \textit{Discrete Cosine Transform})~\cite{chilref6, chilref7}. Abordagens baseadas em PCA também foram testadas, utilizando como medida da distância entre imagens uma versão modificada da distância euclidiana utilizando pesos~\cite{chilref8, chilref9}.  Foi testado também uma abordagem baseada em análise discriminante linear (LDA - \textit{Linear Discrimant Analysis}), mas sem sucesso pois as imagens das faces obtidas não eram linearmente separáveis~\cite{chilref8, chilref9}. 
 
 Todas as abordagens testadas utilizam um classificador do ``vizinho'' mais próximo e as decisões obtidas do vários pontos de vista das várias câmeras são combinados por meio de uma regra de soma ponderada~\cite{chilref8, chilref9}. 
 
@@ -85,21 +85,23 @@ Experimentos realizados no projeto, utilizando os mesmos métodos para extraçã
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Identificação multimodal e localização de usuários em um ambiente inteligente}
+\section{UPC Smart Room}
 
-Esse trabalho propõe um sistema que realiza detecção de movimento, rastreamento de pessoas, reconhecimento facial, identificação baseado em características, localização baseada em áudio, módulos de identificação baseado em áudio, e fusão de todas essas informações utilizando filtro de partículas para obter um sistema robusto de identificação e localização. O sistema foi projetado para operar de uma maneira completamente automática, sem intervenção do usuário~\cite{salah}.
+Esse projeto~\cite{salah} propõe um sistema que realiza detecção de movimento, rastreamento de pessoas, reconhecimento facial, identificação baseado em características, localização baseada em áudio, módulos de identificação baseado em áudio, e fusão de todas essas informações utilizando filtro de partículas para obter um sistema robusto de identificação e localização. O sistema foi projetado para operar de uma maneira completamente automática, sem intervenção do usuário.
 
-Os \textit{streams} de dados são processados com ajuda de um \textit{middleware} servidor-cliente genérico chamado \textit{SmartFlow}, o que resulta em uma arquitetura portável para diferentes plataformas. Este \textit{middleware} permite transporte de grande quantidade de dados de sensores para algoritmos de reconhecimento em nós distribuídos na rede ~\cite{salah}.
+O projeto conecta diferentes métodos de rastreamento e reconhecimento para prover serviços de reconhecimento e rastreamento multimodal no ambiente inteligente chamado de UPC.  A Figura \ref{workflow} mostra o fluxo das informações no sistema multimodal. O objetivo do sistema é identificar cada usuário ao entrar pela porta e rastreá-lo no ambiente. 
+
+Os \textit{streams} de dados são processados com ajuda de um \textit{middleware} servidor-cliente genérico chamado \textit{SmartFlow}, o que resulta em uma arquitetura portável para diferentes plataformas. Este \textit{middleware} permite transporte de grande quantidade de dados de sensores para algoritmos de reconhecimento em nós distribuídos na rede.
 
 	\begin{figure}[hbt]
 		\begin{center}
 			\includegraphics[scale=0.4]{figuras/3.TrabalhosCorrelatos/upc.png}
 		\end{center}
-		\caption{A configuração do \textit{SmartSpace}~\cite{salah}.}
+		\caption{A configuração do ambiente inteligente UPC~\cite{salah}.}
 		\label{upc}
 	\end{figure}
 
-Os sensores utilizados e as condições do \textit{SmartSpace} deste projeto são descritos pela Figura \ref{upc}. Os seguintes sensores foram utilizados~\cite{salah}:
+Os sensores utilizados e as condições do ambiente inteligente UPC deste projeto são descritos pela Figura \ref{upc}. Os seguintes sensores foram utilizados:
 
 	\begin{itemize}
 		\item quatro câmeras nos cantos da sala (rotuladas como Cam1 a Cam4 na Figura \ref{upc});
@@ -110,32 +112,44 @@ Os sensores utilizados e as condições do \textit{SmartSpace} deste projeto sã
 		\item oito microfones no teto;
 	\end{itemize}
 
-O projeto conecta diferentes métodos de rastreamento e reconhecimento para prover serviços de recohecimento e rastreamento multimodal no \textit{SmartSpace}. A Figura \ref{workflow} o fluxo de informação no sistema multimodal. O objetivo do sistema é identificar cada usuário ao entrar pela porta e rastreá-lo no ambiente. Para ter um sistema robusto que rastreia e identifica todas as pessoas ao mesmo tempo, utilizaram uma abordagem multimodal~\cite{salah}.
 
 \begin{figure}[hbt]
 		\begin{center}
 			\includegraphics[scale=0.5]{figuras/3.TrabalhosCorrelatos/workflow.png}
 		\end{center}
-		\caption{\textit{Workflow} da informação na arquitetura do \textit{SmartSpace}~\cite{salah}.}
+		\caption{\textit{Workflow} da informação na arquitetura do ambiente inteligente UPC~\cite{salah}.}
 		\label{workflow}
 	\end{figure}
 
-As câmeras no sistema são responsáveis pela detecção de movimento, rastreamento, detecção e reconhecimento facial que são as funcionalidades que nos interessam.
+As imagens coletadas pelas câmeras no sistema são utilizadas para detecção de movimento, rastreamento, detecção e reconhecimento facial e serão analisadas a seguir. Como mencionado, o sistema do projeto também promove localização dos usuários no ambiente, porém utiliza amostras de áudio como dados de entrada e por isso não será analisado.
 
-\subsection{Detecção de movimento, Localização e Rastreamento}
+\subsection{Detecção de movimento e Rastreamento}
 
-A detecção de movimento tenta separar o ``primeiro plano'' do ``fundo''para o seu funcionamento. O método utilizado é baseado na detecção de objetos em movimento sob a suposição que imagens em uma cena sem objetos em movimento mostra regularidades, que pode ser modelada utilizando métodos estáticos. O conjunto de treinamento é construído por sequências pequenas de gravações \textit{offline} feitas da sala vazia~\cite{salah}.
+A detecção de movimento utilizada tenta separar o ``primeiro plano'' do ``fundo'' para o seu funcionamento. O método que o projeto utiliza é baseado na detecção de objetos em movimento sob a suposição que imagens em uma cena sem objetos em movimento mostra regularidades, que podem ser modeladas utilizando métodos estáticos. O conjunto de treinamento é construído por sequências pequenas de gravações \textit{offline} feitas da sala vazia.
 
-Para localização e rastreamento foi utilizado a abordagem de um mapa de ocupação probabilística (\textit{probabilistic occupancy map} - POM) simplificado para ambientes internos, onde as trajetórias de movimentos são curtas e menos frequentes quando comparadas com trajetórias em ambientes externos~\cite{salah}.
+Para realizar o rastreamento foi utilizado a abordagem de um mapa de ocupação probabilística (\textit{probabilistic occupancy map} - POM)~\cite{pom} simplificado para ambientes internos, onde as trajetórias de movimentos são curtas e menos frequentes quando comparadas com trajetórias em ambientes externos. Somente as quatro câmeras nos cantos são utilizadas.
+
+Nesta abordagem, o mapa de ocupação é utilizado para projetar a imagem de um esboço de uma pessoa (um retângulo simples) em cada visão das câmeras.  As sobreposições entre os esboços e as detecções de movimento na imagem entre as várias câmeras indicam a presença de uma pessoa. A Figura~\ref{fig:pom} ilustra a distribuição da probabilidade de ocupação produzida pelo algoritmo. 
+
+\begin{figure}[hbt]
+		\begin{center}
+			\includegraphics[scale=0.5]{figuras/3.TrabalhosCorrelatos/pom.png}
+		\end{center}
+		\caption{Mapa de ocupação probabilística. Adaptada de~\cite{salah}.}
+		\label{fig:pom}
+	\end{figure}
 
 \subsection{Detecção e Reconhecimento Facial}
 
-A detecção de movimento é feita utilizando o método \textit{Viola-Jones} já descrito anteriormente utilizando a biblioteca \textit{OpenCV}. 
+A detecção de face utilizada no projeto é realizada utilizando o método \textit{Viola-Jones}~\ref{ref:viola-jones} utilizando a biblioteca \textit{OpenCV}. Somente a câmera que está apontada para a porta é utilizada, pois esta é a única que fornece imagens em uma qualidade necessária. As outras câmeras, fornecem imagens em baixa resolução e pequenas demais.  
 
-Para realizar o reconhecimento facial utiliza uma técnica que aproveita a vantagem que o ambiente é constantemente monitorado e combina a informação de várias imagens para realizar o reconhecimento. As imagens das faces são fornecidas pelo módulo de detecção.
-Para cada sequência de imagens, as faces de um mesmo indivíduo são agrupadas. Então, para cada grupo, o sistema compara as imagens com a galeria de imagens~\cite{salah}. 
+O módulo de detecção, pela maneira que foi projetado, só detecta faces frontais, em que os dois olhos, o nariz e a boca são visíveis. Como resultado da detecção de face, é retornada uma imagem contendo uma caixa delimitadora da face detectada.
 
-Uma abordagem baseada em PCA (\textit{Principal Component Analisys}) foi utilizado para comparação entre as imagens.
+O reconhecimento facial no ambiente inteligente UPC é realizado utilizando uma técnica que aproveita a vantagem que o ambiente é constantemente monitorado e combina a informação de várias imagens para realizar o reconhecimento.  Imagens que são fornecidas pelo módulo de detecção.
+
+Para cada sequência de imagens, as faces de um mesmo indivíduo são agrupadas. Então, para cada grupo, o sistema compara as imagens com a galeria de imagens. Para cada grupo de imagens, as decisões individuais são combinadas em uma decisão única para o grupo.
+
+Uma abordagem baseada em PCA (\textit{Principal Component Analisys}) foi utilizada para comparação entre as imagens, pois possui a menor complexidade computacional necessária para aplicações em tempo real~\cite{salah}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
