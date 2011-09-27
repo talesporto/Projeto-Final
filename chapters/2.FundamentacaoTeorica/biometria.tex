@@ -1,6 +1,13 @@
 \subsection{Biometria}
 \label{sec:biometria}
-Biometria é uma tecnologia utilizada para identificação de um indivíduo baseado em suas características físicas ou comportamentais para realizar a identificação e, por isso, tem a capacidade de diferenciar entre um indivíduo legítimo de um impostor \cite{hong}. As características físicas estão relacionadas a composição do corpo humano e seu formato e as comportamentais estão relacionadas a forma como o corpo humano faz algo \cite{drovetto}. A figura \ref{caracteristicasBiometricas} contém alguns exemplos desses dois tipos diferentes de características biométricas.
+	Biometria é uma tecnologia utilizada para identificação de um indivíduo baseado
+	em suas características físicas ou comportamentais para realizar a identificação
+	e, por isso, tem a capacidade de diferenciar entre um indivíduo legítimo de um
+	impostor \cite{hong}. As características físicas estão relacionadas a composição
+	do corpo humano e seu formato e as comportamentais estão relacionadas a forma
+	como o corpo humano faz algo \cite{drovetto}. A figura
+	\ref{caracteristicasBiometricas} contém alguns exemplos desses dois tipos
+	diferentes de características biométricas.A
 
 	\begin{figure}[H]
 		\begin{center}
@@ -11,7 +18,8 @@ Biometria é uma tecnologia utilizada para identificação de um indivíduo base
 	\end{figure}
 
 
-Teoricamente, qualquer característica física/comportamental pode ser utilizada para identificação caso siga alguns dos seguintes requisitos \cite{milene}: 
+	Teoricamente, qualquer característica física/comportamental pode ser utilizada
+	para identificação caso siga alguns dos seguintes requisitos \cite{milene}:
 
 	\begin{enumerate}
 		\item \textbf{universalidade}: qualquer pessoa comum pode ser avaliada sobre essa característica;
@@ -20,7 +28,7 @@ Teoricamente, qualquer característica física/comportamental pode ser utilizada
 		\item \textbf{exigibilidade}: pode ser mensurada quantitativamente;
 	\end{enumerate}
 
-Porém, na prática também são considerados outros requisitos \cite{milene}:
+	Porém, na prática também são considerados outros requisitos \cite{milene}:
 
 	\begin{enumerate}
 		\item \textbf{desempenho}: o processo de identificação deve apresentar um resultado aceitável;
@@ -28,15 +36,16 @@ Porém, na prática também são considerados outros requisitos \cite{milene}:
 		\item \textbf{evasão}: refere-se a facilidade de ser adulterado;
 	\end{enumerate}
 
-São várias as vantagens que os sistemas biométricos têm em relação aos sistemas convencionais. Listamos as vantagens principais \cite{drovetto}:
-	
+	São várias as vantagens que os sistemas biométricos têm em relação aos sistemas
+	convencionais. Listamos as vantagens principais \cite{drovetto}:
+		
 	\begin{itemize}
 		\item características biométricas não podem ser perdidas ou esquecidas;
 		\item características biométricas são difíceis de serem copiadas, compartilhadas e distribuídas;
 		\item os sistemas biométricos necessitam que a pessoa esteja presente no local da autenticação;
 	\end{itemize}
 
-Na prática um sistema biométrico deve ser capaz de \cite{hong}:
+	Na prática um sistema biométrico deve ser capaz de \cite{hong}:
 		
 	\begin{enumerate}
 		\item atingir uma acurácia aceitável e com uma velocidade razoável;
@@ -44,7 +53,13 @@ Na prática um sistema biométrico deve ser capaz de \cite{hong}:
 		\item ser suficientemente robusto para métodos fraudulentos;
 	\end{enumerate}
 
-Novas técnicas de reconhecimento por meio de face, íris, retina e voz, entre outras, têm sido abordadas para aplicações em sistemas de reconhecimento automático \cite{bolle,saocarlos}. Das nove características utilizadas atualmente a face é uma das mais populares \cite{milene}. Nas tabelas \ref{tabelaRequisitosTeoricos} e \ref{tabelaRequisitosPraticos} são mostradas as noves características e seus respectivos comportamentos baseados nos requisitos mencionados acima.
+	Novas técnicas de reconhecimento por meio de face, íris, retina e voz, entre
+	outras, têm sido abordadas para aplicações em sistemas de reconhecimento
+	automático \cite{bolle,saocarlos}. Das nove características utilizadas
+	atualmente a face é uma das mais populares \cite{milene}. Nas tabelas
+	\ref{tab:tabelaRequisitosTeoricos} e \ref{tabelaRequisitosPraticos} são
+	mostradas as noves características e seus respectivos comportamentos baseados nos requisitos
+	mencionados acima.
 		
 	\begin{table}[H]
 		\begin{center}
@@ -63,7 +78,7 @@ Novas técnicas de reconhecimento por meio de face, íris, retina e voz, entre o
 				\hline
 			\end{tabular}
 		\end{center}
-		\label{tabelaRequisitosTeoricos}
+		\label{tab:tabelaRequisitosTeoricos}
 	\end{table}
 
 	\begin{table}[H]
@@ -86,10 +101,35 @@ Novas técnicas de reconhecimento por meio de face, íris, retina e voz, entre o
 		\label{tabelaRequisitosPraticos}
 	\end{table}
 
-Os sistemas biométricos podem ser classificados em sistemas de verificação ou identificação. Sistemas de verificação são aqueles que autenticam a identidade dos usuários comparando-os com os próprios \textit{templates}. Eles conduzem uma comparação ``um para um'' e determinam se o usuário é quem realmente diz ser. O maior desafio para esse tipo de sistema é a acurácia. Geralmente, não é muito difícil satisfazer o requisito de tempo de resposta pois somente uma comparação ``um para um'' é feita \cite{hong}.
-
-Sistemas de identificação reconhecem um indivíduo pesquisando em todo o banco de dados procurando por uma correspondência. Eles conduzem uma comparação ``um para muitos'' para estabelecer a identidade do indivíduo. Ao contrário dos sistemas de verificação, nesse tipo de sistema tanto a acurácia quanto o tempo são os grandes desafios, por causa da necessidade de explorar todo o banco de dados. Geralmente, sistemas de identificação são mais complexos que sistemas de verificação \cite{hong}.
-
-A face é uma característica biométrica bastante atrativa. Um dos motivos que incentivou os diversos estudos sobre a utilização da face para reconhecimento são as vantagens que ela possui em relação a impressão digital e a íris.  No reconhecimento por impressão digital a desvantagem consiste no fato que nem todas as pessoas possuem uma impressão digital com ``qualidade'' suficiente para ser reconhecida por um sistema. Já o reconhecimento por íris apresenta uma alta confiabilidade e larga variação, sendo estável pela vida toda. Porém, a desvantagem está relacionada ao modo de captura da íris que necessita de um alinhamento entre a câmera e os olhos da pessoa~\cite{saocarlos}. 
-
-Além disso, aquisição da face é feita de forma fácil e não-intrusiva e possui uma baixa privacidade de informação, como a face é exposta constantemente, caso uma base de faces seja roubada, essas informações não representam algum risco e não possibilitam um uso impróprio.
+	Os sistemas biométricos podem ser classificados em sistemas de verificação ou
+	identificação. 
+	
+	\begin{itemize}
+		\item Sistemas de verificação são aqueles que autenticam a identidade
+		dos usuários comparando-os com os próprios \textit{templates}. Eles conduzem uma
+		comparação ``um para um'' e determinam se o usuário é quem realmente diz ser. O
+		maior desafio para esse tipo de sistema é a acurácia. Geralmente, não é muito
+		difícil satisfazer o requisito de tempo de resposta pois somente uma comparação
+		``um para um'' é feita \cite{hong}.
+	
+		\item Sistemas de identificação reconhecem um indivíduo pesquisando em todo o
+		banco de dados procurando por uma correspondência. Eles conduzem uma comparação ``um para
+		muitos'' para estabelecer a identidade do indivíduo. Ao contrário dos sistemas
+		de verificação, nesse tipo de sistema tanto a acurácia quanto o tempo são os
+		grandes desafios, por causa da necessidade de explorar todo o banco de dados~\cite{hong}.
+	\end{itemize}
+	
+	A face é uma característica biométrica bastante atrativa. Um dos motivos que
+	incentivou os diversos estudos sobre a utilização da face para reconhecimento
+	são as vantagens que ela possui em relação a impressão digital e a íris.  No
+	reconhecimento por impressão digital a desvantagem consiste no fato que nem
+	todas as pessoas possuem uma impressão digital com ``qualidade'' suficiente para
+	ser reconhecida por um sistema. Já o reconhecimento por íris apresenta uma alta
+	confiabilidade e larga variação, sendo estável pela vida toda. Porém, a
+	desvantagem está relacionada ao modo de captura da íris que necessita de um
+	alinhamento entre a câmera e os olhos da pessoa~\cite{saocarlos}.
+	
+	Além disso, aquisição da face é feita de forma fácil e não-intrusiva e possui
+	uma baixa privacidade de informação, como a face é exposta constantemente, caso
+	uma base de faces seja roubada, essas informações não representam algum risco e
+	não possibilitam um uso impróprio.

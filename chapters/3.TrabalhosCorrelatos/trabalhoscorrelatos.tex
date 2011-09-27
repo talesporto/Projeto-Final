@@ -129,7 +129,7 @@ A detecção de movimento utilizada tenta separar o ``primeiro plano'' do ``fund
 
 Para realizar o rastreamento foi utilizado a abordagem de um mapa de ocupação probabilística (\textit{probabilistic occupancy map} - POM)~\cite{pom} simplificado para ambientes internos, onde as trajetórias de movimentos são curtas e menos frequentes quando comparadas com trajetórias em ambientes externos. Somente as quatro câmeras nos cantos são utilizadas.
 
-Nesta abordagem, o mapa de ocupação é utilizado para projetar a imagem de um esboço de uma pessoa (um retângulo simples) em cada visão das câmeras.  As sobreposições dos esboços e as detecções de movimento na imagem entre as várias câmeras indicam a presença de uma pessoa. A Figura~\ref{fig:pom} ilustra a distribuição da probabilidade de ocupação produzida pelo algoritmo. 
+Nesta abordagem, o mapa de ocupação é utilizado para projetar a imagem de um esboço de uma pessoa (um retângulo simples) em cada visão das câmeras.  As sobreposições entre os esboços e as detecções de movimento na imagem entre as várias câmeras indicam a presença de uma pessoa. A Figura~\ref{fig:pom} ilustra a distribuição da probabilidade de ocupação produzida pelo algoritmo. 
 
 \begin{figure}[hbt]
 		\begin{center}
@@ -141,12 +141,15 @@ Nesta abordagem, o mapa de ocupação é utilizado para projetar a imagem de um 
 
 \subsection{Detecção e Reconhecimento Facial}
 
-A detecção de movimento é feita utilizando o método \textit{Viola-Jones} já descrito anteriormente utilizando a biblioteca \textit{OpenCV}. 
+A detecção de face utilizada no projeto é realizada utilizando o método \textit{Viola-Jones}~\ref{ref:viola-jones} utilizando a biblioteca \textit{OpenCV}. Somente a câmera que está apontada para a porta é utilizada, pois esta é a única que fornece imagens em uma qualidade necessária. As outras câmeras, fornecem imagens em baixa resolução e pequenas demais.  
 
-Para realizar o reconhecimento facial utiliza uma técnica que aproveita a vantagem que o ambiente é constantemente monitorado e combina a informação de várias imagens para realizar o reconhecimento. As imagens das faces são fornecidas pelo módulo de detecção.
-Para cada sequência de imagens, as faces de um mesmo indivíduo são agrupadas. Então, para cada grupo, o sistema compara as imagens com a galeria de imagens~\cite{salah}. 
+O módulo de detecção, pela maneira que foi projetado, só detecta faces frontais, em que os dois olhos, o nariz e a boca são visíveis. Como resultado da detecção de face, é retornada uma imagem contendo uma caixa delimitadora da face detectada.
 
-Uma abordagem baseada em PCA (\textit{Principal Component Analisys}) foi utilizado para comparação entre as imagens.
+O reconhecimento facial no ambiente inteligente UPC é realizado utilizando uma técnica que aproveita a vantagem que o ambiente é constantemente monitorado e combina a informação de várias imagens para realizar o reconhecimento.  Imagens que são fornecidas pelo módulo de detecção.
+
+Para cada sequência de imagens, as faces de um mesmo indivíduo são agrupadas. Então, para cada grupo, o sistema compara as imagens com a galeria de imagens. Para cada grupo de imagens, as decisões individuais são combinadas em uma decisão única para o grupo.
+
+Uma abordagem baseada em PCA (\textit{Principal Component Analisys}) foi utilizada para comparação entre as imagens, pois possui a menor complexidade computacional necessária para aplicações em tempo real~\cite{salah}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
