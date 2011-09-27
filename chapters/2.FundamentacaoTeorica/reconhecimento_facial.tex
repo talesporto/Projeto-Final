@@ -1,12 +1,37 @@
 \subsection{Reconhecimento Facial}
 
-O reconhecimento facial é uma das atividades mais comuns realizadas diariamente por seres vivos dotados de certa inteligência. Essa simples atividade vem despertando o interesse de pesquisadores que trabalham com computação visual e inteligência artificial. O objetivo desses pesquisadores é de construir sistemas artificiais capazes de realizar o reconhecimento de faces humanas e a partir desta capacidade, construir os mais diferentes tipos de aplicações: sistemas de vigilância, controles de acesso, definições automáticas de perfis, entre outros~\cite{oliveira}.
+O reconhecimento facial é uma das atividades mais comuns realizadas diariamente
+por seres vivos dotados de certa inteligência. Essa simples atividade vem
+despertando o interesse de pesquisadores que trabalham com computação visual e
+inteligência artificial. O objetivo desses pesquisadores é de construir sistemas
+artificiais capazes de realizar o reconhecimento de faces humanas e a partir
+desta capacidade, construir os mais diferentes tipos de aplicações: sistemas de
+vigilância, controles de acesso, definições automáticas de perfis, entre
+outros~\cite{oliveira}.
 
-No anos 70, os estudos do reconhecimento facial eram baseados sobre atributos faciais mensuráveis como olhos, nariz, sobrancelhas, bocas, entre outros. Porém, os recursos computacionais eram escassos e os algoritmos de extração de características eram ineficientes. Nos anos 90, as pesquisas na área ressurgiram, inovando os métodos existentes~\cite{hong, saocarlos} e disseminando a técnica.
+No anos 70, os estudos do reconhecimento facial eram baseados sobre atributos
+faciais mensuráveis como olhos, nariz, sobrancelhas, bocas, entre outros. Porém,
+os recursos computacionais eram escassos e os algoritmos de extração de
+características eram ineficientes. Nos anos 90, as pesquisas na área
+ressurgiram, inovando os métodos existentes~\cite{hong, saocarlos} e
+disseminando a técnica.
 
-Umas das maiores dificuldades dos sistemas de reconhecimento é tratar a complexidade dos padrões visuais. Mesmo sabendo que todas as faces possuem padrões reconhecidos, como boca, olhos e nariz, elas também possuem variações únicas que devem ser utilizadas para determinar as características relevantes. Outra dificuldade encontrada em relação a essas características é que elas possuem uma larga variação estatística para serem consideradas únicas para cada indivíduo. O ideal seria que a variância inter-classe seja grande e a intra-classe pequena, pois assim imagens de diferentes faces geram os códigos mais diferentes possíveis, enquanto imagens de uma mesma face geram os códigos mais similares possíveis. Portanto, estabelecer uma representação que capture as características ideais é um desafio~\cite{saocarlos}.
+Umas das maiores dificuldades dos sistemas de reconhecimento é tratar a
+complexidade dos padrões visuais. Mesmo sabendo que todas as faces possuem
+padrões reconhecidos, como boca, olhos e nariz, elas também possuem variações
+únicas que devem ser utilizadas para determinar as características relevantes.
+Outra dificuldade encontrada em relação a essas características é que elas
+possuem uma larga variação estatística para serem consideradas únicas para cada
+indivíduo. O ideal seria que a variância inter-classe seja grande e a
+intra-classe pequena, pois assim imagens de diferentes faces geram os códigos
+mais diferentes possíveis, enquanto imagens de uma mesma face geram os códigos
+mais similares possíveis. Portanto, estabelecer uma representação que capture as
+características ideais é um desafio~\cite{saocarlos}.
 
-Do ponto de vista geral, o reconhecimento facial continua sendo um problema aberto por causa de várias dificuldades que aumentam a variância intra-classe~\cite{hong}. Entre estas, destacamos as mais comuns~\cite{saocarlos}:
+Do ponto de vista geral, o reconhecimento facial continua sendo um problema
+aberto por causa de várias dificuldades que aumentam a variância
+intra-classe~\cite{hong}. Entre estas, destacamos as mais
+comuns~\cite{saocarlos}:
 
 	\begin{itemize}
 		\item iluminação;
@@ -16,7 +41,7 @@ Do ponto de vista geral, o reconhecimento facial continua sendo um problema aber
 		\item extração da face do contexto ou do fundo;
 	\end{itemize}
 
-	\begin{figure}[hbt]
+	\begin{figure}[H]
 		\begin{center}
 			\includegraphics[height=9.5cm,width=12.5cm]{figuras/2.FundamentacaoTeorica/diferencailuminacao.png}
 		\end{center}
@@ -39,11 +64,19 @@ Basicamente, o processo de reconhecimento facial pode ser divido em duas tarefas
 
 \subsubsection{Detecção de Faces em imagens}
 	
-A primeira etapa para o reconhecimento de faces é a detecção de um rosto, e a partir daí a comparação do mesmo com modelos conhecidos pelo sistema~\cite{hong, oliveira}. Em um sistema de reconhecimento facial, tanto o tempo de resposta quanto a confiabilidade desta etapa influenciam diretamente no desempenho e o emprego deste sistema~\cite{oliveira}.
+A primeira etapa para o reconhecimento de faces é a detecção de um rosto, e a
+partir daí a comparação do mesmo com modelos conhecidos pelo sistema~\cite{hong,
+oliveira}. Em um sistema de reconhecimento facial, tanto o tempo de resposta
+quanto a confiabilidade desta etapa influenciam diretamente no desempenho e o
+emprego deste sistema~\cite{oliveira}.
 
-A detecção de faces é definida como o processo que determina a existência ou não de faces em uma imagem e uma vez encontrada alguma face, sua localização deve ser apontada através de um enquadramento ou através de suas coordenadas dentro da imagem~\cite{oliveira}. A Figura \ref{enquadramentoRosto} representa um exemplo da detecção de uma face em uma imagem.
+A detecção de faces é definida como o processo que determina a existência ou não
+de faces em uma imagem e uma vez encontrada alguma face, sua localização deve
+ser apontada através de um enquadramento ou através de suas coordenadas dentro
+da imagem~\cite{oliveira}. A Figura \ref{enquadramentoRosto} representa um
+exemplo da detecção de uma face em uma imagem.
 
-	\begin{figure}[hbt]
+	\begin{figure}[H]
 		\begin{center}
 			\includegraphics[scale=0.3]{figuras/2.FundamentacaoTeorica/enquadramentoRosto.png}
 		\end{center}
@@ -92,7 +125,7 @@ O Método \textit{Viola-Jones} para detecção facial utiliza quatro conceitos c
 		\item \textbf{Classificadores em cascata}: classificadores fracos \textit{boosted} em uma estrutura de árvore que geram inferências rápidas e robustas na construção de um classificador forte~\cite{servodetection,violajones,edsonma};
 	\end{enumerate}
 
-	\begin{figure}[hbt]
+	\begin{figure}[H]
 		\begin{center}
 			\includegraphics[scale=0.5]{figuras/2.FundamentacaoTeorica/edsonma.png}
 		\end{center}
@@ -100,7 +133,7 @@ O Método \textit{Viola-Jones} para detecção facial utiliza quatro conceitos c
 		\label{fig:edsonma}
 	\end{figure}
 
-	\begin{figure}[hbt]
+	\begin{figure}[H]
 		\begin{center}
 			\includegraphics[height=6.5cm,width=12.5cm]{figuras/2.FundamentacaoTeorica/haar_features.png}
 		\end{center}
@@ -110,7 +143,7 @@ O Método \textit{Viola-Jones} para detecção facial utiliza quatro conceitos c
 
 A detecção facial em imagens é baseada em simples características retangulares, exemplificada na Figura~\ref{haarfeatures}. Existem vários motivos para se usar essas características ao invés de usar diretamente os \textit{pixels} da imagem. Uma das principais é que sistemas baseados em características são muito mais rápidos que sistemas baseados em \textit{pixels}~\cite{violajones}. 
 
-\begin{figure}[hbt]
+\begin{figure}[H]
 		\begin{center}
 			\includegraphics[height=6.5cm,width=12.5cm]{figuras/2.FundamentacaoTeorica/haarfeaturestypes.png}
 		\end{center}
@@ -122,7 +155,7 @@ Tais simples características são remanescentes das funções de base \textit{H
 
 O Método \textit{Viola-Jones} não trabalha diretamente com as intensidades da imagem. Para determinar a presença ou ausência de centenas de características \textit{Haar} em cada posição de imagem e em várias escalas de forma eficiente, utiliza-se uma técnica chamada ``Imagem Integral''~\cite{servodetection, violajones}, em que uma nova representação de imagem é criada. Com isso, qualquer característica pode ser computada para qualquer escala e localização em um tempo constante~\cite{violajones}.
 
-	% \begin{figure}[hbt]
+	% \begin{figure}[H]
 	% 	\begin{center}
 	% 		\includegraphics[height=6.5cm,width=12.5cm]{figuras/2.FundamentacaoTeorica/integral_image.png}
 	% 	\end{center}
@@ -132,7 +165,7 @@ O Método \textit{Viola-Jones} não trabalha diretamente com as intensidades da 
 
 % Na Figura \ref{integralimage}, após a ``integração'', o \textit{pixel} $\displaystyle (x,y)$ contém a soma de todos os valores de \textit{pixels} dentro da região retangular sombreada no canto superior esquerdo de $\displaystyle (x,y)$. Para calcular a média dos valores de \textit{pixel} neste retângulo, basta dividir o valor em $\displaystyle (x,y)$ pela área do retângulo~\cite{servodetection}.
 
-	% \begin{figure}[hbt]
+	% \begin{figure}[H]
 	% 	\begin{center}
 	% 		\includegraphics[height=6.5cm,width=12.5cm]{figuras/2.FundamentacaoTeorica/integral_image2.png}
 	% 	\end{center}
@@ -155,7 +188,7 @@ Um classificador fraco é aquele que só obtém a resposta correta um pouco mais
 
 Em qualquer região de uma imagem, o número total de características \textit{Haar} básicas é muito grande. Para assegurar uma classificação rápida, o processo de aprendizagem deve excluir o maior número de características disponíveis, e focar nas que são críticas. A seleção dessas características é alcançada através de uma simples modificação no método \textit{AdaBoost}: o mecanismo de aprendizagem é construído de forma que cada classificador ``fraco'' retornado dependa de somente uma única característica. Como resultado, cada estágio do processo seleciona um novo classificador ``fraco'' o que pode ser visto como um processo de seleção de características. \textit{AdaBoost} fornece um algoritmo de aprendizagem eficaz~\cite{violajones}.
 
-	\begin{figure}[htb]
+	\begin{figure}[H]
 		\begin{center}
 			\includegraphics[scale=5.0]{figuras/2.FundamentacaoTeorica/filterchain.png}
 		\end{center}
@@ -204,7 +237,7 @@ Basicamente, as etapas do processo de reconhecimento são simples e bem definida
 
 Em \textit{Eigenfaces}, a distância entre as imagens é medida ponto a ponto entre as imagens conhecidas e as desconhecidas. A distância Euclidiana, medida entre dois pontos $P_1$ e $P_2$ em duas dimenções, é dada pela fórmula $\displaystyle d_{12} = \sqrt(d_{x} + d_{y})$, onde $\displaystyle d_x = (x_2 - x_1)^2$ e $\displaystyle d_y = (y_2-y_1)^2$ e representada na Figura \ref{distanciaEntrePontos}~\cite{hewitt}. Para se medir a distância entre as imagens usa-se a seguinte formula $\displaystyle d(\vec{X}, \vec{Y}) = \sqrt{\sum_{\substack{i=1}}^{n} (x_i-y_i)^2}$~\cite{perlibakas}.
 
-    \begin{figure}[hbt]
+    \begin{figure}[H]
 		\begin{center}
 			\includegraphics[scale=1.0]{figuras/2.FundamentacaoTeorica/graficoDistanciaEntrePontos.png}
 		\end{center}
@@ -224,7 +257,7 @@ O \textit{Eigenfaces} utiliza o método PCA - ``\textit{Principal Component Anal
 
 % Como os pontos, nos quais se baseia o nosso exemplo, estão praticamente alinhados, uma linha pode ser traçada através deles com pouco erro. O erro no ajuste da linha é medido pela soma do quadrado da distância de cada ponto da linha. A linha de melhor ajuste é aquela que possui o menor erro~\cite{hewitt}.
 
-	% \begin{figure}[hbt]
+	% \begin{figure}[H]
 	% 	\begin{center}
 	% 		\includegraphics[height=9.5cm,width=12.5cm]{figuras/2.FundamentacaoTeorica/PCAexemploMapa.png}
 	% 	\end{center}
@@ -262,7 +295,7 @@ O \textit{Eigenfaces} é um método interessante para dar-nos alguma intuição 
 
 As \textit{eigenfaces} médias das componentes principais são usadas para que a partir delas possa se estimar a distância entre a imagem que se deseja reconhecer e as imagens presentes no banco e a partir dessas distâncias dizer de qual delas a nova imagem mais se aproxima~\cite{turkpentland}.
 
-	\begin{figure}[hbt]
+	\begin{figure}[H]
 		\begin{center}
 			\includegraphics[scale=1.2]{figuras/2.FundamentacaoTeorica/eigenfaces.png}
 		\end{center}
@@ -274,7 +307,7 @@ As componentes principais encontradas pelo PCA apontam para a maior variação d
 
 Na verdade, elas são imagens de faces de duas das dez pessoas mostradas na Figura \ref{exemploEigenfaces}. Quando a iluminação é muito variável esse algoritmo não é muito efetivo~\cite{hewitt}.
 
-	\begin{figure}[hbt]
+	\begin{figure}[H]
 		\begin{center}
 			\includegraphics[scale=1.2]{figuras/2.FundamentacaoTeorica/exemplosImagensIluminacaoo.png}
 		\end{center}
@@ -294,7 +327,7 @@ Na prática, a projeção de determinadas imagens de uma pessoa no subespaço PC
 
 Mesmo com sistemas altamente ajustados, sistemas de reconhecimento facial estão sujeitos a casos de identidade equivocada~\cite{hewitt}.
 
-	\begin{figure}[hbt]
+	\begin{figure}[H]
 		\begin{center}
 			\includegraphics[scale=6.0]{figuras/2.FundamentacaoTeorica/espacoPCA.png}
 		\end{center}
