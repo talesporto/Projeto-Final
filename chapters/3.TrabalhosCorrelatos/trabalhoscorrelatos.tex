@@ -153,27 +153,27 @@ Uma abordagem baseada em PCA (\textit{Principal Component Analisys}) foi utiliza
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Captura de contexto dinâmico e \textit{Arrays} de vídeos distribuídos para \textit{SmartSpaces}}
+\section{Projeto DIVA}
 
-Esse trabalho apresenta detalhes de um projeto de pesquisa de longo prazo, onde \textit{SmartSpaces} de uma gama de funcionalidades úteis são projetados, construídos e avaliados sistematicamente. Algumas das funcionalidades chave incluem: detecção de intrusos; rastreamento várias pessoas; pose do corpo e análise de postura; identificação de pessoas; modelagem do corpo humano; e análise do movimento~\cite{trivedi}.
+Esse projeto~\cite{trivedi} foi apelidado de Projeto DIVA pois nele foi desenvolvido uma nova arquitetura para ambientes inteligentes chamado DIVA. Ele apresenta detalhes de um projeto de pesquisa de longo prazo, onde ambientes inteligentes com funcionalidades úteis são projetados, construídos e avaliados sistematicamente. 
 
-O sistema proposto monitora o ambiente em baixa resolução de forma contínua, detectando somente a presença e localização das pessoas e suas dimensões. Formas de aquisição de imagens mais detalhadas são ativadas quando um evento ou atividade de potencial interesse é detectado. Esses eventos serão os focos de atenção do sistema~\cite{trivedi}.
+Esta nova arquitetura pode ser vista como uma rede inteligente e ativa de câmeras, onde várias câmeras são controladas para prover uma ampla gama de funcionalidades. Algumas destas incluem detecção de intrusos, rastreamento várias pessoas, pose do corpo e análise de postura, identificação de pessoas, modelagem do corpo humano e análise do movimento.
 
-O monitoramento de baixa resolução e de grande área do ambiente é alcançado graças a algumas câmeras de amplo ângulo de visão e estáticas. Com um pequeno número de câmeras PTZ (\textit{pan/tilt/zoom}) ativas, múltiplos focos de atenção podem ser mantidos de forma simultânea~\cite{trivedi}.
+O sistema proposto pelo Projeto DIVA monitora o ambiente em baixa resolução de forma contínua, detectando somente a presença e suas dimensões. Formas de aquisição de imagens mais detalhadas são ativadas quando um evento ou atividade de potencial interesse é detectado. Esses eventos serão os focos de atenção do sistema.
 
-Foi desenvolvido uma arquitetura de sistema para o \textit{SmartSpace} chamada DIVA. Ela pode ser vista como uma rede inteligente e ativa de câmeras, onde várias câmeras ão controladas para prover uma ampla gama de funcionalidades~\cite{trivedi}.
+O monitoramento de baixa resolução e de grande área do ambiente é alcançado graças a algumas câmeras de amplo ângulo de visão e estáticas. Com um pequeno número de câmeras PTZ (\textit{pan/tilt/zoom}) ativas, múltiplos focos de atenção podem ser mantidos de forma simultânea.
 
 	\begin{figure}[hbt]
 		\begin{center}
-			\includegraphics[scale=0.5]{figuras/3.TrabalhosCorrelatos/micasa_aviary.png}
+	\includegraphics[scale=0.5]{figuras/3.TrabalhosCorrelatos/micasa_aviary.png}
 		\end{center}
-		\caption{Representação dos \textit{SmartSpaces} MICASA e AVIARY~\cite{trivedi}.}
+		\caption{Representação dos ambientes inteligentes MICASA e AVIARY~\cite{trivedi}.}
 		\label{micasa_aviary}
 	\end{figure}
 
-O projeto inclui dois \textit{SmartSpaces} separados, mas conectados. O primeiro é chamado de AVIARY foi projetado para ser uma pequena sala de conferências. O segundo chamado de MICASA foi projetado para ser uma pequena sala de aula. A Figura \ref{micasa_aviary} mostra fotos dos dois \textit{SmartSpaces} e como estão conectados, além da disposição dos sensores utilizados.
+O Projeto DIVA possui dois ambientes inteligentes separados, mas conectados. O primeiro é chamado de AVIARY foi projetado para ser uma pequena sala de conferências. O segundo chamado de MICASA foi projetado para ser uma pequena sala de aula. A Figura~\ref{micasa_aviary} mostra fotos dos dois ambientes e como estão conectados, além da disposição dos sensores utilizados.
 
-Os sensores na sala AVIARY incluem~\cite{trivedi}:
+Os sensores no ambiente inteligente AVIARY incluem:
 
 	\begin{itemize}
 		\item uma rede de quatro câmeras omnidirecionais;
@@ -182,27 +182,31 @@ Os sensores na sala AVIARY incluem~\cite{trivedi}:
 		\item dois \textit{arrays} de microfones com quatro microfones cada;
 	\end{itemize}
 
-As quatro câmeras omnidirecionais (ODVSs) estão perto dos cantos de uma mesa de reunião, cobrindo o quarto inteiro de dentro para fora, como mostrado na Figura \ref{micasa_aviary}. As câmeras PTZ e retilíneas estão nos ``vértices'' da sala a $\displaysytle 1.4m$ acima do chão. Os dois \textit{arrays} de microfones foram instalados na parede e no teto~\cite{trivedi}.
+As quatro câmeras omnidirecionais (ODVSs) estão perto dos cantos de uma mesa de reunião, cobrindo o quarto inteiro de dentro para fora, como mostrado na Figura \ref{micasa_aviary}. As câmeras PTZ e retilíneas estão nos ``vértices'' da sala a $\displaysytle 1.4m$ acima do chão. Os dois \textit{arrays} de microfones foram instalados na parede e no teto.
 
-Um computador é alocado para rastreamento, utilizando imagens das quatro câmeras omnidirecionais ou imagens das quatro câmeras retilíneas estáticas. Outro computador é utilizado para analisar os eventos de áudio e de vídeo. Um terceiro computador é utilizado para arquivar \textit{streams} de áudio e vídeo para posterior recuperação~\cite{trivedi}.
+% Um computador é alocado para rastreamento, utilizando imagens das quatro câmeras omnidirecionais ou imagens das quatro câmeras retilíneas estáticas. Outro computador é utilizado para analisar os eventos de áudio e de vídeo. Um terceiro computador é utilizado para arquivar \textit{streams} de áudio e vídeo para posterior recuperação.
 
-O \textit{SmartSpace} MICASA é duas vezes maior que o AVIARY. Os sensores utilizados nessa sala são~\cite{trivedi}:
+O ambiente inteligente MICASA é duas vezes maior que o AVIARY. Os sensores utilizados são:
 	
 	\begin{itemize}
 		\item uma rede de quatro câmeras omnidirecionais;
 		\item quatro câmeras PTZ;
-		\item oito câmeras retilíneas státicas;
+		\item oito câmeras retilíneas estáticas;
 	\end{itemize}
 
-As câmeras omnidirecionais são instaladas no teto, como mostrado na Figura \ref{micasa_aviary}. As câmeras PTZ e quatro câmeras retilíneas foram instaladas de maneira similar ao \textit{SmartSpace} AVIARY. As quatro câmeras retilíneas restantes foram instaladas nas paredes como mostrado como mostrado na Figura \ref{micasa_aviary}. As câmeras nos vértices possuem maior campo de visão para cobrir toda a sala e fazem parte do array de câmeras para rastreamento~\cite{trivedi}.
+As câmeras omnidirecionais são instaladas no teto, como mostrado na Figura \ref{micasa_aviary}. As câmeras PTZ e quatro câmeras retilíneas foram instaladas de maneira similar ao ambiente AVIARY. As quatro câmeras retilíneas restantes foram instaladas nas paredes como mostrado como mostrado na Figura \ref{micasa_aviary}. As câmeras nos vértices possuem maior campo de visão para cobrir toda a sala e fazem parte do array de câmeras para rastreamento.
 
-\subsection{Rastreamento, Detecção de faces e Reconhecimento facial}
+\subsection{Rastreamento e Reconhecimento facial}
  
-Foi desenvolvido um sistema em tempo-real que utiliza a rede de câmeras omnidirecionais que é responsável pelo rastreamento, detecção das faces e reconhecimento facial. 
+No Projeto DIVA foi desenvolvido um sistema em tempo-real que utiliza a rede de câmeras omnidirecionais e é responsável pelo rastreamento e reconhecimento facial. 
 
-O rastreamento baseado na câmeras omnidirecionais é feito detectando a silhuetas das pessoas por meio da subtração do fundo com remoção de sombras.
+O rastreamento é feito utilizando subtração do fundo~\ref{sec:deteccao-objeto} com remoção de sombras para detectar as silhuetas dos novos usuários no ambiente.  Com isso, essas silhuetas são rastreadas imagem por imagem~\ref{sec:rastreamento}.
 
-O vídeo capturado é processado para detecção e reconhecimento de faces como mostrado na Figura \ref{facerec}. Para detecção de faces utiliza o método de segmentação de tom de pele. As imagens resultantes são classificadas para rejeitar as imagens sem faces. Então, o método \textit{Eigenface} é utilizado tanto para classificação da face quanto para reconhecimento. 
+Os resultados do rastreamento são utilizados para controlar o reconhecimento facial. As imagens obtidas do rastreamento são processadas utilizando um método de segmentação de tom de pele e são recortadas para obter as imagens com possíveis faces. 
+
+Essas imagens, então, são classificadas para rejeitar as imagens sem faces. Para essa classificação é utilizado o método \textit{Eigenfaces}~\ref{sec:reconhecimento}. Este último também é utilizado para realizar o reconhecimento facial utilizando a classificação do ``vizinho'' mais príximo.
+
+O treinamento do algoritmo \textit{Eigenfaces} implementado no sistema do Projeto DIVA é feito utilizando um banco com $\displaystyle 200$ imagens de faces de várias pessoas diferentes.
 
 	\begin{figure}[hbt]
 		\begin{center}
@@ -211,6 +215,8 @@ O vídeo capturado é processado para detecção e reconhecimento de faces como 
 		\caption{Método de detecção e reconhecimento facial~\cite{trivedi}.}
 		\label{facerec}
 	\end{figure}
+
+
 
 
 
