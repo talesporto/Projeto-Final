@@ -2,7 +2,7 @@
 
 Neste capítulo serão analisados alguns projetos que focam no rastreamento, identificação e localização de pessoas em um ambiente inteligente. 
 
-Alguns dos projetos estudados utilizam técnicas de identificação e rastreamento multimodais. Estas são compostas por informações redundantes providas por alguns tipos diferentes de sensores como, por exemplo, sensores de áudio e vídeo que fornecem dados audiovisual  das pessoas no ambiente .
+Alguns dos projetos estudados utilizam técnicas de identificação e rastreamento multimodais. Estas são compostas por informações redundantes providas por alguns tipos diferentes de sensores como, por exemplo, sensores de áudio e vídeo que fornecem dados audiovisual  das pessoas no ambiente.
 
 Mesmo assim, somente as técnicas de identificação, localização e rastreamento monomodais que utilizarem imagens (cor, intensidade ou profundidade) como entrada serão descritas e analisadas.
 
@@ -12,7 +12,10 @@ Dentre os projetos estudados, destacam-se os seguintes projetos....(falar o pq).
 
 O Projeto CHIL (\textit{Computers in the Human Interaction Loop})~\cite{chil, computerschil} é composto por uma equipe de quinze laboratórios internacionais de pesquisa acadêmica e industrial.
 
-Eles colaboram entre si no desenvolvimento de serviços que visam ajudar as pessoas de forma proativa durante suas atividades diárias. Em especial, possui foco em interações entre grupo de pessoas como, por exemplo, serviços que facilitam a colaboração em reuniões e em salas de palestras. 
+Eles colaboram entre si no desenvolvimento de serviços que visam ajudar as
+pessoas de forma proativa durante suas atividades diárias. Em especial, possui
+foco em interações entre grupos de pessoas como, por exemplo, serviços que
+facilitam a colaboração em reuniões e em salas de palestras.
 
 Dentre os protótipos que foram desenvolvidos no projeto destacam-se um ambiente de trabalho perceptivo e colaborativo e um sistema perceptivo de assistência a um escritório virtual.
 
@@ -22,7 +25,7 @@ Referente a localização das pessoas no ambiente, o projeto focou somente na lo
 
 Como a equipe deste projeto é composta por vários laboratórios, diferentes sistemas de rastreamento e identificação foram desenvolvidos. Contudo, será relatado somente aqueles que se destacaram.
 
-\subsection{Rastreamento de Pessoas}
+\subsection{Rastreamento de pessoas}
 
 A pesquisa sobre rastreamento de pessoas foi focada principalmente no rastreamento de pessoas dentro de um ambiente inteligente. O rastreamento tinha o objetivo de determinar,  de maneira contínua, as coordenadas dos ocupantes na imagem.
 
@@ -55,7 +58,7 @@ Sobre os algoritmos de rastreamento visual, duas abordagens principais foram seg
 
 % No rastreamento multimodal, era esperado que a fusão dos diferentes tipos de dados proveria resultados mais precisos, eliminando, assim, os efeitos de decisões erradas tomadas por algum rastreamento monomodal. Porém, não aconteceu o que se esperava. O rastreamento multimodal é altamente dependente das tarefas e dados em mãos, e exige um cuidadoso equilíbrio na disponibilidade e qualidade dos dados~\cite{chil}.
 
-\subsection{Identificação das Pessoas}
+\subsection{Identificação das pessoas}
 
 
 A fim de realizar identificação de forma natural e implícita, os sensores distribuídos no ambiente devem monitorar continuamente o espaço. Então, o sistema de identificação de pessoas em um ambiente inteligente deve operar em segundo plano, sem necessitar de atenção e cooperação dos usuários. 
@@ -79,7 +82,9 @@ As faces, então, são alinhadas utilizando os centros dos olhos ou as caixas de
 
 O Projeto CHIL testou diferentes abordagens para reconhecimento facial. Uma delas realiza reconhecimento baseado em aparência utilizando transformada discreta de cosseno (DCT - \textit{Discrete Cosine Transform})~\cite{chilref6, chilref7}. Abordagens baseadas em PCA também foram testadas, utilizando como medida da distância entre imagens uma versão modificada da distância euclidiana utilizando pesos~\cite{chilref8, chilref9}.  Foi testado também uma abordagem baseada em análise discriminante linear (LDA - \textit{Linear Discrimant Analysis}), mas sem sucesso pois as imagens das faces obtidas não eram linearmente separáveis~\cite{chilref8, chilref9}. 
 
-Todas as abordagens testadas utilizam um classificador do ``vizinho'' mais próximo e as decisões obtidas do vários pontos de vista das várias câmeras são combinados por meio de uma regra de soma ponderada~\cite{chilref8, chilref9}. 
+Todas as abordagens testadas utilizam um classificador do ``vizinho'' mais
+próximo e as decisões obtidas dos vários pontos de vista das várias câmeras são
+combinados por meio de uma regra de soma ponderada~\cite{chilref8, chilref9}.
 
 Experimentos realizados no projeto, utilizando os mesmos métodos para extração da face e normalização, mostraram que a abordagem baseada em aparência utilizando DCT foi a melhor. Além disso, foi observado que selecionando somente as imagens frontais de faces, ao invés das amostras disponíveis, é prejudicial para a performance do sistema de reconhecimento. 
 
@@ -211,49 +216,3 @@ O vídeo capturado é processado para detecção e reconhecimento de faces como 
 		\caption{Método de detecção e reconhecimento facial~\cite{trivedi}.}
 		\label{facerec}
 	\end{figure}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
