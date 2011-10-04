@@ -1,8 +1,8 @@
-\chapter{Problema e Proposta}
+\chapter{Sistema \textit{True}}
 
-Observando a realidade de um \textit{SmartSpace} fica claro que as informações como posição das pessoas e suas respectivas identidades são imprescindíveis para que decisões possam ser tomadas. Atualmente, a maioria das soluções encontradas para fornecer esse tipo de informação foram projetadas para funcionar em ambientes rigidamente definidos. Com isso, não seria adequado tentar incorporar soluções como estas em um ambiente com diferentes dimensões, condições de iluminação, posição dos móveis pois este se resultaria em um cenário diferente. Além disso, precisamos de uma solução que seja integrada com o middleware \textit{UbiquitOS}, o qual gerência nosso \textit{SmartSpace}.
+Observando a realidade de um ambiente inteligente fica claro que as informações como posição das pessoas e suas respectivas identidades são imprescindíveis para que decisões possam ser tomadas. Atualmente, a maioria das soluções encontradas para fornecer esse tipo de informação foram projetadas para funcionar em ambientes rigidamente definidos. Com isso, não seria adequado tentar incorporar soluções como estas em um ambiente com diferentes dimensões, condições de iluminação, posição dos móveis, diferentes sensores pois este resultaria em um cenário diferente. Além disso, precisamos de uma solução que seja integrada com o middleware \textit{UbiquitOS}, o qual gerência nosso ambiente inteligente.
 
-Esse trabalho propõe, então, um sistema aberto de rastreamento, localização e identificação de pessoas no \textit{SmartSpace} que forneça essas informações de contexto para o \textit{UbiquitOS}. Tal sistema será chamado de TRUE, \textit{\textbf{T}racker and \textbf{R}ecognizer \textbf{U}sers in \textbf{E}nvironment}.
+Esse trabalho propõe, então, um sistema aberto de rastreamento, localização e identificação de pessoas em um ambiente inteligente que forneça essas informações de contexto para o \textit{UbiquitOS}. Tal sistema será chamado de TRUE, \textit{\textbf{T}racker and \textbf{R}ecognizer \textbf{U}sers in \textbf{E}nvironment}.
 
 O sistema \textit{True} utilizará tanto imagens de cor quanto de profundidade. As imagens de profundidade serão utilizadas no rastreamento e localização dos usuários no ambiente, e as imagens de cor serão utilizadas no reconhecimento facial e no cadastro dos usuários. Então, os dispositivos presentes no ambiente deverão ser capazes de fornecer esses tipos de dados a um taxa e qualidade adequada. 
 
@@ -22,13 +22,13 @@ O Módulo de Registro será independente dos demais. Porém, os outros dois mód
 
 \section{Módulo de Reconhecimento}
 
-	O Módulo de Reconhecimento, como se deduz do próprio nome, será responsável pelo reconhecimento facial dos usuários no ambiente. Para isso, será necessário detectar a face do usuário em questão em uma imagem e depois realizar o reconhecimento da mesma em tempo real. 
+	O Módulo de Reconhecimento, como se deduz do próprio nome, será responsável pelo reconhecimento facial dos usuários no ambiente. Para isso, será necessário obter imagens da face do usuário em questão para realizar o reconhecimento em tempo real. 
 
-	Para realizar a detecção facial será utilizado o método \textit{Viola-Jones}~\ref{sec:viola-jones}. Um método que pode ser utilizado para construir uma abordagem de detecção facial rápida e eficaz~\cite{violajones} em tempo real. Além disso, este método é implementado pela biblioteca \textit{OpenCV} (\textit{Open Source Computer Vision}) onde bons classificadores em cascata de \textit{Haar features} são fornecidos, como por exemplo um classificador de faces frontais, utilizado nesse trabalho.
+	Para realizar a detecção facial será utilizado o método \textit{Viola-Jones}~\ref{ref:viola-jones}. Um método que pode ser utilizado para construir uma abordagem de detecção facial rápida e eficaz~\cite{violajones} em tempo real. Além disso, este método é implementado pela biblioteca \textit{OpenCV} (\textit{Open Source Computer Vision}) onde bons classificadores em cascata de \textit{Haar features} são fornecidos, como por exemplo um classificador de faces frontais, utilizado nesse trabalho.
 
-	Para realizar o reconhecimento facial será utilizado \textit{Eigenfaces}~\ref{sec:eigenfaces}. Uma técnica bastante satisfatória quando utilizada sobre uma base de dados (faces) relativamente grande, permitindo ao sistema inferir, das imagens suas principais características e, partindo delas, realizar o reconhecimento das imagens utilizando um número bastante reduzido de cálculos~\cite{artigo-eigenface}, permitindo, assim, um reconhecimento em tempo real.
+	Para realizar o reconhecimento facial será utilizado \textit{Eigenfaces}~\ref{sec:reconhecimento}. Uma técnica bastante satisfatória quando utilizada sobre uma base de dados (faces) relativamente grande, permitindo ao sistema inferir, das imagens suas principais características e, partindo delas, realizar o reconhecimento das imagens utilizando um número bastante reduzido de cálculos~\cite{artigo-eigenface}, permitindo, assim, um reconhecimento em tempo real.
 
-	O reconhecimento será feito em imagens de usuários que serão passadas para Módulo de Rastreamento. Essa imagens serão compostas somente pela região da imagem em que o usuário se encontra, como mostrado na Figura (\textbf{colocar figura aqui.}). Basicamente, o processo de reconhecimento será realizado pelas seguintes etapas e ilustrado na Figura~\ref{fig:processo-reconhecimento}:
+	A detecção e o reconhecimento serão feitos em imagens de usuários que serão passadas para Módulo de Rastreamento. Essa imagens serão compostas somente pela região da imagem em que o usuário se encontra, como mostrado na Figura (\textbf{colocar figura aqui.}). Basicamente, o processo de reconhecimento será realizado pelas seguintes etapas e ilustrado na Figura~\ref{fig:processo-reconhecimento}:
 
 		\begin{figure}[hbt]
 			\begin{center}
@@ -46,7 +46,7 @@ O Módulo de Registro será independente dos demais. Porém, os outros dois mód
 			\item Retorna o nome da face ``mais parecida'' e a confiança do reconhecimento.
 		\end{enumerate}
 
-	O Módulo de Reconhecimento será dependente do de Rastreamento. Ele ficará ocioso até que chegue uma requisição de reconhecimento de um determinado usuário. No caso, o autor da requisição será o Módulo de Rastreamento. A seção~\ref{sec:rastreamento-reconhecimento} explica mais detalhadamente a relação entre os dois módulos.
+	O Módulo de Reconhecimento será dependente do de Rastreamento. Ele ficará ocioso até que chegue uma requisição de reconhecimento de um determinado usuário. A seção~\ref{sec:rastreamento-reconhecimento} explicará mais detalhadamente a relação entre os dois módulos.
 
 \section{Módulo de Rastreamento}
 
@@ -56,7 +56,7 @@ O Módulo de Registro será independente dos demais. Porém, os outros dois mód
 
 	O rastreamento e a localização serão feitas utilizando as imagens de profundidades providas pelo \textit{Kinect} obtidas utilizando o método de Luz Estruturada descrito na seção~\ref{sec:luz-estruturada}, tornando-os não susceptíveis as variações nas condições de iluminação. Essas imagens de profundidade nada mais são que \textit{depth maps} (mapas de profundidade), em que cada pixel da imagem contém o valor estimado da distância em relação ao sensor. O \textit{Kinect} fornece esses dados a uma taxa de $\displaystyle 30 fps$ (\textit{frames} por segundo) com uma resolução $\displaystyle 320px$ x $\displaystyle 240px$.
 	
-	Com esses mapas de profundidade, a biblioteca \textit{OpenNI} consegue calcular as coodernadas $\displaystle (x,y,z)$ em relação ao \textit{Kinect} de qualquer pixel na imagem. Ou seja, se tivermos a representação de um usuário rastreado na imagem, conseguiremos obter sua localização relativa ao \textit{Kinect}. Então, fixando a posição do mesmo no ambiente, conseguiremos estimar a localização de qualquer usuário rastreado em tempo real.
+	Com esses mapas de profundidade, a biblioteca \textit{OpenNI} consegue calcular as coodernadas $\displaystle (x,y,z)$ em relação ao \textit{Kinect} de qualquer pixel na imagem. Ou seja, se tivermos a representação de um usuário rastreado na imagem, conseguiremos obter sua localização relativa ao \textit{Kinect} de cada pixel pertencente ao usuário. Então, fixando a posição do \textit{Kinect} no ambiente, conseguiremos estimar a localização de qualquer usuário rastreado em tempo real.
 
 \section{Relação Rastreamento e Reconhecimento}
 \label{sec:rastreamento-reconhecimento}
@@ -76,13 +76,12 @@ O Módulo de Registro será independente dos demais. Porém, os outros dois mód
 		\begin{enumerate}
 		 	\item O Módulo de Rastreamento detecta novo usuário, e obtém um número pré-definido de imagens sucessivas do novo usuário. Para cada imagem, ele cria uma nova imagem de cor contendo somente aquele usuário, como mostrado na Figura (\textbf{colocar a figura aqui}), e a envia para o Módulo de Reconhecimento.
 		 	\item Para cada imagem recebida, o Módulo de Reconhecimento tenta reconhecer o novo usuário e retorna ``vazio'' ou o nome e a confiança do reconhecimento.
-		 	\item O Módulo de Rastreamento verifica se a confiança é maior que um limiar pré-definido, se for ele incrementa o contador que armazena o número de vezes que o usuário foi reconhecido, armazena o nome obtido juntamente com a confiança e calcula qual nome será atribuído ao novo usuário.
+		 	\item O Módulo de Rastreamento verifica se a confiança é maior que um limiar pré-definido, se for ele incrementa o contador que armazena o número de vezes que o usuário foi reconhecido, armazena o nome obtido juntamente com a confiança e calcula qual nome  será atribuído ao novo usuário. Esse cálculo será feito por meio de uma média ponderada utilizando os diferentes resultados obtidos por cada reconhecimento e suas respectivas confianças.
 	 	\end{enumerate} 
 	
 	Ao invés de tentar realizar o reconhecimento somente quando novos usuários são detectados, o sistema \textit{True} continuará a tentar reconhecer os usuários já reconhecidos para melhorar a confiança no reconhecimento. Essas tentativas de reconhecer novamente os usuários ocorrerão em intervalos de tempo pré-definidos seguindo as mesmas etapas de quando um novo usuário for detectado. A única etapa que será diferente será a primeira: ao invés de obter várias imagens de um mesmo usuário, serão obtidas uma imagem de cada usuário rastreado e as mesmas serão enviadas ao Módulo de Reconhecimento.
 
 	Desta maneira, o Módulo de Rastreamento conseguirá reunir em um só lugar todas as informações sobre os usuários rastreados, como localização corrente, nome, confiança do reconhecimento, quantas vezes o usuário foi reconhecido e quais diferentes nomes foi atribuído ao mesmo.
-
 
 \section{Módulo de Registro}
 
@@ -119,7 +118,7 @@ O Módulo de Registro será independente dos demais. Porém, os outros dois mód
 			\label{fig:laico}
 		\end{figure}	
 
-\input{chapters/4.ProblemaEProposta/kinect.tex}
+% \input{chapters/4.ProblemaEProposta/kinect.tex}
 
 
 
