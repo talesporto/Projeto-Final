@@ -1,6 +1,8 @@
-\subsection {Rastreamento}	
+\section {Rastreamento}	
 
-	O rastreamento pode ser definido como o problema de estimar a trajetória de uma entidade em um plano de imagem a medida em que se move na cena. Em outras palavras, um rastreador atribui rótulos as entidades monitoradas em diferentes quadros de um vídeo~\cite{yilmaz}.
+	O rastreamento de entidades, como pessoas ou objetos, é uma importante tarefa do campo da computação visual. A proliferação de computadores com um alto poder computacional, a disponibilidade de câmeras de alta qualidade a um preço acessível e a crescente necessidade de sistemas automáticos de análise de vídeos têm gerado um grande interesse em algoritmos de rastreamento~\cite{yilmaz}.
+
+	% O rastreamento pode ser definido como o problema de estimar a trajetória de uma entidade em um plano de imagem a medida em que se move na cena. Em outras palavras, um rastreador atribui rótulos as entidades monitoradas em diferentes quadros de um vídeo~\cite{yilmaz}.
 
 	A detecção e o rastreamento de pessoas tem um grande potencial em aplicações em domínios tão diversos como animação, interação humano-computador, vigilância automatizada (monitorar uma cena para detectar atividades suspeitas), entre outros~\cite{yilmaz}. Por esta razão, tem havido um crescimento notável na investigação deste problema.
 
@@ -45,7 +47,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsubsection{Representação da Entidade}
+\subsection{Representação da Entidade}
 \label{sec:representacao-objeto}
 
 	Nos sistemas de rastreamento, as entidades rastreadas devem ser representadas de alguma maneira. Geralmente, as representações são baseados em suas formas, existindo uma forte relação entre a representação e o algoritmo de rastreamento escolhido~\cite{yilmaz}. A representação é escolhida baseada no domínio da aplicação e as mais utilizadas são:
@@ -76,7 +78,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsubsection{Seleção de características para rastreamento}
+\subsection{Seleção de características para rastreamento}
 
 	A seleção das características é uma tarefa crítica para o rastreamento e está fortemente relacionada com a representação da entidade. Em geral, a seleção procura as características mais singulares para que a entidade rastreada seja facilmente distinguida~\cite{yilmaz}. As características mais comuns utilizadas atualmente são:
 
@@ -108,7 +110,7 @@ De todas as características, a mais utilizada para rastreamento é a cor~\cite{
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsubsection{Detecção de entidades}
+\subsection{Detecção de entidades}
 \label{sec:deteccao-objeto}
 
 	Todo método de rastreamento requer um mecanismo de detecção de entidades que
@@ -154,7 +156,7 @@ De todas as características, a mais utilizada para rastreamento é a cor~\cite{
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsubsection{Rastreamento de entidades}
+\subsection{Rastreamento de entidades}
 \label{sec:rastreamento}
 
 	O objetivo do rastreamento de entidades é conhecer a trajetória do mesmo no
