@@ -187,13 +187,13 @@
 	detecção~\cite{edsonma}. O método é implementado pela biblioteca
 	\textit{OpenCV}(\textit{Open Source Computer Vision}) e é amplamente utilizado.
 	
-	O Método \textit{Viola-Jones} para detecção facial utiliza quatro conceitos
+	O Método \textit{Viola-Jones}~\cite{servodetection,violajones,edsonma} para detecção facial utiliza quatro conceitos
 	chaves ilustrados na Figura~\ref{fig:edsonma}:
 		
 	\begin{enumerate}
 		\item \textbf{Características \textit{Haar} básicas:} simples características
 		retangulares avaliadas rapidamente por meio de uma nova representação da imagem
-		chamada ``Imagem Integral''~\cite{servodetection,violajones,edsonma};
+		chamada ``Imagem Integral'';
 		
 		\item \textbf{Imagem Integral:} uma nova representação da imagem que permite uma
 		rápida avaliação de recursos e características. Basicamente, o método consiste
@@ -202,17 +202,16 @@
 		soma de todos os \textit{pixels} acima e a esquerda. Começando pelo canto
 		superior esquerdo da imagem e atravessando para direita e para baixo, toda a
 		imagem pode ser ``integrada'' com poucas operações por
-		\textit{pixel}~\cite{servodetection, violajones}.
+		\textit{pixel};
 		
 		\item \textbf{O método \textit{AdaBoost}}: um algoritmo de aprendizado
 		\textit{boosting} utilizado para construir um classificador, selecionando um
-		pequeno número de características importantes~\cite{servodetection,violajones,
-		edsonma};
+		pequeno número de características importantes;
 		
 		\item \textbf{Classificadores em cascata}: classificadores fracos
 		\textit{boosted} em uma estrutura de árvore que geram inferências rápidas e
 		robustas na construção de um classificador
-		forte~\cite{servodetection,violajones,edsonma};
+		forte;
 	\end{enumerate}
 
 	\begin{figure}[H]
@@ -507,13 +506,11 @@
 		\begin{center}
 			\includegraphics[scale=6.0]{figuras/2.FundamentacaoTeorica/espacoPCA.png}
 		\end{center}
-		\caption{Como as distribuições de dados afetam o reconhecimento com \textit{Eigenfaces}. Topo: O melhor cenário possível - pontos de dados para cada pessoa bem separados. Meio: O pior cenário - a variabilidade entre as imagens das faces de cada individuo é maior do que a variabilidade entre os indivíduos. Embaixo: um cenário realista - separação razoável, com alguma sobreposição \cite{hewitt}.}
+		\caption{As distribuições de dados no reconhecimento com \textit{Eigenfaces}. Adapatado de~\cite{hewitt}.}
 		\label{exemploEspacoPCA}
 	\end{figure}
 
-\subsubsection{``Passo a passo'' sobre \textit{Eigenfaces}}
-
-	A abordagem para o reconhecimento facial com \textit{Eigenfaces} requer as
+	Basicamente, a abordagem para o reconhecimento facial com \textit{Eigenfaces} requer as
 	seguinte operações de inicialização~\cite{turk}:
 
 	\begin{enumerate}
