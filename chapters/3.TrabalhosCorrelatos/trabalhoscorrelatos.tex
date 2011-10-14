@@ -10,66 +10,55 @@ Dentre os projetos estudados, destacam-se os seguintes projetos....(falar o pq).
 
 \section{Projeto CHIL}
 
-O Projeto CHIL (\textit{Computers in the Human Interaction Loop})~\cite{chil, computerschil} é composto por uma equipe de quinze laboratórios internacionais de pesquisa acadêmica e industrial.
+O Projeto CHIL (\textit{Computers in the Human Interaction Loop})~\cite{chil, computerschil} envolve uma rede de quinze laboratórios internacionais de pesquisa acadêmica e industrial. Eles colaboram entre si conduzindo pesquisas que tem por objetivo ajudar a pessoas de forma proativa durante suas atividades diárias no ambiente de trabalho. Em especial, o projeto foca no desenvolvimento de sistemas que auxiliam as interações entre grupos de pessoas como, por exemplo, sistemas que facilitam a colaboração em reuniões e em salas de palestras. Dentre os protótipos que foram desenvolvidos no projeto destacam-se um ambiente de trabalho perceptivo e colaborativo e um sistema perceptivo de assistência a um escritório virtual.
 
-Eles colaboram entre si no desenvolvimento de serviços que visam ajudar as
-pessoas de forma proativa durante suas atividades diárias. Em especial, possui
-foco em interações entre grupos de pessoas como, por exemplo, serviços que
-facilitam a colaboração em reuniões e em salas de palestras.
-
-Dentre os protótipos que foram desenvolvidos no projeto destacam-se um ambiente de trabalho perceptivo e colaborativo e um sistema perceptivo de assistência a um escritório virtual.
-
-O Projeto CHIL utiliza uma combinação de algoritmos monomodais para criar um sistema de rastreamento e identificação multimodal utilizando dados audiovisual das pessoas no ambiente. Do ponto de vista do áudio, é importante mencionar que o Projeto CHIL representa uma das primeiras tentativas de realizar e avaliar sistematicamente rastreamento acústico com uma rede distribuída de microfones. Porém, será focado os algoritmos que utilizam somente dados visuais para realizar tais tarefas.
-
-Referente a localização das pessoas no ambiente, o projeto focou somente na localização das pessoas que ``falam''~\cite{speaker-localization}.
-
-Como a equipe deste projeto é composta por vários laboratórios, diferentes sistemas de rastreamento e identificação foram desenvolvidos. Contudo, será relatado somente aqueles que se destacaram.
+Este projeto utiliza uma combinação de algoritmos monomodais para criar um sistema de rastreamento e identificação multimodal utilizando dados audiovisuais das pessoas no ambiente. Contudo, apesar do foco desta monografia ser identificação, rastreamento e localização utilizando imagens, vale salientar que o Projeto CHIL representa uma das primeiras tentativas de realizar e avaliar sistematicamente rastreamento acústico com uma rede distribuída de microfones. Portanto, os relatos a seguir serão relativos somente às investigações que utilizam dados visuais (imagens) para rastreamento e identificação. Referente a localização das pessoas no ambiente, o projeto focou somente na localização das pessoas que ``falam''~\cite{speaker-localization}.
 
 \subsection{Rastreamento de pessoas}
 
-A pesquisa sobre rastreamento de pessoas foi focada principalmente no rastreamento de pessoas dentro de um ambiente inteligente. O rastreamento tinha o objetivo de determinar,  de maneira contínua, as coordenadas dos ocupantes na imagem.
+As pesquisas sobre rastreamento de pessoas no âmbito do Projeto CHIL concentraram-se principalmente no rastreamento de pessoas dentro de um ambiente inteligente. Neste contexto, o rastreamento tem o objetivo de determinar,  de maneira contínua, as coordenadas dos ocupantes na imagem capturada.
 
 Os sensores utilizados no ambiente inteligente do Projeto CHIL incluem:	
 	\begin{itemize}
 		\item um mínimo de quatro câmeras fixas instaladas nos cantos do ambiente, com campos de visão sobrepostos;
 		\item uma câmera com grande ângulo de visão fixa com vista para o ambiente inteiro;
 		\item três arrays de microfones em forma de T de 4 canais cada;
-		\item um microfone de Mark III de 64 canais;
+		\item um microfone de Mark III de 64 canais.
 	\end{itemize}
 
-Era esperado que essa grande quantidade de sensores disponíveis pudesse ser vista como uma vantagem, por oferecerem uma grande redundância nas informações capturadas e proveria uma boa ``cobertura'' do ambiente superando problemas como oclusão. Porém, foi observado no projeto que essa redundância se tornou um grande desafio, pois surgem problemas como sincronização dos dados, transferência de processamento distribuído, fusão de espaço-temporal, entre outros.
+Era esperado que essa grande quantidade de sensores disponíveis pudesse ser vista como uma vantagem, por oferecerem alta redundância nas informações capturadas e boa cobertura do ambiente minimizando assim problemas como oclusão. Porém, foi relatado que tal redundância se tornou um grande desafio, pois surgiram problemas relativo à sincronização dos dados, transferência de processamento distribuído, fusão de espaço-temporal, entre outros.
 
-Durante o projeto, muito progresso foi feito. No início, os sistemas eram de uma única modalidade com inicialização manual, utilizando recursos simples e acompanhamento de no máximo uma pessoa. Estes sistemas evoluíram para um sistema totalmente automático, com auto-inicialização, em tempo real, utilizando uma combinação de recursos capaz de rastrear alvos múltiplos.
+Inicialmente, os sistemas do Projeto CHIL eram de uma única modalidade com inicialização manual, utilizando recursos simples e rastreamento de no máximo uma pessoa. Estes sistemas evoluíram para um sistema totalmente automático, com auto-inicialização, em tempo real, utilizando uma combinação de recursos capaz de rastrear alvos múltiplos.
 
 Sobre os algoritmos de rastreamento visual, duas abordagens principais foram seguidas pelos vários sistemas de rastreamento desenvolvidos no Projeto CHIL:
 
 	\begin{enumerate}
-		\item uma abordagem baseada em modelos, em que um modelo 3D do objeto rastreado é mantido renderizando-o nos pontos de vista da camêra.~\cite{chilref1,chilref2,chilref3}.
-		\item  uma abordagem orientada a dados, onde sistemas de rastreamento 2D operam de forma independente sobre os diferentes ângulos de visão das câmeras e os dados do rastreamento pertencentes a um mesmo alvo são coletados no formato de um rastreamento 3D~\cite{chilref4,chilref5}.
+		\item Abordagem baseada em modelos, em que um modelo 3D do objeto rastreado é mantido renderizando-o nos pontos de vista da câmera.~\cite{chilref1,chilref2,chilref3}.
+		\item Abordagem orientada a dados, onde sistemas de rastreamento 2D operam de forma independente sobre os diferentes ângulos de visão das câmeras e os dados do rastreamento pertencentes a um mesmo alvo são coletados no formato de um rastreamento 3D~\cite{chilref4,chilref5}.
 	\end{enumerate}	
 
- Em termos de desempenho, foi observado no projeto que a abordagem baseada em modelos (1) geralmente prevê uma melhor acurácia, mas menos precisão do que a abordagem orientada a dados (2).  O tratamento das oclusões e da associação dos dados dos sistemas de rastreamentos independentes são as desvantagens do modelo orientado a dados. Foi identificado,  nesse projeto, que rastrear rosto em vez de corpos inteiros diminui o impacto desses problemas.
+ Em termos de desempenho, foi observado que a abordagem baseada em modelos (1) geralmente prevê uma melhor acurácia, porém menos precisão do que a abordagem orientada a dados (2). Por outro lado, o tratamento das oclusões e da associação dos dados dos sistemas de rastreamentos independentes são as desvantagens do modelo orientado a dados. Foi identificado,  nesse projeto, que rastrear rostos ao invés de corpos inteiros diminui o impacto desses problemas.
 
- Foi observado que a abordagem baseada em modelo também torna mais fácil incorporar diversos tipos de recursos, como segmentos de primeiro plano, histogramas de cor, etc, aumentando a robustez do rastreamento. Porém, as dificuldades encontradas nesta abordagem se resume na inicialização automática e na atualização dos modelos das pessoas.
+ Foi observado que a abordagem baseada em modelos também facilita a incorporação de diversos tipos de recursos, como segmentos de primeiro plano, histogramas de cor, etc., que aumentam a robustez do rastreamento. Contudo, as dificuldades encontradas nesta abordagem se resumem na inicialização automática e na atualização dos modelos das pessoas.
 
- Os testes dos sistemas de rastreamentos desenvolvidos foram feitos utilizando-se os dados dos seminários do prórpio Projeto CHIL.
+ Os testes do sistema de rastreamento desenvolvido no Projeto CHIL foram feitos utilizando os dados dos seminários e reuniões do próprio projeto.
 
 % As abordagens de rastreamento por meio de áudio e vídeo foram combinas em um rastreamento multimodal. Esse rastreamento multimodal é, notavelmente, baseado em filtro de partículas uma vez que permitem uma integração flexível de recursos através dos sensores~\cite{chil}.
 
 % No rastreamento multimodal, era esperado que a fusão dos diferentes tipos de dados proveria resultados mais precisos, eliminando, assim, os efeitos de decisões erradas tomadas por algum rastreamento monomodal. Porém, não aconteceu o que se esperava. O rastreamento multimodal é altamente dependente das tarefas e dados em mãos, e exige um cuidadoso equilíbrio na disponibilidade e qualidade dos dados~\cite{chil}.
 
-\subsection{Identificação das pessoas}
+\subsection{Identificação de pessoas}
 
 
-A fim de realizar identificação de forma natural e implícita, os sensores distribuídos no ambiente devem monitorar continuamente o espaço. Então, o sistema de identificação de pessoas em um ambiente inteligente deve operar em segundo plano, sem necessitar de atenção e cooperação dos usuários. 
+A fim de realizar a identificação de pessoas de forma natural e implícita em um ambiente inteligente, sensores distribuídos no ambiente devem monitorar continuamente o espaço de modo que o sistema de identificação opere em segundo plano sem necessitar de atenção e cooperação dos usuários. 
 
-A face foi escolhida por ser uma característica biométrica que permite uma identificação de forma natural e implícita~\ref{sec:biometria}. Com isso, a equipe do Projeto CHIL desenvolveu diferentes sistemas de reconhecimento facial utilizando diferentes algoritmos. 
+A equipe do Projeto CHIL desenvolveu sistemas de reconhecimento facial tendo em vista que a face é uma característica biométrica que permite uma identificação de forma natural e implícita, conforme mencionado na Seção~\ref{sec:biometria}. 
 
-Na tentativa de realizar o reconhecimento facial das pessoas presentes no ambiente inteligente, vários desafios foram encontrados no Projeto CHIL, como: grande variação da iluminação, sensores com baixa resolução, oclusão visual e dependendo da localização de uma pessoa e sua distância dos sensores, os dados recebidos podem variar.  Além do mais, foi observado que o fato das pessoas possuírem diferentes expressões faciais, cortes de cabelo, maquiagens, entre outros, dificultava ainda mais a tarefa. Mesmo assim, foi notado que o reconhecimento facial podia ser realizado de forma robusta utilizando múltiplos sensores no ambiente.
+Na tentativa de realizar o reconhecimento facial das pessoas presentes no ambiente inteligente, vários desafios foram encontrados no Projeto CHIL, como: grande variação da iluminação, sensores com baixa resolução, oclusão visual. Além disso dependendo da localização e distância dos sensores da pessoa a ser identificada os dados recebidos podem variar. Foi observado, também, que o fato das pessoas possuírem diferentes expressões faciais, cortes de cabelo, maquiagem, entre outros, dificultava ainda mais a tarefa. Entretando, apesar de todos esses desafios, foi notado que o reconhecimento facial podia ser realizado de forma robusta utilizando múltiplos sensores no ambiente.
 
-Como dados, o sistema do Projeto CHIL utiliza sequências de imagens fornecidas pelas várias câmeras no ambiente inteligente. A cada $\displaysyle 200ms$ imagens das caixas delimitadoras das faces (uma maneira de apontar a localização da face na imagem por meio de um enquadramento) e posições dos centros dos olhos são extraídas, como exemplificado na Figura~\ref{chil}, em que no canto inferior direito, pode-se observar a imagem da face extraída. 
+O sistema de identificação do Projeto CHIL utiliza sequências de imagens fornecidas pelas várias câmeras no ambiente inteligente. A cada $\displaysyle 200ms$ imagens das caixas delimitadoras das faces (uma maneira de apontar a localização da face na imagem por meio de um enquadramento) e posições dos centros dos olhos são extraídas. O canto inferior direito da Figura~\ref{chil} exemplifica a imagem da face extraída de uma pessoa no ambiente.
 
-As faces, então, são alinhadas utilizando os centros dos olhos ou as caixas delimitadoras das faces. Para obter robustez contra alguns erros, o sistema gera algumas imagens adicionais alinhadas modificando rótulos do centro dos olhos ou os rótulos das caixas delimitadoras das faces.
+As faces extraídas são, então, alinhadas utilizando os centros dos olhos ou as caixas delimitadoras das faces. Para obter robustez e minimizar erros, o sistema gera algumas imagens adicionais alinhadas modificando rótulos do centro dos olhos ou os rótulos das caixas delimitadoras das faces.
 
 	\begin{figure}[hbt]
 		\begin{center}
@@ -80,13 +69,11 @@ As faces, então, são alinhadas utilizando os centros dos olhos ou as caixas de
 	\end{figure}
 
 
-O Projeto CHIL testou diferentes abordagens para reconhecimento facial. Uma delas realiza reconhecimento baseado em aparência utilizando transformada discreta de cosseno (DCT - \textit{Discrete Cosine Transform})~\cite{chilref6, chilref7}. Abordagens baseadas em PCA também foram testadas, utilizando como medida da distância entre imagens uma versão modificada da distância euclidiana utilizando pesos~\cite{chilref8, chilref9}.  Foi testado também uma abordagem baseada em análise discriminante linear (LDA - \textit{Linear Discrimant Analysis}), mas sem sucesso pois as imagens das faces obtidas não eram linearmente separáveis~\cite{chilref8, chilref9}. 
+No Projeto CHIL testou-se diferentes abordagens para reconhecimento facial. Uma delas realiza reconhecimento baseado em aparência utilizando transformada discreta de cosseno (DCT - \textit{Discrete Cosine Transform})~\cite{chilref6, chilref7}. Abordagens baseadas em PCA (\textit{Principal Component Analisys}) também foram testadas, utilizando como medida da distância entre imagens uma versão modificada da distância euclidiana utilizando pesos~\cite{chilref8, chilref9}.  Foi testado também uma abordagem baseada em análise discriminante linear (LDA - \textit{Linear Discrimant Analysis}), mas sem sucesso pois as imagens das faces obtidas não eram linearmente separáveis~\cite{chilref8, chilref9}. 
 
-Todas as abordagens testadas utilizam um classificador do ``vizinho'' mais
-próximo e as decisões obtidas dos vários pontos de vista das várias câmeras são
-combinados por meio de uma regra de soma ponderada~\cite{chilref8, chilref9}.
+Todas as abordagens testadas utilizam um classificador do ``vizinho'' mais próximo. As decisões obtidas dos vários pontos de vista das várias câmeras utilizando tal classificador são, então, combinados por meio de uma regra de soma ponderada~\cite{chilref8, chilref9}.
 
-Experimentos realizados no projeto, utilizando os mesmos métodos para extração da face e normalização, mostraram que a abordagem baseada em aparência utilizando DCT foi a melhor. Além disso, foi observado que selecionando somente as imagens frontais de faces, ao invés das amostras disponíveis, é prejudicial para a performance do sistema de reconhecimento. 
+Experimentos realizados no projeto, utilizando os mesmos métodos para extração da face e normalização, mostraram que a abordagem baseada em aparência utilizando DCT apresentou os melhores resultados. Além disso, foi observado que selecionando somente as imagens frontais de faces, ao invés de todas as amostras disponíveis, como imagens de perfil, reduz a performance do sistema de reconhecimento. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
