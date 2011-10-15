@@ -12,7 +12,7 @@ Dentre os projetos estudados, destacam-se os seguintes projetos....(falar o pq).
 
 O Projeto CHIL (\textit{Computers in the Human Interaction Loop})~\cite{chil, computerschil} envolve uma rede de quinze laboratórios internacionais de pesquisa acadêmica e industrial. Eles colaboram entre si conduzindo pesquisas que tem por objetivo ajudar a pessoas de forma proativa durante suas atividades diárias no ambiente de trabalho. Em especial, o projeto foca no desenvolvimento de sistemas que auxiliam as interações entre grupos de pessoas como, por exemplo, sistemas que facilitam a colaboração em reuniões e em salas de palestras. Dentre os protótipos que foram desenvolvidos no projeto destacam-se um ambiente de trabalho perceptivo e colaborativo e um sistema perceptivo de assistência a um escritório virtual.
 
-Este projeto utiliza uma combinação de algoritmos monomodais para criar um sistema de rastreamento e identificação multimodal utilizando dados audiovisuais das pessoas no ambiente. Contudo, apesar do foco desta monografia ser identificação, rastreamento e localização utilizando imagens, vale salientar que o Projeto CHIL representa uma das primeiras tentativas de realizar e avaliar sistematicamente rastreamento acústico com uma rede distribuída de microfones. Portanto, os relatos a seguir serão relativos somente às investigações que utilizam dados visuais (imagens) para rastreamento e identificação. Referente a localização das pessoas no ambiente, o projeto focou somente na localização das pessoas que ``falam''~\cite{speaker-localization}.
+Este projeto utiliza informações obitidas de diferentes algoritmos monomodais para criar um sistema de rastreamento e identificação multimodal utilizando dados audiovisuais das pessoas no ambiente. Contudo, apesar do foco desta monografia ser identificação, rastreamento e localização utilizando imagens, vale salientar que o Projeto CHIL representa uma das primeiras tentativas de realizar e avaliar sistematicamente rastreamento acústico com uma rede distribuída de microfones. Portanto, os relatos a seguir serão relativos somente às investigações que utilizam dados visuais (imagens) para rastreamento e identificação. Referente a localização das pessoas no ambiente, o projeto focou somente na localização das pessoas que ``falam''~\cite{speaker-localization}.
 
 \subsection{Rastreamento de pessoas}
 
@@ -33,8 +33,8 @@ Inicialmente, os sistemas do Projeto CHIL eram de uma única modalidade com inic
 Sobre os algoritmos de rastreamento visual, duas abordagens principais foram seguidas pelos vários sistemas de rastreamento desenvolvidos no Projeto CHIL:
 
 	\begin{enumerate}
-		\item Abordagem baseada em modelos, em que um modelo 3D do objeto rastreado é mantido renderizando-o nos pontos de vista da câmera.~\cite{chilref1,chilref2,chilref3}.
-		\item Abordagem orientada a dados, onde sistemas de rastreamento 2D operam de forma independente sobre os diferentes ângulos de visão das câmeras e os dados do rastreamento pertencentes a um mesmo alvo são coletados no formato de um rastreamento 3D~\cite{chilref4,chilref5}.
+		\item Abordagem baseada em modelos, em que a redundância entre as câmeras são exploradas matendo um modelo 3D da pessoa rastreada e renderizando-o nos pontos de vista das câmeras. Os dados obtidos de cada câmera são utilizados para atualizar os parâmetros do modelo 3D a cada imagem~\cite{chilref1,chilref2,chilref3}. 
+		\item Abordagem orientada a dados, onde sistemas de rastreamento 2D operam de forma independente sobre os diferentes ângulos de visão das câmeras e os dados do rastreamento pertencentes a um mesmo alvo são coletados no formato de um rastreamento 3D~\cite{chilref4,chilref5}. A elegância desta abordagem reside na sua capacidade inerente de lidar com os problemas encontrados por várias técnicas de rastreamento 2D como, por exemplo, oclusão.
 	\end{enumerate}	
 
  Em termos de desempenho, foi observado que a abordagem baseada em modelos (1) geralmente prevê uma melhor acurácia, porém menos precisão do que a abordagem orientada a dados (2). Por outro lado, o tratamento das oclusões e da associação dos dados dos sistemas de rastreamentos independentes são as desvantagens do modelo orientado a dados. Foi identificado,  nesse projeto, que rastrear rostos ao invés de corpos inteiros diminui o impacto desses problemas.
@@ -58,7 +58,7 @@ Na tentativa de realizar o reconhecimento facial das pessoas presentes no ambien
 
 O sistema de identificação do Projeto CHIL utiliza sequências de imagens fornecidas pelas várias câmeras no ambiente inteligente. A cada $\displaysyle 200ms$ imagens das caixas delimitadoras das faces (uma maneira de apontar a localização da face na imagem por meio de um enquadramento) e posições dos centros dos olhos são extraídas. O canto inferior direito da Figura~\ref{chil} exemplifica a imagem da face extraída de uma pessoa no ambiente.
 
-As faces extraídas são, então, alinhadas utilizando os centros dos olhos ou as caixas delimitadoras das faces. Para obter robustez e minimizar erros, o sistema gera algumas imagens adicionais alinhadas modificando rótulos do centro dos olhos ou os rótulos das caixas delimitadoras das faces.
+As faces extraídas são, então, alinhadas utilizando os centros dos olhos ou as caixas delimitadoras das faces. Para obter robustez e minimizar erros, o sistema gera algumas imagens adicionais modificando as posições dos rótulos do centro dos olhos ou os rótulos das caixas delimitadoras das faces alterando, então, o alinhamento das faces nas imagens.
 
 	\begin{figure}[hbt]
 		\begin{center}
