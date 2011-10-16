@@ -1,24 +1,24 @@
 \chapter{Sistema \textit{True}}
 
-Observando a realidade de um ambiente inteligente fica claro que as informações como posição das pessoas e suas respectivas identidades são imprescindíveis para que decisões possam ser tomadas. Atualmente, a maioria das soluções encontradas para fornecer esse tipo de informação foram projetadas para funcionar em ambientes rigidamente definidos. Com isso, não seria adequado tentar incorporar soluções como estas em um ambiente com diferentes dimensões, condições de iluminação, posição dos móveis, diferentes sensores pois este resultaria em um cenário diferente. Além disso, precisamos de uma solução que seja integrada com o middleware \textit{UbiquitOS}, o qual gerência nosso ambiente inteligente.
+Observando a realidade de um ambiente inteligente fica claro que as informações como posição das pessoas e suas respectivas identidades são imprescindíveis para que decisões possam ser tomadas. Atualmente, a maioria das soluções encontradas para fornecer esse tipo de informação foram projetadas para funcionar em ambientes rigidamente definidos. Com isso, não seria adequado tentar incorporar soluções como estas em um ambiente com diferentes dimensões, condições de iluminação, posição dos móveis, diferentes sensores pois este resultaria em um cenário diferente. Além disso, a solução deve ser integrada com o middleware \textit{UbiquitOS}, o qual gerência os serviços providos pelo ambiente inteligente.
 
-Esse trabalho propõe, então, um sistema aberto de rastreamento, localização e identificação de pessoas em um ambiente inteligente que forneça essas informações de contexto para o \textit{UbiquitOS}. Tal sistema será chamado de TRUE, \textit{\textbf{T}racker and \textbf{R}ecognizer \textbf{U}sers in \textbf{E}nvironment}.
+Esse trabalho propõe, então, um sistema aberto de rastreamento, localização e identificação de pessoas em um ambiente inteligente integrado com o middleware \textit{UbiquitOS}. Tal sistema será chamado de TRUE, \textit{\textbf{T}racking and \textbf{R}ecognizing \textbf{U}sers in the \textbf{E}nvironment}.
 
-O sistema \textit{True} utilizará tanto imagens de cor quanto de profundidade. As imagens de profundidade serão utilizadas no rastreamento e localização dos usuários no ambiente, e as imagens de cor serão utilizadas no reconhecimento facial e no cadastro dos usuários. Então, os dispositivos presentes no ambiente deverão ser capazes de fornecer esses tipos de dados a um taxa e qualidade adequada. 
+O Sistema \textit{True} é um sistema monomodal que utiliza somente dados visuais, como imagens de cor e profundidade. As imagens de profundidade serão utilizadas no rastreamento e localização dos usuários no ambiente, e as imagens de cor serão utilizadas no reconhecimento facial e no cadastro dos usuários. Portanto, os dispositivos presentes no ambiente deverão ser capazes de fornecer esses tipos de dados a um taxa e qualidade adequada. 
 
-Para obter esses dados do ambiente, será utilizado o sensor \textit{Kinect} da Microsoft~\ref{sec:kinect}, um dispositivo bastante acessível e capaz de fornecer imagens de cor e de profundidade sincronizadas.
+Para obter os dados necessários, o sistema utiliza o sensor \textit{Kinect} da Microsoft~\ref{sec:kinect}, um dispositivo bastante acessível e capaz de fornecer imagens de cor e de profundidade sincronizadas a uma taxa e qualidade necessária.
 
-O sistema \textit{True} será dividido em três módulos principais:
+O sistema \textit{True} é dividido em três módulos principais:
 
 	\begin{itemize}
-		\item \textbf{Módulo de Rastreamento}: parte do sistema responsável pelo rastreamento dos usuários no ambiente.
-		\item \textbf{Módulo de Reconhecimento}: parte do sistema responsável por reconhecer os usuários rastreados.
-		\item \textbf{Módulo de Registro}: parte do sistema responsável pelo cadastro de novos usuários e treino do algoritmo.
+		\item \textbf{Módulo de Rastreamento e Localização}: parte do sistema responsável pelo rastreamento e localização dos usuários no ambiente.
+		\item \textbf{Módulo de Reconhecimento}: parte do sistema responsável por identificar os usuários rastreados.
+		\item \textbf{Módulo de Registro}: parte do sistema responsável pelo cadastro de novos usuários e treino do sistema
 	\end{itemize}
 
-% A entidade Usuário em nosso sistema possui um identificador inteiro fornecido pelo módulo de rastreamento quando é detectado, um nome fornecido pelo módulo de reconhecimento quando é reconhecido, o número de vezes que foi reconhecido e a confiança do reconhecimento.
+O Módulo de Registro será independente dos demais. Porém, os outros dois módulos deverão trocar informações entre si para centralizar todas as informações (localização e reconhecimento) de todos usuários rastreados no ambiente. A seguir, é explicado mais detalhadamente cada módulo e como tal troca de informações ocorre.
 
-O Módulo de Registro será independente dos demais. Porém, os outros dois módulos deverão trocar informações entre si para centralizar todas as informações (localização e reconhecimento) de todos usuários rastreados no ambiente. A seguir, será explicado mais detalhadamente cada módulo e como deverá ser essa troca de informações.
+No final deste capítulo, a integração do Sistema \textit{True} com o middleware \textit{UbiquitOS} é detalhada.
 
 \section{Módulo de Reconhecimento}
 
@@ -118,7 +118,6 @@ O Módulo de Registro será independente dos demais. Porém, os outros dois mód
 			\label{fig:laico}
 		\end{figure}	
 
-% \input{chapters/4.ProblemaEProposta/kinect.tex}
 
 
 
