@@ -22,31 +22,49 @@ No final deste capítulo, a integração do Sistema \textit{True} com o middlewa
 
 \section{Módulo de Reconhecimento}
 
-	O Módulo de Reconhecimento, como se deduz do próprio nome, será responsável pelo reconhecimento facial dos usuários no ambiente. Para isso, será necessário obter imagens da face do usuário em questão para realizar o reconhecimento em tempo real. 
+	O Módulo de Reconhecimento, como se deduz do próprio nome, é responsável pela identificação dos usuários no ambiente utilizando a face como característica biométrica, pois ela permite um reconhecimento de forma não intrusiva, como mensionada na Seção~\ref{sec:biometria}. 
 
-	Para realizar a detecção facial será utilizado o método \textit{Viola-Jones}~\ref{ref:viola-jones}. Um método que pode ser utilizado para construir uma abordagem de detecção facial rápida e eficaz~\cite{violajones} em tempo real. Além disso, este método é implementado pela biblioteca \textit{OpenCV} (\textit{Open Source Computer Vision}) onde bons classificadores em cascata de \textit{Haar features} são fornecidos, como por exemplo um classificador de faces frontais, utilizado nesse trabalho.
+	Para realizar a detecção facial é utilizado o método \textit{Viola-Jones}~\ref{ref:viola-jones}. Um método que pode ser utilizado para construir uma abordagem de detecção facial rápida e eficaz~\cite{violajones} em tempo real. Além disso, este método é implementado pela biblioteca \textit{OpenCV} (\textit{Open Source Computer Vision}) onde bons classificadores em cascata de \textit{Haar features} são fornecidos, como por exemplo um classificador de faces frontais, utilizado nesse sistema..
 
-	Para realizar o reconhecimento facial será utilizado \textit{Eigenfaces}~\ref{sec:reconhecimento}. Uma técnica bastante satisfatória quando utilizada sobre uma base de dados (faces) relativamente grande, permitindo ao sistema inferir, das imagens suas principais características e, partindo delas, realizar o reconhecimento das imagens utilizando um número bastante reduzido de cálculos~\cite{artigo-eigenface}, permitindo, assim, um reconhecimento em tempo real.
+	Para realizar o reconhecimento facial é utilizado \textit{Eigenfaces}~\ref{sec:reconhecimento}. Uma técnica bastante satisfatória quando utilizada sobre uma base de dados (faces) relativamente grande, permitindo ao sistema inferir, das imagens suas principais características e, partindo delas, realizar o reconhecimento das imagens utilizando um número bastante reduzido de cálculos~\cite{artigo-eigenface}, permitindo, assim, um reconhecimento em tempo real.
 
-	A detecção e o reconhecimento serão feitos em imagens de usuários que serão passadas para Módulo de Rastreamento. Essa imagens serão compostas somente pela região da imagem em que o usuário se encontra, como mostrado na Figura (\textbf{colocar figura aqui.}). Basicamente, o processo de reconhecimento será realizado pelas seguintes etapas e ilustrado na Figura~\ref{fig:processo-reconhecimento}:
+	A detecção e o reconhecimento são feitos em imagens de usuários que são passadas pelo Módulo de Rastreamento. Essa imagens são compostas somente pela região da imagem em que o usuário se encontra, como mostrado na Figura (\textbf{colocar figura aqui.}). Basicamente, o processo de reconhecimento é realizado pelas seguintes etapas e ilustrado na Figura~\ref{fig:processo-reconhecimento}:
+
+		\begin{enumerate}
+			\item Obtém a imagem de entrada correspondente a imagem formada somente pelo usuário cujo reconhecimento foi requisitado.
+			\item Pré-processamento da imagem: a imagem é convertida em escala de cinza.
+			\item Realiza detecção facial na imagem. Caso nenhuma face seja encontrada, retorna ``vazio''. Vale a pena ressaltar que no máximo uma face pode ser encontrada nesta imagem.
+			\item Processamento da imagem: uma nova imagem é criada recortando a região da face encontrada, a imagem, então, é redimensionada e equalizada criando assim uma padrão de tamanho, brilho e contraste nas imagens aumentando a acurácia do reconhecimento.
+			\item Reconhecimento facial com \textit{Eigenfaces} é realizado.
+			\item Retorna o nome da face ``mais parecida'' e a confiança do reconhecimento.
+		\end{enumerate}
 
 		\begin{figure}[hbt]
 			\begin{center}
-				\includegraphics[scale=2.0]{figuras/4.ProblemaEProposta/reconhecimento.png}
+				\includegraphics[scale=2.0]{figuras/4.ProblemaEProposta/reconhecimento-simples.png}
 			\end{center}
 			\caption{Representação das etapas propostas para o reconhecimento facial no Módulo de Reconhecimento.}
 			\label{fig:processo-reconhecimento}
 		\end{figure}
 
-		\begin{enumerate}
-			\item Obtém a imagem de entrada correspondente a imagem formada somente pelo usuário cujo reconhecimento foi requisitado.
-			\item Realiza detecção facial na imagem. Caso nenhuma face seja encontrada, retorna ``vazio''. Vale a pena ressaltar que no máximo uma face pode ser encontrada nesta imagem.
-			\item Pré-processamento da imagem: a imagem é convertida em escala de cinza, uma nova imagem é criada recortando a região da face encontrada, a imagem, então, é redimensionada e equalizada criando assim uma padrão de tamanho, brilho e contraste nas imagens aumentando a acurácia do reconhecimento.
-			\item Reconhecimento facial com \textit{Eigenfaces} é realizado.
-			\item Retorna o nome da face ``mais parecida'' e a confiança do reconhecimento.
-		\end{enumerate}
+	O Módulo de Reconhecimento é dependente do de Rastreamento. Ele ficará ocioso até que chegue uma requisição de reconhecimento de um determinado usuário. A Seção~\ref{sec:rastreamento-reconhecimento} explica mais detalhadamente a relação entre os dois módulos.
 
-	O Módulo de Reconhecimento será dependente do de Rastreamento. Ele ficará ocioso até que chegue uma requisição de reconhecimento de um determinado usuário. A seção~\ref{sec:rastreamento-reconhecimento} explicará mais detalhadamente a relação entre os dois módulos.
+	\subsection{Pré-processamento e Processamento da Imagem}
+		
+		As etapas de processamento da imagens permitem criar um padrão nas imagens de entrada que aumentam a acurácia do reconhecimento. No Sistema \textit{True} as etapas de processamento consistem em converter a imagem em escala de cinza, redimensiona-la e equaliaza-la criando, assim, um padrão de cor, tamanho, brilho e contraste nas imagens.
+
+		A conversão da imagem de entrada para escala de cinza é exemplificado pela Figura~\ref{fig:greyscale} e implementado da seguinte maneira:
+
+		\begin{figure}[hbt]
+			\begin{center}
+				\includegraphics[scale=1.0]{figuras/4.ProblemaEProposta/greyscale.png}
+			\end{center}
+			\caption{Exemplo de uma imagem de face normal, em escala de cinza e equalizada. Adaptada de ~\ref{Site la}}
+			\label{fig:greyscale}
+		\end{figure}
+
+	\subsection{Detecção Facial}
+	\subsection{Reconhecimento Facial com \textit{Eigenfaces}}
 
 \section{Módulo de Rastreamento}
 
