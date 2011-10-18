@@ -38,7 +38,7 @@ As etapas de processamento da imagem utilizadas nesse trabalho consistem na conv
 			imageTmp = cvCreateImage(size, IPL_DEPTH_8U, img->nChannels);
 			cvCopy(img, imageTmp, NULL);
 
-			// cria uma nova imagem da região detectada
+			// cria uma nova imagem da regiao detectada
 			// seta a região de interesse que é ao redor da face
 			cvSetImageROI(imageTmp, region);
 
