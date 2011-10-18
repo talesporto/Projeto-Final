@@ -1,0 +1,126 @@
+\section{Módulo de Reconhecimento}
+
+	O Módulo de Reconhecimento, como se deduz do próprio nome, é responsável pela identificação dos usuários no ambiente utilizando a face como característica biométrica, pois ela permite um reconhecimento de forma não intrusiva, como mensionada na Seção~\ref{sec:biometria}. 
+
+	Para realizar a detecção facial é utilizado o método \textit{Viola-Jones}~\ref{ref:viola-jones}. Um método que pode ser utilizado para construir uma abordagem de detecção facial rápida e eficaz~\cite{violajones} em tempo real. Além disso, este método é implementado pela biblioteca \textit{OpenCV} (\textit{Open Source Computer Vision}) onde bons classificadores em cascata de \textit{Haar features} são fornecidos, como por exemplo um classificador de faces frontais, utilizado nesse sistema.
+
+	Para realizar o reconhecimento facial é utilizado \textit{Eigenfaces}~\ref{sec:reconhecimento}. Uma técnica bastante satisfatória quando utilizada sobre uma base de dados (faces) relativamente grande, permitindo ao sistema inferir, das imagens suas principais características e, partindo delas, realizar o reconhecimento das imagens utilizando um número bastante reduzido de cálculos~\cite{artigo-eigenface}, permitindo, assim, um reconhecimento em tempo real.
+
+	A detecção e o reconhecimento são feitos em imagens de usuários que são passadas pelo Módulo de Rastreamento. Essa imagens são compostas somente pela região da imagem em que o usuário se encontra, como mostrado na Figura (\textbf{colocar figura aqui.}). Basicamente, o processo de reconhecimento é realizado pelas seguintes etapas e ilustrado na Figura~\ref{fig:processo-reconhecimento}:
+
+		\begin{enumerate}
+			\item Obtém a imagem de entrada correspondente a imagem formada somente pelo usuário cujo reconhecimento foi requisitado.
+			\item Pré-processamento da imagem: a imagem é convertida em escala de cinza.
+			\item Realiza detecção facial na imagem. Caso nenhuma face seja encontrada, retorna ``vazio''. Vale ressaltar que no máximo uma face pode ser encontrada nesta imagem.
+			\item Processamento da imagem: uma nova imagem é criada recortando a região da face encontrada, a imagem, então, é redimensionada e equalizada criando assim uma padrão de tamanho, brilho e contraste nas imagens aumentando a acurácia do reconhecimento.
+			\item Reconhecimento facial com \textit{Eigenfaces} é realizado.
+			\item Retorna o nome da face ``mais parecida'' e a confiança do reconhecimento.
+		\end{enumerate}
+
+		\begin{figure}[hbt]
+			\begin{center}
+				\includegraphics[scale=2.0]{figuras/4.ProblemaEProposta/reconhecimento-simples.png}
+			\end{center}
+			\caption{Representação das etapas propostas para o reconhecimento facial no Módulo de Reconhecimento.}
+			\label{fig:processo-reconhecimento}
+		\end{figure}
+
+	O Módulo de Reconhecimento é dependente do de Rastreamento. Ele ficará ocioso até que chegue uma requisição de reconhecimento de um determinado usuário. A Seção~\ref{sec:rastreamento-reconhecimento} explica mais detalhadamente a relação entre os dois módulos.
+
+	\subsection{Pré-processamento e Processamento da Imagem}
+		
+		As etapas de processamento das imagens permitem criar um padrão nas mesmas aumentando a acurácia do reconhecimento. No Sistema \textit{True} as etapas de processamento consistem em converter a imagem em escala de cinza, redimensiona-la e equaliaza-la criando, assim, um padrão de cor, tamanho, brilho e contraste nas imagens.
+
+		A Figura~\ref{fig:greyscale} exemplifica uma imagem normal de uma face, depois a mesma convertida em escala de cinza e equalizada O Apêndice~\ref{apend:processamento} mostra trechos de código em linguagem C que implementam tais etapas.
+
+		\begin{figure}[hbt]
+			\begin{center}
+				\includegraphics[scale=0.7]{figuras/4.ProblemaEProposta/greyscale.png}
+			\end{center}
+			\caption{Exemplo de uma imagem de face normal, em escala de cinza e equalizada. Adaptada de~\cite{shervin}.}
+			\label{fig:greyscale}
+		\end{figure}
+
+	\subsection{Detecção Facial}
+
+		O processo de detecção facial procura por uma face em uma imagem pré-processada. Para realizar detecção facial utilizando o método \textit{Viola-Jones} é necessário a utilização de um classificador em cascata, como mencionado na Subseção~\ref{subsec:reconhecimento}. Portanto, entre os diversos classificadores em cascata presentes na biblioteca \textit{OpenCV}, foi utilizado o classificador \textit{haarcascade\underline{ }frontalface\underline{ }alt.xml}, um classificador treinado para detectar faces frontais em imagens.
+
+		A Figura~\ref{fig:diagrama-deteccao} mostra o fluxo básico do processo de detecção de faces no Sistema \textit{True}.
+
+			\begin{figure}[H]
+			\begin{center}
+				\includegraphics[scale=0.7]{figuras/4.ProblemaEProposta/diagrama-detectar-face.png}
+			\end{center}
+			\caption{Fluxo de execução do processo de detecção facial no Sistema \textit{True}.}
+			\label{fig:diagrama-deteccao}
+		\end{figure}
+
+	% \begin{lstlisting}[caption=Função que detecta faces em uma imagem., label=list:detect]
+	% 	CvRect detectFace(const IplImage *inputImg, const CvHaarClassifierCascade* cascade) {
+	% 		const float search_scale_factor = 1.1f;
+	% 		IplImage *detectImg;
+	% 		CvMemStorage* storage;
+	% 		CvRect rc;
+	% 		CvSeq* rects;
+	% 		int i;
+
+	% 		// tamanho minimo da face para ser detectada (20x20)
+	% 		const CvSize minFeatureSize = cvSize(20, 20);
+
+	% 		//flags utilizadas na deteccao
+	% 		const int flags = CV_HAAR_FIND_BIGGEST_OBJECT | CV_HAAR_DO_ROUGH_SEARCH;
+
+	% 		//cria um armazenamento de memoria vazio
+	% 		storage = cvCreateMemStorage(0);
+	% 		cvClearMemStorage(storage);
+
+	% 		//detecta todas as faces na imagem
+	% 		rects = cvHaarDetectObjects(detectImg, (CvHaarClassifierCascade*) cascade, storage, search_scale_factor, 3, flags, minFeatureSize);
+
+	% 		// obtem a primeira face detectada (a maior)
+	% 		if (rects->total > 0) {
+	% 			rc = *(CvRect*) cvGetSeqElem(rects, 0);
+	% 		} else
+	% 			// nao achou nenhuma face
+	% 			rc = cvRect(-1, -1, -1, -1); 
+
+	% 		cvReleaseMemStorage(&storage);
+
+	% 		// retorna a maior face encontrada, ou (-1,-1,-1,-1).
+	% 		return rc; 
+
+	% 	}
+
+	% \end{lstlisting}
+
+	\subsection{Reconhecimento Facial com \textit{Eigenfaces}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

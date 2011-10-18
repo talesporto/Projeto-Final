@@ -1,0 +1,107 @@
+\chapter{Processamento da imagem}
+\label{apend:processamento}
+
+As etapas de processamento da imagem utilizadas nesse trabalho consistem na conversão em escala de cinza, corte, redimensionamento e equalização da mesma. Neste apêndice são mostrado trechos de códigos que implementam tais etapas utilizando a biblioteca \textit{OpenCV}.
+
+\section{Escala de Cinza}
+
+		\begin{lstlisting}[caption=Conversão de uma imagem para escala de cinza., label=list:grey-scale]
+		IplImage* imageToGreyscale(const IplImage *imageSrc) {
+			IplImage *imageGrey;
+
+			// cria uma nova imagem do mesmo tamanho que a imagem passada como parametro e de 1 canal.
+			imageGrey = cvCreateImage(cvGetSize(imageSrc), IPL_DEPTH_8U, 1);
+
+			//converte o espaco de cor de imageSrc para o espaco de cor (cinza) da imageGrey
+			cvCvtColor(imageSrc, imageGrey, CV_BGR2GRAY);
+
+			return imageGrey;
+		}
+		\end{lstlisting}
+
+\section{Corte da Imagem}
+
+	\begin{lstlisting}[caption=Corte de uma imagem., label=list:crop]
+		IplImage* crop(const IplImage *img, const CvRect region) {
+			IplImage *imageTmp;
+			IplImage *imageRGB;
+			CvSize size;
+			size.height = img->height;
+			size.width = img->width;
+
+			if (img->depth != IPL_DEPTH_8U) {
+				printf("ERROR: img->depth de %d desconhecido ao inves de 8 bits por pixel passado a crop().\n", img->depth);
+				exit(1);
+			}
+
+			// cria uma nova imagem (colorida ou em cinza) e copia os conteudos da imagem nela.
+			imageTmp = cvCreateImage(size, IPL_DEPTH_8U, img->nChannels);
+			cvCopy(img, imageTmp, NULL);
+
+			// cria uma nova imagem da região detectada
+			// seta a região de interesse que é ao redor da face
+			cvSetImageROI(imageTmp, region);
+
+			//copia a imagem de interesse na nova iplImage (imageRGB) e a retorna
+			size.width = region.width;
+			size.height = region.height;
+			imageRGB = cvCreateImage(size, IPL_DEPTH_8U, img->nChannels);
+			cvCopy(imageTmp, imageRGB, NULL);//copia somente a regiao
+
+			cvReleaseImage(&imageTmp);
+			return imageRGB;
+		}
+	\end{lstlisting}
+
+\section{Redimensionamento}
+
+	\begin{lstlisting}[caption=Redimensionamento de uma imagem., label=list:resize]
+		IplImage* resize(const IplImage *origImg, int newWidth, int newHeight) {
+			IplImage *outImg = 0;
+			int origWidth, origHeight;
+
+			if (origImg) {
+				origWidth = origImg->width;
+				origHeight = origImg->height;
+			}
+
+			if (newWidth <= 0 || newHeight <= 0 || origImg == 0 || origWidth <= 0 || origHeight <= 0) {
+				printf("ERROR: Tamanho %dx%d desejado para imagem invalido\n.", newWidth, newHeight);
+				exit(1);
+			}
+
+			// modifica as dimensoes da imagem, mesmo se a proporcao mude
+			outImg = cvCreateImage(cvSize(newWidth, newHeight), origImg->depth, origImg->nChannels);
+			cvResetImageROI((IplImage*) origImg);
+			if (newWidth > origImg->width && newHeight > origImg->height) { // aumentar a imagem
+				//CV_INTER_LINEAR muito boa para aumentar a imagem
+				cvResize(origImg, outImg, CV_INTER_LINEAR); 
+
+			} else { //diminuir a imagem
+				//CV_INTER_AREA muito boa para diminuir a imagem, porem pessima para aumenta-la
+				cvResize(origImg, outImg, CV_INTER_AREA);
+			}
+
+			return outImg;
+		}
+	\end{lstlisting}
+
+\section{Equalização}
+
+	\begin{lstlisting}[caption=Equalização de uma imagem., label=list:equalizacao]
+		//cria uma imagem limpa na escala de cinza
+		equalizedImg = cvCreateImage(cvGetSize(sizedImg), 8, 1); 
+
+		// metodo que realiza "equalização de histograma"
+		// normalizando o brilho e aumentando o contraste
+		cvEqualizeHist(sizedImg, equalizedImg);
+	\end{lstlisting}	
+
+
+
+
+
+
+
+
+
