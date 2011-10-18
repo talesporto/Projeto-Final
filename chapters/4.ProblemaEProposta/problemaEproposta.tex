@@ -32,9 +32,16 @@ No final deste capítulo, a integração do Sistema \textit{True} com o middlewa
 
 		\begin{enumerate}
 			\item Obtém a imagem de entrada correspondente a imagem formada somente pelo usuário cujo reconhecimento foi requisitado.
-			\item Pré-processamento da imagem: a imagem é convertida em escala de cinza.
+			\item \label{item:pre-processamento} Pré-processamento da imagem: a
+			imagem é convertida em escala de cinza.
 			\item Realiza detecção facial na imagem. Caso nenhuma face seja encontrada, retorna ``vazio''. Vale a pena ressaltar que no máximo uma face pode ser encontrada nesta imagem.
-			\item Processamento da imagem: uma nova imagem é criada recortando a região da face encontrada, a imagem, então, é redimensionada e equalizada criando assim uma padrão de tamanho, brilho e contraste nas imagens aumentando a acurácia do reconhecimento.
+			\begin{item} 
+				Processamento da imagem: uma nova imagem é criada recortando a região da
+				face encontrada, a imagem, então, é redimensionada e equalizada criando
+				assim um padrão de tamanho, brilho e  contraste nas imagens aumentando a
+				acurácia do reconhecimento. 
+				\label{processamento}  
+			\end{item}
 			\item Reconhecimento facial com \textit{Eigenfaces} é realizado.
 			\item Retorna o nome da face ``mais parecida'' e a confiança do reconhecimento.
 		\end{enumerate}
@@ -65,6 +72,20 @@ No final deste capítulo, a integração do Sistema \textit{True} com o middlewa
 
 	\subsection{Detecção Facial}
 	\subsection{Reconhecimento Facial com \textit{Eigenfaces}}
+	
+		Como já foi dito anteriormente, a imagem a ser reconhecida está pre-processada
+		e processada \cite{processamento} de forma a padronizar as amostras.
+		Essa imagem processada é projetada em um subespaço
+		
+		Após detectar a face a mesma é recortada da imagem original e isolada para que
+		possa ser feito o rastreamento. Para que seja possível reconhecer os padrões
+		entre as imagens a mesma é redimensionada para o mesmo tamanho das imagens
+		presentes no banco de faces.
+		
+		<projeta a imagem no subespaço>
+		
+		<encontra a face mais proxima dentro do sub espaço> 
+		
 
 \section{Módulo de Rastreamento}
 
