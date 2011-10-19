@@ -91,6 +91,21 @@
 			\label{fig:cambridgeFaceDb}
 		\end{figure}
 
+		A Figura~\ref{fig:diagrama-reconhecimento} mostra o fluxo básico do processo de reconhecimento facial no Sistema \textit{True}.
+
+			\begin{figure}[H]
+			\begin{center}
+				\includegraphics[scale=0.5]{figuras/4.ProblemaEProposta/diagrama-reconhecimento.png}
+			\end{center}
+			\caption{Fluxo de execução do processo de reconhecimento facial no Sistema \textit{True}.}
+			\label{fig:diagrama-reconhecimento}
+		\end{figure}
+
+		Uma das etapas consiste no cálculo da distância entre a imagem projetada no subespaço PCA aos eigenfaces. Inicialmente, o cálculo desta distância era feito utilizando distância euclidiana, porém não apresentava bons resultados em algumas condições. Portanto, este cálculo passou a ser feito utilizando distância Mahalanobis. Contudo, ela também não apresentou bons resultados em alguns casos. Então, alguns testes foram feitos utilizando as duas ditâncias de maneira conjunta: uma imagem só é tida como reconhecida quando o resultado das duas distâncias apontarem para a mesma identidade. Com isso, houve uma melhora significante dos resultados.
+
+		A última etapa consiste no cálculo da confiança do reconhecimento. Explicar como se calcula.
+
+		% A confidence of 1.0 would mean a god match, and a confidence of 0.0 or negative would mean a bad match. But beware that the confidence formula I use in the code is just a very basic confidence metric that isn't necessarily too reliable, but I figured that most people would like to see a rough confidence value. 
 
 
 

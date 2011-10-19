@@ -1,50 +1,24 @@
-\chapter{Sistema TRUE}
+\chapter{Sistema \textit{True}}
 
-	Observando a realidade de um ambiente inteligente fica claro que as informações
-	como posição das pessoas e suas respectivas identidades são imprescindíveis para
-	que decisões possam ser tomadas. Atualmente, a maioria das soluções encontradas
-	para fornecer esse tipo de informação foram projetadas para funcionar em
-	ambientes rigidamente definidos. Com isso, não seria adequado tentar incorporar
-	soluções como estas em um ambiente com diferentes dimensões, condições de
-	iluminação, posição dos móveis, diferentes sensores pois este resultaria em um
-	cenário diferente. Além disso, a solução deve ser integrada com o middleware
-	\textit{UbiquitOS}, o qual gerência os serviços providos pelo ambiente
-	inteligente.
+Observando a realidade de um ambiente inteligente fica claro que as informações como posição das pessoas e suas respectivas identidades são imprescindíveis para que decisões possam ser tomadas. Atualmente, a maioria das soluções encontradas para fornecer esse tipo de informação foram projetadas para funcionar em ambientes rigidamente definidos. Com isso, não seria adequado tentar incorporar soluções como estas em um ambiente com diferentes dimensões, condições de iluminação, posição dos móveis, diferentes sensores pois este resultaria em um cenário diferente. Além disso, a solução deve ser integrada com o middleware \textit{UbiquitOS}, o qual gerência os serviços providos pelo ambiente inteligente.
 
+Esse trabalho propõe, então, um sistema aberto de rastreamento, localização e identificação de pessoas em um ambiente inteligente integrado com o middleware \textit{UbiquitOS}. Tal sistema será chamado de TRUE, \textit{\textbf{T}racking and \textbf{R}ecognizing \textbf{U}sers in the \textbf{E}nvironment}.
 
-	Esse trabalho propõe, então, um sistema aberto de rastreamento, localização e
-	identificação de pessoas em um ambiente inteligente integrado com o middleware
-	\textit{UbiquitOS}. Tal sistema será chamado de TRUE, \textit{\textbf{T}racking
-	and \textbf{R}ecognizing \textbf{U}sers in the \textbf{E}nvironment}.
+O Sistema \textit{True} é um sistema monomodal que utiliza somente dados visuais, como imagens de cor e profundidade. As imagens de profundidade serão utilizadas no rastreamento e localização dos usuários no ambiente, e as imagens de cor serão utilizadas no reconhecimento facial e no cadastro dos usuários. Portanto, os dispositivos presentes no ambiente devem ser capazes de fornecer esses tipos de dados a um taxa e qualidade adequada. 
 
-	O Sistema TRUE é um sistema monomodal que utiliza somente dados visuais, como
-	imagens de cor e profundidade. As imagens de profundidade serão utilizadas no
-	rastreamento e localização dos usuários no ambiente, e as imagens de cor serão
-	utilizadas no reconhecimento facial e no cadastro dos usuários. Portanto, os
-	dispositivos presentes no ambiente devem ser capazes de fornecer esses tipos de
-	dados a um taxa e qualidade adequada.
+Para obter os dados necessários, o sistema utiliza o sensor \textit{Kinect} da Microsoft descrito no Apêndice~\ref{sec:kinect}, um dispositivo bastante acessível e capaz de fornecer imagens de cor e de profundidade sincronizadas a uma taxa e qualidade necessária.
 
-	Para obter os dados necessários, o sistema utiliza o sensor \textit{Kinect} da
-	Microsoft~\ref{sec:kinect}, um dispositivo bastante acessível e capaz de
-	fornecer imagens de cor e de profundidade sincronizadas com a qualidade
-	necessária.
+O sistema \textit{True} é dividido em quatro módulos principais:
 
-	O Sistema TRUE é dividido em três módulos principais:
 
 	\begin{itemize}
 		\item \textbf{Módulo de Rastreamento e Localização}: parte do sistema responsável pelo rastreamento e localização dos usuários no ambiente.
 		\item \textbf{Módulo de Reconhecimento}: parte do sistema responsável por identificar os usuários rastreados.
-		\item \textbf{Módulo de Registro}: parte do sistema responsável pelo cadastro de novos usuários e treino do sistema
+		\item \textbf{Módulo de Registro}: parte do sistema responsável pelo cadastro de novos usuários e treino do sistema.
+		\item \textbf{Módulo \textit{UbiquitOS}}: parte do sistema responsável pela integração e comunicação do sistema com o middleware.
 	\end{itemize}
 
-	O Módulo de Registro será independente dos demais. Porém, os outros dois
-	módulos devem trocar informações entre si para centralizar todas as informações
-	(localização e reconhecimento) de todos usuários rastreados no ambiente. A
-	seguir, é explicado mais detalhadamente cada módulo e como tal troca de
-	informações ocorre.
-
-	No final deste capítulo, a integração do Sistema TRUE com o middleware
-	\textit{UbiquitOS} é detalhada.
+O Módulo de Registro é independente dos demais. Porém, os outros dois módulos devem trocar informações entre si para centralizar todas as informações (localização e reconhecimento) de todos usuários rastreados no ambiente. A seguir, é explicado mais detalhadamente cada módulo e como tal troca de informações ocorre.
 
 
 
@@ -71,6 +45,9 @@
 			\caption{Planta do \textit{SmartSpace} Laico.}
 			\label{fig:laico}
 		\end{figure}	
+
+
+\section{Módulo \textit{UbiquitOS}}
 
 
 
