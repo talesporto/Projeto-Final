@@ -1,4 +1,5 @@
--falar sobre pré-processamento da imagem: greyescalte, equaliza, resize
+
 - colocar figura no modulo de reconhecimento da cena toda e da imagem so com usuario
 - falar qual categoria viola-jones se encaixa
 -escrever sobre o uos
+- falar sobre eigenvalues
