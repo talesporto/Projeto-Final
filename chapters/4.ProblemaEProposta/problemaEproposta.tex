@@ -1,14 +1,35 @@
-\chapter{Sistema \textit{True}}
+\chapter{Sistema TRUE}
 
-Observando a realidade de um ambiente inteligente fica claro que as informações como posição das pessoas e suas respectivas identidades são imprescindíveis para que decisões possam ser tomadas. Atualmente, a maioria das soluções encontradas para fornecer esse tipo de informação foram projetadas para funcionar em ambientes rigidamente definidos. Com isso, não seria adequado tentar incorporar soluções como estas em um ambiente com diferentes dimensões, condições de iluminação, posição dos móveis, diferentes sensores pois este resultaria em um cenário diferente. Além disso, a solução deve ser integrada com o middleware \textit{UbiquitOS}, o qual gerência os serviços providos pelo ambiente inteligente.
+	Observando a realidade de um ambiente inteligente fica claro que as informações
+	como posição das pessoas e suas respectivas identidades são imprescindíveis para
+	que decisões possam ser tomadas. Atualmente, a maioria das soluções encontradas
+	para fornecer esse tipo de informação foram projetadas para funcionar em
+	ambientes rigidamente definidos. Com isso, não seria adequado tentar incorporar
+	soluções como estas em um ambiente com diferentes dimensões, condições de
+	iluminação, posição dos móveis, diferentes sensores pois este resultaria em um
+	cenário diferente. Além disso, a solução deve ser integrada com o middleware
+	\textit{UbiquitOS}, o qual gerência os serviços providos pelo ambiente
+	inteligente.
 
-Esse trabalho propõe, então, um sistema aberto de rastreamento, localização e identificação de pessoas em um ambiente inteligente integrado com o middleware \textit{UbiquitOS}. Tal sistema será chamado de TRUE, \textit{\textbf{T}racking and \textbf{R}ecognizing \textbf{U}sers in the \textbf{E}nvironment}.
 
-O Sistema \textit{True} é um sistema monomodal que utiliza somente dados visuais, como imagens de cor e profundidade. As imagens de profundidade serão utilizadas no rastreamento e localização dos usuários no ambiente, e as imagens de cor serão utilizadas no reconhecimento facial e no cadastro dos usuários. Portanto, os dispositivos presentes no ambiente devem ser capazes de fornecer esses tipos de dados a um taxa e qualidade adequada. 
+	Esse trabalho propõe, então, um sistema aberto de rastreamento, localização e
+	identificação de pessoas em um ambiente inteligente integrado com o middleware
+	\textit{UbiquitOS}. Tal sistema será chamado de TRUE, \textit{\textbf{T}racking
+	and \textbf{R}ecognizing \textbf{U}sers in the \textbf{E}nvironment}.
 
-Para obter os dados necessários, o sistema utiliza o sensor \textit{Kinect} da Microsoft~\ref{sec:kinect}, um dispositivo bastante acessível e capaz de fornecer imagens de cor e de profundidade sincronizadas a uma taxa e qualidade necessária.
+	O Sistema TRUE é um sistema monomodal que utiliza somente dados visuais, como
+	imagens de cor e profundidade. As imagens de profundidade serão utilizadas no
+	rastreamento e localização dos usuários no ambiente, e as imagens de cor serão
+	utilizadas no reconhecimento facial e no cadastro dos usuários. Portanto, os
+	dispositivos presentes no ambiente devem ser capazes de fornecer esses tipos de
+	dados a um taxa e qualidade adequada.
 
-O sistema \textit{True} é dividido em três módulos principais:
+	Para obter os dados necessários, o sistema utiliza o sensor \textit{Kinect} da
+	Microsoft~\ref{sec:kinect}, um dispositivo bastante acessível e capaz de
+	fornecer imagens de cor e de profundidade sincronizadas com a qualidade
+	necessária.
+
+	O Sistema TRUE é dividido em três módulos principais:
 
 	\begin{itemize}
 		\item \textbf{Módulo de Rastreamento e Localização}: parte do sistema responsável pelo rastreamento e localização dos usuários no ambiente.
@@ -16,24 +37,34 @@ O sistema \textit{True} é dividido em três módulos principais:
 		\item \textbf{Módulo de Registro}: parte do sistema responsável pelo cadastro de novos usuários e treino do sistema
 	\end{itemize}
 
-O Módulo de Registro será independente dos demais. Porém, os outros dois módulos devem trocar informações entre si para centralizar todas as informações (localização e reconhecimento) de todos usuários rastreados no ambiente. A seguir, é explicado mais detalhadamente cada módulo e como tal troca de informações ocorre.
+	O Módulo de Registro será independente dos demais. Porém, os outros dois
+	módulos devem trocar informações entre si para centralizar todas as informações
+	(localização e reconhecimento) de todos usuários rastreados no ambiente. A
+	seguir, é explicado mais detalhadamente cada módulo e como tal troca de
+	informações ocorre.
 
-No final deste capítulo, a integração do Sistema \textit{True} com o middleware \textit{UbiquitOS} é detalhada.
-
-
-
-\input{chapters/4.ProblemaEProposta/modulo_reconhecimento}
-\input{chapters/4.ProblemaEProposta/modulo_rastreamento}
-\input{chapters/4.ProblemaEProposta/rastreamento-reconhecimento}
-\input{chapters/4.ProblemaEProposta/modulo_registro}
+	No final deste capítulo, a integração do Sistema TRUE com o middleware
+	\textit{UbiquitOS} é detalhada.
 
 
 
-\section{\textit{SmartSpace} Laico}
+	\input{chapters/4.ProblemaEProposta/modulo_reconhecimento}
+	\input{chapters/4.ProblemaEProposta/modulo_rastreamento}
+	\input{chapters/4.ProblemaEProposta/rastreamento-reconhecimento}
+	\input{chapters/4.ProblemaEProposta/modulo_registro}
 
-	O ambiente para o qual o sistema \textit{True} será projetado, desenvolvido e testado chama-se LAICO (\textbf{LA}boratório de sistemas \textbf{I}ntegrados e \textbf{CO}ncorrente), um laboratório do Departamento de Ciência da Computação da Universidade de Brasília. O LAICO possui dimensões de, aproximadamente,  $\displaystyle 7,67m$ x $\displaystyle 6,45m$ ilustrado pela Figura~\ref{fig:laico}.
 
-	\begin{figure}[hbt]
+
+	\section{\textit{SmartSpace} Laico}
+
+		O ambiente para o qual o Sistema TRUE será projetado, desenvolvido e testado
+		chama-se LAICO (\textbf{LA}boratório de sistemas \textbf{I}ntegrados e
+		\textbf{CO}ncorrente), um laboratório do Departamento de Ciência da Computação
+		da Universidade de Brasília. O LAICO possui dimensões de, aproximadamente, 
+		$\displaystyle 7,67m$ x $\displaystyle 6,45m$ ilustrado pela
+		Figura~\ref{fig:laico}.
+	
+		\begin{figure}[hbt]
 			\begin{center}
 				\includegraphics[scale=0.6]{figuras/4.ProblemaEProposta/laico.png}
 			\end{center}
