@@ -3,3 +3,4 @@
 - falar qual categoria viola-jones se encaixa
 -escrever sobre o uos
 - falar sobre eigenvalues
+- falar sobre calculo da confianca
