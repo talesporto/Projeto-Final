@@ -20,7 +20,7 @@ Os métodos do \textit{UserDriver} podem ser divididos basicamente em três grup
 	\item \textbf{Serviços}: são os métodos que implementam os serviços que o \textit{UserDriver} disponibiliza as aplicações presentes no ambiente. Nestes serviços incluem consultas as informações (nome e localização) de qualquer usuário presente no ambiente, listagem dos usuários no ambiente, cadastro e remoção de novos usuário do Sistema TRUE e retreino do mesmo, e registro de \textit{listeners} que ``escutam'' os eventos gerados pelo driver.
 \end{itemize}
 
-O Módulo de Integração comunica diretamente com os Módulos de Rastreamento e de Registro através do \textit{UserDriver}. A comunicação com o Módulo de Registro acontece somente quando alguma aplicação deseja cadastrar ou remover novos usuários. Já a comunicação com o Módulo de Rastreamento acontece quase a todo momento: 
+O Módulo de Integração comunica diretamente com os Módulos de Rastreamento e de Registro através do \textit{UserDriver}. A comunicação com o Módulo de Registro acontece somente quando alguma aplicação deseja cadastrar ou remover usuários. Já a comunicação com o Módulo de Rastreamento acontece quase a todo momento: 
 
 	\begin{itemize}
 		\item a cada 5 segundos o Módulo de Rastreamento envia informações correntes sobre todos os usuários no ambiente atualizando as informações que o Módulo de Integração detém;

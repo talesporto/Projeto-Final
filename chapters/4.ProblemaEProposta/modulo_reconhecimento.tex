@@ -7,10 +7,16 @@
 
 	A detecção e o reconhecimento são feitos em imagens de usuários que são
 	passadas pelo Módulo de Rastreamento. As imagens passadas são compostas somente
-	pela região em que o usuário se encontra, como mostrado na Figura
-	(\textbf{colocar figura aqui.}). Basicamente, o processo de reconhecimento é
-	realizado pelas seguintes etapas e ilustrado na
-	Figura~\ref{fig:processo-reconhecimento}:
+	pela região em que o usuário se encontra, como mostrado na Figura~\ref{fig:users-img}. Basicamente, o processo de reconhecimento é
+	realizado pelas seguintes etapas e ilustrado na Figura~\ref{fig:processo-reconhecimento}:
+
+		\begin{figure}[hbt]
+			\begin{center}
+				\includegraphics[scale=0.3]{figuras/4.ProblemaEProposta/users-img.png}
+			\end{center}
+			\caption{Exemplo de uma imagem composta somente pela região em que o usuário se encontra.}
+			\label{fig:users-img}
+		\end{figure}
 
 		\begin{enumerate}
 			\item Obtém a imagem de entrada correspondente a imagem formada somente pelo usuário cujo reconhecimento foi requisitado.

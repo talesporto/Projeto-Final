@@ -2,14 +2,13 @@
 
 Observando a realidade de um ambiente inteligente fica claro que as informações como posição das pessoas e suas respectivas identidades são imprescindíveis para que decisões possam ser tomadas. Atualmente, a maioria das soluções encontradas para fornecer esse tipo de informação foram projetadas para funcionar em ambientes rigidamente definidos. Com isso, não seria adequado tentar incorporar soluções como estas em um ambiente com diferentes dimensões, condições de iluminação, posição dos móveis, diferentes sensores pois este resultaria em um cenário diferente. Além disso, a solução deve ser integrada com o middleware \textit{UbiquitOS}, o qual gerência os serviços providos pelo ambiente inteligente.
 
-Esse trabalho propõe, então, um sistema aberto de rastreamento, localização e identificação de pessoas em um ambiente inteligente integrado com o middleware \textit{UbiquitOS}. Tal sistema será chamado de TRUE, \textit{\textbf{T}racking and \textbf{R}ecognizing \textbf{U}sers in the \textbf{E}nvironment}.
+Esse trabalho propõe, então, um sistema aberto de rastreamento, localização e identificação de pessoas em um ambiente inteligente integrado com o middleware \textit{UbiquitOS}. Tal sistema é chamado de TRUE, \textit{\textbf{T}racking and \textbf{R}ecognizing \textbf{U}sers in the \textbf{E}nvironment}.
 
 O Sistema TRUE é um sistema monomodal implementado em C++ que utiliza somente dados visuais, como imagens de cor e profundidade. As imagens de profundidade serão utilizadas no rastreamento e localização dos usuários no ambiente, e as imagens de cor serão utilizadas no reconhecimento facial e no cadastro dos usuários. Portanto, os dispositivos presentes no ambiente devem ser capazes de fornecer esses tipos de dados a um taxa e qualidade adequada. 
 
 Para obter os dados necessários, o sistema utiliza o sensor \textit{Kinect} da Microsoft descrito no Apêndice~\ref{sec:kinect}, um dispositivo bastante acessível e capaz de fornecer imagens de cor e de profundidade sincronizadas a uma taxa e qualidade necessária.
 
 O Sistema TRUE é dividido em quatro módulos principais:
-
 
 	\begin{itemize}
 		\item \textbf{Módulo de Rastreamento}: parte do sistema responsável pelo rastreamento e localização dos usuários no ambiente.
