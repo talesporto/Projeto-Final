@@ -1,14 +1,22 @@
 \section{Módulo de Reconhecimento}
 
-	O Módulo de Reconhecimento, como se deduz do próprio nome, é responsável pela identificação dos usuários no ambiente utilizando a face como característica biométrica, pois ela permite um reconhecimento de forma não intrusiva, como mensionada na Seção~\ref{sec:biometria}. 
+	O Módulo de Reconhecimento, como se deduz do próprio nome, é responsável pela
+	identificação dos usuários no ambiente utilizando a face como característica
+	biométrica. A face foi escolhida pois ela permite um reconhecimento não
+	intrusivo, como mensionada na Seção~\ref{sec:biometria}.
 
-	A detecção e o reconhecimento são feitos em imagens de usuários que são passadas pelo Módulo de Rastreamento. Essa imagens são compostas somente pela região da imagem em que o usuário se encontra, como mostrado na Figura (\textbf{colocar figura aqui.}). Basicamente, o processo de reconhecimento é realizado pelas seguintes etapas e ilustrado na Figura~\ref{fig:processo-reconhecimento}:
+	A detecção e o reconhecimento são feitos em imagens de usuários que são
+	passadas pelo Módulo de Rastreamento. As imagens passadas são compostas somente
+	pela região em que o usuário se encontra, como mostrado na Figura
+	(\textbf{colocar figura aqui.}). Basicamente, o processo de reconhecimento é
+	realizado pelas seguintes etapas e ilustrado na
+	Figura~\ref{fig:processo-reconhecimento}:
 
 		\begin{enumerate}
 			\item Obtém a imagem de entrada correspondente a imagem formada somente pelo usuário cujo reconhecimento foi requisitado.
 			\item Pré-processamento da imagem: a imagem é convertida em escala de cinza.
 			\item Realiza detecção facial na imagem. Caso nenhuma face seja encontrada, retorna ``vazio''. Vale ressaltar que no máximo uma face pode ser encontrada nesta imagem.
-			\item Processamento da imagem: uma nova imagem é criada recortando a região da face encontrada, a imagem, então, é redimensionada e equalizada criando assim uma padrão de tamanho, brilho e contraste nas imagens aumentando a acurácia do reconhecimento.
+			\item Processamento da imagem: uma nova imagem é criada recortando a região da face encontrada, a imagem, então, é redimensionada e equalizada criando assim um padrão de tamanho, brilho e contraste nas imagens aumentando a acurácia do reconhecimento.
 			\item Reconhecimento facial com \textit{Eigenfaces} é realizado.
 			\item Retorna o nome da face ``mais parecida'' e a confiança do reconhecimento.
 		\end{enumerate}
@@ -21,13 +29,19 @@
 			\label{fig:processo-reconhecimento}
 		\end{figure}
 
-	O Módulo de Reconhecimento é dependente do de Rastreamento. Ele ficará ocioso até que chegue uma requisição de reconhecimento de um determinado usuário. A Seção~\ref{sec:rastreamento-reconhecimento} explica mais detalhadamente a relação entre os dois módulos.
+	O Módulo de Reconhecimento é dependente do de Rastreamento. Ele ficará ocioso
+	até que chegue uma requisição de reconhecimento de um determinado usuário. A
+	Seção~\ref{sec:rastreamento-reconhecimento} explica mais detalhadamente a
+	relação entre os dois módulos.
 
 	\subsection{Pré-processamento e Processamento da Imagem}
 		
 		As etapas de processamento das imagens permitem criar um padrão nas mesmas aumentando a acurácia do reconhecimento. No Sistema TRUE as etapas de processamento consistem em converter a imagem em escala de cinza, recorta-la, redimensiona-la e equaliaza-la criando, assim, um padrão de cor, tamanho, brilho e contraste nas imagens.
 
-		A Figura~\ref{fig:greyscale} exemplifica uma imagem normal de uma face, depois a mesma convertida em escala de cinza e equalizada O Apêndice~\ref{apend:processamento} mostra trechos de código em linguagem C que implementam tais etapas.
+		A Figura~\ref{fig:greyscale} exemplifica uma imagem normal de uma face,
+		depois a mesma convertida em escala de cinza e equalizada O
+		Apêndice~\ref{apend:processamento} mostra trechos de código em linguagem C
+		que implementam tais etapas.
 
 		\begin{figure}[hbt]
 			\begin{center}
@@ -55,7 +69,13 @@
 
 	\subsection{Reconhecimento Facial com \textit{Eigenfaces}}
 
-		O reconhecimento facial foi desenvolvido é utilizando \textit{Eigenfaces}~\ref{sec:reconhecimento}. Uma técnica bastante satisfatória quando utilizada sobre uma base de dados (faces) relativamente grande, permitindo ao sistema inferir, das imagens suas principais características e, partindo delas, realizar o reconhecimento das imagens utilizando um número bastante reduzido de cálculos~\cite{artigo-eigenface}, permitindo, assim, um reconhecimento em tempo real.
+		O reconhecimento facial foi desenvolvido é utilizando
+		\textit{Eigenfaces}~\ref{sec:reconhecimento}. Uma técnica bastante
+		satisfatória quando utilizada sobre uma base de dados (faces) relativamente
+		grande, permitindo ao sistema inferir, das imagens suas principais
+		características e, partindo delas, realizar o reconhecimento das imagens
+		utilizando um número bastante reduzido de cálculos~\cite{artigo-eigenface},
+		permitindo, assim, um reconhecimento em tempo real.
 
 		A base de dados utilizada no Sistema TRUE é formada por imagens no formato PGM (\textit{Portable Gray Map}) com tamanho de 92x112 pixels e em escala de cinza. A base é composta por um banco de faces de alunos de Ciência da Computação da Universidade de Brasília e por um banco de imagens de faces da Universidade de Cambridge~\cite{cambridgeFaceDb}, mostrado na Figura~\ref{fig:cambridgeFaceDb}. Este último, é formado por imagens de faces de 40 pessoas diferentes. Para cada pessoa, existem 10 diferentes imagens tiradas em diferentes épocas, com diferentes condições de iluminação, com diferentes expressões faciais (olhos abertos e fechados, sorrindo e não sorrindo, entre outros) e com diferentes detalhes faciais (óculos, sem óculos). 
 
@@ -82,30 +102,3 @@
 		A última etapa consiste no cálculo da confiança do reconhecimento. Explicar como se calcula.
 
 		% A confidence of 1.0 would mean a god match, and a confidence of 0.0 or negative would mean a bad match. But beware that the confidence formula I use in the code is just a very basic confidence metric that isn't necessarily too reliable, but I figured that most people would like to see a rough confidence value. 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
