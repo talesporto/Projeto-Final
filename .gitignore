@@ -10,4 +10,5 @@ bin/*.log
 bin/*.lot
 bin/*.out
 bin/*.toc
-
+*.lock
+*.bak

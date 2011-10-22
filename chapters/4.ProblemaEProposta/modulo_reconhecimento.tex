@@ -7,10 +7,16 @@
 
 	A detecção e o reconhecimento são feitos em imagens de usuários que são
 	passadas pelo Módulo de Rastreamento. As imagens passadas são compostas somente
-	pela região em que o usuário se encontra, como mostrado na Figura
-	(\textbf{colocar figura aqui.}). Basicamente, o processo de reconhecimento é
-	realizado pelas seguintes etapas e ilustrado na
-	Figura~\ref{fig:processo-reconhecimento}:
+	pela região em que o usuário se encontra, como mostrado na Figura~\ref{fig:users-img}. Basicamente, o processo de reconhecimento é
+	realizado pelas seguintes etapas e ilustrado na Figura~\ref{fig:processo-reconhecimento}:
+
+		\begin{figure}[hbt]
+			\begin{center}
+				\includegraphics[scale=0.3]{figuras/4.ProblemaEProposta/users-img.png}
+			\end{center}
+			\caption{Exemplo de uma imagem composta somente pela região em que o usuário se encontra.}
+			\label{fig:users-img}
+		\end{figure}
 
 		\begin{enumerate}
 			\item Obtém a imagem de entrada correspondente a imagem formada somente pelo usuário cujo reconhecimento foi requisitado.
@@ -36,11 +42,7 @@
 
 	\subsection{Pré-processamento e Processamento da Imagem}
 		
-		As etapas de processamento das imagens permitem criar um padrão nas mesmas
-		aumentando a acurácia do reconhecimento. No Sistema TRUE as etapas de
-		processamento consistem em converter a imagem em escala de cinza, recorta-la,
-		redimensiona-la e equaliaza-la criando, assim, um padrão de cor, tamanho,
-		brilho e contraste nas imagens.
+		As etapas de processamento das imagens permitem criar um padrão nas mesmas aumentando a acurácia do reconhecimento. No Sistema TRUE as etapas de processamento consistem em converter a imagem em escala de cinza, recorta-la, redimensiona-la e equaliaza-la criando, assim, um padrão de cor, tamanho, brilho e contraste nas imagens.
 
 		A Figura~\ref{fig:greyscale} exemplifica uma imagem normal de uma face,
 		depois a mesma convertida em escala de cinza e equalizada O
@@ -101,7 +103,7 @@
 			\label{fig:diagrama-reconhecimento}
 		\end{figure}
 
-		Uma das etapas consiste no cálculo da distância entre a imagem projetada no subespaço PCA aos eigenfaces. Inicialmente, o cálculo desta distância era feito utilizando distância euclidiana, porém não apresentava bons resultados em algumas condições. Portanto, este cálculo passou a ser feito utilizando distância Mahalanobis. Contudo, ela também não apresentou bons resultados em alguns casos. Então, alguns testes foram feitos utilizando as duas ditâncias de maneira conjunta: uma imagem só é tida como reconhecida quando o resultado das duas distâncias apontarem para a mesma identidade. Com isso, houve uma melhora significante dos resultados.
+		Uma das etapas consiste no cálculo da distância entre a imagem projetada no subespaço PCA aos eigenfaces. Inicialmente, o cálculo desta distância era feito utilizando distância euclidiana, porém não apresentava bons resultados em algumas condições. Portanto, este cálculo passou a ser feito utilizando distância Mahalanobis. Contudo, ela também não apresentou bons resultados em alguns casos. Então, alguns testes foram feitos utilizando as duas distâncias de maneira conjunta: uma imagem só é tida como reconhecida quando o resultado das duas distâncias apontarem para a mesma identidade. Com isso, houve uma melhora significante dos resultados.
 
 		A última etapa consiste no cálculo da confiança do reconhecimento. Explicar como se calcula.
 
