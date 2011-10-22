@@ -25,7 +25,7 @@
 
 	\subsection{Pré-processamento e Processamento da Imagem}
 		
-		As etapas de processamento das imagens permitem criar um padrão nas mesmas aumentando a acurácia do reconhecimento. No Sistema TRUE as etapas de processamento consistem em converter a imagem em escala de cinza, rercorta-la, redimensiona-la e equaliaza-la criando, assim, um padrão de cor, tamanho, brilho e contraste nas imagens.
+		As etapas de processamento das imagens permitem criar um padrão nas mesmas aumentando a acurácia do reconhecimento. No Sistema TRUE as etapas de processamento consistem em converter a imagem em escala de cinza, recorta-la, redimensiona-la e equaliaza-la criando, assim, um padrão de cor, tamanho, brilho e contraste nas imagens.
 
 		A Figura~\ref{fig:greyscale} exemplifica uma imagem normal de uma face, depois a mesma convertida em escala de cinza e equalizada O Apêndice~\ref{apend:processamento} mostra trechos de código em linguagem C que implementam tais etapas.
 
@@ -77,7 +77,7 @@
 			\label{fig:diagrama-reconhecimento}
 		\end{figure}
 
-		Uma das etapas consiste no cálculo da distância entre a imagem projetada no subespaço PCA aos eigenfaces. Inicialmente, o cálculo desta distância era feito utilizando distância euclidiana, porém não apresentava bons resultados em algumas condições. Portanto, este cálculo passou a ser feito utilizando distância Mahalanobis. Contudo, ela também não apresentou bons resultados em alguns casos. Então, alguns testes foram feitos utilizando as duas ditâncias de maneira conjunta: uma imagem só é tida como reconhecida quando o resultado das duas distâncias apontarem para a mesma identidade. Com isso, houve uma melhora significante dos resultados.
+		Uma das etapas consiste no cálculo da distância entre a imagem projetada no subespaço PCA aos eigenfaces. Inicialmente, o cálculo desta distância era feito utilizando distância euclidiana, porém não apresentava bons resultados em algumas condições. Portanto, este cálculo passou a ser feito utilizando distância Mahalanobis. Contudo, ela também não apresentou bons resultados em alguns casos. Então, alguns testes foram feitos utilizando as duas distâncias de maneira conjunta: uma imagem só é tida como reconhecida quando o resultado das duas distâncias apontarem para a mesma identidade. Com isso, houve uma melhora significante dos resultados.
 
 		A última etapa consiste no cálculo da confiança do reconhecimento. Explicar como se calcula.
 
