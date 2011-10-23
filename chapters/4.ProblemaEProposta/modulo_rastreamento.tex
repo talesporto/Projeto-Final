@@ -23,26 +23,15 @@
 
 	\begin{figure}[H]
 		\begin{center}
-			\includegraphics[scale=0.45]{figuras/4.ProblemaEProposta/mapa-profundidade.png}
+			\includegraphics[scale=0.4]{figuras/4.ProblemaEProposta/mapa-profundidade.png}
 		\end{center}
 		\caption{Exemplo de uma imagem de profundidade fornecida pelo \textit{Kinect}.}
 		\label{fig:depthmaps}
 	\end{figure}
 
-	Utilizando os mapas de profundidade é possivel calcular as coodernadas
-	$\displaystle (x,y,z)$, em relação ao sensor, de qualquer pixel da imagem.
-	Dessa forma, a posição de um usuário rastreado é determinada utilizando as
-	coordenadas presentes no pixel que representa seu centro geométrico. Sendo
-	assim ao fixar a posição do \textit{Kinect} no ambiente, conseguiremos estimar
-	a localização de qualquer usuário rastreado em tempo real. A
-	Figura~\ref{fig:localizacao} mostra um usuário rastreado pelo Sistema TRUE
-	onde suas coordenadas em relação ao \textit{Kinect} foram estimadas utilizando
-	os valores de profundidade referente ao pixel que representa seu centro de
-	massa geométrico. Os valores das coordenadas $\displaystle (x,y,z)$ estão em
-	milimetros.
-	
-	<refatorar esse último paragrafo>
-	<linkar ultima imagem>
+	Utilizando os mapas de profundidade é possível calcular as coordenadas$\displaystle (x,y,z)$, em relação ao sensor, de qualquer pixel da imagem. Dessa forma, as coordenadas de uma usuário em relação ao \textit{Kinect} são estimadas utilizando os valores de profundidade referente ao pixel que representa seu centro de massa geométrico. Sendo assim, ao fixar a posição do \textit{Kinect} no ambiente, é possível estimar a localização de qualquer usuário rastreado em tempo real. A Figura~\ref{fig:localizacao} mostra um usuário rastreado pelo Sistema TRUE onde os valores das coordenadas $\displaystle (x,y,z)$ estão em milímetros.
+
+	A Figura~\ref{fig:processo-rastreamento} mostra o fluxo básico do Módulo de Rastreamento.
 
 	\begin{figure}[H]
 		\begin{center}
