@@ -10,14 +10,14 @@ O Módulo de Integração é responsável pela integração do Sistema TRUE  com
 		\label{fig:userdriver}
 	\end{figure}
 
-Os métodos do \textit{UserDriver} podem ser divididos basicamente em três grupos: métodos de inicialização, métodos nativos e serviços:
+Os métodos do \textit{UserDriver} podem ser divididos basicamente em três grupos: métodos de inicialização, métodos nativos e de serviços e eventos:
 
 \begin{itemize}
 	\item \textbf{Métodos de Inicialização}: métodos responsáveis pela inicialização do Sistema TRUE e pelo registro dos serviços que o driver possui e os eventos que pode gerar.
 
 	\item \textbf{Métodos Nativos}: métodos declarados no driver que permitem acessar alguns métodos implementados pelo Sistema TRUE. Tais métodos permitem que o \textit{UserDriver} tenha controle sobre o sistema, podendo inicia-lo, encerra-lo, retreina-lo e, até mesmo, cadastrar e remover novos usuários a qualquer momento. Para poder implementar os métodos nativos foi utilizado JNI (\textit{Java Native Interface}), descrito no Apêndice~\ref{apend:jni}.
 
-	\item \textbf{Serviços}: são os métodos que implementam os serviços que o \textit{UserDriver} disponibiliza as aplicações presentes no ambiente. Nestes serviços incluem consultas as informações (nome e localização) de qualquer usuário presente no ambiente, listagem dos usuários no ambiente, cadastro e remoção de novos usuário do Sistema TRUE e retreino do mesmo, e registro de \textit{listeners} que ``escutam'' os eventos gerados pelo driver.
+	\item \textbf{Serviços e Eventos}: são os métodos que implementam os serviços que o \textit{UserDriver} disponibiliza as aplicações presentes no ambiente e os eventos que pode gerar. Nestes serviços incluem consultas as informações (nome e localização) de qualquer usuário presente no ambiente, listagem dos usuários no ambiente, cadastro e remoção de novos usuário do Sistema TRUE e retreino do mesmo, e registro de \textit{listeners} que ``escutam'' os eventos gerados pelo driver. Nos eventos incluem evento de um novo usuário detectado, evento de um usuário perdido, evento de quando a identidade do usuário é corrigida e um outro evento que é gerado de tempo em tempo atualizando a posição de todos os usuários no ambiente.
 \end{itemize}
 
 O Módulo de Integração comunica diretamente com os Módulos de Rastreamento e de Registro através do \textit{UserDriver}. A comunicação com o Módulo de Registro acontece somente quando alguma aplicação deseja cadastrar ou remover usuários. Já a comunicação com o Módulo de Rastreamento acontece quase a todo momento: 

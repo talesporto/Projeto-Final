@@ -29,7 +29,17 @@
 		\label{fig:depthmaps}
 	\end{figure}
 
-	Utilizando os mapas de profundidade é possível calcular as coordenadas$\displaystle (x,y,z)$, em relação ao sensor, de qualquer pixel da imagem. Dessa forma, as coordenadas de uma usuário em relação ao \textit{Kinect} são estimadas utilizando os valores de profundidade referente ao pixel que representa seu centro de massa geométrico. Sendo assim, ao fixar a posição do \textit{Kinect} no ambiente, é possível estimar a localização de qualquer usuário rastreado em tempo real. A Figura~\ref{fig:localizacao} mostra um usuário rastreado pelo Sistema TRUE onde os valores das coordenadas $\displaystle (x,y,z)$ estão em milímetros.
+	Utilizando os mapas de profundidade é possível calcular as coordenas $\displaystle (x,y,z)$ de um plano cartesiano de três dimensões em que o ponto $\displaystyle (0, 0, 0)$ corresponde a posição do \textit{Kinect}, como mostrado na Figura~\ref{fig:kinect-coordenadas}. Dessa forma, a posição de um usuário em relação ao sensor é estimada utilizando as coordenadas referente ao pixel que representa seu centro de massa geométrico. Sendo assim, ao fixar a posição do \textit{Kinect} no ambiente, é possível estimar a localização de qualquer usuário rastreado em tempo real. A Figura~\ref{fig:localizacao} mostra um usuário rastreado pelo Sistema TRUE onde os valores das coordenadas $\displaystle (x,y,z)$ estão em milímetros.
+
+	\begin{figure}[H]
+		\begin{center}
+			\includegraphics[scale=0.6]{figuras/4.ProblemaEProposta/kinect-coodenadas.png}
+		\end{center}
+		\caption{Plano cartesiano de três dimensões onde o \textit{Kinect} representa a coordenada $\displaystle (0,0,0)$.}
+		\label{fig:kinect-coodernadas}
+	\end{figure}
+
+	% Utilizando os mapas de profundidade é possível calcular as coordenadas$\displaystle (x,y,z)$, em relação ao sensor, de qualquer pixel da imagem. Dessa forma, as coordenadas de uma usuário em relação ao \textit{Kinect} são estimadas utilizando os valores de profundidade referente ao pixel que representa seu centro de massa geométrico. Sendo assim, ao fixar a posição do \textit{Kinect} no ambiente, é possível estimar a localização de qualquer usuário rastreado em tempo real. A Figura~\ref{fig:localizacao} mostra um usuário rastreado pelo Sistema TRUE onde os valores das coordenadas $\displaystle (x,y,z)$ estão em milímetros.
 
 	A Figura~\ref{fig:processo-rastreamento} mostra o fluxo básico do Módulo de Rastreamento.
 
