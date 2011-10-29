@@ -5,4 +5,8 @@ O Sistema TRUE obtém a localização dos usuários no ambiente por meio de coor
 As coordenadas $\displaystyle (x, y, z)$ obtidas pelo sistema são coordenas de um plano cartesiano de três dimensões em que o ponto $\displaystyle (0, 0, 0)$ corresponde a posição do \textit{Kinect}. Os valores das coordenadas que realmente são utilizadas para estimar a localização do usuário no ambiente são os valores nos eixos $\displaystyle x$ e $\displaystyle z$. Os valores do eixo $\displaystyle y$ correspondem somente a altura do centro de massa geométrico do usuário rastreado. Portanto, os testes desenvolvidos aferiram somente os valores obtidos pelo Sistema TRUE nos eixos $\displaystyle x$ e $\displaystyle z$.
 
 \subsection{Teste dos valores no eixo $\displaystyle z$}
+
+	Os valores obtidos no eixo $\displaystyle z$ correspondem aos valores de profundidade do usuário rastreado em relação ao \textit{Kinect}. Portanto, para testar a precisão do Sistema TRUE foi realizado o seguinte teste: um objeto (uma caixa de papelão) foi colocada em frente ao sensor em diferentes distâncias do mesmo, como mostrado na Figura~\ref{fig:teste-z}. Para cada distância, foram anotados alguns valores obtidos pelo sistema, mostrados na Tabela~\ref{tab:teste-z}. Então esses valores foram inseridos em um gráfico e comparado com os valores reais.
+
+
 \subsection{Teste dos valores no eixo $\displaystyle x$}
