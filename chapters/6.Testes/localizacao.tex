@@ -20,7 +20,7 @@ As coordenadas $\displaystyle (x, y, z)$ obtidas pelo sistema são coordenas de 
 		\begin{center}
 			\includegraphics[scale=0.6]{figuras/5.Testes/eixoz-imgs.png}
 		\end{center}
-		\caption{Fotos retiradas no teste realizado para aferir os valores obtidos no eixo $\displaystyle z$.}
+		\caption{Fotos obtidas pelo Sistema TRUE no teste realizado para os valores do eixo $\displaystyle z$.}
 		\label{fig:distancias}
 	\end{figure}
 
@@ -56,6 +56,71 @@ As coordenadas $\displaystyle (x, y, z)$ obtidas pelo sistema são coordenas de 
 	Através deste teste, também foi possível obter a distância máxima e mínima que o usuário deve estar do \textit{Kinect} para que o sistema consiga rastrear-lo e estimar sua localização. A distância mínima é de $\displaystyle 48,3 cm$ e a máxima de $\displaystyle 4,057 m$.
 
 \subsection{Teste dos valores no eixo $\displaystyle x$}
+
+	Os valores obtidos no eixo $\displaystyle x$ mostram o quanto o usuário rastreado está a direita ou a esquerda em relação ao \textit{Kinect}. Portanto, para testar a precisão do Sistema TRUE foi realizado o seguinte teste: um objeto (uma caixa de papelão) foi colocada a uma distância fixa de 3 metros do sensor e colocada em diferentes posições ao longo do eixo $\displaystyle x$ (0, $\displaystyle \pm33 cm$, $\displaystyle \pm66 cm$, $\displaystyle \pm99 cm$), como mostrado na Figura~\ref{fig:teste-eixox}. Para cada posição, alguns valores obtidos pelo Sistema TRUE foram anotados, mostrados na Tabela~\ref{tab:valores-x}, e algumas imagens do sistema foram obtidas, mostradas na Figura~\ref{fig:eixox-imgs}. Então esses valores foram inseridos em um gráfico e comparados com os valores reais.
+
+	\begin{figure}[htb]
+		\begin{center}
+			\includegraphics[scale=0.45]{figuras/5.Testes/teste-eixox.png}
+		\end{center}
+		\caption{Fotos retiradas no teste realizado para aferir os valores obtidos no eixo $\displaystyle x$.}
+		\label{fig:teste-eixox}
+	\end{figure}
+
+	\begin{figure}[htb]
+		\begin{center}
+			\includegraphics[scale=0.55]{figuras/5.Testes/eixox-imgs.png}
+		\end{center}
+		\caption{Fotos obtidas pelo Sistema TRUE no teste realizado para os valores do eixo $\displaystyle x$.}
+		\label{fig:eixox-imgs}
+	\end{figure}
+
+	\begin{table}[h]
+		\begin{center}
+			\caption{Valores obtidos pelo Sistema TRUE.}
+			\begin{tabular}{|c|c|c|c|c|}
+				\hline \bf Posição do objeto & \multicolumn{4}{|c|}{\bf Valores obtido}\\
+							 \bf ao longo do eixo $\displaystyle x$ (mm) & \multicolumn{4}{|c|}{\bf pelo Sistema TRUE (mm)}\\
+				\hline
+				\hline 0    & -31,82   & -34,5    & -31,39   & -33,51 \\
+				\hline 0    & -35,40   & -33,38   & -35,03   & -31,33  \\
+				\hline 330  & 296,94   & 298,16   & 298,95   & 296,21 \\
+				\hline -330 & -387,42  & -391,42  & -392,54  & -389,96 \\
+				\hline 660  & 615,53   & 615,93   & 614,71   & 614,22 \\
+				\hline -660 & -727,04  & -733,95  & -731,34  & -732,18 \\
+				\hline 990  & 963,85   & 962,64   & 961,80   & 962,95 \\
+				\hline -990 & -1069,32 & -1068,00 & -1070,48 & -1069,35 \\
+				\hline
+			\end{tabular}
+		\end{center}
+		\label{tab:valores-x}
+	\end{table}
+
+	Os valores obtidos no teste foram inseridos em um gráfico representado pela Figura~\ref{fig:grafico-eixox}. Neste gráfico existem duas retas: uma reta preta que representa os valores reais; e uma reta vermelha que representa os valores obtidos pelo sistema. Como observado, existe uma diferença constante de poucos centímetros ao longo de toda a reta, ou seja, com o objeto fixo a uma ditância de 3 metros do \textit{Kinect}, o Sistema TRUE consegue fazer estimativas das coordenadas no $\displaystyle x$ com erro de poucos centímetros. Um erro pequeno que não prejudica a integridade dos valores obtidos pelo sistema.
+
+	\begin{figure}[htb]
+		\begin{center}
+			\includegraphics[scale=0.4]{figuras/5.Testes/grafico-eixo-x.png}
+		\end{center}
+		\caption{Gráfico comparativo entre os valores obtidos pelo Sistema TRUE e os valores reais.}
+		\label{fig:grafico-eixox}
+	\end{figure}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
