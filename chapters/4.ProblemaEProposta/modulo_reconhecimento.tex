@@ -4,7 +4,7 @@
 
 	Basicamente, o processo de reconhecimento é realizado pelas seguintes etapas e ilustrado na Figura~\ref{fig:processo-reconhecimento}:
 
-		\begin{figure}[hbt]
+		\begin{figure}[htb]
 			\begin{center}
 				\includegraphics[scale=0.3]{figuras/4.ProblemaEProposta/users-img.png}
 			\end{center}
@@ -21,7 +21,7 @@
 			\item Retorna o nome da face ``mais parecida'' e a confiança do reconhecimento.
 		\end{enumerate}
 
-		\begin{figure}[hbt]
+		\begin{figure}[htb]
 			\begin{center}
 				\includegraphics[scale=2.0]{figuras/4.ProblemaEProposta/reconhecimento-simples.png}
 			\end{center}
@@ -43,7 +43,7 @@
 		Apêndice~\ref{apend:processamento} mostra trechos de código em linguagem C
 		que implementam tais etapas.
 
-		\begin{figure}[hbt]
+		\begin{figure}[htb]
 			\begin{center}
 				\includegraphics[scale=0.7]{figuras/4.ProblemaEProposta/greyscale.png}
 			\end{center}
@@ -87,7 +87,7 @@
 
 		A base de dados utilizada no Sistema TRUE é formada por imagens no formato PGM (\textit{Portable Gray Map}) com tamanho de 92x112 pixels e em escala de cinza. A base é composta por um banco de faces de alunos de Ciência da Computação da Universidade de Brasília e por um banco de imagens de faces da Universidade de Cambridge~\cite{cambridgeFaceDb}, mostrado na Figura~\ref{fig:cambridgeFaceDb}. Este último, é formado por imagens de faces de 40 pessoas diferentes. Para cada pessoa, existem 10 diferentes imagens tiradas em diferentes épocas, com diferentes condições de iluminação, com diferentes expressões faciais (olhos abertos e fechados, sorrindo e não sorrindo, entre outros) e com diferentes detalhes faciais (óculos, sem óculos). 
 
-		\begin{figure}[hbt]
+		\begin{figure}[H]
 			\begin{center}
 				\includegraphics[scale=0.4]{figuras/4.ProblemaEProposta/cambrigdefacedb.png}
 			\end{center}
@@ -97,23 +97,17 @@
 
 		A Figura~\ref{fig:diagrama-reconhecimento} mostra o fluxo básico do processo de reconhecimento facial no Sistema TRUE.
 
-			\begin{figure}[hbt]
+			\begin{figure}[htb]
 			\begin{center}
-				\includegraphics[scale=0.5]{figuras/4.ProblemaEProposta/diagrama-reconhecimento.png}
+				\includegraphics[scale=0.5]{figuras/4.ProblemaEProposta/diagrama-reconhecimento2.png}
 			\end{center}
 			\caption{Fluxo de execução do processo de reconhecimento facial no Sistema TRUE.}
 			\label{fig:diagrama-reconhecimento}
 		\end{figure}
 
-		Uma das etapas consiste no cálculo da distância entre a imagem projetada no
-		subespaço PCA aos eigenfaces. Inicialmente, o cálculo desta distância era
-		feito utilizando distância euclidiana, porém não apresentava bons resultados
-		em algumas condições. Portanto, este cálculo passou a ser feito utilizando
-		distância Mahalanobis. Contudo, ela também não apresentou bons resultados em
-		alguns casos. Então, alguns testes foram feitos utilizando as duas distâncias
-		de maneira conjunta: uma imagem só é tida como reconhecida quando o resultado
-		das duas distâncias apontarem para a mesma identidade. Com isso, houve uma
-		melhora significativa dos resultados.
+		% A primeira etapa consiste na leitura dos dados de treinamento. Esses dados são compostos pela lista dos nomes e imagens das faces dos usuários cadastrados no sistema, pelo vetor de \textit{Eigenfaces}, pela \textit{Eigenface} média e pelos \textit{eigenvalues}.
+
+		Uma das etapas intermediárias consiste no cálculo da distância entre a imagem projetada no subespaço PCA aos eigenfaces. Inicialmente, o cálculo desta distância era feito utilizando distância euclidiana, porém não apresentava bons resultados em algumas condições. Portanto, este cálculo passou a ser feito utilizando distância Mahalanobis. Contudo, ela também não apresentou bons resultados em alguns casos. Então, alguns testes foram feitos utilizando as duas distâncias de maneira conjunta: uma imagem só é tida como reconhecida quando o resultado das duas distâncias apontarem para a mesma identidade. Com isso, houve uma melhora significativa dos resultados.
 
 		A última etapa consiste no cálculo da confiança do reconhecimento. 
 		

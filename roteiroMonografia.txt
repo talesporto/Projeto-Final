@@ -24,7 +24,7 @@ TODO - a fazer
 			OK - Acho que a figura 4.5 ficaria melhor como uma lista enumerada (já que não temos bifurcações nem processo decisório envolvido).
 
 			* 4.1.3 Reconhecimento Facial com Eigenfaces :
-				TODO - A figura 4.7 tá bastante complexa e difícil de acompanhar. Acho que seria melhor vocês colocaram o fluxo dela com as fases e decisões e explicar os detlahes no texto (e não nas caixas de obs do UML). 
+				OK - A figura 4.7 tá bastante complexa e difícil de acompanhar. Acho que seria melhor vocês colocaram o fluxo dela com as fases e decisões e explicar os detlahes no texto (e não nas caixas de obs do UML). 
 				TODO - No 4º parágrafo seria interessante dar uma idéia dos resultados que não eram satisfatórios. Imagino que vocês não saibam os valores exatos mas vocês podem falar algo mais estimado, como : "Usando individualmente os métodos X e Y tivemos resultados pouco confiáveis (em média abaixo de 60%)" aí depois ressalta os bons resultados : "Usando a combinação dos métodos conseguimos resultados de maior credibilidade (em média acima de 95%). Estes resultados são melhor especificados no capítulo X ou Seção X".
 				OK - O 5º parágrafo, além de estar meio #foreveralone, falta informação de como vocês fazem isso.
 
@@ -43,12 +43,12 @@ TODO - a fazer
 		* 4.4 Módulo de Registro:
 			OK - Ou o passo 3 é quebrado em 2 passos (um pra cada conjunto de imagem adquirida) ou é assimilado pelo passo 2.
 			OK - No passo 6 eu não saquei do "também". Achei que o sistema era treinado apenas para isso. Ele faz mais algo?
-			TODO - A figura 4.14 está muito longe de onde foi declarada. Acho que podemos melhorar a forma como ela é exibida mudando o fluxo de vertical para horizontal (indo sempre da esquerda para direita em várias linhas). Acho que as anotações são dispensáveis nessa figura. A iteração pode ser descrita apelas pela seta que retorna e a atividade diamante.
+			OK - A figura 4.14 está muito longe de onde foi declarada. Acho que podemos melhorar a forma como ela é exibida mudando o fluxo de vertical para horizontal (indo sempre da esquerda para direita em várias linhas). Acho que as anotações são dispensáveis nessa figura. A iteração pode ser descrita apelas pela seta que retorna e a atividade diamante.
 
 		* 4.5 Módulo de Integração:
 			OK - A palavra dificultada dá a idéia de desafio, acho que aqui vale vocês destacarem que teve que ser feito uma integração entre as partes devido as diferentes plataformas usando o suporte do JNI.
 			OK - A figura 4.15 está muito longe de onde é referenciada.
-			TODO - Vocês não acham que vale a pena descrever os serviços/eventos que vocês fornecem ao SmartSpace? Acho que esse é o output mais significativo disso tudo.
+			OK - Vocês não acham que vale a pena descrever os serviços/eventos que vocês fornecem ao SmartSpace? Acho que esse é o output mais significativo disso tudo.
 
 * Capítulo 5 - Testes :
 		OK - 5.1 SmartSpace Laico:

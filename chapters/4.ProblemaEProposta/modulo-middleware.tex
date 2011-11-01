@@ -3,7 +3,7 @@
 O Módulo de Integração é responsável pela integração do Sistema TRUE  com o Middleware \textit{UbiquitOS}. Tal integração 
 foi feita utilizando suporte JNI (\textit{Java Native Interface}) devido as diferentes plataformas: o middleware foi desenvolvido em JAVA e o Sistema TRUE em C++. Então, para integra-los foi desenvolvido um driver no middleware que se comunica com o sistema. Tal driver foi nomeado de \textit{UserDriver} cujo diagrama de classe é mostrado na Figura~\ref{fig:userdriver}.
 
-	\begin{figure}[hbt]
+	\begin{figure}[htb]
 		\begin{center}
 			\includegraphics[scale=0.45]{figuras/4.ProblemaEProposta/diagrama-classe-userdriver.png}
 		\end{center}
@@ -18,8 +18,29 @@ Os métodos do \textit{UserDriver} podem ser divididos basicamente em três grup
 
 	\item \textbf{Métodos Nativos}: métodos declarados no driver que permitem acessar alguns métodos implementados pelo Sistema TRUE. Tais métodos permitem que o \textit{UserDriver} tenha controle sobre o sistema, podendo inicia-lo, encerra-lo, retreina-lo e, até mesmo, cadastrar e remover novos usuários a qualquer momento. Para poder implementar os métodos nativos foi utilizado JNI (\textit{Java Native Interface}), descrito no Apêndice~\ref{apend:jni}.
 
-	\item \textbf{Serviços e Eventos}: são os métodos que implementam os serviços que o \textit{UserDriver} disponibiliza as aplicações presentes no ambiente e os eventos que pode gerar. Nestes serviços incluem consultas as informações (nome e localização) de qualquer usuário presente no ambiente, listagem dos usuários no ambiente, cadastro e remoção de novos usuário do Sistema TRUE e retreino do mesmo, e registro de \textit{listeners} que ``escutam'' os eventos gerados pelo driver. Nos eventos incluem evento de um novo usuário detectado, evento de um usuário perdido, evento de quando a identidade do usuário é corrigida e um outro evento que é gerado de tempo em tempo atualizando a posição de todos os usuários no ambiente.
+	\item \textbf{Serviços e Eventos}: são os métodos que implementam os serviços que o \textit{UserDriver} disponibiliza as aplicações presentes no ambiente e os eventos que pode gerar. 
+
+	% Nestes serviços incluem consultas as informações (nome e localização) de qualquer usuário presente no ambiente, listagem dos usuários no ambiente, cadastro e remoção de novos usuário do Sistema TRUE e retreino do mesmo, e registro de \textit{listeners} que ``escutam'' os eventos gerados pelo driver. Nos eventos incluem evento de um novo usuário detectado, evento de um usuário perdido, evento de quando a identidade do usuário é corrigida e um outro evento que é gerado de tempo em tempo atualizando a posição de todos os usuários no ambiente.
+
 \end{itemize}
+
+O \textit{UserDriver} disponibiliza as aplicações no ambiente os seguintes serviços:
+
+	\begin{itemize}
+		\item \textbf{Consultas as informações dos usuários no ambiente}: através dessas consultas, as aplicações tem acesso ao nomes, emails, posições correntes e confiança do reconhecimento de todos os usuários presentes no ambiente.
+		\item \textbf{Cadastro}: as aplicações podem cadastrar novos usuários fornecendo ao \textit{UserDriver} o nome, o email e as imagens do novo usuário.
+		\item \textbf{Treino do sistema}: após cadastrar novos usuários as aplicações podem retreinar o sistema para poder reconhecer o novo usuário cadastrado.
+		\item \textbf{Remoção}: as aplicações podem remover usuários cadastrados fornecendo o email do usuário.
+		\item \textbf{Registro de \textit{listeners}}: as aplicações podem registrar \textit{listeners} para ``escutar'' os eventos gerados pelo \textit{UserDriver}.
+	\end{itemize}
+
+Além dos serviços, o \textit{UserDriver} gera os seguintes eventos:
+
+	\begin{itemize}
+		\item \textbf{Novo Usuário}: evento gerado assim que um novo usuário foi detectado pelo Sistema TRUE.
+		\item \textbf{Usuário Perdido}: evento gerado assim que um usuário deixou de ser rastreado pelo Sistema TRUE.
+		\item \textbf{Atualização dos dados do usuário}: evento gerado a cada cinco segundos atualizando os dados de todos os usuários rastreados.
+	\end{itemize}
 
 O Módulo de Integração comunica diretamente com os Módulos de Rastreamento e de Registro através do \textit{UserDriver}. A comunicação com o Módulo de Registro acontece somente quando alguma aplicação deseja cadastrar ou remover usuários. Já a comunicação com o Módulo de Rastreamento acontece quase a todo momento: 
 
