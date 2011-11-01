@@ -1,6 +1,7 @@
 \section{Módulo de Integração}
 
-O Módulo de Integração é responsável pela integração do Sistema TRUE  com o Middleware \textit{UbiquitOS}. Tal integração foi dificultada pelo fato do middleware ter sido desenvolvido em JAVA e o Sistema TRUE em C++. Então, para integra-los foi desenvolvido um driver no middleware que se comunica com o sistema. Tal driver foi nomeado de \textit{UserDriver} cujo diagrama de classe é mostrado na Figura~\ref{fig:userdriver}.
+O Módulo de Integração é responsável pela integração do Sistema TRUE  com o Middleware \textit{UbiquitOS}. Tal integração 
+foi feita utilizando suporte JNI (\textit{Java Native Interface}) devido as diferentes plataformas: o middleware foi desenvolvido em JAVA e o Sistema TRUE em C++. Então, para integra-los foi desenvolvido um driver no middleware que se comunica com o sistema. Tal driver foi nomeado de \textit{UserDriver} cujo diagrama de classe é mostrado na Figura~\ref{fig:userdriver}.
 
 	\begin{figure}[hbt]
 		\begin{center}

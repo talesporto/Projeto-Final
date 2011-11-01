@@ -2,3 +2,54 @@
 - escrever sobre o uos
 - falar sobre eigenvalues
 - falar sobre calculo da confianca
+
+
+OK - feito
+TODO - a fazer
+? - conversar com fabs
+
+################################################################################################################
+* Capítulo 4 - Sistema TRUE:
+
+	* Introdução:
+		OK - No primeiro parágrafo eu senti que vocês estão impondo muitas coisas. Acho que vale uma abordagem mais de indicar a solução e não impor ela. Por exemplo, em vez de falar que os dados são claramente imprescindíveis ao ambiente, fala que são de grande valia pra tomada de decisão no ambiente. Lembre-se que se integrar com o middleware não é obrigatório, é interessante e vocês que tem que provar o porque.
+		OK - 	Na figura 4.1 a seta entre o Módulo de Rastreamento e de Reconhecimento devia ser apenas do sentido de consulta, assim como na base de dados.
+
+		* 4.1 Módulo de Reconhecimento:
+			OK - No primeiro parágrafo o "como se deduz do próprio nome" pode ser omitido.
+			OK - Acho que os dois primeiros parágrafos podem ser unidos.
+			? - Ao que me parece o processo descrito é feito com a imagem já com a "seção do usuário" selecionada. Acho que falta deixar isso mais claro ao leitor e falar como vcs sabem que essa é a seção com o usuário.
+			OK - Acho que esse último parágrafo da seção não acrescenta muito. Pode removê-lo.
+			OK - Página 38 está um um enorme espaço em branco.
+			OK - Acho que a figura 4.5 ficaria melhor como uma lista enumerada (já que não temos bifurcações nem processo decisório envolvido).
+
+			* 4.1.3 Reconhecimento Facial com Eigenfaces :
+				TODO - A figura 4.7 tá bastante complexa e difícil de acompanhar. Acho que seria melhor vocês colocaram o fluxo dela com as fases e decisões e explicar os detlahes no texto (e não nas caixas de obs do UML). 
+				TODO - No 4º parágrafo seria interessante dar uma idéia dos resultados que não eram satisfatórios. Imagino que vocês não saibam os valores exatos mas vocês podem falar algo mais estimado, como : "Usando individualmente os métodos X e Y tivemos resultados pouco confiáveis (em média abaixo de 60%)" aí depois ressalta os bons resultados : "Usando a combinação dos métodos conseguimos resultados de maior credibilidade (em média acima de 95%). Estes resultados são melhor especificados no capítulo X ou Seção X".
+				OK - O 5º parágrafo, além de estar meio #foreveralone, falta informação de como vocês fazem isso.
+
+		* 4.2 Módulo de Rastreamento :
+			OK - No 1º parágrafo, lembro que o módulo não "será responsável" ele "é responsável". Vocês não estão descrevendo algo no futuro e sim o trabalho de vocês no passado. 
+			OK - Ainda no 1º parágrafo, chame de sensor Kinect. Pra evitar a repetição dos "como descrito" é legal colocar apenas (Seção X.y.Z) que já fica subtentido e menos repetitivo.
+			OK - O final da página 43 tem um imenso espaço em branco.
+			? - Achei a figura 4.10 confusa, precisamos conversar como tornar o conteúdo mais fácil de digerir.
+
+		* 4.3 Relação Rastreamento e Reconhecimento :
+			OK - A figura 4.11 está muito longe de onde é referenciada. Ela podia ser simplificada, por exemplo a observação de espera bloqueada não me parece necessária. As atividades de "obter" representam a comunicação que já está expressa pelas setas de transição.
+			? - A anotação da frequencia do rastreamento pode ser representado por um loop com uma label na seta de transição.
+			OK - No exemplo do João a referência pra tabela 4.1 está quebrada ([??]).
+			OK - No último parágrado a referência a figura está quebrada ([??]).
+
+		* 4.4 Módulo de Registro:
+			OK - Ou o passo 3 é quebrado em 2 passos (um pra cada conjunto de imagem adquirida) ou é assimilado pelo passo 2.
+			OK - No passo 6 eu não saquei do "também". Achei que o sistema era treinado apenas para isso. Ele faz mais algo?
+			TODO - A figura 4.14 está muito longe de onde foi declarada. Acho que podemos melhorar a forma como ela é exibida mudando o fluxo de vertical para horizontal (indo sempre da esquerda para direita em várias linhas). Acho que as anotações são dispensáveis nessa figura. A iteração pode ser descrita apelas pela seta que retorna e a atividade diamante.
+
+		* 4.5 Módulo de Integração:
+			OK - A palavra dificultada dá a idéia de desafio, acho que aqui vale vocês destacarem que teve que ser feito uma integração entre as partes devido as diferentes plataformas usando o suporte do JNI.
+			OK - A figura 4.15 está muito longe de onde é referenciada.
+			TODO - Vocês não acham que vale a pena descrever os serviços/eventos que vocês fornecem ao SmartSpace? Acho que esse é o output mais significativo disso tudo.
+
+* Capítulo 5 - Testes :
+		OK - 5.1 SmartSpace Laico:
+		No primeiro parágrafo a palavra "aproximadamente" não combina com a precisão das medidas dadas.

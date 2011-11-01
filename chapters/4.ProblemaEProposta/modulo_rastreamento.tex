@@ -1,15 +1,14 @@
 \section{Módulo de Rastreamento}
 
-	O Módulo de Rastreamento será responsável por rastrear os usuários no
-	ambiente, determinar a sua localização física em relação ao \textit{Kinect} e
+	O Módulo de Rastreamento é responsável por rastrear os usuários no
+	ambiente, determinar a sua localização física em relação ao sensor \textit{Kinect} e
 	gerenciar suas identidades. Para realizar o rastreamento e localização dos
 	usuários é utilizado a biblioteca \textit{OpenNI} (\textit{Open Natural
 	Interaction}). Trata-se de um \textit{framework} que define \textit{APIs} para
 	o desenvolvimento de aplicações de interação natural. Utilizando as imagens de
 	profundidade, a detecção e o rastreamento são feito utilizando subtração de
-	fundo, descrito na Seção~\ref{sec:deteccao-objeto}, e os objetos detectados são
-	representados por suas silhuetas, descrita na
-	Seção~\ref{sec:representacao-objeto}.
+	fundo (Seção~\ref{sec:deteccao-objeto}), e os objetos detectados são
+	representados por suas silhuetas (Seção~\ref{sec:representacao-objeto}).
 
 	As imagens utilizadas para o rastreamento são imagens de profundidade,
 	exemplificada na Figura~\ref{fig:depthmaps}, providas pelo \textit{Kinect} que
@@ -21,7 +20,7 @@
 	segundo) com uma resolução $\displaystyle 640px$ x $\displaystyle 480px$.
 	
 
-	\begin{figure}[H]
+	\begin{figure}[hbt]
 		\begin{center}
 			\includegraphics[scale=0.4]{figuras/4.ProblemaEProposta/mapa-profundidade.png}
 		\end{center}
@@ -31,7 +30,7 @@
 
 	Utilizando os mapas de profundidade é possível calcular as coordenas $\displaystle (x,y,z)$ de um plano cartesiano de três dimensões em que o ponto $\displaystyle (0, 0, 0)$ corresponde a posição do \textit{Kinect}, como mostrado na Figura~\ref{fig:kinect-coordenadas}. Dessa forma, a posição de um usuário em relação ao sensor é estimada utilizando as coordenadas referente ao pixel que representa seu centro de massa geométrico. Sendo assim, ao fixar a posição do \textit{Kinect} no ambiente, é possível estimar a localização de qualquer usuário rastreado em tempo real. A Figura~\ref{fig:localizacao} mostra um usuário rastreado pelo Sistema TRUE onde os valores das coordenadas $\displaystle (x,y,z)$ estão em milímetros.
 
-	\begin{figure}[H]
+	\begin{figure}[hbt]
 		\begin{center}
 			\includegraphics[scale=0.6]{figuras/4.ProblemaEProposta/kinect-coodenadas.png}
 		\end{center}
@@ -43,7 +42,7 @@
 
 	A Figura~\ref{fig:processo-rastreamento} mostra o fluxo básico do Módulo de Rastreamento.
 
-	\begin{figure}[H]
+	\begin{figure}[hbt]
 		\begin{center}
 			\includegraphics[scale=0.45]{figuras/4.ProblemaEProposta/localizacao.png}
 		\end{center}
@@ -52,7 +51,7 @@
 	\end{figure}
 	
 	
-	\begin{figure}[H]
+	\begin{figure}[hbt]
 		\begin{center}
 			\includegraphics[scale=0.40]{figuras/4.ProblemaEProposta/diagrama-rastreamento.png}
 		\end{center}
