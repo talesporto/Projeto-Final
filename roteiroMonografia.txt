@@ -2,7 +2,8 @@
 - escrever sobre o uos
 - falar sobre eigenvalues
 - falar sobre calculo da confianca
-
+- Testes do Máximo de Usuários rastreados 
+	
 
 OK - feito
 TODO - a fazer

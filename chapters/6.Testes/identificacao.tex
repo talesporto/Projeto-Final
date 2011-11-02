@@ -1,11 +1,10 @@
 \section{Identificação dos Usuários}
+	 
+	O reconhecimento facial do Sistema TRUE foi implementado utilizando imagens de cor como dados de entrada. Com isso, ele sofre um pouco com problemas já conhecidos e esperados como iluminação, ângulo, pose, expressões, cosméticos e acessórios. Portanto, para poder mensurar o quanto o reconhecimento do Sistema TRUE é confiável, foi criada uma matriz de confusão, representada na Tabela~\ref{tab:matriz-confusao}.
+
+	Matriz de confusão é uma matriz em que cada coluna representa as instâncias de uma classe prevista, enquanto que cada linha representa as instâncias de uma classe real. Um dos benefícios dela é que é fácil ver se o sistema está confundindo duas classes, ou no caso, dois usuários.
 	
-	Os usuários são identificados através do metodo conhecido como
-	Eigenfaces~\ref{sec:reconhecimento}. Os usuários são identificados por suas
-	labels de cadastro e a cada reconhecimento é associado a essa label uma
-	confiança. Para validar a confiabilidade da identificação será usado a matriz
-	de confusão para representar os dados dos testes.
-	
+
 	\begin{table}[H]
 		\begin{center}
 			\caption{Matriz de confusão para apresentar os resultados obtidos.}
@@ -24,5 +23,5 @@
 				\hline
 			\end{tabular}
 		\end{center}
-		\label{tab:tabelaRequisitosTeoricos}
+		\label{tab:matriz-confusao}
 	\end{table}
