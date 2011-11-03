@@ -1,26 +1,26 @@
-% Testes
-% 	-Intro
-% 	-Teste da Localização
-% 		Fazer medidas da distância real do aparelho do kinect e comparar com a medida dada pelo kinect, montar um gráfico ou algo que mostre o erro.
-% 	-Teste do Reconhecimento
-% 		Fazer uma matriz de confusão.
-% 	-Teste do Rastreamento
-% 		Testar a detecção e o rastreamento, falar do problema com obstrução
-% 	-Teste da Integração
-% 		Falar do UserApp desenvolvido para testar o driver
 \chapter{Resultados e Análises}
 
-% \section{\textit{SmartSpace} Laico}
+	Com intuito de testar a eficiência e descobrir as limitações do Sistema TRUE, foram feitos uma série de testes funcionais que focam todas funcionalidades do sistema. Grande parte dos testes foram realizados no LAICO (\textbf{LA}boratório de Sistemas \textbf{I}ntegrados e \textbf{CO}ncorrente), um laboratório do Departamento de Ciência da Computação da Universidade de Brasília. O LAICO possui dimensões de $\displaystyle 7,67m$ x $\displaystyle 6,45m$ ilustrado pela Figura~\ref{fig:laico}.
 
-% 	O ambiente para o qual o sistema \textit{True} será projetado, desenvolvido e testado chama-se LAICO (\textbf{LA}boratório de sistemas \textbf{I}ntegrados e \textbf{CO}ncorrente), um laboratório do Departamento de Ciência da Computação da Universidade de Brasília. O LAICO possui dimensões de $\displaystyle 7,67m$ x $\displaystyle 6,45m$ ilustrado pela Figura~\ref{fig:laico}.
+	\begin{figure}[htb]
+			\begin{center}
+				\includegraphics[scale=0.6]{figuras/4.ProblemaEProposta/laico.png}
+			\end{center}
+			\caption{Planta do \textit{SmartSpace} Laico.}
+			\label{fig:laico}
+		\end{figure}	
 
-% 	\begin{figure}[hbt]
-% 			\begin{center}
-% 				\includegraphics[scale=0.6]{figuras/4.ProblemaEProposta/laico.png}
-% 			\end{center}
-% 			\caption{Planta do \textit{SmartSpace} Laico.}
-% 			\label{fig:laico}
-% 		\end{figure}	
+	Cada teste tinha como foco um das funcionalidades do Sistema TRUE:
+
+	\begin{itemize}
+		\item \textbf{Rastreamento}: testes funcionais que testam a eficiência da detecção de novos usuários e que simulam diferentes situações diárias mostrando como o sistema se comporta quando ocorre oclusões parciais e totais de usuários e quando os mesmos interagem entre si ou com objetos no ambiente.
+
+		\item \textbf{Reconhecimento}: diferentes pessoas foram cadastradas no sistema e reconhecidas pelo mesmo. As diferentes identidades obtidas em cada reconhecimento foram inseridas em uma matriz de confusão para avaliar a acurácia do reconhecimento.
+
+		\item \textbf{Localização}: um objeto foi colocado no ambiente em diferentes posições pre-determinadas e as coordenadas obtidas pelo sistema foram inseridas em gráficos e foram comparadas com as coordeanadas reais avaliando a precisão do sistema.
+
+		\item \textbf{Integração com o middleware \textit{UbiquitOS}}: uma aplicação foi desenvolvida para o middleware \textit{UbiquitOS}. Ela consome alguns serviços e eventos produzidos pelo driver \textit{UserDriver} que são comparados com as informações reais.
+	\end{itemize}
 
 \input{chapters/6.Testes/rastreamento}
 
