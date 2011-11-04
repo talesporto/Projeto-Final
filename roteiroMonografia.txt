@@ -1,10 +1,11 @@
-
-- escrever sobre o uos
-- falar sobre eigenvalues
-- falar sobre calculo da confianca
-- Testes do Máximo de Usuários rastreados 
+TODOS:
+	- Escrever sobre o uos
+	- Falar sobre eigenvalues
+	- Falar sobre calculo da confianca
+	- Testes do Máximo de Usuários rastreados 
+	- Implementar Stream
 	
-
+################################################################################################################
 OK - feito
 TODO - a fazer
 ? - conversar com fabs
