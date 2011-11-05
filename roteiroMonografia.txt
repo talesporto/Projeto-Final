@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Pedro
 ###################################
 ###  Fri Nov  4 16:50:02 2011
@@ -50,8 +51,9 @@ UNKOWN: 6
 - falar sobre o calculo de confianca
 - fazer ps
 - refatorar userdriver
+- Implementar Stream
 	
-
+################################################################################################################
 OK - feito
 TODO - a fazer
 ? - conversar com fabs
