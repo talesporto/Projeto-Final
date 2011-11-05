@@ -40,10 +40,12 @@ UNKOWN: 6
 
 
 
-- terminar matriz de confusão
+- terminar matriz de confusão -> so falta chocolate
+- dados para usar mahalanobis euclidiana
 - Fazer um sumário para os testes.
 - Fazer um sumário com quadro comparativo para os trabalhos correlatos
-- falar sobre o maximo de pessoas que cabem na visão
+- falar sobre o maximo de pessoas que cabem na visão -> so falta a foto
+- foto do reconhecimento e localizacao de um usuario
 - falar sobre eigenvalues
 - falar sobre o calculo de confianca
 - fazer ps

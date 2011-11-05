@@ -46,6 +46,16 @@
 			\caption{Oclusão de usuários.}
 			\label{fig:testes_oclusao}
 		\end{figure}
+
+	Outra caracterísitca importante que foi testada é a abrangência do campo de visão do Sistema TRUE. Como já mensionado o sistema utiliza o sensor \textit{Kinect} que possui um campo de visão horizontal de 57º. Então, a uma distância de, aproximadamente, 4 metros do sensor, o número máximo de usuários que cabem no campo de visão sem que haja oclusão é X pessoas, como mostrado na Figura~\ref{fig:max-pessoas}.
+
+	\begin{figure}[htb]
+			\begin{center}
+				\includegraphics[width=0.4\textwidth]{figuras/5.Testes/oclusao/max-pessoas.png}
+			\end{center}
+			\caption{Usuários posicionados lado a lado do sensor \textit{Kinect} a uma distância de 4 metros.}
+			\label{fig:max-pessoas}
+		\end{figure}
 		
 	Durante os testes realizados com rastreamento foi observado alguns problemas que ocorriam quando o usuário rastreado interagia com objetos ou com outros usuários. Na grande parte das vezes que o usuário interagia com objetos, o Sistema TRUE considerava o objeto como sendo parte do usuário como exemplificado na Figura~\ref{fig:testes_relacionamento_com_objetos}, o que não prejudicou a eficiência do sistema. Já os problemas com interação entre usuários eram bem mais raros, porém o impacto era maior. Esses problemas consistem em algumas ``interferências'' que podiam acontecer quando havia contato entre dois ou mais usuários. A Figura~\ref{fig:testes_relacionamento_com_usuarios} exemplifica melhor essas ``interferências''.
 	
@@ -73,7 +83,7 @@
 			\caption{Usuários sofrendo interferência dos que estão ao seu redor.}
 			\label{fig:testes_relacionamento_com_usuarios}
 		\end{figure}
-	
+
 	Apesar dos problemas relatados, o rastreamento conseguiu, na maioria dos testes, atender as necessidades rastreando os diversos usuários no ambiente em suas atividades diárias, como mostrado na Figura~\ref{fig:varios-usuarios-ambiente}.
 
 	\begin{figure}[htb]
