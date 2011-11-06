@@ -78,12 +78,7 @@
 	\subsection{Reconhecimento Facial com \textit{Eigenfaces}}
 
 		O reconhecimento facial foi desenvolvido utilizando
-		\textit{Eigenfaces}~\ref{sec:reconhecimento}. Uma técnica bastante
-		satisfatória quando utilizada sobre uma base de dados (faces) relativamente
-		grande, permitindo ao sistema inferir, das imagens suas principais
-		características e, partindo delas, realizar o reconhecimento das imagens
-		utilizando um número bastante reduzido de cálculos~\cite{artigo-eigenface},
-		permitindo, assim, um reconhecimento em tempo real.
+		\textit{Eigenfaces}~\ref{sec:reconhecimento}, e teve como base algumas etapas descritas em~\cite{shervin}. Consiste em uma técnica bastante satisfatória quando utilizada sobre uma base de dados (faces) relativamente grande, permitindo ao sistema inferir, das imagens suas principais características e, partindo delas, realizar o reconhecimento das imagens utilizando um número bastante reduzido de cálculos~\cite{artigo-eigenface}, permitindo, assim, um reconhecimento em tempo real.
 
 		A base de dados utilizada no Sistema TRUE é formada por imagens no formato PGM (\textit{Portable Gray Map}) com tamanho de 92x112 pixels e em escala de cinza. A base é composta por um banco de faces de alunos de Ciência da Computação da Universidade de Brasília e por um banco de imagens de faces da Universidade de Cambridge~\cite{cambridgeFaceDb}, mostrado na Figura~\ref{fig:cambridgeFaceDb}. Este último, é formado por imagens de faces de 40 pessoas diferentes. Para cada pessoa, existem 10 diferentes imagens tiradas em diferentes épocas, com diferentes condições de iluminação, com diferentes expressões faciais (olhos abertos e fechados, sorrindo e não sorrindo, entre outros) e com diferentes detalhes faciais (óculos, sem óculos). 
 
@@ -125,8 +120,31 @@
 		\end{center}
 	\end{table}
 
-		A última etapa consiste no cálculo da confiança do reconhecimento. 
-		
-		% TODO: Explicar como se calcula.
+		A última etapa consiste no cálculo da confiança do reconhecimento. Este cálculo foi feito utilizando a distância da imagem de entrada do usuário à imagem mais similar das imagens de treinamento. O valor da confiança varia de 0.0 a 1.0, em que uma confiança de 1.0 significaria uma ``correspondência perfeita''. A fórmula utilizada para calcular a confiança é uma métrica muito básica que não necessessariamente é muito real, dada pela Fórmula~\ref{eq:confianca}~\cite{shervin}. Nesta fórmula $\displaystyle d_e$ é a distância da imagem de entrada do usuário a imagem mais similar das imagens de treinamento, $\displaystyle n_t$ é o número de imagens utilizadas no treinamento e $\displaystyle n_e$ é o número de \textit{eigenfaces}.
 
-		% A confidence of 1.0 would mean a god match, and a confidence of 0.0 or negative would mean a bad match. But beware that the confidence formula I use in the code is just a very basic confidence metric that isn't necessarily too reliable, but I figured that most people would like to see a rough confidence value. 
+
+		\begin{equation}
+			\label{eq:confianca}
+			Confianca = 1 - \frac{\sqrt{\frac{d_e}{n_t * n_e}}}{255}
+		\end{equation}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

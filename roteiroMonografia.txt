@@ -45,7 +45,7 @@ UNKOWN: 6
 - Fazer um sumário com quadro comparativo para os trabalhos correlatos
 - falar sobre o maximo de pessoas que cabem na visão -> so falta a foto
 - falar sobre eigenvalues
-- falar sobre o calculo de confianca
+
 - fazer ps
 - refatorar userdriver
 - Implementar Stream
