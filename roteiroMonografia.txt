@@ -39,9 +39,8 @@ UNKOWN: 6
 
 
 
-
+- foto de usuarios rastreados em uma cena diaria no laico
 - terminar matriz de confusão -> so falta chocolate
-- falar sobre o maximo de pessoas que cabem na visão -> so falta a foto
 - Fazer um sumário para os testes.
 - Fazer um sumário com quadro comparativo para os trabalhos correlatos
 
