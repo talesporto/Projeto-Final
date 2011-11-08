@@ -40,7 +40,6 @@ UNKOWN: 6
 
 
 - foto de usuarios rastreados em uma cena diaria no laico
-- terminar matriz de confusão -> so falta chocolate
 - Fazer um sumário para os testes.
 - Fazer um sumário com quadro comparativo para os trabalhos correlatos
 
