@@ -1,45 +1,9 @@
-Pedro
-###################################
-###  Fri Nov  4 16:50:02 2011
-####### LOG USERS TRACKING ########
- Usuário 1: (Pedro:pedrosozin@gmail.com - 0.976160)
-	 Pedro:pedrosozin@gmail.com => 20 - 0.976160
-###################################
-UNKOWN: 0
-
-Lucas
-###################################
-###  Fri Nov  4 16:08:56 2011
-####### LOG USERS TRACKING ########
- Usuário 1: (Vinicius:viniciustafuri@gmail.com - 0.974674)
-	 LucasAlmeida:lucas.augusto.almeida@gmail.com => 4 - 0.966121
-	 Vinicius:viniciustafuri@gmail.com => 11 - 0.974674
-###################################
-UNKOWN: 5
-
- Tales:  Rafael
-####### LOG USERS TRACKING ########
-Usuário 1: (Rafael:rafaelsardenberg@cjr.org.br - 0.974847)
-       Danilo:daniloavilaf@gmail.com => 1 - 0.954624
-       LucasAlmeida:lucas.augusto.almeida@gmail.com => 2 - 0.969500
-       Rafael:rafaelsardenberg@cjr.org.br => 9 - 0.974847
-       Tales:talesap@gmail.com => 2 - 0.968278
-       Vinicius:viniciustafuri@gmail.com => 4 - 0.973585
-###################################
-UNKOWN: 2
-
-ESTEVAO
-####### LOG USERS TRACKING ########
- Usuário 1: (Estevao:estevaofaguiar@gmail.com - 0.969540)
-	 Estevao:estevaofaguiar@gmail.com => 14 - 0.969540
-###################################
-UNKOWN: 6
-
 
 
 
 
 - foto de usuarios rastreados em uma cena diaria no laico
+- intro trabalhos correlatos
 - Fazer um sumário para os testes.
 - Fazer um sumário com quadro comparativo para os trabalhos correlatos
 
