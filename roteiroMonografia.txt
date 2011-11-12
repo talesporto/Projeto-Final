@@ -1,6 +1,8 @@
 
-- Fazer um sumário para os testes.
-- Fazer um sumário com quadro comparativo para os trabalhos correlatos
+-nome do segundo trabalho correlato
+-nome do terceiro trabalho correlato
+-segundo trabalho correlato
+	-filtro de particulas -> nao tem explicacao
 
 - Implementar Stream
 	
