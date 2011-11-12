@@ -1,22 +1,27 @@
 \section{Integração com middleware \textit{UbiquitOS}}
 
-	Com intuito de exemplificar a utilização do \textit{UserDriver} e testar a integração do Sistema TRUE com o middleware \textit{UbiquitOS} foi desenvolvido uma aplicação para o middleware chamada \textit{UserApp} cujo diagrama de classe é mostrado na Figura~\ref{fig:diagrama-userapp}. Esta aplicação registra um \textit{listener} para ``escutar'' os eventos do \textit{UserDriver} chamado \textit{UserListener}. A Figura~\ref{fig:diagrama-userlistener} mostra o diagrama de classe do \textit{UserListener}.
+	Com intuito de exemplificar a utilização do \textit{UserDriver} e testar a integração do Sistema TRUE com o middleware \textit{UbiquitOS} foi desenvolvido uma aplicação para o middleware chamada \textit{UserApp}. Esta aplicação registra um \textit{listener} para ``escutar'' os eventos do \textit{UserDriver} chamado \textit{UserListener}. 
 
-		\begin{figure}[hbt]
-			\begin{center}
-				\includegraphics[scale=0.6]{figuras/5.Testes/diagrama-classe-user-ap.png}
-			\end{center}
-			\caption{Diagrama de Classe da aplicação \textit{UserApp}.}
-			\label{fig:diagrama-userapp}
-		\end{figure}
 
-		\begin{figure}[hbt]
-			\begin{center}
-				\includegraphics[scale=0.6]{figuras/5.Testes/diagrama-classe-user-listener.png}
-			\end{center}
-			\caption{Diagrama de Classe do \textit{listener} \textit{UserListener}.}
-			\label{fig:diagrama-userlistener}
-		\end{figure}
+	- Achei a motivação meio fraca. Que tal colocar como enfoque que dados de localização e identificação são importantes informações de contexto para smart space. Diz que escolheu o uOS como meio de fornecê-las (por isso construir o UserDriver) e para exemplificar o uso foi criada a UserApp.
+
+	Como aplicação o \textit{UserApp} apenas se inscreve para receber os eventos gerados pelo \textit{UserDriver}. Já o \textit{UserListener}, como \textit{listener}, espera os eventos serem gerados e realiza duas análises: analisa o evento cru (novo usuário detectado, usuário perdido, ou reconhecimento realizado) e analisa quanto tempo cada usuário está parado no mesmo lugar.
+
+		% \begin{figure}[hbt]
+		% 	\begin{center}
+		% 		\includegraphics[scale=0.6]{figuras/5.Testes/diagrama-classe-user-ap.png}
+		% 	\end{center}
+		% 	\caption{Diagrama de Classe da aplicação \textit{UserApp}.}
+		% 	\label{fig:diagrama-userapp}
+		% \end{figure}
+
+		% \begin{figure}[hbt]
+		% 	\begin{center}
+		% 		\includegraphics[scale=0.6]{figuras/5.Testes/diagrama-classe-user-listener.png}
+		% 	\end{center}
+		% 	\caption{Diagrama de Classe do \textit{listener} \textit{UserListener}.}
+		% 	\label{fig:diagrama-userlistener}
+		% \end{figure}
 
 	Basicamente, quando o \textit{UserListener} obtém os eventos do \textit{UserDriver} envia mensagens pelo Twitter para os usuários no ambiente, conforme o evento recebido. A Figura~\ref{fig:diagrama-tweet} mostra o fluxo básico de execução do \textit{listener} e as mensagens padrões para cada tipo de evento recebido. Para enviar as mensagens pelo Twitter foi utilizado a biblioteca \textit{twitter4j}. 
 
