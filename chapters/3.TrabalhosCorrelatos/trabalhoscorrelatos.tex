@@ -1,6 +1,6 @@
 \chapter{Trabalhos Correlatos}
 
-Neste capítulo serão analisados alguns projetos que focam em rastreamento, identificação e localização de pessoas em um ambiente inteligente. Embora alguns dos projetos estudados utilizem abordagens multimodais, abordagens que usam mais de um tipo de dado de entrada como dados audiovisuais, este trabalho tem como foco identificação, localização e rastreamento monomodais baseados somente na utilização de imagens.
+Neste capítulo serão analisados alguns projetos que focam rastreamento, identificação e localização de pessoas em um ambiente inteligente. Embora alguns dos projetos estudados utilizem abordagens multimodais, abordagens que usam mais de um tipo de dado de entrada como dados audiovisuais, este trabalho tem como foco identificação, localização e rastreamento monomodais baseados somente na utilização de imagens.
 
 % Neste capítulo serão analisados alguns projetos que focam no rastreamento, identificação e localização de pessoas. Alguns dos projetos estudados utilizam técnicas de identificação e rastreamento multimodais. Técnicas multimodais são técnicas que usam mais de um tipo diferente de dado de entrada, como por exemplo técnicas que utilizam dados audiovisuais.
 
@@ -141,7 +141,7 @@ Nesta abordagem, o mapa de ocupação é utilizado para projetar a imagem de um 
 
 \subsection{Detecção e Reconhecimento Facial}
 
-A detecção de face implementada no projeto utiliza o método \textit{Viola-Jones} e a biblioteca \textit{OpenCV}. Somente a câmera que está apontada para a porta é utilizada, pois esta é a única que fornece imagens na qualidade necessária. As demais, fornecem imagens em baixa resolução.  
+A detecção de face implementada no projeto utiliza o método \textit{Viola-Jones} e a biblioteca \textit{OpenCV}~\cite{opencv_library}. Somente a câmera que está apontada para a porta é utilizada, pois esta é a única que fornece imagens na qualidade necessária. As demais, fornecem imagens em baixa resolução.  
 
 O módulo de detecção detecta somente faces frontais, em que os dois olhos, o nariz e a boca são visíveis. O resultado da detecção de face é uma imagem contendo uma caixa delimitadora da face detectada.
 
@@ -153,23 +153,14 @@ Uma abordagem baseada em PCA (\textit{Principal Component Analisys}) foi utiliza
 
 \section{Projeto DIVA}
 
-Esse projeto~\cite{trivedi} foi apelidado de Projeto DIVA pois nele foi desenvolvido uma nova arquitetura para ambientes inteligentes chamado DIVA. Ele apresenta detalhes de um projeto de pesquisa de longo prazo, onde ambientes inteligentes com funcionalidades úteis são projetados, construídos e avaliados sistematicamente. 
+% Esse projeto~\cite{trivedi} foi apelidado de Projeto DIVA pois nele foi desenvolvido uma nova arquitetura para ambientes inteligentes chamado DIVA. 
+Trivedi et al~\cite{trivedi} apresenta detalhes de um projeto de pesquisa de longo prazo, onde ambientes inteligentes com funcionalidades úteis são projetados, construídos e avaliados sistematicamente. Neste projeto foi desenvolvido uma nova arquitetura para ambientes inteligentes chamado DIVA. Esta nova arquitetura pode ser vista como uma rede inteligente de câmeras, que são controladas para prover diversas funcionalidades, tais como, detecção de intrusos, rastreamento de várias pessoas, pose do corpo e análise de postura, identificação de pessoas, modelagem do corpo humano e análise do movimento.
 
-Esta nova arquitetura pode ser vista como uma rede inteligente e ativa de câmeras, onde várias câmeras são controladas para prover uma ampla gama de funcionalidades. Algumas destas incluem detecção de intrusos, rastreamento várias pessoas, pose do corpo e análise de postura, identificação de pessoas, modelagem do corpo humano e análise do movimento.
-
-O sistema proposto pelo Projeto DIVA monitora o ambiente em baixa resolução de forma contínua, detectando somente a presença e suas dimensões. Formas de aquisição de imagens mais detalhadas são ativadas quando um evento ou atividade de potencial interesse é detectado. Esses eventos serão os focos de atenção do sistema.
+O sistema proposto por este projeto monitora o ambiente em baixa resolução de forma contínua, detectando somente a presença e suas dimensões. Formas de aquisição de imagens mais detalhadas são ativadas quando um evento ou atividade de potencial interesse é detectado. Esses eventos são os focos de atenção do sistema.
 
 O monitoramento de baixa resolução e de grande área do ambiente é alcançado graças a algumas câmeras de amplo ângulo de visão e estáticas. Com um pequeno número de câmeras PTZ (\textit{pan/tilt/zoom}) ativas, múltiplos focos de atenção podem ser mantidos de forma simultânea.
 
-	\begin{figure}[hbt]
-		\begin{center}
-	\includegraphics[scale=0.5]{figuras/3.TrabalhosCorrelatos/micasa_aviary.png}
-		\end{center}
-		\caption{Representação dos ambientes inteligentes MICASA e AVIARY~\cite{trivedi}.}
-		\label{micasa_aviary}
-	\end{figure}
-
-O Projeto DIVA possui dois ambientes inteligentes separados, mas conectados. O primeiro é chamado de AVIARY foi projetado para ser uma pequena sala de conferências. O segundo chamado de MICASA foi projetado para ser uma pequena sala de aula. A Figura~\ref{micasa_aviary} mostra fotos dos dois ambientes e como estão conectados, além da disposição dos sensores utilizados.
+O Projeto possui dois ambientes inteligentes separados fisicamente, porém conectados. O primeiro, chamado de AVIARY, foi projetado para ser uma pequena sala de conferências. O segundo, chamado de MICASA, foi projetado para ser uma pequena sala de aula. A Figura~\ref{micasa_aviary} ilustra os dois ambientes e a disposição dos sensores neles utilizados.
 
 Os sensores no ambiente inteligente AVIARY incluem:
 
@@ -177,10 +168,18 @@ Os sensores no ambiente inteligente AVIARY incluem:
 		\item uma rede de quatro câmeras omnidirecionais;
 		\item quatro câmeras PTZ;
 		\item quatro câmeras retilíneas estáticas;
-		\item dois \textit{arrays} de microfones com quatro microfones cada;
+		\item dois \textit{arrays} de microfones com quatro microfones cada.
 	\end{itemize}
 
-As quatro câmeras omnidirecionais (ODVSs) estão perto dos cantos de uma mesa de reunião, cobrindo o quarto inteiro de dentro para fora, como mostrado na Figura \ref{micasa_aviary}. As câmeras PTZ e retilíneas estão nos ``vértices'' da sala a $\displaysytle 1.4m$ acima do chão. Os dois \textit{arrays} de microfones foram instalados na parede e no teto.
+\begin{figure}[hbt]
+		\begin{center}
+	\includegraphics[scale=0.5]{figuras/3.TrabalhosCorrelatos/micasa_aviary.png}
+		\end{center}
+		\caption{Representação dos ambientes inteligentes MICASA e AVIARY~\cite{trivedi}.}
+		\label{micasa_aviary}
+	\end{figure}
+
+As quatro câmeras omnidirecionais (ODVSs - \textit{Omni-Directional Vision Sensors}) estão perto dos cantos de uma mesa de reunião, cobrindo a sala inteira de dentro para fora, como mostrado na Figura \ref{micasa_aviary}. As câmeras PTZ e retilíneas estão nos ``vértices'' da sala a $\displaysytle 1.4m$ acima do chão. Os dois \textit{arrays} de microfones foram instalados na parede e no teto.
 
 % Um computador é alocado para rastreamento, utilizando imagens das quatro câmeras omnidirecionais ou imagens das quatro câmeras retilíneas estáticas. Outro computador é utilizado para analisar os eventos de áudio e de vídeo. Um terceiro computador é utilizado para arquivar \textit{streams} de áudio e vídeo para posterior recuperação.
 
@@ -189,7 +188,7 @@ O ambiente inteligente MICASA é duas vezes maior que o AVIARY. Os sensores util
 	\begin{itemize}
 		\item uma rede de quatro câmeras omnidirecionais;
 		\item quatro câmeras PTZ;
-		\item oito câmeras retilíneas estáticas;
+		\item oito câmeras retilíneas estáticas.
 	\end{itemize}
 
 As câmeras omnidirecionais são instaladas no teto, como mostrado na Figura \ref{micasa_aviary}. As câmeras PTZ e quatro câmeras retilíneas foram instaladas de maneira similar ao ambiente AVIARY. As quatro câmeras retilíneas restantes foram instaladas nas paredes como mostrado como mostrado na Figura \ref{micasa_aviary}. As câmeras nos vértices possuem maior campo de visão para cobrir toda a sala e fazem parte do array de câmeras para rastreamento.
