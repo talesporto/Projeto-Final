@@ -21,7 +21,7 @@
 
 	Também foram realizados testes para tentar avaliar o impacto da oclusão no rastreamento. Em alguns testes um usuário se posicionava no ambiente com intuito de ocultar totalmente outro usuário rastreado. Com isso, caso o usuário continuasse oculto, o sistema o dava como perdido. Porém, o sistema se mostrou robusto em casos que a oclusão era parcial, como mostrado na Figura~\ref{fig:testes_oclusao_sucesso} Em outros testes, foi simulada uma situação mais comum: quando um usuário, em movimento, ocultava ou era oculto, por um momento, por outro usuário. Neste caso, o sistema logo conseguia se recuperar e voltar a rastrear o usuário perdido, como mostrado na Figura~\ref{fig:testes_oclusao}. A oclusão era um problema esperado pois o Sistema TRUE utiliza somente um sensor \textit{Kinect} como dispositivo de entrada.
 		
-\begin{figure}[htb]
+		\begin{figure}[htb]
 			\begin{center}
 				\includegraphics[width=0.75\textwidth]{figuras/5.Testes/oclusao/oclusao_corretamente.png}
 			\end{center}
@@ -91,7 +91,7 @@
 
 	Apesar dos problemas relatados, o rastreamento conseguiu, na maioria dos testes, atender as necessidades rastreando os diversos usuários no ambiente em suas atividades diárias, como mostrado na Figura~\ref{fig:varios-usuarios-ambiente}.
 
-	\begin{figure}[htb]
+		\begin{figure}[htb]
 			\begin{center}
 				\includegraphics[scale=0.5]{figuras/5.Testes/oclusao/usuarios-rastreados.png}
 			\end{center}
