@@ -2,9 +2,6 @@
 
 	Com intuito de exemplificar a utilização do \textit{UserDriver} e testar a integração do Sistema TRUE com o middleware \textit{UbiquitOS} foi desenvolvido uma aplicação para o middleware chamada \textit{UserApp}. Esta aplicação registra um \textit{listener} para ``escutar'' os eventos do \textit{UserDriver} chamado \textit{UserListener}. 
 
-
-	- Achei a motivação meio fraca. Que tal colocar como enfoque que dados de localização e identificação são importantes informações de contexto para smart space. Diz que escolheu o uOS como meio de fornecê-las (por isso construir o UserDriver) e para exemplificar o uso foi criada a UserApp.
-
 	Como aplicação o \textit{UserApp} apenas se inscreve para receber os eventos gerados pelo \textit{UserDriver}. Já o \textit{UserListener}, como \textit{listener}, espera os eventos serem gerados e realiza duas análises: analisa o evento cru (novo usuário detectado, usuário perdido, ou reconhecimento realizado) e analisa quanto tempo cada usuário está parado no mesmo lugar.
 
 		% \begin{figure}[hbt]
@@ -36,7 +33,7 @@
 	Testes funcionais foram feitos com a aplicação mostrando que o driver consegue
 	obter os dados íntegros do Sistema TRUE e gerar os eventos de maneira quase
 	instantânea. Algumas vezes as mensagens demoravam a chegar ao Twitter,
-	geralmente nos horários de ``pico'' quando o Twitter operava proximo ao limite
+	geralmente nos horários de ``pico'' quando o Twitter operava próximo ao limite
 	da sua capacidade. A Figura~\ref{fig:tweets} mostra as mensagens geradas
 	pela aplicação em um teste funcional, onde Danilo, um usuário cadastrado,
 	entra no ambiente senta em uma mesa com seu notebook permanecendo no mesmo
