@@ -4,33 +4,56 @@
 
 	Tal técnica consiste em uma matriz em que cada coluna representa as instâncias de uma classe prevista, enquanto que cada linha representa as instâncias de uma classe real. Como benefício da técnica temos a fácil visualização da confiança obtida no reconhecimento, isso pode ser observado através dos valores obtidos na diagonal principal que representa a porcentagem de acerto para cada usuário.
 
-	Nosso cenário foi construído com 11 usuários cadastrados préviamente além das 40 pessoas presentes no banco de faces da Universidade de Cambridge~\cite{cambridgeFaceDb}. Cada usuário se posicionava em frente ao \textit{Kinect}, com o rosto posicionado de maneira frontal em relação ao mesmo, que realizava o processo de reconhecimento 20 vezes. As identidades obtidas pelo Sistema TRUE foram inseridas na matriz de confusão mostrada na Tabela~\ref{tab:matriz-confusao}.
+	Nosso cenário foi construído com 11 usuários apresentados na Lista
+	\ref{list:usuarios} cadastrados préviamente além das 40 pessoas presentes no banco de faces da
+	Universidade de Cambridge~\cite{cambridgeFaceDb}. Cada usuário se posicionava
+	em frente ao \textit{Kinect}, com o rosto posicionado de maneira frontal em
+	relação ao mesmo, que realizava o processo de reconhecimento 20 vezes. As
+	identidades obtidas pelo Sistema TRUE foram inseridas na matriz de confusão
+	mostrada na Tabela~\ref{tab:matriz-confusao}.
 	
-	\begin{landscape}
+	\begin{enumerate}
+	  \bf \item Tales \label{user:tales}
+	  \bf \item Danilo \label{user:danilo}
+	  \bf \item Ana \label{user:ana}
+	  \bf \item Fabricio \label{user:fabricio}
+	  \bf \item Lucas \label{user:lucas}
+	  \bf \item Bruno \label{user:bruno}
+	  \bf \item Ricardo \label{user:ricardo}
+	  \bf \item Estevão \label{user:estevao}
+	  \bf \item Rafael \label{user:rafael}
+	  \bf \item Vinicius \label{user:vinicius}
+	  \bf \item Pedro \label{user:pedro}
+	  \label{list:usuarios}
+	\end{enumerate}
+	
 	\begin{table}[htb]
 		\begin{center}
 			\caption{Matriz de confusão para apresentar os resultados obtidos.}
 			\label{tab:matriz-confusao}
 			\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|}
-				\hline  & \bf Tales & \bf Danilo & \bf Ana & \bf Fabrício & \bf Lucas & \bf Bruno & \bf Ricardo & \bf Estevão & \bf Rafael & \bf Vinicius & \bf Pedro & \bf Desconhecido\\
-				\hline \bf Tales 		& 95\% & 			& 		 & 			&   	 & 			& 		 & 			& 		 & 			& 		 & 5\%	\\
-				\hline \bf Danilo 	& 		 & 75\% & 		 & 			&   	 & 			& 		 & 			& 		 & 			& 25\% &		 	\\
-				\hline \bf Ana 			& 		 & 			& 95\% & 			&   	 & 			& 		 & 			& 		 & 			& 		 & 5\%  \\
-				\hline \bf Fabrício & 20\% & 			& 		 & 50\% &      & 			& 10\% & 			&  	   & 20\% & 		 &		  \\
-				\hline \bf Lucas 		& 		 & 			& 		 & 			& 55\% & 			& 		 & 			& 		 & 			& 20\% & 25\% \\
-				\hline \bf Bruno 		& 5\%	 & 			& 		 & 			& 		 & 70\% & 		 & 			& 10\% & 	5\%	& 		 & 10\%	\\
-				\hline \bf Ricardo 	& 		 & 			& 10\% & 			& 		 & 			& 85\% & 			& 		 & 			& 		 & 5\%  \\
-				\hline \bf Estevão 	& 		 & 			& 		 & 			& 		 & 			& 		 & 70\% & 		 & 			& 		 & 30\% \\
-				\hline \bf Rafael 	& 10\% & 	5\%	& 		 & 			& 10\% & 			& 		 & 			& 45\% & 20\% & 		 & 10\% \\
-				\hline \bf Vinicius & 		 & 			& 5\%  & 			& 		 & 			& 		 & 			& 5\%  & 70\% & 10\% & 10\% \\
-				\hline \bf Pedro 		& 		 & 			& 		 & 			& 		 & 			& 		 & 			& 		 & 			& 100\%&		  \\
+				\hline  & \bf \ref{user:tales} & \bf \ref{user:danilo} & \bf
+				\ref{user:ana} & \bf \ref{user:fabricio} & \bf \ref{user:lucas} & \bf
+				\ref{user:bruno} & \bf \ref{user:ricardo} & \bf \ref{user:estevao} & \bf \ref{user:rafael} &
+				\bf \ref{user:vinicius} & \bf \ref{user:pedro} & \bf Desconhecido\\ 
+				
+				\hline \bf \ref{user:tales} 		& 95\% & 			& 		 & 			&   	 & 			& 		 & 			& 		 & 			& 		 & 5\%	\\ 
+				\hline \bf \ref{user:danilo} 	& 		 & 75\% & 		 & 			&   	 & 			& 		 & 			& 		 & 			& 25\% &		 	\\
+				\hline \bf \ref{user:ana} 			& 		 & 			& 95\% & 			&   	 & 			& 		 & 			& 		 & 			& 		 & 5\%  \\
+				\hline \bf \ref{user:fabricio} & 20\% & 			& 		 & 50\% &      & 			& 10\% & 			&  	   & 20\% & 		 &		  \\
+				\hline \bf \ref{user:lucas} 		& 		 & 			& 		 & 			& 55\% & 			& 		 & 			& 		 & 			& 20\% & 25\% \\
+				\hline \bf \ref{user:bruno} 		& 5\%	 & 			& 		 & 			& 		 & 70\% & 		 & 			& 10\% & 	5\%	& 		 & 10\%	\\
+				\hline \bf \ref{user:ricardo} 	& 		 & 			& 10\% & 			& 		 & 			& 85\% & 			& 		 & 			& 		 & 5\%  \\
+				\hline \bf \ref{user:estevao} 	& 		 & 			& 		 & 			& 		 & 			& 		 & 70\% & 		 & 			& 		 & 30\% \\
+				\hline \bf \ref{user:rafael} 	& 10\% & 	5\%	& 		 & 			& 10\% & 			& 		 & 			& 45\% & 20\% & 		 & 10\% \\
+				\hline \bf \ref{user:vinicius} & 		 & 			& 5\%  & 			& 		 & 			& 		 & 			& 5\%  & 70\% & 10\% & 10\% \\
+				\hline \bf \ref{user:pedro} 		& 		 & 			& 		 & 			& 		 & 			& 		 & 			& 		 & 			& 100\%&		  \\
 				\hline
 				% \hline \bf Média de Acertos & \multicolumn{12}{|l|}{73,63\%} \\
 				% \hline
 			\end{tabular}
 		\end{center}
 	\end{table}
-	\end{landscape}
 
 	Como visto na matriz, os maiores valores, como previsto, estão na diagonal
 	principal. Alguns resultados obtidos foram satisfatórios já outros ficaram
@@ -46,7 +69,15 @@
 		\item \textbf{Falso Negativo}: quando o sistema não identifica o usuário cadastrado.
 	\end{enumerate}
 
-	Tais taxas foram inseridas na Tabela~\ref{tab:taxas}. A taxa de acerto (verdadeito positivo) foi menor do que se esperava. Portanto, o teste foi realizado novamente utilizando menos usuários, 6 usuários além dos 40 presentes no banco de faces da Universidade de Cambridge~\cite{cambridgeFaceDb}. Porém o cadastro destes usuários foi feito de maneira diferente. Ao invés de se obter 10 fotos das faces posicionadas de maneira frontal em relação ao sensor, foram obtidas 100 imagens das faces em diferentes ângulos e posições. Os resultados obtidos, foram inseridos em uma segunda matriz de confusão (Tabela~\ref{tab:matriz-confusao2}).
+	Tais taxas foram inseridas na Tabela~\ref{tab:taxas}. A taxa de acerto
+	(verdadeito positivo) foi menor do que se esperava. Portanto, o teste foi
+	realizado novamente utilizando menos usuários, 6 usuários além dos 40
+	presentes no banco de faces da Universidade de
+	Cambridge~\cite{cambridgeFaceDb}. Porém o cadastro destes usuários foi feito
+	de maneira diferente. Ao invés de se obter 10 fotos das faces posicionadas de
+	maneira frontal em relação ao sensor, foram obtidas 100 imagens das faces em
+	diferentes ângulos e posições. Os resultados obtidos, foram inseridos em uma
+	segunda matriz de confusão (Tabela~\ref{tab:matriz-confusao2}).
 
 	\begin{table}[htb]
 		\begin{center}
@@ -62,25 +93,43 @@
 	\end{table}
 
 
-	% \begin{landscape}
 	\begin{table}[htb]
 		\begin{center}
 			\caption{Matriz de confusão para apresentar os resultados obtidos.}
 			\label{tab:matriz-confusao2}
-			\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
-				\hline  & \bf Tales & \bf Danilo & \bf Ana & \bf Fabrício & \bf Lucas & \bf Bruno &  \bf Desconhecido\\
-				\hline \bf Tales 		& 90\% & 			& 		 & 			&   	 & 			& 10\%		\\
-				\hline \bf Danilo 	& 		 & 100\%& 		 & 			&   	 & 			& 		 		\\
-				\hline \bf Ana 			& 		 & 			& 100\%& 			&   	 & 			& 		    \\
-				\hline \bf Fabrício & 		 & 			& 		 &      &      & 			&      		\\
-				\hline \bf Lucas 		& 		 & 			& 		 & 			& 85\% & 			& 15\%		\\
-				\hline \bf Bruno 		& 		 & 			& 		 & 			& 		 & 100\%& 		  	\\
+			  \begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+				\hline  & \bf \ref{user:tales} & \bf \ref{user:danilo} & \bf
+				\ref{user:ana} & \bf \ref{user:fabricio} & \bf \ref{user:lucas} & \bf
+				\ref{user:bruno} &  \bf Desconhecido\\
+				 
+				\hline \bf \ref{user:tales} 		& 90\% & 			& 		 & 			&   	 & 			& 10\%		\\
+				\hline \bf \ref{user:danilo} 	& 		 & 100\%& 		 & 			&   	 & 			& 		 		\\
+				\hline \bf \ref{user:ana} 			& 		 & 			& 100\%& 			&   	 & 			& 		    \\
+				\hline \bf \ref{user:fabricio} & 		 & 			& 		 &100\%      &      & 			&      		\\
+				\hline \bf \ref{user:lucas} 		& 		 & 			& 		 & 			& 85\% & 			& 15\%		\\
+				\hline \bf \ref{user:bruno} 		& 		 & 			& 		 & 			& 		 & 100\%& 		  	\\
 				\hline
 			\end{tabular}
 		\end{center}
 	\end{table}
-	% \end{landscape}
 
+	Para esta matriz obtemos as taxas apresentadas na Tabela~\ref{tab:taxas2}. É
+	possível observar que o método de cadastro influi bastante no resultado final.
+	Também é possível inferir que quanto maior a variância das imagens para um
+	mesmo usuário melhor o seu reconhecimento.
+
+	\begin{table}[htb]
+		\begin{center}
+			\caption{Taxas obtidas da Tabela~\ref{tab:matriz-confusao2}.}
+			\label{tab:taxas2}
+			\begin{tabular}{|l|c|}
+				\hline \bf Verdadeiro Positivo & 95,83\% \\
+				\hline \bf Verdadeiro Negativo & 0\% \\
+				\hline \bf Falso Negativo & 4,17\% \\
+				\hline
+			\end{tabular}
+		\end{center}
+	\end{table}
 
 	
 
