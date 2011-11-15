@@ -101,7 +101,7 @@ Os \textit{streams} de dados são processados com ajuda de um \textit{middleware
 		\label{workflow}
 	\end{figure}
 
-Os sensores utilizados e as condições do ambiente inteligente são os seguintes sensores (Figura \ref{upc}):
+Os sensores utilizados e as condições do ambiente inteligente são (Figura \ref{upc}):
 
 	\begin{itemize}
 		\item quatro câmeras nos cantos da sala (rotuladas como Cam1 a Cam4 na Figura \ref{upc});
@@ -141,7 +141,7 @@ Nesta abordagem, o mapa de ocupação é utilizado para projetar a imagem de um 
 
 \subsection{Detecção e Reconhecimento Facial}
 
-A detecção de face implementada no projeto utiliza o método \textit{Viola-Jones} e a biblioteca \textit{OpenCV}~\cite{opencv_library}. Somente a câmera que está apontada para a porta é utilizada, pois esta é a única que fornece imagens na qualidade necessária. As demais, fornecem imagens em baixa resolução.  
+A detecção de face implementada no projeto utiliza o método \textit{Viola-Jones} e a biblioteca \textit{OpenCV}~\cite{opencv_library} (\textit{Open Source Computer Vision}). Somente a câmera que está apontada para a porta é utilizada, pois esta é a única que fornece imagens na qualidade necessária. As demais, fornecem imagens em baixa resolução.  
 
 O módulo de detecção detecta somente faces frontais, em que os dois olhos, o nariz e a boca são visíveis. O resultado da detecção de face é uma imagem contendo uma caixa delimitadora da face detectada.
 
@@ -195,15 +195,15 @@ As câmeras omnidirecionais são instaladas no teto, como mostrado na Figura \re
 
 \subsection{Rastreamento e Reconhecimento facial}
  
-No Projeto DIVA foi desenvolvido um sistema em tempo-real que utiliza a rede de câmeras omnidirecionais e é responsável pelo rastreamento e reconhecimento facial. 
+Neste projeto foi desenvolvido um sistema em tempo-real que utiliza a rede de câmeras omnidirecionais e é responsável pelo rastreamento e reconhecimento facial. 
 
-O rastreamento é feito utilizando subtração do fundo~\ref{sec:deteccao-objeto} com remoção de sombras para detectar as silhuetas dos novos usuários no ambiente.  Com isso, essas silhuetas são rastreadas imagem por imagem~\ref{sec:rastreamento}.
+O rastreamento é feito utilizando subtração do fundo com remoção de sombras para detectar as silhuetas dos novos usuários no ambiente.  Com isso, essas silhuetas são rastreadas imagem por imagem.
 
 Os resultados do rastreamento são utilizados para controlar o reconhecimento facial. As imagens obtidas do rastreamento são processadas utilizando um método de segmentação de tom de pele e são recortadas para obter as imagens com possíveis faces. 
 
-Essas imagens, então, são classificadas para rejeitar as imagens sem faces. Para essa classificação é utilizado o método \textit{Eigenfaces}~\ref{sec:reconhecimento}. Este último também é utilizado para realizar o reconhecimento facial utilizando a classificação do ``vizinho'' mais príximo.
+Essas imagens, então, são classificadas para rejeitar as imagens sem faces. Para essa classificação é utilizado o método \textit{Eigenfaces}. Este último também é utilizado para realizar o reconhecimento facial utilizando a classificação do ``vizinho'' mais príximo.
 
-O treinamento do algoritmo \textit{Eigenfaces} implementado no sistema do Projeto DIVA é feito utilizando um banco com $\displaystyle 200$ imagens de faces de várias pessoas diferentes.
+O treinamento do algoritmo \textit{Eigenfaces} implementado é feito utilizando um banco com $\displaystyle 200$ imagens de faces de várias pessoas diferentes.
 
 	\begin{figure}[hbt]
 		\begin{center}
