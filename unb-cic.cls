@@ -966,7 +966,7 @@
     	\hskip\@quadskip%
 		\parbox{\@boxwidth}{
 			\vskip\@quadskip%
-			\primeiroautorinv.\\[\baselineskip]%
+			\primeiroautorinv\\\segundoautorinv.\\[\baselineskip]%
 			\mbox{\hskip\@quadskip}%
 			\parbox{\@boxparwidth}{%
 				\@title\ / %
