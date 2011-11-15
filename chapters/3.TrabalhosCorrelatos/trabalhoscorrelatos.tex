@@ -1,20 +1,28 @@
 \chapter{Trabalhos Correlatos}
 
-Neste capítulo serão analisados alguns projetos que focam no rastreamento, identificação e localização de pessoas. Alguns dos projetos estudados utilizam técnicas de identificação e rastreamento multimodais. Técnicas multimodais são técnicas que usam mais de um tipo diferente de dado de entrada, como por exemplo técnicas que utilizam dados audiovisuais.
+Neste capítulo serão analisados alguns projetos que focam rastreamento, identificação e localização de pessoas em um ambiente inteligente. Embora alguns dos projetos estudados utilizem abordagens multimodais, abordagens que usam mais de um tipo de dado de entrada como dados audiovisuais, este trabalho tem como foco identificação, localização e rastreamento monomodais baseados somente na utilização de imagens.
 
-Mesmo assim, somente as técnicas de identificação, localização e rastreamento monomodais que utilizarem imagens (cor, intensidade ou profundidade) como entrada serão descritas e analisadas.
+% Neste capítulo serão analisados alguns projetos que focam no rastreamento, identificação e localização de pessoas. Alguns dos projetos estudados utilizam técnicas de identificação e rastreamento multimodais. Técnicas multimodais são técnicas que usam mais de um tipo diferente de dado de entrada, como por exemplo técnicas que utilizam dados audiovisuais.
 
-Dentre os projetos estudados, destacam-se os seguintes projetos a seguir que focam em soluções para rastreamento, identificação e localização de usuários em um ambiente inteligente repleto de sensores..
+% Mesmo assim, somente as técnicas de identificação, localização e rastreamento monomodais que utilizarem imagens (cor, intensidade ou profundidade) como entrada serão descritas e analisadas.
+
+
+A seguir é apresentada uma descrição dos projetos analisados que focam em soluções para rastreamento, localização e identificação dos usuários em um ambiente inteligente utilizando abordagens baseadas em imagens.
+
+% Dentre os projetos estudados, destacam-se os seguintes projetos a seguir que focam em soluções para rastreamento, identificação e localização de usuários em um ambiente inteligente repleto de sensores.
+
+
 
 \section{Projeto CHIL}
 
-O Projeto CHIL (\textit{Computers in the Human Interaction Loop})~\cite{chil, computerschil} envolve uma rede de quinze laboratórios internacionais de pesquisa acadêmica e industrial. Eles colaboram entre si conduzindo pesquisas que tem por objetivo ajudar a pessoas de forma proativa durante suas atividades diárias no ambiente de trabalho. Em especial, o projeto foca no desenvolvimento de sistemas que auxiliam as interações entre grupos de pessoas como, por exemplo, sistemas que facilitam a colaboração em reuniões e em salas de palestras. Dentre os protótipos que foram desenvolvidos no projeto destacam-se um ambiente de trabalho perceptivo e colaborativo e um sistema perceptivo de assistência a um escritório virtual.
+O Projeto CHIL (\textit{Computers in the Human Interaction Loop})~\cite{chil, computerschil} envolve uma rede de quinze laboratórios internacionais de pesquisa acadêmica e industrial. Eles colaboram entre si conduzindo pesquisas que tem por objetivo auxiliar a pessoas de forma proativa durante suas atividades diárias no ambiente de trabalho. Em especial, o projeto foca no desenvolvimento de sistemas que auxiliam as interações entre grupos de pessoas como, por exemplo, sistemas que facilitam a colaboração em reuniões e em salas de palestras. Dentre os protótipos que foram desenvolvidos no projeto destacam-se um ambiente de trabalho perceptivo e colaborativo e um sistema perceptivo de apoio a um escritório virtual.
 
-Este projeto utiliza informações obitidas de diferentes algoritmos monomodais para criar um sistema de rastreamento e identificação multimodal utilizando dados audiovisuais das pessoas no ambiente. Contudo, apesar do foco desta monografia ser identificação, rastreamento e localização utilizando imagens, vale salientar que o Projeto CHIL representa uma das primeiras tentativas de realizar e avaliar sistematicamente rastreamento acústico com uma rede distribuída de microfones. Portanto, os relatos a seguir serão relativos somente às investigações que utilizam dados visuais (imagens) para rastreamento e identificação. Referente a localização das pessoas no ambiente, o projeto focou somente na localização das pessoas que ``falam''~\cite{speaker-localization}.
+Este projeto utiliza informações obitidas de diferentes algoritmos monomodais para criar um sistema de rastreamento e identificação multimodal a partir de dados audiovisuais das pessoas no ambiente. Apesar do foco desta monografia ser identificação, rastreamento e localização utilizando imagens, vale salientar que o Projeto CHIL representa uma das primeiras tentativas de realizar e avaliar sistematicamente rastreamento acústico com uma rede distribuída de microfones. Os relatos a seguir se concentram somente nas investigações que utilizam dados visuais (imagens) para rastreamento e identificação. 
+% Referente a localização das pessoas no ambiente, o projeto focou somente na localização das pessoas que ``falam''~\cite{speaker-localization}.
 
 \subsection{Rastreamento de pessoas}
 
-As pesquisas sobre rastreamento de pessoas no âmbito do Projeto CHIL concentraram-se principalmente no rastreamento de pessoas dentro de um ambiente inteligente. Neste contexto, o rastreamento tem o objetivo de determinar,  de maneira contínua, as coordenadas dos ocupantes na imagem capturada.
+As pesquisas sobre rastreamento no âmbito do Projeto CHIL concentraram-se principalmente no rastreamento de pessoas dentro de um ambiente inteligente. Neste contexto, o rastreamento tem o objetivo de determinar,  de maneira contínua, as coordenadas dos ocupantes na imagem capturada.
 
 Os sensores utilizados no ambiente inteligente do Projeto CHIL incluem:	
 	\begin{itemize}
@@ -24,7 +32,7 @@ Os sensores utilizados no ambiente inteligente do Projeto CHIL incluem:
 		\item um microfone de Mark III de 64 canais.
 	\end{itemize}
 
-Era esperado que essa grande quantidade de sensores disponíveis pudesse ser vista como uma vantagem, por oferecerem alta redundância nas informações capturadas e boa cobertura do ambiente minimizando assim problemas como oclusão. Porém, foi relatado que tal redundância se tornou um grande desafio, pois surgiram problemas relativo à sincronização dos dados, transferência de processamento distribuído, fusão de espaço-temporal, entre outros.
+Esperava-se que essa grande quantidade de sensores disponíveis fôsse uma vantagem, tendo em vista a alta redundância nas informações capturadas e boa cobertura do ambiente minimizando assim problemas como oclusão. Entretanto, foi relatado que tal redundância se tornou um grande desafio, pois surgiram problemas relativos à sincronização dos dados, transferência de processamento distribuído, fusão de espaço-temporal, entre outros.
 
 Inicialmente, os sistemas do Projeto CHIL eram de uma única modalidade com inicialização manual, utilizando recursos simples e rastreamento de no máximo uma pessoa. Estes sistemas evoluíram para um sistema totalmente automático, com auto-inicialização, em tempo real, utilizando uma combinação de recursos capaz de rastrear alvos múltiplos.
 
@@ -35,9 +43,9 @@ Sobre os algoritmos de rastreamento visual, duas abordagens principais foram seg
 		\item Abordagem orientada a dados, onde sistemas de rastreamento 2D operam de forma independente sobre os diferentes ângulos de visão das câmeras e os dados do rastreamento pertencentes a um mesmo alvo são coletados no formato de um rastreamento 3D~\cite{chilref4,chilref5}. A elegância desta abordagem reside na sua capacidade inerente de lidar com os problemas encontrados por várias técnicas de rastreamento 2D como, por exemplo, oclusão.
 	\end{enumerate}	
 
- Em termos de desempenho, foi observado que a abordagem baseada em modelos (1) geralmente prevê uma melhor acurácia, porém menos precisão do que a abordagem orientada a dados (2). Por outro lado, o tratamento das oclusões e da associação dos dados dos sistemas de rastreamentos independentes são as desvantagens do modelo orientado a dados. Foi identificado,  nesse projeto, que rastrear rostos ao invés de corpos inteiros diminui o impacto desses problemas.
+ Em termos de desempenho, foi observado que a abordagem baseada em modelos (1) geralmente prevê uma melhor acurácia, porém menos precisão do que a abordagem orientada a dados (2). Por outro lado, o tratamento das oclusões e da associação dos dados dos sistemas de rastreamentos independentes são as desvantagens do modelo orientado a dados. Foi identificado, no Projeto CHIL, que rastrear rostos ao invés de corpos inteiros diminui o impacto desses problemas.
 
- Foi observado que a abordagem baseada em modelos também facilita a incorporação de diversos tipos de recursos, como segmentos de primeiro plano, histogramas de cor, etc., que aumentam a robustez do rastreamento. Contudo, as dificuldades encontradas nesta abordagem se resumem na inicialização automática e na atualização dos modelos das pessoas.
+ Também foi observado que a abordagem baseada em modelos facilita a incorporação de diversos tipos de recursos, como segmentos de primeiro plano, histogramas de cor, etc., que aumentam a robustez do rastreamento. Contudo, as dificuldades encontradas nesta abordagem se concentram na inicialização automática e na atualização dos modelos das pessoas.
 
  Os testes do sistema de rastreamento desenvolvido no Projeto CHIL foram feitos utilizando os dados dos seminários e reuniões do próprio projeto.
 
@@ -48,26 +56,28 @@ Sobre os algoritmos de rastreamento visual, duas abordagens principais foram seg
 \subsection{Identificação de pessoas}
 
 
-A fim de realizar a identificação de pessoas de forma natural e implícita em um ambiente inteligente, sensores distribuídos no ambiente devem monitorar continuamente o espaço de modo que o sistema de identificação opere em segundo plano sem necessitar de atenção e cooperação dos usuários. 
+A fim de realizar a identificação de pessoas de forma natural e implícita em um ambiente inteligente, sensores distribuídos no ambiente devem monitorar continuamente o espaço de modo que o sistema de identificação opere em segundo plano sem necessitar de atenção e cooperação dos usuários.
 
-A equipe do Projeto CHIL desenvolveu sistemas de reconhecimento facial tendo em vista que a face é uma característica biométrica que permite uma identificação de forma natural e implícita, conforme mencionado na Seção~\ref{sec:biometria}. 
+Para a identificação de pessoas, o Projeto CHIL elegeu o reconhecimento facial, tendo em vista que a face é uma característica biométrica que permite uma identificação de forma natural e implícita. 
 
-Na tentativa de realizar o reconhecimento facial das pessoas presentes no ambiente inteligente, vários desafios foram encontrados no Projeto CHIL, como: grande variação da iluminação, sensores com baixa resolução, oclusão visual. Além disso dependendo da localização e distância dos sensores da pessoa a ser identificada os dados recebidos podem variar. Foi observado, também, que o fato das pessoas possuírem diferentes expressões faciais, cortes de cabelo, maquiagem, entre outros, dificultava ainda mais a tarefa. Entretando, apesar de todos esses desafios, foi notado que o reconhecimento facial podia ser realizado de forma robusta utilizando múltiplos sensores no ambiente.
+% A equipe do Projeto CHIL desenvolveu sistemas de reconhecimento facial tendo em vista que a face é uma característica biométrica que permite uma identificação de forma natural e implícita, conforme mencionado na Seção~\ref{sec:biometria}. 
 
-O sistema de identificação do Projeto CHIL utiliza sequências de imagens fornecidas pelas várias câmeras no ambiente inteligente. A cada $\displaysyle 200ms$ imagens das caixas delimitadoras das faces (uma maneira de apontar a localização da face na imagem por meio de um enquadramento) e posições dos centros dos olhos são extraídas. O canto inferior direito da Figura~\ref{chil} exemplifica a imagem da face extraída de uma pessoa no ambiente.
+Na tentativa de realizar o reconhecimento facial das pessoas presentes no ambiente inteligente, vários desafios foram encontrados no Projeto CHIL, como: grande variação da iluminação, sensores com baixa resolução, oclusão visual. Além disso dependendo da localização e distância dos sensores da pessoa a ser identificada os dados recebidos podem variar. Foi observado, também, que o fato das pessoas possuírem diferentes expressões faciais, diferentes cortes de cabelo, maquiagem, entre outros, dificultava ainda mais a tarefa. Entretando, apesar de todos esses desafios, foi notado que o reconhecimento facial podia ser realizado de forma robusta utilizando múltiplos sensores no ambiente.
 
-As faces extraídas são, então, alinhadas utilizando os centros dos olhos ou as caixas delimitadoras das faces. Para obter robustez e minimizar erros, o sistema gera algumas imagens adicionais modificando as posições dos rótulos do centro dos olhos ou os rótulos das caixas delimitadoras das faces alterando, então, o alinhamento das faces nas imagens.
+O sistema de identificação do Projeto CHIL utiliza sequências de imagens fornecidas pelas várias câmeras no ambiente inteligente. A cada $\displaysyle 200ms$ imagens das caixas delimitadoras das faces \footnote{Caixas delimitadoras são uma maneira de apontar a localização da face na imagem por meio de um enquadramento.} e posições dos centros dos olhos são extraídas. O canto inferior direito da Figura~\ref{chil} exemplifica a imagem da face extraída de uma pessoa no ambiente.
+
+As faces extraídas são, então, alinhadas utilizando os centros dos olhos ou as caixas delimitadoras. Para obter robustez e minimizar erros, o sistema gera algumas imagens adicionais modificando as posições dos rótulos do centro dos olhos ou os rótulos das caixas delimitadoras das faces alterando, então, o alinhamento das faces nas imagens.
 
 	\begin{figure}[hbt]
 		\begin{center}
 			\includegraphics[scale=0.4]{figuras/3.TrabalhosCorrelatos/chil.png}
 		\end{center}
-		\caption{Exemplo do sistema de identificação facial do Projeto CHIL~\cite{chil}.}
+		\caption{Caixa delimitadora e posição do centro dos olhos no sistema de identificação facial do Projeto CHIL~\cite{chil}.}
 		\label{chil}
 	\end{figure}
 
 
-No Projeto CHIL testou-se diferentes abordagens para reconhecimento facial. Uma delas realiza reconhecimento baseado em aparência utilizando transformada discreta de cosseno (DCT - \textit{Discrete Cosine Transform})~\cite{chilref6, chilref7}. Abordagens baseadas em PCA (\textit{Principal Component Analisys}) também foram testadas, utilizando como medida da distância entre imagens uma versão modificada da distância euclidiana utilizando pesos~\cite{chilref8, chilref9}.  Foi testado também uma abordagem baseada em análise discriminante linear (LDA - \textit{Linear Discrimant Analysis}), mas sem sucesso pois as imagens das faces obtidas não eram linearmente separáveis~\cite{chilref8, chilref9}. 
+No Projeto CHIL testou-se diferentes abordagens para reconhecimento facial. Uma delas realiza reconhecimento baseado em aparência utilizando transformada discreta de cosseno (DCT - \textit{Discrete Cosine Transform})~\cite{chilref6, chilref7}. Abordagens baseadas em PCA (\textit{Principal Component Analisys}) também foram testadas, baseadas em uma versão modificada da distância euclidiana com pesos~\cite{chilref8, chilref9} como medida da distância entre imagens. Foi testado também uma abordagem baseada em análise discriminante linear (LDA - \textit{Linear Discrimant Analysis}), porém sem sucesso pois as imagens das faces obtidas não eram linearmente separáveis~\cite{chilref8, chilref9}. 
 
 Todas as abordagens testadas utilizam um classificador do ``vizinho'' mais próximo. As decisões obtidas dos vários pontos de vista das várias câmeras utilizando tal classificador são, então, combinados por meio de uma regra de soma ponderada~\cite{chilref8, chilref9}.
 
@@ -77,21 +87,21 @@ Experimentos realizados no projeto, utilizando os mesmos métodos para extraçã
 
 \section{UPC Smart Room}
 
-Esse projeto~\cite{salah} propõe um sistema que realiza detecção de movimento, rastreamento de pessoas, reconhecimento facial, identificação baseado em características, localização baseada em áudio, módulos de identificação baseado em áudio, e fusão de todas essas informações utilizando filtro de partículas para obter um sistema robusto de identificação e localização. O sistema foi projetado para operar de uma maneira completamente automática, sem intervenção do usuário.
+Salah et al~\cite{salah} propõe um sistema que realiza detecção de movimento, rastreamento de pessoas, reconhecimento facial, identificação baseado em características, localização baseada em áudio e módulos de identificação baseado em áudio. Além disso, o trabalho realiza a fusão de todas essas informações utilizando filtro de partículas para obter um sistema robusto de identificação e localização. O sistema foi projetado para operar de uma maneira completamente automática, ou seja, sem intervenção do usuário.
 
-O projeto conecta diferentes métodos de rastreamento e reconhecimento para prover serviços de reconhecimento e rastreamento multimodal no ambiente inteligente chamado de UPC.  A Figura \ref{workflow} mostra o fluxo das informações no sistema multimodal. O objetivo do sistema é identificar cada usuário ao entrar pela porta e rastreá-lo no ambiente. 
+O projeto utiliza diferentes métodos para prover serviços de reconhecimento e rastreamento multimodal no ambiente inteligente. A Figura \ref{workflow} mostra o fluxo das informações no sistema multimodal: a identificação e localização multimodal utiliza informações de identificação e localização por meio de áudio e informações de identificação e rastreamento utilizando imagens. O objetivo do sistema é identificar cada usuário ao entrar pela porta e rastreá-lo no ambiente. 
 
-Os \textit{streams} de dados são processados com ajuda de um \textit{middleware} servidor-cliente genérico chamado \textit{SmartFlow}, o que resulta em uma arquitetura portável para diferentes plataformas. Este \textit{middleware} permite transporte de grande quantidade de dados de sensores para algoritmos de reconhecimento em nós distribuídos na rede.
+Os \textit{streams} de dados são processados com ajuda de um \textit{middleware} genérico cliente-servidor chamado \textit{SmartFlow}, resultando em uma arquitetura portável para diferentes plataformas. Este \textit{middleware} permite transporte de grande quantidade de dados de sensores para algoritmos de reconhecimento em nós distribuídos na rede.
 
 	\begin{figure}[hbt]
 		\begin{center}
-			\includegraphics[scale=0.4]{figuras/3.TrabalhosCorrelatos/upc.png}
+			\includegraphics[scale=0.5]{figuras/3.TrabalhosCorrelatos/workflow.png}
 		\end{center}
-		\caption{A configuração do ambiente inteligente UPC~\cite{salah}.}
-		\label{upc}
+		\caption{Fluxo da informação na arquitetura do ambiente inteligente~\cite{salah}.}
+		\label{workflow}
 	\end{figure}
 
-Os sensores utilizados e as condições do ambiente inteligente UPC deste projeto são descritos pela Figura \ref{upc}. Os seguintes sensores foram utilizados:
+Os sensores utilizados e as condições do ambiente inteligente são os seguintes sensores (Figura \ref{upc}):
 
 	\begin{itemize}
 		\item quatro câmeras nos cantos da sala (rotuladas como Cam1 a Cam4 na Figura \ref{upc});
@@ -99,27 +109,27 @@ Os sensores utilizados e as condições do ambiente inteligente UPC deste projet
 		\item uma câmera ativa apontada e com zoom para a porta de entrada para capturar as faces das pessoas que entram na sala (rotulada como PTZ na Figura \ref{upc});
 		\item um \textit{array} de microfones NIST Mark III de 64 canais ;
 		\item três \textit{clusters} de microfone de 4 canais no formato de T;
-		\item oito microfones no teto;
+		\item oito microfones no teto.
 	\end{itemize}
 
-
-\begin{figure}[hbt]
+	\begin{figure}[hbt]
 		\begin{center}
-			\includegraphics[scale=0.5]{figuras/3.TrabalhosCorrelatos/workflow.png}
+			\includegraphics[scale=0.4]{figuras/3.TrabalhosCorrelatos/upc.png}
 		\end{center}
-		\caption{\textit{Workflow} da informação na arquitetura do ambiente inteligente UPC~\cite{salah}.}
-		\label{workflow}
+		\caption{A configuração do ambiente inteligente~\cite{salah}.}
+		\label{upc}
 	\end{figure}
 
-As imagens coletadas pelas câmeras no sistema são utilizadas para detecção de movimento, rastreamento, detecção e reconhecimento facial e serão analisadas a seguir. Como mencionado, o sistema do projeto também promove localização dos usuários no ambiente, porém utiliza amostras de áudio como dados de entrada e por isso não será analisado.
 
-\subsection{Detecção de movimento e Rastreamento}
+A seguir serão descritas a detecção de movimento, rastreamento, detecção e reconhecimento facial desse projeto que são realizados sobre as imagens coletadas pelas as câmeras no ambiente. Embora o sistema do projeto também realize a localização dos usuários no ambiente, a técnica utiliza amostras de áudio como dados de entrada que esta fora do escopo deste trabalho.
 
-A detecção de movimento utilizada tenta separar o ``primeiro plano'' do ``fundo'' para o seu funcionamento. O método que o projeto utiliza é baseado na detecção de objetos em movimento sob a suposição que imagens em uma cena sem objetos em movimento mostra regularidades, que podem ser modeladas utilizando métodos estáticos. O conjunto de treinamento é construído por sequências pequenas de gravações \textit{offline} feitas da sala vazia.
+\subsection{Detecção de Movimento e Rastreamento}
 
-Para realizar o rastreamento foi utilizado a abordagem de um mapa de ocupação probabilística (\textit{probabilistic occupancy map} - POM)~\cite{pom} simplificado para ambientes internos, onde as trajetórias de movimentos são curtas e menos frequentes quando comparadas com trajetórias em ambientes externos. Somente as quatro câmeras nos cantos são utilizadas.
+A detecção de movimento implementada tenta separar o ``primeiro plano'' do ``fundo''. O método que o projeto utiliza é baseado na detecção de objetos em movimento sob a suposição que imagens em uma cena sem objetos em movimento mostra regularidades, que podem ser modeladas utilizando métodos estáticos. O conjunto de treinamento é construído por sequências pequenas de gravações \textit{offline} feitas da sala vazia.
 
-Nesta abordagem, o mapa de ocupação é utilizado para projetar a imagem de um esboço de uma pessoa (um retângulo simples) em cada visão das câmeras.  As sobreposições entre os esboços e as detecções de movimento na imagem entre as várias câmeras indicam a presença de uma pessoa. A Figura~\ref{fig:pom} ilustra a distribuição da probabilidade de ocupação produzida pelo algoritmo. 
+Para realizar o rastreamento foi utilizado a abordagem de um mapa de ocupação probabilística (POM - \textit{probabilistic occupancy map})~\cite{pom} simplificado para ambientes internos, onde as trajetórias de movimentos são curtas e menos frequentes quando comparadas com trajetórias em ambientes externos. Somente as quatro câmeras nos cantos do ambiente são utilizadas.
+
+Nesta abordagem, o mapa de ocupação é utilizado para projetar a imagem de um esboço de uma pessoa (um retângulo simples) em cada visão das câmeras.  As sobreposições entre os esboços e as detecções de movimento na imagem entre as várias câmeras indicam a presença de uma pessoa. A Figura~\ref{fig:pom} ilustra a distribuição da probabilidade de ocupação produzida pela solução implementada.
 
 \begin{figure}[hbt]
 		\begin{center}
@@ -131,37 +141,26 @@ Nesta abordagem, o mapa de ocupação é utilizado para projetar a imagem de um 
 
 \subsection{Detecção e Reconhecimento Facial}
 
-A detecção de face utilizada no projeto é realizada utilizando o método \textit{Viola-Jones}~\ref{ref:viola-jones} utilizando a biblioteca \textit{OpenCV}. Somente a câmera que está apontada para a porta é utilizada, pois esta é a única que fornece imagens em uma qualidade necessária. As outras câmeras, fornecem imagens em baixa resolução e pequenas demais.  
+A detecção de face implementada no projeto utiliza o método \textit{Viola-Jones} e a biblioteca \textit{OpenCV}~\cite{opencv_library}. Somente a câmera que está apontada para a porta é utilizada, pois esta é a única que fornece imagens na qualidade necessária. As demais, fornecem imagens em baixa resolução.  
 
-O módulo de detecção, pela maneira que foi projetado, só detecta faces frontais, em que os dois olhos, o nariz e a boca são visíveis. Como resultado da detecção de face, é retornada uma imagem contendo uma caixa delimitadora da face detectada.
+O módulo de detecção detecta somente faces frontais, em que os dois olhos, o nariz e a boca são visíveis. O resultado da detecção de face é uma imagem contendo uma caixa delimitadora da face detectada.
 
-O reconhecimento facial no ambiente inteligente UPC é realizado utilizando uma técnica que aproveita a vantagem que o ambiente é constantemente monitorado e combina a informação de várias imagens para realizar o reconhecimento.  Imagens que são fornecidas pelo módulo de detecção.
+O reconhecimento facial no ambiente inteligente utiliza uma técnica que aproveita a vantagem do ambiente ser constantemente monitorado e combina a informação de várias imagens. Para cada sequência de imagens, as faces de um mesmo indivíduo são agrupadas. Então, para cada grupo, o sistema compara as imagens com uma galeria de imagens. Para cada grupo de imagens, as decisões individuais são combinadas em uma decisão única para o grupo.
 
-Para cada sequência de imagens, as faces de um mesmo indivíduo são agrupadas. Então, para cada grupo, o sistema compara as imagens com a galeria de imagens. Para cada grupo de imagens, as decisões individuais são combinadas em uma decisão única para o grupo.
-
-Uma abordagem baseada em PCA (\textit{Principal Component Analisys}) foi utilizada para comparação entre as imagens, pois possui a menor complexidade computacional necessária para aplicações em tempo real~\cite{salah}.
+Uma abordagem baseada em PCA (\textit{Principal Component Analisys}) foi utilizada para comparação entre as imagens, pois possui uma baixa complexidade computacional necessária para aplicações em tempo real~\cite{salah}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Projeto DIVA}
 
-Esse projeto~\cite{trivedi} foi apelidado de Projeto DIVA pois nele foi desenvolvido uma nova arquitetura para ambientes inteligentes chamado DIVA. Ele apresenta detalhes de um projeto de pesquisa de longo prazo, onde ambientes inteligentes com funcionalidades úteis são projetados, construídos e avaliados sistematicamente. 
+% Esse projeto~\cite{trivedi} foi apelidado de Projeto DIVA pois nele foi desenvolvido uma nova arquitetura para ambientes inteligentes chamado DIVA. 
+Trivedi et al~\cite{trivedi} apresenta detalhes de um projeto de pesquisa de longo prazo, onde ambientes inteligentes com funcionalidades úteis são projetados, construídos e avaliados sistematicamente. Neste projeto foi desenvolvido uma nova arquitetura para ambientes inteligentes chamado DIVA. Esta nova arquitetura pode ser vista como uma rede inteligente de câmeras, que são controladas para prover diversas funcionalidades, tais como, detecção de intrusos, rastreamento de várias pessoas, pose do corpo e análise de postura, identificação de pessoas, modelagem do corpo humano e análise do movimento.
 
-Esta nova arquitetura pode ser vista como uma rede inteligente e ativa de câmeras, onde várias câmeras são controladas para prover uma ampla gama de funcionalidades. Algumas destas incluem detecção de intrusos, rastreamento várias pessoas, pose do corpo e análise de postura, identificação de pessoas, modelagem do corpo humano e análise do movimento.
-
-O sistema proposto pelo Projeto DIVA monitora o ambiente em baixa resolução de forma contínua, detectando somente a presença e suas dimensões. Formas de aquisição de imagens mais detalhadas são ativadas quando um evento ou atividade de potencial interesse é detectado. Esses eventos serão os focos de atenção do sistema.
+O sistema proposto por este projeto monitora o ambiente em baixa resolução de forma contínua, detectando somente a presença e suas dimensões. Formas de aquisição de imagens mais detalhadas são ativadas quando um evento ou atividade de potencial interesse é detectado. Esses eventos são os focos de atenção do sistema.
 
 O monitoramento de baixa resolução e de grande área do ambiente é alcançado graças a algumas câmeras de amplo ângulo de visão e estáticas. Com um pequeno número de câmeras PTZ (\textit{pan/tilt/zoom}) ativas, múltiplos focos de atenção podem ser mantidos de forma simultânea.
 
-	\begin{figure}[hbt]
-		\begin{center}
-	\includegraphics[scale=0.5]{figuras/3.TrabalhosCorrelatos/micasa_aviary.png}
-		\end{center}
-		\caption{Representação dos ambientes inteligentes MICASA e AVIARY~\cite{trivedi}.}
-		\label{micasa_aviary}
-	\end{figure}
-
-O Projeto DIVA possui dois ambientes inteligentes separados, mas conectados. O primeiro é chamado de AVIARY foi projetado para ser uma pequena sala de conferências. O segundo chamado de MICASA foi projetado para ser uma pequena sala de aula. A Figura~\ref{micasa_aviary} mostra fotos dos dois ambientes e como estão conectados, além da disposição dos sensores utilizados.
+O Projeto possui dois ambientes inteligentes separados fisicamente, porém conectados. O primeiro, chamado de AVIARY, foi projetado para ser uma pequena sala de conferências. O segundo, chamado de MICASA, foi projetado para ser uma pequena sala de aula. A Figura~\ref{micasa_aviary} ilustra os dois ambientes e a disposição dos sensores neles utilizados.
 
 Os sensores no ambiente inteligente AVIARY incluem:
 
@@ -169,10 +168,18 @@ Os sensores no ambiente inteligente AVIARY incluem:
 		\item uma rede de quatro câmeras omnidirecionais;
 		\item quatro câmeras PTZ;
 		\item quatro câmeras retilíneas estáticas;
-		\item dois \textit{arrays} de microfones com quatro microfones cada;
+		\item dois \textit{arrays} de microfones com quatro microfones cada.
 	\end{itemize}
 
-As quatro câmeras omnidirecionais (ODVSs) estão perto dos cantos de uma mesa de reunião, cobrindo o quarto inteiro de dentro para fora, como mostrado na Figura \ref{micasa_aviary}. As câmeras PTZ e retilíneas estão nos ``vértices'' da sala a $\displaysytle 1.4m$ acima do chão. Os dois \textit{arrays} de microfones foram instalados na parede e no teto.
+\begin{figure}[hbt]
+		\begin{center}
+	\includegraphics[scale=0.5]{figuras/3.TrabalhosCorrelatos/micasa_aviary.png}
+		\end{center}
+		\caption{Representação dos ambientes inteligentes MICASA e AVIARY~\cite{trivedi}.}
+		\label{micasa_aviary}
+	\end{figure}
+
+As quatro câmeras omnidirecionais (ODVSs - \textit{Omni-Directional Vision Sensors}) estão perto dos cantos de uma mesa de reunião, cobrindo a sala inteira de dentro para fora, como mostrado na Figura \ref{micasa_aviary}. As câmeras PTZ e retilíneas estão nos ``vértices'' da sala a $\displaysytle 1.4m$ acima do chão. Os dois \textit{arrays} de microfones foram instalados na parede e no teto.
 
 % Um computador é alocado para rastreamento, utilizando imagens das quatro câmeras omnidirecionais ou imagens das quatro câmeras retilíneas estáticas. Outro computador é utilizado para analisar os eventos de áudio e de vídeo. Um terceiro computador é utilizado para arquivar \textit{streams} de áudio e vídeo para posterior recuperação.
 
@@ -181,7 +188,7 @@ O ambiente inteligente MICASA é duas vezes maior que o AVIARY. Os sensores util
 	\begin{itemize}
 		\item uma rede de quatro câmeras omnidirecionais;
 		\item quatro câmeras PTZ;
-		\item oito câmeras retilíneas estáticas;
+		\item oito câmeras retilíneas estáticas.
 	\end{itemize}
 
 As câmeras omnidirecionais são instaladas no teto, como mostrado na Figura \ref{micasa_aviary}. As câmeras PTZ e quatro câmeras retilíneas foram instaladas de maneira similar ao ambiente AVIARY. As quatro câmeras retilíneas restantes foram instaladas nas paredes como mostrado como mostrado na Figura \ref{micasa_aviary}. As câmeras nos vértices possuem maior campo de visão para cobrir toda a sala e fazem parte do array de câmeras para rastreamento.

@@ -6,7 +6,7 @@
 
 	A detecção e o rastreamento de pessoas tem um grande potencial em aplicações em domínios tão diversos como animação, interação humano-computador, vigilância automatizada (monitorar uma cena para detectar atividades suspeitas), entre outros~\cite{yilmaz}. Por esta razão, tem havido um crescimento notável na investigação deste problema.
 
-	O rastreamento de pessoas em um ambiente é considerada como uma tarefa complexa devido a:
+	O rastreamento de pessoas em um ambiente é considerada como uma tarefa complexa devido à:
 
 		\begin{enumerate}
 			\item complexidade do corpo humano;
@@ -18,7 +18,7 @@
 			\item processamento em tempo-real~\cite{yilmaz};
 		\end{enumerate}
 
-	Algumas dessas dificuldades podem ser vencidas com a utilização de imagens de profundidade ao invés de imagens de cor ou intensidade. As imagens de profundidade, além de serem muito pouco sensíveis as variações de iluminação, provêem um fácil entendimento da estrutura da cena, que pode ser utilizada para simplificar as tarefas de rastreamento. Além disso, as câmeras que obtêm imagens de profundidade estão comercialmente disponíveis a um preço acessível~\cite{nikos}.
+	Algumas dessas dificuldades podem ser vencidas com a utilização de imagens de profundidade ao invés de imagens de cor ou intensidade. As imagens de profundidade, além de serem muito pouco sensíveis às variações de iluminação, provêem um fácil entendimento da estrutura da cena, que pode ser utilizada para simplificar as tarefas de rastreamento. Além disso, as câmeras que obtêm imagens de profundidade estão comercialmente disponíveis a um preço acessível~\cite{nikos}.
 
 	Várias abordagens para rastreamento de objetos já foram propostas. Basicamente, elas se diferem na forma que tratam as seguintes perguntas~\cite{yilmaz}: 
 		
@@ -43,7 +43,7 @@
 			\item Rastreamento do objeto detectado;
 		\end{enumerate}
 
-	Antes de falar mais sobre cada uma dessas etapas e os métodos existentes para cada, será apresentado as maneiras existentes de representar as entidades rastreadas e sobre as características presentes nas imagens que podem ser utilizadas.
+	Antes de falar mais sobre cada uma dessas etapas e os métodos existentes para cada, serão apresentadas as maneiras existentes de representar as entidades rastreadas e sobre as características presentes nas imagens que podem ser utilizadas.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -65,7 +65,7 @@
 
 		\item \textbf{Formas geométricas primitivas:} a entidade é representada por formas geométricas simples como um retângulo ou uma elipse, como mostrados nas Figuras \ref{representacao}(c) e (d)~\cite{comaniciu}. Essa representação é mais adequada para simples entidades rígidas~\cite{yilmaz};
 
-		\item \textbf{Silhueta e Contorno:} representação por contorno define os limites de uma entidade, como mostrado nas Figuras \ref{representacao}(g) e (h). A região interna do contorno é chamada de Silhueta, como mostrado na Figura \ref{representacao}(i). Essa representação é mais adequada para rastrear entidades complexas de forma não rígida~\cite{yilmaz, yilmaz2}. Ela é popular devido a sua simplicidade. A silhueta ou contorno de uma entidade pode ser obtida definindo métodos de limiarização ou subtração, podendo ser utilizada tanto com imagens 2D quanto 3D. A representação 2D geralmente é mais simples~\cite{moeslund};
+		\item \textbf{Silhueta e Contorno:} representação por contorno define os limites de uma entidade, como mostrado nas Figuras \ref{representacao}(g) e (h). A região interna do contorno é chamada de Silhueta, como mostrado na Figura \ref{representacao}(i). Essa representação é mais adequada para rastrear entidades complexas de forma não rígida~\cite{yilmaz, yilmaz2}. Ela é popular devido à sua simplicidade. A silhueta ou contorno de uma entidade pode ser obtida definindo métodos de limiarização ou subtração, podendo ser utilizada tanto com imagens 2D quanto 3D. A representação 2D geralmente é mais simples~\cite{moeslund};
 
 		\item \textbf{Modelos de formas articuladas:} entidades articuladas são compostos por partes do corpo que se ligam por meio de juntas. Para representá-las, utiliza-se figuras geométricas para cada parte do corpo, como mostrado na Figura \ref{representacao}(e)~\cite{yilmaz};
 
