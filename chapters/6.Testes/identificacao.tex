@@ -4,8 +4,7 @@
 
 	Tal técnica consiste em uma matriz em que cada coluna representa as instâncias de uma classe prevista, enquanto que cada linha representa as instâncias de uma classe real. Como benefício da técnica temos a fácil visualização da confiança obtida no reconhecimento, isso pode ser observado através dos valores obtidos na diagonal principal que representa a porcentagem de acerto para cada usuário.
 
-	Nosso cenário foi construído com 11 usuários apresentados na Lista
-	\ref{list:usuarios} cadastrados préviamente além das 40 pessoas presentes no banco de faces da
+	Nosso cenário foi construído com 11 usuários cadastrados préviamente além das 40 pessoas presentes no banco de faces da
 	Universidade de Cambridge~\cite{cambridgeFaceDb}. Cada usuário se posicionava
 	em frente ao \textit{Kinect}, com o rosto posicionado de maneira frontal em
 	relação ao mesmo, que realizava o processo de reconhecimento 20 vezes. As
@@ -27,7 +26,7 @@
 	%   \label{list:usuarios}
 	% \end{enumerate}
 	
-	\begin{landscape}
+	% \begin{landscape}
 	\begin{table}[htb]
 		\begin{center}
 			\caption{Matriz de confusão para apresentar os resultados obtidos.}
@@ -38,8 +37,8 @@
 				% \ref{user:bruno} & \bf \ref{user:ricardo} & \bf \ref{user:estevao} & \bf \ref{user:rafael} &
 				% \bf \ref{user:vinicius} & \bf \ref{user:pedro} & \bf Desconhecido\\ 
 
-				\hline  & \bf Tales & \bf Danilo & \bf Ana & \bf Fabricio & \bf Lucas & \bf Bruno & \bf Ricardo & \bf Estevao & \bf Rafael &
-				\bf Vinicius & \bf Pedro & \bf Desconhecido\\ 
+				\hline  & \bf \begin{sideways}Tales\end{sideways} & \bf \begin{sideways}Danilo\end{sideways} & \bf \begin{sideways}Ana\end{sideways} & \bf \begin{sideways}Fabricio\end{sideways} & \bf \begin{sideways}Lucas\end{sideways} & \bf \begin{sideways}Bruno\end{sideways} & \bf \begin{sideways}Ricardo\end{sideways} & \bf \begin{sideways}Estevao\end{sideways} & \bf \begin{sideways}Rafael\end{sideways} &
+				\bf \begin{sideways}Vinicius\end{sideways} & \bf \begin{sideways}Pedro\end{sideways} & \bf \begin{sideways}Desconhecido\end{sideways}\\ 
 				
 				\hline \bf Tales 		& 95\% & 			& 		 & 			&   	 & 			& 		 & 			& 		 & 			& 		 & 5\%	\\ 
 				\hline \bf Danilo 	& 		 & 75\% & 		 & 			&   	 & 			& 		 & 			& 		 & 			& 25\% &		 	\\
@@ -58,7 +57,7 @@
 			\end{tabular}
 		\end{center}
 	\end{table}
-	\end{landscape}
+	% \end{landscape}
 
 	Como visto na matriz, os maiores valores, como previsto, estão na diagonal
 	principal. Alguns resultados obtidos foram satisfatórios já outros ficaram

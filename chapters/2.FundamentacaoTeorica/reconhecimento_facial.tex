@@ -42,7 +42,7 @@
 		\item extração da face do contexto ou do fundo;
 	\end{itemize}
 
-	\begin{figure}[H]
+	\begin{figure}[htb]
 		\begin{center}
 			\includegraphics[height=9.5cm,width=12.5cm]{figuras/2.FundamentacaoTeorica/diferencailuminacao.png}
 		\end{center}
@@ -86,7 +86,7 @@
 	da imagem~\cite{oliveira}. A Figura \ref{enquadramentoRosto} representa um
 	exemplo da detecção de uma face em uma imagem.
 
-	\begin{figure}[H]
+	\begin{figure}[htb]
 		\begin{center}
 			\includegraphics[scale=0.3]{figuras/2.FundamentacaoTeorica/enquadramentoRosto.png}
 		\end{center}
@@ -444,19 +444,19 @@
 	que mais contribuem para as componentes principais~\cite{hewitt}. Cada \textit{eigenface}
 	está associada a um \textit{eigenvalue} que representa o quanto as imagens de treinamento
 	variam da \textit{eigenface} média naquela direção.
-	
-	As \textit{eigenfaces} são usadas para que a
-	partir delas possa se estimar a distância entre a imagem que se deseja
-	reconhecer e as imagens presentes no banco e a partir dessas distâncias dizer de
-	qual delas a nova imagem mais se aproxima~\cite{turkpentland}.
 
-	\begin{figure}[H]
+	\begin{figure}[htb]
 		\begin{center}
 			\includegraphics[scale=1.2]{figuras/2.FundamentacaoTeorica/eigenfaces.png}
 		\end{center}
 		\caption{Direita: imagens de rosto para dez pessoas. Esquerda: os seis primeiros componentes principais, visto como \textit{Eigenfaces}~\cite{hewitt}.}
 		\label{exemploEigenfaces}
 	\end{figure}
+	
+	As \textit{eigenfaces} são usadas para que a
+	partir delas possa se estimar a distância entre a imagem que se deseja
+	reconhecer e as imagens presentes no banco e a partir dessas distâncias dizer de
+	qual delas a nova imagem mais se aproxima~\cite{turkpentland}.
 
 	As componentes principais encontradas pelo PCA apontam para a maior variação de
 	dados. Uma das premissas do \textit{Eigenfaces} é que a variabilidade das
@@ -467,7 +467,7 @@
 	Figura \ref{exemploEigenfaces}. Quando a iluminação é muito variável esse
 	algoritmo não é muito efetivo~\cite{hewitt}.
 
-	\begin{figure}[H]
+	\begin{figure}[htb]
 		\begin{center}
 			\includegraphics[scale=1.2]{figuras/2.FundamentacaoTeorica/exemplosImagensIluminacaoo.png}
 		\end{center}
@@ -483,6 +483,14 @@
 	desempenho do \textit{Eigenfaces}. Quando os pontos referentes as imagens de
 	cada indivíduo ficam aglutinadas e satisfatoriamente separadas das imagens do conjunto de imagens de outros
 	indivíduos temos o melhor caso para o funcionamento do \textit{Eigenfaces}.
+
+	\begin{figure}[htb]
+		\begin{center}
+			\includegraphics[scale=6.0]{figuras/2.FundamentacaoTeorica/espacoPCA.png}
+		\end{center}
+		\caption{As distribuições de dados no reconhecimento com \textit{Eigenfaces}. Adapatado de~\cite{hewitt}.}
+		\label{exemploEspacoPCA}
+	\end{figure}
 	
 	Caso os pontos referentes as imagens dos indivíduos tenham uma variabilidade
 	muito grande, a probabilidade de choque de imagens de dois indivíduos num mesmo
@@ -501,14 +509,6 @@
 	
 	Mesmo com sistemas altamente ajustados, sistemas de reconhecimento facial estão
 	sujeitos a casos de identidade equivocada~\cite{hewitt}.
-
-	\begin{figure}[H]
-		\begin{center}
-			\includegraphics[scale=6.0]{figuras/2.FundamentacaoTeorica/espacoPCA.png}
-		\end{center}
-		\caption{As distribuições de dados no reconhecimento com \textit{Eigenfaces}. Adapatado de~\cite{hewitt}.}
-		\label{exemploEspacoPCA}
-	\end{figure}
 
 	Basicamente, a abordagem para o reconhecimento facial com \textit{Eigenfaces} requer as
 	seguinte operações de inicialização~\cite{turk}:
