@@ -64,7 +64,7 @@ Para a identificação de pessoas, o Projeto CHIL elegeu o reconhecimento facial
 
 Na tentativa de realizar o reconhecimento facial das pessoas presentes no ambiente inteligente, vários desafios foram encontrados no Projeto CHIL, como: grande variação da iluminação, sensores com baixa resolução, oclusão visual. Além disso dependendo da localização e distância dos sensores da pessoa a ser identificada os dados recebidos podem variar. Foi observado, também, que o fato das pessoas possuírem diferentes expressões faciais, diferentes cortes de cabelo, maquiagem, entre outros, dificultava ainda mais a tarefa. Entretando, apesar de todos esses desafios, foi notado que o reconhecimento facial podia ser realizado de forma robusta utilizando múltiplos sensores no ambiente.
 
-O sistema de identificação do Projeto CHIL utiliza sequências de imagens fornecidas pelas várias câmeras no ambiente inteligente. A cada $\displaysyle 200ms$ imagens das caixas delimitadoras das faces \footnote{Caixas delimitadoras são uma maneira de apontar a localização da face na imagem por meio de um enquadramento.} e posições dos centros dos olhos são extraídas. O canto inferior direito da Figura~\ref{chil} exemplifica a imagem da face extraída de uma pessoa no ambiente.
+O sistema de identificação do Projeto CHIL utiliza sequências de imagens fornecidas pelas várias câmeras no ambiente inteligente. A cada $\displaysyle 200ms$ imagens das caixas delimitadoras das faces \footnote{Caixas delimitadoras são uma maneira de apontar a localização da face na imagem por meio de um enquadramento.} e posições dos centros dos olhos são extraídas. O canto inferior direito da Figura~\ref{chilImage} exemplifica a imagem da face extraída de uma pessoa no ambiente.
 
 As faces extraídas são, então, alinhadas utilizando os centros dos olhos ou as caixas delimitadoras. Para obter robustez e minimizar erros, o sistema gera algumas imagens adicionais modificando as posições dos rótulos do centro dos olhos ou os rótulos das caixas delimitadoras das faces alterando, então, o alinhamento das faces nas imagens.
 
@@ -73,7 +73,7 @@ As faces extraídas são, então, alinhadas utilizando os centros dos olhos ou a
 			\includegraphics[scale=0.4]{figuras/3.TrabalhosCorrelatos/chil.png}
 		\end{center}
 		\caption{Caixa delimitadora e posição do centro dos olhos no sistema de identificação facial do Projeto CHIL~\cite{chil}.}
-		\label{chil}
+		\label{chilImage}
 	\end{figure}
 
 
