@@ -23,10 +23,18 @@
 	
 	Ao invés de realizar o reconhecimento somente quando novos usuários são detectados, com o objetivo de melhorar a confiança no reconhecimento, o Sistema TRUE realiza continuamente a identificação dos usuários já reconhecidos. Essas tentativas de reconhecer novamente os usuários ocorrerão a cada 5 segundos seguindo as mesmas etapas de quando um novo usuário for detectado. A única etapa que se difere é a primeira, ou seja, ao invés de obter várias imagens de um mesmo usuário, é obtida uma imagem de cada usuário rastreado e a mesma é enviada ao Módulo de Reconhecimento.
 
-	Como visto na Figura~\ref{fig:rastreamento-reconhecimento}, ao obter um resultado de reconhecimento para determinado usuário, o Módulo de Rastreamendo deve computar qual identidade será atribuída ao mesmo. Para isso, este módulo mantém para cada usuário o número total de vezes que este já foi reconhecido, os diferentes nomes obtidos pelo Módulo de Reconhecimento bem como a confiança média para cada nome e o número de vezes que cada nome foi atribuído àquele usuário. Com todos esses dados, a identidade do usuário é definida por meio de uma média ponderada entre as confianças de cada nome, onde os pesos utilizados são compostos pelo número de vezes que o respectivo nome foi atribuído ao usuário. O exemplo a seguir aprensenta em detalhes como a identidade de um usuário é definida.
+	Como visto na Figura~\ref{fig:rastreamento-reconhecimento}, ao obter um resultado de reconhecimento para determinado usuário, o Módulo de Rastreamendo deve computar qual identidade será atribuída ao mesmo. Para isso, este módulo mantém para cada usuário o número total de vezes que este já foi reconhecido, os diferentes nomes obtidos pelo Módulo de Reconhecimento bem como a confiança média para cada nome e o número de vezes que cada nome foi atribuído àquele usuário. Com todos esses dados, a identidade do usuário é definida por meio de uma média ponderada entre as confianças de cada nome, onde os pesos utilizados são compostos pelo número de vezes que o respectivo nome foi atribuído ao usuário. A Equação~\ref{eq:media_ponderada} mostra como é calculada essa média ponderada, em que $\displaystyle N_n$ é o número de vezes que o nome foi atribuído ao usuário e $\displaystyle C_n$ é a confiança média. O exemplo a seguir aprensenta em detalhes como a identidade de um usuário é definida.
+
+	\begin{equation}
+		\label{eq:media_ponderada}
+		M_p = \frac{N_1 * C_1 + N_2 * C_2 + ... + N_n * C_n}{N_1 + N_2 + ... + N_n}
+	\end{equation}
+
 
 	\begin{description}
- 		João é um usuário do ambiente inteligente que está sendo rastreado há algum tempo e que já foi reconhecido algumas vezes. Como já mencionado, o Módulo de Rastreamento mantém para cada usuário o número total de vezes que este já foi reconhecido, os diferentes nomes obtidos pelo Módulo de Reconhecimento bem como a confiança média para cada nome e o número de vezes que cada nome foi atribuído àquele usuário. Neste caso, a Tabela~\ref{tab:joao} mostra os dados mantidos para o usuário João pelo Módulo de Rastreamento, em que ``João'', ``Danilo'' e ``Tales'' são as identidades que já foram obtidas ao se tentar reconhecer o João. A segunda coluna desta tabela mostra a confiança média do reconhecimento para cada nome e a última mostra o número de vezes que cada nome foi atribuído a João.
+ 		João é um usuário do ambiente inteligente que está sendo rastreado há algum tempo e que já foi reconhecido algumas vezes. Como já mencionado, o Módulo de Rastreamento mantém para cada usuário o número total de vezes que este já foi reconhecido, os diferentes nomes obtidos pelo Módulo de Reconhecimento bem como a confiança média para cada nome e o número de vezes que cada nome foi atribuído àquele usuário. Neste caso, a Tabela~\ref{tab:joao} mostra os dados mantidos para o usuário João pelo Módulo de Rastreamento, em que ``João'', ``Danilo'' e ``Tales'' são as identidades que já foram obtidas ao se tentar reconhecer o João. A segunda coluna desta tabela mostra a confiança média do reconhecimento para cada nome e a última mostra o número de vezes que cada nome foi atribuído a João. 
+
+ 		Para decidir qual identidade será atribuída ao usuário João primeiramente calcula-se a média ponderada como mostrado nos cálculos~\ref{eq:joao}. Então, a identidade atribuída será aquela cuja confiança média mais se aproxima da média ponderada. Neste caso, a identidade atribuída a João será ``João'', como mostrado nos cálculos~\ref{eq:joao2}.
 
  		% No momento, o Módulo de Rastreamento mantém vários dados sobre o João descritos na Tabela~\ref{tab:joao}. Como já mencionado, o Módulo de Rastreamento Então, para computar qual identidade será atribuída ao usuário, o Módulo de Rastreamento realiza os cálculos~\ref{eq:joao}. Como o resultado da média ponderada se aproxima mais da confiança do nome João, este foi escolhido como sendo sua identidade.
 	\end{description}
@@ -53,12 +61,13 @@
 	\end{align}
 
 	\begin{align}
-	\nonumber & Joao: 0.947079 - 0.947302 = -0.000223\\
+		\label{eq:joao2}
+	 	& Joao: 0.947079 - 0.947302 = -0.000223\\
 		\nonumber & Danilo: 0.934010 - 0.947302 = -0.013292\\
 		\nonumber & Tales: 0.950320 - 0.947302 = 0.003018
 	\end{align}
 
-	Com todos esses dados de reconhecimento, além dos dados de rastreamento e localização de cada usuário, o Módulo de Rastreamento consegue centralizar todas as informações necessárias de cada usuário. A Figura~\ref{fig:truetotal} exemplifica um usuário rastreado pelo Sistema TRUE onde as informações de localização e identificaçao estão presentes.
+	Com todos esses dados de reconhecimento, além dos dados de rastreamento e localização de cada usuário, o Módulo de Rastreamento centraliza todas as informações necessárias de cada usuário. A Figura~\ref{fig:truetotal} exemplifica um usuário rastreado pelo Sistema TRUE onde as informações de localização e identificaçao estão presentes.
 
 	\begin{figure}[htb]
 			\begin{center}
