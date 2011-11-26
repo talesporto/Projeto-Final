@@ -1,8 +1,8 @@
 \section{Módulo de Reconhecimento}
 
-	O Módulo de Reconhecimento é responsável pela identificação dos usuários no ambiente utilizando a face como característica biométrica. A face foi escolhida pois ela permite um reconhecimento não intrusivo, como mencionada na Seção~\ref{sec:biometria}. A detecção e o reconhecimento são feitos em imagens de usuários que são passadas pelo Módulo de Rastreamento. Tais imagens são compostas somente pela região em que o usuário se encontra, como mostrado na Figura~\ref{fig:users-img}.
+	O Módulo de Reconhecimento é responsável pela identificação dos usuários no ambiente utilizando a face como característica biométrica. A face foi escolhida por permitir um reconhecimento não intrusivo, como mencionado na Seção~\ref{sec:biometria}. A detecção e o reconhecimento são feitos a partir de imagens de usuários que são repassadas pelo Módulo de Rastreamento. Estas imagens são compostas somente pela região em que o usuário se encontra, como mostrado na Figura~\ref{fig:users-img}.
 
-	Basicamente, o processo de reconhecimento é realizado pelas seguintes etapas e ilustrado na Figura~\ref{fig:processo-reconhecimento}:
+	Basicamente, o processo de reconhecimento é realizado pelas seguintes etapas (Figura~\ref{fig:processo-reconhecimento}):
 
 		\begin{figure}[htb]
 			\begin{center}
@@ -13,12 +13,12 @@
 		\end{figure}
 
 		\begin{enumerate}
-			\item Obtém a imagem de entrada correspondente a imagem formada somente pelo usuário cujo reconhecimento foi requisitado.
-			\item Pré-processamento da imagem: a imagem é convertida em escala de cinza.
-			\item Realiza detecção facial na imagem. Caso nenhuma face seja encontrada, retorna ``vazio''. Vale ressaltar que no máximo uma face pode ser encontrada nesta imagem.
-			\item Processamento da imagem: uma nova imagem é criada recortando a região da face encontrada, a imagem, então, é redimensionada e equalizada criando assim um padrão de tamanho, brilho e contraste nas imagens aumentando a acurácia do reconhecimento.
-			\item Reconhecimento facial com \textit{Eigenfaces} é realizado.
-			\item Retorna o nome da face ``mais parecida'' e a confiança do reconhecimento.
+			\item Obtenção da imagem de entrada composta somente pelo usuário cujo reconhecimento foi requisitado.
+			\item Pré-processamento da imagem, ou seja, conversão da imagem em escala de cinza.
+			\item Detecção facial na imagem. Caso nenhuma face seja encontrada, retorna ``vazio''. Observa-se que no máximo uma face pode ser encontrada nesta imagem.
+			\item Processamento da imagem: uma nova imagem é criada recortando a região da face encontrada. A imagem é, então, redimensionada e equalizada criando assim um padrão de tamanho, brilho e contraste aumentando a acurácia do reconhecimento.
+			\item Reconhecimento facial com a técnica \textit{Eigenfaces}.
+			\item Retorno do nome do usuário com a face ``mais parecida'' e a confiança do reconhecimento.
 		\end{enumerate}
 
 		\begin{figure}[htb]
@@ -34,28 +34,26 @@
 	% Seção~\ref{sec:rastreamento-reconhecimento} explica mais detalhadamente a
 	% relação entre os dois módulos.
 
+	A seguir serão relatados as etapas de Pré-processamento e Processamento da imagem. Depois, serão apresentados em detalhes as etapas de Detecção e Reconhecimento facial.
+
 	\subsection{Pré-processamento e Processamento da Imagem}
 		
-		As etapas de processamento das imagens permitem criar um padrão nas mesmas aumentando a acurácia do reconhecimento. No Sistema TRUE as etapas de processamento consistem em converter a imagem em escala de cinza, recorta-la, redimensiona-la e equaliza-la criando, assim, um padrão de cor, tamanho, brilho e contraste nas imagens.
+		As etapas de pré-processamento e processamento das imagens (etapas 2 e 4 mencionadas acima) permitem criar um padrão nas mesmas aumentando a acurácia do reconhecimento. No Sistema TRUE estas etapas consistem em converter a imagem em escala de cinza, recortá-la, redimensioná-la e equalizá-la, criando, assim, padrões de cor, tamanho, brilho e contraste.
 
-		A Figura~\ref{fig:greyscale} exemplifica uma imagem normal de uma face,
-		depois a mesma convertida em escala de cinza e equalizada O
-		Apêndice~\ref{apend:processamento} mostra trechos de código em linguagem C
-		que implementam tais etapas.
+		A Figura~\ref{fig:greyscale} exemplifica uma imagem capturada de uma face, a mesma convertida em escala de cinza e depois equalizada. O
+		Apêndice~\ref{apend:processamento} contém trechos de código em linguagem C que implementam tais etapas.
 
 		\begin{figure}[htb]
 			\begin{center}
 				\includegraphics[scale=0.7]{figuras/4.ProblemaEProposta/greyscale.png}
 			\end{center}
-			\caption{Exemplo de uma imagem de face normal, em escala de cinza e equalizada. Adaptada de~\cite{shervin}.}
+			\caption{Exemplo de uma imagem de face capturada, a mesma em escala de cinza e depois equalizada. Adaptada de~\cite{shervin}.}
 			\label{fig:greyscale}
 		\end{figure}
 
 	\subsection{Detecção Facial}
 
-		A detecção facial foi desenvolvida utilizando o método \textit{Viola-Jones}~\ref{ref:viola-jones}. Um método que pode ser utilizado para construir uma abordagem de detecção facial rápida e eficaz~\cite{violajones} em tempo real. Além disso, este método é implementado pela biblioteca \textit{OpenCV}~\cite{opencv_library} (\textit{Open Source Computer Vision}) onde bons classificadores em cascata de características \textit{Haar} são fornecidos.
-
-		Basicamente, o processo de detecção facial procura por uma face em uma imagem pré-processada. Para realizar detecção facial utilizando o método \textit{Viola-Jones} é necessário a utilização de um classificador em cascata, como mencionado na Subseção~\ref{subsec:reconhecimento}. Portanto, entre os diversos classificadores em cascata presentes na biblioteca \textit{OpenCV}, foi utilizado o classificador \textit{haarcascade\underline{ }frontalface\underline{ }alt.xml}, um classificador treinado para detectar faces frontais em imagens.
+		A detecção facial (etapa 3 mencionada acima) foi desenvolvida utilizando o método \textit{Viola-Jones} apresentado na Seção~\ref{ref:viola-jones}. Este método é adequado para construir uma abordagem de detecção facial rápida e eficaz~\cite{violajones} em tempo real. Além disso, o \textit{Viola-Jones} é implementado pela biblioteca \textit{OpenCV}~\cite{opencv_library} (\textit{Open Source Computer Vision}). Basicamente, o processo de detecção facial procura por uma face em uma imagem pré-processada. Para realizar detecção facial utilizando o método \textit{Viola-Jones} é necessário a utilização de um classificador em cascata, como mencionado na Seção~\ref{subsec:reconhecimento}. Portanto, entre os diversos classificadores em cascata presentes na biblioteca \textit{OpenCV}, o Sistema TRUE utiliza o classificador \textit{haarcascade\underline{ }frontalface\underline{ }alt.xml}, um classificador treinado para detectar faces frontais em imagens.
 
 		% A Figura~\ref{fig:diagrama-deteccao} mostra o fluxo básico do processo de detecção de faces no Sistema TRUE.
 		% 	\begin{figure}[H]
@@ -69,18 +67,17 @@
 		O processo de básico de detecção de faces no Sistema TRUE possui as seguintes etapas:
 
 		\begin{enumerate}
-			\item Lê um classificador treinado para detectar faces em uma image.
-			\item Obtém a imagem de entrada. Tal imagem é composta somente pelo usuário, como mostrado na Figura~\ref{fig:users-img}, cujo reconhecimento foi requisitado, além de estar em escala de cinza.
-			\item Utilizando o classificador, tentar obter uma face na imagem.
-			\item Retorna a região da face detectada ou retorna ``vazio'' caso nenhuma face tenha sido encontrada. Vale salientar que existe no máximo uma face na imagem, pois contém somente um usuário.
+			\item Leitura de um classificador treinado para detectar faces em uma image.
+			\item Obtenção da imagem de entrada (esta imagem é composta somente pelo usuário e esta na escala de cinza).
+			\item Detecção da face na imagem utilizando o classificador.
+			\item Retorno da região da face detectada ou retorno ``vazio'' caso nenhuma face tenha sido encontrada. Observa-se que existe no máximo uma face na imagem, pois contém somente um usuário.
 		\end{enumerate}
 
 	\subsection{Reconhecimento Facial com \textit{Eigenfaces}}
 
-		O reconhecimento facial foi desenvolvido utilizando
-		\textit{Eigenfaces}~\ref{sec:reconhecimento}, e teve como base algumas etapas descritas em~\cite{shervin}. Consiste em uma técnica bastante satisfatória quando utilizada sobre uma base de dados (faces) relativamente grande, permitindo ao sistema inferir, das imagens suas principais características e, partindo delas, realizar o reconhecimento das imagens utilizando um número bastante reduzido de cálculos~\cite{artigo-eigenface}, permitindo, assim, um reconhecimento em tempo real.
+		A etapa do reconhecimento facial propriamente dito, correspondente a etapa 5 mencionada acima, foi desenvolvida utilizando a técnica \textit{Eigenfaces} (Seção~\ref{sec:reconhecimento}). Esta técnica consiste em uma técnica bastante satisfatória quando utilizada sobre uma base de faces relativamente grande, permitindo ao sistema inferir, das imagens das faces suas principais características e, partindo delas, realizar o reconhecimento facial utilizando um número reduzido de cálculos~\cite{artigo-eigenface}, permitindo, assim, um reconhecimento em tempo real.
 
-		A base de dados utilizada no Sistema TRUE é formada por imagens no formato PGM (\textit{Portable Gray Map}) com tamanho de 92x112 pixels e em escala de cinza. A base é composta por um banco de faces de alunos de Ciência da Computação da Universidade de Brasília e por um banco de imagens de faces da Universidade de Cambridge~\cite{cambridgeFaceDb}, mostrado na Figura~\ref{fig:cambridgeFaceDb}. Este último, é formado por imagens de faces de 40 pessoas diferentes. Para cada pessoa, existem 10 diferentes imagens tiradas em diferentes épocas, com diferentes condições de iluminação, com diferentes expressões faciais (olhos abertos e fechados, sorrindo e não sorrindo, entre outros) e com diferentes detalhes faciais (óculos, sem óculos). 
+		A base de dados utilizada no Sistema TRUE é formada por imagens no formato PGM (\textit{Portable Gray Map}) com tamanho de 92x112 pixels e em escala de cinza. A base é composta por um banco de faces de alunos voluntários de Ciência da Computação da Universidade de Brasília e por um banco de imagens de faces da Universidade de Cambridge~\cite{cambridgeFaceDb}, mostrado na Figura~\ref{fig:cambridgeFaceDb}. Este último, é formado por imagens de faces de 40 pessoas diferentes. Para cada pessoa, existem 10 diferentes imagens obtidas em diferentes momentos, com diferentes condições de iluminação, diferentes expressões faciais (olhos abertos e fechados, sorrindo e não sorrindo, entre outros) e diferentes detalhes faciais (com e sem óculos). 
 
 		\begin{figure}[H]
 			\begin{center}
