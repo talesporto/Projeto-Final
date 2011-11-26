@@ -3,21 +3,20 @@
 	O Módulo de Rastreamento é responsável por rastrear os usuários no
 	ambiente, determinar a sua localização física em relação ao sensor \textit{Kinect} e
 	gerenciar suas identidades. Para realizar o rastreamento e localização dos
-	usuários é utilizado a biblioteca \textit{OpenNI} (\textit{Open Natural
-	Interaction}). Trata-se de um \textit{framework} que define \textit{APIs} para
+	usuários é utilizada a biblioteca \textit{OpenNI} (\textit{Open Natural
+	Interaction})~\cite{OpenNI2010, PrimeSense2010}. Trata-se de um \textit{framework} que define \textit{APIs} para
 	o desenvolvimento de aplicações de interação natural. Utilizando as imagens de
-	profundidade, a detecção e o rastreamento são feito utilizando subtração de
-	fundo (Seção~\ref{sec:deteccao-objeto}), e os objetos detectados são
-	representados por suas silhuetas (Seção~\ref{sec:representacao-objeto}).
+	profundidade, a detecção e o rastreamento são feitos utilizando subtração de
+	fundo (Seção~\ref{sec:deteccao-objeto}). A representação das pessoas detectadas e rastreadas são feitas utilizando suas silhuetas (Seção~\ref{sec:representacao-objeto}).
 
 	As imagens utilizadas para o rastreamento são imagens de profundidade,
 	exemplificada na Figura~\ref{fig:depthmaps}, providas pelo \textit{Kinect} que
 	são obtidas utilizando o método de Luz Estruturada descrito na
-	Seção~\ref{sec:luz-estruturada}. Tais imagens de profundidade nada mais são
+	Seção~\ref{sec:luz-estruturada}. Estas imagens de profundidade nada mais são
 	que \textit{depth maps} (mapas de profundidade), em que cada pixel da imagem
 	contém o valor estimado da distância em relação ao sensor. O \textit{Kinect}
 	fornece esses dados a uma taxa de $\displaystyle 30 fps$ (\textit{frames} por
-	segundo) com uma resolução $\displaystyle 640px$ x $\displaystyle 480px$.
+	segundo) com uma resolução 640 x 480 pixels.
 	
 
 	\begin{figure}[htb]
@@ -40,7 +39,9 @@
 
 	% Utilizando os mapas de profundidade é possível calcular as coordenadas$\displaystle (x,y,z)$, em relação ao sensor, de qualquer pixel da imagem. Dessa forma, as coordenadas de uma usuário em relação ao \textit{Kinect} são estimadas utilizando os valores de profundidade referente ao pixel que representa seu centro de massa geométrico. Sendo assim, ao fixar a posição do \textit{Kinect} no ambiente, é possível estimar a localização de qualquer usuário rastreado em tempo real. A Figura~\ref{fig:localizacao} mostra um usuário rastreado pelo Sistema TRUE onde os valores das coordenadas $\displaystle (x,y,z)$ estão em milímetros.
 
-	A Figura~\ref{fig:processo-rastreamento} mostra o fluxo básico do Módulo de Rastreamento.
+	% A Figura~\ref{fig:processo-rastreamento} mostra o fluxo básico do Módulo de Rastreamento.
+
+	O processo de rastreamento começa inicializando o dispositivo de entrada, no caso o sensor \textit{Kinect}, e registra as ações a serem tomadas quando eventos em relação aos usuários ocorram, como novo usuário detectado ou usuário perdido. Então, o Módulo de Rastreamento obtém uma imagem de fundo da cena que será utilizada no processo de subtração de fundo. Para cada imagem obtida da cena, o processo de subtração de fundo é realizado atualizando os parâmetros de cada usuário, como sua posicão na imagem e sua posição em relação ao sensor. A Figura~\ref{fig:processo-rastreamento} ilustra estas etapas descritas.
 
 	\begin{figure}[htb]
 		\begin{center}
