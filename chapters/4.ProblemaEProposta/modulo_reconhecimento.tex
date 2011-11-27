@@ -79,7 +79,7 @@
 
 		A base de dados utilizada no Sistema TRUE é formada por imagens no formato PGM (\textit{Portable Gray Map}) com tamanho de 92x112 pixels e em escala de cinza. A base é composta por um banco de faces de alunos voluntários de Ciência da Computação da Universidade de Brasília e por um banco de imagens de faces da Universidade de Cambridge~\cite{cambridgeFaceDb}, mostrado na Figura~\ref{fig:cambridgeFaceDb}. Este último, é formado por imagens de faces de 40 pessoas diferentes. Para cada pessoa, existem 10 diferentes imagens obtidas em diferentes momentos, com diferentes condições de iluminação, diferentes expressões faciais (olhos abertos e fechados, sorrindo e não sorrindo, entre outros) e diferentes detalhes faciais (com e sem óculos). 
 
-		\begin{figure}[H]
+		\begin{figure}[htb]
 			\begin{center}
 				\includegraphics[scale=0.3]{figuras/4.ProblemaEProposta/cambrigdefacedb.png}
 			\end{center}
@@ -89,7 +89,7 @@
 
 		% A Figura~\ref{fig:diagrama-reconhecimento} mostra o fluxo básico do processo de reconhecimento facial no Sistema TRUE.
 
-		Antes de realizar o processo de recohecimento facial propriamente dito, a imagem da face do usuário a ser reconhecida, obtida no processo de detecção facial, é processada (a imagem é recortada, redimensionada e equalizada). O reconhecimento facial inicia-se projetando a imagem no subespaço através do método PCA (\textit{Principal Component Analisys} - Análise de Componente Principal) que reduz sua dimensionalidade. Então, calcula-se a distância da imagem projetada a cada um do \textit{eigenfaces} obtidos na etapa de treinamento (esta etapa será descrita posteriormente) obtendo uma lista de distâncias. Esta lista de distâncias é comparada com as lista de distâncias de cada usuário, também obtidas na etapa de treinamento, obtendo o usuário cuja lista de distâncias é a mais similar. Com isso, a confiança do reconhecimento é calculada. A Figura~\ref{fig:diagrama-reconhecimento} ilustra estas etapas descritas.
+		Antes de realizar o processo de recohecimento facial propriamente dito, a imagem da face do usuário a ser reconhecida, obtida no processo de detecção facial, é processada (a imagem é recortada, redimensionada e equalizada). O reconhecimento facial inicia-se projetando a imagem no subespaço através do método PCA (\textit{Principal Component Analisys} - Análise de Componente Principal) que reduz sua dimensionalidade. Então, calcula-se a distância da imagem projetada a cada um do \textit{eigenfaces} obtidos na etapa de treinamento (esta etapa será descrita posteriormente) obtendo uma lista de distâncias. Esta lista de distâncias é comparada com as lista de distâncias de cada usuário, também obtidas na etapa de treinamento, obtendo o usuário cuja lista de distâncias é a mais similar. Então, a confiança do reconhecimento é calculada. A Figura~\ref{fig:diagrama-reconhecimento} ilustra estas etapas descritas.
 
 			\begin{figure}[htb]
 			\begin{center}
