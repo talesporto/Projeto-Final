@@ -1,8 +1,8 @@
-\section{Integração com middleware \textit{uOS}}
+\section{Integração com Middleware \textit{uOS}}
 
-	Com intuito de exemplificar a utilização do \textit{UserDriver} e testar a integração do Sistema TRUE com o middleware \textit{UbiquitOS} foi desenvolvido uma aplicação para o middleware chamada \textit{UserApp}. Esta aplicação registra um \textit{listener} para ``escutar'' os eventos do \textit{UserDriver} chamado \textit{UserListener}. 
+	A integração do Middleware \textit{uOS} com o Sistema TRUE consiste em um \textit{driver} desenvolvido para que ambos possam se comunicar. Este \textit{driver} foi nomeado de \textit{UserDriver} que foi apresentado na Seção~\ref{sec:modulo-integracao}. Com intuito de exemplificar a utilização do \textit{UserDriver} e testar a integração do Sistema TRUE com o middleware \textit{uOS} foi desenvolvido uma aplicação para o middleware chamada \textit{UserApp}. Esta aplicação registra um \textit{listener} para ``escutar'' os eventos do \textit{UserDriver} chamado \textit{UserListener}. 
 
-	Como aplicação o \textit{UserApp} apenas se inscreve para receber os eventos gerados pelo \textit{UserDriver}. Já o \textit{UserListener}, como \textit{listener}, espera os eventos serem gerados e realiza duas análises: analisa o evento cru (novo usuário detectado, usuário perdido, ou reconhecimento realizado) e analisa quanto tempo cada usuário está parado no mesmo lugar.
+	Como aplicação o \textit{UserApp} apenas se inscreve para receber os eventos gerados pelo \textit{UserDriver}. Já o \textit{UserListener}, como \textit{listener}, espera os eventos serem gerados e realiza duas análises: analisa o evento (novo usuário detectado, usuário perdido, ou reconhecimento realizado) e analisa quanto tempo cada usuário está parado no mesmo lugar.
 
 		% \begin{figure}[hbt]
 		% 	\begin{center}
@@ -20,7 +20,7 @@
 		% 	\label{fig:diagrama-userlistener}
 		% \end{figure}
 
-	Basicamente, quando o \textit{UserListener} obtém os eventos do \textit{UserDriver} envia mensagens pelo Twitter para os usuários no ambiente, conforme o evento recebido. A Figura~\ref{fig:diagrama-tweet} mostra o fluxo básico de execução do \textit{listener} e as mensagens padrões para cada tipo de evento recebido. Para enviar as mensagens pelo Twitter foi utilizado a biblioteca \textit{twitter4j}. 
+	Basicamente, quando o \textit{UserListener} obtém os eventos do \textit{UserDriver}, ele envia mensagens pelo Twitter~\cite{twitter} para os usuários no ambiente, conforme o evento recebido. A Figura~\ref{fig:diagrama-tweet} mostra o fluxo básico de execução do \textit{listener} e as mensagens padrões para cada tipo de evento recebido. Para enviar as mensagens pelo Twitter foi utilizado a biblioteca \textit{twitter4j}~\cite{twitter4j}. 
 
 	\begin{figure}[hbt]
 		\begin{center}
@@ -30,10 +30,10 @@
 		\label{fig:diagrama-tweet}
 	\end{figure}
 
-	Testes funcionais foram feitos com a aplicação mostrando que o driver consegue
-	obter os dados íntegros do Sistema TRUE e gerar os eventos de maneira quase
+	Testes funcionais foram feitos com a aplicação mostrando que o \textit{driver} consegue
+	obter os dados íntegros do Sistema TRUE e gerar os eventos de maneira praticamente
 	instantânea. Algumas vezes as mensagens demoravam a chegar ao Twitter,
-	geralmente nos horários de ``pico'' quando o Twitter operava próximo ao limite
+	geralmente nos horários de pico quando o Twitter operava próximo ao limite
 	da sua capacidade. A Figura~\ref{fig:tweets} mostra as mensagens geradas
 	pela aplicação em um teste funcional, onde Danilo, um usuário cadastrado,
 	entra no ambiente senta em uma mesa com seu notebook permanecendo no mesmo
