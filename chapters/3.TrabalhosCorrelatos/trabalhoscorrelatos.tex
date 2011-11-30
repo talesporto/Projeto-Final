@@ -86,13 +86,17 @@ Experimentos realizados no projeto, utilizando os mesmos métodos para extraçã
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{UPC Smart Room}
+\section{SmartFlow}
 
-Salah et al~\cite{salah} propõe um sistema que realiza detecção de movimento, rastreamento de pessoas, reconhecimento facial, identificação baseado em características, localização baseada em áudio e módulos de identificação baseado em áudio. Além disso, o trabalho realiza a fusão de todas essas informações utilizando filtro de partículas para obter um sistema robusto de identificação e localização. O sistema foi projetado para operar de uma maneira completamente automática, ou seja, sem intervenção do usuário.
+Em~\cite{salah} temos uma proposta de implementação de um sistema multimodal que realiza detecção de movimento, rastreamento de pessoas, reconhecimento facial, identificação baseado em características, localização baseada em áudio e módulos de identificação baseado em áudio no middleware \textit{SmartFlow}. Este último consiste em um middleware genérico cliente-servidor que da suporte para o processamento dos streams de dados. Ele permite transporte de grande quantidade de dados de sensores para algoritmos de reconhecimento em nós distribuídos na rede.
+
+O sistema proposto realiza a fusão de todas as informações utilizando filtro de partículas para obter um sistema robusto de identificação e localização. Além disso, ele foi projetado para operar de uma maneira completamente automática, ou seja, sem intervenção do usuário.
+
+% Salah et al~\cite{salah} propõe um sistema que realiza detecção de movimento, rastreamento de pessoas, reconhecimento facial, identificação baseado em características, localização baseada em áudio e módulos de identificação baseado em áudio. Além disso, o trabalho realiza a fusão de todas essas informações utilizando filtro de partículas para obter um sistema robusto de identificação e localização. O sistema foi projetado para operar de uma maneira completamente automática, ou seja, sem intervenção do usuário.
+
+% Os \textit{streams} de dados são processados com ajuda de um \textit{middleware} genérico cliente-servidor chamado \textit{SmartFlow}, resultando em uma arquitetura portável para diferentes plataformas. Este \textit{middleware} permite transporte de grande quantidade de dados de sensores para algoritmos de reconhecimento em nós distribuídos na rede.
 
 O projeto utiliza diferentes métodos para prover serviços de reconhecimento e rastreamento multimodal no ambiente inteligente. A Figura \ref{workflow} mostra o fluxo das informações no sistema multimodal: a identificação e localização multimodal utiliza informações de identificação e localização por meio de áudio e informações de identificação e rastreamento utilizando imagens. O objetivo do sistema é identificar cada usuário ao entrar pela porta e rastreá-lo no ambiente. 
-
-Os \textit{streams} de dados são processados com ajuda de um \textit{middleware} genérico cliente-servidor chamado \textit{SmartFlow}, resultando em uma arquitetura portável para diferentes plataformas. Este \textit{middleware} permite transporte de grande quantidade de dados de sensores para algoritmos de reconhecimento em nós distribuídos na rede.
 
 	\begin{figure}[hbt]
 		\begin{center}
@@ -152,16 +156,24 @@ Uma abordagem baseada em PCA (\textit{Principal Component Analisys}) foi utiliza
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Projeto DIVA}
+\section{AVIARY e MICASA}
 
 % Esse projeto~\cite{trivedi} foi apelidado de Projeto DIVA pois nele foi desenvolvido uma nova arquitetura para ambientes inteligentes chamado DIVA. 
-Trivedi et al~\cite{trivedi} apresenta detalhes de um projeto de pesquisa de longo prazo, onde ambientes inteligentes com funcionalidades úteis são projetados, construídos e avaliados sistematicamente. Neste projeto foi desenvolvido uma nova arquitetura para ambientes inteligentes chamado DIVA. Esta nova arquitetura pode ser vista como uma rede inteligente de câmeras, que são controladas para prover diversas funcionalidades, tais como, detecção de intrusos, rastreamento de várias pessoas, pose do corpo e análise de postura, identificação de pessoas, modelagem do corpo humano e análise do movimento.
+% Trivedi et al~\cite{trivedi} apresenta detalhes de um projeto de pesquisa de longo prazo, onde ambientes inteligentes com funcionalidades úteis são projetados, construídos e avaliados sistematicamente. Neste projeto foi desenvolvido uma nova arquitetura para ambientes inteligentes chamado DIVA. Esta nova arquitetura pode ser vista como uma rede inteligente de câmeras, que são controladas para prover diversas funcionalidades, tais como, detecção de intrusos, rastreamento de várias pessoas, pose do corpo e análise de postura, identificação de pessoas, modelagem do corpo humano e análise do movimento.
+
+O laboratório de pesquisa CVRR (\textit{Computer Vision and Robotics Research}) da Universidade da Califórnia conta com dois ambientes inteligentes: o AVIARY e MICASA. Estes ambientes inteligentes são separados fisicamente, porém conectados. O primeiro (AVIARY) foi projetado para ser uma pequena sala de conferências. O segundo (MICASA) foi projetado para ser uma pequena sala de aula. A Figura~\ref{micasa_aviary} ilustra os dois ambientes e a disposição dos sensores neles utilizados. Em~\cite{trivedi} foi desenvolvido uma nova arquitetura para ambientes inteligentes chamado DIVA. Esta nova arquitetura pode ser vista como uma rede inteligente de câmeras, que são controladas para prover diversas funcionalidades, tais como, detecção de intrusos, rastreamento de várias pessoas, pose do corpo e análise de postura, identificação de pessoas, modelagem do corpo humano e análise do movimento.
+
+\begin{figure}[hbt]
+		\begin{center}
+	\includegraphics[scale=0.5]{figuras/3.TrabalhosCorrelatos/micasa_aviary.png}
+		\end{center}
+		\caption{Representação dos ambientes inteligentes MICASA e AVIARY~\cite{trivedi}.}
+		\label{micasa_aviary}
+	\end{figure}
 
 O sistema proposto por este projeto monitora o ambiente em baixa resolução de forma contínua, detectando somente a presença e suas dimensões. Formas de aquisição de imagens mais detalhadas são ativadas quando um evento ou atividade de potencial interesse é detectado. Esses eventos são os focos de atenção do sistema.
 
 O monitoramento de baixa resolução e de grande área do ambiente é alcançado graças a algumas câmeras de amplo ângulo de visão e estáticas. Com um pequeno número de câmeras PTZ (\textit{pan/tilt/zoom}) ativas, múltiplos focos de atenção podem ser mantidos de forma simultânea.
-
-O Projeto possui dois ambientes inteligentes separados fisicamente, porém conectados. O primeiro, chamado de AVIARY, foi projetado para ser uma pequena sala de conferências. O segundo, chamado de MICASA, foi projetado para ser uma pequena sala de aula. A Figura~\ref{micasa_aviary} ilustra os dois ambientes e a disposição dos sensores neles utilizados.
 
 Os sensores no ambiente inteligente AVIARY incluem:
 
@@ -171,14 +183,6 @@ Os sensores no ambiente inteligente AVIARY incluem:
 		\item quatro câmeras retilíneas estáticas;
 		\item dois \textit{arrays} de microfones com quatro microfones cada.
 	\end{itemize}
-
-\begin{figure}[hbt]
-		\begin{center}
-	\includegraphics[scale=0.5]{figuras/3.TrabalhosCorrelatos/micasa_aviary.png}
-		\end{center}
-		\caption{Representação dos ambientes inteligentes MICASA e AVIARY~\cite{trivedi}.}
-		\label{micasa_aviary}
-	\end{figure}
 
 As quatro câmeras omnidirecionais (ODVSs - \textit{Omni-Directional Vision Sensors}) estão perto dos cantos de uma mesa de reunião, cobrindo a sala inteira de dentro para fora, como mostrado na Figura \ref{micasa_aviary}. As câmeras PTZ e retilíneas estão nos ``vértices'' da sala a $\displaysytle 1.4m$ acima do chão. Os dois \textit{arrays} de microfones foram instalados na parede e no teto.
 

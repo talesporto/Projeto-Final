@@ -1,4 +1,5 @@
 \chapter{Introdução}
+
 	
 A Computação Ubíqua, \textit{ubicomp}, a tempos vem sendo tema de diversas
 pesquisas ao redor do mundo. Mark Weiser diz que o computador do futuro deve ser
@@ -32,11 +33,19 @@ identidades de cada usuário no ambiente.
 	
 Neste trabalho é proposto um sistema de reconhecimento facial, rastreamento e
 localização de usuários em um ambiente inteligente afim de prover informações de
-contexto ao Middleware \textit{uOS}. Tal sistema é chamado de Sistema TRUE
+contexto ao Middleware \textit{uOS}~\cite{fabriciobuzzeto}. Tal sistema é chamado de Sistema TRUE
 (\textit{Tracking and Recognizing Users in the Environment}) que utiliza o
 sensor \textit{Kinect} da marca Microsoft como dispositivo de entrada. Este, por
-sua vez, fornece imagens de cor e de profundidade ao sistema.
-	
+sua vez, fornece imagens de cor e de profundidade ao sistema. O middleware \textit{uOS} é voltado para a adaptabilidade de serviços em ambientes inteligentes. Conforme apresentado na Figura~\ref{fig:uos}, o uOS atua como uma camada entre as aplicações e os \textit{drivers}. Cada \textit{driver} representa um conjunto de serviços providos por um dispositivo.
+
+\begin{figure}[htb]
+		\begin{center}
+			\includegraphics[scale=0.3]{figuras/1.Introducao/dsoa.jpg}
+		\end{center}
+		\caption{Middleware \textit{uOS}.}
+		\label{fig:uos}
+	\end{figure}
+
 Este trabalho se encontra organizado da seguinte maneira. No
 Capítulo~\ref{cap:fundamentacao} é apresentado conceitos e técnicas sobre
 rastreamento de entidades, localização e identificação das mesmas em um ambiente

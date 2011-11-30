@@ -1,11 +1,25 @@
 \chapter{Sistema TRUE}
 \label{cap:true}
 
-Observando a realidade de um ambiente inteligente fica claro que as informações como posição das pessoas e suas respectivas identidades são de grande valia para que decisões possam ser tomadas. Atualmente, a maioria das soluções encontradas para fornecer esse tipo de informação foram projetadas para funcionar em ambientes rigidamente definidos. Com isso, não seria adequado tentar incorporar soluções como estas em um ambiente com diferentes dimensões, condições de iluminação, posição dos móveis, diferentes sensores pois este resultaria em um cenário diferente. Além disso, seria interessante que a solução fosse integrada com o middleware \textit{UbiquitOS} (Seção~\ref{uos}), disponibilizando, então, as informações obtidas dos usuários as diversas aplicações presentes no ambiente.
+% inciailmetne explicar q ambiente inteligentes sao viabilizados por middleware de comput ubi
+% apresentar ups caracteristacas gerencias ambientes
+% esse trabalho tem por objetivo desenvolver uma solcuao de ... para ambientes inteligentes gerecnaisdos pelo middleaew
+% falar dos trbaalhos q desenvovlem solucoes semelhantes mas sao especificas para detemrinado ambiente
+% primeira iniciativa trazer essa solucao para o middlewarel
+
+% essa mono mais rpecisamente apresenta isso .... e acabouse desenvovlendo tres modulos, foram conduzidos tb testes bla bla bla
+
+
+Um ambiente inteligente pode ser composto por uma grande variedade de dispositivos, que fornecem ao ambiente recursos. Para que estes se agreguem as tarefas do usuário, a inteligência presente deve coordená-los de acordo com as informações sobre o ambiente e sobre o usuário~\cite{fabriciobuzzeto}. Portanto, informações como posição do usuário e sua respectiva identidade são de grande valia para tornar possível a interação entre o usuário e os recursos presentes. Além disso, informações como estas ainda não são capturadas em ambientes inteligentes gerenciados pelo Middleware \textit{uOS}, apresentado na Seção~\ref{uos}. Atualmente, a maioria das soluções encontradas para fornecer esse tipo de informação foram projetadas para funcionar em ambientes rigidamente definidos. Com isso, não seria adequado tentar incorporar soluções como estas em um ambiente com diferentes dimensões, condições de iluminação, posição dos móveis, diferentes sensores pois este resultaria em um cenário diferente.
+
+Esse trabalho propõe um sistema aberto de rastreamento, localização e identificação de pessoas em ambientes inteligentes gerenciados middleware \textit{uOS}. Tal sistema é chamado de TRUE, \textit{\textbf{T}racking and \textbf{R}ecognizing \textbf{U}sers in the \textbf{E}nvironment}. Ele consiste na primeira tentativa de se trazer informações de contexto contendo perfis e posições dos usuários para o middleware \textit{uOS}.
+
+
+% Observando a realidade de um ambiente inteligente fica claro que as informações como posição das pessoas e suas respectivas identidades são de grande valia para que decisões possam ser tomadas. Atualmente, a maioria das soluções encontradas para fornecer esse tipo de informação foram projetadas para funcionar em ambientes rigidamente definidos. Com isso, não seria adequado tentar incorporar soluções como estas em um ambiente com diferentes dimensões, condições de iluminação, posição dos móveis, diferentes sensores pois este resultaria em um cenário diferente. Além disso, seria interessante que a solução fosse integrada com o middleware \textit{UbiquitOS} (Seção~\ref{uos}), disponibilizando, então, as informações obtidas dos usuários as diversas aplicações presentes no ambiente.
 
 % Além disso, a solução deve ser integrada com o middleware \textit{UbiquitOS}, o qual gerência os serviços providos pelo ambiente inteligente.
 
-Esse trabalho propõe, então, um sistema aberto de rastreamento, localização e identificação de pessoas em um ambiente inteligente integrado com o middleware \textit{uOS}. Tal sistema é chamado de TRUE, \textit{\textbf{T}racking and \textbf{R}ecognizing \textbf{U}sers in the \textbf{E}nvironment}.
+% Esse trabalho propõe, então, um sistema aberto de rastreamento, localização e identificação de pessoas em um ambiente inteligente integrado com o middleware \textit{uOS}. Tal sistema é chamado de TRUE, \textit{\textbf{T}racking and \textbf{R}ecognizing \textbf{U}sers in the \textbf{E}nvironment}.
 
 O Sistema TRUE é um sistema monomodal implementado em C++ que utiliza somente dados visuais, como imagens de cor e profundidade. As imagens de profundidade são utilizadas no rastreamento e localização dos usuários no ambiente, enquanto que as imagens de cor são utilizadas no reconhecimento facial e no cadastro dos usuários. Assim, o dispositivo de coleta de imagens presentes no ambiente deve ser capaz de fornecê-las a um taxa e qualidade adequadas. Para tanto, o sistema utiliza o sensor \textit{Kinect} da marca Microsoft descrito no Apêndice~\ref{sec:kinect}. O \textit{Kinect} é um dispositivo bastante acessível de custo aproxidamente \$150,00 e capaz de fornecer imagens de cor e de profundidade sincronizadas.
 
