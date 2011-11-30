@@ -5,13 +5,23 @@
 	física em relação ao sensor \textit{Kinect} e gerenciar suas identidades.
 	Portanto, foi realizado uma série de testes funcionais para avaliar o modulo de
 	rastreamento do Sistema TRUE.
+		
+	\begin{figure}[htb]
+		\begin{center}
+ 			\includegraphics[width=0.4\textwidth]{figuras/4.ProblemaEProposta/laico-teste-deteccao.png}
+ 		\end{center}
+ 		\caption{Demostração do teste de detecção dentro do \textit{SmartSpace}
+ 		Laico.}
+		\label{fig:laico-teste-deteccao}
+	\end{figure}		
 	
 	Os primeiros testes realizados tiveram como objetivo verificar a eficiência da
-	detecção de novos usuários no ambiente. Os testes foram feitos simulando a entrada de um
-	usuário na cena por diferentes ângulos e analisando o momento em que o mesmo era
-	detectado. Em todos os testes o usuário era detectado antes mesmo de entrar na
-	área de visão do sistema por completo, como mostrado na
-	Figura~\ref{fig:testes_deteccao}.
+	detecção de novos usuários no ambiente. Os testes foram feitos simulando a
+	entrada de um usuário na cena e analisando o momento em que o mesmo era
+	detectado. Esse teste foi executado no Laico e a posição do sensor e a
+	trajetória do usuário é apresentado na Figura~\ref{fig:laico-teste-deteccao}. Em
+	todos os testes o usuário era detectado antes mesmo de entrar na área de visão
+	do sistema por completo, como mostrado na Figura~\ref{fig:testes_deteccao}.
 	
 	\begin{figure}[htb]
 		\begin{center}
@@ -30,7 +40,7 @@
 		
 	Também foram realizados testes com o objetivo de verificar a oclusão no
 	rastreamento. Foi testado o caso em que um usuário oculta propositalmente outro
-	rastreado. Nesta situação, caso o usuário rastreado continuasse oculto, o
+	já rastreado. Nesta situação, caso o usuário rastreado continuasse oculto, o
 	sistema o determinava como perdido. Por outro lado, nos casos de oclusão
 	parcial, o sistema se mostrou robusto como pode ser observado na
 	Figura~\ref{fig:testes_oclusao_sucesso}, onde o usuário apresentado na cor verde
@@ -69,12 +79,19 @@
 		\label{fig:testes_oclusao}
 	\end{figure}
 
-	Com relação a abrangência do campo de visão do Sistema TRUE, tendo em vista que
-	ele utiliza o sensor \textit{Kinect} cujo campo de visão horizontal é de 57º e
-	cujos testes mostraram que tem alcance maximo de 4,057 metros(Seção \ref{a})
-	, é possível até uma distância de, aproximadamente, 4 metros do sensor, ter
-	até 5 usuários no campo de visão sem que haja oclusão de pessoas
-	(Figura~\ref{fig:max-pessoas}).
+	Dado que o \textit{Kinect} tem um ângulo de 57º e foi comprovado em testes
+	que o alcance maximo é de 4057 milímetros (Seção~\ref{sec:testes-localizacao})
+	elaboramos o seguinte teste. A uma distância de aproximadamente 4 metros do
+	sensor foram dispostos, ombro a ombro, o maximo de usuários sem que
+	haja oclusão ou interferência. Neste teste conseguimos que até 5 usuários
+	fossem rastreados como é possível ver na Figura~\ref{fig:max-pessoas}.
+
+% 	Com relação a abrangência do campo de visão do Sistema TRUE, tendo em vista que
+% 	ele utiliza o sensor \textit{Kinect} cujo campo de visão horizontal é de 57º e
+% 	cujos testes mostraram que tem alcance maximo de 4,057 metros
+% 	(Seção~\ref{sec:testes-localizacao}), é possível até uma distância de,
+% 	aproximadamente, 4 metros do sensor, ter até 5 usuários no campo de visão sem
+% 	que haja oclusão de pessoas (Figura~\ref{fig:max-pessoas}).
 	
 	% TODO: jogar isso aqui.
 % 	Através deste teste, também foi possível obter a distância máxima e mínima que o usuário
@@ -94,9 +111,9 @@
 	Durante os testes realizados com rastreamento foi observado alguns problemas
 	quando o usuário rastreado interagia com objetos do ambiente ou com outros
 	usuários. Na grande maioria das vezes em que o usuário interagiu com objetos, o
-	Sistema TRUE considerou o objeto como sendo parte do usuário conforme
+	Sistema TRUE considerou o objeto como sendo parte do usuário, conforme
 	exemplificado na Figura~\ref{fig:testes_relacionamento_com_objetos}. Entretando,
-	esta situação o que não prejudicou a eficiência do sistema. Por outro lado, os
+	esta situação não prejudicou a eficiência do sistema. Por outro lado, os
 	problemas com interação entre usuários foram mais raros, porém tiveram impacto
 	maior. Tais problemas consistem em ``interferências'' que ocorreram em algumas
 	situações de contato entre dois ou mais usuários, conforme exemplifica a

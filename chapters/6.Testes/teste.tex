@@ -1,32 +1,23 @@
 \chapter{Resultados e Análises}
 \label{cap:testes}
 
-% - OK Achei o texto introdutório um pouco fraco em apresentar o objetivo do capítulo. 
-% 	OK	Acho que vocês poderia focar primeiro que os testes foram para identificar a acurácia do sistema perante seus requisitos (Identificação e Localização). 
-% OK		Apresentar o LAICO apenas como o local onde ocorreram os testes. 
-% 		Apresentar cada ponto como uma medida/indicador do sistema desenvolvido. 
-% 		OK No texto dos 4 testes foque nos objetivos e não no como. Tipo:
-% 			Rastreamento: Testar a acurácia do rastreamento e identificação de objetos em situações do cotidiano.
-% 			Reconhecimento: Testar a acurácia de identificação dos usuários perante a base de dados.
-
 	Com intuito de identificar a acurácia e as limitações do Sistema TRUE perante
 	seus requisitos (reconhecimento, rastreamento e localização) foram realizados
 	uma série de testes funcionais. Grande parte dos testes foram realizados no LAICO
 	(\textbf{LA}boratório de Sistemas \textbf{I}ntegrados e \textbf{CO}ncorrente),
 	um laboratório do Departamento de Ciência da Computação da Universidade de
-	Brasília.
+	Brasília. O LAICO possui dimensões de $\displaystyle 7,67m$ x $\displaystyle
+	6,45m$ ilustrado pela Figura~\ref{fig:laico}.
 
-	% O LAICO possui dimensões de $\displaystyle 7,67m$ x $\displaystyle 6,45m$ ilustrado pela Figura~\ref{fig:laico}.
+	\begin{figure}[htb]
+		\begin{center}
+ 			\includegraphics[width=0.4\textwidth]{figuras/4.ProblemaEProposta/laico.png}
+ 		\end{center}
+ 		\caption{Planta do \textit{SmartSpace} LAICO.}
+		\label{fig:laico}
+	\end{figure}	
 
-	% \begin{figure}[htb]
-	% 		\begin{center}
-	% 			\includegraphics[scale=0.6]{figuras/4.ProblemaEProposta/laico.png}
-	% 		\end{center}
-	% 		\caption{Planta do \textit{SmartSpace} Laico.}
-	% 		\label{fig:laico}
-	% 	\end{figure}	
-
-	Cada teste tinha como foco um das funcionalidades do Sistema TRUE:
+	Cada conjunto de teste teve como foco uma das funcionalidades:
 
 	\begin{itemize}
 		\item \textbf{Rastreamento}: testes funcionais realizados para avaliar a
@@ -42,11 +33,12 @@
 		identificação de usuários.
 	\end{itemize}
 
-	Além disso, uma aplicação foi desenvolvida utilizando as informações
-	disponíveis para testar a integração do Sistema TRUE com o middleware
-	\textit{uOS}, testando os serviços providos e os eventos gerados. Nas
-	seções abaixo os resultados dos conjuntos de testes exemplificados acima serão
-	apresentados.
+	Cada uma das seções a seguir descreve, bem como faz uma breve análise dos
+	resultados de cada uma das funcionalidades acima. Além disso, com o objetivo de
+	verificar a integração do Sistema True com o \textit{uOS} foi desenvolvida uma pequena
+	aplicação utilizando os serviços e os eventos providos pelo Sistema TRUE. As
+	informações providas são tratadas e disponibilizadas via Twitter\cite{twitter,
+	twitterUnb}.
 
 	\input{chapters/6.Testes/rastreamento}
 
@@ -55,14 +47,3 @@
 	\input{chapters/6.Testes/identificacao}
 
 	\input{chapters/6.Testes/integracao-middleware}
-
-
-
-
-
-
-
-
-
-
-
