@@ -20,7 +20,9 @@
 		% 	\label{fig:diagrama-userlistener}
 		% \end{figure}
 
-	Basicamente, quando o \textit{UserListener} obtém os eventos do \textit{UserDriver}, ele envia mensagens pelo Twitter~\cite{twitter} para os usuários no ambiente, conforme o evento recebido. A Figura~\ref{fig:diagrama-tweet} mostra o fluxo básico de execução do \textit{listener} e as mensagens padrões para cada tipo de evento recebido. Para enviar as mensagens pelo Twitter foi utilizado a biblioteca \textit{twitter4j}~\cite{twitter4j}. 
+	% Basicamente, quando o \textit{UserListener} obtém os eventos do \textit{UserDriver}, ele envia mensagens pelo Twitter~\cite{twitter} para os usuários no ambiente, conforme o evento recebido. Para enviar as mensagens pelo Twitter foi utilizado a biblioteca \textit{twitter4j}~\cite{twitter4j}. A Figura~\ref{fig:diagrama-tweet} mostra o fluxo básico de execução do \textit{listener} e as mensagens padrões para cada tipo de evento recebido. 
+
+	Basicamente, quando o \textit{UserListener} é inicializado ele obtém acesso ao twitter e se registra para escutar os eventos gerados pelo \textit{UserDriver}. Para cada evento obtido, ele envia mensagens pelo Twitter~\cite{twitter} para os usuários no ambiente. Para eventos de ``novo usuário detectado'' e ``usuário perdido'', ele envia mensagens de boas vindas e de despedidas respectivamente. Como mencionado na Seção~\ref{sec:modulo-integracao}, o \textit{UserDriver} também gera eventos de atualização dos dados dos usuários. Quando estes eventos são gerados, o \textit{UserListener} verifica se houve atualização na identidade do usuário e se o mesmo está a mais de uma hora no mesmo lugar. Caso esteja, ele envia mensagens aos usuários informando estes acontecimentos. Este fluxo de execução e as estruturas das mensagens enviadas são mostrados na Figura~\ref{fig:diagrama-tweet}. Para enviar as mensagens pelo Twitter foi utilizado a biblioteca \textit{twitter4j}~\cite{twitter4j}.
 
 	\begin{figure}[hbt]
 		\begin{center}
