@@ -1,17 +1,44 @@
 \section{Localização dos Usuários}
+\label{sec:testes-localizacao}
 
-O Sistema TRUE obtém a localização dos usuários no ambiente por meio de coordenadas dos mesmos em relação ao \textit{Kinect}. Para saber o quanto essas coordenadas são confiáveis foram realizados alguns testes que resultaram em gráficos que comparam as coordenadas obtidas pelo sistema e as coordenadas reais.
+O Sistema TRUE obtém a localização dos usuários no ambiente por meio de
+coordenadas dos mesmos em relação ao \textit{Kinect}. Para verificar a acurácia
+dessas coordenadas foram realizados alguns testes. Os resultados desses testes
+foram desmostrados graficamente afim de comparar os dados obtidos
+pelo sistema com os dados reais.
 
-As coordenadas $\displaystyle (x, y, z)$ obtidas pelo sistema são coordenas de um plano cartesiano de três dimensões em que o ponto $\displaystyle (0, 0, 0)$ corresponde a posição do \textit{Kinect}. A coordenada no eixo  $\displaystyle z$ mostra o quanto o usuário está distante, em termos de profundidade, em relação ao sensor, a coordenada no eixo  $\displaystyle x$ mostra o quanto o usuário está a direita ou a esquerda do sensor e a coordenada no eixo  $\displaystyle y$ mostra o quanto o centro de massa geométrico do usuário está acima ou abaixo do sensor. 
+As coordenadas $\displaystyle (x, y, z)$ obtidas pelo sistema são coordenadas de
+um plano cartesiano de três dimensões em que o ponto $\displaystyle (0, 0, 0)$
+corresponde a posição do \textit{Kinect}. A coordenada no eixo  $\displaystyle
+z$ mostra o quanto o usuário está distante, em termos de profundidade, em
+relação ao sensor, a coordenada no eixo  $\displaystyle x$ mostra o quanto o
+usuário está a direita ou a esquerda do sensor e a coordenada no eixo 
+$\displaystyle y$ mostra o quanto o centro de massa geométrico do usuário está
+acima ou abaixo do sensor.
 
-Durante a estimativa da localização do usuário no ambiente inteligente, as coordenadas no eixo  $\displaystyle y$ são ignoradas por que em contextos ubíquos a localização espacial é baseada em contextos de ambientes (sala de reunião 101, casa, patio) e não em relação a pontos cartezianos gerais.Portanto, os testes desenvolvidos aferiram somente os valores obtidos pelo Sistema TRUE nos eixos $\displaystyle x$ e $\displaystyle z$.
+Durante a estimativa da localização do usuário no ambiente inteligente, as
+coordenadas no eixo  $\displaystyle y$ são ignoradas por que em contextos
+ubíquos a localização espacial é baseada em ambientes (sala de
+reunião 101, casa, patio, por exemplo) e não em relação a pontos cartesianos
+gerais. Portanto, os testes desenvolvidos aferiram somente os valores obtidos
+pelo Sistema TRUE nos eixos $\displaystyle x$ e $\displaystyle z$.
 
 % Os valores das coordenadas que realmente são utilizadas para estimar a localização do usuário no ambiente são os valores nos eixos $\displaystyle x$ e $\displaystyle z$. Os valores do eixo $\displaystyle y$ correspondem somente a altura do centro de massa geométrico do usuário rastreado. 
+\subsection{Teste de localização para o eixo $\displaystyle z$}
 
-
-\subsection{Teste dos valores no eixo $\displaystyle z$}
-
-	Os valores obtidos no eixo $\displaystyle z$ correspondem aos valores de profundidade do usuário rastreado em relação ao \textit{Kinect}. Portanto, para testar a precisão do Sistema TRUE foi realizado o seguinte teste: um objeto (uma caixa de papelão) foi colocada em frente ao sensor em diferentes distâncias do mesmo (1 metro, 2 metros, 3 metros, 4 metros, 4,057 metros), como mostrado na Figura~\ref{fig:distancias}. Para cada distância, foram coletados os dados informados pelo sistema (Tabela~\ref{tab:valores-z}).
+	Os valores obtidos no eixo $\displaystyle z$ correspondem aos valores de
+	profundidade do usuário rastreado em relação ao \textit{Kinect}. Portanto, para
+	testar a precisão do Sistema TRUE foi realizado o seguinte teste: um objeto (uma
+	caixa de papelão) foi colocada em frente ao sensor a diferentes distâncias do
+	mesmo (1000mm, 2000mm, 3000mm, 4000mm, 4057mm), como mostrado
+	na Figura~\ref{fig:distancias}. Para distâncias acima de 4057mm não foram
+	obtidos resultados, mais adiante, nessa seção, será provado que essa é a
+	distância máxima de funcionamento do sensor. Para cada distância, foram
+	coletados os dados informados pelo sistema. A Tabela~\ref{tab:valores-z}
+	apresenta o comparativo entre as distâncias reais medidas manualmente e a
+	média das distâncias aferidas pelo sistema. Essa média aritmética é calculada
+	a partir das amostras coletadas em um determinado período de tempo sendo
+	algumas dessas escolhidas aleatoriamente para fazer parte da operação.
 
 	% \begin{figure}[htb]
 	% 	\begin{center}
@@ -23,15 +50,16 @@ Durante a estimativa da localização do usuário no ambiente inteligente, as co
 
 	\begin{figure}[htb]
 		\begin{center}
-			\includegraphics[scale=0.4]{figuras/5.Testes/eixoz-imgs2.png}
+			\includegraphics[width=0.95\textwidth]{figuras/5.Testes/eixoz-imgs2.png}
 		\end{center}
-		\caption{Fotos obtidas pelo Sistema TRUE no teste realizado para os valores do eixo $\displaystyle z$.}
+		\caption{Fotos obtidas pelo Sistema TRUE nos testes de localização para o eixo $\displaystyle z$.}
 		\label{fig:distancias}
 	\end{figure}
 
-		\begin{table}[h]
+	\begin{table}[h]
 		\begin{center}
-			\caption{Comparatico entre os valores reais e os valores obtidos pelo Sistema TRUE.}
+			\caption{Comparativo entre os valores reais e os valores obtidos pelo Sistema
+			TRUE para o eixo $\displaystyle z$.}
 			\label{tab:valores-z}
 			\begin{tabular}{|c|c|}
 				\hline \bf Distância real do objeto & \bf Média dos valores obtidos\\
@@ -48,25 +76,44 @@ Durante a estimativa da localização do usuário no ambiente inteligente, as co
 		\end{center}
 	\end{table}
 
-	Os valores obtidos no teste foram inseridos em um gráfico representado pela Figura~\ref{fig:grafico-z}. Como visto, a discrepância aumenta conforme o objeto se distancia do sensor. Neste teste o menor erro obtido foi de 3,21 milimetros e o maior de 11,175 centimetros. 
+	Os valores da Tabela~\ref{tab:valores-z} também estão demostrados graficamente
+	pela Figura~\ref{fig:grafico-z}. Como pode ser observado, a discrepância
+	aumenta conforme o objeto se distancia do sensor. Neste teste o menor erro
+	obtido foi de 3,21mm e o maior de 111,75mm.
 	
-	% Neste gráfico existem duas retas: uma reta preta que representa valores ideias que batem com os valores reais; e uma reta vermelha que representa os valores obtidos pelo sistema. Como observado, a medida que o objeto se afasta do \textit{Kinect} as diferenças entre os valores reais e os valores obtidos aumetam. Contudo, essa diferença é de poucos centímetros.
+	Pelos resultados dos testes de localização, pode-se concluir que o
+	Sistema TRUE fornece informações sobre localização dos usuários bastante
+	precisas podendo, entretando, apresentar erros de poucos centímetros que não
+	prejudicam a confiabilidade das informações.
 
-	Pelos resultados deste teste, pode-se concluir que o Sistema TRUE fornece informações sobre localização dos usuários bem precisas e confiáveis podendo ter erros de poucos centímetros que não prejudicam a integridade das informações. 
-
-	Através deste teste, também foi possível obter a distância máxima e mínima que o usuário deve estar do \textit{Kinect} para que o sistema consiga rastrea-lo e estimar sua localização. A distância mínima é de $\displaystyle 48,3 cm$ e a máxima de $\displaystyle 4,057 m$.
+	Através deste teste também foi possível obter a distância máxima e mínima que o
+	usuário deve estar do \textit{Kinect} para que o sistema consiga rastreá-lo e
+	assim estimar sua localização. A distância mínima é de $\displaystyle 483mm$
+	e a máxima de $\displaystyle 4057mm$.
 
 	\begin{figure}[H]
 		\begin{center}
 			\includegraphics[scale=0.4]{figuras/5.Testes/grafico-eixo-z.png}
 		\end{center}
-		\caption{Gráfico comparativo entre os valores obtidos pelo Sistema TRUE e os valores reais.}
+		\caption{Gráfico comparativo entre os valores obtidos pelo Sistema TRUE e os
+		valores reais para o eixo $\displaystyle z$.}
 		\label{fig:grafico-z}
 	\end{figure}
 
-\subsection{Teste dos valores no eixo $\displaystyle x$}
+\subsection{Teste de localização para o eixo $\displaystyle x$}
 
-	Os valores obtidos no eixo $\displaystyle x$ mostram o quanto o usuário rastreado está a direita ou a esquerda em relação ao \textit{Kinect}. Portanto, para testar a precisão do Sistema TRUE foi realizado o seguinte teste: um objeto (uma caixa de papelão) foi colocada a uma distância fixa de 3 metros do sensor e colocada em diferentes posições ao longo do eixo $\displaystyle x$ (0, $\displaystyle \pm33 cm$, $\displaystyle \pm66 cm$, $\displaystyle \pm99 cm$), como mostrado na Figura~\ref{fig:eixox-imgs}. Para cada posição, foram coletados os dados informados pelo sistema (Tabela~\ref{tab:valores-x}). 
+	Os valores obtidos no eixo $\displaystyle x$ mostram o quanto o usuário
+	rastreado está a direita ou a esquerda em relação ao \textit{Kinect}. Portanto,
+	para testar a precisão do Sistema TRUE foi realizado o seguinte teste: um objeto
+	(uma caixa de papelão) foi colocada a uma distância fixa de 3000 milímetros do
+	sensor e colocada em diferentes posições ao longo do eixo $\displaystyle x$ (0,
+	$\displaystyle \pm330mm$, $\displaystyle \pm660mm$, $\displaystyle \pm990mm$),
+	como mostrado na Figura~\ref{fig:eixox-imgs}. Para cada posição, foram
+	coletados os dados informados pelo sistema. A Tabela~\ref{tab:valores-x}
+	apresenta o comparativo entre as distâncias reais medidas manualmente e a
+	média das distâncias aferidas pelo sistema. Essa média aritmética é calculada
+	a partir das amostras coletadas em um determinado período de tempo sendo
+	algumas dessas escolhidas aleatoriamente para fazer parte da operação.
 
 	% \begin{figure}[htb]
 	% 	\begin{center}
@@ -78,9 +125,9 @@ Durante a estimativa da localização do usuário no ambiente inteligente, as co
 
 	\begin{figure}[htb]
 		\begin{center}
-			\includegraphics[scale=0.5]{figuras/5.Testes/eixox-imgs2.png}
+			\includegraphics[width=0.95\textwidth]{figuras/5.Testes/eixox-imgs2.png}
 		\end{center}
-		\caption{Fotos obtidas pelo Sistema TRUE no teste realizado para os valores do eixo $\displaystyle x$.}
+		\caption{Fotos obtidas pelo Sistema TRUE nos testes de localização para o eixo $\displaystyle x$.}
 		\label{fig:eixox-imgs}
 	\end{figure}
 
@@ -89,7 +136,7 @@ Durante a estimativa da localização do usuário no ambiente inteligente, as co
 			\caption{Comparativo entre as posições reais e os valores obtidos pelo Sistema TRUE.}
 			\label{tab:valores-x}
 			\begin{tabular}{|c|c|}
-				\hline \bf Posição do objeto & \bf Média dos valores obtidos}\\
+				\hline \bf Posição real do objeto & \bf Média dos valores obtidos}\\
 							 \bf ao longo do eixo $\displaystyle x$ (mm) & pelo Sistema TRUE (mm)}\\
 				\hline
 				\hline 0    & -32,80 \\% -31,82   & -34,5    & -31,39   & -33,51 \\ 
@@ -104,14 +151,15 @@ Durante a estimativa da localização do usuário no ambiente inteligente, as co
 			\end{tabular}
 		\end{center}
 	\end{table}
-
-	Os valores obtidos no teste foram inseridos em um gráfico representado pela
-	Figura~\ref{fig:grafico-eixox}. Como observado, existe uma diferença constante de
-	poucos centímetros ao longo de toda a reta, ou seja, com o objeto fixo a uma
-	distância de 3 metros do \textit{Kinect}, o Sistema TRUE consegue fazer
-	estimativas das coordenadas no $\displaystyle x$ com erro de poucos
-	centímetros, neste caso o menor e o maior erro obtidos foram de 27,19 mm e 79,29 mm respectivamente. Um erro tão pequeno que não prejudica a integridade dos valores
-	obtidos pelo sistema.
+	
+	Os valores da Tabela~\ref{tab:valores-x} também estão demonstrados graficamente
+	na Figura~\ref{fig:grafico-eixox}. Como observado, existe uma diferença
+	constante de poucos centímetros ao longo de toda a reta. É possível inferir
+	então, que o Sistema TRUE consegue fazer estimativas das coordenadas no eixo
+	$\displaystyle x$ com erro de poucos milímetros. Neste caso o menor e o maior
+	erro obtidos foram de 27,19mm e 79,29mm respectivamente. Acredita-se que o
+	erro apresentado não é significativo a ponto de comprometer o uso dos dados
+	fornecidos.
 
 	\begin{figure}[htb]
 		\begin{center}
@@ -120,36 +168,3 @@ Durante a estimativa da localização do usuário no ambiente inteligente, as co
 		\caption{Gráfico comparativo entre os valores obtidos pelo Sistema TRUE e os valores reais para o eixo $\displaystyle x$.}
 		\label{fig:grafico-eixox}
 	\end{figure}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
