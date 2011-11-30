@@ -1,14 +1,16 @@
 \section{Reconhecimento dos Usuários}
 	 
-	O reconhecimento facial do Sistema TRUE foi implementado utilizando imagens de cor como dados de entrada. Portanto, ele tem influência de diversos fatores como iluminação, ângulo, pose, expressões, cosméticos e acessórios. Para análise dos resultados foi utilizada como ferramenta uma matriz de confusão construída a partir dos dados coletados do sistema. Matriz de confusão consiste em uma matriz onde as colunas representam os possíveis valores que se podem obter para cada usuário e as linhas os usuários que foram observados. Os valores presentes na matriz representam os resultados em porcentagens de testes de reconhecimento realizados com alguns usuários. Então, a matriz permite a fácil visualização da confiança obtida no reconhecimento observando-se os valores obtidos na diagonal principal que representam as porcentagens de acerto para cada usuário.
+	O reconhecimento facial do Sistema TRUE foi implementado utilizando imagens de cor como dados de entrada. Portanto, ele tem influência de diversos fatores como iluminação, ângulo, pose, expressões, cosméticos e acessórios. Para análise dos resultados foi utilizada como ferramenta uma matriz de confusão construída a partir dos dados coletados do sistema. Matriz de confusão consiste em uma matriz onde as colunas representam os possíveis valores que se podem obter para cada usuário e as linhas os usuários que foram observados. Os valores presentes na matriz mostram os resultados, em porcentagens, de testes de reconhecimento realizados com alguns usuários. Então, a matriz permite a fácil visualização da confiança obtida no reconhecimento observando-se os valores obtidos na diagonal principal que representam as porcentagens de acerto para cada usuário.
 
-	Para se ter uma melhor interpretação dos valores presentes na matriz de confusão, as três taxas a seguir poderm ser obtidas a partir da matriz:
+	Para se ter uma melhor interpretação dos valores presentes na matriz de confusão, três taxas podem ser calculadas a partir da matriz utilizando os três conceitos a seguir:
 
 	\begin{enumerate}
 		\item \textbf{Verdadeiro Positivo}: quando o sistema identifica o usuário de maneira correta.
 		\item \textbf{Verdadeiro Negativo}: quando o sistema identifica o usuário de maneira errada.
 		\item \textbf{Falso Negativo}: quando o sistema não identifica o usuário cadastrado.
 	\end{enumerate}
+
+	A taxa de verdadeiro positivo representa a média de acertos do sistema ao identificar os usuários. A taxa de verdadeiro negativo representa a média de erros que houveram ao se reconhecer equivocadamente um usuário como outro. A taxa de falso negativo representa a média de erros que houveram quando um usuário cadastro não foi reconhecido e considerado como ``desconhecido''.
 
 	Foram realizados dois conjuntos de testes para avaliar a precisão do reconhecimento facial implementado no Sistema TRUE. Os cenários desses testes foram compostos por usuários previamente cadastrados, além das 40 pessoas cadastradas no banco de faces da Universidade de Cambridge~\cite{cambridgeFaceDb}. No primeiro conjunto de testes foram previamente cadastrados 11 usuários e no segundo 10 usuários. Nesses testes, cada usuário se posicionou em frente ao \textit{Kinect}, com o rosto na posição frontal em relação ao sensor. Com isso, o sistema realizou o processo de reconhecimento facial 20 vezes para cada usuário. Os dois conjuntos de testes foram necessários tendo em vista que os resultados do primeiro não foram satisfatórios. A diferença entre ambos está na estratégia utilizada no cadastro dos usuários no sistema. 
 
@@ -48,15 +50,10 @@
 
 	Como previsto, pode-se observar na matriz que os maiores valores estão na diagonal principal. Alguns resultados obtidos foram satisfatórios com porcentagens maiores que 90\%. Por outro lado, foram obtidos alguns resultados com baixas porcentagens como 45\%. Estes últimos foram principalmente causados por problemas como pose e expressões faciais. A iluminação não foi um problema, pois no ambiente de teste não existe influência da iluminação externa e a interna é controlada. 
 
-	Tais taxas foram inseridas na Tabela~\ref{tab:taxas}. A taxa de acerto
-	(verdadeito positivo) foi menor do que se esperava. Portanto, o teste foi
-	realizado novamente utilizando menos usuários, 6 usuários além dos 40
-	presentes no banco de faces da Universidade de
-	Cambridge~\cite{cambridgeFaceDb}. Porém o cadastro destes usuários foi feito
-	de maneira diferente. Ao invés de se obter 10 fotos das faces posicionadas de
-	maneira frontal em relação ao sensor, foram obtidas 100 imagens das faces em
-	diferentes ângulos, posições e expressões faciais. Os resultados obtidos, foram inseridos em uma
-	segunda matriz de confusão (Tabela~\ref{tab:matriz-confusao2}).
+	A Tabela~\ref{tab:taxas} apresenta as taxas de Verdadeiro Positivo, Verdadeiro Negativo e Falso Negativo calculadas analizando os valores da Tabela~\ref{tb:matriz-confusao}. Observa-se que a taxa de verdadeiro positivo (73,63\%) foi uma taxa baixa para um sistema de reconhecimento automático. Neste conjunto de testes, a taxa de verdadeiro negativo foi bem superior a taxa de falso negativo mostrando que a principal deficiência do reconhecimento facial consiste na confusão entre os usuários cadastrados no sistema.
+
+
+	Tendo em vista que os resultados do primeiro conjunto de testes não foram satisfatórios, foi realizado o segunto conjunto de testes. Contudo, a estratégia utilizada nos cadastros do usuários foi diferente. Os cadastros foram feitos utilizando 100 imagens das faces de cada usuário em diferentes ângulos, posições e expressões faciais. No momento do cadastro, foi solicitado que os usuários movimentasse o rosto levementa para cima, para baixo, para esquerda e para direira de maneira aleatória e com diferentes expressões faciais. Os resultados obtidos neste conjunto de testes foram inseridos em uma segunda matriz de confusão mostrada na Tabela~\ref{tab:matriz-confusao2}.
 
 	\begin{table}[htb]
 		\begin{center}
@@ -133,7 +130,7 @@
 		\end{center}
 	\end{table}
 
-	Ao analisar os dados da Tabela~\ref{tab:matriz-confusao2} é fácil observar que os resultados melhoraram significamente. Essa melhora é confirmada pelas taxas retiradas desta tabela e inserida na Tabela~\ref{tab:taxas2}. Houve um bom aumento na taxa de Verdadeiro Positivo de 73,63\% para 95,83\% e redução na taxa de Verdadeiro Negativo de 17,27\% para 0\%. Tal melhora aconteceu devido a mudança na base de dados tornando o Sistema TRUE mais robusto com as variações de poses, ãngulos e expressões faciais.
+	Ao analisar os dados da Tabela~\ref{tab:matriz-confusao2} pode-se observar que os resultados melhoraram significamente. A Tabela~\ref{tab:taxas2} apresenta as taxas de acerto e erros relativos à Tabela~\ref{tab:matriz-confusao2}. Houve um aumento significativo na taxa de Verdadeiro Positivo de 73,63\% para 95,83\% e redução na taxa de Verdadeiro Negativo de 17,27\% para 0\%. Acredita-se que esta melhora aconteceu devido a mudança na estratégia de cadastro dos usários tornando o Sistema TRUE mais robusto com as variações de poses, ngulos e expressões faciais.
 
 	% Para esta matriz obtemos as taxas apresentadas na Tabela~\ref{tab:taxas2}. É
 	% possível observar que o método de cadastro influi bastante no resultado final.
