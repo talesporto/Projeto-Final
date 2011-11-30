@@ -9,7 +9,12 @@
 % 			Rastreamento: Testar a acurácia do rastreamento e identificação de objetos em situações do cotidiano.
 % 			Reconhecimento: Testar a acurácia de identificação dos usuários perante a base de dados.
 
-	Com intuito de identificar a acurácia e as limitações do Sistema TRUE perante seus requisitos (identificação, rastreamento e localização) foram feitos uma série de testes funcionais. Grande parte dos testes foram realizados no LAICO (\textbf{LA}boratório de Sistemas \textbf{I}ntegrados e \textbf{CO}ncorrente), um laboratório do Departamento de Ciência da Computação da Universidade de Brasília. 
+	Com intuito de identificar a acurácia e as limitações do Sistema TRUE perante
+	seus requisitos (reconhecimento, rastreamento e localização) foram realizados
+	uma série de testes funcionais. Grande parte dos testes foram realizados no LAICO
+	(\textbf{LA}boratório de Sistemas \textbf{I}ntegrados e \textbf{CO}ncorrente),
+	um laboratório do Departamento de Ciência da Computação da Universidade de
+	Brasília.
 
 	% O LAICO possui dimensões de $\displaystyle 7,67m$ x $\displaystyle 6,45m$ ilustrado pela Figura~\ref{fig:laico}.
 
@@ -24,27 +29,32 @@
 	Cada teste tinha como foco um das funcionalidades do Sistema TRUE:
 
 	\begin{itemize}
-		\item \textbf{Rastreamento}: testes funcionais realizados para avaliar a eficiência da detecção de novos usuários e que simulam diferentes situações diárias mostrando como o sistema se comporta quando ocorre oclusões parciais e totais de usuários e quando os mesmos interagem entre si ou com objetos no ambiente.
+		\item \textbf{Rastreamento}: testes funcionais realizados para avaliar a
+		eficiência da detecção de novos usuários no ambiente. Os testes simulam
+		diferentes situações diárias mostrando como o sistema se comporta quando
+		ocorre oclusões parciais e totais de usuários e quando os mesmos interagem
+		entre si ou com objetos no ambiente.
 
-		\item \textbf{Reconhecimento}: testes realizados para avaliar a acurácia na identificação do usuários perante uma base de dados.
-
-		% diferentes pessoas foram cadastradas no sistema e reconhecidas pelo mesmo. As diferentes identidades obtidas em cada reconhecimento foram inseridas em uma matriz de confusão para avaliar a acurácia do reconhecimento.
-
-		\item \textbf{Localização}: testes realizados para avaliar a precisão do sistema ao estimar a posição dos usuários no ambiente.
-	% um objeto foi colocado no ambiente em diferentes posições pre-determinadas e as coordenadas obtidas pelo sistema foram inseridas em gráficos e foram comparadas com as coordeanadas reais avaliando a precisão do sistema.
-
-		\item \textbf{Integração com o middleware \textit{UbiquitOS}}: uma aplicação foi desenvolvida para testar a integração do Sistema TRUE com o middleware \textit{UbiquitOS}, testando os serviços disponíveis e os eventos gerados.
-
-		% uma aplicação foi desenvolvida para o middleware \textit{UbiquitOS}. Ela consome alguns serviços e eventos produzidos pelo driver \textit{UserDriver} que são comparados com as informações reais.
+		\item \textbf{Localização}: testes realizados para avaliar a precisão do
+		sistema ao estimar a posição dos usuários rastreados no ambiente.
+		
+		\item \textbf{Reconhecimento}: testes realizados para avaliar a acurácia na
+		identificação de usuários.
 	\end{itemize}
 
-\input{chapters/6.Testes/rastreamento}
+	Além disso, uma aplicação foi desenvolvida utilizando as informações
+	disponíveis para testar a integração do Sistema TRUE com o middleware
+	\textit{uOS}, testando os serviços providos e os eventos gerados. Nas
+	seções abaixo os resultados dos conjuntos de testes exemplificados acima serão
+	apresentados.
 
-\input{chapters/6.Testes/localizacao}
+	\input{chapters/6.Testes/rastreamento}
 
-\input{chapters/6.Testes/identificacao}
+	\input{chapters/6.Testes/localizacao}
 
-\input{chapters/6.Testes/integracao-middleware}
+	\input{chapters/6.Testes/identificacao}
+
+	\input{chapters/6.Testes/integracao-middleware}
 
 
 
