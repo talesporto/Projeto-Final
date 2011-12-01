@@ -1,7 +1,7 @@
 \section{Localização}
 \label{sec:luz-estruturada}
 
-	As informações provenientes do rastreamento de uma entidade serve como base para que a localização da mesma possa ser obtida. Com essas informações é possível determinar os pontos da imagem que representam a entidade e calcular a distância dos mesmos em relação a câmera utilizada na captura das imagens. Este cálculo consistem em uma tarefa relevante em sistemas de computação visual~\cite{jain}. Para isso,
+	As informações provenientes do rastreamento de uma entidade servem como base para que a localização da mesma possa ser obtida. Com essas informações é possível determinar os pontos da imagem que representam a entidade e calcular a distância dos mesmos em relação a câmera utilizada na captura das imagens. Este cálculo consiste em uma tarefa relevante em sistemas de computação visual~\cite{jain}. Para isso,
 	deve-se obter informações de profundidade das entidades em interesse. Essas
 	informações podem ser obtidas utilizando imagens de intensidade ou de
 	profundidade.
@@ -9,21 +9,21 @@
 	Uma maneira comum de se obter informações de profundidade de imagens de
 	intensidade é adquirir um par de imagens usando duas câmeras deslocadas entre si
 	por uma distância conhecida. Como alternativa, duas ou mais imagens obtidas de
-	uma câmera em movimento também pode ser utilizadas para calcular informações de
+	uma câmera em movimento também podem ser utilizadas para calcular informações de
 	profundidade~\cite{jain}. Esse método é conhecido como \textit{Stereo Vision} e
-	necessita ser bem calibrado.  Além disso, os algoritmos que o implementa
-	geralmente são computacionalmente caros e não funcionam em ambiente com baixa
+	necessita ser bem calibrado.  Além disso, os algoritmos que implementam este método
+	geralmente são computacionalmente custosos e não funcionam em ambiente com baixa
 	condição de iluminação~\cite{fall-detection}.
 	
 	Informações de profundidade também podem ser obtidas indiretamente através de
 	imagens de intensidade utilizando sinais na imagem, como sombreamento e
 	textura~\cite{jain}.
 	
-	Em contraste com imagens de intensidade, imagens cujo valor em cada pixel é uma
+	Ao contrário das imagens de intensidade, imagens cujo valor em cada pixel é uma
 	função da distância do ponto correspondente na cena do sensor são chamadas de
-	imagens de profundidade, exemplificada na Figura \ref{depthimage}. Tais imagens
-	podem ser adquiras diretamente utilizando sensores específicos~\cite{jain}.
-	Alguns dos métodos mais conhecidos são:
+	imagens de profundidade, exemplificada na Figura \ref{depthimage}. Estas imagens
+	podem ser adquiridas diretamente utilizando sensores específicos~\cite{jain}.
+	Alguns dos métodos para se obter imagens de profundidade mais conhecidos são:
 
 	\begin{figure}[htb]
 		\begin{center}
@@ -36,15 +36,21 @@
 	\begin{enumerate}
 		\item \textbf{Triangulação:} utiliza as propriedades geométricas do triângulo
 		para calcular a localização de entidades. Pode ser dividida em duas
-		subcategorias: lateração e angulação. Lateração computa a posição de uma
+		subcategorias~\cite{triangulacao}: 
+			\begin{itemize}
+				\item \textbf{lateração}: computa a posição de uma
 		entidade estimando sua distância de múltiplos ponto de referência. Calcular a
 		posição de uma entidade em duas dimensões requer estimativas de distância de
-		três pontos não colineares como mostrado na Figura \ref{fig:lateration}. Já em
-		três dimensões são necessários quatro pontos não coplanares. Ângulação utiliza
-		ângulos para determinar a distância da entidade. Em geral, ângulação em duas
+		três pontos não colineares como mostrado na Figura \ref{fig:lateration}. Nesta figura, para se obter a localização da entidade X é necessário obter a distância entre a mesma e três pontos de referência não colinerares.
+				\item \textbf{angulação}: utiliza
+		ângulos para determinar a localização da entidade. Em geral, angulação em duas
 		dimensões requer estimativas de dois ângulos e a estimativa da distância entre
 		dois pontos de referência como mostrado na Figura
-		\ref{fig:angulation}~\cite{triangulacao};
+		\ref{fig:angulation}. Nesta figura, para se se localizar a
+			entidade $\displaystyle X$ utiliza-se ângulos relativos a um vetor de
+			referência $\displaystyle 0º$ e a distância entre dois pontos de referência;
+			\end{itemize}
+
 		
 		\begin{figure}[htb]
 			\begin{center}
@@ -55,11 +61,7 @@
 					\label{fig:angulation}
 					\includegraphics[width=0.45\textwidth]{figuras/2.FundamentacaoTeorica/angulation.png}}
 			\end{center}
-			\caption{ (a) Determina a distância em duas dimensões utilizando lateração.
-			Requer a distância entre a entidade $\displaystyle X$ e três pontos de referência não colineares~\cite{triangulacao}.}
-			(b) Exemplo de uma angulação em duas dimensões em que se localiza a
-			entidade $\displaystyle X$ utilizando ângulos relativos a um vetor de
-			referência $\displaystyle 0º$ e a distância entre dois pontos de referência~\cite{triangulacao}.}
+			\caption{ (a) Exemplo de Lateração~\cite{triangulacao}. (b)Exemplo de Angulação~\cite{triangulacao}.}
 		\end{figure}
 
 		\item \textbf{Tempo de Vôo (TOF - \textit{Time of flight}):} a distância até a
@@ -78,7 +80,7 @@
 		recuperada. Esse princípio consiste na projeção de pontos de luz infra-vermelhos
 		na cena que são recuperados por uma câmera infra-vermelha que lê a textura.
 		Trata-se de um método mais acessível que o TOF, porém é pouco eficiente
-		para estimar a distância dos pontos nas bordas dos objetos e em áreas muito
+		para estimar a distância dos pontos nas bordas dos objetos e em posições muito
 		longe do sensor~\cite{fall-detection};
 		
 		\begin{figure}[H]
