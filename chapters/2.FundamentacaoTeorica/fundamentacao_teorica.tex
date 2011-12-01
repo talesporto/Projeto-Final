@@ -3,23 +3,15 @@
 
 	% Neste capítulo será apresentado os conceitos de rastreamento, localização e identificação nos quais o trabalho se fundamenta. A partir dessa teoria será possível entender melhor a proposta do projeto.
 
-	Em ambientes inteligentes, as informações de contexto sobre os usuários presentes como localização e identidade são de grande importância proporcionando uma maior acurácia nas tomadas de decisões. Informações de contexto como essas são muito complicadas de obter devido à dinamicidade do ambiente, no qual usuários entram e saem a todo momento e interagem com diversos equipamentos.
+	Em ambientes inteligentes, as informações de contexto sobre os usuários como localização e identidade são de grande importância proporcionando uma maior acurácia nas tomadas de decisões. Informações de contexto como essas são de difícil obtenção devido à dinamicidade do ambiente, no qual usuários entram e saem a todo momento e interagem com diversos equipamentos.
 
-	Para obter essas informações é necessário utilizar técnicas de identificação e localização mescladas com técnicas de rastreamento.
+	Para obter essas informações de contexto é necessário utilizar técnicas de identificação e localização mescladas com técnicas de rastreamento. O rastreamento pode ser definido como o problema de estimar a trajetória de uma entidade (objeto ou pessoa) em um plano de imagem à medida em que se move na cena. Em outras palavras, um rastreador atribui rótulos as entidades monitoradas em diferentes quadros de um vídeo~\cite{yilmaz}.
 
-	O rastreamento pode ser definido como o problema de estimar a trajetória de uma entidade em um plano de imagem à medida em que se move na cena. Em outras palavras, um rastreador atribui rótulos as entidades monitoradas em diferentes quadros de um vídeo~\cite{yilmaz}.
+	Em um ambiente inteligente, o rastreamento de pessoas é uma das principais ferramentas para detectar novos usuários e serve como base para que novas informações possam ser coletadas. Por exemplo, para que seja possível realizar reconhecimento facial de uma pessoa é necessário, primeiramente, obter imagens de sua face, porém isso só é possível se soubermos onde tal pessoa se encontra na imagem, ou seja, é necessário primeiro detectá-la e rastreá-la. O mesmo acontece com a localização de pessoas. Nese caso, com o rastreamento mesclado com informações de profundidade é possível obter a localização física das pessoas rastreadas. 
 
-	Em um ambiente inteligente, o rastreamento de pessoas é uma das principais ferramentas para detectar novos usuários e serve como base para que novas informações possam ser colhidas. Por exemplo, para que seja possível realizar reconhecimento facial de uma pessoa é necessário, primeiramente, obter imagens de sua face, porém isso só é possível se soubermos onde tal pessoa se encontra na imagem, ou seja, é necessário detectá-la e rastreá-la.
+	Neste capítulo é apresentada a fundamentação teórica necessária acerca de rastreamento de entidades, localização e identificação fornecendo o embasamento necessário para que o leitor possa ter entendimento das soluções apresentadas neste trabalho.
 
-	Com o rastreamento mesclado com informações de profundidade é possível, também, obter a localização física das pessoas rastreadas. Tal informação é muito útil em um ambiente inteligente pois, a posição do usuário, possibilita maiores possibilidades para as tomadas de decisões.
-
-	Neste capítulo é mostrada uma abordagem conceitual sobre rastreamento de entidades, localização e identificação das mesmas em um ambiente. 
-
-	Sobre rastreamento é mostrada uma visão geral do processo e quais as dificuldades mais comuns encontradas, bem como as técnicas mais comuns de detecção e rastreamento, as diferentes maneiras de representar as entidades rastreadas e algumas de suas características utilizadas. 
-
-	Sobre localização é mostrada uma visão geral de como obter a posição relativa a uma câmera utilizando imagens de profundidade.
-
-	Sobre identificação é mostrado conceitos gerais sobre biometria e as características biométricas existentes. Sobre reconhecimento facial, é apresentado os conceitos gerais e conceitos mais específicos das diferentes etapas do processo de reconhecimento: detecção de faces e reconhecimento das mesmas. Além desses conceitos, é apresentado alguns métodos utilizados atualmente em cada uma dessas etapas.
+	Na Seção~\ref{sec:rastreamento} será apresentada uma visão geral do processo de rastreamento e as dificuldades mais comumente encontradas, bem como as técnicas mais comuns de detecção e rastreamento, as diferentes maneiras de representar as entidades rastreadas e algumas de suas características utilizadas. A Seção~\ref{sec:luz-estruturada} descreve o processo de obtenção da posição de entidades relativa a uma câmera utilizando imagens de profundidade. Na Seção~\ref{sec:identificacao}, que trata questões relativas a identificação de pessoas, são apresentados conceitos gerais sobre biometria e as características biométricas existentes para identificação. Nessa seção também é mostrado os conceitos gerais e conceitos mais específicos das diferentes etapas do processo de reconhecimento: detecção de faces e reconhecimento das mesmas. Além desses conceitos, são apresentados alguns métodos utilizados atualmente em cada uma dessas etapas.
 
 
 
@@ -59,6 +51,7 @@
 	
 
 \section{Identificação}
+\label{sec:identificacao}
 	
 	Um ambiente ubíquo capaz de identificar seus usuários, pode prover uma
 	personalização automática do ambiente de acordo com as preferências do usuário e
