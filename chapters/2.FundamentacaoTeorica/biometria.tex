@@ -3,9 +3,9 @@
 	Biometria é uma tecnologia utilizada para identificação de um indivíduo baseado
 	em suas características físicas ou comportamentais para realizar a identificação
 	e, por isso, tem a capacidade de diferenciar entre um indivíduo legítimo de um
-	impostor \cite{hong}. As características físicas estão relacionadas a composição
-	do corpo humano e seu formato e as comportamentais estão relacionadas a forma
-	como o corpo humano faz algo \cite{drovetto}. A Figura
+	impostor \cite{hong}. As características físicas estão relacionadas à
+	composição do corpo humano e seu formato e as comportamentais estão
+	relacionadas à forma como o corpo humano faz algo \cite{drovetto}. A Figura
 	\ref{caracteristicasBiometricas} contém alguns exemplos desses dois tipos
 	diferentes de características biométricas.
 
@@ -25,7 +25,7 @@
 		\item \textbf{universalidade}: qualquer pessoa comum pode ser avaliada sobre essa característica;
 		\item \textbf{singularidade}: dada duas pessoas distintas, elas não podem ter a mesma característica dentro de uma proporção satisfatória;
 		\item \textbf{permanência}: a característica não pode mudar significativamente de acordo com o tempo;
-		\item \textbf{exigibilidade}: pode ser mensurada quantitativamente;
+		\item \textbf{exigibilidade}: pode ser mensurada quantitativamente.
 	\end{enumerate}
 
 	Porém, na prática também são considerados outros requisitos \cite{milene}:
@@ -33,16 +33,17 @@
 	\begin{enumerate}
 		\item \textbf{desempenho}: o processo de identificação deve apresentar um resultado aceitável;
 		\item \textbf{aceitação}: indica em que ponto as pessoas estão dispostas a aceitar o sistema biométrico;
-		\item \textbf{evasão}: refere-se a facilidade de ser adulterado;
+		\item \textbf{evasão}: refere-se a facilidade de ser adulterado.
 	\end{enumerate}
 
 	São várias as vantagens que os sistemas biométricos têm em relação aos sistemas
-	convencionais. Listamos as vantagens principais \cite{drovetto}:
+	convencionais. Dentre elas se destacam \cite{drovetto}:
 		
 	\begin{itemize}
 		\item características biométricas não podem ser perdidas ou esquecidas;
 		\item características biométricas são difíceis de serem copiadas, compartilhadas e distribuídas;
-		\item os sistemas biométricos necessitam que a pessoa esteja presente no local da autenticação;
+		\item os sistemas biométricos necessitam que a pessoa esteja presente no local
+		da autenticação.
 	\end{itemize}
 
 	Na prática um sistema biométrico deve ser capaz de \cite{hong}:
@@ -50,17 +51,21 @@
 	\begin{enumerate}
 		\item atingir uma acurácia aceitável e com uma velocidade razoável;
 		\item não ser prejudicial aos indivíduos e ser aceito pela população alvo;
-		\item ser suficientemente robusto para métodos fraudulentos;
+		\item ser suficientemente robusto para métodos fraudulentos.
 	\end{enumerate}
 
-	Novas técnicas de reconhecimento por meio de face, íris, retina e voz, entre
+	Novas técnicas de reconhecimento por meio da face, íris, retina e voz, entre
 	outras, têm sido abordadas para aplicações em sistemas de reconhecimento
 	automático \cite{bolle,saocarlos}. Das nove características utilizadas
-	atualmente a face é uma das mais populares \cite{milene}. Nas Tabelas~\ref{tab:tabelaRequisitosTeoricos} e~\ref{tabelaRequisitosPraticos} são
-	mostradas as noves características e seus respectivos comportamentos baseados nos requisitos
-	mencionados acima.
+	atualmente a face é uma das mais populares \cite{milene}. Nas
+	Tabelas~\ref{tab:tabelaRequisitosTeoricos} e~\ref{tabelaRequisitosPraticos} são
+	mostradas as noves características e seus respectivos comportamentos baseados
+	nos requisitos mencionados acima. A Tabela~\ref{tab:tabelaRequisitosTeoricos}
+	apresenta os requisitos teóricos necessários para escolha de um determinada
+	característica biometrica. Já a Tabela~\ref{tabelaRequisitosPraticos} apresenta
+	os requisitos praticos que necessitam ser atendidos pelo sistema empregado no
+	reconhecimento da característica.
 		
-	{\small
 	\begin{table}[h]
 		\begin{center}
 			\caption{Requisitos teóricos para algoritmos de reconhecimento facial \cite{milene}.}
@@ -106,8 +111,8 @@
 	
 	\begin{itemize}
 		\item Sistemas de verificação são aqueles que autenticam a identidade
-		dos usuários comparando-os com os próprios \textit{templates}. Eles conduzem uma
-		comparação ``um para um'' e determinam se o usuário é quem realmente diz ser. O
+		dos usuários comparando-os com os próprios \textit{templates}. Eles conduzem
+		uma comparação ``um para um'' e determinam se o usuário é quem realmente diz ser. O
 		maior desafio para esse tipo de sistema é a acurácia. Geralmente, não é muito
 		difícil satisfazer o requisito de tempo de resposta pois somente uma comparação
 		``um para um'' é feita \cite{hong}.
@@ -129,7 +134,7 @@
 	desvantagem está relacionada ao modo de captura da íris que necessita de um
 	alinhamento entre a câmera e os olhos da pessoa~\cite{saocarlos}.
 	
-	Além disso, aquisição da face é feita de forma fácil e não-intrusiva e possui
-	uma baixa privacidade de informação, como a face é exposta constantemente, caso
-	uma base de faces seja roubada, essas informações não representam algum risco e
-	não possibilitam um uso impróprio.
+	Além disso, aquisição da face é feita de forma fácil e não-intrusiva. Por ser
+	constantemente exposta, a face possui baixa privacidade de informação. Caso uma
+	base de faces seja roubada, essas informações não possibilitam seu uso
+	impróprio.
