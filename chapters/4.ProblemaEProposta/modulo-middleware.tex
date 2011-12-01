@@ -2,14 +2,22 @@
 \label{sec:modulo-integracao}
 
 	O Módulo de Integração é responsável pela integração do Sistema TRUE  com o
-	Middleware \textit{uOS}. Os dados providos pelo Sistema TRUE (localização
-	e identificação dos usuários em um ambiente) são informações de
-	contexto relevantes para ambientes inteligentes. O Middleware \textit{uOS} foi
-	escolhido como meio de fornecê-las as diversas aplicações no ambiente. Então,
-	para integrá-los foi desenvolvido um \textit{driver} para o Middleware se comunicar
+	Middleware \textit{uOS}. Através desta integração, os dados providos pelo Sistema TRUE (localização
+	e identificação dos usuários em um ambiente) são disponibilizadas ao ambiente gerenciado pelo middleware \textit{uOS}
+	por meio de serviços. Para integrá-los foi desenvolvido um \textit{driver} para o Middleware se comunicar
 	com o Sistema TRUE. Este \textit{driver} foi nomeado de \textit{UserDriver} cujo diagrama de classe
 	é mostrado na Figura~\ref{fig:userdriver}. A integração foi feita utilizando
 	suporte JNI (\textit{Java Native Interface} - Apêndice~\ref{apend:jni}) uma vez que o Middleware foi desenvolvido em JAVA e o Sistema TRUE em C++.
+
+	% O Módulo de Integração é responsável pela integração do Sistema TRUE  com o
+	% Middleware \textit{uOS}. Os dados providos pelo Sistema TRUE (localização
+	% e identificação dos usuários em um ambiente) são informações de
+	% contexto relevantes para ambientes inteligentes. O Middleware \textit{uOS} foi
+	% escolhido como meio de fornecê-las as diversas aplicações no ambiente. Então,
+	% para integrá-los foi desenvolvido um \textit{driver} para o Middleware se comunicar
+	% com o Sistema TRUE. Este \textit{driver} foi nomeado de \textit{UserDriver} cujo diagrama de classe
+	% é mostrado na Figura~\ref{fig:userdriver}. A integração foi feita utilizando
+	% suporte JNI (\textit{Java Native Interface} - Apêndice~\ref{apend:jni}) uma vez que o Middleware foi desenvolvido em JAVA e o Sistema TRUE em C++.
 
 	\begin{figure}[htb]
 		\begin{center}

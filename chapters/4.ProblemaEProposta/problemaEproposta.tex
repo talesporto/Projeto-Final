@@ -10,7 +10,7 @@
 % essa mono mais rpecisamente apresenta isso .... e acabouse desenvovlendo tres modulos, foram conduzidos tb testes bla bla bla
 
 
-Um ambiente inteligente pode ser composto por uma grande variedade de dispositivos, que fornecem ao ambiente recursos. Para que estes se agreguem as tarefas do usuário, a inteligência presente deve coordená-los de acordo com as informações sobre o ambiente e sobre o usuário~\cite{fabriciobuzzeto}. Portanto, informações como posição do usuário e sua respectiva identidade são de grande valia para tornar possível a interação entre o usuário e os recursos presentes. Além disso, informações como estas ainda não são capturadas em ambientes inteligentes gerenciados pelo Middleware \textit{uOS}, apresentado na Seção~\ref{uos}. Atualmente, a maioria das soluções encontradas para fornecer esse tipo de informação foram projetadas para funcionar em ambientes rigidamente definidos. Com isso, não seria adequado tentar incorporar soluções como estas em um ambiente com diferentes dimensões, condições de iluminação, posição dos móveis, diferentes sensores pois este resultaria em um cenário diferente.
+Um ambiente inteligente pode ser composto por uma grande variedade de dispositivos, que fornecem ao ambiente recursos. Para que estes se agreguem as tarefas do usuário, a inteligência presente deve coordená-los de acordo com as informações sobre o ambiente e sobre o usuário~\cite{fabriciobuzzeto}. Portanto, informações como posição do usuário e sua respectiva identidade são de grande valia para tornar possível a interação entre o usuário e os recursos presentes. Além disso, informações como estas ainda não são obtidas em ambientes inteligentes gerenciados pelo Middleware \textit{uOS}, apresentado na Seção~\ref{uos}. Atualmente, a maioria das soluções encontradas para fornecer esse tipo de informação foram projetadas para funcionar em ambientes rigidamente definidos. Com isso, não seria adequado tentar incorporar soluções como estas em um ambiente com diferentes dimensões, condições de iluminação, posição dos móveis, diferentes sensores pois este resultaria em um cenário diferente.
 
 Esse trabalho propõe um sistema aberto de rastreamento, localização e identificação de pessoas em ambientes inteligentes gerenciados middleware \textit{uOS}. Tal sistema é chamado de TRUE, \textit{\textbf{T}racking and \textbf{R}ecognizing \textbf{U}sers in the \textbf{E}nvironment}. Ele consiste na primeira tentativa de se trazer informações de contexto contendo perfis e posições dos usuários para o middleware \textit{uOS}.
 
@@ -42,7 +42,7 @@ Basicamente, o Módulo de Rastreamento obtém o dados do sensor \textit{Kinect} 
 			\label{fig:relacao-modulos}
 		\end{figure}
 
-A seguir serão apresentados em detalhes cada um dos módulos aqui mensionados.
+A seguir serão apresentados em detalhes cada um dos módulos aqui mensionados. Além disso, na Seção~\ref{uos} será apresentada uma visão mais detalhada do middleware \textit{uOS}.
 
 % O Módulo de Registro é independente dos demais. Já o, os outros dois módulos devem trocar informações entre si para centralizar todas as informações (localização e reconhecimento) de todos usuários rastreados no ambiente. A seguir, é explicado mais detalhadamente cada módulo e como tal troca de informações ocorre.
 
