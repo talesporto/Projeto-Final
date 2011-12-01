@@ -1,13 +1,23 @@
 \chapter{Conclusões}
 \label{cap:conclusao}
 
-O trabalho teve como objetivo a implementação de um sistema que utiliza o sensor \textit{Kinect} e tem como requisitos alvo o rastreamento dos usuários no ambiente, a localização e identificação dos usuários rastreados e prover tais informações ao Middleware \textit{uOS}.
+
+% O objeto de estudo eh o uos exolica. tendo em vista que o uos nao possui
+
+% pouco de impl
+
+Dentre as diversas informações de contexto que podem ser obtidas em ambientes inteligentes, as informações que contém as identidades e as posições dos usuários são fundamentais para que o ambiente possa tomar decisões em prol dos usuários de modo a realmente se tornar inteligente. A obtenção dessas informações já é objeto de pesquisa, porém a maioria das soluções encontradas foram projetadas para funcionar em ambientes rigidamente definidos. Com isso, não seria adequado tentar incorporar soluções como estas em um ambiente com diferentes dimensões, condições de iluminação, posição dos móveis, diferentes sensores pois este resultaria em um cenário diferente.
+
+O objeto de estudo deste trabalho é o middleware \textit{uOS}. Ele é uma implementação de um middleware para auxílio de aplicações para ambiente de computação ubíquoa, cuja proposta é compatível com os conceitos apresentados pela \textit{DSOA} (\textit{Device Service Oriented Architecture})~\cite{fabriciobuzzeto}. O foco do \textit{uOS} está na adaptabilidade de serviços em um ambiente de computação ubíqua, de modo que os serviços dos dispositivos presentes no ambiente possam ser oferecidos e compartilhados.
+
+Tendo em vista que o middleware \textit{uOS} ainda não obtém informações de identidades e localizações dos usuários no ambiente, este
+trabalho propõe a implementação de um sistema de rastreamento, localização e reconhecimento que disponibiliza estas informações ao \textit{uOS}. Este Sistema é chamado de Sistema TRUE (\textit{\textbf{T}racking and \textbf{R}ecognizing \textbf{U}sers in the \textbf{E}nvironment}) que utiliza o sensor \textit{Kinect} como dispositivo de entrada.
 
 O rastreamento é fundamental para o funcionamento correto do Sistema TRUE. Ele é responsável por detectar e rastrear os usuários servindo como base para que novas informações possam ser obtidas. O Sistema TRUE se mostrou eficaz na detecção de novos usuários que são detectados antes mesmo de entrarem por completo no campo de visão e se revelou robusto em casos de oclusões parciais. Contudo, casos de oclusões totais prejudicam a eficácia do sistema. Além disso, o campo de visão se mostrou limitado rastreando no máximo 5 pessoas simultâneamente à uma distância máxima de 4,057 metros.
 
 O Sistema TRUE estimava a posição dos usuários por meio de coordenadas em relação ao sensor \textit{Kinect}. Portanto, fixando a posição do sensor é possível obter a localização física dos usuários no ambiente. As coordenadas obtidas se mostraram bem precisas e confiáveis apresentando erros de poucos centímetros que aumentam juntamente com a distância entre o usuário e o sensor. 
 
-% iden
+Para identificar os usuários no ambiente, o Sistema TRUE realiza reconhecimento facial dos usuários através de imagens de cor de suas faces. Os testes realizados mostraram que a estratégia utilizada no cadastro dos usuários tem grande impacto nos resultados do reconhecimento. Utilizando-se várias imagens em difrentes ângulos, com diferentes poses e expressões faciais no cadastro de cada usuário, obtem-se melhores resultados. Ainda assim, a variação de pose e ângulo das faces obtidas dos usuários no ambiente prejudicam o reconhecimento facial implementado no Sistema TRUE.
 
 \section{Trabalhos Futuros}
 
