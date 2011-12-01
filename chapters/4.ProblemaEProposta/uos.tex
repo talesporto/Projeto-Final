@@ -24,7 +24,12 @@
 
 	A camada de Rede contém os módulos: RADAR e \textit{Connection Manager}. O RADAR descobre os dispositivos do ambiente por meio de varreduras e o \textit{Connection Manager} gerencia conexões entre dispositivos com a mesma tecnologia de comunicação. Na camada de Conectividade, a comunicação entre dispositivos com diferentes tecnologias é obtida com a utilização de um Proxy. Por fim, a camada de Adaptabilidade contém um módulo chamado \textit{Adaptability Engine}, que faz a intermediação entre as aplicações e os \textit{drivers} com o objetivo de selecionar o serviço mais apropriado para determinada aplicação. A camada de Adaptabilidade também contém o módulo \textit{Application Deployer}, que permite a inclusão e exclusão de aplicações por meio das operações de \textit{Deploy} e \textit{Undeploy}.
 
-	A integração do Sistema TRUE com o middleware \textit{uOS} foi realizada na Camada de Adaptabilidade através da implementação de um \textit{driver} de ``usuário''. Este \textit{driver} se comunica com o Sistema TRUE disponibilizando as informações colhidas pelo sistema as aplicações no ambiente por meio de serviços. Esta integração será apresentada em detalhes na Seção~\ref{sec:modulo-integracao}.
+	A integração do Sistema TRUE com o middleware \textit{uOS} foi realizada na
+	Camada de Adaptabilidade através da implementação de um \textit{driver} de
+	``usuário''. Este \textit{driver} se comunica com o Sistema TRUE
+	disponibilizando serviços as aplicações para que as mesmas possam trocar
+	informações. Esta integração será apresentada em detalhes na
+	Seção~\ref{sec:modulo-integracao}.
 
 	% O \textit{UbiquitOS} é uma implementação de um middleware para auxílio de aplicações para ambiente de computação ubíquoa, cuja proposta é compatível com os conceitos apresentados pela \textit{DSOA} (\textit{Device Service Oriented Architecture})~\cite{fabriciobuzzeto}. Este é visto como um componente de auxílio para desenvolvimento de drivers de recurso, aplicações e \textit{plugins} de rede a serem utilizados em ambientes ubíquos~\cite{fabriciobuzzeto}.
 
