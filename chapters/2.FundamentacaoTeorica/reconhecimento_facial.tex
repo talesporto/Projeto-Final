@@ -189,7 +189,6 @@
 	
 	O Método \textit{Viola-Jones}~\cite{servodetection,violajones,edsonma} para
 	detecção facial utiliza quatro conceitos chaves descritos a seguir:
-	%Figura~\ref{fig:edsonma}:
 		
 	\begin{enumerate}
 		\item \textbf{Características \textit{Haar} básicas:} simples características
@@ -215,6 +214,14 @@
 		forte;
 	\end{enumerate}
 
+	A Figura~\ref{fig:edsonma} exemplifica como os conceitos acima se relacionam.
+	O diagrama se inicia computando as características, sendo essas as
+	\textit{haar} básicas. Para computa-las a imagem integral é usada. Os
+	algoritmos \textit{AdaBoost} são usados para aprendizado dentro dos
+	classificadores fracos. E por fim os classificadoes em cascatas fecham a
+	detecção.
+%Figura~\ref{fig:edsonma}:
+
 	\begin{figure}[H]
 		\begin{center}
 			\includegraphics[scale=0.5]{figuras/2.FundamentacaoTeorica/edsonma.png}
@@ -231,11 +238,11 @@
 		\label{haarfeatures}
 	\end{figure}
 
-	A detecção facial em imagens é baseada em simples características retangulares,
-	exemplificada na Figura~\ref{haarfeatures}. Existem inúmeros motivos para se
-	usar as características retangulares, sendo que uma das principais é que
-	sistemas baseados em características são muito mais rápidos que sistemas baseados em
-	\textit{pixels}~\cite{violajones}.
+	Existem inúmeros motivos para se usar as características retangulares, sendo
+	que um dos principais é que sistemas baseados em características são muito
+	mais rápidos que sistemas baseados em \textit{pixels}~\cite{violajones}.
+	A detecção facial em imagens, baseada em simples características retangulares,
+	é exemplificada na Figura~\ref{haarfeatures}. 
 
 	\begin{figure}[H]
 		\begin{center}
@@ -423,8 +430,8 @@
 
 	A distância Euclidiana é simples e fácil de implementar mas estudos mostram que
 	é possível obter melhores resultados utilizando uma outra distância, conhecida
-	como Mahalanobis. Essa distância, usada bastante na estatística, é útil para
-	determinar a similaridade de uma amostra desconhecida de uma conhecida. Ao
+	como Mahalanobis. Essa distância, utilizada bastante na estatística, é útil
+	para determinar a similaridade de uma amostra desconhecida de uma conhecida. Ao
 	contrário da distância Euclidiana, a Mahalanobis correlaciona todos os pontos de
 	modo a detectar melhor os padrões existentes. O calculo é feito através da
 	Equação~\ref{eq:distancia-mahalanobis} onde
