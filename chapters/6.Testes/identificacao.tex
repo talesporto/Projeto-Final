@@ -12,7 +12,18 @@
 
 	A taxa de verdadeiro positivo representa a média de acertos do sistema ao identificar os usuários. A taxa de verdadeiro negativo representa a média de erros que houveram ao se reconhecer equivocadamente um usuário como outro. A taxa de falso negativo representa a média de erros que houveram quando um usuário cadastro não foi reconhecido e considerado como ``desconhecido''.
 
-	Os cenários de teste utilizados para se averiguar a precisão do reconhecimento facial consistiram de duas etapas. Na primeira etapa cada usuário foi cadastrado na base de dados de acordo seguindo uma estratégia distinta. A esta base de dados foram adicionadas os dados das 40 pessoas presentes no banco de faces da Universidade de Cambridge~\cite{cambridgeFaceDb}. Na segunda etapa cada usuário, individualmente, foi posicionado dentro do campo de visão do sensor onde foram coletados os resultados dos primeiros 20 valores retornados pelo sistema. Primeiramente foi construído um cenário de testes que não apresentou resultados satisfatórios, com isto foi construído um segundo cenário de teste com uma nova abordagem para a coleta de faces (1ª etapa).
+% TODO :voltar aqui
+
+Os cenários de teste utilizados para se averiguar a precisão do reconhecimento
+facial consistiram de duas etapas. 
+Na primeira etapa cada usuário foi cadastrado
+na base de dados utilizando estratégias distintas para cada cenário. A esta
+base de dados foram adicionadas os dados das 40 pessoas presentes no banco de faces da Universidade de Cambridge~\cite{cambridgeFaceDb}. Na segunda etapa cada usuário,
+individualmente, foi posicionado dentro do campo de visão do sensor onde foram
+coletados os resultados dos primeiros 20 valores retornados pelo sistema.
+Primeiramente foi construído um cenário de testes que não apresentou resultados
+satisfatórios, com isto foi construído um segundo cenário de teste com uma nova
+abordagem para a coleta de faces (1ª etapa).
 
 	% Foram realizados dois conjuntos de testes para avaliar a precisão do reconhecimento facial implementado no Sistema TRUE. Os cenários desses testes foram compostos por usuários previamente cadastrados, além das 40 pessoas cadastradas no banco de faces da Universidade de Cambridge~\cite{cambridgeFaceDb}. No primeiro conjunto de testes foram previamente cadastrados 11 usuários e no segundo 10 usuários. Nesses testes, cada usuário se posicionou em frente ao \textit{Kinect}, com o rosto na posição frontal em relação ao sensor. Com isso, o sistema realizou o processo de reconhecimento facial 20 vezes para cada usuário. Os dois conjuntos de testes foram necessários tendo em vista que os resultados do primeiro não foram satisfatórios. A diferença entre ambos está na estratégia utilizada no cadastro dos usuários no sistema. 
 

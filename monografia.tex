@@ -1,10 +1,12 @@
 \documentclass[bacharelado]{unb-cic}
 \usepackage[american,brazil]{babel}
+\usepackage[brazil]{translator}
 \usepackage[T1]{fontenc}
 \usepackage{indentfirst}
 \usepackage{natbib}
 \usepackage{xcolor,graphicx,url}
 \usepackage[utf8]{inputenc}
+\usepackage[latin1]{inputenc}
 \usepackage{float}
 \usepackage{subfig}
 \usepackage{listings}
@@ -16,8 +18,8 @@
 \bibpunct[; ]{(}{)}{,}{a}{}{;}%muda colchetes para parênteses
 
 % definições prévias do documento
-% \title{TRUE - um sistema de rastreamento, localização e identificação de usuários em ambientes inteligentes}
-\title{TRUE: Tracking and Recognizing Users in the Environment}
+\title{TRUE: um sistema para rastreamento, localização e identificação de usuários em ambientes inteligentes}
+% \title{TRUE: Tracking and Recognizing Users in the Environment}
 
 \orientador{\prof \dr Carla Denise Castanho}{CIC/UnB}
 \coorientador{Fabricio Nogueira Buzeto}{CIC/UnB}
@@ -69,19 +71,17 @@ morecomment={[l][{\color{verde}}]{//}},
 keywordstyle=[1]\color{vermelho},
 }
 
-\input{separacaoSilabica}
+% \input{separacaoSilabica}
 
 \begin{document}
 
 \maketitle
 \pretextual
 \begin{dedicatoria}
-	Dedico a....
+	Dedicamos este trabalho aos nossos pais, amigos, professores e namoradas, que nos apoiaram desde o início do projeto.
 \end{dedicatoria}
 
-\begin{agradecimentos}
-	Agradeço a....
-\end{agradecimentos}
+\input{chapters/1.Introducao/agradecimentos}
 
 % \begin{resumo}
 % 	A ciência...
@@ -102,6 +102,7 @@ keywordstyle=[1]\color{vermelho},
 \listoftables
 
 \textual
+
 
 \input{chapters/1.Introducao/introducao}
 \input{chapters/2.FundamentacaoTeorica/fundamentacao_teorica}
