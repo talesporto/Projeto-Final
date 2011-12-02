@@ -26,7 +26,9 @@ serviços dos dispositivos presentes no ambiente possam ser oferecidos e
 compartilhados.
 
 Tendo em vista que o middleware \textit{uOS} ainda não obtém informações de identidades e localizações dos usuários no ambiente, este
-trabalho propõe a implementação de um sistema de rastreamento, localização e reconhecimento que disponibiliza estas informações ao \textit{uOS}. Este Sistema é chamado de Sistema TRUE (\textit{\textbf{T}racking and \textbf{R}ecognizing \textbf{U}sers in the \textbf{E}nvironment}) que utiliza o sensor \textit{Kinect} como dispositivo de entrada.
+trabalho propõe a implementação de um sistema de rastreamento, localização e reconhecimento que disponibiliza estas informações ao \textit{uOS}. Este Sistema é chamado de Sistema TRUE (\textit{\textbf{T}racking and \textbf{R}ecognizing \textbf{U}sers in the \textbf{E}nvironment}) que utiliza o sensor \textit{Kinect} como dispositivo de entrada. 
+
+A implementação do Sistema TRUE foi dividida em  quatro módulos: Rastreamento, Reconhecimento, Registro e Integração. O Módulo de Rastreamento é responsável pelo rastreamento e localização dos usuários no ambiente. O Módulo de Reconhecimento é responsável por identificar os usuários rastreados. Por sua vez, o Módulo de Registro é responsável pelo cadastro de novos usuários e treino do sistema e o Módulo de Integração é responsável pela integração e comunicação do sistema com o Middleware \textit{uOS}.
 
 O rastreamento é fundamental para o funcionamento correto do Sistema TRUE. Ele é responsável por detectar e rastrear os usuários servindo como base para que novas informações possam ser obtidas. O Sistema TRUE se mostrou eficaz na detecção de novos usuários que são detectados antes mesmo de entrarem por completo no campo de visão e se revelou robusto em casos de oclusões parciais. Contudo, casos de oclusões totais prejudicam a eficácia do sistema. Além disso, o campo de visão se mostrou limitado rastreando no máximo 5 pessoas simultâneamente à uma distância máxima de 4,057 metros.
 
@@ -41,9 +43,11 @@ cada usuário, obtém-se melhores resultados. Ainda assim, a variação de pose 
 ângulo das faces obtidas dos usuários no ambiente prejudicam o reconhecimento
 facial implementado no Sistema TRUE.
 
+O Sistema TRUE, como mencionado, foi uma primeira iniciativa de disponbilizar as identidades e localizações dos usuários ao middleware \textit{uOS}. O sistema como um todo funcionou de forma satisfatória, disponibilizando as informações de contexto dos usuários através de serviços e eventos no middleware \textit{uOS} em tempo real. A aplicação \textit{UserApp} demonstrou a utilização desses serviços e eventos consumindo as informações dos usuários.
+
 \section{Trabalhos Futuros}
 
-Era esperado ao término deste trabalho que o sistema rastreasse, identificasse e localizasse os usuários no ambiente inteligente. No entanto, foi mostrado que há limitações referentes ao rastreamento e identificação. Dada a implementação do Sistema TRUE e suas funcionaldiades da forma que foi definida, os próximos passos seriam:
+O Sistema TRUE possui algumas limitações referentes ao rastreamento e identificação já mencionadas. Os próximos passos em relação ao sistema seriam:
 
 \begin{itemize}
 	\item ampliação do número de sensores \textit{Kinect} utilizados pelo sistema para que se torne mais robusto aos problemas causados pela oclusão e pelo campo de visão limitado.
