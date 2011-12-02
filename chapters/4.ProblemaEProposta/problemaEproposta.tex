@@ -21,7 +21,7 @@ Esse trabalho propõe um sistema aberto de rastreamento, localização e identif
 
 % Esse trabalho propõe, então, um sistema aberto de rastreamento, localização e identificação de pessoas em um ambiente inteligente integrado com o middleware \textit{uOS}. Tal sistema é chamado de TRUE, \textit{\textbf{T}racking and \textbf{R}ecognizing \textbf{U}sers in the \textbf{E}nvironment}.
 
-O Sistema TRUE é um sistema monomodal implementado em C++ que utiliza somente dados visuais, como imagens de cor e profundidade. As imagens de profundidade são utilizadas no rastreamento e localização dos usuários no ambiente, enquanto que as imagens de cor são utilizadas no reconhecimento facial e no cadastro dos usuários. Assim, o dispositivo de coleta de imagens presentes no ambiente deve ser capaz de fornecê-las a um taxa e qualidade adequadas. Para tanto, o sistema utiliza o sensor \textit{Kinect} da marca Microsoft descrito no Apêndice~\ref{sec:kinect}. O \textit{Kinect} é um dispositivo bastante acessível de custo aproxidamente \$150,00 e capaz de fornecer imagens de cor e de profundidade sincronizadas.
+O Sistema TRUE é um sistema monomodal implementado em C++ que utiliza somente dados visuais, como imagens de cor e profundidade. As imagens de profundidade são utilizadas no rastreamento e localização dos usuários no ambiente, enquanto que as imagens de cor são utilizadas no reconhecimento facial e no cadastro dos usuários. Assim, o dispositivo de coleta de imagens presentes no ambiente deve ser capaz de fornecê-las a um taxa e qualidade adequadas. Para tanto, o sistema utiliza o sensor \textit{Kinect} da marca Microsoft descrito no Apêndice~\ref{sec:kinect}. O \textit{Kinect} é um dispositivo bastante acessível de custo aproximadamente \$150,00 e capaz de fornecer imagens de cor e de profundidade sincronizadas.
 
 O Sistema TRUE é dividido em quatro módulos principais:
 
@@ -42,7 +42,7 @@ Basicamente, o Módulo de Rastreamento obtém o dados do sensor \textit{Kinect} 
 			\label{fig:relacao-modulos}
 		\end{figure}
 
-A seguir serão apresentados em detalhes cada um dos módulos aqui mensionados. Além disso, na Seção~\ref{uos} será apresentada uma visão mais detalhada do middleware \textit{uOS}.
+A seguir serão apresentados em detalhes cada um dos módulos aqui mencionados. Além disso, na Seção~\ref{uos} será apresentada uma visão mais detalhada do middleware \textit{uOS}.
 
 % O Módulo de Registro é independente dos demais. Já o, os outros dois módulos devem trocar informações entre si para centralizar todas as informações (localização e reconhecimento) de todos usuários rastreados no ambiente. A seguir, é explicado mais detalhadamente cada módulo e como tal troca de informações ocorre.
 

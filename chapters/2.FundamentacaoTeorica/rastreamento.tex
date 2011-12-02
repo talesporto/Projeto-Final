@@ -19,7 +19,7 @@
 			\item necessidade de processamento em tempo-real.
 		\end{enumerate}
 
-	Algumas dessas dificuldades podem ser superadas com a utilização de imagens de profundidade ao invés de imagens de cor ou intensidade. As imagens de profundidade, além de serem muito pouco sensíveis às variações de iluminação, fornecem um conhecimento direto da estrutura da cena, que pode ser utilizada para simplificar as tarefas de rastreamento. Além disso, as câmeras que obtêm imagens de profundidade estão comercialmente disponíveis a preços acessíveís~\cite{nikos}.
+	Algumas dessas dificuldades podem ser superadas com a utilização de imagens de profundidade ao invés de imagens de cor ou intensidade. As imagens de profundidade, além de serem muito pouco sensíveis às variações de iluminação, fornecem um conhecimento direto da estrutura da cena, que pode ser utilizada para simplificar as tarefas de rastreamento. Além disso, as câmeras que obtêm imagens de profundidade estão comercialmente disponíveis a preços acessíveis~\cite{nikos}.
 
 	Basicamente, as abordagens para rastreamento de objetos se diferem na forma que tratam as seguintes perguntas~\cite{yilmaz}: 
 		
@@ -41,7 +41,7 @@
 
 		\begin{enumerate}
 			\item Detecção do objeto;
-			\item Rastreamento do objeto detectado;
+			\item Rastreamento do objeto detectado.
 		\end{enumerate}
 
 	Antes de detalhar cada uma dessas etapas e os métodos existentes, serão apresentados os modos de representação das entidades rastreadas bem como as características presentes nas imagens que podem ser utilizadas para rastreamento.
@@ -57,12 +57,12 @@
 		\begin{center}
 			\includegraphics[scale=0.5]{figuras/2.FundamentacaoTeorica/representacao.png}
 		\end{center}
-		\caption{Representações de entidades rastreadas. (a) Centróide, (b) múltiplos pontos, (c) representação retangular, (d) representação elíptica, (e) representação de múltiplas partes, (f) esqueleto, (g) contorno por pontos,(h) contorno completo, (i) silhueta~\cite{yilmaz}}
+		\caption{Representações de entidades rastreadas. (a) Centroide, (b) múltiplos pontos, (c) representação retangular, (d) representação elíptica, (e) representação de múltiplas partes, (f) esqueleto, (g) contorno por pontos,(h) contorno completo, (i) silhueta~\cite{yilmaz}}
 		\label{representacao}
 	\end{figure}
 
 	\begin{itemize}
-		\item \textbf{Pontos:} a entidade é representada por um ponto, como por exemplo a centróide (Figura \ref{representacao}(a)), ou por vários pontos (Figura \ref{representacao}(b)). Essa representação é mais indicada para rastreamento de entidades que ocupam uma pequena região na imagem~\cite{yilmaz};
+		\item \textbf{Pontos:} a entidade é representada por um ponto, como por exemplo a centroide (Figura \ref{representacao}(a)), ou por vários pontos (Figura \ref{representacao}(b)). Essa representação é mais indicada para rastreamento de entidades que ocupam uma pequena região na imagem~\cite{yilmaz};
 
 		\item \textbf{Formas geométricas primitivas:} a entidade é representada por formas geométricas simples como um retângulo ou uma elipse, como mostrados nas Figuras \ref{representacao}(c) e (d)~\cite{comaniciu}. Essa representação é mais indicada para entidades simples rígidas~\cite{yilmaz};
 
@@ -73,7 +73,7 @@
 		\item \textbf{Modelos de esqueletos:} modelos de esqueletos são extraídos da entidade rastreada, como mostrado na Figura \ref{representacao}(f). Essa representação pode ser utilizada tanto para entidades articuladas rígidas quanto para não rígidas~\cite{yilmaz};
 	\end{itemize}
 
-	Para rastreamento de pessoas a representação por meio de contorno ou silhuetas são as mais apropriados~\cite{yilmaz}.
+	Para rastreamento de pessoas a representação por meio de contorno ou silhuetas são as mais apropriadas~\cite{yilmaz}.
 
 	Observa-se que o rastreamento de várias pessoas de maneira simultânea é considerada uma tarefa complexa. As representações das pessoas rastreadas podem se dividir ou fundir em novas representações devido a possíveis oclusões ou ruídos na imagem. Além disso, a aparência do objeto pode variar devido a sombras e mudanças da iluminação~\cite{moeslund}.
 

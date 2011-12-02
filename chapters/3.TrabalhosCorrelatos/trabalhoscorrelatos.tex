@@ -18,7 +18,7 @@ A seguir é apresentada uma descrição dos projetos analisados que focam em sol
 
 O Projeto CHIL (\textit{Computers in the Human Interaction Loop})~\cite{chil, computerschil} envolve uma rede de quinze laboratórios internacionais de pesquisa acadêmica e industrial. Eles colaboram entre si conduzindo pesquisas que tem por objetivo auxiliar a pessoas de forma proativa durante suas atividades diárias no ambiente de trabalho. Em especial, o projeto foca no desenvolvimento de sistemas que auxiliam as interações entre grupos de pessoas como, por exemplo, sistemas que facilitam a colaboração em reuniões e em salas de palestras. Dentre os protótipos que foram desenvolvidos no projeto destacam-se um ambiente de trabalho perceptivo e colaborativo e um sistema perceptivo de apoio a um escritório virtual.
 
-Este projeto utiliza informações obitidas de diferentes algoritmos monomodais para criar um sistema de rastreamento e identificação multimodal a partir de dados audiovisuais das pessoas no ambiente. Apesar do foco desta monografia ser identificação, rastreamento e localização utilizando imagens, vale salientar que o Projeto CHIL representa uma das primeiras tentativas de realizar e avaliar sistematicamente rastreamento acústico com uma rede distribuída de microfones. Os relatos a seguir se concentram somente nas investigações que utilizam dados visuais (imagens) para rastreamento e identificação. 
+Este projeto utiliza informações obtidas de diferentes algoritmos monomodais para criar um sistema de rastreamento e identificação multimodal a partir de dados audiovisuais das pessoas no ambiente. Apesar do foco desta monografia ser identificação, rastreamento e localização utilizando imagens, vale salientar que o Projeto CHIL representa uma das primeiras tentativas de realizar e avaliar sistematicamente rastreamento acústico com uma rede distribuída de microfones. Os relatos a seguir se concentram somente nas investigações que utilizam dados visuais (imagens) para rastreamento e identificação. 
 % Referente a localização das pessoas no ambiente, o projeto focou somente na localização das pessoas que ``falam''~\cite{speaker-localization}.
 
 \subsection{Rastreamento de pessoas}
@@ -33,7 +33,7 @@ Os sensores utilizados no ambiente inteligente do Projeto CHIL incluem:
 		\item um microfone de Mark III de 64 canais.
 	\end{itemize}
 
-Esperava-se que essa grande quantidade de sensores disponíveis fôsse uma vantagem, tendo em vista a alta redundância nas informações capturadas e boa cobertura do ambiente minimizando assim problemas como oclusão. Entretanto, foi relatado que tal redundância se tornou um grande desafio, pois surgiram problemas relativos à sincronização dos dados, transferência de processamento distribuído, fusão de espaço-temporal, entre outros.
+Esperava-se que essa grande quantidade de sensores disponíveis fosse uma vantagem, tendo em vista a alta redundância nas informações capturadas e boa cobertura do ambiente minimizando assim problemas como oclusão. Entretanto, foi relatado que tal redundância se tornou um grande desafio, pois surgiram problemas relativos à sincronização dos dados, transferência de processamento distribuído, fusão de espaço-temporal, entre outros.
 
 Inicialmente, os sistemas do Projeto CHIL eram de uma única modalidade com inicialização manual, utilizando recursos simples e rastreamento de no máximo uma pessoa. Estes sistemas evoluíram para um sistema totalmente automático, com auto-inicialização, em tempo real, utilizando uma combinação de recursos capaz de rastrear alvos múltiplos.
 
@@ -63,7 +63,7 @@ Para a identificação de pessoas, o Projeto CHIL elegeu o reconhecimento facial
 
 % A equipe do Projeto CHIL desenvolveu sistemas de reconhecimento facial tendo em vista que a face é uma característica biométrica que permite uma identificação de forma natural e implícita, conforme mencionado na Seção~\ref{sec:biometria}. 
 
-Na tentativa de realizar o reconhecimento facial das pessoas presentes no ambiente inteligente, vários desafios foram encontrados no Projeto CHIL, como: grande variação da iluminação, sensores com baixa resolução, oclusão visual. Além disso dependendo da localização e distância dos sensores da pessoa a ser identificada os dados recebidos podem variar. Foi observado, também, que o fato das pessoas possuírem diferentes expressões faciais, diferentes cortes de cabelo, maquiagem, entre outros, dificultava ainda mais a tarefa. Entretando, apesar de todos esses desafios, foi notado que o reconhecimento facial podia ser realizado de forma robusta utilizando múltiplos sensores no ambiente.
+Na tentativa de realizar o reconhecimento facial das pessoas presentes no ambiente inteligente, vários desafios foram encontrados no Projeto CHIL, como: grande variação da iluminação, sensores com baixa resolução, oclusão visual. Além disso dependendo da localização e distância dos sensores da pessoa a ser identificada os dados recebidos podem variar. Foi observado, também, que o fato das pessoas possuírem diferentes expressões faciais, diferentes cortes de cabelo, maquiagem, entre outros, dificultava ainda mais a tarefa. Entretanto, apesar de todos esses desafios, foi notado que o reconhecimento facial podia ser realizado de forma robusta utilizando múltiplos sensores no ambiente.
 
 O sistema de identificação do Projeto CHIL utiliza sequências de imagens fornecidas pelas várias câmeras no ambiente inteligente. A cada $\displaysyle 200ms$ imagens das caixas delimitadoras das faces \footnote{Caixas delimitadoras são uma maneira de apontar a localização da face na imagem por meio de um enquadramento.} e posições dos centros dos olhos são extraídas. O canto inferior direito da Figura~\ref{chilImage} exemplifica a imagem da face extraída de uma pessoa no ambiente.
 
@@ -206,7 +206,7 @@ O rastreamento é feito utilizando subtração do fundo com remoção de sombras
 
 Os resultados do rastreamento são utilizados para controlar o reconhecimento facial. As imagens obtidas do rastreamento são processadas utilizando um método de segmentação de tom de pele e são recortadas para obter as imagens com possíveis faces. 
 
-Essas imagens, então, são classificadas para rejeitar as imagens sem faces. Para essa classificação é utilizado o método \textit{Eigenfaces}. Este último também é utilizado para realizar o reconhecimento facial utilizando a classificação do ``vizinho'' mais príximo.
+Essas imagens, então, são classificadas para rejeitar as imagens sem faces. Para essa classificação é utilizado o método \textit{Eigenfaces}. Este último também é utilizado para realizar o reconhecimento facial utilizando a classificação do ``vizinho'' mais próximo.
 
 O treinamento do algoritmo \textit{Eigenfaces} implementado é feito utilizando um banco com $\displaystyle 200$ imagens de faces de várias pessoas diferentes.
 

@@ -4,12 +4,12 @@
 JNI (\textit{Java Native Interface}) é uma \textit{framework} que permite que
 aplicações em Java possam chamar e serem chamadas por aplicações nativas e
 bibliotecas escritas em outras linguagem tal como C, C++ e Assembly.
-O propósito dessa abordagem é oferecer a possibilidade de que programadores
+O propósito desta ferramenta é oferecer a possibilidade de que programadores
 possam implementar funcionalidades não disponibilizadas pela API padrão do Java
 ou até mesmo melhorar as já implementadas seja por questão de desempenho,
 segurança ou outros.
 
-Para implementar os metodos nativos basta criar uma função com a estrutura
+A implementação de métodos nativos exige a a criação de uma função seguindo a estrutura
 \ref{list:estruturaJNI}. Quando a JVM executar o metodo ela invocará a função
 definida e passará os parametros conforme o esperado \cite{jniDoc}. 
 
@@ -21,9 +21,12 @@ definida e passará os parametros conforme o esperado \cite{jniDoc}.
 	
 \section{HelloWorld}
 
-	Para criar o primeiro programa utilizando a JNI basta criar os arquivos
-	\ref{list:helloWorldJava}, \ref{list:helloWorldH},
-	\ref{list:helloWorldC} e \ref{list:make} e no console executar \cite{jniDoc}:
+	Os arquivos \ref{list:helloWorldJava}, \ref{list:helloWorldH},
+	\ref{list:helloWorldC} e \ref{list:make} exemplificam os fontes envolvidos na criação de uma aplicação utilizando JNI. De posse destes arquivos a execução do comando a seguir finaliza o processo \cite{jniDoc}.
+
+	% Para criar o primeiro programa utilizando a JNI basta criar os arquivos
+	% \ref{list:helloWorldJava}, \ref{list:helloWorldH},
+	% \ref{list:helloWorldC} e \ref{list:make} e no console executar \cite{jniDoc}:
 	
 	\textit{chmod +x make.sh}
 	

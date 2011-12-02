@@ -74,7 +74,7 @@
 		O processo de básico de detecção de faces no Sistema TRUE possui as seguintes etapas:
 
 		\begin{enumerate}
-			\item Leitura de um classificador treinado para detectar faces em uma image.
+			\item Leitura de um classificador treinado para detectar faces em uma imagem.
 			\item Obtenção da imagem de entrada (esta imagem é composta somente pelo usuário e esta na escala de cinza).
 			\item Detecção da face na imagem utilizando o classificador.
 			\item Retorno da região da face detectada ou retorno ``vazio'' caso nenhuma face tenha sido encontrada. Observa-se que existe no máximo uma face na imagem, pois contém somente um usuário.
@@ -96,7 +96,7 @@
 
 		% A Figura~\ref{fig:diagrama-reconhecimento} mostra o fluxo básico do processo de reconhecimento facial no Sistema TRUE.
 
-		Antes de realizar o processo de recohecimento facial propriamente dito, a imagem da face do usuário a ser reconhecida, obtida no processo de detecção facial, é processada (a imagem é recortada, redimensionada e equalizada). O reconhecimento facial inicia-se projetando a imagem no subespaço através do método PCA (\textit{Principal Component Analisys} - Análise de Componente Principal) que reduz sua dimensionalidade. Então, calcula-se a distância da imagem projetada a cada um do \textit{eigenfaces} obtidos na etapa de treinamento (esta etapa será descrita posteriormente) obtendo uma lista de distâncias. Esta lista de distâncias é comparada com as lista de distâncias de cada usuário, também obtidas na etapa de treinamento, obtendo o usuário cuja lista de distâncias é a mais similar. Então, a confiança do reconhecimento é calculada. A Figura~\ref{fig:diagrama-reconhecimento} ilustra estas etapas descritas.
+		Antes de realizar o processo de reconhecimento facial propriamente dito, a imagem da face do usuário a ser reconhecida, obtida no processo de detecção facial, é processada (a imagem é recortada, redimensionada e equalizada). O reconhecimento facial inicia-se projetando a imagem no subespaço através do método PCA (\textit{Principal Component Analisys} - Análise de Componente Principal) que reduz sua dimensionalidade. Então, calcula-se a distância da imagem projetada a cada um do \textit{eigenfaces} obtidos na etapa de treinamento (esta etapa será descrita posteriormente) obtendo uma lista de distâncias. Esta lista de distâncias é comparada com as lista de distâncias de cada usuário, também obtidas na etapa de treinamento, obtendo o usuário cuja lista de distâncias é a mais similar. Então, a confiança do reconhecimento é calculada. A Figura~\ref{fig:diagrama-reconhecimento} ilustra estas etapas descritas.
 
 			\begin{figure}[htb]
 			\begin{center}
