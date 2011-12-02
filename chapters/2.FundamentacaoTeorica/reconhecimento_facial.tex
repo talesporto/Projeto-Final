@@ -211,15 +211,18 @@
 		\item \textbf{Classificadores em cascata}: classificadores fracos
 		\textit{boosted} em uma estrutura de árvore que geram inferências rápidas e
 		robustas na construção de um classificador
-		forte;
+		forte.
 	\end{enumerate}
 
 	A Figura~\ref{fig:edsonma} exemplifica como os conceitos acima se relacionam.
 	O diagrama se inicia computando as características, sendo essas as
-	\textit{haar} básicas. Para computa-las a imagem integral é usada. Os
-	algoritmos \textit{AdaBoost} são usados para aprendizado dentro dos
-	classificadores fracos. E por fim os classificadoes em cascatas fecham a
-	detecção.
+	Características \textit{Haar} Básicas. Para computar as características é
+	necessário o uso da Imagem Integral como forma de representação do resultado.
+	Essa imagem é usada como forma de entrada nos classificadores fracos. Esses,
+	por usa vez.  Os algoritmos \textit{AdaBoost} são utilizados em conjunto com os
+	classificadores fracos para que, com o tempo, se tornem mais fortes. E por fim
+	os classificadoes em cascatas definem a detecção, ou não, de uma face na
+	figura.
 %Figura~\ref{fig:edsonma}:
 
 	\begin{figure}[H]
@@ -238,12 +241,6 @@
 		\label{haarfeatures}
 	\end{figure}
 
-	Existem inúmeros motivos para se usar as características retangulares, sendo
-	que um dos principais é que sistemas baseados em características são muito
-	mais rápidos que sistemas baseados em \textit{pixels}~\cite{violajones}.
-	A detecção facial em imagens, baseada em simples características retangulares,
-	é exemplificada na Figura~\ref{haarfeatures}. 
-
 	\begin{figure}[H]
 		\begin{center}
 			\includegraphics[height=6.5cm,width=12.5cm]{figuras/2.FundamentacaoTeorica/haarfeaturestypes.png}
@@ -252,13 +249,15 @@
 		\label{haarfeaturestypes}
 	\end{figure}
 
-	Estas simples características são remanescentes das funções de base
-	\textit{Haar}. O método utiliza três tipos de características, exemplificadas na
-	Figura \ref{haarfeaturestypes}, ou seja, características com dois, três ou
-	quatro retângulos~\cite{violajones}. A presença de uma característica em uma imagem é
+	A detecção facial em imagens é baseada em simples características
+	retangulares, e é exemplificada na Figura~\ref{haarfeatures}. Estas simples
+	características são remanescentes das funções de base \textit{Haar}. O método
+	utiliza três tipos de características, exemplificadas na Figura
+	\ref{haarfeaturestypes}, ou seja, características com dois, três ou quatro
+	retângulos~\cite{violajones}. A presença de uma característica em uma imagem é
 	determinada pela subtração da média dos valores dos \textit{pixels} da região
-	escura pela média dos valores dos \textit{pixels} da região clara. Caso o valor
-	seja maior que um limiar, então essa característica é tida como
+	escura pela média dos valores dos \textit{pixels} da região clara. Caso o
+	valor seja maior que um limiar, então essa característica é tida como
 	presente~\cite{servodetection}.
 
 	O método \textit{Viola-Jones} não trabalha diretamente com as intensidades da
@@ -307,9 +306,10 @@
 	filtro em si é um classificador \textit{AdaBoost} com um número relativamente
 	pequeno de classificadores ``fracos''~\cite{servodetection}.
 	
-	O limiar de aceitação, em cada nível, é definido ``baixo'' o suficiente para que
-	passe por todos, ou quase todos, os classificadores. Os filtros em cada nível são
-	treinados para classificar imagens de treinamento que passaram por todas fases
+	O limiar de aceitação, em cada nível, é definido ``baixo'' o suficiente para
+	que os exemplos de face do conjunto de treinamento passe por todos, ou quase
+	todos, os classificadores. Os filtros em cada nível são treinados para
+	classificar imagens de treinamento que passaram por todas fases
 	anteriores~\cite{servodetection}.
 	
 	Durante a utilização, se alguma região de uma imagem falhar em passar em um
@@ -444,7 +444,7 @@
 		\sqrt{\sum_{i=1}^{n} y_i^2}}   \sum_{\substack{i=1}}^{n} z_ix_iy_i
 	\end{equation}
 	
-	Imagens possuem ``ruídos'' e vamos defini-los como qualquer coisa que
+	Imagens possuem ``ruídos'', definidos como qualquer coisa que
 	atrapalhe na identificação, como por exemplo, as diferenças na luminosidade.
 	Cada \textit{pixel} possui uma intensidade de ruído diferente. Com cada
 	\textit{pixel} contribuindo para o ruído total, este se torna muito elevado
