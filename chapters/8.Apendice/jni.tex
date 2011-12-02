@@ -9,9 +9,9 @@ possam implementar funcionalidades não disponibilizadas pela API padrão do Jav
 ou até mesmo melhorar as já implementadas seja por questão de desempenho,
 segurança ou outros.
 
-A implementação de métodos nativos exige a a criação de uma função seguindo a estrutura
-\ref{list:estruturaJNI}. Quando a JVM executar o metodo ela invocará a função
-definida e passará os parametros conforme o esperado \cite{jniDoc}. 
+A implementação de métodos nativos exige a criação de uma função seguindo a estrutura
+\ref{list:estruturaJNI}. Quando a JVM executar o método ela invocará a função
+definida e passará os parâmetros conforme o esperado \cite{jniDoc}. 
 
 	\begin{lstlisting}[caption=HelloWorld.java., label=list:estruturaJNI]	
 		JNIEXPORT void JNICALL Java_ClassName_MethodName(JNIEnv *env, jobject obj) {

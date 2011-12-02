@@ -1,7 +1,7 @@
 \section{Relação Rastreamento e Reconhecimento}
 \label{sec:rastreamento-reconhecimento}
 
-	Até então, foi descrito como os Módulos de Rastreamento e de Reconhecimento funcionam de maneira isolada. Entretando, eles operam em conjunto. O Módulo de Rastreamento detém as informações sobre todos os usuários rastreados no ambiente e é responsável por requisitar identificação ao Módulo de Reconhecimento. Isto acontece sempre que um novo usuário for detectado ou quando for necessário reconhecer novamente um usuário já rastreado.
+	Até então, foi descrito como os Módulos de Rastreamento e de Reconhecimento funcionam de maneira isolada. Entretanto, eles operam em conjunto. O Módulo de Rastreamento detém as informações sobre todos os usuários rastreados no ambiente e é responsável por requisitar identificação ao Módulo de Reconhecimento. Isto acontece sempre que um novo usuário for detectado ou quando for necessário reconhecer novamente um usuário já rastreado.
 
 	% Basicamente, quando um novo usuário for detectado, a relação entre rastreamento e reconhecimento acontecerá de acordo com as etapas descritas na Figura~\ref{fig:rastreamento-reconhecimento}.
 
@@ -23,7 +23,7 @@
 	
 	Ao invés de realizar o reconhecimento somente quando novos usuários são detectados, com o objetivo de melhorar a confiança no reconhecimento, o Sistema TRUE realiza continuamente a identificação dos usuários já reconhecidos. Essas tentativas de reconhecer novamente os usuários ocorrerão a cada 5 segundos seguindo as mesmas etapas de quando um novo usuário for detectado. A única etapa que se difere é a primeira, ou seja, ao invés de obter várias imagens de um mesmo usuário, é obtida uma imagem de cada usuário rastreado e a mesma é enviada ao Módulo de Reconhecimento.
 
-	Como visto na Figura~\ref{fig:rastreamento-reconhecimento}, ao obter um resultado de reconhecimento para determinado usuário, o Módulo de Rastreamendo deve computar qual identidade será atribuída ao mesmo. Para isso, este módulo mantém para cada usuário o número total de vezes que este já foi reconhecido, os diferentes nomes obtidos pelo Módulo de Reconhecimento bem como a confiança média para cada nome e o número de vezes que cada nome foi atribuído àquele usuário. Com todos esses dados, a identidade do usuário é definida por meio de uma média ponderada entre as confianças de cada nome, onde os pesos utilizados são compostos pelo número de vezes que o respectivo nome foi atribuído ao usuário. A Equação~\ref{eq:media_ponderada} mostra como é calculada essa média ponderada, em que $\displaystyle N_i$ é o número de vezes que o nome foi atribuído ao usuário e $\displaystyle C_i$ é a confiança média. O exemplo a seguir aprensenta em detalhes como a identidade de um usuário é definida.
+	Como visto na Figura~\ref{fig:rastreamento-reconhecimento}, ao obter um resultado de reconhecimento para determinado usuário, o Módulo de Rastreamento deve computar qual identidade será atribuída ao mesmo. Para isso, este módulo mantém para cada usuário o número total de vezes que este já foi reconhecido, os diferentes nomes obtidos pelo Módulo de Reconhecimento bem como a confiança média para cada nome e o número de vezes que cada nome foi atribuído àquele usuário. Com todos esses dados, a identidade do usuário é definida por meio de uma média ponderada entre as confianças de cada nome, onde os pesos utilizados são compostos pelo número de vezes que o respectivo nome foi atribuído ao usuário. A Equação~\ref{eq:media_ponderada} mostra como é calculada essa média ponderada, em que $\displaystyle N_i$ é o número de vezes que o nome foi atribuído ao usuário e $\displaystyle C_i$ é a confiança média. O exemplo a seguir apresenta em detalhes como a identidade de um usuário é definida.
 
 	\begin{equation}
 		\label{eq:media_ponderada}
@@ -67,7 +67,7 @@
 		\nonumber & Tales: 0.950320 - 0.947302 = 0.003018
 	\end{align}
 
-	Com todos esses dados de reconhecimento, além dos dados de rastreamento e localização de cada usuário, o Módulo de Rastreamento centraliza todas as informações necessárias de cada usuário. A Figura~\ref{fig:truetotal} exemplifica um usuário rastreado pelo Sistema TRUE onde as informações de localização e identificaçao estão presentes.
+	Com todos esses dados de reconhecimento, além dos dados de rastreamento e localização de cada usuário, o Módulo de Rastreamento centraliza todas as informações necessárias de cada usuário. A Figura~\ref{fig:truetotal} exemplifica um usuário rastreado pelo Sistema TRUE onde as informações de localização e identificação estão presentes.
 
 	\begin{figure}[htb]
 			\begin{center}

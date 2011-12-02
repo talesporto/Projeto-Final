@@ -1,6 +1,6 @@
 \section{Reconhecimento dos Usuários}
 	 
-	O reconhecimento facial do Sistema TRUE foi implementado utilizando imagens de cor como dados de entrada. Portanto, ele tem influência de diversos fatores como iluminação, ângulo, pose, expressões, maquiagem e acessórios. Para análise dos resultados foi utilizada como ferramenta uma matriz de confusão construída a partir dos dados coletados do sistema. Tal matriz contém em suas colunas os valores possíveis que se podem obter para cada usuário e as linhas os usuários que foram observados. Os valores presentes na matriz mostram os resultados, em porcentagens, dos testes de reconhecimento. Cada célula apresenta o percentual de vezes que o resultado (coluna) ocorreu durante os testes com o indivíduo (linha) sendo reconhecido. Desta forma, a matriz permite a fácil visualização da confiança obtida no reconhecimento observando-se os valores obtidos na diagonal principal. Ela representa a conjunção do valor esperado com o indívíduo testado.
+	O reconhecimento facial do Sistema TRUE foi implementado utilizando imagens de cor como dados de entrada. Portanto, ele tem influência de diversos fatores como iluminação, ângulo, pose, expressões, maquiagem e acessórios. Para análise dos resultados foi utilizada como ferramenta uma matriz de confusão construída a partir dos dados coletados do sistema. Tal matriz contém em suas colunas os valores possíveis que se podem obter para cada usuário e as linhas os usuários que foram observados. Os valores presentes na matriz mostram os resultados, em porcentagens, dos testes de reconhecimento. Cada célula apresenta o percentual de vezes que o resultado (coluna) ocorreu durante os testes com o indivíduo (linha) sendo reconhecido. Desta forma, a matriz permite a fácil visualização da confiança obtida no reconhecimento observando-se os valores obtidos na diagonal principal. Ela representa a conjunção do valor esperado com o indivíduo testado.
 
 	Sumarizando os resultados expressos na matriz apresentamos três taxas calculadas utilizando os três conceitos a seguir:
 
@@ -35,14 +35,14 @@ abordagem para a coleta de faces (1ª etapa).
 			\label{fig:imgs-cadastro}
 		\end{figure}	
 
-	No primeiro conjunto de testes, os cadastros dos usuários foram feitos utilizando 10 imagens de faces de cada usuário: 6 imagens frontais da face, 2 imagens da face ligeiramente rotacionada para direita e 2 imagens da face ligeiramente rotacionada para esquerda. A Figura~\ref{fig:imgs-cadastro} exemplifica imagens de face obtidas nestes cadastros. Os cadatros foram realizados com essa estratégia com o objetivo de diminuir o impacto das variações de poses e ângulo no reconhecimento facial. Os resultados obtidos dos processos de reconhecimento facial realizados para cada usuário são mostrados na matriz de confusão representada pela Tabela~\ref{tab:matriz-confusao}. 
+	No primeiro conjunto de testes, os cadastros dos usuários foram feitos utilizando 10 imagens de faces de cada usuário: 6 imagens frontais da face, 2 imagens da face ligeiramente rotacionada para direita e 2 imagens da face ligeiramente rotacionada para esquerda. A Figura~\ref{fig:imgs-cadastro} exemplifica imagens de face obtidas nestes cadastros. Os cadastros foram realizados com essa estratégia com o objetivo de diminuir o impacto das variações de poses e ângulo no reconhecimento facial. Os resultados obtidos dos processos de reconhecimento facial realizados para cada usuário são mostrados na matriz de confusão representada pela Tabela~\ref{tab:matriz-confusao}. 
 
 	\begin{table}[htb]
 		\begin{center}
 			\caption{Matriz de confusão para apresentar os resultados obtidos no primeiro conjunto de testes.}
 			\label{tab:matriz-confusao}
 			\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|}
-				\hline  & \bf \begin{sideways}Tales\end{sideways} & \bf \begin{sideways}Danilo\end{sideways} & \bf \begin{sideways}Ana\end{sideways} & \bf \begin{sideways}Fabricio\end{sideways} & \bf \begin{sideways}Lucas\end{sideways} & \bf \begin{sideways}Bruno\end{sideways} & \bf \begin{sideways}Ricardo\end{sideways} & \bf \begin{sideways}Estevao\end{sideways} & \bf \begin{sideways}Rafael\end{sideways} &
+				\hline  & \bf \begin{sideways}Tales\end{sideways} & \bf \begin{sideways}Danilo\end{sideways} & \bf \begin{sideways}Ana\end{sideways} & \bf \begin{sideways}Fabricio\end{sideways} & \bf \begin{sideways}Lucas\end{sideways} & \bf \begin{sideways}Bruno\end{sideways} & \bf \begin{sideways}Ricardo\end{sideways} & \bf \begin{sideways}Estevão\end{sideways} & \bf \begin{sideways}Rafael\end{sideways} &
 				\bf \begin{sideways}Vinicius\end{sideways} & \bf \begin{sideways}Pedro\end{sideways} & \bf \begin{sideways}Desconhecido\end{sideways}\\ 
 				
 				\hline \bf Tales 		& 95\% & 			& 		 & 			&   	 & 			& 		 & 			& 		 & 			& 		 & 5\%	\\ 
@@ -52,7 +52,7 @@ abordagem para a coleta de faces (1ª etapa).
 				\hline \bf Lucas 		& 		 & 			& 		 & 			& 55\% & 			& 		 & 			& 		 & 			& 20\% & 25\% \\
 				\hline \bf Bruno 		& 5\%	 & 			& 		 & 			& 		 & 70\% & 		 & 			& 10\% & 	5\%	& 		 & 10\%	\\
 				\hline \bf Ricardo 	& 		 & 			& 10\% & 			& 		 & 			& 85\% & 			& 		 & 			& 		 & 5\%  \\
-				\hline \bf Estevao 	& 		 & 			& 		 & 			& 		 & 			& 		 & 70\% & 		 & 			& 		 & 30\% \\
+				\hline \bf Estevão 	& 		 & 			& 		 & 			& 		 & 			& 		 & 70\% & 		 & 			& 		 & 30\% \\
 				\hline \bf Rafael 	& 10\% & 	5\%	& 		 & 			& 10\% & 			& 		 & 			& 45\% & 20\% & 		 & 10\% \\
 				\hline \bf Vinicius & 		 & 			& 5\%  & 			& 		 & 			& 		 & 			& 5\%  & 70\% & 10\% & 10\% \\
 				\hline \bf Pedro 		& 		 & 			& 		 & 			& 		 & 			& 		 & 			& 		 & 			& 100\%&		  \\
@@ -66,7 +66,7 @@ abordagem para a coleta de faces (1ª etapa).
 	A Tabela~\ref{tab:taxas} apresenta as taxas de Verdadeiro Positivo, Verdadeiro Negativo e Falso Negativo calculadas analisando os valores da Tabela~\ref{tab:matriz-confusao}. Observa-se que a taxa de verdadeiro positivo (73,63\%) foi uma taxa baixa para um sistema de reconhecimento automático. Neste conjunto de testes, a taxa de verdadeiro negativo foi bem superior a taxa de falso negativo mostrando que a principal deficiência do reconhecimento facial consiste na confusão entre os usuários cadastrados no sistema.
 
 
-	Como dito anteriormente, os resultados deste primeiro cenário não se mostrou satisfatório. Sob a hipótese do resultado ter sido influencidado pela baixa quantidade de faces e poses, construiu-se um segundo cenário de testes. Neste a estratégia utilizada nos cadastros do usuários foi diferente. Os cadastros foram feitos utilizando 100 imagens das faces de cada usuário em diferentes ângulos, posições e expressões faciais. No momento do cadastro, foi solicitado que os usuários movimentasse o rosto levementa para cima, para baixo, para esquerda e para direira de maneira aleatória e com diferentes expressões faciais. Os resultados obtidos neste conjunto de testes se econtra na segunda matriz de confusão mostrada na Tabela~\ref{tab:matriz-confusao2}.
+	Como dito anteriormente, os resultados deste primeiro cenário não se mostrou satisfatório. Sob a hipótese do resultado ter sido influenciado pela baixa quantidade de faces e poses, construiu-se um segundo cenário de testes. Neste a estratégia utilizada nos cadastros do usuários foi diferente. Os cadastros foram feitos utilizando 100 imagens das faces de cada usuário em diferentes ângulos, posições e expressões faciais. No momento do cadastro, foi solicitado que os usuários movimentasse o rosto levemente para cima, para baixo, para esquerda e para direita de maneira aleatória e com diferentes expressões faciais. Os resultados obtidos neste conjunto de testes se encontra na segunda matriz de confusão mostrada na Tabela~\ref{tab:matriz-confusao2}.
 
 	\begin{table}[htb]
 		\begin{center}
@@ -143,9 +143,9 @@ abordagem para a coleta de faces (1ª etapa).
 		\end{center}
 	\end{table}
 
-	% "Ao analisar os dados da Tabela 5.5 pode-se observar que os resultados melhoraram significamente." => "Observa-se uma melhora siginifcativa nos resultados expressos na Tabela 5.6 com relação aos apresentados na Tabela 5.5."
+	% "Ao analisar os dados da Tabela 5.5 pode-se observar que os resultados melhoraram significamente." => "Observa-se uma melhora signifcativa nos resultados expressos na Tabela 5.6 com relação aos apresentados na Tabela 5.5."
 
-	Observa-se uma melhora siginifcativa nos resultados expressos na Tabela~\ref{tab:matriz-confusao2} com relação aos apresentados na Tabela~\ref{tab:matriz-confusao}. A Tabela~\ref{tab:taxas2} apresenta as taxas de acerto e erros relativos à Tabela~\ref{tab:matriz-confusao2}. Houve um aumento na taxa de Verdadeiro Positivo de 73,63\% para 82,5\% e redução significativa na taxa de Verdadeiro Negativo de 17,27\% para 6,0\%, mostrando que os casos de confusões entre os usuários foram mais raros. A melhora obtida comprova a hipótese que um número maior de poses e faces aprimorou a capacidade do sistema de reconhecer seus usuários. Este acréscimo de informações torna os resultados mais robustos devido a inclusão de informações de mais cenários dos usuários no sistema. 
+	Observa-se uma melhora significativa nos resultados expressos na Tabela~\ref{tab:matriz-confusao2} com relação aos apresentados na Tabela~\ref{tab:matriz-confusao}. A Tabela~\ref{tab:taxas2} apresenta as taxas de acerto e erros relativos à Tabela~\ref{tab:matriz-confusao2}. Houve um aumento na taxa de Verdadeiro Positivo de 73,63\% para 82,5\% e redução significativa na taxa de Verdadeiro Negativo de 17,27\% para 6,0\%, mostrando que os casos de confusões entre os usuários foram mais raros. A melhora obtida comprova a hipótese que um número maior de poses e faces aprimorou a capacidade do sistema de reconhecer seus usuários. Este acréscimo de informações torna os resultados mais robustos devido a inclusão de informações de mais cenários dos usuários no sistema. 
 
 	% Para esta matriz obtemos as taxas apresentadas na Tabela~\ref{tab:taxas2}. É
 	% possível observar que o método de cadastro influi bastante no resultado final.
