@@ -1,6 +1,6 @@
 {\rtf1\ansi\ansicpg1252\cocoartf1038\cocoasubrtf360
 {\fonttbl\f0\fswiss\fcharset0 Helvetica;}
-{\colortbl;\red255\green255\blue255;}
+{\colortbl;\red255\green255\blue255;\red26\green26\blue26;\red255\green255\blue255;}
 \paperw11900\paperh16840\margl1440\margr1440\vieww23500\viewh17560\viewkind0
 \pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
 
@@ -122,6 +122,123 @@ Basicamente, o processo de rastreamento pode ser dividido em duas etapas:\
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
 
 \fs32 \cf0 ############################################################################\
+\
+	Localiza\'e7\'e3o\
+\
+	As informa\'e7\'f5es provenientes do rastreamento de uma entidade servem como base para que a localiza\'e7\'e3o da mesma possa ser obtida. Com essas informa\'e7\'f5es \'e9 poss\'edvel determinar os pontos da imagem que representam a entidade e calcular as dist\'e2ncias dos mesmos em rela\'e7\'e3o a c\'e2mera utilizada na captura das imagens.\
+\
+	Imagens de profundidade s\'e3o imagens cujo valor em cada pixel \'e9 uma fun\'e7\'e3o da dist\'e2ncia do ponto correspondente na cena do sensor. Estas imagens podem ser adquiridas diretamente utilizando sensores espec\'edficos. Imagens de profundidade s\'e3o \'fateis devido a sua especifica\'e7\'e3o expl\'edcita de valores de profundidade. \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
+
+\fs23\fsmilli11955 \cf0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
+
+\fs32 \cf0 Alguns dos m\'e9todos para se obter imagens de profundidade mais conhecidos s\'e3o:\
+		Tempo de V\'f4o (TOF - Time of flight)\
+		Luz Estruturada: uma imagem de profundidade n\'e3o pode ser obtida utilizando somente um sensor de v\'eddeo. Por\'e9m, adicionando uma textura artificial na cena, uma imagem de profundidade pode ser recuperada. Esse princ\'edpio consiste na proje\'e7\'e3o de pontos de luz infravermelhos na cena que s\'e3o recuperados por uma c\'e2mera infravermelha que l\'ea a textura. Trata-se de um m\'e9todo mais acess\'edvel que o TOF, por\'e9m \'e9 pouco eficiente para estimar a dist\'e2ncia dos pontos nas bordas dos objetos e em posi\'e7\'f5es muito longe do sensor\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
+
+\fs23\fsmilli11955 \cf0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
+
+\fs32 \cf0 ############################################################################\
+\
+Identifica\'e7\'e3o\
+\
+	Hoje em dia, v\'e1rias t\'e9cnicas de reconhecimento biom\'e9trico por meio da face, \'edris, voz, entre outras, v\'eam sendo estudadas e utilizadas em sistemas de reconhecimento autom\'e1tico. Dentre estas, o reconhecimento por meio da face se destaca pois sua aquisi\'e7\'e3o \'e9 realizada de maneira f\'e1cil e n\'e3o intrusiva, tornando-a ideal para ser utilizada em um ambiente inteligente.\
+\
+	Do ponto de vista geral, o reconhecimento facial continua sendo um desafio por causa de v\'e1rias dificuldades:\
+	\'95 ilumina\'e7\'e3o;\
+	 \'95 \'e2ngulos e poses; \
+	\'95 express\'f5es; \
+	\'95maquiagem; \
+	\'95 extra\'e7\'e3o da face do contexto ou do fundo;\
+\
+	Basicamente, o processo de reconhecimento facial pode ser divido em duas tarefas principais:\
+		1. Detec\'e7\'e3o de faces em imagens; \
+		2. Reconhecimento das faces encontradas.\
+\
+############################################################################\
+\
+Identifica\'e7\'e3o - detec\'e7\'e3o\
+\
+	A detec\'e7\'e3o de faces \'e9 definida como o processo que determina a exist\'eancia ou n\'e3o de faces em uma imagem e uma vez encontrada alguma face, sua localiza\'e7\'e3o deve ser apontada atrav\'e9s de um enquadramento ou atrav\'e9s de suas coordenadas dentro da imagem.\
+\
+	Atualmente, j\'e1 existem diferentes m\'e9todos/t\'e9cnicas de detec\'e7\'e3o de faces. \
+\
+	O m\'e9todo Viola-Jones \'e9 um dos m\'e9todos mais utilizados e  possui uma alta acur\'e1cia permitindo a detec\'e7\'e3o de faces em tempo real. Este m\'e9todo pode ser utilizado para construir uma abordagem de detec\'e7\'e3o facial r\'e1pida e eficaz utilizando apenas imagens em tons de cinza distinguindo-se dos outros m\'e9todos.  Apesar da simplicidade obt\'e9m altas taxas de detec\'e7\'e3o (33). O m\'e9todo \'e9 implementado pela biblioteca OpenCV e \'e9 amplamente utilizado.\
+\
+ m\'e9todo Viola-Jones utiliza um m\'e9todo de aprendizagem de m\'e1quina chamado AdaBoost. Este combina v\'e1rios classificadores \'93fracos\'94 para criar um classificador \'93forte\'94.\
+Um classificador fraco \'e9 aquele que s\'f3 obt\'e9m a resposta correta um pouco mais fre- quente que um \'93palpite aleat\'f3rio\'94. A combina\'e7\'e3o desses classificadores \'93fracos\'94, onde cada um \'93empurra\'94 a resposta final um pouco na dire\'e7\'e3o certa, pode ser considerado como um classificador \'93forte\'94. \
+O m\'e9todo Viola-Jones combina uma s\'e9rie de classificadores AdaBoost na forma de uma cadeia de filtros, como na Figura que recebe o nome de \'93Classificadores em Cascata\'94. Cada filtro em si \'e9 um classificador AdaBoost com um n\'famero relativamente pequeno de classificadores \'93fracos\'94 (2).\
+\
+Durante a utiliza\'e7\'e3o, se alguma regi\'e3o de uma imagem falhar em passar em um desses filtros, esta \'e9 imediatamente classificada como \'93n\'e3o face\'94. Quando uma regi\'e3o de uma imagem passa por um filtro, ela vai para o pr\'f3ximo filtro na cadeia. As regi\'f5es das imagens que passarem por todos os filtros na cadeia s\'e3o classificadas como \'93faces\'94 (2).\
+\
+\
+############################################################################\
+\
+Identifica\'e7\'e3o - reconhecimento\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
+
+\fs23\fsmilli11955 \cf0 Na etapa de reconhecimento, as faces detectadas, ser\'e3o comparadas com um banco de dados de faces conhecidas\
+\
+O Eigenfaces trata-se de uma t\'e9cnica bastante satisfat\'f3ria quando utilizada sobre uma base de dados (faces) relativamente grande. Ela permite ao sistema inferir das imagens suas principais caracter\'edsticas e, partindo delas, realizar o reconhecimento das imagens utilizando um n\'famero bastante reduzido de c\'e1lculos.\
+\
+Esta t\'e9cnica aplica o PCA(Pri\'85.) nas imagens do banco de faces gerando uma lista de eigenfaces. A partir desta lista \'e9 calculada uma eigenface m\'e9dia. Cada eigenface possui um valor associado (eigenvalue) que representa a distancia da eigenface media da respectiva eigenface. \
+\
+Basucamente funciona da seguinte maneira.\
+\
+\pard\pardeftab720\ql\qnatural
+
+\fs26 \cf2 \cb3 \uc0\u8234 Para cada imagem no banco aplica o PCA gerando os eigenfaces que representa as principais diferen\'e7as entre as imagens de treinamento.\uc0\u8236 \
+\
+\uc0\u8234 < FOTO dos eigenfaces >\uc0\u8236 \
+\
+\uc0\u8234 Ent\'e3o apartir da lista das eigenfaces \'e9 calculada uma eigenface m\'e9dia obtendo o valor m\'e9dio de cada pixel.\uc0\u8236 \
+\
+\uc0\u8234 <FOTO da eigenface m\'e9dia>\uc0\u8236 \
+\
+\uc0\u8234 Ent\'e3o para cada eigenfaces \'e9 obtido o seu eigenvalue comparando-o com a eigenface m\'e9dia.\uc0\u8236 \
+\
+\uc0\u8234 Eigenfaces descobre as principais diferen\'e7as entre as imagens de treinamento e representa cada imagem utilizando uma combina\'e7\'e3o dessas diferen\'e7as.\uc0\u8236 \
+\
+\uc0\u8234 Por exemplo uma imagem de treinamento pode ser representada como:\uc0\u8236 \
+\uc0\u8234 \'a0 \'a0 \'a0 \'a0eigenface m\'e9dia + 13% da eigenface0 - 30% da eigenface1 ... + 4% da eigenfaceN\uc0\u8236 \
+\
+\uc0\u8234 Ent\'e3o essa imagem pode ser representada como essa lista de distancias\uc0\u8236 \
+\uc0\u8234 \'a0 \'a0 \'a0 \'a0(13, -30, ..., 4)\uc0\u8236 \
+\
+\
+\uc0\u8234 Para reconhecer a pessoa em uma nova imagem aplica-se o PCA para se obter a lista de dist\'e2ncias a todos os eigenfaces.\uc0\u8236 \
+\uc0\u8234 Ent\'e3o ele procura nas pessoas cadastradas no banco de dados a pessoa que tem a lista de dist\'e2ncia\uc0\u8236 \
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
+
+\fs32 \cf0 \cb1 ############################################################################\
+\
+Identifica\'e7\'e3o - dist\'e2ncias\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
+
+\fs23\fsmilli11955 \cf0 No Eigenfaces, a dist\'e2ncia entre as imagens \'e9 medida ponto a ponto entre as imagens conhecidas e as desconhecidas. A dist\'e2ncia Euclidiana, medida entre dois pontos P
+\fs15\fsmilli7970 1 
+\fs23\fsmilli11955 e P
+\fs15\fsmilli7970 2  
+\fs23\fsmilli11955 em duas dimens\'f5es.
+\fs26 \cf2 \cb3 \
+
+\fs23\fsmilli11955 \cf0 \cb1 A dist\'e2ncia Euclidiana \'e9 simples e f\'e1cil de implementar mas estudos mostram que \'e9 poss\'edvel obter melhores resultados utilizando uma outra dist\'e2ncia, conhecida como Mahalanobis. Essa dist\'e2ncia, utilizada bastante na estat\'edstica, \'e9 \'fatil para determinar a similaridade de uma amostra desconhecida de uma conhecida. Ao contr\'e1rio da dist\'e2n- cia Euclidiana, a Mahalanobis correlaciona todos os pontos de modo a detectar melhor os padr\'f5es existentes.
+\fs26 \cf2 \cb3 \
+\pard\pardeftab720\ql\qnatural
+
+\fs23\fsmilli11955 \cf0 \cb1 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
+
+\fs32 \cf0 \
+############################################################################\
+\
+\
 \
 \pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
 
