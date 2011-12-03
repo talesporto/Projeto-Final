@@ -1,7 +1,7 @@
 {\rtf1\ansi\ansicpg1252\cocoartf1038\cocoasubrtf360
 {\fonttbl\f0\fswiss\fcharset0 Helvetica;}
 {\colortbl;\red255\green255\blue255;}
-\paperw11900\paperh16840\margl1440\margr1440\vieww19180\viewh15540\viewkind0
+\paperw11900\paperh16840\margl1440\margr1440\vieww23500\viewh17560\viewkind0
 \pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
 
 \f0\fs32 \cf0 \
@@ -77,6 +77,10 @@
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
 
 \b0\fs32 \cf0 	Agora ser\'e3o mostrados alguns projetos que focam rastreamento, identifica\'e7\'e3o e localiza\'e7\'e3o de pessoas em um ambiente inteligente.\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
+
+\fs23\fsmilli11955 \cf0 	
+\fs32 Alguns dos projetos estudados utilizem abordagens multimodais, abordagens que usam mais de um tipo de dado de entrada como dados audiovisuais, este trabalho tem como foco identifica\'e7\'e3o,\
 \
 \pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
 \cf0 ############################################################################\
@@ -133,20 +137,330 @@
 \
 
 \fs32 	O sistema proposto por este projeto monitora o ambiente em baixa resolu\'e7\'e3o de forma cont\'ednua, detectando somente a presen\'e7a e suas dimens\'f5es. Formas de aquisi\'e7\'e3o de ima- gens mais detalhadas s\'e3o ativadas quando um evento ou atividade de potencial interesse \'e9 detectado. Esses eventos s\'e3o os focos de aten\'e7\'e3o do sistema.\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+\cf0 ############################################################################\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
+\cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+
+\b\fs48 \cf0 Sistema TRUE\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
+
+\b0\fs32 \cf0 \'c9 um sistema aberto de rastreamento, localiza\'e7\'e3o e identifica\'e7\'e3o de pessoas em ambientes inteligentes gerenciados pelo middleware uOS.\
+\
+\'c9 um sistema monomodal implementado em C++ que utiliza somente dados visuais, como imagens de cor e profundidade. As imagens de profundidade s\'e3o utilizadas no rastreamento e localiza\'e7\'e3o dos usu\'e1rios no ambiente, enquanto que as imagens de cor s\'e3o utilizadas no reconhecimento facial e no cadastro dos usu\'e1rios.\
+\
+Para se obter esses dados ele utiliza o sensor Kinect da Microsoft como dispositivo de entrada.\
+\
+O Sistema TRUE \'e9 dividido em quatro m\'f3dulos principais:\
+\'95 M\'f3dulo de Rastreamento: respons\'e1vel pelo rastreamento e localiza\'e7\'e3o dos usu\'e1- rios no ambiente.\
+\'95 M\'f3dulo de Reconhecimento: respons\'e1vel por identificar os usu\'e1rios rastreados.\
+\'95 M\'f3dulo de Registro: respons\'e1vel pelo cadastro de novos usu\'e1rios e treino do sistema.\
+\'95 M\'f3dulo de Integra\'e7\'e3o: respons\'e1vel pela integra\'e7\'e3o e comunica\'e7\'e3o do sistema com o Middleware uOS.\
+\
+Basicamente, o M\'f3dulo de Rastreamento obt\'e9m o dados do sensor Kinect que s\'e3o utilizados nas tarefas de rastreamento e localiza\'e7\'e3o de cada usu\'e1rio no ambiente. Quando necess\'e1rio ele requisita ao M\'f3dulo de Reconhecimento a identifica\'e7\'e3o de algum usu\'e1rio repassando imagens do mesmo. Por sua vez, o M\'f3dulo de Reconhecimento acessa o banco de faces, contendo as faces das pessoas cadastradas no sistema, e identifica o usu\'e1rio mais parecido retornando seu nome ao M\'f3dulo de Rastreamento. Este \'faltimo, repassa as informa\'e7\'f5es de cada usu\'e1rio ao Middleware uOS atrav\'e9s do M\'f3dulo de Integra\'e7\'e3o. Quando for necess\'e1rio cadastrar um novo usu\'e1rio no Sistema TRUE, o Middleware acessa o M\'f3dulo de Registro, tamb\'e9m atrav\'e9s do M\'f3dulo de Integra\'e7\'e3o, que insere as imagens da nova pessoa na base de faces e retreina o sistema.\
 \pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
 \cf0 	\
+############################################################################\
+\
+	Middleware uOS\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
+\cf0 O Middleware uOS possui foco na adaptabilidade de servi\'e7os em um ambiente de computa\'e7\'e3o ub\'edqua, de modo que os servi\'e7os dos dispositivos presentes no ambiente possam ser oferecidos e compartilhados. \
+\
+O uOS \'e9 uma implementa\'e7\'e3o de um middleware para aux\'edlio de aplica\'e7\'f5es para ambiente de computa\'e7\'e3o ub\'edqua, cuja proposta \'e9 compat\'edvel com os conceitos apresentados pela DSOA (Device Service Oriented Architecture).\
+\
+O uOS possui tr\'eas camadas:\
+\
+1. Camada de Rede: respons\'e1vel por gerenciar as interfaces de rede do dispositivo;\
+2. Camada de Conectividade: respons\'e1vel por gerenciar conex\'f5es entre dispositivo que se comunicam por diferentes tecnologias, como Bluetooth e Ethernet;\
+3. Camada de Adaptabilidade: respons\'e1vel por gerenciar os servi\'e7os dispon\'edveis e o acesso aos mesmos.\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+\cf0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
+\cf0 A integra\'e7\'e3o do Sistema TRUE com o middleware uOS foi realizada na Camada de Adaptabilidade atrav\'e9s da implementa\'e7\'e3o de um driver de \'93usu\'e1rio\'94. Este driver se comunica com o Sistema TRUE disponibilizando servi\'e7os as aplica\'e7\'f5es para que as mesmas possam trocar informa\'e7\'f5es. Esta integra\'e7\'e3o ser\'e1 apresentada em detalhes qnd explicarmos o M\'f3dulo de Integra\'e7\'e3o.\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+\cf0 \
+############################################################################\
+\
+	M\'f3dulo de Reconhecimento\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
+\cf0 O M\'f3dulo de Reconhecimento \'e9 respons\'e1vel pela identifica\'e7\'e3o dos usu\'e1rios no ambiente utilizando a face como caracter\'edstica biom\'e9trica. A face foi escolhida por permitir um reconhecimento n\'e3o intrusivo\
+\
+O reconhecimento facial \'e9 feito a partir de imagens de usu\'e1rios que s\'e3o repassadas pelo M\'f3dulo de Rastreamento. Estas imagens s\'e3o compostas somente pela regi\'e3o em que o usu\'e1rio se encontra.\
+\
+Basicamente o reconhecimento facial possui as seguintes etapas:\
+\
+	1. Obten\'e7\'e3o da imagem de entrada composta somente pelo usu\'e1rio cujo reconhecimento foi requisitado.\
+	2. Pr\'e9-processamento da imagem: convers\'e3o da imagem em escala de cinza.\
+	3. Detec\'e7\'e3o facial na imagem. Caso nenhuma face seja encontrada, retorna \'93vazio\'94. Observa-se que no m\'e1ximo uma face pode ser encontrada nesta imagem.\
+	4. Processamento da imagem: uma nova imagem \'e9 criada recortando a regi\'e3o da face encontrada. A imagem \'e9, ent\'e3o, redimensionada e equalizada criando assim um padr\'e3o de tamanho, brilho e contraste aumentando a acur\'e1cia do reconhecimento.\
+	5. Reconhecimento facial com a t\'e9cnica Eigenfaces. \
+	6. Retorno do nome do usu\'e1rio com a face \'93mais parecida\'94 e a confian\'e7a do reconhecimento.\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+\cf0 \
+############################################################################\
 \
 \
+	M\'f3dulo de Reconhecimento - Detec\'e7\'e3o Facial\
+	\
+	A detec\'e7\'e3o facial foi desenvolvida utilizando o m\'e9todo Viola-Jones\
+	 O Viola- Jones \'e9 implementado pela biblioteca OpenCV (Open Source Computer Vision). \
+	Basicamente, o processo de detec\'e7\'e3o facial procura por uma face em uma imagem pr\'e9-processada. Para realizar detec\'e7\'e3o facial utilizando o m\'e9todo Viola-Jones \'e9 necess\'e1rio a utiliza\'e7\'e3o de um classificador em cascata. \
+	o Sistema TRUE utiliza um classificador treinado para detectar faces frontais em imagens.\
+	As etapas da detec\'e7\'e3o s\'e3o:\
+\
+		1. Leitura de um classificador treinado para detectar faces em uma imagem.\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
+\cf0 		2. Obten\'e7\'e3o da imagem de entrada pr\'e9-processada..\
+		3. Detec\'e7\'e3o da face na imagem utilizando o classificador.\
+		4. Retorno da regi\'e3o da face detectada ou retorno \'93vazio\'94 caso nenhuma face tenha sido encontrada. Observa-se que existe no m\'e1ximo uma face na imagem, pois cont\'e9m somente um usu\'e1rio.\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+\cf0 ############################################################################\
 \
 \
+	M\'f3dulo de Reconhecimento - Reconhecimento Facial 1\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
+\cf0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
+
+\fs23\fsmilli11955 \cf0 		
+\fs32 Foi desenvolvida utilizando a t\'e9cnica Eigenfaces. Consiste em uma t\'e9cnica bastante satisfat\'f3ria quando utilizada sobre uma base de faces relativamente grande, permitindo ao sistema inferir, das imagens das faces suas principais caracter\'edsticas e, partindo delas, realizar o reconhecimento facial utilizando um n\'famero reduzido de c\'e1lculos, permitindo, assim, um reconhecimento em tempo real. \
+		 Implementado pela biblioteca OpenCV.\
+		A base de dados utilizada no Sistema TRUE \'e9 formada por imagens no formato PGM (Portable Gray Map) com tamanho de 92x112 pixels e em escala de cinza.\
+			A base \'e9 composta por um banco de faces de alunos volunt\'e1rios de Ci\'eancia da Computa\'e7\'e3o da Universidade de Bras\'edlia \
+			Um banco de imagens de faces da Universidade de Cambridge: formado por imagens de faces de 40 pessoas diferentes. Para cada pessoa, existem 10 diferentes imagens obtidas em diferentes momentos, com diferentes condi\'e7\'f5es de ilumina\'e7\'e3o, diferentes express\'f5es faciais (olhos abertos e fechados, sorrindo e n\'e3o sorrindo, entre outros) e diferentes detalhes faciais (com e sem \'f3culos).\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+\cf0 \
+############################################################################\
 \
 \
+	M\'f3dulo de Reconhecimento - Reconhecimento Facial 2\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
+
+\fs23\fsmilli11955 \cf0 		
+\fs32 O reconhecimento facial inicia-se projetando a imagem no subespa\'e7o atrav\'e9s do m\'e9todo PCA que reduz sua dimensionalidade. \
+		Ent\'e3o, calcula-se a dist\'e2ncia da imagem projetada a cada um do eigenfaces obtidos na etapa de treinamento obtendo uma lista de dist\'e2ncias. \
+		Esta lista de dist\'e2ncias \'e9 comparada com as lista de dist\'e2ncias de cada usu\'e1rio, tamb\'e9m obtidas na etapa de treinamento, obtendo o usu\'e1rio cuja lista de dist\'e2ncias \'e9 a mais similar. \
+		Retorna o resultado do reconhecimento com o nome.\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+\cf0 ############################################################################\
 \
 \
+	M\'f3dulo de Reconhecimento - Reconhecimento Facial 3\
+\
+		Uma das etapas intermedi\'e1rias consiste no c\'e1lculo da dist\'e2ncia entre a imagem de entrada e os Eigenfaces. \
+		Inicialmente, o c\'e1lculo desta dist\'e2ncia era feito utilizando dist\'e2ncia Euclidiana. Contudo, testes foram realizados com alguns usu\'e1rios, em que o sistema realizava 20 tentativas de reconhecimento de usu\'e1rios, e os resultados n\'e3o foram satisfat\'f3rios. Portanto, os mesmos testes foram realizados utilizando dist\'e2ncia Mahalanobis . Ainda assim, os resultados n\'e3o foram satisfat\'f3rios. Ent\'e3o, os mesmos testes foram feitos utilizando as duas dist\'e2ncias de maneira conjunta: uma imagem s\'f3 \'e9 tida como reconhecida quando o resultado das duas dist\'e2ncias apontarem para a mesma identidade. Com isso, houve uma melhora significativa dos resultados. \
+		Para exemplificar os resultados deste teste esta tabela mostra, para o usu\'e1rio Danilo, a porcentagem de acerto e confus\'e3o da dist\'e2ncia Euclidiana, da dist\'e2ncia Mahalanobis e de ambas quando usadas de maneira conjunta. Observa-se que houve uma melhora significativa ao se utilizar ambas as dist\'e2ncias (acerto de 75%) comparado com a dist\'e2ncia Euclidiana (acerto de 45%) e dist\'e2ncia Mahalanobis (acerto de 40%). \
+\
+############################################################################\
+\
+	M\'f3dulo de Rastreamento\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
+\cf0 O M\'f3dulo de Rastreamento \'e9 respons\'e1vel por rastrear os usu\'e1rios no ambiente, determinar a sua localiza\'e7\'e3o f\'edsica em rela\'e7\'e3o ao sensor Kinect e gerenciar suas identidades.\
+\
+Para realizar o rastreamento e localiza\'e7\'e3o dos usu\'e1rios \'e9 utilizada a biblioteca OpenNI (Open Natural Interaction). Trata-se de um framework que define APIs para o desenvolvimento de aplica\'e7\'f5es de intera\'e7\'e3o natural. \
+\
+Utilizando as imagens de profundidade, a detec\'e7\'e3o e o rastreamento dos usu\'e1riois s\'e3o feitos utilizando subtra\'e7\'e3o de fundo. \
+A representa\'e7\'e3o das pessoas detectadas e rastreadas s\'e3o feitas utilizando suas silhuetas.\
+\
+Utilizando imagens de profundidade \'e9 poss\'edvel calcular as coordenas (x,y,z) de um plano cartesiano de tr\'eas dimens\'f5es em que o ponto (0,0,0) corresponde a posi\'e7\'e3o do Kinect, \
+Dessa forma, a posi\'e7\'e3o de um usu\'e1rio em rela\'e7\'e3o ao sensor \'e9 estimada utilizando as coordenadas referente ao pixel que representa seu centro de massa geom\'e9trico. Sendo assim, ao fixar a posi\'e7\'e3o do Kinect no ambiente, \'e9 poss\'edvel estimar a localiza\'e7\'e3o de qualquer usu\'e1rio rastreado em tempo real. \
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+\cf0 ############################################################################\
+\
+	M\'f3dulo de Rastreamento2\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
+\cf0 	O processo de rastreamento come\'e7a inicializando o dispositivo de entrada, no caso o sensor Kinect,\
+registra as a\'e7\'f5es a serem tomadas quando eventos em rela\'e7\'e3o aos usu\'e1rios ocorram, como novo usu\'e1rio detectado ou usu\'e1rio perdido.\
+obt\'e9m uma imagem de fundo da cena que ser\'e1 utilizada no processo de subtra\'e7\'e3o de fundo. \
+	Para cada imagem obtida da cena, o processo de subtra\'e7\'e3o de fundo \'e9 realizado atualizando os par\'e2metros de cada usu\'e1rio, como sua posi\'e7\'e3o na imagem e sua posi\'e7\'e3o em rela\'e7\'e3o ao sensor.\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+\cf0 ############################################################################\
+\
+	Rela\'e7\'e3o Reconhecimento Rastreamento\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
+\cf0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
+
+\fs23\fsmilli11955 \cf0 	
+\fs32 O M\'f3dulo de Rastreamento det\'e9m as informa\'e7\'f5es sobre todos os usu\'e1rios rastreados no ambiente e \'e9 respons\'e1vel por requisitar identifica\'e7\'e3o ao M\'f3dulo de Reconhecimento. Isto acontece sempre que um novo usu\'e1rio for detectado ou quando for necess\'e1rio reconhecer novamente um usu\'e1rio j\'e1 rastreado.\
+\
+	Quando um novo usu\'e1rio for detectado, o M\'f3dulo de Rastreamento obt\'e9m 20 imagens de cor sucessivas deste usu\'e1rio.\
+	Para cada imagem, ele cria uma nova imagem composta somente pela regi\'e3o em que este usu\'e1rio se encontra e a envia ao M\'f3dulo de Reconhecimento requisitando identifica\'e7\'e3o ao mesmo.\
+	O M\'f3dulo de Reconhecimento, por sua vez, realiza o reconhecimento facial e retorna ao M\'f3dulo de Rastreamento o nome do usu\'e1rio e a confian\'e7a obtida. \
+	A cada 0.5 segundos, o M\'f3dulo de Reconhecimento verifica se chegou algum resultado de identifica\'e7\'e3o. Caso tenha chegado,o M\'f3dulo de Rastreamento computa o resultado e decide qual identidade ser\'e1 atribu\'edda ao respectivo usu\'e1rio.\
+\
+	Ao inv\'e9s de realizar o reconhecimento somente quando novos usu\'e1rios s\'e3o detectados, com o objetivo de melhorar a confian\'e7a no reconhecimento, o Sistema TRUE realiza continuamente a identifica\'e7\'e3o dos usu\'e1rios j\'e1 reconhecidos. Essas tentativas de reconhecer novamente os usu\'e1rios ocorrer\'e3o a cada 5 segundos seguindo as mesmas etapas de quando um novo usu\'e1rio for detectado. A \'fanica etapa que se difere \'e9 a primeira, ou seja, ao inv\'e9s de obter v\'e1rias imagens de um mesmo usu\'e1rio, \'e9 obtida uma imagem de cada usu\'e1rio rastreado e a mesma \'e9 enviada ao M\'f3dulo de Reconhecimento.\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+\cf0 ############################################################################\
+\
+	Rela\'e7\'e3o Reconhecimento Rastreamento2\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
+
+\fs23\fsmilli11955 \cf0 	
+\fs32 Ao obter um resultado de reconhecimento para determinado usu\'e1rio, o M\'f3dulo de Rastreamento deve computar qual identidade ser\'e1 atribu\'edda ao mesmo. \
+	Para isso, este m\'f3dulo mant\'e9m para cada usu\'e1rio:\
+		 o n\'famero total de vezes que este j\'e1 foi reconhecido, \
+		 os diferentes nomes obtidos pelo M\'f3dulo de Reconhecimento bem como a confian\'e7a m\'e9dia para cada nome e o n\'famero de vezes que cada nome foi atribu\'eddo \'e0quele usu\'e1rio.\
+ \
+	Com todos esses dados, a identidade do usu\'e1rio \'e9 definida por meio de uma m\'e9dia ponderada entre as confian\'e7as de cada nome, onde os pesos utilizados s\'e3o compostos pelo n\'famero de vezes que o respectivo nome foi atribu\'eddo ao usu\'e1rio. \
+	Explicar a Equa\'e7\'e3o\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+\cf0 ############################################################################\
+\
+	Rela\'e7\'e3o Reconhecimento Rastreamento3\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
+\cf0  A Tabela mostra os dados mantidos para o usu\'e1rio Jo\'e3o pelo M\'f3dulo de Rastreamento, em que \'93Jo\'e3o\'94, \'93Danilo\'94 e \'93Tales\'94 s\'e3o as identidades que j\'e1 foram obtidas ao se tentar reconhecer o Jo\'e3o. A segunda coluna desta tabela mostra a confian\'e7a m\'e9dia do reconhecimento para cada nome e a \'faltima mostra o n\'famero de vezes que cada nome foi atribu\'eddo a Jo\'e3o. \
+\
+Para decidir qual identidade ser\'e1 atribu\'edda ao usu\'e1rio Jo\'e3o primeiramente calcula-se a m\'e9dia ponderada .\
+\
+ Ent\'e3o, a identidade atribu\'edda ser\'e1 aquela cuja confian\'e7a m\'e9dia mais se aproxima da m\'e9dia ponderada. Neste caso, a identidade atribu\'edda a Jo\'e3o ser\'e1 \'93Jo\'e3o\'94.\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+\cf0 \
+\
+############################################################################\
+\
+	M\'f3dulo de Registro	\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
+\cf0 O M\'f3dulo de Registro \'e9 respons\'e1vel por cadastrar novos usu\'e1rios no sistema e trein\'e1-lo para tamb\'e9m reconhecer esse novo usu\'e1rio. \
+\
+Etapas\
+	1. Obten\'e7\'e3o das imagens do novo usu\'e1rio.\
+	2. Processamento das imagens, isto \'e9, as imagens s\'e3o convertidas em escala de cinza, novas imagens s\'e3o criadas recortando a regi\'e3o da face encontrada. Em seguida, as imagens s\'e3o redimensionadas e equalizadas criando assim padr\'f5es de tamanho, brilho e contraste.\
+	3. Armazenamento das imagens. \
+	4. Treinamento do sistema para reconhecer esse usu\'e1rio.\
 \
 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+\cf0 ############################################################################\
+\
+	M\'f3dulo de Registro	2\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
+\cf0 \
+A \'faltima etapa do m\'f3dulo de registro consiste no treinamento do sistema.\
+	O treinamento inicia-se liberando os atuais dados de treinamento.\
+	Ent\'e3o, um vetor de imagens \'e9 obtido lendo todas as imagens contidas no banco de faces. \
+	Atrav\'e9s deste vetor, obt\'e9m-se a eigenface m\'e9dia, os eigenfaces e os eigenvalues. \
+	Para cada usu\'e1rio cadastrado no Sistema TRUE, suas imagens s\'e3o projetadas no subespa\'e7o atrav\'e9s do m\'e9todo PCA  que reduz suas dimensionalidades, e s\'e3o calculadas suas dist\'e2ncias em rela\'e7\'e3o aos eigenfaces obtendo um vetor de dist\'e2ncias. \
+	Os eigenfaces, os eigenvalues, a eigenface m\'e9dia e os vetores de dist\'e2ncias s\'e3o armazenados e podem ser utilizados pelo M\'f3dulo de Reconhecimento. \
+\
+Ap\'f3s o treinamento, o Sistema TRUE \'e9 reiniciado para que o reconhecimento seja feito utilizando as novas imagens e informa\'e7\'f5es obtidas com o treinamento.\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+\cf0 ############################################################################\
+\
+	M\'f3dulo de Integracao\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
+\cf0 \
+	Este modulo \'e9 respons\'e1vel pela integra\'e7\'e3o do Sistema TRUE com o Middleware uOS. Atrav\'e9s desta integra\'e7\'e3o, os dados providos pelo Sistema TRUE s\'e3o disponibilizadas ao ambiente gerenciado pelo middleware uOS por meio de servi\'e7os.\
+\
+	Para integr\'e1-los foi desenvolvido um driver para o Middleware se comunicar com o Sistema TRUE. Este driver foi nomeado de UserDriver.\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+\cf0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
+\cf0 	Os m\'e9todos do UserDriver podem ser divididos basicamente em tr\'eas grupos\
+\
+		M\'e9todos de Inicializa\'e7\'e3o: m\'e9todos respons\'e1veis pela inicializa\'e7\'e3o do Sistema TRUE e pelo registro dos servi\'e7os que o driver possui e os eventos que pode gerar.\
+\
+ 		M\'e9todos Nativos: m\'e9todos declarados no driver que permitem acessar alguns m\'e9todos implementados pelo Sistema TRUE. Tais m\'e9todos permitem que o UserDriver tenha controle sobre o sistema, podendo inici\'e1-lo, encerr\'e1-lo, retrein\'e1-lo e, at\'e9 mesmo, cadastrar e remover novos usu\'e1rios a qualquer momento.\
+\
+		Servi\'e7os e Eventos: s\'e3o os m\'e9todos que implementam os servi\'e7os que o UserDriver disponibiliza \'e0s aplica\'e7\'f5es presentes no ambiente e os eventos que pode gerar.\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+\cf0 ############################################################################\
+\
+	M\'f3dulo de Integracao 2\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
+\cf0 	O UserDriver disponibiliza \'e0s aplica\'e7\'f5es registradas no middleware os seguintes servi\'e7os:\
+\
+		\'95 Consultas as informa\'e7\'f5es dos usu\'e1rios no ambiente: atrav\'e9s dessas consultas, as aplica\'e7\'f5es tem acesso ao nomes, emails, posi\'e7\'f5es correntes e confian\'e7a do reconhecimento de todos os usu\'e1rios presentes no ambiente.\
+		\'95 Cadastro: as aplica\'e7\'f5es podem cadastrar novos usu\'e1rios fornecendo ao UserDriver o nome, o email e as imagens do novo usu\'e1rio.\
+		\'95 Treino do sistema: ap\'f3s cadastrar novos usu\'e1rios as aplica\'e7\'f5es podem retreinar o sistema para poder reconhecer o novo usu\'e1rio cadastrado.\
+		\'95 Remo\'e7\'e3o: as aplica\'e7\'f5es podem remover usu\'e1rios cadastrados fornecendo o email do usu\'e1rio.\
+\
+	Al\'e9m dos servi\'e7os, o UserDriver gera os seguintes eventos: \
+		\'95 Novo Usu\'e1rio: evento gerado assim que um novo usu\'e1rio foi detectado pelo Sistema TRUE.\
+		\'95 Usu\'e1rio Perdido: evento gerado assim que um usu\'e1rio deixou de ser rastreado pelo Sistema TRUE.\
+		\'95 Atualiza\'e7\'e3o dos dados do usu\'e1rio: evento gerado a cada cinco segundos atualizando os dados de todos os usu\'e1rios rastreados.\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+\cf0 \
+\
+############################################################################\
+\
+Testes\
+\
+	Com intuito de identificar a acur\'e1cia e as limita\'e7\'f5es do Sistema TRUE perante seus requisitos foram realizados uma s\'e9rie de testes funcionais. \
+	Grande parte dos testes foram realizados no LAICO (LAborat\'f3rio de Sistemas Integrados e COncorrentes),\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
+\cf0 	Rastreamento: testes funcionais realizados para avaliar a efici\'eancia da detec\'e7\'e3o de novos usu\'e1rios no ambiente. \
+	\'95 Localiza\'e7\'e3o: testes realizados para avaliar a precis\'e3o do sistema ao estimar a posi\'e7\'e3o dos usu\'e1rios rastreados no ambiente.\
+	\'95 Reconhecimento: testes realizados para avaliar a acur\'e1cia na identifica\'e7\'e3o de usu\'e1rios.\
+	\
+	Al\'e9m disso, com o objetivo de demonstrar a integra\'e7\'e3o do Sistema TRUE com o middleware uOS foi desenvolvida uma pequena aplica\'e7\'e3o utilizando os servi\'e7os e os eventos providos pelo sistema.\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+\cf0 \
+############################################################################\
+\
+Testes - rastreamento - detec\'e7\'e3o\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
+
+\fs23\fsmilli11955 \cf0 	
+\fs32 O rastreamento \'e9 fundamental para o funcionamento correto do Sistema TRUE uma vez que \'e9 respons\'e1vel por rastrear os usu\'e1rios no ambiente, determinar a sua localiza\'e7\'e3o f\'edsica em rela\'e7\'e3o ao sensor Kinect e gerenciar suas identidades.\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+\cf0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
+\cf0 	Os primeiros testes realizados tiveram como objetivo verificar a efici\'eancia da detec\'e7\'e3o de novos usu\'e1rios no ambiente. Os testes foram feitos simulando a entrada de um usu\'e1rio na cena e analisando o momento em que o mesmo era detectado. Esse teste foi executado no LAICO e a posi\'e7\'e3o do sensor e a trajet\'f3ria do usu\'e1rio \'e9 apresentado na Figura. Em todos os testes o usu\'e1rio era detectado antes mesmo de entrar na \'e1rea de vis\'e3o do sistema por completo, como mostrado na Figura.\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+\cf0 ############################################################################\
+\
+Testes - rastreamento - oclus\'e3o\
 \
 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
+\cf0 	Tamb\'e9m foram realizados testes com o objetivo de verificar a oclus\'e3o no rastreamento. \
+	Foi testado o caso em que um usu\'e1rio oculta propositalmente outro j\'e1 rastreado. Nesta situa\'e7\'e3o, caso o usu\'e1rio rastreado continuasse oculto, o sistema o determinava como perdido. \
+	Por outro lado, nos casos de oclus\'e3o parcial, o sistema se mostrou robusto como pode ser observado na Figura onde o usu\'e1rio apresentado na cor verde est\'e1 parcialmente oculto pelo usu\'e1rio na cor azul. \
+	Nos testes foi simulada tamb\'e9m a situa\'e7\'e3o de oclus\'e3o moment\'e2nea, ou seja, um usu\'e1rio em movimento oculta outro por um curto per\'edodo de tempo em raz\'e3o da sua movimenta\'e7\'e3o. Nestes casos, o sistema TRUE perde o usu\'e1rio rastreado, mas rapidamente \'e9 capaz de detect\'e1-lo novamente, como mostrado na sequ\'eancia de imagens da Figura \
+	A oclus\'e3o era um problema esperado uma vez que o Sistema TRUE utiliza somente um sensor Kinect como dispositivo de entrada.\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+\cf0 ############################################################################\
+\
+Testes - rastreamento - interferencias\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
+\cf0 	Durante os testes realizados com rastreamento foi observado alguns problemas quando o usu\'e1rio rastreado interagia com objetos do ambiente ou com outros usu\'e1rios. Na grande maioria das vezes em que o usu\'e1rio interagiu com objetos, o Sistema TRUE considerou o objeto como sendo parte do usu\'e1rio. Entretanto, esta situa\'e7\'e3o n\'e3o prejudicou a efici\'eancia do sistema. \
+	Por outro lado, os problemas com intera\'e7\'e3o entre usu\'e1rios foram mais raros, por\'e9m tiveram impacto maior. Tais problemas consistem em \'93interfer\'eancias\'94 que ocorreram em algumas situa\'e7\'f5es de contato entre dois ou mais usu\'e1rios.\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+\cf0 ############################################################################\
+\
+Testes - rastreamento\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
+\cf0 	Apesar dos problemas relatados, o rastreamento conseguiu, na maioria dos testes, atender \'e0s necessidades rastreando os diversos usu\'e1rios no ambiente em suas atividades di\'e1rias, como mostrado na Figura.\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+\cf0 \
 \
 \
 \
