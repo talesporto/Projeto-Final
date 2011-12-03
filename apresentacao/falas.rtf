@@ -72,6 +72,59 @@
 \cf0 \
 \pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
 
+\b\fs48 \cf0 Fundamenta\'e7\'e3o Te\'f3rica\
+
+\b0\fs32 \
+\
+	Rastreamento\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
+
+\fs23\fsmilli11955 \cf0  
+\fs32 O rastreamento pode ser definido como o problema de estimar a trajet\'f3ria de uma entidade (objeto ou pessoa) em um plano de imagem \'e0 medida em que se move na cena. Em um ambiente inteligente, o rastreamento de pessoas \'e9 uma das principais ferramen- tas para detectar novos usu\'e1rios e serve como base para que novas informa\'e7\'f5es possam ser coletadas.\
+\
+Basicamente, o processo de rastreamento pode ser dividido em duas etapas:\
+	. Detec\'e7\'e3o do objeto; \
+	 Rastreamento do objeto detectado.\
+\
+############################################################################\
+\
+	Rastreamento - representa\'e7\'e3o\
+\
+	Antes de falar como s\'e3o feitos a detec\'e7\'e3o e o rastreamento de entidades, vamos mostrar como as entidades rastreadas s\'e3o representadas.\
+	As entidades rastreadas devem ser representadas de alguma maneira. Geralmente, as representa\'e7\'f5es s\'e3o baseados em suas formas, existindo uma forte rela\'e7\'e3o entre a representa\'e7\'e3o e o algoritmo de rastreamento escolhido\
+\
+\'95 Pontos:\
+\'95 Formas geom\'e9tricas primitivas:\
+\'95 Silhueta e Contorno: Essa representa\'e7\'e3o \'e9 mais indicada para rastrear entidades complexas de forma n\'e3o r\'edgida (54, 55). Ela \'e9 po- pular devido \'e0 sua simplicidade. Mais utilizada no rastreamento de pessoas.\
+\'95 Modelos de formas articuladas: entidades articuladas s\'e3o compostas por partes do corpo que se ligam por meio de juntas\
+\'95 Modelos de esqueletos: \
+\
+############################################################################\
+\
+	Rastreamento - detec\'e7\'e3o\
+\
+	Todo m\'e9todo de rastreamento requer um mecanismo de detec\'e7\'e3o de entidades que pode ser realizada a cada frame (quadro) obtido ou na primeira vez que a entidade a ser rastreada entra no campo de vis\'e3o.\
+\'95 Detector de pontos:\
+\'95 Subtra\'e7\'e3o de fundo: \'e9 um m\'e9todo popular para segmenta\'e7\'e3o de movimento, especialmente nas situa\'e7\'f5es em que o plano de fundo \'e9 relativamente est\'e1tico. Ele detecta as regi\'f5es de movimento na imagem obtendo a diferen\'e7a pixel a pixel entre o quadro corrente e o quadro referente ao plano de fundo. \
+\'95 Segmenta\'e7\'e3o:\
+\
+############################################################################\
+\
+	Rastreamento \
+\
+	Os m\'e9todos de rastreamento de entidades mais utilizados atualmente s\'e3o:\
+\'95 Rastreamento de pontos\
+\'95 Rastreamento de n\'facleo\
+\'95 Rastreamento de silhuetas: o rastreamento \'e9 feito estimando a regi\'e3o da entidade a cada quadro a partir das silhuetas geradas nos quadros anteriores. Dado os modelos de entidades, silhuetas s\'e3o rastreadas por qualquer forma de correspond\'eancia ou evolu\'e7\'e3o de contorno. 
+\fs23\fsmilli11955 \
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
+
+\fs32 \cf0 ############################################################################\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+
 \b\fs48 \cf0 Trabalhos Correlatos\
 \
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
@@ -403,8 +456,12 @@ Ap\'f3s o treinamento, o Sistema TRUE \'e9 reiniciado para que o reconhecimento 
 \cf0 \
 \
 ############################################################################\
-\
-Testes\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
+\cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+
+\b\fs48 \cf0 Testes
+\b0\fs32 \
 \
 	Com intuito de identificar a acur\'e1cia e as limita\'e7\'f5es do Sistema TRUE perante seus requisitos foram realizados uma s\'e9rie de testes funcionais. \
 	Grande parte dos testes foram realizados no LAICO (LAborat\'f3rio de Sistemas Integrados e COncorrentes),\
@@ -462,9 +519,168 @@ Testes - rastreamento\
 \pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
 \cf0 \
 \
+############################################################################\
+\
+Testes - localiza\'e7\'e3o - eixo z\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
+
+\fs23\fsmilli11955 \cf0 	
+\fs32 O Sistema TRUE obt\'e9m a localiza\'e7\'e3o dos usu\'e1rios no ambiente por meio de coordenadas dos mesmos em rela\'e7\'e3o ao Kinect. Para verificar a acur\'e1cia dessas coordenadas foram realizados alguns testes. \
+\
+	As coordenadas (x, y, z) obtidas pelo sistema s\'e3o coordenadas de um plano cartesiano de tr\'eas dimens\'f5es em que o ponto (0, 0, 0) corresponde a posi\'e7\'e3o do Kinect. A coordenada no eixo z mostra o quanto o usu\'e1rio est\'e1 distante, em termos de profundidade, em rela\'e7\'e3o ao sensor, a coordenada no eixo x mostra o quanto o usu\'e1rio est\'e1 a direita ou a esquerda do sensor e a coordenada no eixo y mostra o quanto o centro de massa geom\'e9trico do usu\'e1rio est\'e1 acima ou abaixo do sensor.\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+\cf0 \
+	Os testes foram realizados para as coordenada do eixo x e z pois o eixo y se refere a altera do centro geom\'e9trico do usu\'e1rio rasteado e n\'e3o \'e9 interessante para o contexto de localizam do usu\'e1rio no ambiente.\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
+\cf0 	Para testar a precis\'e3o as coordenadas  do eixo z foi realizado o seguinte teste: um objeto (uma caixa de papel\'e3o) foi colocada em frente ao sensor a diferentes dist\'e2ncias do mesmo (1000mm, 2000mm, 3000mm, 4000mm, 4057mm), como mostrado na Figura .\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+\cf0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
+\cf0 	Para dist\'e2ncias acima de 4057mm n\'e3o foram obtidos resultados pois essa \'e9 a dist\'e2ncia m\'e1xima de funcionamento do sensor.\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+\cf0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
+\cf0 Para cada dist\'e2ncia, foram coletados 6 amostras informadas pelo sistema. A Tabela apresenta o comparativo entre as dist\'e2ncias reais medidas manualmente e a m\'e9dia das dist\'e2ncias aferidas pelo sistema.\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+\cf0 \
+############################################################################\
+\
+Testes - localiza\'e7\'e3o - eixo z 2\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
+\cf0 	Os valores da Tabela tamb\'e9m est\'e3o demonstrados graficamente. Como pode ser observado, a discrep\'e2ncia aumenta conforme o objeto se distancia do sensor. Neste teste o menor erro obtido foi de 3,21mm e o maior de 111,75mm.\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+\cf0 \
+\
+############################################################################\
+\
+Testes - localiza\'e7\'e3o - eixo x\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
+\cf0 Para testar a precis\'e3o das coordenadas foi realizado o seguinte teste: um objeto (uma caixa de papel\'e3o) foi colocada a uma dist\'e2ncia fixa de 3000 mil\'edmetros do sensor e colocada em diferentes posi\'e7\'f5es ao longo do eixo x (0, \'b1330mm, \'b1660mm, \'b1990mm), como mostrado na Figura. Para cada posi\'e7\'e3o foram coletadas 6 amostras informados pelo sistema. A Tabela apresenta o comparativo entre as dist\'e2ncias reais medidas manualmente e a m\'e9dia das dist\'e2ncias aferidas pelo sistema.\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+\cf0 \
+\
+############################################################################\
+\
+Testes - localiza\'e7\'e3o - eixo x 2\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
+\cf0 Os valores da Tabela tamb\'e9m est\'e3o demonstrados graficamente. Como observado, existe uma diferen\'e7a constante de poucos cent\'edmetros ao longo de toda a reta. \'c9 poss\'edvel inferir ent\'e3o, que o Sistema TRUE consegue fazer estimativas das coordenadas no eixo x com erro de poucos cent\'edmetros. Neste caso o menor e o maior erro obtidos foram de 27,19mm e 79,29mm respectivamente. \
+\
+Acredita-se que os erros apresentados n\'e3o s\'e3o significativos a ponto de comprometer o uso dos dados fornecidos.\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+\cf0 ############################################################################\
+\
+Testes - identifica\'e7\'e3o\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
+\cf0 Para an\'e1lise dos resultados foi utilizada como ferramenta uma matriz de confus\'e3o constru\'edda a partir dos dados coletados do sistema. Tal matriz cont\'e9m em suas colunas os valores poss\'edveis que se podem obter para cada usu\'e1rio e as linhas os usu\'e1rios que foram observados. \
+Os valores presentes na matriz mostram os resultados, em porcentagens, dos testes de reconhecimento. Cada c\'e9lula apresenta o percentual de vezes que o resultado (coluna) ocorreu durante os testes com o indiv\'edduo (linha) sendo reconhecido. Desta forma, a matriz permite a f\'e1cil visualiza\'e7\'e3o da confian\'e7a obtida no reconhecimento observando-se os valores obtidos na diagonal principal. Ela representa a conjun\'e7\'e3o do valor esperado com o indiv\'edduo testado.\
+\
+Sumarizando os resultados expressos na matriz apresentamos tr\'eas taxas calculadas :\
+1. Verdadeiro Positivo: quando o sistema identifica o usu\'e1rio de maneira correta. \
+2. Verdadeiro Negativo: quando o sistema identifica o usu\'e1rio de maneira errada. \
+3. Falso Negativo: quando o sistema n\'e3o identifica o usu\'e1rio cadastrado.\
+\
+Os cen\'e1rios de teste utilizados para se averiguar a precis\'e3o do reconhecimento facial consistiram de duas etapas. Na primeira etapa cada usu\'e1rio foi cadastrado na base de dados utilizando estrat\'e9gias distintas para cada cen\'e1rio. A esta base de dados foram adicionadas os dados das 40 pessoas presentes no banco de faces da Universidade de Cambridge. Na segunda etapa cada usu\'e1rio, individualmente, foi posicionado dentro do campo de vis\'e3o do sensor onde foram coletados os resultados dos primeiros 20 valores retornados pelo sistema. Primeiramente foi constru\'eddo um cen\'e1rio de testes que n\'e3o apresentou resultados satisfat\'f3rios, com isto foi constru\'eddo um segundo cen\'e1rio de teste com uma nova abordagem para a coleta de faces (1a etapa).\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
+
+\fs23\fsmilli11955 \cf0 \
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+
+\fs32 \cf0 ############################################################################\
+\
+Testes - identifica\'e7\'e3o - 1o conjunto\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
+\cf0 No primeiro conjunto de testes, os cadastros dos usu\'e1rios foram feitos utilizando 10 imagens de faces de cada usu\'e1rio: 6 imagens frontais da face, 2 imagens da face ligeiramente rotacionada para direita e 2 imagens da face ligeiramente rotacionada para esquerda.  Os cadastros foram realizados com essa estrat\'e9gia com o objetivo de diminuir o impacto das varia\'e7\'f5es de poses e \'e2ngulo no reconhecimento facial. Os resultados obtidos dos processos de re- conhecimento facial realizados para cada usu\'e1rio s\'e3o mostrados na matriz de confus\'e3o.\
+\
+Como previsto, pode-se observar na matriz que os valores mais significativos est\'e3o na diagonal principal. Alguns resultados obtidos foram satisfat\'f3rios com porcentagens maiores que 90%. Por outro lado, foram obtidos alguns resultados com baixas porcenta- gens como 45%. Estes \'faltimos foram principalmente causados por problemas como pose e express\'f5es faciais. A ilumina\'e7\'e3o n\'e3o foi um problema, pois no ambiente de teste n\'e3o existe influ\'eancia da ilumina\'e7\'e3o externa e a interna \'e9 controlada.\
+A Tabela  apresenta as taxas de Verdadeiro Positivo, Verdadeiro Negativo e Falso Negativo calculadas analisando os valores da matriz. Observa-se que a taxa de verdadeiro positivo (73,63%) foi uma taxa baixa para um sistema de reconhecimento autom\'e1tico. Neste conjunto de testes, a taxa de verdadeiro negativo foi bem superior a taxa de falso negativo mostrando que a principal defici\'eancia do reconhecimento facial consiste na confus\'e3o entre os usu\'e1rios cadastrados no sistema.\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
+
+\fs23\fsmilli11955 \cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+
+\fs32 \cf0 ############################################################################\
+\
+Testes - identifica\'e7\'e3o - 2o conjunto
+\fs23\fsmilli11955 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
+\cf0 \
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
+
+\fs32 \cf0 Como dito anteriormente, os resultados deste primeiro cen\'e1rio n\'e3o se mostrou satisfat\'f3rio. Sob a hip\'f3tese do resultado ter sido influenciado pela baixa quantidade de faces e poses, construiu-se um segundo cen\'e1rio de testes. Neste a estrat\'e9gia utilizada nos cadastros do usu\'e1rios foi diferente. Os cadastros foram feitos utilizando 100 imagens das faces de cada usu\'e1rio em diferentes \'e2ngulos, posi\'e7\'f5es e express\'f5es faciais. No momento do cadastro, foi solicitado que os usu\'e1rios movimentassem o rosto levemente para cima, para baixo, para esquerda e para direita de maneira aleat\'f3ria e com diferentes express\'f5es faciais. Os resultados obtidos neste conjunto de testes se encontra na segunda matriz de confus\'e3o.\
+\
+ Houve um aumento na taxa de Verdadeiro Positivo de 73,63% para 82,5% e redu\'e7\'e3o significativa na taxa de Verdadeiro Negativo de 17,27% para 6,0%, mostrando que os casos de confus\'f5es entre os usu\'e1rios foram mais raros. A melhora obtida comprova a hip\'f3tese que um n\'famero maior de poses e faces aprimorou a capacidade do sistema de reconhecer seus usu\'e1rios. Este acr\'e9scimo de informa\'e7\'f5es torna os resultados mais robustos devido a inclus\'e3o de informa\'e7\'f5es de mais cen\'e1rios dos usu\'e1rios no sistema.\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+\cf0 ############################################################################\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
+\cf0 \
+Testes - integra\'e7\'e3o\
+\
+Com intuito de exemplificar a utiliza\'e7\'e3o do UserDriver e testar a integra\'e7\'e3o do Sistema TRUE com o middleware uOS foi desenvolvido uma aplica\'e7\'e3o para o middleware chamada UserApp. Esta aplica\'e7\'e3o registra um listener para \'93escutar\'94 os eventos do UserDriver chamado UserListener.\
+\
+Quando o UserListener \'e9 inicializado ele obt\'e9m acesso ao twitter e se registra para escutar os eventos gerados pelo UserDriver. Para cada evento obtido, ele envia mensagens pelo Twitter para os usu\'e1rios no ambiente. Para eventos de \'93novo usu\'e1rio detectado\'94 e \'93usu\'e1rio perdido\'94, ele envia mensagens de boas vindas e de despedi- das respectivamente.  O UserDriver tamb\'e9m gera eventos de atualiza\'e7\'e3o dos dados dos usu\'e1rios. Quando estes eventos s\'e3o gerados, o UserListener verifica se houve atualiza\'e7\'e3o na identidade do usu\'e1rio e se o mesmo est\'e1 a mais de uma hora no mesmo lugar. Caso esteja, ele envia mensagens aos usu\'e1rios informando estes acontecimentos. \
+\
+Testes funcionais foram feitos com a aplica\'e7\'e3o mostrando que o driver consegue obter os dados \'edntegros do Sistema TRUE e gerar os eventos de maneira praticamente instant\'e2nea. A Figura mostra as mensagens geradas pela aplica\'e7\'e3o em um teste funcional, onde Danilo, um usu\'e1rio cadastrado, entra no ambiente senta em uma mesa com seu notebook permanecendo no mesmo lugar por mais de uma hora, e logo depois deixa o ambiente.\
 \
 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+\cf0  ############################################################################\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
+\cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+
+\b\fs48 \cf0 Conclus\'e3o
+\b0\fs32 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
+
+\fs23\fsmilli11955 \cf0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
+
+\fs32 \cf0 <rastreamento>\
+Foram conduzidos conjuntos de testes para cada um dos prop\'f3sitos do Sistema TRUE. Os testes de rastreamento simularam diferentes situa\'e7\'f5es di\'e1rias onde os usu\'e1rios rastreados interagem entre si e com diferentes objetos. O Sistema TRUE se mostrou eficaz tendo em vista que os novos usu\'e1rios s\'e3o detectados antes mesmo de entrarem por completo no campo de vis\'e3o do sensor. Al\'e9m disso, revelou-se robusto em casos de oclus\'f5es parciais e como esperado, nos casos de oclus\'f5es totais n\'e3o foi poss\'edvel prosseguir com o rastreamento. Os testes tamb\'e9m mostraram que os limites do sensor permitem at\'e9 5 pessoas a uma dist\'e2ncia de 4,057 metros.\
 \
+<localiza\'e7\'e3o>\
+Os testes de localiza\'e7\'e3o foram realizados comparando as coordenadas obtidas pelo Sistema TRUE com as coordenadas mensuradas manualmente. As coordenadas obtidas pelo sistema se mostraram consideravelmente pr\'f3ximas das reais, apresentando diferen\'e7as de poucos cent\'edmetros que aumentam juntamente com a dist\'e2ncia entre o usu\'e1rio e o sensor.\
+\
+<identifica\'e7\'e3o>\
+Foram realizados dois cen\'e1rios de testes de identifica\'e7\'e3o que se diferem na estrat\'e9gia utilizada no cadastro dos usu\'e1rios. O segundo cen\'e1rio utiliza uma maior quantidade de imagens da face de cada usu\'e1rio com uma maior varia\'e7\'e3o dos \'e2ngulos, poses e express\'f5es faciais. Os testes mostraram que a estrat\'e9gia utilizada no cadastro dos usu\'e1rios tem grande impacto nos resultados do reconhecimento, sendo que a taxa de acertos aumentou de 73,63% (primeiro cen\'e1rio) para 82,5% (segundo cen\'e1rio).\
+\
+<conclusao final>\
+Com as informa\'e7\'f5es providas pelo Sistema TRUE, tornou-se poss\'edvel o desenvolvimento de novas aplica\'e7\'f5es que possuem um maior entendimento do contexto do ambiente, como pode ser visto no UserApp. Esta aplica\'e7\'e3o utiliza as identidades e posi\'e7\'f5es dos usu\'e1rios para enviar mensagens de boas vindas, despedidas e mensagens para inform\'e1-los a quanto tempo est\'e3o no mesmo lugar.
+\fs23\fsmilli11955 \
+\
+
+\fs32 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+\cf0  ############################################################################\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
+\cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+
+\b\fs48 \cf0 Trabalhos futuros\
+
+\fs32 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
+
+\b0 \cf0 Os dados providos pelo Sistema TRUE e disponibilizados pelo Middleware uOS constroem uma nova base para a cria\'e7\'e3o de in\'fameras aplica\'e7\'f5es para ambientes inteligentes. A partir das informa\'e7\'f5es de identidade e localiza\'e7\'e3o dos usu\'e1rios, tornou-se poss\'edvel desenvolver aplica\'e7\'f5es de reconfigura\'e7\'e3o autom\'e1tica de servi\'e7os, estabelecimento de contextos e defini\'e7\'e3o de perfis.\
+\
+Al\'e9m disso, o Sistema TRUE pode ser melhorado em algumas de suas caracter\'edsticas. Uma dessas melhorias consiste na expans\'e3o do sistema para permitir a utiliza\'e7\'e3o de m\'faltiplos Kinects de modo a expandir sua \'e1rea de cobertura. Essa expans\'e3o minimizaria os problemas de oclus\'e3o e tamb\'e9m aumentaria o n\'famero m\'e1ximo de usu\'e1rios rastreados.\
+\
+\'c9 poss\'edvel tamb\'e9m melhorar os resultados do reconhecimento. Como visto nos testes, foi poss\'edvel obter melhores resultados apenas modificando a estrat\'e9gia de cadastro. Essa melhoria pode ser desenvolvida em duas frentes, como estudo de novas formas de cadastros de usu\'e1rio e novas t\'e9cnicas que utilizam os dados de profundidade para o reconhecimento facial.\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
+
+\fs23\fsmilli11955 \cf0 \
 \
 \
 \
