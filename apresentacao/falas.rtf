@@ -1,10 +1,15 @@
 {\rtf1\ansi\ansicpg1252\cocoartf1038\cocoasubrtf360
 {\fonttbl\f0\fswiss\fcharset0 Helvetica;}
-{\colortbl;\red255\green255\blue255;\red26\green26\blue26;\red255\green255\blue255;}
-\paperw11900\paperh16840\margl1440\margr1440\vieww23500\viewh17560\viewkind0
+{\colortbl;\red255\green255\blue255;\red26\green26\blue26;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww23500\viewh17040\viewkind0
 \pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
 
-\f0\fs32 \cf0 \
+\f0\b\fs48 \cf0 Roteiro
+\b0\fs32 \
+\
+############################################################################\
+\
+\
 
 \b\fs48 Motiva\'e7\'e3o
 \b0\fs32 \
@@ -179,19 +184,27 @@ Durante a utiliza\'e7\'e3o, se alguma regi\'e3o de uma imagem falhar em passar e
 \
 Identifica\'e7\'e3o - reconhecimento\
 \
-\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
-
-\fs23\fsmilli11955 \cf0 Na etapa de reconhecimento, as faces detectadas, ser\'e3o comparadas com um banco de dados de faces conhecidas\
+Na etapa de reconhecimento, as faces detectadas, ser\'e3o comparadas com um banco de dados de faces conhecidas\
 \
 O Eigenfaces trata-se de uma t\'e9cnica bastante satisfat\'f3ria quando utilizada sobre uma base de dados (faces) relativamente grande. Ela permite ao sistema inferir das imagens suas principais caracter\'edsticas e, partindo delas, realizar o reconhecimento das imagens utilizando um n\'famero bastante reduzido de c\'e1lculos.\
 \
-Esta t\'e9cnica aplica o PCA(Pri\'85.) nas imagens do banco de faces gerando uma lista de eigenfaces. A partir desta lista \'e9 calculada uma eigenface m\'e9dia. Cada eigenface possui um valor associado (eigenvalue) que representa a distancia da eigenface media da respectiva eigenface. \
+Esta t\'e9cnica aplica o PCA(Pri\'85.) nas imagens do banco de faces gerando uma lista de eigenfaces. A partir desta lista \'e9 calculada uma eigenface m\'e9dia. Cada eigenface possui um valor associado (eigenvalue) que representa a distancia da eigenface media da respectiva eigenface. 
+\fs23\fsmilli11955 \
 \
-Basucamente funciona da seguinte maneira.\
+\
+
+\fs32 ############################################################################\
+\
+Identifica\'e7\'e3o - reconhecimento Eigenfaces\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
+
+\fs23\fsmilli11955 \cf0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
+
+\fs32 \cf0 Basucamente funciona da seguinte maneira.\
 \
 \pard\pardeftab720\ql\qnatural
-
-\fs26 \cf2 \cb3 \uc0\u8234 Para cada imagem no banco aplica o PCA gerando os eigenfaces que representa as principais diferen\'e7as entre as imagens de treinamento.\uc0\u8236 \
+\cf2 \uc0\u8234 Para cada imagem no banco aplica o PCA gerando os eigenfaces que representa as principais diferen\'e7as entre as imagens de treinamento.\uc0\u8236 \
 \
 \uc0\u8234 < FOTO dos eigenfaces >\uc0\u8236 \
 \
@@ -211,28 +224,20 @@ Basucamente funciona da seguinte maneira.\
 \
 \
 \uc0\u8234 Para reconhecer a pessoa em uma nova imagem aplica-se o PCA para se obter a lista de dist\'e2ncias a todos os eigenfaces.\uc0\u8236 \
-\uc0\u8234 Ent\'e3o ele procura nas pessoas cadastradas no banco de dados a pessoa que tem a lista de dist\'e2ncia\uc0\u8236 \
+\uc0\u8234 Ent\'e3o ele procura nas pessoas cadastradas no banco de dados a pessoa que tem a lista de dist\'e2ncia
+\fs26 \uc0\u8236 \
 \
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
 
-\fs32 \cf0 \cb1 ############################################################################\
+\fs32 \cf0 ############################################################################\
 \
 Identifica\'e7\'e3o - dist\'e2ncias\
 \
-\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
-
-\fs23\fsmilli11955 \cf0 No Eigenfaces, a dist\'e2ncia entre as imagens \'e9 medida ponto a ponto entre as imagens conhecidas e as desconhecidas. A dist\'e2ncia Euclidiana, medida entre dois pontos P
-\fs15\fsmilli7970 1 
-\fs23\fsmilli11955 e P
-\fs15\fsmilli7970 2  
-\fs23\fsmilli11955 em duas dimens\'f5es.
-\fs26 \cf2 \cb3 \
-
-\fs23\fsmilli11955 \cf0 \cb1 A dist\'e2ncia Euclidiana \'e9 simples e f\'e1cil de implementar mas estudos mostram que \'e9 poss\'edvel obter melhores resultados utilizando uma outra dist\'e2ncia, conhecida como Mahalanobis. Essa dist\'e2ncia, utilizada bastante na estat\'edstica, \'e9 \'fatil para determinar a similaridade de uma amostra desconhecida de uma conhecida. Ao contr\'e1rio da dist\'e2n- cia Euclidiana, a Mahalanobis correlaciona todos os pontos de modo a detectar melhor os padr\'f5es existentes.
-\fs26 \cf2 \cb3 \
+No Eigenfaces, a dist\'e2ncia entre as imagens \'e9 medida ponto a ponto entre as imagens conhecidas e as desconhecidas. A dist\'e2ncia Euclidiana, medida entre dois pontos P1 e P2  em duas dimens\'f5es.\cf2 \
+\cf0 A dist\'e2ncia Euclidiana \'e9 simples e f\'e1cil de implementar mas estudos mostram que \'e9 poss\'edvel obter melhores resultados utilizando uma outra dist\'e2ncia, conhecida como Mahalanobis. Essa dist\'e2ncia, utilizada bastante na estat\'edstica, \'e9 \'fatil para determinar a similaridade de uma amostra desconhecida de uma conhecida. Ao contr\'e1rio da dist\'e2ncia Euclidiana, a Mahalanobis correlaciona todos os pontos de modo a detectar melhor os padr\'f5es existentes.\cf2 \
 \pard\pardeftab720\ql\qnatural
 
-\fs23\fsmilli11955 \cf0 \cb1 \
+\fs23\fsmilli11955 \cf0 \
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
 
 \fs32 \cf0 \
@@ -786,8 +791,9 @@ Com as informa\'e7\'f5es providas pelo Sistema TRUE, tornou-se poss\'edvel o des
 \pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
 
 \b\fs48 \cf0 Trabalhos futuros\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
 
-\fs32 \
+\fs32 \cf0 \
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
 
 \b0 \cf0 Os dados providos pelo Sistema TRUE e disponibilizados pelo Middleware uOS constroem uma nova base para a cria\'e7\'e3o de in\'fameras aplica\'e7\'f5es para ambientes inteligentes. A partir das informa\'e7\'f5es de identidade e localiza\'e7\'e3o dos usu\'e1rios, tornou-se poss\'edvel desenvolver aplica\'e7\'f5es de reconfigura\'e7\'e3o autom\'e1tica de servi\'e7os, estabelecimento de contextos e defini\'e7\'e3o de perfis.\
