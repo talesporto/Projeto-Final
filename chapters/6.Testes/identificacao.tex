@@ -2,15 +2,16 @@
 	 
 	O reconhecimento facial do Sistema TRUE foi implementado utilizando imagens de cor como dados de entrada. Portanto, ele tem influência de diversos fatores como iluminação, ângulo, pose, expressões, maquiagem e acessórios. Para análise dos resultados foi utilizada como ferramenta uma matriz de confusão construída a partir dos dados coletados do sistema. Tal matriz contém em suas colunas os valores possíveis que se podem obter para cada usuário e as linhas os usuários que foram observados. Os valores presentes na matriz mostram os resultados, em porcentagens, dos testes de reconhecimento. Cada célula apresenta o percentual de vezes que o resultado (coluna) ocorreu durante os testes com o indivíduo (linha) sendo reconhecido. Desta forma, a matriz permite a fácil visualização da confiança obtida no reconhecimento observando-se os valores obtidos na diagonal principal. Ela representa a conjunção do valor esperado com o indivíduo testado.
 
-	Sumarizando os resultados expressos na matriz apresentamos três taxas calculadas utilizando os três conceitos a seguir:
+	Sumarizando os resultados expressos na matriz apresentamos quatro taxas calculadas utilizando os quatro conceitos a seguir:
 
 	\begin{enumerate}
 		\item \textbf{Verdadeiro Positivo}: quando o sistema identifica o usuário de maneira correta.
 		\item \textbf{Verdadeiro Negativo}: quando o sistema identifica o usuário de maneira errada.
 		\item \textbf{Falso Negativo}: quando o sistema não identifica o usuário cadastrado.
+		\item \textbf{Falso Positivo}: quando o sistema identifica equivocadamente um usuário não cadastrado.
 	\end{enumerate}
 
-	A taxa de verdadeiro positivo representa a média de acertos do sistema ao identificar os usuários. A taxa de verdadeiro negativo representa a média de erros que houveram ao se reconhecer equivocadamente um usuário como outro. A taxa de falso negativo representa a média de erros que houveram quando um usuário cadastro não foi reconhecido e considerado como ``desconhecido''.
+	A taxa de verdadeiro positivo representa a média de acertos do sistema ao identificar os usuários. A taxa de verdadeiro negativo representa a média de erros que houveram ao se reconhecer equivocadamente um usuário como outro. A taxa de falso negativo representa a média de erros que houveram quando um usuário cadastro não foi reconhecido e considerado como ``desconhecido''. Por fim, a taxa de falso positivo representa a média de erros que houveram quando um usuário desconhecido foi reconhecido equivocadamente como um usuário cadastrado.
 
 % TODO :voltar aqui
 
@@ -56,6 +57,7 @@ abordagem para a coleta de faces (1ª etapa).
 				\hline \bf Rafael 	& 10\% & 	5\%	& 		 & 			& 10\% & 			& 		 & 			& 45\% & 20\% & 		 & 10\% \\
 				\hline \bf Vinicius & 		 & 			& 5\%  & 			& 		 & 			& 		 & 			& 5\%  & 70\% & 10\% & 10\% \\
 				\hline \bf Pedro 		& 		 & 			& 		 & 			& 		 & 			& 		 & 			& 		 & 			& 100\%&		  \\
+				\hline \bf Desconhecido 		& 		 & 			& 		 & 			& 		 & 			& 		 & 			& 		 & 			&      &		  \\
 				\hline
 			\end{tabular}
 		\end{center}
@@ -76,6 +78,7 @@ abordagem para a coleta de faces (1ª etapa).
 				\hline \bf Verdadeiro Positivo & 73,63\% \\
 				\hline \bf Verdadeiro Negativo & 17,27\% \\
 				\hline \bf Falso Negativo & 9,10\% \\
+				\hline \bf Falso Positivo & \% \\
 				\hline
 			\end{tabular}
 		\end{center}
@@ -125,6 +128,7 @@ abordagem para a coleta de faces (1ª etapa).
 				\hline \bf Marcela 		& 		 & 			& 		 & 			& 		 &      & 		&65\% &10\% & 		& 25\%		  	\\
 				\hline \bf Caio 		  & 		 & 			& 		 & 			& 	5\%& 	15\%& 		& 		&80\%	&	 		& 		  	\\
 				\hline \bf Marcelo 		& 		 & 			& 		 & 			& 		 & 			& 		& 		& 		& 90\%& 10\%		  	\\
+				\hline \bf Desconhecido 		& 		 & 			& 		 & 			& 		 & 			& 		& 		& 		&     & 		  	\\
 				\hline
 			\end{tabular}
 		\end{center}
@@ -138,6 +142,7 @@ abordagem para a coleta de faces (1ª etapa).
 				\hline \bf Verdadeiro Positivo & 82,5\% \\
 				\hline \bf Verdadeiro Negativo & 6,0\% \\
 				\hline \bf Falso Negativo & 11,5\% \\
+				\hline \bf Falso Positivo & \% \\
 				\hline
 			\end{tabular}
 		\end{center}
