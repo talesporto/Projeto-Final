@@ -2,15 +2,16 @@
 	 
 	O reconhecimento facial do Sistema TRUE foi implementado utilizando imagens de cor como dados de entrada. Portanto, ele tem influência de diversos fatores como iluminação, ângulo, pose, expressões, maquiagem e acessórios. Para análise dos resultados foi utilizada como ferramenta uma matriz de confusão construída a partir dos dados coletados do sistema. Tal matriz contém em suas colunas os valores possíveis que se podem obter para cada usuário e as linhas os usuários que foram observados. Os valores presentes na matriz mostram os resultados, em porcentagens, dos testes de reconhecimento. Cada célula apresenta o percentual de vezes que o resultado (coluna) ocorreu durante os testes com o indivíduo (linha) sendo reconhecido. Desta forma, a matriz permite a fácil visualização da confiança obtida no reconhecimento observando-se os valores obtidos na diagonal principal. Ela representa a conjunção do valor esperado com o indivíduo testado.
 
-	Sumarizando os resultados expressos na matriz apresentamos três taxas calculadas utilizando os três conceitos a seguir:
+	Sumarizando os resultados expressos na matriz apresentamos quatro taxas calculadas utilizando os quatro conceitos a seguir:
 
 	\begin{enumerate}
 		\item \textbf{Verdadeiro Positivo}: quando o sistema identifica o usuário de maneira correta.
 		\item \textbf{Verdadeiro Negativo}: quando o sistema identifica o usuário de maneira errada.
 		\item \textbf{Falso Negativo}: quando o sistema não identifica o usuário cadastrado.
+		\item \textbf{Falso Positivo}: quando o sistema identifica equivocadamente um usuário não cadastrado.
 	\end{enumerate}
 
-	A taxa de verdadeiro positivo representa a média de acertos do sistema ao identificar os usuários. A taxa de verdadeiro negativo representa a média de erros que houveram ao se reconhecer equivocadamente um usuário como outro. A taxa de falso negativo representa a média de erros que houveram quando um usuário cadastro não foi reconhecido e considerado como ``desconhecido''.
+	A taxa de verdadeiro positivo representa a média de acertos do sistema ao identificar os usuários. A taxa de verdadeiro negativo representa a média de erros que houveram ao se reconhecer equivocadamente um usuário como outro. A taxa de falso negativo representa a média de erros que houveram quando um usuário cadastro não foi reconhecido e considerado como ``desconhecido''. Por fim, a taxa de falso positivo representa a média de erros que houveram quando um usuário desconhecido foi reconhecido equivocadamente como um usuário cadastrado.
 
 % TODO :voltar aqui
 
@@ -56,6 +57,8 @@ abordagem para a coleta de faces (1ª etapa).
 				\hline \bf Rafael 	& 10\% & 	5\%	& 		 & 			& 10\% & 			& 		 & 			& 45\% & 20\% & 		 & 10\% \\
 				\hline \bf Vinicius & 		 & 			& 5\%  & 			& 		 & 			& 		 & 			& 5\%  & 70\% & 10\% & 10\% \\
 				\hline \bf Pedro 		& 		 & 			& 		 & 			& 		 & 			& 		 & 			& 		 & 			& 100\%&		  \\
+				\hline \bf Desco- 		& 		 & 			& 		 & 			& 		 & 			& 		 & 			& 		 & 			&      &	100\%	  \\
+				\bf nhecido & 		 & 			& 		 & 			& 		 & 			& 		 & 			& 		 & 			&      &\\
 				\hline
 			\end{tabular}
 		\end{center}
@@ -63,19 +66,20 @@ abordagem para a coleta de faces (1ª etapa).
 
 	Como previsto, pode-se observar na matriz que os valores mais significativos estão na diagonal principal. Alguns resultados obtidos foram satisfatórios com porcentagens maiores que 90\%. Por outro lado, foram obtidos alguns resultados com baixas porcentagens como 45\%. Estes últimos foram principalmente causados por problemas como pose e expressões faciais. A iluminação não foi um problema, pois no ambiente de teste não existe influência da iluminação externa e a interna é controlada. 
 
-	A Tabela~\ref{tab:taxas} apresenta as taxas de Verdadeiro Positivo, Verdadeiro Negativo e Falso Negativo calculadas analisando os valores da Tabela~\ref{tab:matriz-confusao}. Observa-se que a taxa de verdadeiro positivo (73,63\%) foi uma taxa baixa para um sistema de reconhecimento automático. Neste conjunto de testes, a taxa de verdadeiro negativo foi bem superior a taxa de falso negativo mostrando que a principal deficiência do reconhecimento facial consiste na confusão entre os usuários cadastrados no sistema.
+	A Tabela~\ref{tab:taxas} apresenta as taxas de Verdadeiro Positivo, Verdadeiro Negativo, Falso Negativo e Falso Positivo calculadas analisando os valores da Tabela~\ref{tab:matriz-confusao}. Observa-se que a taxa de verdadeiro positivo (75,83\%) foi uma taxa baixa para um sistema de reconhecimento automático. Neste conjunto de testes, a taxa de verdadeiro negativo foi bem superior a taxa de falso negativo mostrando que a principal deficiência do reconhecimento facial consiste na confusão entre os usuários cadastrados no sistema.
 
 
-	Como dito anteriormente, os resultados deste primeiro cenário não se mostrou satisfatório. Sob a hipótese do resultado ter sido influenciado pela baixa quantidade de faces e poses, construiu-se um segundo cenário de testes. Neste a estratégia utilizada nos cadastros do usuários foi diferente. Os cadastros foram feitos utilizando 100 imagens das faces de cada usuário em diferentes ângulos, posições e expressões faciais. No momento do cadastro, foi solicitado que os usuários movimentasse o rosto levemente para cima, para baixo, para esquerda e para direita de maneira aleatória e com diferentes expressões faciais. Os resultados obtidos neste conjunto de testes se encontra na segunda matriz de confusão mostrada na Tabela~\ref{tab:matriz-confusao2}.
+	Como dito anteriormente, os resultados deste primeiro cenário não se mostraram satisfatórios. Sob a hipótese do resultado ter sido influenciado pela baixa quantidade de faces e poses, construiu-se um segundo cenário de testes. Neste a estratégia utilizada nos cadastros do usuários foi diferente. Os cadastros foram feitos utilizando 100 imagens das faces de cada usuário em diferentes ângulos, posições e expressões faciais. No momento do cadastro, foi solicitado que os usuários movimentasse o rosto levemente para cima, para baixo, para esquerda e para direita de maneira aleatória e com diferentes expressões faciais. Os resultados obtidos neste conjunto de testes se encontra na segunda matriz de confusão mostrada na Tabela~\ref{tab:matriz-confusao2}.
 
 	\begin{table}[htb]
 		\begin{center}
 			\caption{Taxas obtidas para o primeiro conjunto de testes de identificação.}
 			\label{tab:taxas}
 			\begin{tabular}{|l|c|}
-				\hline \bf Verdadeiro Positivo & 73,63\% \\
-				\hline \bf Verdadeiro Negativo & 17,27\% \\
-				\hline \bf Falso Negativo & 9,10\% \\
+				\hline \bf Verdadeiro Positivo & 75,83\% \\
+				\hline \bf Verdadeiro Negativo & 15,83\% \\
+				\hline \bf Falso Negativo & 8,34\% \\
+				\hline \bf Falso Positivo & 0\% \\
 				\hline
 			\end{tabular}
 		\end{center}
@@ -125,6 +129,8 @@ abordagem para a coleta de faces (1ª etapa).
 				\hline \bf Marcela 		& 		 & 			& 		 & 			& 		 &      & 		&65\% &10\% & 		& 25\%		  	\\
 				\hline \bf Caio 		  & 		 & 			& 		 & 			& 	5\%& 	15\%& 		& 		&80\%	&	 		& 		  	\\
 				\hline \bf Marcelo 		& 		 & 			& 		 & 			& 		 & 			& 		& 		& 		& 90\%& 10\%		  	\\
+				\hline \bf Desconhe- 		& 		 & 			& 		 & 			& 		 & 			& 		& 		& 		&  5\%   & 	95\%	  	\\
+				\bf cido &&&&&&&&&&&\\
 				\hline
 			\end{tabular}
 		\end{center}
@@ -135,9 +141,10 @@ abordagem para a coleta de faces (1ª etapa).
 			\caption{Taxas obtidas para o segundo conjunto de testes de identificação.}
 			\label{tab:taxas2}
 			\begin{tabular}{|l|c|}
-				\hline \bf Verdadeiro Positivo & 82,5\% \\
-				\hline \bf Verdadeiro Negativo & 6,0\% \\
-				\hline \bf Falso Negativo & 11,5\% \\
+				\hline \bf Verdadeiro Positivo & 83,64\% \\
+				\hline \bf Verdadeiro Negativo & 5,46\% \\
+				\hline \bf Falso Negativo & 10,45\% \\
+				\hline \bf Falso Positivo & 0,45\% \\
 				\hline
 			\end{tabular}
 		\end{center}
@@ -145,7 +152,7 @@ abordagem para a coleta de faces (1ª etapa).
 
 	% "Ao analisar os dados da Tabela 5.5 pode-se observar que os resultados melhoraram significamente." => "Observa-se uma melhora signifcativa nos resultados expressos na Tabela 5.6 com relação aos apresentados na Tabela 5.5."
 
-	Observa-se uma melhora significativa nos resultados expressos na Tabela~\ref{tab:matriz-confusao2} com relação aos apresentados na Tabela~\ref{tab:matriz-confusao}. A Tabela~\ref{tab:taxas2} apresenta as taxas de acerto e erros relativos à Tabela~\ref{tab:matriz-confusao2}. Houve um aumento na taxa de Verdadeiro Positivo de 73,63\% para 82,5\% e redução significativa na taxa de Verdadeiro Negativo de 17,27\% para 6,0\%, mostrando que os casos de confusões entre os usuários foram mais raros. A melhora obtida comprova a hipótese que um número maior de poses e faces aprimorou a capacidade do sistema de reconhecer seus usuários. Este acréscimo de informações torna os resultados mais robustos devido a inclusão de informações de mais cenários dos usuários no sistema. 
+	Observa-se uma melhora significativa nos resultados expressos na Tabela~\ref{tab:matriz-confusao2} com relação aos apresentados na Tabela~\ref{tab:matriz-confusao}. A Tabela~\ref{tab:taxas2} apresenta as taxas de acerto e erros relativos à Tabela~\ref{tab:matriz-confusao2}. Houve um aumento na taxa de Verdadeiro Positivo de 75,83\% para 83,64\% e redução significativa na taxa de Verdadeiro Negativo de 15,83\% para 5,46\%, mostrando que os casos de confusões entre os usuários foram mais raros. A melhora obtida comprova a hipótese que um número maior de poses e faces aprimorou a capacidade do sistema de reconhecer seus usuários. Este acréscimo de informações torna os resultados mais robustos devido a inclusão de informações de mais cenários dos usuários no sistema. 
 
 	% Para esta matriz obtemos as taxas apresentadas na Tabela~\ref{tab:taxas2}. É
 	% possível observar que o método de cadastro influi bastante no resultado final.
